@@ -152,7 +152,7 @@ export function VinRegistry({initialCar}: {initialCar?: string}) {
       <details>
         <summary>BMW chassis and engine codes</summary>
         <p>E30 identifies this generation of the 3 Series. E34 identifies this generation of the 5 Series. A U.S. 1991 E30 325i has an M20 inline-six, while the U.S. 1995 E34 525i has an M50TU inline-six with single VANOS. Use the engine code and build month when choosing engine parts.</p>
-        <p><DocumentLink href="/e30/quick-reference">E30 Quick Reference</DocumentLink> · <DocumentLink href="/quick-reference">E34 Quick Reference</DocumentLink></p>
+        <p><DocumentLink href="/quick-reference" series="e30">E30 Quick Reference</DocumentLink> · <DocumentLink href="/quick-reference" series="e34">E34 Quick Reference</DocumentLink></p>
       </details>
   </div>;
 }

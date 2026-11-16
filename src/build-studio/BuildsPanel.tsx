@@ -31,7 +31,7 @@ export function BuildsPanel({
   const buildSeries = selectedCar ? seriesForModel(selectedCar.model_id) : series;
   const references = referencesForSeries(buildSeries);
   const ref = [refChoice, reference].find(id => references.some(row => row.id === id)) || seriesDefinitions[buildSeries].reference;
-  const projectHref = (id: string, referenceId: string) => seriesHref("/workshop?mode=build&project=" + id, seriesForModel(referenceId));
+  const projectPath = (id: string) => "/workshop?mode=build&project=" + id;
   useEffect(() => {
     if (!user?.id) return;
     let live = true;
@@ -67,7 +67,7 @@ export function BuildsPanel({
       }
       const p = await createProject(state, car || null);
       track("build_create", "/workshop");
-      location.assign(projectHref(p.id, state.reference.id));
+      location.assign(seriesHref(projectPath(p.id), seriesForModel(state.reference.id)));
     } catch (e) {
       setError(e instanceof Error ? e.message : "Could not create build.");
     } finally {
@@ -182,7 +182,7 @@ export function BuildsPanel({
                     revision {p.version}
                   </small>
                   <h3>
-                    <DocumentLink href={projectHref(p.id,p.referenceId)}>
+                    <DocumentLink href={projectPath(p.id)} series={seriesForModel(p.referenceId)}>
                       {p.title} ↗
                     </DocumentLink>
                   </h3>
@@ -202,7 +202,7 @@ export function BuildsPanel({
                           duplicateState((await loadProject(p.id)).state),
                           p.vehicle_id,
                         );
-                        location.assign(projectHref(copy.id, p.referenceId));
+                        location.assign(seriesHref(projectPath(copy.id), seriesForModel(p.referenceId)));
                       } catch (e) {
                         toast(
                           e instanceof Error
