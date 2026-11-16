@@ -3,6 +3,7 @@ import path from 'node:path';
 import {createHash} from 'node:crypto';
 
 const pinFile = 'data/digital-twin/e30-candidate.json';
+const variantsFile = 'data/digital-twin/e30-vehicle-references.json';
 const assetRoot = 'public';
 const referenceModule = '\0e30-release-reference';
 
@@ -20,41 +21,50 @@ function readChecked(asset, pattern) {
   return bytes;
 }
 
-function releaseManifest() {
-  const release = JSON.parse(fs.readFileSync(pinFile,'utf8'));
-  if (release.id !== 'e30-325i-coupe-manual' || !Number.isSafeInteger(release.revision) || release.revision < 1108
+function releaseManifest(release) {
+  if (!/^e30-[a-z0-9-]+$/.test(release.id) || !Number.isSafeInteger(release.revision) || release.revision < 1108
       || release.manifestUrl !== '/models/e30-lore/r'+release.revision+'/manifest.'+release.sha256+'.json')
-    throw Error('Expected the corrected E30 325i coupe release pin');
+    throw Error('Invalid E30 reference pin');
   const bytes = readChecked({...release,url:release.manifestUrl},/^\/models\/e30-lore\/r\d+\/manifest\.[a-f0-9]{64}\.json$/);
   const model = JSON.parse(bytes);
   if (model.id !== release.id || model.revision !== release.revision || !model.cabin ||
       !model.assets.some(asset=>asset.id==='e30:325i-exterior') ||
       model.catalog?.context?.id !== release.contextId)
     throw Error('E30 release manifest identity or coverage mismatch');
-  return {release,model,bytes};
+  return model;
 }
 
 export function e30ReleasePlugin(command) {
   const localDevelopment = command === 'serve' && process.env.E34_BUILD_REVIEW !== '1';
   if (!localDevelopment && (command !== 'build' || !e30ReleaseEnabled())) return null;
-  const {release,model} = releaseManifest();
-  for(const asset of model.assets) readChecked(asset,/^\/models\/e30-lore\/r\d+\/[a-f0-9]{64}\.glb$/);
+  const release = JSON.parse(fs.readFileSync(pinFile,'utf8'));
+  const variants = JSON.parse(fs.readFileSync(variantsFile,'utf8'));
+  const pins = [release,...variants];
+  if (release.id !== 'e30-325i-coupe-manual' || new Set(pins.map(pin=>pin.id)).size !== pins.length
+      || new Set(pins.map(pin=>pin.revision)).size !== pins.length) throw Error('Invalid E30 reference registry');
+  const checked = new Set();
+  for(const pin of pins) for(const asset of releaseManifest(pin).assets) {
+    const key = JSON.stringify([asset.url,asset.sha256,asset.bytes]);
+    if(checked.has(key)) continue;
+    readChecked(asset,/^\/models\/e30-lore\/r\d+\/[a-f0-9]{64}\.glb$/);
+    checked.add(key);
+  }
   return {
     name:'e34-e30-release',
     enforce:'pre',
     config:()=>({define:{'import.meta.env.E34_E30_BUILD':'true'}}),
     configureServer(server) {
-      const pin = path.resolve(pinFile);
-      server.watcher.add(pin);
+      const inputs = [pinFile,variantsFile].map(file=>path.resolve(file));
+      server.watcher.add(inputs);
       server.watcher.on('change', file => {
-        if (pin === path.resolve(file)) void server.restart();
+        if (inputs.includes(path.resolve(file))) void server.restart();
       });
     },
     resolveId(id,importer) {
       if (importer && id.endsWith('/local-e30-reference')) return referenceModule;
     },
     load(id) {
-      if (id === referenceModule) return 'export default '+JSON.stringify(release)+'; export const localE30Archives = [];';
+      if (id === referenceModule) return 'export default '+JSON.stringify(release)+'; export const localE30Variants = '+JSON.stringify(variants)+'; export const localE30Archives = [];';
     },
   };
 }

@@ -7,14 +7,14 @@ import releasedService from '../../../data/digital-twin/525i-service-release.jso
 import workshopPanelArchives from '../../../data/digital-twin/workshop-panel-archives.json';
 import automatic525i from '../../../data/digital-twin/525i-automatic-reference.json';
 import localCandidate,{localReferenceArchives} from './local-reference-candidate';
-import localE30,{localE30Archives} from './local-e30-reference';
+import localE30,{localE30Archives,localE30Variants} from './local-e30-reference';
 import e30Exterior from '../../../data/digital-twin/e30-exterior-reference.json';
 import type {VehicleReference} from '../../vehicle/reference-context';
 import type {Series} from '../../series/registry';
 import { parseReference } from './model';
 export const defaultVehicleReferenceId=automatic525i.id;
 export const vehicleReferences=[localCandidate||releasedService,{...current,label:'525i Sedan · Manual',year:1995,model:'525i',body:'Sedan',engine:'M50TU',transmission:'Manual'},...variants].sort((a,b)=>a.model.localeCompare(b.model,undefined,{numeric:true})||(a.body==='Sedan'?0:1)-(b.body==='Sedan'?0:1)||(a.transmission==='Automatic'?0:1)-(b.transmission==='Automatic'?0:1));
-const e30References = localE30 ? [localE30] : [];
+const e30References = localE30 ? [localE30,...localE30Variants] : [];
 export function referencesForSeries(series: Series): (VehicleReference & {label:string;revision:number;sha256:string})[] {
   return series === 'e30' ? e30References : vehicleReferences;
 }
@@ -34,7 +34,7 @@ export function referenceRelease(revision?:string|number,reference?:string){
  const localArchive=localReferenceArchives.find(r=>(!reference||r.id===reference)&&String(r.revision)===key);if(localArchive)return localArchive;
  if(chosen&&chosen.id!==current.id)return null;
  if(key===String(current.revision))return current;
- if(!reference){const variant=vehicleReferences.find(r=>String(r.revision)===key);if(variant)return variant;}
+ if(!reference){const variant=[...vehicleReferences,...e30References].find(r=>String(r.revision)===key);if(variant)return variant;}
  return Object.hasOwn(archives,key)?(archives as Record<string,typeof current>)[key]:null;
 }
 /** The demo and full reader share pinned, immutable references. Earlier receipts

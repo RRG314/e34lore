@@ -555,7 +555,10 @@ export function GuidePage({
                 <span className="guide-step-number" aria-hidden="true">{String(i + 1).padStart(2, "0")}</span>
                 <div>
                   <h3>{s.title}</h3>
-                  {g.jobSupport?.steps[i]&&<div className="guide-step-preparation"><p><strong>Tools:</strong> {g.jobSupport.steps[i].tools.join(" · ")}</p><DocumentLink href={g.jobSupport.steps[i].source.href}>Manual {g.jobSupport.steps[i].source.printed} ↗</DocumentLink></div>}
+                  {g.jobSupport?.steps[i] && <div className="guide-step-preparation">
+                    {g.jobSupport.steps[i].tools.length > 0 && <p><strong>Tools:</strong> {g.jobSupport.steps[i].tools.join(" · ")}</p>}
+                    <DocumentLink href={g.jobSupport.steps[i].source.href}>Manual {g.jobSupport.steps[i].source.printed} ↗</DocumentLink>
+                  </div>}
                   <p>{s.body}</p>
                   <div className="completion-check">
                     <span><strong>Check:</strong> {s.check}</span>

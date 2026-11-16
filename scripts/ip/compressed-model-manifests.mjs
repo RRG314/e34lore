@@ -3,7 +3,7 @@ import path from 'node:path';
 import { gunzipSync, gzipSync } from 'node:zlib';
 
 const registry = 'data/digital-twin/';
-const current = ['public-reference', 'vehicle-references', '525i-service-release', 'e30-candidate'];
+const current = ['public-reference', 'vehicle-references', '525i-service-release', 'e30-candidate','e30-vehicle-references'];
 const previous = ['workshop-panel-archives', 'reference-archives', '525i-automatic-reference'];
 const manifestPath = /^\/models\/(?:e34|e30)-lore\/r\d+\/manifest\.[a-f0-9]{64}\.json$/;
 
@@ -35,7 +35,7 @@ export function modelAssetPackage(aliases) {
       const directory = path.posix.dirname(url);
       // Compress newly packaged geometry. Already-published geometry stays
       // readable by earlier app sessions that still have the old reader open.
-      if (previewDirectories.has(directory) || (pin.id === 'e30-325i-coupe-manual' && pin.revision >= 1177 && directory === path.posix.dirname(pin.manifestUrl))) {
+      if (previewDirectories.has(directory) || (pin.id.startsWith('e30-') && pin.revision >= 1177 && directory === path.posix.dirname(pin.manifestUrl))) {
         compressed.add(url);
       }
     }

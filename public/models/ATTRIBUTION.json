@@ -427,7 +427,9 @@
         1179,
         1180,
         1181,
-        1182
+        1182,
+        1183,
+        1184
       ]
     },
     {
@@ -495,7 +497,8 @@
         1179,
         1180,
         1181,
-        1182
+        1182,
+        1184
       ]
     },
     {
@@ -1381,7 +1384,9 @@
         1179,
         1180,
         1181,
-        1182
+        1182,
+        1183,
+        1184
       ]
     },
     {
@@ -1418,7 +1423,9 @@
         1179,
         1180,
         1181,
-        1182
+        1182,
+        1183,
+        1184
       ]
     },
     {
@@ -1503,7 +1510,9 @@
         1179,
         1180,
         1181,
-        1182
+        1182,
+        1183,
+        1184
       ]
     },
     {
@@ -1553,7 +1562,9 @@
         1179,
         1180,
         1181,
-        1182
+        1182,
+        1183,
+        1184
       ]
     },
     {
@@ -1656,7 +1667,9 @@
         1179,
         1180,
         1181,
-        1182
+        1182,
+        1183,
+        1184
       ]
     },
     {
@@ -1895,6 +1908,45 @@
         }
       ],
       "manifest": "/models/e30-lore/r1182/manifest.693470dd848e85fe79ba49d1743b6dc7108e5339b41f246a50a8943c2fb97d07.json",
+      "changes": "See the versioned manifest for creators and adaptation notes. This index does not grant a new license.",
+      "referenceRevisions": [
+        1182,
+        1183,
+        1184
+      ]
+    },
+    {
+      "file": "/models/e30-lore/r1183/4c50234f27ee3438297e1c77cb6dac51325443f5426dd29095ff8fc0632f5c51.glb",
+      "bytes": 254640,
+      "sha256": "4c50234f27ee3438297e1c77cb6dac51325443f5426dd29095ff8fc0632f5c51",
+      "id": "e30-325i-coupe-automatic:equipment",
+      "revision": 1183,
+      "sourceCredit": [
+        {
+          "author": "E34 Lore",
+          "url": "https://e34lore.com/e30",
+          "license": "E34 Lore viewer geometry",
+          "licenseUrl": "https://e34lore.com/terms"
+        }
+      ],
+      "manifest": "/models/e30-lore/r1183/manifest.093d31008b6b60faf07a241d4d7ab2644c9f35442836e12d8fcd35c1c96adc7c.json",
+      "changes": "See the versioned manifest for creators and adaptation notes. This index does not grant a new license."
+    },
+    {
+      "file": "/models/e30-lore/r1184/1480930d51e1a9b217ffd7a754a81117d7636f518c32abcb34d3a2ec7e19aeeb.glb",
+      "bytes": 55676,
+      "sha256": "1480930d51e1a9b217ffd7a754a81117d7636f518c32abcb34d3a2ec7e19aeeb",
+      "id": "e30-325i-coupe-rear-spoiler:equipment",
+      "revision": 1184,
+      "sourceCredit": [
+        {
+          "author": "E34 Lore",
+          "url": "https://e34lore.com/e30",
+          "license": "E34 Lore viewer geometry",
+          "licenseUrl": "https://e34lore.com/terms"
+        }
+      ],
+      "manifest": "/models/e30-lore/r1184/manifest.0443f8f56f250e1d6bbc64505d47b9d8b7ea043389423a3f558515b5ca89454f.json",
       "changes": "See the versioned manifest for creators and adaptation notes. This index does not grant a new license."
     },
     {

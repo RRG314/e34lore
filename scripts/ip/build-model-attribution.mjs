@@ -10,9 +10,9 @@ const archives = Object.values(await readPin('reference-archives'));
 const panelArchives = await readPin('workshop-panel-archives');
 const active = await Promise.all([
  'public-reference', '525i-service-release', '525i-automatic-reference',
- 'e30-candidate',
+ 'e30-candidate', 'e30-vehicle-references',
 ].map(readPin));
-const releases = [...new Set([...archives, ...panelArchives, ...registry, ...active].map(pin => pin.manifestUrl))];
+const releases = [...new Set([...archives, ...panelArchives, ...registry, ...active.flat()].map(pin => pin.manifestUrl))];
 for (const manifest of releases) {
  const model = JSON.parse(await fs.readFile('public' + manifest, 'utf8'));
  for (const asset of model.assets) {

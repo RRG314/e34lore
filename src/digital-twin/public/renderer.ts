@@ -151,7 +151,7 @@ export class ReferenceRenderer {
         this.renderer.shadowMap.type=T.PCFShadowMap;
         this.renderer.shadowMap.autoUpdate=false;
         this.renderer.toneMapping = T.ACESFilmicToneMapping;
-        const coupeFinish = this.coupeFinish = model.id === 'e30-325i-coupe-manual'
+        const coupeFinish = this.coupeFinish = model.id.startsWith('e30-')
             && (model.revision >= 1177 || (model.revision >= 1161 && model.revision < 1174));
         this.renderer.toneMappingExposure = coupeFinish ? 1.0 : this.detailedVisuals ? 1.04 : 1.12;
         this.scene.background = new T.Color(coupeFinish ? '#e9eae6' : '#eeeee7');
@@ -190,7 +190,7 @@ export class ReferenceRenderer {
         if (studio) studio.dispose();
         else if (room instanceof RoomEnvironment) room.dispose();
         generator.dispose();
-        const refinedE30 = model.id==='e30-325i-coupe-manual' && model.revision>=1139;
+        const refinedE30 = model.id.startsWith('e30-') && model.revision>=1139;
         const shadowOpacity = coupeFinish ? .24 : model.studioLighting&&!refinedE30 ? .14 : .2;
         this.floor = new T.Mesh(new T.PlaneGeometry(120, 120), this.detailedVisuals?new T.ShadowMaterial({color:'#46534d',opacity:shadowOpacity}):new T.MeshStandardMaterial({ color: '#e3e5dd', roughness: .95 }));
         this.floor.rotation.x = -Math.PI / 2;
@@ -246,7 +246,7 @@ export class ReferenceRenderer {
                     } if (!matched)
                         return; const originals = (Array.isArray(o.material) ? o.material : [o.material]) as T.Material[];
                     const bindings=originals.map(mat=>({assetId:asset.id,sha256:asset.sha256,nodeId:node.id,materialIndex:gltf.parser.associations.get(mat)?.materials??-1,name:mat.name}));
-                    const clones=originals.map((mat,i)=>{const clone=mat.clone();clone.userData={source:mat,buildRole:node.paintSurface && ((mat.name==='Body' && bindings[i].materialIndex===0) || (asset.id==='e30:325i-exterior' && mat.name==='E30_Body_Paint')) ? 'paint' : appearanceRole(bindings[i])};return clone;});
+                    const clones=originals.map((mat,i)=>{const clone=mat.clone();clone.userData={source:mat,buildRole:node.paintSurface && ((mat.name==='Body' && bindings[i].materialIndex===0) || (this.model.id.startsWith('e30-') && mat.name==='E30_Body_Paint')) ? 'paint' : appearanceRole(bindings[i])};return clone;});
                     const surface=splitPaintSurfaces(o.geometry,clones,bindings);
                     this.materials.push(...surface.materials);if(surface.owned)this.appearanceGeometries.push(surface.geometry);
                     const mesh=new T.Mesh(surface.geometry,surface.materials.length===1?surface.materials[0]:surface.materials); mesh.matrixAutoUpdate = false; mesh.matrix.copy(o.matrixWorld); mesh.userData.partId = node.id; wrapper.add(mesh); });
@@ -315,7 +315,7 @@ export class ReferenceRenderer {
         if(!this.loaded||this.disposed)return;
         const id=this.buildAppearance?.wheels.packageId||'reference';
         const packages:WheelPackage[]=[...localWheelPackages,...wheelPackages];
-        const e30=this.model.id==='e30-325i-coupe-manual';
+        const e30=this.model.id.startsWith('e30-');
         const chosen=packages.find(pkg=>pkg.id===id&&(e30 ? pkg.group==='E30' : this.model.id.startsWith('e34-')&&pkg.group!=='E30'));
         const quality=this.buildAppearance?.quality==='low'&&chosen?.lodLow?'low':'high';
         const request=id+':'+quality;
@@ -437,7 +437,7 @@ export class ReferenceRenderer {
                 if(appearance)object.scale.multiply(new T.Vector3(appearance.wheels.scale,appearance.wheels.scale,appearance.wheels.widthScale));
             }
             if(appearance){
-                const e30=this.model.id==='e30-325i-coupe-manual';
+                const e30=this.model.id.startsWith('e30-');
                 target.y+=(e30?.300:.32375)*(appearance.wheels.scale-1);
                 if(!installedScale&&/^(?:e34body|e34sys|e34trim|e34bay|e34brake|e34chassis|e34hvac|touring|e30body|e30trim|e30hvac):|^e30assembly:(?:cabin(?:-floor)?|cockpit|front-seats|rear-seats|headlining|luggage):/.test(id))
                     target.y+=appearance.rideHeight*.045;
