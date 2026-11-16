@@ -2,28 +2,19 @@
 
 Interactive BMW workshop models, parts diagrams, and repair references for the E34 5 Series and E30 3 Series.
 
-| [E34 Lore](https://e34lore.com/) | [E30 Lore](https://e34lore.com/e30) |
+[Live E34 site](https://e34lore.com/) · [Live E30 site](https://e34lore.com/e30)
+
+## Workshop and catalog
+
+Open panels, separate assemblies, and select a part to find its catalog and service references. The screenshots show the simplified models and original drawings included in the local demo.
+
+| E34 demo | E30 demo |
 | --- | --- |
-| [![E34 Lore homepage with the interactive 525i](docs/screenshots/e34-home.webp)](https://e34lore.com/) | [![E30 Lore homepage with the interactive 325i](docs/screenshots/e30-home.webp)](https://e34lore.com/e30) |
+| ![Assembled E34 demonstration model](docs/screenshots/e34-demo.webp) | ![Assembled E30 demonstration model](docs/screenshots/e30-demo.webp) |
+| **Exploded view** | **Catalog drawing** |
+| ![E30 demonstration model with parts separated](docs/screenshots/e30-exploded.webp) | ![Numbered coolant-pump diagram with selected position](docs/screenshots/demo-catalog.webp) |
 
-## The Workshop
-
-Open the hood or doors, separate assemblies, and select a component to find its catalog and service information. Select either image to open that car in the Workshop.
-
-| Assembled | Exploded |
-| --- | --- |
-| [![1995 BMW E34 525i sedan assembled](docs/screenshots/e34-assembled.webp)](https://e34lore.com/workshop) | [![E34 525i with the body panels and mechanical systems separated](docs/screenshots/e34-exploded.webp)](https://e34lore.com/workshop) |
-| **1995 525i sedan · automatic** | **E34** |
-| [![1991 BMW E30 325i coupe assembled](docs/screenshots/e30-assembled.webp)](https://e34lore.com/e30/workshop) | [![E30 325i with the lights, body panels, and mechanical systems separated](docs/screenshots/e30-exploded.webp)](https://e34lore.com/e30/workshop) |
-| **1991 325i coupe · M20, manual** | **E30** |
-
-## Parts and diagrams
-
-| [Front strut assembly](https://e34lore.com/parts?assembly=front-strut) | [Water pump and thermostat](https://e34lore.com/parts?assembly=water-pump) |
-| --- | --- |
-| [![Exploded strut, spring, and upper mount](docs/screenshots/front-spring-strut.webp)](https://e34lore.com/parts?assembly=front-strut) | [![Exploded water pump, thermostat, housing, and seals](docs/screenshots/water-pump-thermostat.webp)](https://e34lore.com/parts?assembly=water-pump) |
-
-Find numbered drawings, BMW part numbers, and fitment notes in the [E34 catalog](https://e34lore.com/parts/catalog) and [E30 catalog](https://e34lore.com/e30/parts/catalog).
+The live [E34 catalog](https://e34lore.com/parts/catalog) and [E30 catalog](https://e34lore.com/e30/parts/catalog) provide BMW part numbers, numbered drawings and source fitment notes.
 
 ## In the garage
 
@@ -44,20 +35,16 @@ npm run install:ci
 npm run dev -- --host 127.0.0.1
 ```
 
-Open http://127.0.0.1:5173. The development server uses a loopback Supabase endpoint. Without a local Supabase instance, static pages and bundled reference content work. Account and Garage writes, community posts, and database-backed catalog lookups need a backend.
-
-For a local backend, use the [Supabase CLI with Docker](https://supabase.com/docs/guides/local-development/cli/getting-started). Copy `.env.example` to `.env.local` and enter the local publishable or legacy anon key. The migration history uses the older schema under `database/` as its baseline. Use the isolated SQL test below for policy work. A complete one-command local Supabase bootstrap for Auth, Storage, Edge Functions, and imported catalog data still needs verification.
+Open [E34 Workshop](http://127.0.0.1:5173/workshop) or [E30 Workshop](http://127.0.0.1:5173/e30/workshop). The demo runs without credentials or a database. Pick **Sample coolant pump** in either Workshop to open its drawing and catalog entry. You can also search for `99000034001` in the E34 catalog or `99000030001` in the E30 catalog and Part Scanner. These numbers and the demo models are examples. Account, Garage and community writes require a local Supabase stack.
 
 ```sh
-npm run typecheck
-npm test
-npm run test:import
-E34_E30_BUILD=1 E34_LOCAL_BUILD=1 npm run build
+npm run check
+npm start -- --port 3012
 ```
 
-To preview that build, run `npm start -- --port 3012`. Open [E34 Workshop](http://127.0.0.1:3012/workshop), [E30 Workshop](http://127.0.0.1:3012/e30/workshop), or [Part Scanner](http://127.0.0.1:3012/scanner). Pick a model, select a component and use its part information to check a catalog link. The Workshop also hosts Build Studio.
+The check runs TypeScript, unit and import tests, and builds the demo. Start serves the result at [localhost:3012](http://127.0.0.1:3012). The build prepares the scanner’s browser runtime.
 
-With PostgreSQL 17 server tools on your PATH, run `npm run test:security:db` and `npm run test:affiliates:db`. Each starts a disposable local database. The security suite exercises migrations, owner and staff access, media boundaries, and synthetic restore. Use these commands for database changes. The full HTTP suite needs a populated local backend. To run the route-only checks against the local preview, use `E34_TEST_ORIGIN=http://127.0.0.1:3012 node tests/release-http.mjs`. Full setup and hosted verification are maintainer tasks.
+For database changes, run `npm run test:security:db` and `npm run test:affiliates:db` with PostgreSQL 17 server tools on PATH. The scripts start disposable databases with synthetic users and records. See [local development and releases](docs/local-development-and-release.md) for local service configuration and verification with a supplied asset pack.
 
 ## Source
 
@@ -78,6 +65,6 @@ Original application code uses the [Apache License 2.0](LICENSE). The [NOTICE](N
 
 ## Credits
 
-The E34 525i exterior is adapted from [BMW 525i e34 | Project Zomboid](https://sketchfab.com/3d-models/bmw-525i-e34-project-zomboid-c65aa3b7687d4f5dbbabdfad0b7816bb) under CC BY 4.0. See the [Workshop model credits](public/models/ATTRIBUTION.json) and [site sources](https://e34lore.com/resources).
+See the [site source library](https://e34lore.com/resources) for vehicle and service references. The demonstration models and drawings are original [CC0](https://creativecommons.org/publicdomain/zero/1.0/) assets.
 
 E34 Lore is an independent enthusiast project.

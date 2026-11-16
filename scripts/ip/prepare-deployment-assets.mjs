@@ -3,6 +3,7 @@ import {statSync} from 'node:fs';
 import path from 'node:path';
 import assert from 'node:assert/strict';
 import {pathToFileURL} from 'node:url';
+import {siteContent} from '../site-content.mjs';
 import {assetFiles} from './asset-boundary.mjs';
 import {e30ReleaseEnabled} from '../vite/e30-release-plugin.mjs';
 import {immutableAssetAliases} from './immutable-asset-aliases.mjs';
@@ -27,8 +28,9 @@ export async function prepareDeploymentAssets(clientDir, serverDir) {
   return indexes.length+1;
 }
 if(process.argv[1]&&import.meta.url===pathToFileURL(path.resolve(process.argv[1])).href){
- if(e30ReleaseEnabled()) {
-   const aliases=immutableAssetAliases('public');
+ const content=siteContent();
+ if(content.release && e30ReleaseEnabled()) {
+   const aliases=immutableAssetAliases(content.publicDir);
    for(const [duplicate,canonical] of Object.entries(aliases)){
      const target=await fs.stat('dist/client'+canonical);
      assert.ok(target.isFile(),'Expected a packaged asset for '+duplicate);

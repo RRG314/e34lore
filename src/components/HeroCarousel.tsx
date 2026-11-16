@@ -7,6 +7,7 @@ import e34Photos from '../data/hero-photos.json';
 import e30Photos from '../data/e30-hero-photos.json';
 import { useApp } from './context';
 import { seriesDefinitions } from '../series/registry';
+import { demoAssets } from '../lib/backend';
 import vehicleReferences from '../../data/digital-twin/vehicle-references.json';
 
 const WorkshopDemo = lazy(() => import('./WorkshopDemo').then(m => ({ default: m.WorkshopDemo })));
@@ -15,7 +16,7 @@ export function HeroCarousel() {
     const { series } = useApp();
     const seriesCode = series.toUpperCase();
     const photos = series === 'e30' ? e30Photos : e34Photos;
-    const label = series === 'e30' ? '1991 325i Coupe' : '1995 525i';
+    const label = demoAssets ? 'Workshop demonstration' : series === 'e30' ? '1991 325i Coupe' : '1995 525i';
     const [index, setIndex] = useState(0);
     const [paused, setPaused] = useState(false);
     const [hovered, setHovered] = useState(false);

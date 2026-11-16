@@ -1,4 +1,5 @@
 "use client";
+import { demoAssets } from "../lib/backend";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { initialViewport } from "../graphics/viewport";
 import { disposeObject } from "../graphics/dispose";
@@ -20,6 +21,7 @@ export function VehicleScene({
     [error, setError] = useState(""),
     [value, setValue] = useState(0);
   useEffect(() => {
+    if (demoAssets) return;
     let active = true,
       cleanup = () => {};
     async function start() {
@@ -181,7 +183,7 @@ export function VehicleScene({
       {!ready && (
         <div className="model-loading">
           <img
-            src="/assets/e34-525i-reference.jpg"
+            src={demoAssets ? "/demo/vehicle.svg" : "/assets/e34-525i-reference.jpg"}
             alt="Licensed E34 visual reference"
           />
           <p>{error || "Loading the E34 reference model…"}</p>

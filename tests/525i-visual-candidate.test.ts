@@ -1,3 +1,4 @@
+import { releasePublic } from './release-content';
 import {afterAll,beforeAll,describe,expect,it} from 'vitest';
 import {execFileSync} from 'node:child_process';
 import {mkdtempSync,mkdirSync,readFileSync,writeFileSync,existsSync,rmSync} from 'node:fs';
@@ -31,8 +32,8 @@ const size=(id:string)=>new Box3().setFromObject(group(id)).getSize(new Vector3(
 
 describe('525i visual geometry candidate',()=>{
  it('preserves accepted bytes, saved service geometry and legitimate thin parts',()=>{
-  expect(sha(readFileSync('public'+accepted.manifestUrl))).toBe(accepted.sha256);
-  for(const a of service.base.assets)expect(sha(readFileSync('public'+a.url))).toBe(a.sha256);
+  expect(sha(readFileSync(releasePublic +accepted.manifestUrl))).toBe(accepted.sha256);
+  for(const a of service.base.assets)expect(sha(readFileSync(releasePublic +a.url))).toBe(a.sha256);
   expect(sha(readFileSync(serviceRoot+'/'+service.release.manifestUrl.split('/').pop()))).toBe(service.release.sha256);
   for(const id of ['m50:head-gasket','m50:piston-ring:1:1','e34sys:air-filter-element'])expect(model.nodes.find(n=>n.id===id)).toEqual(base.nodes.find(n=>n.id===id));
   expect(review.changed.filter((r:{replacement:boolean})=>r.replacement)).toHaveLength(22);
@@ -78,7 +79,7 @@ describe('525i visual geometry candidate',()=>{
  });
  it('retains every archived pin and leaves the candidate out of production assets and registry',()=>{
   const archives=read(root+'/releases.json');for(const old of archiveBefore){expect(archives.find((r:{release:{revision:number}})=>r.release.revision===old.release.revision)?.release.sha256).toBe(old.release.sha256);for(const f of old.files)expect(sha(readFileSync(root+'/'+f.file))).toBe(f.sha256);}
-  expect(referenceRelease(review.release.revision,accepted.id)).toBeNull();expect(referenceRelease(accepted.revision,accepted.id)).toEqual(accepted);expect(existsSync('public'+review.release.manifestUrl)).toBe(false);
+  expect(referenceRelease(review.release.revision,accepted.id)).toBeNull();expect(referenceRelease(accepted.revision,accepted.id)).toEqual(accepted);expect(existsSync(releasePublic +review.release.manifestUrl)).toBe(false);
  });
  it('admits only intact local archives to the disposable build registry',async()=>{
   const archives=read(root+'/releases.json');const queries:string[]=[];

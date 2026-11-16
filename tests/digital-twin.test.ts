@@ -1,3 +1,4 @@
+import { releasePublic, hasReleasePack } from './release-content';
 import { describe, it, expect } from "vitest";
 import {
   identityTransform,
@@ -177,9 +178,9 @@ it("rejects root removal in imported exploration files", () => {
   s.present.removed = ["vehicle"];
   expect(() => parseWorkshop(s, g)).toThrow(/root/);
 });
-it("validates embedded exterior assets against real files", () => {
+it.skipIf(!hasReleasePack)("validates embedded exterior assets against real files", () => {
   for (const name of ["e34-body.glb", "e34-wheel.glb"]) {
-    const f = fs.readFileSync("public/models/e34-525i/" + name);
+    const f = fs.readFileSync((releasePublic + '/models/e34-525i/') + name);
     const r = inspectGLB(
       f.buffer.slice(f.byteOffset, f.byteOffset + f.byteLength),
     );

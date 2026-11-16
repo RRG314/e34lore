@@ -1,4 +1,5 @@
 "use client";
+import { demoAssets, demoBackend } from "../lib/backend";
 import { displayModel, modelKey, seriesDefinitions, seriesForModel, seriesHref, seriesIds, type Series } from "../series/registry";
 import type { OwnedVehicle, ServiceRecord, Bookmark as SavedBookmark, MemberNotification, VehicleModification, InstalledPart } from "../domain/owner-records";
 import { BuildsPanel } from "../build-studio/BuildsPanel";
@@ -80,6 +81,11 @@ export function AccountPage() {
       );
     }
   }, [user]);
+  if (demoBackend) return (
+    <div className="page account-page">
+      <PageIntro eyebrow="ACCOUNT" title="Sign in" description="Connect a local Supabase instance to try sign-in." />
+    </div>
+  );
   if (!authReady)
     return (
       <div className="page">
@@ -167,7 +173,7 @@ export function AccountPage() {
           the conversation.
         </p>
         <img
-          src="/assets/e34-525i-reference.jpg"
+          src={demoAssets ? "/demo/vehicle.svg" : "/assets/e34-525i-reference.jpg"}
           alt="White E34 visual reference"
         />
         <span className="small muted">
@@ -488,6 +494,11 @@ function AccountGarage() {
       alive = false;abort.abort();clearTimeout(deadline);
     };
   }, [user, revision,owned.activeId]);
+  if (demoBackend) return (
+    <div className="page account-page">
+      <PageIntro eyebrow="YOUR CARS" title="My Garage" description="Connect a local Supabase instance to save cars, repairs and photos." />
+    </div>
+  );
   if (!authReady)
     return (
       <div className="page">
@@ -504,7 +515,7 @@ function AccountGarage() {
         />
         <div className="garage-welcome">
           <img
-            src="/assets/e34-525i-reference.jpg"
+            src={demoAssets ? "/demo/vehicle.svg" : "/assets/e34-525i-reference.jpg"}
             alt="White E34 sedan visual reference"
           />
           <div>

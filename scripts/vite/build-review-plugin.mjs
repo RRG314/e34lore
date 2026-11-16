@@ -29,6 +29,14 @@ export function buildReview(command) {
     name: "e34-disposable-build-review",
     enforce: "pre",
     transform(code, id) {
+      if (id.endsWith("/src/lib/backend.ts")) {
+        const { url, publishableKey } = JSON.parse(fs.readFileSync(filename, "utf8"));
+        return code.replace(
+          "typeof __E34_BROWSER_BACKEND__ === \"undefined\" ? fallback : __E34_BROWSER_BACKEND__",
+          "{mode:'local',url:(typeof window === 'undefined' ? " + JSON.stringify(new URL(url).origin) +
+            " : window.location.origin)+'/__build-review',publishableKey:" + JSON.stringify(publishableKey) + "}",
+        );
+      }
       if (id.endsWith("/src/components/MemberCount.tsx"))
         return code.replace(" registered {current.count", " test {current.count");
       if (id.endsWith("/src/components/Shell.tsx"))
@@ -41,11 +49,7 @@ export function buildReview(command) {
       if (importer && id.endsWith('/local-e30-reference')) return e30ReferenceModule;
       if(importer&&id.endsWith('/local-wheel-packages'))return wheelModule;
       if(importer&&id.endsWith('/local-reference-candidate')&&candidateEnabled())return candidateModule;
-      if (
-        (id.endsWith("/data/backend.json") || id === "../data/backend.json") &&
-        importer
-      )
-        return "\0e34-build-review-backend";
+
     },
     load(id) {
       if (id === e30ReferenceModule) {
@@ -63,17 +67,7 @@ export function buildReview(command) {
         const checks=archives.flatMap(review=>review.checks||[]);
         return 'export default '+JSON.stringify(release)+'; export const localGeometryChecks='+JSON.stringify(checks)+'; export const localReferenceArchives='+JSON.stringify(archives.map(review=>review.release))+';';
       }
-      if (id === "\0e34-build-review-backend") {
-        const config = JSON.parse(fs.readFileSync(filename, "utf8"));
-        return (
-          "export default " +
-          JSON.stringify({...config, e30OwnerReview:true}).replace(
-            JSON.stringify(config.url),
-            '(typeof window!=="undefined"?window.location.origin:"http://127.0.0.1:3012")+"/__build-review"',
-          ) +
-          ";"
-        );
-      }
+
     },
     configureServer(server){
       server.watcher.add([candidateFile,wheelReceipt,e30ReleaseFile]);

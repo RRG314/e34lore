@@ -13,8 +13,11 @@ The browser prepares photos, runs the comparison, and reads markings. Scanner dr
 | Area | Location |
 | --- | --- |
 | Capture, comparison, and saved-scan context | [Scanner source](../../src/scanner) |
-| Reference images, labels, and provenance | [Scanner data](../../data/scanner), [Parts evidence](../parts-evidence-coverage.md) |
-| Reproducible evaluations | [Evaluation procedures](evaluation/README.md) |
+| Reference images, labels, and provenance | [Scanner data](../../data/scanner) |
 | Upload ownership and review | [Scanner media function](../../supabase/functions/scanner-media), [Policy checks](../../tests/scanner-photo-contributions.sql) |
 
-Use the [contribution guide](../../CONTRIBUTING.md) for corrections and image submissions. The [scanner release records](../releases/) describe earlier tested builds.
+Use the [contribution guide](../../CONTRIBUTING.md) for corrections and image submissions.
+
+## Testing
+
+In the demo, use a sample catalog number to try the marking-to-catalog flow. In a full scanner evaluation, keep reference and test photos of different physical parts in separate sets. Include close lookalikes and unknown parts. Check category recognition separately from exact-number matches, and measure cold and warm performance on physical phones.

@@ -376,7 +376,7 @@ export function AnalyticsDashboard() {
             <a className="button outline" href="https://dash.cloudflare.com/?to=/:account/web-analytics" target="_blank" rel="noreferrer">
               Public visits in Cloudflare
             </a>
-            <a className="button outline" href="https://supabase.com/dashboard/project/ebaebzuergvpijtrloik/reports" target="_blank" rel="noreferrer">
+            <a className="button outline" href="https://supabase.com/dashboard/projects" target="_blank" rel="noreferrer">
               Backend reports in Supabase
             </a>
           </div>

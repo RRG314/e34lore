@@ -1,4 +1,4 @@
-import config from "./backend";
+import config, { demoBackend } from "./backend";
 export type CommercialRpc =
   | "resolve_affiliate_link"
   | "record_affiliate_click"
@@ -10,6 +10,7 @@ export async function commercialRpc<T>(
   token?: string,
   signal?: AbortSignal,
 ): Promise<T> {
+  if (demoBackend) throw new Error("Retailer links need a configured backend.");
   const response = await fetch(config.url + "/rest/v1/rpc/" + name, {
     method: "POST",
     headers: {

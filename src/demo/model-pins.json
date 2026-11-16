@@ -1,0 +1,32 @@
+{
+  "e34": {
+    "id": "e34-525i-sedan-automatic",
+    "year": 1995,
+    "model": "525i",
+    "engine": "M50TU",
+    "body": "Sedan",
+    "transmission": "Automatic",
+    "label": "E34 · Workshop demo",
+    "revision": 9001,
+    "manifestUrl": "/models/e34-lore/r9001/manifest.d34ee206878f33418ee3b97cf7f983974f6b7235519755a6a9d1fcc1ff03ff99.json",
+    "sha256": "d34ee206878f33418ee3b97cf7f983974f6b7235519755a6a9d1fcc1ff03ff99",
+    "assetBytes": 352848,
+    "renderableCount": 19,
+    "contextId": "e34-demo-catalog"
+  },
+  "e30": {
+    "id": "e30-325i-coupe-manual",
+    "year": 1991,
+    "model": "325i",
+    "engine": "M20",
+    "body": "Coupe",
+    "transmission": "Manual",
+    "label": "E30 · Workshop demo",
+    "revision": 9002,
+    "manifestUrl": "/models/e30-lore/r9002/manifest.99be084c5feb480ab3aea1ed8c36995ab5adde94380552bdc807401b24a1cdd6.json",
+    "sha256": "99be084c5feb480ab3aea1ed8c36995ab5adde94380552bdc807401b24a1cdd6",
+    "assetBytes": 352932,
+    "renderableCount": 19,
+    "contextId": "e30-demo-catalog"
+  }
+}

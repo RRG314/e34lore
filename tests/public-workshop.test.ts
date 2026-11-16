@@ -1,3 +1,4 @@
+import { releasePublic } from './release-content';
 import { describe, it, expect } from 'vitest';
 import fs from 'node:fs';
 import path from 'node:path';
@@ -11,9 +12,9 @@ import archives from '../data/digital-twin/workshop-panel-archives.json';
 const release = archives.find(pin => pin.revision === 14)!;
 import serviceRelease from '../data/digital-twin/525i-service-release.json';
 import { quickReferenceHighlights } from '../src/data/quick-reference-model';
-const manifest = fs.readFileSync(path.join('public', release.manifestUrl), 'utf8'), m = parseReference(JSON.parse(manifest)), hash = (b: Uint8Array | string) => createHash('sha256').update(b).digest('hex');
+const manifest = fs.readFileSync(path.join(releasePublic, release.manifestUrl), 'utf8'), m = parseReference(JSON.parse(manifest)), hash = (b: Uint8Array | string) => createHash('sha256').update(b).digest('hex');
 it('groups only the modeled parts for oil service and keeps unmodeled fuse slots on the chart', () => {
-    const automatic = parseReference(JSON.parse(fs.readFileSync('public'+serviceRelease.manifestUrl, 'utf8')));
+    const automatic = parseReference(JSON.parse(fs.readFileSync(releasePublic +serviceRelease.manifestUrl, 'utf8')));
     const highlights=quickReferenceHighlights(automatic,'oil-change')?.parts.map(part=>part.id);
     expect(highlights).toEqual(expect.arrayContaining([
         'm50:oil-filler-cap','m50:oil-filter-housing','m50:oil-filter-element','m50:oil-drain-plug',
@@ -30,7 +31,7 @@ it('groups only the modeled parts for oil service and keeps unmodeled fuse slots
 });
 describe('published E34 reference integration', () => {
     it('publishes exactly the verified immutable model bytes, with no owner workspace transport or paths', () => { expect(m.revision).toBe(14); expect(m.nodes.filter(n => n.assetId)).toHaveLength(454); expect(m.assets).toHaveLength(4);expect(m.nodes.filter(n=>n.kind==='system')).toHaveLength(19); expect(hash(manifest)).toBe(release.sha256); for (const a of m.assets) {
-        const b = fs.readFileSync('public' + a.url);
+        const b = fs.readFileSync(releasePublic + a.url);
         expect(b.length).toBe(a.bytes);
         expect(hash(b)).toBe(a.sha256);
         expect(b.toString('utf8', 0, 4)).toBe('glTF');
@@ -44,7 +45,7 @@ describe('published E34 reference integration', () => {
     } expect(findNode(m, 'not-a-part')).toBeNull();const pump=findNode(m,'coolant-pump')!;expect(matches(pump,'water pump')).toBe(true);expect(matches(pump,'waterpump')).toBe(true);expect(matches(pump,'11 51 7 527 799')).toBe(true); });
     it('keeps actual image references for every installed component including shared wheels', () => { for (const n of m.nodes.filter(n => n.assetId)) {
         expect(n.thumbnail, n.id).toBeTruthy();
-        const b = fs.readFileSync('public' + n.thumbnail);
+        const b = fs.readFileSync(releasePublic + n.thumbnail);
         expect(b.subarray(0, 8).toString('hex')).toBe('89504e470d0a1a0a');
         expect(b.readUInt32BE(16)).toBe(256);
         expect(b.readUInt32BE(20)).toBe(256);
@@ -89,7 +90,7 @@ describe('public and private workshop boundaries', () => {
 
 describe('retained native reference views',()=>{
  it('keeps earlier model views when the current model saves or deletes a view',async()=>{const{mergeReferenceViews}=await import('../src/digital-twin/public/model');const old={name:'Earlier view',revision:13,view:defaultView(),camera:null},fresh={name:'Current view',revision:14,view:defaultView(),camera:null};expect(mergeReferenceViews([old,{invalid:true}],[fresh],14)).toEqual([old,fresh]);expect(mergeReferenceViews([old,fresh],[],14)).toEqual([old]);});
- it('retains exact old manifest bytes and shares their explicit model revision safely',async()=>{const{referenceRelease}=await import('../src/digital-twin/public/load-reference'),old=referenceRelease(13)!;expect(hash(fs.readFileSync('public'+old.manifestUrl))).toBe(old.sha256);for(const invalid of ['https://unrelated.test/model','__proto__','toString','0','-1','014']) expect(referenceRelease(invalid)).toBeNull();expect(publicShareUrl('/workshop?node=e34body%3Ahood&model_revision=13&access_token=secret')).toBe('https://e34lore.com/workshop?node=e34body%3Ahood&model_revision=13');});
+ it('retains exact old manifest bytes and shares their explicit model revision safely',async()=>{const{referenceRelease}=await import('../src/digital-twin/public/load-reference'),old=referenceRelease(13)!;expect(hash(fs.readFileSync(releasePublic +old.manifestUrl))).toBe(old.sha256);for(const invalid of ['https://unrelated.test/model','__proto__','toString','0','-1','014']) expect(referenceRelease(invalid)).toBeNull();expect(publicShareUrl('/workshop?node=e34body%3Ahood&model_revision=13&access_token=secret')).toBe('https://e34lore.com/workshop?node=e34body%3Ahood&model_revision=13');});
 });
 
 it('opens the trunk for spare-wheel access and closes the cover with the trunk',()=>{

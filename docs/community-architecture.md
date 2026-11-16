@@ -1,20 +1,6 @@
-# Community architecture decision
+# Community architecture
 
-This decision records why E34 Lore uses its own forum and moderation tools.
-
-## Decision
-
-Retain and extend the native forum. The existing implementation already has Supabase identities, PostgreSQL row-level security, private reports, canonical part/guide/model links, author acceptance, account export/deletion and atomic contribution history. These are working systems, not a starter mockup. The application is deployed as a Sites Worker; it cannot run a persistent forum daemon or a Rails/PostgreSQL/Redis deployment inside that Worker. A separate forum would need additional hosting, identity synchronization, deletion coordination, webhook delivery and duplicate search integration.
-
-This is the repository-specific reason to depart from the specification's Discourse default. It avoids a replacement of completed functionality and adds no new subscription. It also leaves the operator responsible for the native moderation, abuse, accessibility and recovery controls; choosing native does not make those responsibilities disappear.
-
-| Option | Deployment and integration | Costs and responsibilities | Assessment |
-|---|---|---|---|
-| Discourse | Separate supported hosting or self-hosted installation; identity bridge, API/webhooks, search and canonical-link integration. Mature community tooling. | Official hosted pricing checked 5 November 2026 lists Pro at $100/month and Business at $500/month; the listed SSO option is on Business. Self-hosting still needs infrastructure, email, upgrades, backups and monitoring. | Strong choice for a new standalone forum. Here it would replace existing identities/data controls and add an operational system. No plan was purchased. |
-| NodeBB | Persistent Node.js service with a supported database and reverse proxy. Separate process lifecycle and identity integration. | Self-hosting requires a host, database, email, upgrades, plugin maintenance and backup operations; no hosting quote or purchase made. | Cannot be installed as a daemon in the current Worker. Its separate identity and canonical-link work does not improve the current dependency order. |
-| Existing native forum | Same application, Supabase account/session and authoritative entities. Browser calls bounded SQL APIs; RLS controls ordinary records. | Existing Sites/Supabase infrastructure only. Usage, storage and email still have costs/limits; no claim that operation is free at any scale. Native engineering and moderation remain operator responsibilities. | Selected. Preserve working content, account and privacy mechanisms. |
-
-Sources: [Discourse pricing](https://www.discourse.org/pricing), [official Discourse installation](https://github.com/discourse/discourse/blob/main/docs/INSTALL.md), [NodeBB Ubuntu deployment](https://docs.nodebb.org/installing/os/ubuntu/). These references support platform requirements and the dated pricing comparison, not a purchase authorization.
+The forum shares accounts and canonical part, guide and model references with the Workshop and My Garage. PostgreSQL row-level security controls access to member submissions, reports and private records.
 
 ## Data boundaries
 
@@ -41,28 +27,6 @@ The authenticator UI uses Supabase enrollment/challenge/verification rather than
 
 Public image/file uploads, private messages, live chat and marketplace transactions remain disabled. The separate existing private GLB reconstruction workflow is not a general forum upload service. Quarantine, metadata removal, scanning and rights review are prerequisites to enabling community uploads.
 
-## Local and production environments
+## Development
 
-`npm run dev` runs the existing app; `npm run build` and `npm start -- --port 3002` use the existing Worker preview. Backend configuration remains the existing publishable client configuration. No service-role key, database password or forum admin secret belongs in client assets.
-
-Production uses the same application and dedicated Supabase project. Apply the additive database files in this order after the established platform migrations:
-
-1. `database/community.sql`
-2. `database/community-editorials.sql` (rebuild with `node --experimental-strip-types scripts/seed-community.mjs`)
-3. `database/community-integration.sql`
-4. `database/community-hardening.sql`
-5. `database/community-api-boundary.sql`
-6. `database/community-entities.sql` and `database/community-entity-index.sql`
-7. `database/community-visibility.sql`
-8. `database/community-article-review.sql`
-9. `database/garages.sql`
-
-Hosted migration history includes small scope/cascade corrections found by integration tests; the checked-in files incorporate them. Do not reapply these one-time files to the already migrated project. A fresh backend must first restore the complete established platform schema and canonical data.
-
-## Release limits
-
-The private review build is usable for editorial browsing and tested community flows. It is not a declaration of public launch readiness. SMTP, redirect/confirmation/recovery delivery, compromised-password protection, operator staff/MFA onboarding, a full isolated backup restore, legal policy review, accessibility review and operational staffing remain launch gates. See [community operations](community-operations.md) and the status matrix.
-
-## E34 Lore domain and shared garages
-
-Both e34lore.com and www.e34lore.com are active with HTTPS. Supabase Site URL and exact account redirects are configured; custom SMTP is enabled with the verified E34-only Resend domain, but controlled confirmation requests fail and delivery remains unresolved. The owner approved a replacement restricted key; its credential save and transport test require the existing user hand-off. The public garage table contains only explicitly shared stories and limited configurations. Its private source bindings never appear in the browser API. Removal of a source vehicle clears public snapshots and foreign keys without erasing other members' discussions. Rollback tests cover those lifecycle and moderation boundaries.
+The standalone demo displays the editorial library. A local database is required for submissions, moderation and member records. Use the disposable security database suite to exercise verified and legacy guest roles.

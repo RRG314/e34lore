@@ -1,3 +1,4 @@
+import { releasePublic, hasReleasePack } from './release-content';
 import {describe,it,expect} from 'vitest';
 import fs from 'node:fs/promises';
 import os from 'node:os';
@@ -69,14 +70,14 @@ describe('asset release boundaries',()=>{
   });
 });
 
-describe('active model attribution',()=>{
+describe.skipIf(!hasReleasePack)('active model attribution',()=>{
  it('carries actual viewer hashes and all recorded creators for every active reference',async()=>{
   const current=JSON.parse(await fs.readFile('data/digital-twin/public-reference.json','utf8'));
   const variants=JSON.parse(await fs.readFile('data/digital-twin/vehicle-references.json','utf8'));
-  const notice=JSON.parse(await fs.readFile('public/models/ATTRIBUTION.json','utf8'));
+  const notice=JSON.parse(await fs.readFile((releasePublic + '/models/ATTRIBUTION.json'),'utf8'));
   const files=new Map(notice.files.map((entry:{file:string})=>[entry.file,entry]));
   for(const release of [current,...variants]){
-   const model=JSON.parse(await fs.readFile('public'+release.manifestUrl,'utf8'));
+   const model=JSON.parse(await fs.readFile(releasePublic +release.manifestUrl,'utf8'));
    for(const asset of model.assets){
     const entry=files.get(asset.url) as {sha256:string;sourceCredit:{url?:string;source?:string}[]};
     expect(entry,asset.url).toBeDefined();expect(entry.sha256).toBe(asset.sha256);

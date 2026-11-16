@@ -8,7 +8,7 @@ The shared vehicle context drives the Workshop, catalog, scanner, and service re
 
 The Three.js Workshop loads immutable manifests and model assets. Component identities connect model selections to catalog diagrams and service references. Saved views and builds resolve against their recorded model revision. [Workshop model notes](digital-twin-workshop.md)
 
-Repair guides and manual locators link to their sources. Follow the stated model, engine, and production conditions when using a reference. [Catalog evidence](parts-evidence-coverage.md)
+Repair guides and manual locators link to their sources. Follow the stated model, engine, and production conditions when using a reference. [Catalog evidence](owned-catalog.md)
 
 ## Accounts and member records
 

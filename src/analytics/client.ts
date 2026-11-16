@@ -1,6 +1,6 @@
 "use client";
 import { db } from "../lib/supabase";
-import backend from "../lib/backend";
+import backend, { demoBackend } from "../lib/backend";
 import resources from "./resources.json";
 import { countPublicActivity } from "./activity";
 import {
@@ -205,6 +205,7 @@ function browserExpiry() {
   }
 }
 export function track(name: EventName, resource?: string, fields: Fields = {}) {
+  if (demoBackend) return;
   countPublicActivity(name);
   if (
     !active ||
@@ -262,6 +263,7 @@ export function track(name: EventName, resource?: string, fields: Fields = {}) {
   }
 }
 export async function flush(keepalive = false) {
+  if (demoBackend) return;
   if (sending || !active || !queue.length) return;
   sending = true;
   const sentGeneration = generation,
@@ -413,6 +415,7 @@ export async function flush(keepalive = false) {
   }
 }
 export async function startRecording(path: string, allowed = true) {
+  if (demoBackend) return () => {};
   stopRecording();
   const consent = preferences();
   if (
@@ -421,7 +424,6 @@ export async function startRecording(path: string, allowed = true) {
     ![
       "e34lore.com",
       "www.e34lore.com",
-      "e34-collective.sreid1118.chatgpt.site",
     ].includes(location.hostname) ||
     navigator.webdriver
   )
