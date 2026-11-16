@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { emptyVehicle } from "../src/data/catalog";
 import { fitmentEvidenceScope, fitmentEvidenceQuestions, summarizeFitmentEvidence, type FitmentEvidence } from "../src/domain/fitment";
+import { catalogProductionDateStatus } from "../src/domain/catalog";
 
 const car = { ...emptyVehicle, model: "525i", engine: "M50", market: "USA", body: "Sedan", year: "1992", month: "05" };
 const record: FitmentEvidence = {
@@ -10,6 +11,15 @@ const record: FitmentEvidence = {
 };
 
 describe("fitment evidence", () => {
+  it("keeps pre-change and post-change E30 pump positions separate", () => {
+    const date = (value: string) => [{ name: "Production Date", value }];
+    expect(catalogProductionDateStatus(date("Till 198709"), { year: "1991", month: "03" })).toBe("outside");
+    expect(catalogProductionDateStatus(date("From 198709"), { year: "1991", month: "3" })).toBe("within");
+    expect(catalogProductionDateStatus(date("From 198709"), { year: "1987", month: "09" })).toBe("boundary");
+    expect(catalogProductionDateStatus(date("Till 198709"), { year: "1991", month: "" })).toBe("need-date");
+    expect(catalogProductionDateStatus(date("Till 198709, 198710 - 199105"), { year: "1991", month: "03" })).toBe("within");
+    expect(catalogProductionDateStatus(date("See market note"), { year: "1991", month: "03" })).toBe("check");
+  });
   it("keeps conditions and treats missing configuration and other markets as unknown", () => {
     expect(summarizeFitmentEvidence([record], car).status).toBe("conditional");
     expect(summarizeFitmentEvidence([record], { ...car, market: "" }).status).toBe("unknown");

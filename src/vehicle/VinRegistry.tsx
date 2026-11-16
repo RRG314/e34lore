@@ -136,6 +136,23 @@ export function VinRegistry({initialCar}: {initialCar?: string}) {
           rememberVehicle(decoded.series, decoded.vehicle);
         }}>Browse {decoded.series.toUpperCase()} parts</DocumentLink>
       </section>}
-      <p className="small">For factory options and exact ordering conditions, check the BMW parts catalog against your build date and installed hardware. <DocumentLink href="https://bmwtechinfo.bmwgroup.com/" target="_blank" rel="noopener">BMW Technical Information ↗</DocumentLink></p>
+      <details>
+        <summary>How to read a BMW VIN</summary>
+        <p>Find the VIN in your registration documents, at the windscreen, or in the engine compartment. For U.S. cars, read the 17 characters in these groups.</p>
+        <dl>
+          <dt>1–3 · Manufacturer</dt><dd>Identifies the manufacturer and vehicle type.</dd>
+          <dt>4–8 · Vehicle description</dt><dd>BMW uses these positions for attributes such as model and body. The codes depend on the vehicle and market.</dd>
+          <dt>9 · Check digit</dt><dd>Helps catch typing errors. It is a digit or X on U.S. VINs.</dd>
+          <dt>10–11 · Model year and plant</dt><dd>For these U.S. cars, M represents model year 1991 and S represents 1995. Use the production label for the build month.</dd>
+          <dt>12–17 · Serial</dt><dd>Identifies the individual car. The lookup masks this group and the check digit.</dd>
+        </dl>
+        <p>Use the build sheet and installed parts to check equipment such as a limited-slip differential, heated seats, or a factory radio. A VIN lookup can give you a starting catalog selection.</p>
+        <p><DocumentLink href="https://www.nhtsa.gov/vin-decoder" target="_blank" rel="noopener">NHTSA VIN decoder ↗</DocumentLink> · <DocumentLink href="https://baonline.bmw.com/?brand=bmw&locale=en-gb" target="_blank" rel="noopener">BMW Driver’s Guide ↗</DocumentLink></p>
+      </details>
+      <details>
+        <summary>BMW chassis and engine codes</summary>
+        <p>E30 identifies this generation of the 3 Series. E34 identifies this generation of the 5 Series. A U.S. 1991 E30 325i has an M20 inline-six, while the U.S. 1995 E34 525i has an M50TU inline-six with single VANOS. Use the engine code and build month when choosing engine parts.</p>
+        <p><DocumentLink href="/e30/quick-reference">E30 Quick Reference</DocumentLink> · <DocumentLink href="/quick-reference">E34 Quick Reference</DocumentLink></p>
+      </details>
   </div>;
 }

@@ -4,6 +4,7 @@ import { db, useApp } from "./context";
 import { formatPartNumber } from "../domain/fitment";
 import { catalogSearchQuery, type CatalogIdentityHit } from "../domain/catalog";
 import { catalogOrderingRows } from "../lib/catalog-integrity";
+import { findSeriesCatalogParts } from "../series/catalog";
 export type PartIdentity = {
   id: string;
   name: string;
@@ -28,18 +29,19 @@ export function CatalogPartField({
   onChange: (value: string) => void;
   onSelect: (part: PartIdentity) => void;
 }) {
-  const {series} = useApp();
+  const {series, seriesEnabled} = useApp();
   const query=value.trim();
   const resource=useKeyedResource<PartIdentity[]>(JSON.stringify([series,query,selected?.id,catalogOnly,contextId]),async signal=>{
     const number=query.replace(/[\s-]/g,"");
-    if(series==="e34" && /^\d{11}$/.test(number)){
+    if (seriesEnabled) {
+      return findSeriesCatalogParts(series, query, contextId, 8, signal);
+    }
+    if(/^\d{11}$/.test(number)){
       const r=await db.from("parts").select("id,name,number_normalized").eq("number_normalized",number).abortSignal(signal).maybeSingle();
       if(r.error)throw r.error;return r.data?[r.data]:[];
     }
-    const params={search_query:series==="e30" ? catalogSearchQuery(query) : query.slice(0,200),max_results:30};
-    const lookup=series==="e30"
-      ? db.rpc("catalog_find_series_parts",{...params,series_filter:series,context_preference:contextId||null})
-      : contextId ? db.rpc("catalog_find_parts",{...params,context_filter:contextId})
+    const params={search_query:catalogSearchQuery(query),max_results:30};
+    const lookup=contextId ? db.rpc("catalog_find_parts",{...params,context_filter:contextId})
       : db.rpc("catalog_search_parts",params);
     const r=await lookup.abortSignal(signal);
     if(r.error)throw r.error;
@@ -50,10 +52,6 @@ export function CatalogPartField({
       return true;
     }).slice(0,8).map(part=>({
       id:part.part_id,name:part.name,number_normalized:part.number_normalized,
-      ...(series==="e30" ? {
-        positionId:part.position_id||undefined,assemblyId:part.assembly_id||undefined,
-        contextId:part.context_id||undefined,contextName:part.context_name||undefined,
-      } : {}),
     }));
   },{enabled:query.length>=2&&!selected,delayMs:250,failureMessage:catalogOnly?"Catalog lookup is unavailable. Retry, or add a custom research item for now.":"Catalog lookup is unavailable. The entered number can still be recorded."});
   const hits=resource.data||[],error=resource.error,loading=resource.loading;

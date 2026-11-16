@@ -27,6 +27,8 @@ import {
   type BuildState,
 } from "./schema";
 import { dependencyTasks } from "./dependencies";
+import { useVehicleCatalog } from "../lib/use-vehicle-catalog";
+import { preferredCatalogContext } from "../domain/catalog";
 type Props = {
   state: BuildState;
   edit: (change: (s: BuildState) => BuildState) => void;
@@ -101,6 +103,12 @@ export function Compatibility({
 export function PartsPanel({ state, edit }: Props) {
   const [draft, setDraft] = useState<BuildComponent>(() => newComponent()),
     [search, setSearch] = useState("");
+  const { rows } = useVehicleCatalog();
+  const contextId = preferredCatalogContext(rows, state.targetConfiguration)?.id;
+  function findAccessory(query: string, system: BuildComponent["system"]) {
+    setSearch(query);
+    setDraft(d => ({ ...d, kind: "oem", system, partId: null, number: null, manufacturer: "", productCode: "" }));
+  }
   const update = (id: string, patch: Partial<BuildComponent>) =>
     edit((s) => {
       s.components = s.components.map((c) =>
@@ -119,6 +127,14 @@ export function PartsPanel({ state, edit }: Props) {
       </p>
       <details className="build-add" open={!state.components.length}>
         <summary>Add a component</summary>
+        <fieldset>
+          <legend>Find factory accessories</legend>
+          <div className="inline-tags">
+            <button type="button" className="button outline" onClick={() => findAccessory("seat heating", "interior")}>Heated seats</button>
+            <button type="button" className="button outline" onClick={() => findAccessory("spoiler", "body")}>Spoilers</button>
+            <button type="button" className="button outline" onClick={() => findAccessory("antenna OR aerial", "electrical")}>Radio &amp; antennas</button>
+          </div>
+        </fieldset>
         <div className="form-grid">
           <label>
             System
@@ -161,6 +177,7 @@ export function PartsPanel({ state, edit }: Props) {
         {draft.kind === "oem" ? (
           <CatalogPartField
             catalogOnly
+            contextId={contextId}
             value={search}
             selected={
               draft.partId
