@@ -4,7 +4,8 @@ import type { ComponentContext } from './context';
 import type { ManualLink } from '../digital-twin/public/catalog';
 import { e30FactoryJobs } from '../series/e30-factory-jobs';
 import { e30ManualGroupForPage } from '../series/e30-factory-index';
-import { e30FactoryManualArchive, e30Handbook } from '../series/e30-manual';
+import { e30ElectricalManual, e30FactoryManualArchive, e30Handbook } from '../series/e30-manual';
+import { e34ElectricalManual } from '../data/fuse-panel-layouts';
 
 export type RepairSource = { label: string; href: string };
 type Part = { name: string; number: string; condition?: string };
@@ -59,6 +60,10 @@ const e34Scope = 'U.S. E34 525i with the original M50 or M50TU.';
 const e30SparkSocket = '20.8 mm (13/16 in) deep spark plug socket for NGK ZGR5A.';
 const e30Mount = {name:'Complete center mount',number:'26121226723',condition:'Late bracket from 09/1987 in the 325i coupe catalog.'};
 const e34CenterCatalog = link('1995 525i sedan · driveshaft diagram',sedan+'steering_drive_shaft/drive_shaft_universal_joint_centre_mounting.html');
+const e34AlternatorSpec = link('BMW TIS 12 31 1AZ · alternator terminals', e34M50+'4_tightening_torques/12__engine_electrical_system_(m50)/31__alternator_with_drive_and_mounting/1_azd__alternator_with_drive_and_mounting_parts/');
+const e34AlternatorManual = page('121',166,'Bentley · 121-4, alternator service');
+const e34StarterManual = page('121',168,'Bentley · 121-6, starter service');
+const e34DistributionTorque = link('BMW TIS 12 42 1AZ · starter lead', tis+'5_series_e34/525i_m50_tour/4_tightening_torques/12__engine_electrical_system_(m50)/42__starter_lead/1_azd__wires_to_starter/');
 
 // A locator keeps a model part connected while its tool list is still being checked.
 function e30FactoryLocator(id:string,nodes:RegExp,modelNode:string,numbers:readonly string[] = []): RepairSpecs {
@@ -70,6 +75,80 @@ function e30FactoryLocator(id:string,nodes:RegExp,modelNode:string,numbers:reado
 
 export const repairSpecs: readonly RepairSpecs[] = [
   ...frontAxleSpecs,
+  {
+    id:'e30-m20-starter-terminals',series:'e30',title:'M20 starter terminals',topic:'e30-m20-starter-terminals',scope:e30Scope,
+    manual:bmwTorque('12-6 · PDF 43'),
+    tools:['8 mm, 10 mm and 13 mm six-point sockets for standard M5, M6 and M8 hex nuts, respectively. Confirm the fitted nut profile.', 'Low-range torque wrench covering 5–12 Nm.'],
+    specs:[
+      {item:'Terminal 30h wire nut (M5)',value:'5 Nm',condition:'Where the starter has an identified 30h terminal.'},
+      {item:'Terminal 50 wire nut (M6)',value:'6 Nm'},
+      {item:'Terminal 30 wire nut (M8)',value:'12 Nm'},
+    ],
+    parts:[{name:'1.4 kW starter',number:'12411726504',condition:'Catalog option. Match the starter label and terminal layout.'}],
+    catalog:link('1991 325i coupe · starter diagram',coupe+'engine_electrical_system/starter.html'),
+    compare:[link('1989 BMW 325i ETM · manual starter circuit',e30ElectricalManual.url+'#page=31')],
+    note:'Disconnect the battery negative cable before touching the starter leads. Match the stamped terminal number before tightening.',
+    nodes:/^wiring:starter(?::sleeve)?$/,modelNode:'wiring:starter',
+    numbers:['12411726504'],
+  },
+  {
+    id:'e30-m20-alternator-terminals',series:'e30',title:'M20 alternator terminals',topic:'e30-m20-alternator-terminals',scope:e30Scope,
+    manual:bmwTorque('12-5 · PDF 42'),
+    tools:['13 mm six-point socket for a standard M8 B+ hex nut. Match the D+ nut on the fitted alternator.', 'Low-range torque wrench covering 5–13 Nm.'],
+    specs:[
+      {item:'D+ signal terminal',value:'5 Nm',condition:'M20 on the BMW 12 31 1AZ table.'},
+      {item:'B+ output terminal',value:'13 Nm',condition:'M20 on the BMW 12 31 1AZ table.'},
+    ],
+    parts:[{name:'90 A exchange alternator',number:'12312287828',condition:'Check the amperage and label on the installed unit.'}],
+    catalog:link('1991 325i coupe · alternator diagram',coupe+'engine_electrical_system/alternator.html'),
+    compare:[link('1989 BMW 325i ETM · charging circuit',e30ElectricalManual.url+'#page=29')],
+    note:'Disconnect the battery negative cable before removing the B+ terminal cover.',
+    nodes:/^(?:e30assembly:engine:alternator|wiring:alternator(?::sleeve)?)$/,modelNode:'e30assembly:engine:alternator',
+  },
+  {
+    id:'e34-m50-alternator-terminals',series:'e34',title:'M50 alternator terminals',topic:'121-job-alternator-removal-and-installation',
+    scope:'1995 U.S. 525i with the original-style M50TU alternator. Match the make, amperage and terminal markings.',
+    manual:e34AlternatorManual,
+    tools:['10 mm and 13 mm six-point sockets for standard M6 D+ and M8 B+ hex nuts. Confirm the installed nut profile.', 'Low-range torque wrench for the terminal nuts.', '32 mm fan-clutch wrench and pulley holder if removing the alternator using Bentley’s fan-removal steps. The fan coupling has a left-hand thread.'],
+    specs:[
+      {item:'D+ signal terminal',value:'7 Nm (BMW TIS)',condition:'Bentley lists 6 Nm. Confirm the specification for the installed alternator.',source:e34AlternatorSpec},
+      {item:'B+ output terminal',value:'13 Nm (BMW TIS)',condition:'Bentley lists 14 Nm. Confirm the specification for the installed alternator.',source:e34AlternatorSpec},
+    ],
+    parts:[
+      {name:'80 A compact alternator',number:'12311744560',condition:'Catalog lists from 04/1995. Compare the fitted rating and build date.'},
+      {name:'140 A exchange compact alternator',number:'12311744567',condition:'Catalog alternative. Check the fitted unit and required hardware.'},
+    ],
+    catalog:link('1995 525i sedan · alternator diagram',sedan+'engine_electrical_system/alternator.html'),
+    compare:[link('1995 BMW ETM · charging circuit',e34ElectricalManual+'#page=131')],
+    note:'Disconnect the battery negative cable before removing the B+ terminal cover.',
+    nodes:/^(?:m50:alternator|wiring:alternator(?::sleeve)?)$/,modelNode:'m50:alternator',
+  },
+  {
+    id:'e34-m50-starter-terminals',series:'e34',title:'M50 starter terminals',topic:'121-job-starter-and-solenoid-replacement',scope:e34Scope,
+    manual:e34StarterManual,
+    tools:['Low-range torque wrench covering 5–12 Nm. For standard M5, M6 and M8 hex nuts use 8 mm, 10 mm and 13 mm sockets respectively; identify the fitted nuts first.'],
+    specs:[
+      {item:'Terminal 30h wire nut',value:'5 Nm'},
+      {item:'Terminal 50 wire nut',value:'6 Nm'},
+      {item:'Terminal 30 wire nut',value:'12 Nm',condition:'Bentley also lists 8 Nm for the battery positive cable to the starter. Resolve the attachment and starter type before applying either value.'},
+    ],
+    parts:[{name:'1.4 kW Bosch starter',number:'12411740374',condition:'Check the fitted starter. The catalog also lists Marelli units.'}],
+    catalog:link('1995 525i sedan · starter diagram',sedan+'engine_electrical_system/starter.html'),
+    compare:[link('1995 BMW ETM · terminals 30, 30h and 50',e34ElectricalManual+'#page=135')],
+    note:'Disconnect the negative battery cable before working on the starter. Bentley specifies new intake gaskets when removing the M50 intake manifold for access.',
+    nodes:/^(?:m50:starter|wiring:starter(?::sleeve)?)$/,modelNode:'m50:starter',
+    numbers:['12411740374','12411740379'],
+  },
+  {
+    id:'e34-battery-distribution-terminal',series:'e34',title:'Front distribution box positive terminal',scope:'E34 M8 battery-positive terminal at the distribution box.',
+    manual:e34DistributionTorque,
+    tools:['13 mm six-point socket for a standard M8 hex nut.', 'Torque wrench covering 20 Nm.'],
+    specs:[{item:'Battery positive terminal at the distribution box (M8)',value:'20 Nm',source:e34DistributionTorque}],
+    catalog:link('1995 525i sedan · battery cable diagram',sedan+'engine_electrical_system/battery_cable.html'),
+    compare:[link('1995 BMW ETM · positive distribution',e34ElectricalManual+'#page=31'),link('1995 BMW ETM · junction locations',e34ElectricalManual+'#page=468')],
+    note:'Disconnect the battery negative cable before disturbing the front positive terminal.',
+    nodes:/^wiring:battery(?::sleeve)?$/,modelNode:'wiring:battery',
+  },
   {
     id:'e30-oil-service',series:'e30',title:'M20 oil and filter service',guide:'e30-oil-service',
     scope:e30Scope+' Check the sump and the spin-on filter installed on the car.',

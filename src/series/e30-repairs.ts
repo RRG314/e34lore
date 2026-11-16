@@ -1,6 +1,8 @@
 import type{ManualGuide}from'../data/manual';
 import {e30FactoryGuides} from './e30-factory-guides.ts';
 export const e30RepairJobs=[
+ {id:'e30-m20-alternator-terminals',title:'M20 alternator terminals',systems:['electrical'],engines:['M20']},
+ {id:'e30-m20-starter-terminals',title:'M20 starter terminals',systems:['electrical'],engines:['M20']},
  {id:'e30-manual-gearbox-fluid',title:'Getrag 260 manual gearbox oil',systems:['drivetrain'],engines:['M20']},
  {id:'e30-m20-spark-plugs',title:'M20 spark plug service',systems:['engine'],engines:['M20']},
  {id:'e30-m20-timing-belt',title:'M20 timing belt replacement',systems:['engine'],engines:['M20']},

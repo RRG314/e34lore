@@ -3,6 +3,7 @@
 import {useState} from 'react';
 import {ArrowUpRight,BookOpen,Search,Zap} from 'lucide-react';
 import {wiringArchive,wiringCircuits,wiringEditions} from '../data/wiring';
+import {wiringReferences,wiringWorkshopHref} from '../data/wiring-routes';
 import {DocumentLink} from './DocumentLink';
 import {useApp} from './context';
 import {Empty,PageIntro} from './common';
@@ -35,6 +36,7 @@ export function ElectricalReference({initialQuery=''}:{initialQuery?:string}) {
       </select>}
     </div>
     <div className="wiring-links">
+      <DocumentLink className="text-link" href={wiringWorkshopHref(series)}>3D harnesses · {wiringReferences[series].name} <ArrowUpRight size={15}/></DocumentLink>
       <DocumentLink className="text-link" href={'/quick-reference/fuses'+(fuse?'?fuse='+fuse:'')}><Zap size={16}/>Fuse box layouts</DocumentLink>
       <DocumentLink className="text-link" href="/diagnostics?symptom=no-start">Starting and charging troubleshooting <ArrowUpRight size={15}/></DocumentLink>
     </div>
@@ -43,11 +45,11 @@ export function ElectricalReference({initialQuery=''}:{initialQuery?:string}) {
       {groups.map(group=><section className="wiring-group" aria-label={group} key={group}>
         <h2>{group}</h2>
         <div className="chapter-list">
-          {diagrams.filter(row=>row.group===group).map(row=><a href={row.href} target="_blank" rel="noopener noreferrer" key={row.href}>
+          {diagrams.filter(row=>row.group===group).map(row=><DocumentLink href={row.href} target={row.href.startsWith('https:')?'_blank':undefined} rel="noopener noreferrer" key={row.href}>
             <span className="chapter-code"><BookOpen size={18}/></span>
             <div><h3>{row.title}</h3><p>{row.edition} · {row.section} · PDF {row.page}</p></div>
             <ArrowUpRight size={16}/>
-          </a>)}
+          </DocumentLink>)}
         </div>
       </section>)}
       {!groups.length&&<Empty title="No indexed circuit matches">Try a component name or open the complete manual for your model year.</Empty>}

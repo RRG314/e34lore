@@ -12,6 +12,8 @@ import { MeshoptDecoder } from 'three/addons/libs/meshopt_decoder.module.js';
 import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
 import { isGearboxInspection, bodyTrimScope, brakeHydraulicsScope, engineCutaway, isEngineInspection, engineBayScope, frontSuspensionScope, rearSuspensionScope, gearboxCutaway, visibleNodes, isExteriorNode,enclosingParts, canOpenPanels, type ReferenceModel, type ReaderView, type Viewpoint, type Vec } from './model';
 import { installedBounds, offsets, referenceFrame } from './layout';
+import { isWiringNode, isWiringScope, wiringAsset } from '../../data/wiring-routes';
+import { wiringGeometry } from './wiring-model';
 const isE30RoadWheel=(id:string)=>/^e30assembly:(front|rear)-(left|right):wheel$/.test(id);
 const isRoadWheel=(id:string)=>id.startsWith('wheel:')||isE30RoadWheel(id);
 function coupeStudio(lowerReflectors: boolean) {
@@ -112,6 +114,7 @@ export class ReferenceRenderer {
     private keys = new Set<string>();
     private cleanup: (() => void)[] = [];
     private loaded = false;
+    private wiringLoaded = false;
     private buildAppearance:BuildAppearance|null=null;
     private wheelGeneration=0;
     private wheelPackage='reference';private wheelQuality='high';private wheelRequest='reference:high';
@@ -263,7 +266,7 @@ export class ReferenceRenderer {
                 this.fit(this.view.highlights,this.view.highlightViewpoint);
             else {
                 const scope=this.view.scope;
-                const overview=cabinFloorAngles[scope] || isGearboxInspection(scope) || isEngineInspection(scope) ||
+                const overview=isWiringScope(scope) || cabinFloorAngles[scope] || isGearboxInspection(scope) || isEngineInspection(scope) ||
                     [engineBayScope,brakeHydraulicsScope,frontSuspensionScope,rearSuspensionScope,bodyTrimScope].includes(scope) ||
                     scope.startsWith('system:parking-brake-');
                 this.fit(this.procedureFocus?this.view.selected||undefined:undefined,overview?'overview':undefined);
@@ -387,10 +390,36 @@ export class ReferenceRenderer {
         }
     }
     setProcedureFocus(enabled:boolean){this.procedureFocus=enabled;this.update(this.view);}
+    private loadWiring() {
+        if (this.wiringLoaded) return;
+        this.wiringLoaded = true;
+        for (const node of this.model.nodes.filter(n=>n.assetId===wiringAsset)) {
+            const route = wiringGeometry(this.model,node.id);
+            if (!route) continue;
+            const curve = new T.CatmullRomCurve3(route.points.map(point=>new T.Vector3(...point)));
+            const geometry = new T.TubeGeometry(curve,Math.max(20,route.points.length*8),route.radius,8,false);
+            const source = new T.MeshStandardMaterial({
+                color: route.sleeve ? '#343639' : '#35799a',
+                roughness: .86,
+                side: route.sleeve ? T.DoubleSide : T.FrontSide,
+            });
+            const material = source.clone();
+            material.userData.source = source;
+            this.materials.push(source,material);
+            this.appearanceGeometries.push(geometry);
+            const mesh = new T.Mesh(geometry,material);
+            mesh.userData.partId = node.id;
+            const wrapper = new T.Group();
+            wrapper.add(mesh);
+            this.objects.set(node.id,wrapper);
+            this.scene.add(wrapper);
+        }
+    }
     update(view: ReaderView) {
         const previous = this.view, reducedMotion=matchMedia('(prefers-reduced-motion: reduce)').matches;
         const animate = this.loaded && previous.scope === view.scope && !view.cabin && !previous.cabin && !reducedMotion && (this.partsMoving || previous.explosion !== view.explosion);
         this.view = view;
+        if (isWiringScope(view.scope)) this.loadWiring();
         const containers=view.internals?enclosingParts(this.model,view.selected):new Set<string>();
         const highlights=new Set(view.highlights);
         const highlightGhost = highlights.size>0 && view.shell==='ghost';
@@ -482,6 +511,7 @@ export class ReferenceRenderer {
         const direction = preset ? new T.Vector3(...directions[preset]||[1.2,.7,1.3]).normalize() : this.camera.position.clone().sub(this.controls.target).normalize();
         if(preset==='overview'&&this.view.scope==='vehicle'&&!focus)direction.set(1,.38,1.8).normalize();
         if(preset==='overview'&&!focus){
+            if(isWiringScope(this.view.scope))direction.set(.55,1.85,-1.2).normalize();
             if(isGearboxInspection(this.view.scope))direction.set(.20,.26,1.75).normalize();
             if(this.view.scope===engineBayScope)direction.set(.75,1.75,1.05).normalize();
             if(this.view.scope===brakeHydraulicsScope)direction.set(.68,1,-1.25).normalize();
@@ -501,7 +531,8 @@ export class ReferenceRenderer {
             const cabinFloorAngle=cabinFloorAngles[this.view.scope];
             if(cabinFloorAngle)direction.set(...cabinFloorAngle).normalize();
         }
-        const frame=referenceFrame(this.model,this.view,direction.toArray() as Vec,this.camera.aspect,this.camera.fov,focus);
+        const fitting = focus ?? (isWiringNode(this.view.scope) ? this.view.scope : undefined);
+        const frame=referenceFrame(this.model,this.view,direction.toArray() as Vec,this.camera.aspect,this.camera.fov,fitting);
         if(!frame)return;
         this.destination={position:new T.Vector3(...frame.position),target:new T.Vector3(...frame.target)};this.invalidate();
     }
@@ -546,6 +577,7 @@ export class ReferenceRenderer {
         const hits = ray.intersectObjects([...this.objects.values()].filter(o=>o.visible),true);
         const selectable = ({object,face,point}:T.Intersection)=>{
             if(!(object instanceof T.Mesh)||!object.userData.partId)return false;
+            if(isWiringScope(this.view.scope)&&!isWiringNode(object.userData.partId))return false;
             const material = Array.isArray(object.material) ? object.material[face?.materialIndex??0] : object.material;
             return !material?.clippingPlanes?.some((plane:T.Plane)=>plane.distanceToPoint(point)<0);
         };

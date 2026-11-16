@@ -1,6 +1,7 @@
 import {companionIds} from './explosion';
 import { z } from 'zod';
 import {catalogIndexSchema} from './catalog';
+import {isWiringScope, wiringAsset} from '../../data/wiring-routes';
 const vec = z.tuple([z.number().finite(), z.number().finite(), z.number().finite()]);
 export const automaticGearboxScope = 'system:automatic-gearbox';
 export const manualGearboxScope = 'system:manual-gearbox';
@@ -95,6 +96,10 @@ function visibleInCabin(model:ReferenceModel,node:ReferenceNode) {
 }
 export function visibleNodes(m: ReferenceModel, v: ReaderView) { const scope = members(m, v.scope), hidden = new Set(v.hidden.flatMap(id => [...members(m, id)])), focusedComponent=!!m.nodes.find(s=>s.id===v.scope)?.assetId,
     section=engineCutaway(v), sectionGearbox=gearboxCutaway(v), exposedTrim=v.scope===bodyTrimScope&&v.internals&&!v.explosion;
+    if(isWiringScope(v.scope)) {
+        return m.nodes.filter(n=>n.assetId && !hidden.has(n.id) &&
+            (n.assetId===wiringAsset ? scope.has(n.id) : v.shell==='ghost' && isExteriorNode(n)));
+    }
     const task = v.scope==='vehicle'&&v.shell==='ghost'&&v.highlights?.length ? new Set(v.highlights) : null;
     if(task){
         if(v.selected)task.add(v.selected);
@@ -104,7 +109,7 @@ export function visibleNodes(m: ReferenceModel, v: ReaderView) { const scope = m
         }
     }
     const trimExposed = isCabinTrimInspection(v.scope) || focusedComponent || v.internals || v.explosion>0;
-    return m.nodes.filter(n => n.assetId && scope.has(n.id) && !hidden.has(n.id) && (!task||task.has(n.id)||isExteriorNode(n)) && !(section&&n.engine==='cover') && !(sectionGearbox&&n.gearbox?.hideInCutaway) && !(exposedTrim&&n.trimCover) && (!n.internal || v.internals || focusedComponent || (m.revision >= 14 && v.explosion > 0)) && (!n.behindTrim || trimExposed || v.selected===n.id || v.highlights?.includes(n.id)) && !(v.shell === 'hidden' && isExteriorNode(n)) && (!v.cabin || visibleInCabin(m,n))); }
+    return m.nodes.filter(n => n.assetId && n.assetId!==wiringAsset && scope.has(n.id) && !hidden.has(n.id) && (!task||task.has(n.id)||isExteriorNode(n)) && !(section&&n.engine==='cover') && !(sectionGearbox&&n.gearbox?.hideInCutaway) && !(exposedTrim&&n.trimCover) && (!n.internal || v.internals || focusedComponent || (m.revision >= 14 && v.explosion > 0)) && (!n.behindTrim || trimExposed || v.selected===n.id || v.highlights?.includes(n.id)) && !(v.shell === 'hidden' && isExteriorNode(n)) && (!v.cabin || visibleInCabin(m,n))); }
 export function findNode(m: ReferenceModel, value?: string) { if (!value)
     return null; const normalized = value.replaceAll(/[^a-z0-9]/gi, '').toLowerCase(); return m.nodes.find(n => n.id === value) || m.nodes.find(n => n.previousIds?.includes(value)) || m.nodes.find(n => n.canonicalId === value) || m.nodes.find(n => n.oem && n.oem.replaceAll(/\D/g, '') === (normalized.startsWith('bmw') ? normalized.slice(3) : normalized)) || m.nodes.find(n => n.canonicalId && n.canonicalId.replaceAll(/[^a-z0-9]/gi, '').toLowerCase() === normalized) || null; }
 export function matches(n: ReferenceNode, q: string) { const clean = (s: string) => s.toLowerCase().replaceAll(/[^a-z0-9]+/g, ' ').trim(); const text=clean([n.name,n.id,n.oem,n.canonicalId].filter(Boolean).join(' ')),query=clean(q);return text.includes(query)||text.replaceAll(' ','').includes(query.replaceAll(' ','')); }
