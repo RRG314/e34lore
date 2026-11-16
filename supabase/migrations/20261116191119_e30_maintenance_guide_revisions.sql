@@ -1,5 +1,11 @@
 begin;
 
+insert into public.sources (id, title, publisher, url, rights, review_status) values
+  ('e30-owner-handbook', 'BMW 325i / 325is owner’s handbook', 'BMW of North America',
+   'https://www.billswebspace.com/BMW%20E30%20Owner%20Manual%20%28325i-325is%29.pdf',
+   'Original handbook linked', 'selected-pages-indexed')
+on conflict (id) do nothing;
+
 create temporary table e30_guide_snapshots (
   revision text not null,
   content jsonb not null
