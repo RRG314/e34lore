@@ -1,4 +1,5 @@
 import { frontAxleSpecs } from './front-axle-specs';
+import { e30MaintenanceSpecs } from './e30-maintenance-specs';
 import type { Series } from '../series/registry';
 import type { ComponentContext } from './context';
 import type { ManualLink } from '../digital-twin/public/catalog';
@@ -191,13 +192,14 @@ export const repairSpecs: readonly RepairSpecs[] = [
     nodes:/^e30assembly:engine:spark-plug-[1-6]$/,modelNode:'e30assembly:engine:spark-plug-1',
   },
   {
-    id:'e30-m20-timing-belt',series:'e30',title:'M20 timing belt and tensioner',topic:'e30-m20-timing-belt',
+    id:'e30-m20-timing-belt',series:'e30',guide:'e30-m20-timing-belt',title:'M20 timing belt and tensioner',topic:'e30-m20-timing-belt',
     scope:e30Scope+' Confirm the fitted sprocket profile and matched roller. The M40 procedure is separate.',
     manual:page('11',110,'BMW · 11-66a, M20 timing belt'),
     compare:[page('11',111,'BMW · 11-66b, timing marks and belt profile'),
       link('Continental · M20 timing belt and special tools','https://www.showmethepartsdb3.com/BIN/documents/Continental%20Elite/tb131k1a.pdf')],
     tools:['BMW 11 2 150 crankshaft hub holder if the hub is removed. Consult the full procedure before disturbing the hub.','32 mm fan-clutch wrench and pulley holder for the original left-hand coupling.'],
-    specs:[{item:'M10 camshaft toothed pulley to camshaft',value:'65 Nm',condition:'M20 only. This is the pulley bolt, not either tensioner bolt.',source:bmwTorque('11-18 · PDF 19')}],
+    specs:[{item:'M10 camshaft toothed pulley to camshaft',value:'65 Nm',condition:'M20 camshaft pulley only.',source:bmwTorque('11-18 · PDF 19')},
+      {item:'Timing-belt tensioner bolts',value:'16 lb-ft (about 22 Nm)',condition:'Continental replacement procedure. Tighten in the illustrated order.',source:link('Continental · M20 timing belt procedure and torque','https://www.showmethepartsdb3.com/BIN/documents/Continental%20Elite/tb131k1a.pdf#page=2')}],
     parts:[{name:'127-tooth semicircular profile timing belt',number:'11311711081'},
       {name:'Matching adjusting pulley',number:'11311711154',condition:'BMW catalog specifies use with the listed belt.'},
       {name:'Tensioner spring',number:'11311267746',condition:'Inspect and renew as needed.'},{name:'Tensioner pin',number:'11311280960',condition:'Inspect and renew as needed.'}],
@@ -219,16 +221,18 @@ export const repairSpecs: readonly RepairSpecs[] = [
     note:'Keep the two shaft halves indexed. Support the shaft and use the full procedure before loosening the bracket.',
   },
   {
-    id:'e30-rear-shock-absorbers',series:'e30',title:'Rear shocks and upper mounts',topic:'e30-rear-shock-absorbers',
+    id:'e30-rear-shock-absorbers',series:'e30',guide:'e30-rear-shock-absorbers',title:'Rear shocks and upper mounts',topic:'e30-rear-shock-absorbers',
     scope:e30Scope+' Conventional rear shocks, without ride-height control.',
     manual:page('33',636,'BMW · 33-16, rear shock replacement'),
     tools:['Support jack for the trailing arm and rated stands.','Piston-rod counterhold for the fitted shock; size depends on the shaft.'],
     specs:[{item:'Upper mount to body',value:'22 Nm',condition:'M8 fasteners.',source:bmwTorque('33-17 · PDF 134')},
-      {item:'Original shock piston rod to upper mount',value:'15 Nm',condition:'For factory hardware; use the maker’s value for a replacement shock.',source:bmwTorque('33-17 · PDF 134')}],
+      {item:'Original shock piston rod to upper mount',value:'15 Nm',condition:'For factory hardware. Use the maker’s value for a replacement shock.',source:bmwTorque('33-17 · PDF 134')},
+      {item:'Lower mount, E30 standard bolt row',value:'87 Nm',condition:'Factory archive, at normal ride height. Verify bolt grade and the table for the installed hardware first.',source:bmwTorque('33-17 · PDF 134')},
+      {item:'Lower mount, E30 10.9 bolt row',value:'130 Nm',condition:'Factory archive, when the bolt is marked 10.9. Check the installed shock and applicable BMW edition.',source:bmwTorque('33-17 · PDF 134')}],
     compare:[link('BMW TIS 33 52 · Rear shock tightening table',tis+'3_series_e30/325e_m20_sal/4_tightening_torques/33__rear_axle/52__shock_absorber/1_azd__shock_absorbers/')],
     parts:[{name:'Rear shock upper mount',number:'33521128819'},{name:'Mount gasket',number:'33526772864'}],
     catalog:link('U.S. 325i · shock and mount diagram','https://www.realoem.com/bmw/enUS/showparts?diagId=33_0327&id=1123-USA---E30-BMW-325i'),
-    note:'The archived and later BMW tables differ for the lower mount. Confirm the bolt grade and the applicable value before tightening at normal ride height.',
+    note:'The later BMW TIS table gives 77 Nm in its E30 row. Confirm which table and bolt grade apply before tightening the lower mount at normal ride height.',
     nodes:/^e30assembly:rear-(?:left|right):damper$/,modelNode:'e30assembly:rear-left:damper',
   },
   {
@@ -447,13 +451,10 @@ export const repairSpecs: readonly RepairSpecs[] = [
     nodes:/^wheel:(?:front|rear)-(?:left|right)$/,modelNode:'wheel:front-left',
     numbers:['36136781150'],
   },
-  e30FactoryLocator('e30-heater-blower',/^e30hvac:blower-(?:motor|upper|lower)$/,'e30hvac:blower-motor',['64111466014']),
-  e30FactoryLocator('e30-blower-resistor',/^e30hvac:blower-resistor$/,'e30hvac:blower-resistor',['64116912633']),
-  e30FactoryLocator('e30-heater-core',/^e30hvac:heater-core(?:-pad)?$/,'e30hvac:heater-core',['64118391363']),
+  ...e30MaintenanceSpecs,
   e30FactoryLocator('e30-front-door-shell',/^e30body:door-(?:left|right)(?::(?:inner-shell|upper-hinge|lower-hinge))?$/,'e30body:door-left'),
   e30FactoryLocator('e30-front-bumper',/^e30body:front-bumper$/,'e30body:front-bumper'),
   e30FactoryLocator('e30-rear-bumper',/^e30body:rear-bumper$/,'e30body:rear-bumper'),
-  e30FactoryLocator('e30-sunroof-alignment',/^e30body:sunroof$/,'e30body:sunroof',['54121906710']),
   {
     id:'e34-heater-core',series:'e34',title:'Heater core access',topic:'640-job-auxiliary-pump-and-heater-core',
     scope:'E34 HVAC differs by heater box. Identify the installed heater and hose arrangement first.',

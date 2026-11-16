@@ -569,9 +569,9 @@ export function CatalogBrowser({
           {context && (
             <p className="catalog-vehicle-note" role="status">
               {{
-                sample: "Browsing a source catalog. Select your E34 to compare it with this catalog.",
-                different: "This source catalog differs from your selected E34. Choose a matching catalog if one is available.",
-                partial: "This catalog matches some of your E34 details. Check any unconfirmed details and the conditions at each position.",
+                sample: "Browsing a source catalog. Select your car to check this catalog’s applicability.",
+                different: "This source catalog differs from your selected car. Choose a matching catalog if one is available.",
+                partial: "This catalog matches some details of your selected car. Check any unconfirmed details and the conditions at each position.",
                 matching: "The catalog configuration matches your selection. Check production and equipment conditions at each position.",
               }[catalogContextMatch(context, vehicle)]}
               {matchingContext && matchingContext.id !== context.id &&

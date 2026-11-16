@@ -667,5 +667,196 @@
       "Release the bar",
       "Install and check clearance"
     ]
+  },
+  {
+    "guide": "e30-coolant-bleeding",
+    "revision": "fd15e381818ac2d2293b77e0",
+    "title": "Fill and bleed the M20 cooling system",
+    "steps": [
+      "Open the cold system",
+      "Fill slowly and close the bleeder",
+      "Warm, cool and check again"
+    ]
+  },
+  {
+    "guide": "e30-radiator",
+    "revision": "4cc811d2e2e97b5524e4b573",
+    "title": "Replace the late M20 manual radiator",
+    "steps": [
+      "Drain and free the shroud",
+      "Lift the radiator and transfer hardware",
+      "Fit, refill and leak-check"
+    ]
+  },
+  {
+    "guide": "e30-expansion-tank",
+    "revision": "9a44b2be4c1f0a87e772db4a",
+    "title": "Replace the late M20 expansion tank",
+    "steps": [
+      "Drain to below the tank",
+      "Transfer the switch and fit the tank",
+      "Refill and verify"
+    ]
+  },
+  {
+    "guide": "e30-m20-timing-belt",
+    "revision": "9462db52b82fcb5bb73d91fd",
+    "title": "M20 timing belt and tensioner",
+    "steps": [
+      "Clear the front of the engine",
+      "Set number one to compression TDC",
+      "Fit and tension the new belt",
+      "Refit and check"
+    ]
+  },
+  {
+    "guide": "e30-clutch-bleeding",
+    "revision": "a043597738e2ccb9867cb697",
+    "title": "Bleed the clutch hydraulics",
+    "steps": [
+      "Prepare the reservoir",
+      "Purge the slave cylinder",
+      "Verify release travel"
+    ]
+  },
+  {
+    "guide": "e30-driveshaft-flex-disc",
+    "revision": "5741b8f719347ac33e854122",
+    "title": "Replace the driveshaft flex disc",
+    "steps": [
+      "Expose and support the shaft",
+      "Replace the coupling",
+      "Set preload and torque"
+    ]
+  },
+  {
+    "guide": "e30-rear-shock-absorbers",
+    "revision": "37f6ce15607f7b67b5fbdfc6",
+    "title": "Rear shocks and upper mounts",
+    "steps": [
+      "Expose the mount and support the arm",
+      "Change the shock or upper mount",
+      "Tighten at installed height"
+    ]
+  },
+  {
+    "guide": "e30-handbrake-adjustment",
+    "revision": "b2f82aaafa71d7204a2c8bd5",
+    "title": "Adjust the rear-disc parking brake",
+    "steps": [
+      "Back off the cables",
+      "Adjust each shoe set at the rotor",
+      "Balance the cables"
+    ]
+  },
+  {
+    "guide": "e30-parking-brake-shoes",
+    "revision": "c618492d0afea230d867cf0c",
+    "title": "Replace the rear-disc parking brake shoes",
+    "steps": [
+      "Expose the shoe hardware",
+      "Replace and orient the shoes",
+      "Refit and adjust"
+    ]
+  },
+  {
+    "guide": "e30-sunroof-alignment",
+    "revision": "fba9acd1b7e871dffebeb53e",
+    "title": "Align the steel sunroof panel",
+    "steps": [
+      "Free the liner and close the panel",
+      "Set height and gap",
+      "Secure and cycle"
+    ]
+  },
+  {
+    "guide": "e30-heater-blower",
+    "revision": "f5041bce229c8fd314992be9",
+    "title": "Replace the heater blower motor",
+    "steps": [
+      "Open the cowl access",
+      "Remove and match the assembly",
+      "Check spin and refit"
+    ]
+  },
+  {
+    "guide": "e30-blower-resistor",
+    "revision": "698fb4f4790dd5fd4d2a7964",
+    "title": "Replace the heater blower resistor",
+    "steps": [
+      "Access the resistor plate",
+      "Inspect and replace",
+      "Restore covers and test"
+    ]
+  },
+  {
+    "guide": "e30-heater-valve",
+    "revision": "5bdb5a90eee5004f1aa0fb9e",
+    "title": "Replace the heater water valve",
+    "steps": [
+      "Expose the valve and catch coolant",
+      "Unfasten and replace the valve",
+      "Bleed and check operation"
+    ]
+  },
+  {
+    "guide": "e30-heater-core",
+    "revision": "2ef6baeafc5162d05bfc177f",
+    "title": "Replace the heater core",
+    "steps": [
+      "Clear the driver-side access",
+      "Withdraw the core",
+      "Refill and leak-check before closing"
+    ]
+  },
+  {
+    "guide": "e30-mirror-switch",
+    "revision": "a44aac480ee9b346a65c0464",
+    "title": "Replace the power-mirror switch",
+    "steps": [
+      "Remove the control knob",
+      "Lift out the switch",
+      "Refit and test both sides"
+    ]
+  },
+  {
+    "guide": "e30-sealed-beam-headlight",
+    "revision": "cd4db9ef45f4de122eb854b6",
+    "title": "Replace a sealed-beam headlight insert",
+    "steps": [
+      "Identify the lamp",
+      "Release the clamping ring",
+      "Seat and verify the lamp"
+    ]
+  },
+  {
+    "guide": "e30-fog-light-bulb",
+    "revision": "c1d7a1494c88b82a41998c5c",
+    "title": "Replace a late front fog light bulb",
+    "steps": [
+      "Free the lamp housing",
+      "Replace the bulb",
+      "Seal the lamp and test"
+    ]
+  },
+  {
+    "guide": "e30-wiper-blades",
+    "revision": "3c0bce1cfaa10c4c02cab202",
+    "title": "Replace the front wiper blades",
+    "steps": [
+      "Match the replacement and protect the glass",
+      "Release and fit one blade at a time",
+      "Check sweep and park"
+    ]
+  },
+  {
+    "guide": "e30-power-steering-bleed",
+    "revision": "d6cb429d9a2167fc98733195",
+    "title": "Fill and bleed the power steering",
+    "steps": [
+      "Check the system before filling",
+      "Cycle the steering",
+      "Recheck level and leaks"
+    ]
   }
 ]
