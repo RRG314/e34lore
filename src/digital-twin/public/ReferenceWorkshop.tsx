@@ -230,13 +230,18 @@ export function ReferenceWorkshop({embedded=false,referenceControls,buildAppeara
     const manualGearbox = model?.nodes.some(node => node.id === manualGearboxScope);
     const gearboxSystem = manualGearbox ? manualGearboxScope : automaticGearboxScope;
     const hasGearbox = model?.nodes.some(node => node.id === gearboxSystem);
-    const transmissionDiagrams = manualGearbox && model?.catalog
-        ? '/e30/workshop?tab=diagrams&reference='+model.id+'&context='+model.catalog.context.id+'&transmission=manual&category=Manual%20Transmission'
-        : '/workshop?tab=diagrams&reference=e34-525i-sedan-automatic&context=e34-context-b69b1a9062bd8352b127fef1&transmission=automatic&category=Automatic%20Transmission';
+    const transmission = manualGearbox ? 'manual' : 'automatic';
+    const transmissionDiagrams = model?.catalog
+        ? '/workshop?' + new URLSearchParams({
+            tab:'diagrams', reference:model.id, context:model.catalog.context.id, transmission,
+            category:manualGearbox ? 'Manual Transmission' : 'Automatic Transmission',
+        })
+        : '/workshop?tab=diagrams';
     const transmissionScope = view.scope === 'system:transmission' || selected?.systemIds.includes('system:transmission');
     const detailedEngine=systems.find(n=>n.id===engineInspectionScopes[0]);
     const selectableSystems=systems.flatMap(n=>{
         if(isEngineInspection(n.id))return [];
+        if(n.id==='system:transmission'&&series==='e30'&&!manualGearbox)return [{...n,name:'Transmission'}];
         if(n.id!=='system:engine'||!detailedEngine)return [n];
         return view.scope===n.id?[n,detailedEngine]:[detailedEngine];
     });

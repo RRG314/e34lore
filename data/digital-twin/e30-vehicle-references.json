@@ -1,0 +1,33 @@
+[
+  {
+    "id": "e30-325i-coupe-automatic",
+    "revision": 1183,
+    "manifestUrl": "/models/e30-lore/r1183/manifest.093d31008b6b60faf07a241d4d7ab2644c9f35442836e12d8fcd35c1c96adc7c.json",
+    "sha256": "093d31008b6b60faf07a241d4d7ab2644c9f35442836e12d8fcd35c1c96adc7c",
+    "renderableCount": 510,
+    "assetBytes": 21703236,
+    "label": "325i Coupe · Automatic",
+    "year": 1991,
+    "model": "325i",
+    "body": "Coupe",
+    "engine": "M20",
+    "transmission": "Automatic",
+    "contextId": "e30-context-9c7c592b83bfc01c6aa651cc"
+  },
+  {
+    "id": "e30-325i-coupe-rear-spoiler",
+    "revision": 1184,
+    "manifestUrl": "/models/e30-lore/r1184/manifest.0443f8f56f250e1d6bbc64505d47b9d8b7ea043389423a3f558515b5ca89454f.json",
+    "sha256": "0443f8f56f250e1d6bbc64505d47b9d8b7ea043389423a3f558515b5ca89454f",
+    "renderableCount": 548,
+    "assetBytes": 24826692,
+    "label": "325i Coupe · Rear lip spoiler",
+    "year": 1991,
+    "model": "325i",
+    "body": "Coupe",
+    "engine": "M20",
+    "transmission": "Manual",
+    "contextId": "e30-context-9c7c592b83bfc01c6aa651cc",
+    "equipment": "Rear lip spoiler"
+  }
+]

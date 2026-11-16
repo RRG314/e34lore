@@ -515,5 +515,157 @@
       "Replace the element",
       "Close and check the airbox"
     ]
+  },
+  {
+    "guide": "e30-wheel-removal",
+    "revision": "53f48962aec9e91fa4d67936",
+    "title": "Remove or install a wheel",
+    "steps": [
+      "Chock the car and loosen the bolts",
+      "Inspect the seats and mating faces",
+      "Tighten in a cross pattern"
+    ]
+  },
+  {
+    "guide": "e30-front-brake-pads-discs",
+    "revision": "7f8fb2a97c180172d92e4250",
+    "title": "Front brake pads and discs",
+    "steps": [
+      "Check the caliper and disc",
+      "Remove the pads",
+      "Remove or check the disc",
+      "Install pads and check pedal"
+    ]
+  },
+  {
+    "guide": "e30-rear-brake-pads-discs",
+    "revision": "b4646474531c6feb73dbcf35",
+    "title": "Rear brake pads and discs",
+    "steps": [
+      "Remove the pads",
+      "Fit the rear discs",
+      "Refit and check"
+    ]
+  },
+  {
+    "guide": "e30-brake-fluid-flush",
+    "revision": "65304222a2c127857bf8e39b",
+    "title": "Brake fluid flush and bleeding",
+    "steps": [
+      "Identify ABS and prepare the bleeder",
+      "Bleed in the correct sequence",
+      "Close the bleeders and check"
+    ]
+  },
+  {
+    "guide": "e30-front-control-arm",
+    "revision": "fb71b04fc5378cc3b83a1c68",
+    "title": "Front control arm replacement",
+    "steps": [
+      "Match the replacement arm",
+      "Release the joints and bracket",
+      "Fit the arm and verify steering"
+    ]
+  },
+  {
+    "guide": "e30-tie-rod",
+    "revision": "76dc0bd4a37aaa98a166d94b",
+    "title": "Steering tie rod and outer end",
+    "steps": [
+      "Record the existing adjustment",
+      "Release the outer and inner joints",
+      "Refit, secure and align"
+    ]
+  },
+  {
+    "guide": "e30-front-wheel-bearing",
+    "revision": "348b69c94a33d1528cd28436",
+    "title": "Front hub and wheel bearing",
+    "steps": [
+      "Expose the RWD hub",
+      "Pull off the hub and fit the new unit",
+      "Torque, stake and check"
+    ]
+  },
+  {
+    "guide": "e30-front-strut",
+    "revision": "e4b7cd037f0f2a56e024f5f4",
+    "title": "Front strut, upper mount and damper",
+    "steps": [
+      "Remove the strut assembly",
+      "Unload the upper mount",
+      "Replace the insert or upper mount",
+      "Install and check alignment"
+    ]
+  },
+  {
+    "guide": "e30-m20-spark-plugs",
+    "revision": "89cd1d43bd4281a318fd65e7",
+    "title": "M20 spark plugs",
+    "steps": [
+      "Identify the plug and socket",
+      "Remove and inspect",
+      "Install and check"
+    ]
+  },
+  {
+    "guide": "e30-m20-alternator-terminals",
+    "revision": "0a3c8eb9396bcabf5e2df710",
+    "title": "M20 alternator terminals",
+    "steps": [
+      "Identify the terminals",
+      "Refit and tighten",
+      "Restore insulation and test"
+    ]
+  },
+  {
+    "guide": "e30-manual-gearbox-fluid",
+    "revision": "9ba36eec89f2fb1608e2413e",
+    "title": "Getrag 260 manual gearbox oil",
+    "steps": [
+      "Confirm the fluid and access",
+      "Drain the gearbox",
+      "Refill at the lower edge of the fill opening"
+    ]
+  },
+  {
+    "guide": "e30-4hp22-sump",
+    "revision": "bb9fe3376ec9b7f94fdb4dc4",
+    "title": "ZF 4HP22 transmission pan and fluid",
+    "steps": [
+      "Identify the pan and drain",
+      "Clean and refit the pan",
+      "Refill and check at temperature"
+    ]
+  },
+  {
+    "guide": "e30-m20-starter-terminals",
+    "revision": "7bd432651993caf5bc45726f",
+    "title": "M20 starter terminals",
+    "steps": [
+      "Identify the starter and its connections",
+      "Inspect and reconnect",
+      "Refit insulation and check starting"
+    ]
+  },
+  {
+    "guide": "e30-front-control-arm-bush",
+    "revision": "006a93a7a3c4b1a14d8072c8",
+    "title": "Front wishbone bushings",
+    "steps": [
+      "Mark the brackets and check the bushes",
+      "Press in the new bushes",
+      "Refit and verify under normal load"
+    ]
+  },
+  {
+    "guide": "e30-front-stabilizer",
+    "revision": "ab11887e3d99ec682d92dff0",
+    "title": "Front anti-roll bar, links and mounts",
+    "steps": [
+      "Identify the layout and measure the bar",
+      "Release the bar",
+      "Install and check clearance"
+    ]
   }
 ]

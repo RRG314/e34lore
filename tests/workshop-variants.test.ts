@@ -10,6 +10,8 @@ import {Box3,Matrix4,Vector3} from 'three';
 import variants from '../data/digital-twin/vehicle-references.json';
 import automatic525i from '../data/digital-twin/525i-automatic-reference.json';
 import e30 from '../data/digital-twin/e30-candidate.json';
+import e30Variants from '../data/digital-twin/e30-vehicle-references.json';
+import {referenceVehicle, resolveVehicleReference} from '../src/vehicle/reference-context';
 import service525i from '../data/digital-twin/525i-service-release.json';
 import panelArchives from '../data/digital-twin/workshop-panel-archives.json';
 import current from '../data/digital-twin/public-reference.json';
@@ -24,6 +26,7 @@ import {offsets} from '../src/digital-twin/public/layout';
 const releases=[...variants,automatic525i];
 const models=releases.map(r=>parseReference(JSON.parse(fs.readFileSync('public'+r.manifestUrl,'utf8'))));
 const digest=(b:Uint8Array)=>createHash('sha256').update(b).digest('hex');
+const readModel=(pin:{manifestUrl:string})=>parseReference(JSON.parse(fs.readFileSync('public'+pin.manifestUrl,'utf8')));
 afterEach(()=>vi.unstubAllGlobals());
 describe('native workshop model switching',()=>{
  it.each([e30,service525i])('limits wiring to the matching $id and separates sleeves before the branches',pin=>{
@@ -54,6 +57,20 @@ describe('native workshop model switching',()=>{
    expect(offsets(model,single).get(branch.id+':sleeve')).not.toEqual([0,0,0]);
    expect(visibleNodes(model,{...single,shell:'ghost'}).filter(node=>node.assetId===wiringAsset)).toHaveLength(2);
    expect(savedView({name:'Harness view',revision:pin.revision,view:isolated,camera:null},model)).not.toBeNull();
+ });
+ it('selects the factory transmission and leaves the lip as an explicit equipment choice',()=>{
+   const [automatic,spoiler]=e30Variants;
+   const choices=[e30,...e30Variants];
+   expect(resolveVehicleReference(choices,referenceVehicle(e30)).selected?.id).toBe(e30.id);
+   expect(resolveVehicleReference(choices,referenceVehicle(automatic)).selected?.id).toBe(automatic.id);
+   expect(resolveVehicleReference(choices,referenceVehicle(e30),spoiler.id).selected?.id).toBe(spoiler.id);
+
+   const model=readModel(automatic);
+   expect(model.nodes.some(node=>node.id==='system:manual-gearbox')).toBe(false);
+   expect(model.nodes.some(node=>node.id==='e30assembly:cabin-floor:auto-selector')).toBe(true);
+   expect(visibleNodes(model,{...defaultView(),scope:'system:automatic-gearbox',internals:true})
+     .some(node=>node.id==='e30assembly:automatic:filter')).toBe(true);
+   expect(readModel(spoiler).nodes.find(node=>node.id==='e30body:trunk:rear-lip')?.parentId).toBe('e30body:trunk');
  });
  it('links the current E30 wiring view and retains the previous revision',()=>{
    const params=new URL(wiringWorkshopHref('e30'),'https://e34lore.com').searchParams;

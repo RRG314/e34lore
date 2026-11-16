@@ -67,6 +67,7 @@ export const e30FactoryJobs = [
   job("manual-gearbox-noise", "Manual gearbox troubleshooting", "drivetrain", "23-7 to 23-8", [373,374]),
   job("4hp22-pressure-test", "ZF 4HP22 hydraulic pressure test", "drivetrain", "24-105 · 24 00 111", [381]),
   job("4hp22-gearbox-removal", "ZF 4HP22 automatic gearbox removal", "drivetrain", "24-106 · 24 00 022", [383]),
+  job("4hp22-sump", "ZF 4HP22 automatic transmission pan and fluid", "drivetrain", "24-110 · 24 11 002", [388], ["M20"]),
   job("4hp22-valve-body", "ZF 4HP22 valve body removal and installation", "drivetrain", "24-113 · valve body", [392]),
   job("manual-shift-linkage", "Manual shift linkage layouts and lever removal", "drivetrain", "25-1 to 25-5 · 25 11 000", [428,429,430,431,432]),
   job("manual-shift-rod-joint", "Manual shift rod joint replacement", "drivetrain", "25-9 to 25-11 · 25 11 111", [436,437,438]),

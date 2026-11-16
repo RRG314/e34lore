@@ -51,7 +51,7 @@ export function buildReview(command) {
       if (id === e30ReferenceModule) {
         const release = fs.existsSync(e30ReleaseFile) ? fs.readFileSync(e30ReleaseFile,"utf8").trim() : "null";
         const archives = fs.existsSync(e30ArchivesFile) ? fs.readFileSync(e30ArchivesFile,"utf8").trim() : "[]";
-        return "export default " + release + "; export const localE30Archives = " + archives + ";";
+        return "export default " + release + "; export const localE30Variants = []; export const localE30Archives = " + archives + ";";
       }
       if(id===wheelModule){
         const e30Wheels=JSON.parse(fs.readFileSync('data/build-studio/e30-wheel-packages.json','utf8'));

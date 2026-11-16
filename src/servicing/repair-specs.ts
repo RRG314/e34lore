@@ -27,6 +27,7 @@ export type RepairSpecs = {
   note?: string;
   nodes?: RegExp;
   modelNode?: string;
+  modelReferenceId?: string;
   rightModelNode?: string;
   rightPartNumbers?: readonly string[];
   // Exact numbers with a direct relationship to this job. No descriptions or fuzzy matches.
@@ -76,7 +77,7 @@ function e30FactoryLocator(id:string,nodes:RegExp,modelNode:string,numbers:reado
 export const repairSpecs: readonly RepairSpecs[] = [
   ...frontAxleSpecs,
   {
-    id:'e30-m20-starter-terminals',series:'e30',title:'M20 starter terminals',topic:'e30-m20-starter-terminals',scope:e30Scope,
+    id:'e30-m20-starter-terminals',series:'e30',guide:'e30-m20-starter-terminals',title:'M20 starter terminals',topic:'e30-m20-starter-terminals',scope:e30Scope,
     manual:bmwTorque('12-6 · PDF 43'),
     tools:['8 mm, 10 mm and 13 mm six-point sockets for standard M5, M6 and M8 hex nuts, respectively. Confirm the fitted nut profile.', 'Low-range torque wrench covering 5–12 Nm.'],
     specs:[
@@ -92,7 +93,7 @@ export const repairSpecs: readonly RepairSpecs[] = [
     numbers:['12411726504'],
   },
   {
-    id:'e30-m20-alternator-terminals',series:'e30',title:'M20 alternator terminals',topic:'e30-m20-alternator-terminals',scope:e30Scope,
+    id:'e30-m20-alternator-terminals',series:'e30',guide:'e30-m20-alternator-terminals',title:'M20 alternator terminals',topic:'e30-m20-alternator-terminals',scope:e30Scope,
     manual:bmwTorque('12-5 · PDF 42'),
     tools:['13 mm six-point socket for a standard M8 B+ hex nut. Match the D+ nut on the fitted alternator.', 'Low-range torque wrench covering 5–13 Nm.'],
     specs:[
@@ -177,7 +178,7 @@ export const repairSpecs: readonly RepairSpecs[] = [
     nodes:/^e30assembly:engine-bay:(?:airbox|air-filter)$/,modelNode:'e30assembly:engine-bay:air-filter',
   },
   {
-    id:'e30-m20-spark-plugs',series:'e30',title:'M20 spark plugs',topic:'e30-m20-spark-plugs',
+    id:'e30-m20-spark-plugs',series:'e30',guide:'e30-m20-spark-plugs',title:'M20 spark plugs',topic:'e30-m20-spark-plugs',
     scope:'E30 325i with the original M20 and factory-type M14 × 1.25 plugs. Install six of the same type.',
     manual:link('BMW TIS 12 12 · Spark plugs',tis+'3_series_e30/325i_m20_sal/4_tightening_torques/12__engine_electrical_system_(m20)/12__ignition_wires_spark_plugs/1_azd__spark_plugs/'),
     tools:['21 mm (13/16 in nominal) spark plug socket for the listed Bosch W-series plugs.',e30SparkSocket,'BMW 12 1 180 plug-lead pliers for original connectors. Pull by the boot.'],
@@ -231,7 +232,7 @@ export const repairSpecs: readonly RepairSpecs[] = [
     nodes:/^e30assembly:rear-(?:left|right):damper$/,modelNode:'e30assembly:rear-left:damper',
   },
   {
-    id:'e30-front-brake-pads-discs',series:'e30',title:'Front brake pads and discs',topic:'e30-front-brake-pads-discs',
+    id:'e30-front-brake-pads-discs',series:'e30',guide:'e30-front-brake-pads-discs',title:'Front brake pads and discs',topic:'e30-front-brake-pads-discs',
     scope:e30Scope+' Factory ventilated front discs and matching sliding calipers; iX hardware differs.',
     manual:page('34',643,'BMW · 34-4, front brake pads and caliper'),
     compare:[page('34',644,'BMW · 34-5, front disc removal'),e30FrontPads],
@@ -244,7 +245,7 @@ export const repairSpecs: readonly RepairSpecs[] = [
     nodes:/^e30assembly:front-(?:left|right):(?:rotor|caliper|pad)/,modelNode:'e30assembly:front-left:rotor',
   },
   {
-    id:'e30-rear-brake-pads-discs',series:'e30',title:'Rear brake pads and discs',topic:'e30-rear-brake-pads-discs',
+    id:'e30-rear-brake-pads-discs',series:'e30',guide:'e30-rear-brake-pads-discs',title:'Rear brake pads and discs',topic:'e30-rear-brake-pads-discs',
     scope:e30Scope+' Factory rear discs and the capped guide bolts in BMW’s illustration.',
     manual:page('34',647,'BMW · 34-8, rear brake pads and caliper'),
     compare:[page('34',649,'BMW · 34-9, rear disc removal')],
@@ -258,7 +259,17 @@ export const repairSpecs: readonly RepairSpecs[] = [
     nodes:/^e30assembly:rear-(?:left|right):(?:rotor|caliper|pad)/,modelNode:'e30assembly:rear-left:rotor',
   },
   {
-    id:'e30-wheel-removal',series:'e30',title:'Remove or install a wheel',topic:'e30-wheel-removal',
+    id:'e30-brake-fluid-flush',series:'e30',guide:'e30-brake-fluid-flush',title:'Brake fluid flush and bleeding',topic:'e30-brake-fluid-flush',
+    scope:e30Scope+' Factory hydraulic brakes. Use the procedure for the installed ABS or non-ABS system.',
+    manual:page('34',641,'BMW · 34-2, conventional and ABS bleeding'),
+    tools:['7 mm or 9 mm six-point bleeder wrench, according to the fitted screw.', 'Reservoir pressure bleeder, clear hose, catch bottle and low-range torque wrench.'],
+    specs:[{item:'Bleeder screw with a 7 mm wrench size',value:'5 Nm',source:e30BrakeFront},
+      {item:'Bleeder screw with a 9 mm wrench size',value:'6 Nm',source:e30BrakeFront},
+      {item:'Maximum reservoir bleeder pressure',value:'2 bar',condition:'Follow the bleeder and factory instructions for the ABS or non-ABS procedure.',source:page('34',641,'BMW · 34-2')}],
+    nodes:/^e30assembly:engine-bay:brake-master(?:$|:)/,modelNode:'e30assembly:engine-bay:brake-master',
+  },
+  {
+    id:'e30-wheel-removal',series:'e30',guide:'e30-wheel-removal',title:'Remove or install a wheel',topic:'e30-wheel-removal',
     scope:'U.S. E30 325i / 325is, stock wheel and bolts described in the owner’s handbook.',
     manual:page('36',724,'BMW · 36-6, wheel removal and installation'),
     tools:['Wheel bolt wrench or matching socket, chock and calibrated torque wrench. Use the wheel-lock key if fitted.'],
@@ -269,7 +280,7 @@ export const repairSpecs: readonly RepairSpecs[] = [
     nodes:/^e30assembly:(?:front|rear)-(?:left|right):wheel$/,modelNode:'e30assembly:front-left:wheel',
   },
   {
-    id:'e30-manual-gearbox-fluid',series:'e30',title:'Getrag 260 manual gearbox oil',topic:'e30-manual-gearbox-fluid',
+    id:'e30-manual-gearbox-fluid',series:'e30',guide:'e30-manual-gearbox-fluid',title:'Getrag 260 manual gearbox oil',topic:'e30-manual-gearbox-fluid',
     scope:e30Scope+' Identify the original Getrag 260/5 and read the fluid label on the installed case.',
     manual:bmwGearboxOil,
     compare:[bmwTorque('23-2 · PDF 71')],
@@ -278,7 +289,21 @@ export const repairSpecs: readonly RepairSpecs[] = [
     parts:[{name:'Magnetic drain plug, M24 × 1.5',number:'23117546876',condition:'Catalog replacement where this plug type is listed.'},{name:'Filler screw plug, M24 × 1.5',number:'23117527440',condition:'Confirm the plug type in the case.'}],
     catalog:link('1991 325i coupe · Getrag 260 housing and plug diagram',coupe+'manual_transmission/housing_attaching_parts_getrag_260_5_50.html'),
     note:'Open the fill plug first. Confirm the gearbox label and approved fluid before draining.',
-    nodes:/^e30assembly:gearbox:(?:drain-plug|filler-plug)$/,modelNode:'e30assembly:gearbox:filler-plug',
+    nodes:/^e30assembly:gearbox:(?:drain-plug|filler-plug)$/,modelNode:'e30assembly:gearbox:filler-plug',modelReferenceId:'e30-325i-coupe-manual',
+  },
+  {
+    id:'e30-4hp22-sump',series:'e30',guide:'e30-4hp22-sump',title:'ZF 4HP22 transmission pan and fluid',topic:'e30-4hp22-sump',
+    scope:e30Scope+' ZF 4HP22 with the original dipstick, drain plug and steel pan. Read the gearbox plate and fluid recommendation first.',
+    manual:page('24',388,'BMW · 24-110, 4HP22 oil sump'),
+    compare:[page('24',392,'BMW · 24-113, oil screen and hydraulic control')],
+    tools:['BMW 24 0 080 filling funnel, drain pan and level lift.', 'Low-range torque wrench covering 7–16 Nm. Check the installed pan screws and plug before choosing sockets.'],
+    specs:[{item:'M6 pan screws',value:'7 Nm',condition:'4HP22/24 entry in the E30 workshop archive. Use the instructions for the installed pan if it differs.',source:bmwTorque('24-3 · PDF 81')},
+      {item:'Original M10 drain plug',value:'16 Nm',source:bmwTorque('24-3 · PDF 81')},
+      {item:'Final dipstick check',value:'Approx. 80 °C',condition:'Vehicle level, selector in P, engine idling.',source:page('24',388,'BMW · 24-110, fluid level')}],
+    parts:[{name:'Pan profile gasket',number:'24111217082'},{name:'M10 × 1 drain plug with sealing ring',number:'24111421387'},
+      {name:'Oil pan',number:'24111215935',condition:'Replace if the sealing flange is distorted.'}],
+    catalog:link('1991 325i coupe · 4HP22 pan and housing diagram',coupe+'automatic_transmission/housing_parts_lubrication_system_zf_4hp22_24.html'),
+    nodes:/^e30assembly:automatic:(?:pan|drain-plug)$/,modelNode:'e30assembly:automatic:pan',modelReferenceId:'e30-325i-coupe-automatic',
   },
   {
     id:'m50-engine-oil-and-filter',series:'e34',title:'M50 oil and filter service',guide:'m50-engine-oil-and-filter',
