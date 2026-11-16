@@ -22,7 +22,7 @@ export type WiringRoute = {
 };
 type RoutingReference = {
   id: string;
-  revision: number;
+  revisions: readonly [number, ...number[]];
   name: string;
   coverage: string;
   routes: WiringRoute[];
@@ -85,7 +85,7 @@ const e34Doors = ([-1,1] as const).flatMap(side => ([false,true] as const).map((
 export const wiringReferences: Record<Series, RoutingReference> = {
   e30: {
     id: 'e30-325i-coupe-manual',
-    revision: 1179,
+    revisions: [1180, 1179],
     name: '1991 325i coupe',
     coverage: 'Main loom follows BMW’s routing drawing. Branch bends, clips and sleeve sizes are approximate.',
     routes: [
@@ -164,7 +164,7 @@ export const wiringReferences: Record<Series, RoutingReference> = {
   },
   e34: {
     id: 'e34-525i-sedan-automatic',
-    revision: 1044,
+    revisions: [1044],
     name: '1995 525i sedan · M50TU',
     coverage: 'BMW diagrams identify the connections and access points. Loom bends, clip positions and sleeve sizes are approximate.',
     routes: [
@@ -241,10 +241,10 @@ export const wiringReferences: Record<Series, RoutingReference> = {
 };
 
 export function wiringFor(model: { id: string; revision: number }) {
-  return Object.values(wiringReferences).find(ref => ref.id === model.id && ref.revision === model.revision);
+  return Object.values(wiringReferences).find(ref => ref.id === model.id && ref.revisions.includes(model.revision));
 }
 
 export function wiringWorkshopHref(series: Series) {
   const ref = wiringReferences[series];
-  return '/workshop?' + new URLSearchParams({ reference: ref.id, model_revision: String(ref.revision), system: wiringScope });
+  return '/workshop?' + new URLSearchParams({ reference: ref.id, model_revision: String(ref.revisions[0]), system: wiringScope });
 }
