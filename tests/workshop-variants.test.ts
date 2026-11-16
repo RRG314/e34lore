@@ -246,6 +246,19 @@ describe('center console references', () => {
   })),
  ])('shows the correct selector in the cabin and separates it from the trim for $pin.label', ({pin,console:consoleId,grip,number})=>{
   const model=readModel(pin);
+  const e34 = pin.id.startsWith('e34-');
+  const boundsFor = (id: string) => {
+    const node = model.nodes.find(part => part.id === id);
+    expect(node?.bounds, id).toBeDefined();
+    const { min, max } = node!.bounds!;
+    return new Box3(new Vector3(...min), new Vector3(...max)).applyMatrix4(new Matrix4().fromArray(node!.matrix));
+  };
+  const rearSeat = boundsFor(e34 ? 'e34sys:rear-seat-cushion' : 'e30assembly:cabin:rear-bench');
+  const rearParts = e34
+    ? ['e34trim:center-console', 'e34trim:rear-console-tray', 'e34hvac:rear-console-vent']
+    : ['e30assembly:cabin-floor:console', 'e30trim:rear-ashtray', 'e30trim:rear-console-nut'];
+  for (const id of rearParts) expect(boundsFor(id).min.x - rearSeat.max.x, id).toBeGreaterThanOrEqual(.075);
+
   const view={...defaultView(),scope:'system:center-console'};
   const cabin=visibleNodes(model,{...defaultView(),cabin:'driver'}).map(node=>node.id);
   expect(cabin).toEqual(expect.arrayContaining([consoleId,grip]));

@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import { Box3, Group, Matrix4, Raycaster, Vector3 } from 'three';
 import { GLTFExporter } from 'three/addons/exporters/GLTFExporter.js';
+import { siteContent } from '../../scripts/site-content.mjs';
 import { e30Console, e34Console } from '../geometry/center-console.mjs';
 import { compactPart } from '../geometry/local-cabin-glb.mjs';
 import { compressGeometryGlb } from '../geometry/compress-glb.mjs';
@@ -14,6 +15,9 @@ globalThis.FileReader = class {
   }
 };
 
+const content = siteContent();
+assert(content.release, 'Set E34_ASSET_PACK to the retained Workshop release pack.');
+const { publicDir } = content;
 const data = 'data/digital-twin/';
 const archivePath = data + 'workshop-panel-archives.json';
 const archives = await readJson(archivePath);
@@ -29,6 +33,7 @@ const e34Sources = [
   { title: 'OEM rear console 51168181940 · detached part views', url: 'https://www.ebay.com/itm/314369960736' },
   { title: 'OEM front console 51161973683 · detached part views', url: 'https://www.schmiedmann.dk/da/bmw-E34/2036680-brugt?produkt=A63838' },
 ];
+const brochure = { title: 'BMW 5 Series options brochure (1994), page 9', url: 'https://e30.de/fotostory/f01937/E34Sonderausstattungen1994.pdf#page=9' };
 const e30ManualPhoto = { title: '1991 BMW 325i Coupe cabin photos', url: 'https://bringatrailer.com/listing/1991-bmw-325i-coupe/' };
 const e30AutomaticPhoto = { title: '1991 BMW 325iX · four-speed automatic selector photo', url: 'https://www.ronsusser.com/inventory/listing/1991-bmw-325ix-e30-pristine-condition-turnkey-mint-example/' };
 
@@ -52,9 +57,9 @@ async function geometry(series, automatic, revision) {
   // must be part of the insert, with space between it and the surrounding deck.
   const samples = series === 'e34'
     ? [[.205, -.026, 'e34trim:selector-bezel'], [-.330, -.025, 'e34trim:parking-brake-finisher'],
-      [-.518, .065, 'e34trim:rear-console-tray']]
+      [-.433, .061, 'e34trim:rear-console-tray']]
     : [[.157, 0, automatic ? 'e30assembly:cabin-floor:auto-selector' : 'e30assembly:cabin-floor:shifter'],
-      [-.330, -.010, 'e30trim:parking-brake-finisher'], [-.498, .052, 'e30trim:rear-console-tray']];
+      [-.330, -.010, 'e30trim:parking-brake-finisher'], [-.453, .052, 'e30trim:rear-console-tray'], [-.548, 0, 'e30trim:rear-ashtray']];
   for (const [x, z, id] of samples) {
     const ray = new Raycaster(new Vector3(x, 1, z), new Vector3(0, -1, 0));
     const first = ray.intersectObject(scene, true)[0];
@@ -72,7 +77,7 @@ async function revise(active, previousRevision, revision, replacement) {
   const pin = [active, ...archives].find(item => item.id === active.id && item.revision === previousRevision);
   assert(pin, 'The console requires its original cabin revision');
   originals.set(pin.id, pin);
-  const raw = await fs.readFile('public' + pin.manifestUrl);
+  const raw = await fs.readFile(publicDir + pin.manifestUrl);
   assert.equal(sha(raw), pin.sha256);
   const model = JSON.parse(raw);
   const { catalog, nodes } = model;
@@ -82,7 +87,7 @@ async function revise(active, previousRevision, revision, replacement) {
 
   async function binding(id, name, parentId, assemblyId, number, displayDirection, note = '') {
     const assembly = catalog.assemblies[assemblyId];
-    const position = number && (await readJson('public' + assembly.url)).items.find(row => row.number === number);
+    const position = number && (await readJson(publicDir + assembly.url)).items.find(row => row.number === number);
     assert(!number || position, 'Missing source position for ' + id);
     const sourceContext = { contextId: catalog.context.id, assemblyId, ...(position ? { positionId: position.id } : {}) };
     const settings = { name, parentId, displayDirection, sourceContext,
@@ -144,7 +149,35 @@ async function revise(active, previousRevision, revision, replacement) {
     assert(node, 'Missing console node ' + id);
     Object.assign(node, part, { assetId: replacement.asset.id, matrix: new Matrix4().toArray(), cabinVisible: true });
   }
-  model.assets.push(replacement.asset);
+  const mapPlacedPart = (id, transform) => {
+    const node = existing.get(id);
+    assert(node?.bounds, 'Missing console mount ' + id);
+    node.matrix = transform.multiply(new Matrix4().fromArray(node.matrix)).toArray();
+  };
+  if (e34) {
+    mapPlacedPart('e34hvac:rear-console-vent', new Matrix4().makeTranslation(.097, 0, 0));
+    const frontOfDuct = .513;
+    const lengthScale = (frontOfDuct + .434) / (frontOfDuct + .531);
+    mapPlacedPart('e34hvac:rear-console-duct',
+      new Matrix4().makeScale(lengthScale, 1, 1).setPosition(frontOfDuct * (1 - lengthScale), 0, 0));
+    catalog.bindings['e34trim:selector-surround'].visualSources.push(brochure);
+  } else {
+    for (const id of ['e30trim:rear-console-nut', 'e30trim:rear-console-spacer']) {
+      mapPlacedPart(id, new Matrix4().makeTranslation(.081, -.018, 0));
+    }
+  }
+
+  const seatId = e34 ? 'e34sys:rear-seat-cushion' : 'e30assembly:cabin:rear-bench';
+  const installedBounds = node => new Box3(new Vector3(...node.bounds.min), new Vector3(...node.bounds.max))
+    .applyMatrix4(new Matrix4().fromArray(node.matrix));
+  const rearNode = existing.get(e34 ? consoleId : 'e30assembly:cabin-floor:console');
+  const rearLimit = installedBounds(rearNode).min.x;
+  assert(rearLimit - installedBounds(existing.get(seatId)).max.x >= .08, 'Console intrudes into the rear seat area');
+
+  for (const binding of Object.values(catalog.bindings)) {
+    if (binding.visualSources) binding.visualSources = [...new Map(binding.visualSources.map(source => [source.url, source])).values()];
+  }
+  model.assets = [...model.assets.filter(asset => asset.id !== replacement.asset.id), replacement.asset];
   model.revision = catalog.modelRevision = revision;
   const rendered = nodes.filter(node => node.assetId);
   Object.assign(catalog.coverage, {
@@ -165,21 +198,21 @@ async function revise(active, previousRevision, revision, replacement) {
   const bytes = Buffer.from(JSON.stringify(model)), sha256 = sha(bytes);
   const prefix = '/models/' + (e34 ? 'e34' : 'e30') + '-lore/r' + revision + '/';
   const manifestUrl = prefix + 'manifest.' + sha256 + '.json';
-  await immutable('public' + replacement.asset.url, replacement.bytes);
-  await immutable('public' + manifestUrl, bytes);
+  await immutable(publicDir + replacement.asset.url, replacement.bytes);
+  await immutable(publicDir + manifestUrl, bytes);
   return { ...pin, revision, manifestUrl, sha256, renderableCount: rendered.length,
     assetBytes: model.assets.reduce((sum, asset) => sum + asset.bytes, 0) };
 }
 
-const e34 = await geometry('e34', true, 1045);
-const manual = await geometry('e30', false, 1185);
-const automatic = await geometry('e30', true, 1186);
+const e34 = await geometry('e34', true, 1046);
+const manual = await geometry('e30', false, 1188);
+const automatic = await geometry('e30', true, 1189);
 const e34Pin = data + '525i-service-release.json', manualPin = data + 'e30-candidate.json', variantsPin = data + 'e30-vehicle-references.json';
 const [e34Base, manualBase, [automaticBase, spoilerBase]] = await Promise.all([e34Pin, manualPin, variantsPin].map(readJson));
-const nextE34 = await revise(e34Base, 1044, 1045, e34);
-const nextManual = await revise(manualBase, 1182, 1185, manual);
-const nextAutomatic = await revise(automaticBase, 1183, 1186, automatic);
-const nextSpoiler = await revise(spoilerBase, 1184, 1187, manual);
+const nextE34 = await revise(e34Base, 1045, 1046, e34);
+const nextManual = await revise(manualBase, 1185, 1188, manual);
+const nextAutomatic = await revise(automaticBase, 1186, 1189, automatic);
+const nextSpoiler = await revise(spoilerBase, 1187, 1190, manual);
 for (const pin of originals.values()) {
   if (!archives.some(entry => entry.id === pin.id && entry.revision === pin.revision)) archives.push(pin);
 }
