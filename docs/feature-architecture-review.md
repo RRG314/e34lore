@@ -1,0 +1,39 @@
+# E34 Lore feature and architecture verification
+
+Reviewed against the owner-supplied November 5 feature review and the actual repository/database. The attachment describes desired behavior; it is not evidence of what is deployed. This implementation extends the existing platform and preserves the separate Physics Laboratory.
+
+## Connected walkthroughs and community
+
+Canonical guide, component, part and vehicle identities are shared by the reference library, workshop, discussions and garage. The workshop already exposes a selected component’s guide links. Part detail pages retain related guides, drawings and discussions. No new competing repair database was introduced.
+
+Every walkthrough step now offers **Ask about this step** and **Add to my journal**. The question carries a canonical guide ID, immutable revision and validated step number, plus the selected vehicle/system context. The draft survives sign-in. PostgreSQL rejects nonexistent step/revision combinations. Discussion links reopen the exact saved guide revision and step. Guide pages show related discussions and mark owner-accepted solutions separately from technical verification. Published owner work logs appear on the corresponding guide and OEM reference pages.
+
+Full original editorial guide snapshots and step identities are archived read-only in `guide_revision_archive` and `guide_step_index`. Update/delete triggers prevent rewriting a published snapshot. `scripts/generate-guide-revisions.mjs` pins the entire guide object to its SHA-256-derived revision; a unit check detects content/registry drift. Future content edits must generate and apply a new archive/index before deploying new links. History is available from the walkthrough sidebar. Existing source locators, tools, applicability, warnings, duration basis, printing, corrections and private outcome reports remain intact. Images enlarge and zoom within a dialog without navigating away from the procedure.
+
+Progress now has a device record and an explicit **Save checks to account** action. Members can select a specific owned car or general reference. Server progress is scoped to account, vehicle, guide and revision; competing saves cannot silently overwrite each other. My Garage lists saved walkthroughs and opens their exact revision. These checkmarks record the owner’s progress, not completion of a technically certified repair.
+
+## Restoration journals and vehicle records
+
+My Garage has dedicated restoration-journal and walkthrough-progress tabs alongside existing service history, modifications/installed parts and bookmarks. Vehicle details can be edited: model, installed engine, production year/month, market, body, transmission, steering, nickname, odometer/units, exterior color/paint code, interior/trim code and private notes. Current/previous ownership and dates remain supported.
+
+`owner_journal_entries` stores dated plans, discoveries, work status, narrative, optional guide/step and canonical part links, mileage, cost/currency and private notes. New updates are private. The owner reviews an exact publication preview and explicitly publishes each update to the car’s existing shared garage. Publication requires the owner’s shared garage story and copies only date/title/narrative/status/reference links into `garage_journal_entries`. Private vehicle bindings, costs, mileage and private notes are never part of that public snapshot.
+
+Editing the private update does not change what readers see. Republish copies the reviewed version; stale publication attempts fail. **Make private** withdraws an update, and unpublishing the parent garage hides its updates. Private records remain available during posting restrictions. Deleting a private update/car/account removes its public copies; another member’s discussion survives with obsolete foreign keys cleared. Export includes journals, publication mappings and walkthrough progress.
+
+The public journal is a dated timeline, with earlier updates available in pages. Each update links to its walkthrough/OEM reference and can start a discussion with canonical car, journal and step context. Comments and Helpful/Bad advice retain the existing forum’s history, explanations and moderation. Reports can target an individual journal update. Hiding/restoring journal updates requires moderator permission and MFA; republishing cannot evade a hide. The existing staff action form and report queue invoke these controls.
+
+## Images and app delivery
+
+The hero rotates through actual daylight photographs of a 525i Touring, M5 sedan and 520i sedan. Each image has source and license credits. The complete car is displayed without cropping; the caption sits outside the photograph. Manual previous/next/model controls and pause/play are available. Rotation stops for keyboard interaction, hover, a hidden page or reduced-motion preference. Source-provided delivery derivatives and original provenance are recorded separately in `data/hero-additional-sources.json` and `data/hero-photo-source.json`.
+
+The installable web app includes a manifest, 192/512px icons, a maskable icon, shortcuts and `/app` installation help. The service worker caches only icons and a reconnect page. Navigation HTML, Auth/API responses, garage records and discussions are never written to the app cache. Network access remains required for reference/account content.
+
+The generated Android Trusted Web Activity is `com.e34lore.app`, with minimum API 24 and target/compile API 36. It uses the existing website and backend; it does not create a second account or data store. The Android project, exact generator version/lock and build instructions are in `android/`. The owner subsequently authorized an internal-test rollout and an allowlist containing only their Google account. Google Play reports Active / Available to internal testers for version 1 / 0.1.0. The opt-in URL is https://play.google.com/apps/internaltest/4699494991122724102. No external invitation or public production rollout was performed. Signing and release receipts are recorded outside the source tree.
+
+## Verification and precise remaining limits
+
+Verification includes typecheck/build, 84 unit tests, 28 served-route/API checks and rollback-only PostgreSQL fixtures covering journals, account/car isolation, safe publication, stale edits, linked step context, immutable archives, MFA moderation, anti-evasion and deletion cascades. Existing community, garages and contribution-history regression fixtures also passed. Security advisors returned no findings. Browser journeys and Android build evidence are recorded in the release receipt.
+
+This is an engineering integration milestone, not complete E34 technical coverage. All six existing guides remain editorial inspection/planning/reference drafts with their existing review limits. No complete replacement procedure, optional video, factory CAD, interchange or torque value was fabricated. Wider reviewed repair coverage and validated upload processing remain open. Member photos/documents remain unavailable until the existing ingestion/scanning/privacy/licensing dependency is implemented. Private notes support additional owner records; ownership documents and credentials should not be placed in public narratives.
+
+Confirmation-email transport still fails with HTTP 500 in controlled Resend simulation tests; real-inbox signup/recovery is unverified. The Site remains owner-private. A public Android rollout still requires working signup mail, approved public access, policy/privacy review, actual device testing, anonymous Digital Asset Links validation (the exact Play app-signing certificate JSON is now configured) and Google Play’s testing/store requirements. The actual new-app dashboard requires 12 opted-in closed testers for 14 continuous days before production access; no testers or reviews have been fabricated.

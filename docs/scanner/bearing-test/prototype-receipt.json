@@ -1,0 +1,17 @@
+{
+  "generatedAt": "2026-11-09T12:56:59.411Z",
+  "model": {
+    "id": "Xenova/clip-vit-base-patch32",
+    "revision": "6b7c523703ae26e39be4b03774966f8571c7f523",
+    "dtype": "q8",
+    "license": "MIT"
+  },
+  "textWeightBytes": 64504507,
+  "textWeightSha256": "73baab855d406190da9faa498cfedf65f15cf309f4cc7385b7b032e6d08e5c3a",
+  "taxonomySha256": "d3213ff64731bb2c07bc1e4c6bab702c9d4aebad2fb191a5821aa338aab80e57",
+  "outputSha256": "7fb6dbc9692e8c41a4d4433544e3f0eb7b4a802cbe753c798921f4c097f3df11",
+  "families": 35,
+  "dimensions": 512,
+  "source": "https://huggingface.co/Xenova/clip-vit-base-patch32/tree/6b7c523703ae26e39be4b03774966f8571c7f523",
+  "library": "@huggingface/transformers@4.3.2"
+}

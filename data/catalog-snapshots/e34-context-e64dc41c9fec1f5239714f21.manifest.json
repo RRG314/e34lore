@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "file": "e34-context-e64dc41c9fec1f5239714f21.jsonl.gz",
+  "compressed_sha256": "b29353210e7ae4e5d650fa0cb9ae8e4065c7b0a78e12793c81b771cff2e50222",
+  "manifest": {
+    "schema_version": 1,
+    "source": "Public source ordering facts",
+    "context": {
+      "platform": "E34",
+      "model": "530i",
+      "modelYear": 1994,
+      "body": "Wagon",
+      "engine": null,
+      "market": null,
+      "contextEvidence": "Observed model-root link plus index H1; marketing prose excluded."
+    },
+    "inventory_sha256": "ff0dfc444356212a9febe05443ce89bfebe8c8d5340a72f50b6e507aa6a3b125",
+    "expected_pages": 381,
+    "selected_pages": 381,
+    "started_at": "2026-11-08T15:03:20.238534+00:00",
+    "successful_pages": 378,
+    "rejected_records": 220,
+    "parts": 7380,
+    "drawings": 438,
+    "errors": [
+      {
+        "url": "https://www.bmwpartsdeal.com/parts-list/1994-bmw-530i-wagon_e34/engine_electrical_system/alternator_individual_parts.html",
+        "error": "No cached source snapshot"
+      },
+      {
+        "url": "https://www.bmwpartsdeal.com/parts-list/1994-bmw-530i-wagon_e34/retrofitting_conversion_accessories/trailer_individual_parts_chassis_frame.html",
+        "error": "No cached source snapshot"
+      },
+      {
+        "url": "https://www.bmwpartsdeal.com/parts-list/1994-bmw-530i-wagon_e34/vehicle_trim/ornamental_strips.html",
+        "error": "No cached source snapshot"
+      }
+    ],
+    "scope": "Model-year/body source selection; unselected options and source restrictions retained. No universal fitment or complete-E34 claim.",
+    "completed_at": "2026-11-08T15:03:23.180352+00:00",
+    "status": "partial",
+    "facts_sha256": "e50cbfa0f1bba942675ea108820f6350466de56e56bc94a4de0d7b595d4baf4f"
+  }
+}

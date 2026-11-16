@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "file": "e34-context-7baab09ae252c9501f692b46.jsonl.gz",
+  "compressed_sha256": "2bd8d0baed903a64006edc46846afd4c1b8f20070dd509acf1201db62e34dc7b",
+  "manifest": {
+    "schema_version": 1,
+    "source": "Public source ordering facts",
+    "context": {
+      "platform": "E34",
+      "model": "m5",
+      "modelYear": 1993,
+      "body": "Sedan",
+      "engine": null,
+      "market": null,
+      "contextEvidence": "Observed model-root link plus index H1; marketing prose excluded."
+    },
+    "inventory_sha256": "a73c6f9b0d1d4dbbcc9e8d90c6bf99410a5a0ca31ff2f2cc6e899b6387b810fb",
+    "expected_pages": 329,
+    "selected_pages": 329,
+    "started_at": "2026-11-05T21:47:55.740824+00:00",
+    "successful_pages": 325,
+    "rejected_records": 0,
+    "parts": 7817,
+    "drawings": 386,
+    "errors": [
+      {
+        "url": "https://www.bmwpartsdeal.com/parts-list/1993-bmw-m5-sedan_e34/engine_electrical_system/battery_cable.html",
+        "error": "No cached source snapshot"
+      },
+      {
+        "url": "https://www.bmwpartsdeal.com/parts-list/1993-bmw-m5-sedan_e34/retrofitting_conversion_accessories/base_support_system.html",
+        "error": "No cached source snapshot"
+      },
+      {
+        "url": "https://www.bmwpartsdeal.com/parts-list/1993-bmw-m5-sedan_e34/vehicle_trim/exterior_trim_grille.html",
+        "error": "No cached source snapshot"
+      },
+      {
+        "url": "https://www.bmwpartsdeal.com/parts-list/1993-bmw-m5-sedan_e34/vehicle_trim/fine_wood_trim.html",
+        "error": "No cached source snapshot"
+      }
+    ],
+    "scope": "Model-year/body source selection; unselected options and source restrictions retained. No universal fitment or complete-E34 claim.",
+    "completed_at": "2026-11-05T21:47:58.176136+00:00",
+    "status": "partial",
+    "facts_sha256": "e53c33c119293be5feb60faece90624bd98fa3434286fb4d7f16d322343e4f2a"
+  }
+}

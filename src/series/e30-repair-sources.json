@@ -1,0 +1,253 @@
+[
+  {
+    "availability": "unknown",
+    "reviewed_at": "2026-11-09",
+    "verification": "Original publisher/author page indexed; technical procedure not independently certified",
+    "credit": "Original text and images remain with the linked creator",
+    "format": "Photo walkthrough",
+    "scope": {
+      "generation": "e30",
+      "engine": "M20"
+    },
+    "applicability": "M20 belt drive. Does not apply to M42 or S14 chain drives; confirm belt/tooth profile and tensioner update.",
+    "tools": [],
+    "time": "Not indexed; check the full original guide.",
+    "url": "https://www.e30zone.net/e30wiki/index.php/M20_Timing_Belt_Change",
+    "title": "M20 timing belt change",
+    "platform": "E30 Zone Wiki",
+    "reason": "Original repair reference with its own instructions and illustrations. Check configuration, safety, specifications and final tests in the applicable manual.",
+    "targets": [
+      {
+        "kind": "repair",
+        "id": "e30-m20-timing-belt"
+      }
+    ]
+  },
+  {
+    "availability": "unknown",
+    "reviewed_at": "2026-11-09",
+    "verification": "Original publisher/author page indexed; technical procedure not independently certified",
+    "credit": "Original text and images remain with the linked creator",
+    "format": "Photo walkthrough",
+    "scope": {
+      "generation": "e30",
+      "engine": "M20"
+    },
+    "applicability": "E30 source. Confirm the exact engine, axle, body, build and installed equipment; M3 and iX can differ.",
+    "tools": [
+      "Vehicle lift or rated jack stands",
+      "Transmission support",
+      "Metric hex and E-Torx sockets",
+      "Clutch alignment tool"
+    ],
+    "time": "Not indexed; check the full original guide.",
+    "url": "https://www.e30zone.net/e30wiki/index.php/Replacing_Clutch",
+    "title": "E30 clutch replacement",
+    "platform": "E30 Zone Wiki",
+    "reason": "Original repair reference with its own instructions and illustrations. Check configuration, safety, specifications and final tests in the applicable manual.",
+    "targets": [
+      {
+        "kind": "repair",
+        "id": "e30-m20-clutch"
+      }
+    ]
+  },
+  {
+    "availability": "unknown",
+    "reviewed_at": "2026-11-09",
+    "verification": "Original publisher/author page indexed; technical procedure not independently certified",
+    "credit": "Original text and images remain with the linked creator",
+    "format": "Photo walkthrough",
+    "scope": {
+      "generation": "e30"
+    },
+    "applicability": "Disc-brake E30 applications listed by the publisher; its parts list separates the 325iX rear rotor. Not a rear-drum procedure.",
+    "tools": [
+      "5 mm and 7 mm hex sockets",
+      "17 mm socket",
+      "Ratchet and breaker bar",
+      "Caliper piston tool"
+    ],
+    "time": "Publisher estimate: about 1 hour; corrosion can increase the time.",
+    "url": "https://www.fcpeuro.com/blog/how-to-replace-the-rear-brake-pads-and-rotors-bmw-e30",
+    "title": "E30 rear brake pads and rotors",
+    "platform": "FCP Euro",
+    "reason": "Original repair reference with its own instructions and illustrations. Check configuration, safety, specifications and final tests in the applicable manual.",
+    "targets": [
+      {
+        "kind": "repair",
+        "id": "e30-rear-brake-pads-discs"
+      }
+    ]
+  },
+  {
+    "availability": "unknown",
+    "reviewed_at": "2026-11-09",
+    "verification": "Original publisher/author page indexed; technical procedure not independently certified",
+    "credit": "Original text and images remain with the linked creator",
+    "format": "Photo walkthrough",
+    "scope": {
+      "generation": "e30"
+    },
+    "applicability": "E30 source. Confirm the exact engine, axle, body, build and installed equipment; M3 and iX can differ.",
+    "tools": [],
+    "time": "Not indexed; check the full original guide.",
+    "url": "https://www.fcpeuro.com/blog/bmw-e30-brake-fluid-flush-how-to-325i-m3",
+    "title": "E30 brake fluid flush",
+    "platform": "FCP Euro",
+    "reason": "Original repair reference with its own instructions and illustrations. Check configuration, safety, specifications and final tests in the applicable manual.",
+    "targets": [
+      {
+        "kind": "repair",
+        "id": "e30-brake-fluid-flush"
+      }
+    ]
+  },
+  {
+    "availability": "unknown",
+    "reviewed_at": "2026-11-09",
+    "verification": "Original publisher/author page indexed; technical procedure not independently certified",
+    "credit": "Original text and images remain with the linked creator",
+    "format": "Repair reference",
+    "scope": {
+      "generation": "e30"
+    },
+    "applicability": "E30 source. Confirm the exact engine, axle, body, build and installed equipment; M3 and iX can differ.",
+    "tools": [],
+    "time": "Not indexed; check the full original guide.",
+    "url": "https://www.e30zone.net/e30wiki/index.php/Brakes",
+    "title": "E30 brake system and repair references",
+    "platform": "E30 Zone Wiki",
+    "reason": "Original repair reference with its own instructions and illustrations. Check configuration, safety, specifications and final tests in the applicable manual.",
+    "targets": [
+      {
+        "kind": "repair",
+        "id": "e30-front-brake-pads-discs"
+      },
+      {
+        "kind": "repair",
+        "id": "e30-rear-brake-shoes"
+      },
+      {
+        "kind": "repair",
+        "id": "e30-brake-caliper-rebuild"
+      }
+    ]
+  },
+  {
+    "availability": "unknown",
+    "reviewed_at": "2026-11-09",
+    "verification": "Original publisher/author page indexed; technical procedure not independently certified",
+    "credit": "Original text and images remain with the linked creator",
+    "format": "Photo walkthrough",
+    "scope": {
+      "generation": "e30"
+    },
+    "applicability": "E30 source. Confirm the exact engine, axle, body, build and installed equipment; M3 and iX can differ.",
+    "tools": [],
+    "time": "Not indexed; check the full original guide.",
+    "url": "https://www.e30zone.net/e30wiki/index.php/Handbrake",
+    "title": "E30 parking brake service",
+    "platform": "E30 Zone Wiki",
+    "reason": "Original repair reference with its own instructions and illustrations. Check configuration, safety, specifications and final tests in the applicable manual.",
+    "targets": [
+      {
+        "kind": "repair",
+        "id": "e30-handbrake-adjustment"
+      }
+    ]
+  },
+  {
+    "availability": "unknown",
+    "reviewed_at": "2026-11-09",
+    "verification": "Original publisher/author page indexed; technical procedure not independently certified",
+    "credit": "Original text and images remain with the linked creator",
+    "format": "Photo walkthrough",
+    "scope": {
+      "generation": "e30"
+    },
+    "applicability": "Single-cam M10/M20 method. Not M40/M42 hydraulic adjustment or S14 shim service.",
+    "tools": [],
+    "time": "Not indexed; check the full original guide.",
+    "url": "https://bimmerlife.com/2018/05/11/valve-adjustment-on-bmw-single-cam-engines/",
+    "title": "M10 and M20 valve adjustment",
+    "platform": "BimmerLife",
+    "reason": "Original repair reference with its own instructions and illustrations. Check configuration, safety, specifications and final tests in the applicable manual.",
+    "targets": [
+      {
+        "kind": "repair",
+        "id": "e30-m20-valve-clearance"
+      }
+    ]
+  },
+  {
+    "availability": "unknown",
+    "reviewed_at": "2026-11-09",
+    "verification": "Original publisher/author page indexed; technical procedure not independently certified",
+    "credit": "Original text and images remain with the linked creator",
+    "format": "Photo walkthrough",
+    "scope": {
+      "generation": "e30",
+      "engine": "S14"
+    },
+    "applicability": "E30 source. Confirm the exact engine, axle, body, build and installed equipment; M3 and iX can differ.",
+    "tools": [],
+    "time": "Not indexed; check the full original guide.",
+    "url": "https://www.e30sport.net/maintenance/valve_adjustment/valve_adjustment2.htm",
+    "title": "E30 M3 S14 valve clearance and shims",
+    "platform": "E30Sport",
+    "reason": "Original repair reference with its own instructions and illustrations. Check configuration, safety, specifications and final tests in the applicable manual.",
+    "targets": [
+      {
+        "kind": "repair",
+        "id": "e30-s14-valve-clearance"
+      }
+    ]
+  },
+  {
+    "availability": "unknown",
+    "reviewed_at": "2026-11-09",
+    "verification": "Original publisher/author page indexed; technical procedure not independently certified",
+    "credit": "Original text and images remain with the linked creator",
+    "format": "Repair reference",
+    "scope": {
+      "generation": "e30"
+    },
+    "applicability": "E30 source. Confirm the exact engine, axle, body, build and installed equipment; M3 and iX can differ.",
+    "tools": [],
+    "time": "Not indexed; check the full original guide.",
+    "url": "https://www.e30zone.net/e30wiki/index.php/Cooling",
+    "title": "E30 cooling layouts and component references",
+    "platform": "E30 Zone Wiki",
+    "reason": "Original repair reference with its own instructions and illustrations. Check configuration, safety, specifications and final tests in the applicable manual.",
+    "targets": [
+      {
+        "kind": "repair",
+        "id": "e30-cooling-system"
+      }
+    ]
+  },
+  {
+    "availability": "unknown",
+    "reviewed_at": "2026-11-09",
+    "verification": "Original publisher/author page indexed; technical procedure not independently certified",
+    "credit": "Original text and images remain with the linked creator",
+    "format": "Repair reference",
+    "scope": {
+      "generation": "e30"
+    },
+    "applicability": "E30 source. Confirm the exact engine, axle, body, build and installed equipment; M3 and iX can differ.",
+    "tools": [],
+    "time": "Not indexed; check the full original guide.",
+    "url": "https://www.e30zone.net/e30wiki/index.php/Suspension",
+    "title": "E30 suspension reference",
+    "platform": "E30 Zone Wiki",
+    "reason": "Original repair reference with its own instructions and illustrations. Check configuration, safety, specifications and final tests in the applicable manual.",
+    "targets": [
+      {
+        "kind": "repair",
+        "id": "e30-suspension-reference"
+      }
+    ]
+  }
+]

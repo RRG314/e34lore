@@ -1,0 +1,19 @@
+{
+  "id": "e30-1985-artist-exterior",
+  "revision": 1,
+  "generation": "e30",
+  "manifestUrl": "/models/e30-lore/exterior-r1/manifest.e552152aa227c7cb0614363e1299861dcfa8c5acbb201b480632172a0d6e9e9d.json",
+  "sha256": "e552152aa227c7cb0614363e1299861dcfa8c5acbb201b480632172a0d6e9e9d",
+  "renderableCount": 3,
+  "assetBytes": 3100048,
+  "label": "E30 exterior · artist reference",
+  "year": 1985,
+  "model": "E30 · trim unverified",
+  "body": "Artist exterior depiction",
+  "engine": "Unverified",
+  "transmission": "Unverified",
+  "geometryCoverage": "exterior-only",
+  "mechanicalIdentityStatus": "unverified",
+  "dimensionalStatus": "artist proportions; physical dimensions unverified",
+  "supportsMechanicalExplosion": false
+}

@@ -1,0 +1,22 @@
+name: Parts, repairs, photos or 3D models
+description: Suggest a correction or offer material you made.
+body:
+  - type: input
+    id: vehicle
+    attributes:
+      label: Vehicle
+      description: Give the series, model, year, engine, gearbox, or market where relevant. Leave out the VIN.
+    validations:
+      required: true
+  - type: textarea
+    id: change
+    attributes:
+      label: What would you change or contribute?
+      description: Link the page or model. Give the part number, diagram callout, manual page, or measurement if you have one.
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: Source and credit
+      description: Give the source and creator. Attach original material only if it can be shared publicly. For private or large files, describe the material and ask for a private way to send it.

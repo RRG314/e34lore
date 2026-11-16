@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "file": "e34-context-4c9a01c4223db2b67700b216.jsonl.gz",
+  "compressed_sha256": "78f3deddbd82ad43276c8d2d3601928e6162b61da1dc444849a1e0595d811933",
+  "manifest": {
+    "schema_version": 1,
+    "source": "Public source ordering facts",
+    "context": {
+      "platform": "E34",
+      "model": "525i",
+      "modelYear": 1994,
+      "body": "Sedan",
+      "engine": null,
+      "market": null,
+      "contextEvidence": "Page H1 and public leaf-link prefix; marketing prose excluded."
+    },
+    "inventory_sha256": "c70b31e94da61b3bc9bcbec9249b2d7f837d6393f989008b6089b65398507204",
+    "expected_pages": 397,
+    "selected_pages": 397,
+    "started_at": "2026-11-05T21:34:00.273886+00:00",
+    "successful_pages": 397,
+    "rejected_records": 0,
+    "parts": 10541,
+    "drawings": 499,
+    "errors": [],
+    "scope": "Model-year/body source selection; unselected options and source restrictions retained. No universal fitment or complete-E34 claim.",
+    "completed_at": "2026-11-05T21:34:05.103476+00:00",
+    "status": "source-index-imported",
+    "facts_sha256": "bcead3a1cf19d521935d6cde64c33679086f91fc388602cd209b63c3d0590354"
+  }
+}

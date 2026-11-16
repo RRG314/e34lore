@@ -1,0 +1,336 @@
+{
+  "schemaVersion": 1,
+  "sourceGeometryCommit": "a0ff5d9",
+  "sourceIndexSha256": "1fe6fe127ba3884ac493072f59c024dc12e7f9efe489a0324947a80f3f06acf2",
+  "baseManifestUnchanged": "c523405c859e3e91d1a67dc4580b769889fe9a3fda7a643bf6c70b8b379d274d",
+  "receipts": [
+    {
+      "id": "e34-530i-sedan-manual",
+      "sourceManifestSha256": "fc2b49903440940e278a48df843c24bc6454add6325f6874c7ff81866e2fc3d6",
+      "revision": 15,
+      "geometryAssets": [
+        {
+          "id": "assembled:wheel-v4",
+          "sha256": "aba6fa5cec6c1b31ca52d1e3ae1f95a08fda22d6a2eccc1a5bf21190513cc0e1"
+        },
+        {
+          "id": "assembled:body-v7",
+          "sha256": "60efa3688dbd35ee6315d0da6846df6ed44ee12e3531bd6ba6cccc01e2897fab"
+        },
+        {
+          "id": "vehicle-variant:common-chassis:r1",
+          "sha256": "743b69c5f7227c02d766cdba482a08d49cefbe255ebf79e3869ca67e84a9c0fa"
+        },
+        {
+          "id": "vehicle-variant:engine:M60B30:r1",
+          "sha256": "5345f4fc9810ef8d6694649aea81669d9913762e6a8e7f9cef9fb6ce4af0a814"
+        },
+        {
+          "id": "vehicle-variant:transmission:zf-s5d310z:r1",
+          "sha256": "91115b13a6fbfbdf176b5a6f7a2da2c9735e1bcfb124e76e43503ecfd1fff0ea"
+        },
+        {
+          "id": "vehicle-variant:installation:e34-530i-sedan-manual:r1",
+          "sha256": "5c0df55438bcd54ad1ceadccb50d40c641e7d68f20a2cded9e92ef604fdb8e2f"
+        }
+      ],
+      "catalog": {
+        "renderable": 701,
+        "bound": 701,
+        "withCandidates": 362,
+        "sourcePages": 385,
+        "expectedPages": 385,
+        "sourcePositions": 7918,
+        "distinctNumbers": 6273
+      }
+    },
+    {
+      "id": "e34-530i-sedan-automatic",
+      "sourceManifestSha256": "01806cab53dd29e5f9dd0fd139f011ab4a0f2f8e82c6c523a96bce86ba53e1ca",
+      "revision": 16,
+      "geometryAssets": [
+        {
+          "id": "assembled:wheel-v4",
+          "sha256": "aba6fa5cec6c1b31ca52d1e3ae1f95a08fda22d6a2eccc1a5bf21190513cc0e1"
+        },
+        {
+          "id": "assembled:body-v7",
+          "sha256": "60efa3688dbd35ee6315d0da6846df6ed44ee12e3531bd6ba6cccc01e2897fab"
+        },
+        {
+          "id": "vehicle-variant:common-chassis:r1",
+          "sha256": "743b69c5f7227c02d766cdba482a08d49cefbe255ebf79e3869ca67e84a9c0fa"
+        },
+        {
+          "id": "vehicle-variant:engine:M60B30:r1",
+          "sha256": "5345f4fc9810ef8d6694649aea81669d9913762e6a8e7f9cef9fb6ce4af0a814"
+        },
+        {
+          "id": "vehicle-variant:transmission:zf-5hp18:r1",
+          "sha256": "90c8205d556812417a4dc697ad62dc667726240028c4c379a05aba1116e950fd"
+        },
+        {
+          "id": "vehicle-variant:installation:e34-530i-sedan-automatic:r1",
+          "sha256": "9105b630d64310cc60f64d5a2171c08e3b561347cd1e31ece42c5e8f9c153d15"
+        }
+      ],
+      "catalog": {
+        "renderable": 738,
+        "bound": 738,
+        "withCandidates": 363,
+        "sourcePages": 385,
+        "expectedPages": 385,
+        "sourcePositions": 7918,
+        "distinctNumbers": 6273
+      }
+    },
+    {
+      "id": "e34-535i-sedan-manual",
+      "sourceManifestSha256": "b51cdea4fa4e781c1f86f15d8163cbeeb88f35f15236abc9f58c1935a214531c",
+      "revision": 17,
+      "geometryAssets": [
+        {
+          "id": "assembled:wheel-v4",
+          "sha256": "aba6fa5cec6c1b31ca52d1e3ae1f95a08fda22d6a2eccc1a5bf21190513cc0e1"
+        },
+        {
+          "id": "assembled:body-v7",
+          "sha256": "60efa3688dbd35ee6315d0da6846df6ed44ee12e3531bd6ba6cccc01e2897fab"
+        },
+        {
+          "id": "vehicle-variant:common-chassis:r1",
+          "sha256": "743b69c5f7227c02d766cdba482a08d49cefbe255ebf79e3869ca67e84a9c0fa"
+        },
+        {
+          "id": "vehicle-variant:engine:M30B35:r1",
+          "sha256": "f7c368d703b9589651d9f21812c3cfc508d728d4463b5c0f06139f3480193bf3"
+        },
+        {
+          "id": "vehicle-variant:transmission:getrag-260-6:r1",
+          "sha256": "6e6e0a71e007e8894deb7445837ddac32b8321b73e8b6fbe18ab7a875416d888"
+        },
+        {
+          "id": "vehicle-variant:installation:e34-535i-sedan-manual:r1",
+          "sha256": "a99a1c0a94bc62f0cef193158216a43dc289410ab02e51308c9acaf6320f935f"
+        }
+      ],
+      "catalog": {
+        "renderable": 428,
+        "bound": 428,
+        "withCandidates": 199,
+        "sourcePages": 386,
+        "expectedPages": 386,
+        "sourcePositions": 10402,
+        "distinctNumbers": 8214
+      }
+    },
+    {
+      "id": "e34-535i-sedan-automatic",
+      "sourceManifestSha256": "c3066776778ca2443062de846e2c63ae4c56b1595e563e32bbe221c6741d1629",
+      "revision": 18,
+      "geometryAssets": [
+        {
+          "id": "assembled:wheel-v4",
+          "sha256": "aba6fa5cec6c1b31ca52d1e3ae1f95a08fda22d6a2eccc1a5bf21190513cc0e1"
+        },
+        {
+          "id": "assembled:body-v7",
+          "sha256": "60efa3688dbd35ee6315d0da6846df6ed44ee12e3531bd6ba6cccc01e2897fab"
+        },
+        {
+          "id": "vehicle-variant:common-chassis:r1",
+          "sha256": "743b69c5f7227c02d766cdba482a08d49cefbe255ebf79e3869ca67e84a9c0fa"
+        },
+        {
+          "id": "vehicle-variant:engine:M30B35:r1",
+          "sha256": "f7c368d703b9589651d9f21812c3cfc508d728d4463b5c0f06139f3480193bf3"
+        },
+        {
+          "id": "vehicle-variant:transmission:zf-4hp22:r1",
+          "sha256": "061231e06d5187eafdb9af98c3047d866fa92910b6927e1475ea45f4e79b4994"
+        },
+        {
+          "id": "vehicle-variant:installation:e34-535i-sedan-automatic:r1",
+          "sha256": "b517056a084f20d44afe64098fd8143001732f50b37c706f9d025de36e26b5b5"
+        }
+      ],
+      "catalog": {
+        "renderable": 452,
+        "bound": 452,
+        "withCandidates": 199,
+        "sourcePages": 386,
+        "expectedPages": 386,
+        "sourcePositions": 10402,
+        "distinctNumbers": 8214
+      }
+    },
+    {
+      "id": "e34-540i-sedan-manual",
+      "sourceManifestSha256": "63fa3188d27c611711092ef35638db6f64d1bf970a59e00b92ef3cddd424e1e5",
+      "revision": 19,
+      "geometryAssets": [
+        {
+          "id": "assembled:wheel-v4",
+          "sha256": "aba6fa5cec6c1b31ca52d1e3ae1f95a08fda22d6a2eccc1a5bf21190513cc0e1"
+        },
+        {
+          "id": "assembled:body-v7",
+          "sha256": "60efa3688dbd35ee6315d0da6846df6ed44ee12e3531bd6ba6cccc01e2897fab"
+        },
+        {
+          "id": "vehicle-variant:common-chassis:r1",
+          "sha256": "743b69c5f7227c02d766cdba482a08d49cefbe255ebf79e3869ca67e84a9c0fa"
+        },
+        {
+          "id": "vehicle-variant:engine:M60B40:r1",
+          "sha256": "ced203cae5b4ac559e525d5dae86b85bb0cc4878864772099b34c830ed8015c0"
+        },
+        {
+          "id": "vehicle-variant:transmission:getrag-420g:r1",
+          "sha256": "ed6c4904b5f9e07a366ff3ee1c495823e6671640be8d1caaa7670d7dd19c7192"
+        },
+        {
+          "id": "vehicle-variant:installation:e34-540i-sedan-manual:r1",
+          "sha256": "860eafce5faa4b89bef0823313891e37d56d6a897543552b67534d724cd6fbc8"
+        }
+      ],
+      "catalog": {
+        "renderable": 704,
+        "bound": 704,
+        "withCandidates": 264,
+        "sourcePages": 387,
+        "expectedPages": 387,
+        "sourcePositions": 7901,
+        "distinctNumbers": 6206
+      }
+    },
+    {
+      "id": "e34-540i-sedan-automatic",
+      "sourceManifestSha256": "721bad6a7281034e1b81e03bbead3cdcc18a30a6388ac6b360f916e8f2eb7bdf",
+      "revision": 20,
+      "geometryAssets": [
+        {
+          "id": "assembled:wheel-v4",
+          "sha256": "aba6fa5cec6c1b31ca52d1e3ae1f95a08fda22d6a2eccc1a5bf21190513cc0e1"
+        },
+        {
+          "id": "assembled:body-v7",
+          "sha256": "60efa3688dbd35ee6315d0da6846df6ed44ee12e3531bd6ba6cccc01e2897fab"
+        },
+        {
+          "id": "vehicle-variant:common-chassis:r1",
+          "sha256": "743b69c5f7227c02d766cdba482a08d49cefbe255ebf79e3869ca67e84a9c0fa"
+        },
+        {
+          "id": "vehicle-variant:engine:M60B40:r1",
+          "sha256": "ced203cae5b4ac559e525d5dae86b85bb0cc4878864772099b34c830ed8015c0"
+        },
+        {
+          "id": "vehicle-variant:transmission:zf-5hp30:r1",
+          "sha256": "34778d047c13fd78b6457a8afbdd51985bdd3b548e8d27b0bf2674758c5c3270"
+        },
+        {
+          "id": "vehicle-variant:installation:e34-540i-sedan-automatic:r1",
+          "sha256": "e68ea43864092e90b37f1e3f2ff770702dc2749ca36352dcdb5b553aed456ad2"
+        }
+      ],
+      "catalog": {
+        "renderable": 738,
+        "bound": 738,
+        "withCandidates": 265,
+        "sourcePages": 387,
+        "expectedPages": 387,
+        "sourcePositions": 7901,
+        "distinctNumbers": 6206
+      }
+    },
+    {
+      "id": "e34-530i-touring-manual",
+      "sourceManifestSha256": "63b64d64003eefb53c05e62f01b8f33579e43180d4ebe72872bf46f1f96131e1",
+      "revision": 21,
+      "geometryAssets": [
+        {
+          "id": "assembled:wheel-v4",
+          "sha256": "aba6fa5cec6c1b31ca52d1e3ae1f95a08fda22d6a2eccc1a5bf21190513cc0e1"
+        },
+        {
+          "id": "vehicle-variant:common-chassis:r1",
+          "sha256": "743b69c5f7227c02d766cdba482a08d49cefbe255ebf79e3869ca67e84a9c0fa"
+        },
+        {
+          "id": "assembled:body-v7",
+          "sha256": "60efa3688dbd35ee6315d0da6846df6ed44ee12e3531bd6ba6cccc01e2897fab"
+        },
+        {
+          "id": "vehicle-variant:engine:M60B30:r1",
+          "sha256": "5345f4fc9810ef8d6694649aea81669d9913762e6a8e7f9cef9fb6ce4af0a814"
+        },
+        {
+          "id": "vehicle-variant:transmission:zf-s5d310z:r1",
+          "sha256": "91115b13a6fbfbdf176b5a6f7a2da2c9735e1bcfb124e76e43503ecfd1fff0ea"
+        },
+        {
+          "id": "vehicle-variant:installation:e34-530i-touring-manual:r1",
+          "sha256": "5c0df55438bcd54ad1ceadccb50d40c641e7d68f20a2cded9e92ef604fdb8e2f"
+        },
+        {
+          "id": "assembled:body-touring-c89006a5",
+          "sha256": "c89006a5069457c76794b0a72b54ebcd7be8580d83b5006c7b8d0d4c419e495b"
+        }
+      ],
+      "catalog": {
+        "renderable": 690,
+        "bound": 690,
+        "withCandidates": 311,
+        "sourcePages": 378,
+        "expectedPages": 378,
+        "sourcePositions": 7620,
+        "distinctNumbers": 6030
+      }
+    },
+    {
+      "id": "e34-530i-touring-automatic",
+      "sourceManifestSha256": "8c9a9dc1f4f6491fabf0bbc42df2c14e7feef04bf0f0a12831eb830103bcd0e4",
+      "revision": 22,
+      "geometryAssets": [
+        {
+          "id": "assembled:wheel-v4",
+          "sha256": "aba6fa5cec6c1b31ca52d1e3ae1f95a08fda22d6a2eccc1a5bf21190513cc0e1"
+        },
+        {
+          "id": "vehicle-variant:common-chassis:r1",
+          "sha256": "743b69c5f7227c02d766cdba482a08d49cefbe255ebf79e3869ca67e84a9c0fa"
+        },
+        {
+          "id": "assembled:body-v7",
+          "sha256": "60efa3688dbd35ee6315d0da6846df6ed44ee12e3531bd6ba6cccc01e2897fab"
+        },
+        {
+          "id": "vehicle-variant:engine:M60B30:r1",
+          "sha256": "5345f4fc9810ef8d6694649aea81669d9913762e6a8e7f9cef9fb6ce4af0a814"
+        },
+        {
+          "id": "vehicle-variant:transmission:zf-5hp18:r1",
+          "sha256": "90c8205d556812417a4dc697ad62dc667726240028c4c379a05aba1116e950fd"
+        },
+        {
+          "id": "vehicle-variant:installation:e34-530i-touring-automatic:r1",
+          "sha256": "9105b630d64310cc60f64d5a2171c08e3b561347cd1e31ece42c5e8f9c153d15"
+        },
+        {
+          "id": "assembled:body-touring-c89006a5",
+          "sha256": "c89006a5069457c76794b0a72b54ebcd7be8580d83b5006c7b8d0d4c419e495b"
+        }
+      ],
+      "catalog": {
+        "renderable": 727,
+        "bound": 727,
+        "withCandidates": 313,
+        "sourcePages": 378,
+        "expectedPages": 378,
+        "sourcePositions": 7620,
+        "distinctNumbers": 6030
+      }
+    }
+  ]
+}

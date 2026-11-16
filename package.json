@@ -1,0 +1,79 @@
+{
+  "name": "e34-collective",
+  "version": "0.1.0",
+  "private": true,
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "install:ci": "node scripts/install-ci.mjs",
+    "dev": "node scripts/run-framework.mjs dev",
+    "build": "node scripts/prepare-scanner-runtime.mjs && node scripts/check-public-assets.mjs && node scripts/run-framework.mjs build && node scripts/ip/prepare-deployment-assets.mjs && node scripts/check-build-confidentiality.mjs",
+    "start": "node --import ./scripts/sites-env.mjs ./node_modules/wrangler/bin/wrangler.js dev --config dist/server/wrangler.json --local --persist-to .wrangler/state --ip 127.0.0.1 --inspector-port 0",
+    "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:e2e": "node tests/e2e.mjs",
+    "test:import": "python3 -m unittest discover -s tests -p 'test_*.py'",
+    "check": "npm run typecheck && npm run analytics:registry:check && npm test && npm run test:import && npm run build",
+    "test:security:db": "python3 scripts/test-security-db.py",
+    "test:security:http": "node tests/security-http.mjs",
+    "test:affiliates:db": "bash scripts/test-affiliate-database.sh",
+    "test:affiliates:http": "node tests/affiliate-http.mjs",
+    "analytics:registry:check": "node --experimental-strip-types scripts/build-analytics-registry.mjs --check",
+    "ip:inventory": "node scripts/ip/build-inventory.mjs"
+  },
+  "dependencies": {
+    "@huggingface/transformers": "4.3.2",
+    "@noble/hashes": "2.4.0",
+    "@supabase/supabase-js": "2.119.0",
+    "lucide-react": "^1.31.0",
+    "next": "16.4.5",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "recharts": "^3.8.0",
+    "tesseract.js": "7.0.0",
+    "three": "0.187.0",
+    "tldts": "7.4.19",
+    "web-vitals": "6.2.3",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@cloudflare/vite-plugin": "1.67.0",
+    "@cloudflare/workers-types": "5.20261101.1",
+    "@tailwindcss/postcss": "4.2.1",
+    "@types/node": "22.19.19",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "@types/three": "0.187.0",
+    "@vitejs/plugin-react": "6.0.2",
+    "@vitejs/plugin-rsc": "0.5.39",
+    "eslint": "9.39.4",
+    "eslint-config-next": "16.4.5",
+    "jpeg-js": "0.4.4",
+    "json-rpc-2.0": "1.7.1",
+    "meshoptimizer": "1.1.1",
+    "raw-body": "3.0.2",
+    "react-server-dom-webpack": "19.3.1",
+    "svix": "2.9.1",
+    "tailwindcss": "4.2.1",
+    "typescript": "5.9.3",
+    "vinext": "1.4.4",
+    "vite": "8.3.6",
+    "vitest": "5.1.0",
+    "wrangler": "4.156.1"
+  },
+  "type": "module",
+  "overrides": {
+    "@typescript-eslint/typescript-estree": {
+      "minimatch": "11.0.5"
+    },
+    "satori": {
+      "fflate": "0.7.5"
+    },
+    "miniflare": {
+      "sharp": "0.35.5"
+    }
+  }
+}

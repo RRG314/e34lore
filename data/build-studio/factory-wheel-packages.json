@@ -1,0 +1,545 @@
+[
+  {
+    "id": "e34-factory-1-v1",
+    "label": "Style 1 · Steel",
+    "dimensions": "15 in",
+    "nominalRimMm": [
+      381,
+      177.8
+    ],
+    "url": "/models/e34-build-studio/r2/dc80096bfd8879fb1011f27d0c5dc95103894766e177a96843672afa2fa8a815.glb",
+    "bytes": 741528,
+    "sha256": "dc80096bfd8879fb1011f27d0c5dc95103894766e177a96843672afa2fa8a815",
+    "lodLow": {
+      "url": "/models/e34-build-studio/r2/7f77ab37f3d4af7297850a17a5bf24fa68aede0b60af9d3df812787b68b33e6a.glb",
+      "bytes": 270380,
+      "sha256": "7f77ab37f3d4af7297850a17a5bf24fa68aede0b60af9d3df812787b68b33e6a"
+    },
+    "right": null,
+    "normalization": 1,
+    "source": "https://myair-bdr.bmwgroup.com/static/manual/RadReif/RadReif/mj1996/e34_1996.pdf",
+    "group": "E34"
+  },
+  {
+    "id": "e34-factory-2-v1",
+    "label": "Style 2 · BMW styling",
+    "dimensions": "15 in",
+    "nominalRimMm": [
+      381,
+      177.8
+    ],
+    "url": "/models/e34-build-studio/r2/328d1f39cea396bcd09a762db2974d8cb1d47d62b1f2b311ba1fe2d7cd96c1ad.glb",
+    "bytes": 640292,
+    "sha256": "328d1f39cea396bcd09a762db2974d8cb1d47d62b1f2b311ba1fe2d7cd96c1ad",
+    "lodLow": {
+      "url": "/models/e34-build-studio/r2/66cb11925e8a5dc29a1c69aa6e903a73b26a64bedd2a31d545966e1d528a43f4.glb",
+      "bytes": 242436,
+      "sha256": "66cb11925e8a5dc29a1c69aa6e903a73b26a64bedd2a31d545966e1d528a43f4"
+    },
+    "right": null,
+    "normalization": 1,
+    "source": "https://myair-bdr.bmwgroup.com/static/manual/RadReif/RadReif/mj1996/e34_1996.pdf",
+    "group": "E34"
+  },
+  {
+    "id": "e34-factory-3-v1",
+    "label": "Style 3 · Forged disc",
+    "dimensions": "15 in",
+    "nominalRimMm": [
+      381,
+      177.8
+    ],
+    "url": "/models/e34-build-studio/r2/d4cc87bf790ec48b70f5cfc7f63ff9d0fea35a09e60a4be7b41780075d514ae3.glb",
+    "bytes": 641248,
+    "sha256": "d4cc87bf790ec48b70f5cfc7f63ff9d0fea35a09e60a4be7b41780075d514ae3",
+    "lodLow": {
+      "url": "/models/e34-build-studio/r2/ebe37b12cc2cb76c1720940a418b38898ca7b910fe68050b17cc350853e92fd6.glb",
+      "bytes": 241284,
+      "sha256": "ebe37b12cc2cb76c1720940a418b38898ca7b910fe68050b17cc350853e92fd6"
+    },
+    "right": null,
+    "normalization": 1,
+    "source": "https://myair-bdr.bmwgroup.com/static/manual/RadReif/RadReif/mj1996/e34_1996.pdf",
+    "group": "E34"
+  },
+  {
+    "id": "e34-factory-4-v1",
+    "label": "Style 4 · Multi-spoke",
+    "dimensions": "15 in",
+    "nominalRimMm": [
+      381,
+      177.8
+    ],
+    "url": "/models/e34-build-studio/r2/880588235f8a03b6be3e0d8dbce899e01948d87b6668bc5fbf90b3bb446a2247.glb",
+    "bytes": 251584,
+    "sha256": "880588235f8a03b6be3e0d8dbce899e01948d87b6668bc5fbf90b3bb446a2247",
+    "lodLow": {
+      "url": "/models/e34-build-studio/r2/ef9df7141649ebd6d3f6a301aec3f7a15066483f09bc191b5c4ea6564e2fe7d6.glb",
+      "bytes": 143948,
+      "sha256": "ef9df7141649ebd6d3f6a301aec3f7a15066483f09bc191b5c4ea6564e2fe7d6"
+    },
+    "right": null,
+    "normalization": 1,
+    "source": "https://myair-bdr.bmwgroup.com/static/manual/RadReif/RadReif/mj1996/e34_1996.pdf",
+    "group": "E34"
+  },
+  {
+    "id": "e34-factory-5-v1",
+    "label": "Style 5 · Cross-spoke",
+    "dimensions": "15 in",
+    "nominalRimMm": [
+      381,
+      177.8
+    ],
+    "url": "/models/e34-build-studio/r2/37724d7855ad69ff96f828e5f1e95cf62ef609efdb59742edf252ddca3702148.glb",
+    "bytes": 249116,
+    "sha256": "37724d7855ad69ff96f828e5f1e95cf62ef609efdb59742edf252ddca3702148",
+    "lodLow": {
+      "url": "/models/e34-build-studio/r2/435bbd6eaceb4a0daa4a53fd67751df9594dcda7575adfd99e31c2ce6660c61f.glb",
+      "bytes": 137160,
+      "sha256": "435bbd6eaceb4a0daa4a53fd67751df9594dcda7575adfd99e31c2ce6660c61f"
+    },
+    "right": null,
+    "normalization": 1,
+    "source": "https://myair-bdr.bmwgroup.com/static/manual/RadReif/RadReif/mj1996/e34_1996.pdf",
+    "group": "E34"
+  },
+  {
+    "id": "e34-factory-5-composite-v1",
+    "label": "Style 5 · Two-piece cross-spoke",
+    "dimensions": "17 in",
+    "nominalRimMm": [
+      431.8,
+      203.2
+    ],
+    "url": "/models/e34-build-studio/r2/6004689c1fac60e6a0a4c018f05c644645487b0851749c759825d28b8abfa1af.glb",
+    "bytes": 291524,
+    "sha256": "6004689c1fac60e6a0a4c018f05c644645487b0851749c759825d28b8abfa1af",
+    "lodLow": {
+      "url": "/models/e34-build-studio/r2/3792480508556fbe594828fbaad88ce47c76ed06c01b50e8f2ccdb514fb67dec.glb",
+      "bytes": 163252,
+      "sha256": "3792480508556fbe594828fbaad88ce47c76ed06c01b50e8f2ccdb514fb67dec"
+    },
+    "right": null,
+    "normalization": 1,
+    "source": "https://myair-bdr.bmwgroup.com/static/manual/RadReif/RadReif/mj1996/e34_1996.pdf",
+    "group": "E34"
+  },
+  {
+    "id": "e34-factory-5-trx-v1",
+    "label": "Style 5 · TRX cross-spoke",
+    "dimensions": "415 mm metric",
+    "nominalRimMm": [
+      415,
+      195
+    ],
+    "url": "/models/e34-build-studio/r2/bb9e9e97bb4ee990e4b4b4db03707a3627dc814e0b387c2423284bd82b4cebbb.glb",
+    "bytes": 249120,
+    "sha256": "bb9e9e97bb4ee990e4b4b4db03707a3627dc814e0b387c2423284bd82b4cebbb",
+    "lodLow": {
+      "url": "/models/e34-build-studio/r2/0712c86fadeb214d4a7251ae365815891eb64c2f21f637b6843e108358232f1a.glb",
+      "bytes": 137172,
+      "sha256": "0712c86fadeb214d4a7251ae365815891eb64c2f21f637b6843e108358232f1a"
+    },
+    "right": null,
+    "normalization": 1,
+    "source": "https://www.realoem.com/bmw/enUS/showparts?diagId=36_0070&id=HC22-EUR-08-1990-E34-BMW-525i",
+    "group": "E34"
+  },
+  {
+    "id": "e34-factory-6-v1",
+    "label": "Style 6 · 525iX alloy",
+    "dimensions": "16 in",
+    "nominalRimMm": [
+      406.4,
+      190.5
+    ],
+    "url": "/models/e34-build-studio/r2/d3a73bb0fa0809ecc36ca9f43ba0b81caa20a7b19903836f1461da6e9fed9b3e.glb",
+    "bytes": 545276,
+    "sha256": "d3a73bb0fa0809ecc36ca9f43ba0b81caa20a7b19903836f1461da6e9fed9b3e",
+    "lodLow": {
+      "url": "/models/e34-build-studio/r2/78ae4936a9ec4ac50f5eea1580fdf44e8986452ac0f5a50a124b700dc10c4d61.glb",
+      "bytes": 213132,
+      "sha256": "78ae4936a9ec4ac50f5eea1580fdf44e8986452ac0f5a50a124b700dc10c4d61"
+    },
+    "right": null,
+    "normalization": 1,
+    "source": "https://myair-bdr.bmwgroup.com/static/manual/RadReif/RadReif/mj1996/e34_1996.pdf",
+    "group": "525iX"
+  },
+  {
+    "id": "e34-factory-7-v1",
+    "label": "Style 7 · 15-inch cross-spoke",
+    "dimensions": "15 in",
+    "nominalRimMm": [
+      381,
+      177.8
+    ],
+    "url": "/models/e34-build-studio/r2/7166f841b2aed4f6e98af81d9d1102e5076f09c4cd15faa9d979b589ba48509e.glb",
+    "bytes": 308636,
+    "sha256": "7166f841b2aed4f6e98af81d9d1102e5076f09c4cd15faa9d979b589ba48509e",
+    "lodLow": {
+      "url": "/models/e34-build-studio/r2/cb88fc38c396fce8613fe454f98df030fe370362727cfe21b715698adc77818c.glb",
+      "bytes": 170768,
+      "sha256": "cb88fc38c396fce8613fe454f98df030fe370362727cfe21b715698adc77818c"
+    },
+    "right": null,
+    "normalization": 1,
+    "source": "https://www.realoem.com/bmw/enUS/showparts?diagId=36_0029&id=HD53-USA-06_1990_E34_BMW-525i",
+    "group": "E34"
+  },
+  {
+    "id": "e34-factory-7-td-v1",
+    "label": "Style 7 · Metric TD",
+    "dimensions": "390 mm metric",
+    "nominalRimMm": [
+      390,
+      180
+    ],
+    "url": "/models/e34-build-studio/r2/8037b7f17c84800f89a2ded5d328e0a283a2302526246ab1c90972b739fd4653.glb",
+    "bytes": 308640,
+    "sha256": "8037b7f17c84800f89a2ded5d328e0a283a2302526246ab1c90972b739fd4653",
+    "lodLow": {
+      "url": "/models/e34-build-studio/r2/ae135114fcac6b234ca5bbc3da63221c1ad8459cf6af2d7a8e0ddc04a0a64ba8.glb",
+      "bytes": 170772,
+      "sha256": "ae135114fcac6b234ca5bbc3da63221c1ad8459cf6af2d7a8e0ddc04a0a64ba8"
+    },
+    "right": null,
+    "normalization": 1,
+    "source": "https://myair-bdr.bmwgroup.com/static/manual/RadReif/RadReif/mj1996/e34_1996.pdf",
+    "group": "E34"
+  },
+  {
+    "id": "e34-factory-10-v1",
+    "label": "Style 10 · Star-spoke",
+    "dimensions": "17 in",
+    "nominalRimMm": [
+      431.8,
+      203.2
+    ],
+    "url": "/models/e34-build-studio/r2/e328770ec0e94fe95f54b7cd704a522269c1d8ecd4f9efb29c00fd406d6a7ac0.glb",
+    "bytes": 202856,
+    "sha256": "e328770ec0e94fe95f54b7cd704a522269c1d8ecd4f9efb29c00fd406d6a7ac0",
+    "lodLow": {
+      "url": "/models/e34-build-studio/r2/82b3261c7af318d66b2ef188fdb8d3a04cdcb9175f620cc4d5138ec58440d8b7.glb",
+      "bytes": 116396,
+      "sha256": "82b3261c7af318d66b2ef188fdb8d3a04cdcb9175f620cc4d5138ec58440d8b7"
+    },
+    "right": null,
+    "normalization": 1,
+    "source": "https://myair-bdr.bmwgroup.com/static/manual/RadReif/RadReif/mj1996/e34_1996.pdf",
+    "group": "E34"
+  },
+  {
+    "id": "e34-factory-10-ii-v1",
+    "label": "Style 10 II · Star-spoke",
+    "dimensions": "16 in",
+    "nominalRimMm": [
+      406.4,
+      177.8
+    ],
+    "url": "/models/e34-build-studio/r2/f47d7b316d7b150513304e3ef0ccfbafeac133c268482afa06045b89e67c0af6.glb",
+    "bytes": 202856,
+    "sha256": "f47d7b316d7b150513304e3ef0ccfbafeac133c268482afa06045b89e67c0af6",
+    "lodLow": {
+      "url": "/models/e34-build-studio/r2/3c8b29fdb0f5d373790402ebbc4d920847843ea88f54fac9eff74dea10599f5f.glb",
+      "bytes": 116400,
+      "sha256": "3c8b29fdb0f5d373790402ebbc4d920847843ea88f54fac9eff74dea10599f5f"
+    },
+    "right": null,
+    "normalization": 1,
+    "source": "https://www.realoem.com/bmw/enUS/showparts?diagId=36_1622&id=HC22-EUR-08-1990-E34-BMW-525i",
+    "group": "E34"
+  },
+  {
+    "id": "e34-factory-12-v1",
+    "label": "Style 12 · 525iX steel",
+    "dimensions": "16 in",
+    "nominalRimMm": [
+      406.4,
+      190.5
+    ],
+    "url": "/models/e34-build-studio/r2/1cc18564d7344f41b68ed2a7cbc2f9c42cd73e0e4469ca7402c36e2d6d4d4c58.glb",
+    "bytes": 741920,
+    "sha256": "1cc18564d7344f41b68ed2a7cbc2f9c42cd73e0e4469ca7402c36e2d6d4d4c58",
+    "lodLow": {
+      "url": "/models/e34-build-studio/r2/70f8ffebf45d7f38c61a428140b7785b9e49c9d04b8e9c939eb079a9fbfc9725.glb",
+      "bytes": 269324,
+      "sha256": "70f8ffebf45d7f38c61a428140b7785b9e49c9d04b8e9c939eb079a9fbfc9725"
+    },
+    "right": null,
+    "normalization": 1,
+    "source": "https://myair-bdr.bmwgroup.com/static/manual/RadReif/RadReif/mj1996/e34_1996.pdf",
+    "group": "525iX"
+  },
+  {
+    "id": "e34-factory-14-v1",
+    "label": "Style 14 · Ten-spoke",
+    "dimensions": "15 in",
+    "nominalRimMm": [
+      381,
+      177.8
+    ],
+    "url": "/models/e34-build-studio/r2/4d3f746b60044bbbdcddd81b31adf890ffb5192036bee534a981969fee6e5d83.glb",
+    "bytes": 201900,
+    "sha256": "4d3f746b60044bbbdcddd81b31adf890ffb5192036bee534a981969fee6e5d83",
+    "lodLow": {
+      "url": "/models/e34-build-studio/r2/fbe6e4d185f6f544bf5770371ccbaf793756468f5f64ec7f781918f7459d6362.glb",
+      "bytes": 115864,
+      "sha256": "fbe6e4d185f6f544bf5770371ccbaf793756468f5f64ec7f781918f7459d6362"
+    },
+    "right": null,
+    "normalization": 1,
+    "source": "https://myair-bdr.bmwgroup.com/static/manual/RadReif/RadReif/mj1996/e34_1996.pdf",
+    "group": "E34"
+  },
+  {
+    "id": "e34-factory-16-v1",
+    "label": "Style 16 · Flat star",
+    "dimensions": "16 in",
+    "nominalRimMm": [
+      406.4,
+      177.8
+    ],
+    "url": "/models/e34-build-studio/r2/de6ef513dddec841bd32483f983b646ba96c7d93cfcd6ac7f15646f924c3ff93.glb",
+    "bytes": 191936,
+    "sha256": "de6ef513dddec841bd32483f983b646ba96c7d93cfcd6ac7f15646f924c3ff93",
+    "lodLow": {
+      "url": "/models/e34-build-studio/r2/55a1b29222af4adea8802772ba858ddf36d264bfc00b345fd41e2131a1b08088.glb",
+      "bytes": 110220,
+      "sha256": "55a1b29222af4adea8802772ba858ddf36d264bfc00b345fd41e2131a1b08088"
+    },
+    "right": null,
+    "normalization": 1,
+    "source": "https://myair-bdr.bmwgroup.com/static/manual/RadReif/RadReif/mj1996/e34_1996.pdf",
+    "group": "E34"
+  },
+  {
+    "id": "e34-factory-18-v1",
+    "label": "Style 18 · Round-spoke",
+    "dimensions": "16 in",
+    "nominalRimMm": [
+      406.4,
+      177.8
+    ],
+    "url": "/models/e34-build-studio/r2/aaae8ccaa1d995b8170650c3d45202cf4de94e6ea58e95a11f1cf480a177f41b.glb",
+    "bytes": 368172,
+    "sha256": "aaae8ccaa1d995b8170650c3d45202cf4de94e6ea58e95a11f1cf480a177f41b",
+    "lodLow": {
+      "url": "/models/e34-build-studio/r2/d02ba1f889f60e5f1cf20c695c094e5bfdedb8f93693406c0e73b25c076f1014.glb",
+      "bytes": 168120,
+      "sha256": "d02ba1f889f60e5f1cf20c695c094e5bfdedb8f93693406c0e73b25c076f1014"
+    },
+    "right": null,
+    "normalization": 1,
+    "source": "https://myair-bdr.bmwgroup.com/static/manual/RadReif/RadReif/mj1996/e34_1996.pdf",
+    "group": "E34"
+  },
+  {
+    "id": "e34-factory-19-v1",
+    "label": "Style 19 · Seven-spoke composite",
+    "dimensions": "17 in",
+    "nominalRimMm": [
+      431.8,
+      203.2
+    ],
+    "url": "/models/e34-build-studio/r2/20771e52dda863af40aa71d343274f1a623bfcfd39534a76fc9f85a72707d510.glb",
+    "bytes": 238352,
+    "sha256": "20771e52dda863af40aa71d343274f1a623bfcfd39534a76fc9f85a72707d510",
+    "lodLow": {
+      "url": "/models/e34-build-studio/r2/e1f9477d94f0cd4db6fc901276bb52cd33b82ef1859a0b671e76de3b7b299fef.glb",
+      "bytes": 138596,
+      "sha256": "e1f9477d94f0cd4db6fc901276bb52cd33b82ef1859a0b671e76de3b7b299fef"
+    },
+    "right": null,
+    "normalization": 1,
+    "source": "https://myair-bdr.bmwgroup.com/static/manual/RadReif/RadReif/mj1996/e34_1996.pdf",
+    "group": "E34"
+  },
+  {
+    "id": "e34-factory-20-v1",
+    "label": "Style 20 · M System I turbine",
+    "dimensions": "17 in",
+    "nominalRimMm": [
+      431.8,
+      203.2
+    ],
+    "url": "/models/e34-build-studio/r2/aa439ae62a40a0bfb43abdb854ac0ee0313e0a07342a8004aaaf03ad01451ea0.glb",
+    "bytes": 250740,
+    "sha256": "aa439ae62a40a0bfb43abdb854ac0ee0313e0a07342a8004aaaf03ad01451ea0",
+    "lodLow": {
+      "url": "/models/e34-build-studio/r2/302e95b262a70cc538b9e59d0af313e383830ef41ae298228fe842bcb6c2e351.glb",
+      "bytes": 142632,
+      "sha256": "302e95b262a70cc538b9e59d0af313e383830ef41ae298228fe842bcb6c2e351"
+    },
+    "right": {
+      "url": "/models/e34-build-studio/r2/9b3ccd8bc268eab68ea97bb30ea5d674854095524eee6fae2d1badae841ba79f.glb",
+      "bytes": 250740,
+      "sha256": "9b3ccd8bc268eab68ea97bb30ea5d674854095524eee6fae2d1badae841ba79f",
+      "lodLow": {
+        "url": "/models/e34-build-studio/r2/9e8367da6bad84c2681a34160172743d45ef8db8c75a363e846cd07a94fd3b8e.glb",
+        "bytes": 142632,
+        "sha256": "9e8367da6bad84c2681a34160172743d45ef8db8c75a363e846cd07a94fd3b8e"
+      }
+    },
+    "normalization": 1,
+    "source": "https://www.realoem.com/bmw/enUS/showparts?diagId=36_0022&id=HC22-EUR-08-1990-E34-BMW-525i",
+    "group": "M5"
+  },
+  {
+    "id": "e34-factory-21-v1",
+    "label": "Style 21 · M System II throwing star",
+    "dimensions": "17 in",
+    "nominalRimMm": [
+      431.8,
+      203.2
+    ],
+    "url": "/models/e34-build-studio/r2/7a830b747be5b3d50c327163bee0db7c360b06145fdb861ae55120839008b707.glb",
+    "bytes": 179388,
+    "sha256": "7a830b747be5b3d50c327163bee0db7c360b06145fdb861ae55120839008b707",
+    "lodLow": {
+      "url": "/models/e34-build-studio/r2/295e8022113df8ae3abb1e5ce258b9e21ee216b0eae5afd54dd1398e6976f118.glb",
+      "bytes": 97672,
+      "sha256": "295e8022113df8ae3abb1e5ce258b9e21ee216b0eae5afd54dd1398e6976f118"
+    },
+    "right": {
+      "url": "/models/e34-build-studio/r2/57f5de79e42dfdb37cd3e743a51ee99de473c74dee9fb809a80d4eb527cf4caa.glb",
+      "bytes": 179388,
+      "sha256": "57f5de79e42dfdb37cd3e743a51ee99de473c74dee9fb809a80d4eb527cf4caa",
+      "lodLow": {
+        "url": "/models/e34-build-studio/r2/7eb4ec1b72b1742ba4b903602e8855a20f2bbd30f017eba324f752ee4143a31d.glb",
+        "bytes": 97676,
+        "sha256": "7eb4ec1b72b1742ba4b903602e8855a20f2bbd30f017eba324f752ee4143a31d"
+      }
+    },
+    "normalization": 1,
+    "source": "https://www.realoem.com/bmw/enUS/showparts?diagId=36_0055&id=HC22-EUR-08-1990-E34-BMW-525i",
+    "group": "M5"
+  },
+  {
+    "id": "e34-factory-26-v1",
+    "label": "Style 26 · Ellipsoidal",
+    "dimensions": "16 in",
+    "nominalRimMm": [
+      406.4,
+      177.8
+    ],
+    "url": "/models/e34-build-studio/r2/7617d5b45ccb2c3a55ff95a519a2463704cdc084feee55f7e9faa22ade5dc812.glb",
+    "bytes": 389324,
+    "sha256": "7617d5b45ccb2c3a55ff95a519a2463704cdc084feee55f7e9faa22ade5dc812",
+    "lodLow": {
+      "url": "/models/e34-build-studio/r2/96817ddb2d790a62f80c2090c405ce2bbf2bd06574debd303ab79ae0d353c0d5.glb",
+      "bytes": 175836,
+      "sha256": "96817ddb2d790a62f80c2090c405ce2bbf2bd06574debd303ab79ae0d353c0d5"
+    },
+    "right": null,
+    "normalization": 1,
+    "source": "https://myair-bdr.bmwgroup.com/static/manual/RadReif/RadReif/mj1996/e34_1996.pdf",
+    "group": "E34"
+  },
+  {
+    "id": "e34-factory-29-v1",
+    "label": "Style 29 · Cross-spoke",
+    "dimensions": "16 in",
+    "nominalRimMm": [
+      406.4,
+      177.8
+    ],
+    "url": "/models/e34-build-studio/r2/a1c045387ccabd3d44f6ee447619dbb7065c97df93207bf7bce1d46a620f8bef.glb",
+    "bytes": 229196,
+    "sha256": "a1c045387ccabd3d44f6ee447619dbb7065c97df93207bf7bce1d46a620f8bef",
+    "lodLow": {
+      "url": "/models/e34-build-studio/r2/cba03f9d31743f6a89b76cd0d11e28be19b9fac82ab823c77d29e719a34ac931.glb",
+      "bytes": 125884,
+      "sha256": "cba03f9d31743f6a89b76cd0d11e28be19b9fac82ab823c77d29e719a34ac931"
+    },
+    "right": null,
+    "normalization": 1,
+    "source": "https://myair-bdr.bmwgroup.com/static/manual/RadReif/RadReif/mj1996/e34_1996.pdf",
+    "group": "E34"
+  },
+  {
+    "id": "e34-factory-32-v1",
+    "label": "Style 32 · Radial",
+    "dimensions": "17 in",
+    "nominalRimMm": [
+      431.8,
+      203.2
+    ],
+    "url": "/models/e34-build-studio/r2/7fa10d6fbbd0f2fb5d1b8e25379ce7d3ac5122c3a1cf14f97b68f03abbee55df.glb",
+    "bytes": 211856,
+    "sha256": "7fa10d6fbbd0f2fb5d1b8e25379ce7d3ac5122c3a1cf14f97b68f03abbee55df",
+    "lodLow": {
+      "url": "/models/e34-build-studio/r2/8e2d84f01ccf87ddf728cf81d34ddf5ddd651544291240165fba588ac89ac9e7.glb",
+      "bytes": 121500,
+      "sha256": "8e2d84f01ccf87ddf728cf81d34ddf5ddd651544291240165fba588ac89ac9e7"
+    },
+    "right": null,
+    "normalization": 1,
+    "source": "https://myair-bdr.bmwgroup.com/static/manual/RadReif/RadReif/mj1996/e34_1996.pdf",
+    "group": "E34"
+  },
+  {
+    "id": "e34-factory-37-v1",
+    "label": "Style 37 · M Parallel",
+    "dimensions": "18 in",
+    "nominalRimMm": [
+      457.2,
+      203.2
+    ],
+    "url": "/models/e34-build-studio/r2/0f4809ebbd4db71a47a49337300de98957109d38d9f6307c3652709d347c4fed.glb",
+    "bytes": 197912,
+    "sha256": "0f4809ebbd4db71a47a49337300de98957109d38d9f6307c3652709d347c4fed",
+    "lodLow": {
+      "url": "/models/e34-build-studio/r2/f69cc294cdc64d64c6ec1117f840802ca8965e03e8c81d14b26e681afaa9b32d.glb",
+      "bytes": 113608,
+      "sha256": "f69cc294cdc64d64c6ec1117f840802ca8965e03e8c81d14b26e681afaa9b32d"
+    },
+    "right": null,
+    "normalization": 1,
+    "source": "https://www.realoem.com/bmw/en/partgrp?id=HJ91-EUR---E34-BMW-M5&mg=36",
+    "group": "M5"
+  },
+  {
+    "id": "e34-factory-trx-1-v1",
+    "label": "TRX 1 · Forged metric",
+    "dimensions": "390 mm metric",
+    "nominalRimMm": [
+      390,
+      165
+    ],
+    "url": "/models/e34-build-studio/r2/d4e429f28d90a7048b9a13559cbd77c99810830eaf94aee0de10223122f17dbe.glb",
+    "bytes": 564744,
+    "sha256": "d4e429f28d90a7048b9a13559cbd77c99810830eaf94aee0de10223122f17dbe",
+    "lodLow": {
+      "url": "/models/e34-build-studio/r2/d44f59622cc06c224e67ae10ef8bb4a4b1e7829857ffeb9e0ab1d756c73e1632.glb",
+      "bytes": 219108,
+      "sha256": "d44f59622cc06c224e67ae10ef8bb4a4b1e7829857ffeb9e0ab1d756c73e1632"
+    },
+    "right": null,
+    "normalization": 1,
+    "source": "https://www.realoem.com/bmw/enUS/showparts?diagId=36_0033&id=HC22-EUR-08-1990-E34-BMW-525i",
+    "group": "E34"
+  },
+  {
+    "id": "e34-factory-trx-2-v1",
+    "label": "TRX 2 · Cast metric",
+    "dimensions": "390 mm metric",
+    "nominalRimMm": [
+      390,
+      165
+    ],
+    "url": "/models/e34-build-studio/r2/f2aa4f4b8a994fe0fe62ca1a9cc7330fdd9c0080679b9cde4b9aaa77a1fab0f8.glb",
+    "bytes": 637416,
+    "sha256": "f2aa4f4b8a994fe0fe62ca1a9cc7330fdd9c0080679b9cde4b9aaa77a1fab0f8",
+    "lodLow": {
+      "url": "/models/e34-build-studio/r2/39dc52f0e5734a2d19137da78292639710e5f53f8cae7e42c2460f7d69685829.glb",
+      "bytes": 242436,
+      "sha256": "39dc52f0e5734a2d19137da78292639710e5f53f8cae7e42c2460f7d69685829"
+    },
+    "right": null,
+    "normalization": 1,
+    "source": "https://www.realoem.com/bmw/enUS/showparts?diagId=36_0037&id=HC22-EUR-08-1990-E34-BMW-525i",
+    "group": "E34"
+  }
+]

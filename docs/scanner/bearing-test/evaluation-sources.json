@@ -1,0 +1,115 @@
+{
+  "schema": 1,
+  "records": [
+    {
+      "id": "bearing-meyle-fcp",
+      "expected": "center-support-bearing",
+      "file": "bearing-meyle.jpg",
+      "sourceUrl": "https://www.fcpeuro.com/products/bmw-driveshaft-support-e34-e32-26121226657-1",
+      "imageUrl": "https://www.fcpeuro.com/public/assets/products/51677/large/26121226657MY.jpg?1496402381",
+      "sha256": "a10525285747ca5546078ef155ad4a43728f8293184ea896b0cebe6117391878",
+      "split": "evaluation",
+      "rights": "Private local evaluation only; no redistribution license claimed, not a runtime/reference image.",
+      "labelEvidence": "FCP product listing plus manual visual review; family only, not physical fitment."
+    },
+    {
+      "id": "m50-engine-bay",
+      "expected": "engine",
+      "file": "m50-engine-bay.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:BMW_M50_1995.JPG",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/BMW_M50_1995.JPG/1280px-BMW_M50_1995.JPG",
+      "sha256": "cab9f072682aae36b2f25dcda88a5821e3d38e6a6fc9b6cd0553c5db81212509",
+      "split": "evaluation",
+      "rights": "Public domain",
+      "labelEvidence": "Coarse component category from existing documented Commons evaluation, not exact OEM identity."
+    },
+    {
+      "id": "chevrolet-alternator",
+      "expected": "alternator",
+      "file": "chevrolet-alternator.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Alternator.jpg",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Alternator.jpg/1280px-Alternator.jpg",
+      "sha256": "b5b28ba573ff1eacde2836b7de8791043dc92aeebb0e391f4a872c5393bb1659",
+      "split": "evaluation",
+      "rights": "CC BY-SA 3.0",
+      "labelEvidence": "Coarse component category from existing documented Commons evaluation, not exact OEM identity."
+    },
+    {
+      "id": "cutaway-alternator",
+      "expected": "alternator",
+      "file": "cutaway-alternator.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dynamo.JPG",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/Dynamo.JPG/1280px-Dynamo.JPG",
+      "sha256": "c5c7666f1d5709fd9bf2dc39545296a1d9542f0fb4f88435fb41e94a6f377b86",
+      "split": "evaluation",
+      "rights": "CC BY-SA 3.0",
+      "labelEvidence": "Coarse component category from existing documented Commons evaluation, not exact OEM identity."
+    },
+    {
+      "id": "brake-calipers",
+      "expected": "brake-caliper",
+      "file": "brake-calipers.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Brake_calipers.jpg",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d3/Brake_calipers.jpg/1280px-Brake_calipers.jpg",
+      "sha256": "9f2c17729d114f016b89bb896c01b7b17aba38f7066c2f8df539cfcf4a881e72",
+      "split": "evaluation",
+      "rights": "CC BY-SA 3.0",
+      "labelEvidence": "Coarse component category from existing documented Commons evaluation, not exact OEM identity."
+    },
+    {
+      "id": "filter-cutaway",
+      "expected": "oil-filter",
+      "file": "filter-cutaway.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Engine_oil_filter_cutaway.JPG",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/Engine_oil_filter_cutaway.JPG/1280px-Engine_oil_filter_cutaway.JPG",
+      "sha256": "d8a425da6268c9d839582f1f6628db124db1380677934108a8b47f6fe7ac2b99",
+      "split": "evaluation",
+      "rights": "Public domain",
+      "labelEvidence": "Coarse component category from existing documented Commons evaluation, not exact OEM identity."
+    },
+    {
+      "id": "spark-plug",
+      "expected": "spark-plug",
+      "file": "spark-plug.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Spark_plug_2.jpg",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7c/Spark_plug_2.jpg/1280px-Spark_plug_2.jpg",
+      "sha256": "4ec75dd7eef657a76e55bb7075f4d663f4763ed84e34961b4b7e174b3af6b740",
+      "split": "evaluation",
+      "rights": "CC BY-SA 3.0",
+      "labelEvidence": "Coarse component category from existing documented Commons evaluation, not exact OEM identity."
+    },
+    {
+      "id": "thermostat-housing",
+      "expected": "thermostat",
+      "file": "thermostat-housing.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:2005_Chevrolet_Aveo_Thermostat_Housing_(broken).jpg",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/2005_Chevrolet_Aveo_Thermostat_Housing_%28broken%29.jpg/1280px-2005_Chevrolet_Aveo_Thermostat_Housing_%28broken%29.jpg",
+      "sha256": "f93f0e8b784d9ba4c8f2d4064d170815b3a2f92a4e3057a83926615998c527e7",
+      "split": "evaluation",
+      "rights": "CC BY-SA 4.0",
+      "labelEvidence": "Coarse component category from existing documented Commons evaluation, not exact OEM identity."
+    },
+    {
+      "id": "industrial-pump-negative",
+      "expected": "unknown",
+      "file": "industrial-pump-negative.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Leavitt-Riedler_Pumping_Engine.JPG",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Leavitt-Riedler_Pumping_Engine.JPG/1280px-Leavitt-Riedler_Pumping_Engine.JPG",
+      "sha256": "4d43c5b8a221d0672346cb7aee3f47a943a1870f22d3e6e6ca4ce1622f8537b0",
+      "split": "evaluation",
+      "rights": "CC0",
+      "labelEvidence": "Coarse component category from existing documented Commons evaluation, not exact OEM identity."
+    },
+    {
+      "id": "citroen-water-pump-test",
+      "expected": "water-pump",
+      "file": "citroen-water-pump-test.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Automotive_coolant_pump_6C1Q-8K500-AF-3359.jpg",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/Automotive_coolant_pump_6C1Q-8K500-AF-3359.jpg/1280px-Automotive_coolant_pump_6C1Q-8K500-AF-3359.jpg",
+      "sha256": "ee4a32f9503821690f91b87dbf6c729a84afd414ac3e35565489300ce16dd924",
+      "split": "evaluation",
+      "rights": "CC BY-SA 4.0",
+      "labelEvidence": "Coarse component category from existing documented Commons evaluation, not exact OEM identity."
+    }
+  ]
+}

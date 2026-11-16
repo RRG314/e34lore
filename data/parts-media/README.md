@@ -1,0 +1,15 @@
+# Shared part image evidence
+
+`manifest.json` extends the existing canonical catalog by full BMW number. It does not create another parts identity database. `src/servicing/part-media.ts` validates evidence; the catalog, original reference reader, selected native workshop component and scanner use the same `PartMedia` component. Scanner family examples use the same licensed photograph records.
+
+An exact-number source page is a link to the provider's photographs, not permission to copy them. Aftermarket equivalents are explicitly described by their source; they are not represented as genuine BMW products. A licensed category photograph has an empty `numbers` list and cannot appear as an exact-part photo. Existing car fitment, source positions, interchange, manual links, purchase offers and private garage observations retain their current authoritative systems.
+
+Locally redistributed images need source, content hash, identity scope, view, condition, identity evidence, review date and explicit redistribution rights/attribution. Provider-image records reference tightly allowlisted original HTTPS product images with source attribution; their rights remain with the provider and they are not copied into the deployment. Failed external images show a source link and retry. Exact identities require evidence beyond visual similarity.
+
+Saved scanner photos are private by default in the existing private storage bucket. Optional sharing requires a confirmed exact part and separate catalog/scanning permission. MFA moderators can review only opted-in photos; approval is required before public use. Withdrawal immediately removes access from public references and future dataset exports. Same-object views are grouped for future evaluation. No training runs or automatic model updates are introduced.
+
+The current library has nine licensed **family** photos, six exact-number **source links**, and seven externally hosted **provider-image** references. It has no licensed, locally embedded exact-part product photos. It is not a complete E34 image dataset. New/used/broken and front/back/side/installed coverage remain distinct missing data, not interchangeable labels. The local scanner prototypes additionally use separately recorded private research references; those originals and vectors are excluded from production delivery.
+
+`node tools/snapshot_public_part_inventory.mjs` reads only anonymous public identities/counts into ignored work files. `python3 tools/audit_part_evidence.py` validates existing snapshot hashes and joins image, source, model and guide coverage without modifying hosted data. See `docs/parts-evidence-coverage.md` for current coverage and the staged 1994 540i source completion.
+
+The two used VEMO housing views added in the continuation are one physical object photographed by Raimond Spekking (CC BY-SA 4.0). Both remain family-only references, with no BMW identity or E34-fitment claim. Their source/object groups prevent treating an alternate view as an independent evaluation image.

@@ -1,0 +1,783 @@
+{
+  "schema": 1,
+  "date": "2026-11-08T06:52:02.692Z",
+  "runtime": "Transformers.js4.3.2 / Node22.23.4 / ONNX Runtime CPU2threads / AppleM1 / not mobile browser",
+  "model": {
+    "id": "Xenova/clip-vit-base-patch32",
+    "revision": "6b7c523703ae26e39be4b03774966f8571c7f523",
+    "dtype": "q8",
+    "dimensions": 512,
+    "sha256": "583fd1110a514667812fee7d684952aaf82a99b959760c8d7dca7e0ab9839299"
+  },
+  "referenceCount": 16,
+  "realPhotoReferences": 7,
+  "syntheticReferences": 9,
+  "loadMs": 649,
+  "records": [
+    {
+      "id": "m50-engine-bay",
+      "expected": "engine",
+      "mode": "installed",
+      "latencyMs": 33,
+      "top5": [
+        {
+          "id": "photo:oil-filter-reference",
+          "nodeId": "m50:oil-filter-element",
+          "category": "oil filter",
+          "synthetic": false,
+          "cosine": 0.7391390927058575
+        },
+        {
+          "id": "photo:m50-engine-museum-reference",
+          "nodeId": "m50:block",
+          "category": "engine",
+          "synthetic": false,
+          "cosine": 0.716005735968361
+        },
+        {
+          "id": "photo:alternator-reference",
+          "nodeId": "m50:alternator",
+          "category": "alternator",
+          "synthetic": false,
+          "cosine": 0.6534363692622525
+        },
+        {
+          "id": "photo:bolt-caliper-reference",
+          "nodeId": "e34sys:brake-caliper-front--1",
+          "category": "brake caliper",
+          "synthetic": false,
+          "cosine": 0.623243226267935
+        },
+        {
+          "id": "photo:water-pump-reference",
+          "nodeId": "m50:water-pump",
+          "category": "water pump",
+          "synthetic": false,
+          "cosine": 0.5657748648127737
+        }
+      ],
+      "categoryTop5": [
+        {
+          "id": "photo:oil-filter-reference",
+          "nodeId": "m50:oil-filter-element",
+          "category": "oil filter",
+          "synthetic": false,
+          "cosine": 0.7391390927058575
+        },
+        {
+          "id": "photo:m50-engine-museum-reference",
+          "nodeId": "m50:block",
+          "category": "engine",
+          "synthetic": false,
+          "cosine": 0.716005735968361
+        },
+        {
+          "id": "photo:alternator-reference",
+          "nodeId": "m50:alternator",
+          "category": "alternator",
+          "synthetic": false,
+          "cosine": 0.6534363692622525
+        },
+        {
+          "id": "photo:bolt-caliper-reference",
+          "nodeId": "e34sys:brake-caliper-front--1",
+          "category": "brake caliper",
+          "synthetic": false,
+          "cosine": 0.623243226267935
+        },
+        {
+          "id": "photo:water-pump-reference",
+          "nodeId": "m50:water-pump",
+          "category": "water pump",
+          "synthetic": false,
+          "cosine": 0.5657748648127737
+        }
+      ],
+      "top1Hit": false,
+      "top5Hit": true,
+      "rejectedAt05": false,
+      "topCategoryMargin": 0.023133356737496502
+    },
+    {
+      "id": "chevrolet-alternator",
+      "expected": "alternator",
+      "mode": "installed",
+      "latencyMs": 34,
+      "top5": [
+        {
+          "id": "photo:alternator-reference",
+          "nodeId": "m50:alternator",
+          "category": "alternator",
+          "synthetic": false,
+          "cosine": 0.7910101382436225
+        },
+        {
+          "id": "photo:bolt-caliper-reference",
+          "nodeId": "e34sys:brake-caliper-front--1",
+          "category": "brake caliper",
+          "synthetic": false,
+          "cosine": 0.7869917509058598
+        },
+        {
+          "id": "photo:m50-engine-museum-reference",
+          "nodeId": "m50:block",
+          "category": "engine",
+          "synthetic": false,
+          "cosine": 0.7742804991181762
+        },
+        {
+          "id": "photo:oil-filter-reference",
+          "nodeId": "m50:oil-filter-element",
+          "category": "oil filter",
+          "synthetic": false,
+          "cosine": 0.7730563773151546
+        },
+        {
+          "id": "photo:thermostat-reference",
+          "nodeId": "m50:thermostat-housing",
+          "category": "thermostat housing",
+          "synthetic": false,
+          "cosine": 0.6995199460722917
+        }
+      ],
+      "categoryTop5": [
+        {
+          "id": "photo:alternator-reference",
+          "nodeId": "m50:alternator",
+          "category": "alternator",
+          "synthetic": false,
+          "cosine": 0.7910101382436225
+        },
+        {
+          "id": "photo:bolt-caliper-reference",
+          "nodeId": "e34sys:brake-caliper-front--1",
+          "category": "brake caliper",
+          "synthetic": false,
+          "cosine": 0.7869917509058598
+        },
+        {
+          "id": "photo:m50-engine-museum-reference",
+          "nodeId": "m50:block",
+          "category": "engine",
+          "synthetic": false,
+          "cosine": 0.7742804991181762
+        },
+        {
+          "id": "photo:oil-filter-reference",
+          "nodeId": "m50:oil-filter-element",
+          "category": "oil filter",
+          "synthetic": false,
+          "cosine": 0.7730563773151546
+        },
+        {
+          "id": "photo:thermostat-reference",
+          "nodeId": "m50:thermostat-housing",
+          "category": "thermostat housing",
+          "synthetic": false,
+          "cosine": 0.6995199460722917
+        }
+      ],
+      "top1Hit": true,
+      "top5Hit": true,
+      "rejectedAt05": false,
+      "topCategoryMargin": 0.004018387337762719
+    },
+    {
+      "id": "cutaway-alternator",
+      "expected": "alternator",
+      "mode": "loose",
+      "latencyMs": 39,
+      "top5": [
+        {
+          "id": "photo:bolt-caliper-reference",
+          "nodeId": "e34sys:brake-caliper-front--1",
+          "category": "brake caliper",
+          "synthetic": false,
+          "cosine": 0.7791558652506859
+        },
+        {
+          "id": "photo:oil-filter-reference",
+          "nodeId": "m50:oil-filter-element",
+          "category": "oil filter",
+          "synthetic": false,
+          "cosine": 0.7778867822535127
+        },
+        {
+          "id": "photo:alternator-reference",
+          "nodeId": "m50:alternator",
+          "category": "alternator",
+          "synthetic": false,
+          "cosine": 0.7415948615519675
+        },
+        {
+          "id": "photo:m50-engine-museum-reference",
+          "nodeId": "m50:block",
+          "category": "engine",
+          "synthetic": false,
+          "cosine": 0.7395393632012635
+        },
+        {
+          "id": "photo:spark-plug-reference",
+          "nodeId": "m50:spark-plug:1",
+          "category": "spark plug",
+          "synthetic": false,
+          "cosine": 0.6757389038286
+        }
+      ],
+      "categoryTop5": [
+        {
+          "id": "photo:bolt-caliper-reference",
+          "nodeId": "e34sys:brake-caliper-front--1",
+          "category": "brake caliper",
+          "synthetic": false,
+          "cosine": 0.7791558652506859
+        },
+        {
+          "id": "photo:oil-filter-reference",
+          "nodeId": "m50:oil-filter-element",
+          "category": "oil filter",
+          "synthetic": false,
+          "cosine": 0.7778867822535127
+        },
+        {
+          "id": "photo:alternator-reference",
+          "nodeId": "m50:alternator",
+          "category": "alternator",
+          "synthetic": false,
+          "cosine": 0.7415948615519675
+        },
+        {
+          "id": "photo:m50-engine-museum-reference",
+          "nodeId": "m50:block",
+          "category": "engine",
+          "synthetic": false,
+          "cosine": 0.7395393632012635
+        },
+        {
+          "id": "photo:spark-plug-reference",
+          "nodeId": "m50:spark-plug:1",
+          "category": "spark plug",
+          "synthetic": false,
+          "cosine": 0.6757389038286
+        }
+      ],
+      "top1Hit": false,
+      "top5Hit": true,
+      "rejectedAt05": false,
+      "topCategoryMargin": 0.0012690829971732098
+    },
+    {
+      "id": "brake-calipers",
+      "expected": "brake caliper",
+      "mode": "loose",
+      "latencyMs": 43,
+      "top5": [
+        {
+          "id": "photo:bolt-caliper-reference",
+          "nodeId": "e34sys:brake-caliper-front--1",
+          "category": "brake caliper",
+          "synthetic": false,
+          "cosine": 0.6917925766956458
+        },
+        {
+          "id": "photo:alternator-reference",
+          "nodeId": "m50:alternator",
+          "category": "alternator",
+          "synthetic": false,
+          "cosine": 0.6441361469367981
+        },
+        {
+          "id": "photo:oil-filter-reference",
+          "nodeId": "m50:oil-filter-element",
+          "category": "oil filter",
+          "synthetic": false,
+          "cosine": 0.6135320058608492
+        },
+        {
+          "id": "photo:thermostat-reference",
+          "nodeId": "m50:thermostat-housing",
+          "category": "thermostat housing",
+          "synthetic": false,
+          "cosine": 0.6071035866554629
+        },
+        {
+          "id": "synthetic:m50:water-pump",
+          "nodeId": "m50:water-pump",
+          "category": "water pump",
+          "synthetic": true,
+          "cosine": 0.6061926920699615
+        }
+      ],
+      "categoryTop5": [
+        {
+          "id": "photo:bolt-caliper-reference",
+          "nodeId": "e34sys:brake-caliper-front--1",
+          "category": "brake caliper",
+          "synthetic": false,
+          "cosine": 0.6917925766956458
+        },
+        {
+          "id": "photo:alternator-reference",
+          "nodeId": "m50:alternator",
+          "category": "alternator",
+          "synthetic": false,
+          "cosine": 0.6441361469367981
+        },
+        {
+          "id": "photo:oil-filter-reference",
+          "nodeId": "m50:oil-filter-element",
+          "category": "oil filter",
+          "synthetic": false,
+          "cosine": 0.6135320058608492
+        },
+        {
+          "id": "photo:thermostat-reference",
+          "nodeId": "m50:thermostat-housing",
+          "category": "thermostat housing",
+          "synthetic": false,
+          "cosine": 0.6071035866554629
+        },
+        {
+          "id": "synthetic:m50:water-pump",
+          "nodeId": "m50:water-pump",
+          "category": "water pump",
+          "synthetic": true,
+          "cosine": 0.6061926920699615
+        }
+      ],
+      "top1Hit": true,
+      "top5Hit": true,
+      "rejectedAt05": false,
+      "topCategoryMargin": 0.04765642975884765
+    },
+    {
+      "id": "filter-cutaway",
+      "expected": "oil filter",
+      "mode": "loose",
+      "latencyMs": 31,
+      "top5": [
+        {
+          "id": "synthetic:m50:oil-filter-element",
+          "nodeId": "m50:oil-filter-element",
+          "category": "oil filter",
+          "synthetic": true,
+          "cosine": 0.7121003298947605
+        },
+        {
+          "id": "photo:bolt-caliper-reference",
+          "nodeId": "e34sys:brake-caliper-front--1",
+          "category": "brake caliper",
+          "synthetic": false,
+          "cosine": 0.704313475094087
+        },
+        {
+          "id": "photo:oil-filter-reference",
+          "nodeId": "m50:oil-filter-element",
+          "category": "oil filter",
+          "synthetic": false,
+          "cosine": 0.6750811240892597
+        },
+        {
+          "id": "photo:spark-plug-reference",
+          "nodeId": "m50:spark-plug:1",
+          "category": "spark plug",
+          "synthetic": false,
+          "cosine": 0.667952585443323
+        },
+        {
+          "id": "synthetic:e34sys:rear-seat-battery",
+          "nodeId": "e34sys:rear-seat-battery",
+          "category": "battery",
+          "synthetic": true,
+          "cosine": 0.6674764989642347
+        }
+      ],
+      "categoryTop5": [
+        {
+          "id": "synthetic:m50:oil-filter-element",
+          "nodeId": "m50:oil-filter-element",
+          "category": "oil filter",
+          "synthetic": true,
+          "cosine": 0.7121003298947605
+        },
+        {
+          "id": "photo:bolt-caliper-reference",
+          "nodeId": "e34sys:brake-caliper-front--1",
+          "category": "brake caliper",
+          "synthetic": false,
+          "cosine": 0.704313475094087
+        },
+        {
+          "id": "photo:spark-plug-reference",
+          "nodeId": "m50:spark-plug:1",
+          "category": "spark plug",
+          "synthetic": false,
+          "cosine": 0.667952585443323
+        },
+        {
+          "id": "synthetic:e34sys:rear-seat-battery",
+          "nodeId": "e34sys:rear-seat-battery",
+          "category": "battery",
+          "synthetic": true,
+          "cosine": 0.6674764989642347
+        },
+        {
+          "id": "synthetic:m50:block",
+          "nodeId": "m50:block",
+          "category": "engine",
+          "synthetic": true,
+          "cosine": 0.6420076394205514
+        }
+      ],
+      "top1Hit": true,
+      "top5Hit": true,
+      "rejectedAt05": false,
+      "topCategoryMargin": 0.007786854800673426
+    },
+    {
+      "id": "spark-plug",
+      "expected": "spark plug",
+      "mode": "loose",
+      "latencyMs": 40,
+      "top5": [
+        {
+          "id": "photo:spark-plug-reference",
+          "nodeId": "m50:spark-plug:1",
+          "category": "spark plug",
+          "synthetic": false,
+          "cosine": 0.7074162852655622
+        },
+        {
+          "id": "photo:bolt-caliper-reference",
+          "nodeId": "e34sys:brake-caliper-front--1",
+          "category": "brake caliper",
+          "synthetic": false,
+          "cosine": 0.6991987151521127
+        },
+        {
+          "id": "synthetic:e34sys:brake-caliper-front--1",
+          "nodeId": "e34sys:brake-caliper-front--1",
+          "category": "brake caliper",
+          "synthetic": true,
+          "cosine": 0.6884778530175044
+        },
+        {
+          "id": "photo:water-pump-reference",
+          "nodeId": "m50:water-pump",
+          "category": "water pump",
+          "synthetic": false,
+          "cosine": 0.6797048120069301
+        },
+        {
+          "id": "synthetic:m50:oil-filter-element",
+          "nodeId": "m50:oil-filter-element",
+          "category": "oil filter",
+          "synthetic": true,
+          "cosine": 0.6774631654491495
+        }
+      ],
+      "categoryTop5": [
+        {
+          "id": "photo:spark-plug-reference",
+          "nodeId": "m50:spark-plug:1",
+          "category": "spark plug",
+          "synthetic": false,
+          "cosine": 0.7074162852655622
+        },
+        {
+          "id": "photo:bolt-caliper-reference",
+          "nodeId": "e34sys:brake-caliper-front--1",
+          "category": "brake caliper",
+          "synthetic": false,
+          "cosine": 0.6991987151521127
+        },
+        {
+          "id": "photo:water-pump-reference",
+          "nodeId": "m50:water-pump",
+          "category": "water pump",
+          "synthetic": false,
+          "cosine": 0.6797048120069301
+        },
+        {
+          "id": "synthetic:m50:oil-filter-element",
+          "nodeId": "m50:oil-filter-element",
+          "category": "oil filter",
+          "synthetic": true,
+          "cosine": 0.6774631654491495
+        },
+        {
+          "id": "photo:alternator-reference",
+          "nodeId": "m50:alternator",
+          "category": "alternator",
+          "synthetic": false,
+          "cosine": 0.6716987156694291
+        }
+      ],
+      "top1Hit": true,
+      "top5Hit": true,
+      "rejectedAt05": false,
+      "topCategoryMargin": 0.00821757011344948
+    },
+    {
+      "id": "thermostat-housing",
+      "expected": "thermostat housing",
+      "mode": "installed",
+      "latencyMs": 43,
+      "top5": [
+        {
+          "id": "photo:oil-filter-reference",
+          "nodeId": "m50:oil-filter-element",
+          "category": "oil filter",
+          "synthetic": false,
+          "cosine": 0.819771145061099
+        },
+        {
+          "id": "photo:bolt-caliper-reference",
+          "nodeId": "e34sys:brake-caliper-front--1",
+          "category": "brake caliper",
+          "synthetic": false,
+          "cosine": 0.7629872268698094
+        },
+        {
+          "id": "photo:alternator-reference",
+          "nodeId": "m50:alternator",
+          "category": "alternator",
+          "synthetic": false,
+          "cosine": 0.748726296147199
+        },
+        {
+          "id": "photo:thermostat-reference",
+          "nodeId": "m50:thermostat-housing",
+          "category": "thermostat housing",
+          "synthetic": false,
+          "cosine": 0.7024236013139569
+        },
+        {
+          "id": "photo:spark-plug-reference",
+          "nodeId": "m50:spark-plug:1",
+          "category": "spark plug",
+          "synthetic": false,
+          "cosine": 0.6420471942129745
+        }
+      ],
+      "categoryTop5": [
+        {
+          "id": "photo:oil-filter-reference",
+          "nodeId": "m50:oil-filter-element",
+          "category": "oil filter",
+          "synthetic": false,
+          "cosine": 0.819771145061099
+        },
+        {
+          "id": "photo:bolt-caliper-reference",
+          "nodeId": "e34sys:brake-caliper-front--1",
+          "category": "brake caliper",
+          "synthetic": false,
+          "cosine": 0.7629872268698094
+        },
+        {
+          "id": "photo:alternator-reference",
+          "nodeId": "m50:alternator",
+          "category": "alternator",
+          "synthetic": false,
+          "cosine": 0.748726296147199
+        },
+        {
+          "id": "photo:thermostat-reference",
+          "nodeId": "m50:thermostat-housing",
+          "category": "thermostat housing",
+          "synthetic": false,
+          "cosine": 0.7024236013139569
+        },
+        {
+          "id": "photo:spark-plug-reference",
+          "nodeId": "m50:spark-plug:1",
+          "category": "spark plug",
+          "synthetic": false,
+          "cosine": 0.6420471942129745
+        }
+      ],
+      "top1Hit": false,
+      "top5Hit": true,
+      "rejectedAt05": false,
+      "topCategoryMargin": 0.056783918191289695
+    },
+    {
+      "id": "industrial-pump-negative",
+      "expected": "unknown",
+      "mode": "negative",
+      "latencyMs": 41,
+      "top5": [
+        {
+          "id": "photo:bolt-caliper-reference",
+          "nodeId": "e34sys:brake-caliper-front--1",
+          "category": "brake caliper",
+          "synthetic": false,
+          "cosine": 0.5741865661410326
+        },
+        {
+          "id": "photo:m50-engine-museum-reference",
+          "nodeId": "m50:block",
+          "category": "engine",
+          "synthetic": false,
+          "cosine": 0.5708601380373405
+        },
+        {
+          "id": "synthetic:m50:water-pump",
+          "nodeId": "m50:water-pump",
+          "category": "water pump",
+          "synthetic": true,
+          "cosine": 0.5078995597191052
+        },
+        {
+          "id": "photo:spark-plug-reference",
+          "nodeId": "m50:spark-plug:1",
+          "category": "spark plug",
+          "synthetic": false,
+          "cosine": 0.5062944760927129
+        },
+        {
+          "id": "synthetic:m50:block",
+          "nodeId": "m50:block",
+          "category": "engine",
+          "synthetic": true,
+          "cosine": 0.5042339238684401
+        }
+      ],
+      "categoryTop5": [
+        {
+          "id": "photo:bolt-caliper-reference",
+          "nodeId": "e34sys:brake-caliper-front--1",
+          "category": "brake caliper",
+          "synthetic": false,
+          "cosine": 0.5741865661410326
+        },
+        {
+          "id": "photo:m50-engine-museum-reference",
+          "nodeId": "m50:block",
+          "category": "engine",
+          "synthetic": false,
+          "cosine": 0.5708601380373405
+        },
+        {
+          "id": "synthetic:m50:water-pump",
+          "nodeId": "m50:water-pump",
+          "category": "water pump",
+          "synthetic": true,
+          "cosine": 0.5078995597191052
+        },
+        {
+          "id": "photo:spark-plug-reference",
+          "nodeId": "m50:spark-plug:1",
+          "category": "spark plug",
+          "synthetic": false,
+          "cosine": 0.5062944760927129
+        },
+        {
+          "id": "photo:alternator-reference",
+          "nodeId": "m50:alternator",
+          "category": "alternator",
+          "synthetic": false,
+          "cosine": 0.502481279258885
+        }
+      ],
+      "top1Hit": false,
+      "top5Hit": false,
+      "rejectedAt05": false,
+      "topCategoryMargin": 0.003326428103692103
+    },
+    {
+      "id": "citroen-water-pump-test",
+      "expected": "water pump",
+      "mode": "loose",
+      "latencyMs": 37,
+      "top5": [
+        {
+          "id": "photo:bolt-caliper-reference",
+          "nodeId": "e34sys:brake-caliper-front--1",
+          "category": "brake caliper",
+          "synthetic": false,
+          "cosine": 0.7394593502235497
+        },
+        {
+          "id": "photo:alternator-reference",
+          "nodeId": "m50:alternator",
+          "category": "alternator",
+          "synthetic": false,
+          "cosine": 0.7215071343436563
+        },
+        {
+          "id": "photo:spark-plug-reference",
+          "nodeId": "m50:spark-plug:1",
+          "category": "spark plug",
+          "synthetic": false,
+          "cosine": 0.7079275665763137
+        },
+        {
+          "id": "photo:oil-filter-reference",
+          "nodeId": "m50:oil-filter-element",
+          "category": "oil filter",
+          "synthetic": false,
+          "cosine": 0.6896011880216016
+        },
+        {
+          "id": "synthetic:e34sys:brake-caliper-front--1",
+          "nodeId": "e34sys:brake-caliper-front--1",
+          "category": "brake caliper",
+          "synthetic": true,
+          "cosine": 0.6878283224693367
+        }
+      ],
+      "categoryTop5": [
+        {
+          "id": "photo:bolt-caliper-reference",
+          "nodeId": "e34sys:brake-caliper-front--1",
+          "category": "brake caliper",
+          "synthetic": false,
+          "cosine": 0.7394593502235497
+        },
+        {
+          "id": "photo:alternator-reference",
+          "nodeId": "m50:alternator",
+          "category": "alternator",
+          "synthetic": false,
+          "cosine": 0.7215071343436563
+        },
+        {
+          "id": "photo:spark-plug-reference",
+          "nodeId": "m50:spark-plug:1",
+          "category": "spark plug",
+          "synthetic": false,
+          "cosine": 0.7079275665763137
+        },
+        {
+          "id": "photo:oil-filter-reference",
+          "nodeId": "m50:oil-filter-element",
+          "category": "oil filter",
+          "synthetic": false,
+          "cosine": 0.6896011880216016
+        },
+        {
+          "id": "synthetic:m50:thermostat-housing",
+          "nodeId": "m50:thermostat-housing",
+          "category": "thermostat housing",
+          "synthetic": true,
+          "cosine": 0.6869255262714954
+        }
+      ],
+      "top1Hit": false,
+      "top5Hit": false,
+      "rejectedAt05": false,
+      "topCategoryMargin": 0.017952215879893374
+    }
+  ],
+  "metrics": {
+    "positives": 8,
+    "negatives": 1,
+    "categoryTop1Hits": 4,
+    "categoryTop5Hits": 7,
+    "negativeFalseAcceptAt05": 1
+  },
+  "limits": "Convenience held-out category smoke evaluation. No threshold tuning, no known OEM labels, no real-camera or mobile measurements, no mechanical fitment validation; Cosmos similarity is not calibrated confidence.",
+  "peakRssBytes": 338118400
+}

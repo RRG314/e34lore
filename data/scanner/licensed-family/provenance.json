@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "generatedAtUtc": "2026-11-10T18:20:46.439Z",
+  "referencePhotos": 16,
+  "mediaManifestSha256": "6d07726aacc8e34b9532c274f41d0122c52b8bea097cf95acd68fb24edad1251",
+  "policySha256": "066803587d1d956fe912dc00921e3e7612602148bb31dbdd733c3c176a5b1405",
+  "indexSha256": "5bcc0201cb85c0d332dcaff8a297f189dec101f4285d0631c84aa9b9d10aae08",
+  "exactOemReferences": 0,
+  "retailerReferences": 0,
+  "memberPhotos": 0,
+  "scope": "Category candidate; release requires measured review and device acceptance. No automatic exact-part identity.",
+  "validation": "18 unique convenience checks: 15 historical regressions and 3 added cases. No representative accuracy or phone certification; no automatic OEM identity.",
+  "evaluation": {
+    "evaluatedAtUtc": "2026-11-10T18:43:56.447Z",
+    "referencePhotos": 16,
+    "uniqueQueries": 18,
+    "resultsSha256": "31b3c31a112410ce5353743921fe23cd954ad59202e9ca3d05b8a1fa7df9c596",
+    "freezeSha256": "17e3984bb8839e5760acea977bd87859a32ac5d5ea6549df62e284b5a4b4bd22",
+    "crossPartitionNearDuplicates": 0,
+    "independentAccuracyEstablished": false,
+    "physicalPhoneTested": false
+  }
+}

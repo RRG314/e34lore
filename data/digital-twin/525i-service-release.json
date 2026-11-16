@@ -1,0 +1,15 @@
+{
+  "id": "e34-525i-sedan-automatic",
+  "revision": 1044,
+  "manifestUrl": "/models/e34-lore/r1044/manifest.b1140a18ff3f78effd05fdff754e883d89dd4a6ec80911e425bfbb473426649a.json",
+  "sha256": "b1140a18ff3f78effd05fdff754e883d89dd4a6ec80911e425bfbb473426649a",
+  "renderableCount": 960,
+  "assetBytes": 20079324,
+  "label": "525i Sedan · Automatic",
+  "year": 1995,
+  "engine": "M50TU",
+  "body": "Sedan",
+  "model": "525i",
+  "transmission": "Automatic",
+  "contextId": "e34-context-b69b1a9062bd8352b127fef1"
+}

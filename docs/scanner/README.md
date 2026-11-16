@@ -1,0 +1,20 @@
+# Part Scanner
+
+The [Part Scanner](https://e34lore.com/scanner) identifies possible BMW components from a photo or a readable marking. It supports both vehicle generations.
+
+1. Add one clear photo of a single part. Add another angle of the same part if needed.
+2. Compare the suggestions with the catalog drawing and the part number. A visual match gives a component category. Check the OEM identity and applicability against the catalog.
+3. Open the part's Workshop location or service reference. Signed-in members can save the result and choose whether to save the photos in My Garage.
+
+The browser prepares photos, runs the comparison, and reads markings. Scanner drafts and saved results have separate storage. Uploads happen when the member saves photos or chooses to contribute an image. Shared reference photos require separate permission and review.
+
+## Source and validation
+
+| Area | Location |
+| --- | --- |
+| Capture, comparison, and saved-scan context | [Scanner source](../../src/scanner) |
+| Reference images, labels, and provenance | [Scanner data](../../data/scanner), [Parts evidence](../parts-evidence-coverage.md) |
+| Reproducible evaluations | [Evaluation procedures](evaluation/README.md) |
+| Upload ownership and review | [Scanner media function](../../supabase/functions/scanner-media), [Policy checks](../../tests/scanner-photo-contributions.sql) |
+
+Use the [contribution guide](../../CONTRIBUTING.md) for corrections and image submissions. The [scanner release records](../releases/) describe earlier tested builds.

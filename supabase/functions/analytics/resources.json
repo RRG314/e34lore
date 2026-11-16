@@ -1,0 +1,4058 @@
+[
+  {
+    "id": "/",
+    "path": "/",
+    "title": "Home",
+    "kind": "page"
+  },
+  {
+    "id": "/app",
+    "path": "/app",
+    "title": "Install app",
+    "kind": "page"
+  },
+  {
+    "id": "/articles/cooling-system",
+    "path": "/articles/cooling-system",
+    "title": "Cooling system: circulation and temperature control",
+    "kind": "article"
+  },
+  {
+    "id": "/articles/first-inspection",
+    "path": "/articles/first-inspection",
+    "title": "Vehicle intake inspection",
+    "kind": "article"
+  },
+  {
+    "id": "/articles/fitment-evidence",
+    "path": "/articles/fitment-evidence",
+    "title": "Part fitment and interchange criteria",
+    "kind": "article"
+  },
+  {
+    "id": "/articles/know-your-e34",
+    "path": "/articles/know-your-e34",
+    "title": "Vehicle identification and applicability",
+    "kind": "article"
+  },
+  {
+    "id": "/builds",
+    "path": "/builds",
+    "title": "Public builds",
+    "kind": "page"
+  },
+  {
+    "id": "/community",
+    "path": "/community",
+    "title": "Community",
+    "kind": "page"
+  },
+  {
+    "id": "/community/cars",
+    "path": "/community/cars",
+    "title": "Cars and projects",
+    "kind": "page"
+  },
+  {
+    "id": "/community/issues",
+    "path": "/community/issues",
+    "title": "Known issues",
+    "kind": "page"
+  },
+  {
+    "id": "/community/topics",
+    "path": "/community/topics",
+    "title": "Community topics",
+    "kind": "page"
+  },
+  {
+    "id": "/diagnostics",
+    "path": "/diagnostics",
+    "title": "Diagnostics",
+    "kind": "page"
+  },
+  {
+    "id": "/e30",
+    "path": "/e30",
+    "title": "E30 Home",
+    "kind": "page"
+  },
+  {
+    "id": "/e30/diagnostics",
+    "path": "/e30/diagnostics",
+    "title": "E30 Diagnostics",
+    "kind": "page"
+  },
+  {
+    "id": "/e30/electrical",
+    "path": "/e30/electrical",
+    "title": "E30 Wiring & electrical",
+    "kind": "page"
+  },
+  {
+    "id": "/e30/encyclopedia",
+    "path": "/e30/encyclopedia",
+    "title": "E30 Encyclopedia",
+    "kind": "page"
+  },
+  {
+    "id": "/e30/manual",
+    "path": "/e30/manual",
+    "title": "E30 Service manual",
+    "kind": "page"
+  },
+  {
+    "id": "/e30/parts/catalog",
+    "path": "/e30/parts/catalog",
+    "title": "E30 OEM catalog",
+    "kind": "page"
+  },
+  {
+    "id": "/e30/quick-reference",
+    "path": "/e30/quick-reference",
+    "title": "E30 Quick reference",
+    "kind": "page"
+  },
+  {
+    "id": "/e30/repairs",
+    "path": "/e30/repairs",
+    "title": "E30 Repair walkthroughs",
+    "kind": "page"
+  },
+  {
+    "id": "/e30/resources",
+    "path": "/e30/resources",
+    "title": "E30 Resources",
+    "kind": "page"
+  },
+  {
+    "id": "/e30/scanner",
+    "path": "/e30/scanner",
+    "title": "E30 Part Scanner",
+    "kind": "page"
+  },
+  {
+    "id": "/e30/search",
+    "path": "/e30/search",
+    "title": "E30 Site search",
+    "kind": "page"
+  },
+  {
+    "id": "/e30/workshop",
+    "path": "/e30/workshop",
+    "title": "E30 Workshop",
+    "kind": "page"
+  },
+  {
+    "id": "/electrical",
+    "path": "/electrical",
+    "title": "Wiring & electrical",
+    "kind": "page"
+  },
+  {
+    "id": "/encyclopedia",
+    "path": "/encyclopedia",
+    "title": "Encyclopedia",
+    "kind": "page"
+  },
+  {
+    "id": "/garages",
+    "path": "/garages",
+    "title": "Public garages",
+    "kind": "page"
+  },
+  {
+    "id": "/guides/accessory-drive-belt-inspection",
+    "path": "/guides/accessory-drive-belt-inspection",
+    "title": "Inspect accessory drive belts for wear",
+    "kind": "guide"
+  },
+  {
+    "id": "/guides/battery-connections-first-check",
+    "path": "/guides/battery-connections-first-check",
+    "title": "Inspect battery cables and grounds before blaming the alternator",
+    "kind": "guide"
+  },
+  {
+    "id": "/guides/brake-fluid-level-inspection",
+    "path": "/guides/brake-fluid-level-inspection",
+    "title": "Check the brake and clutch fluid reservoir",
+    "kind": "guide"
+  },
+  {
+    "id": "/guides/brake-pad-and-rotor-inspection",
+    "path": "/guides/brake-pad-and-rotor-inspection",
+    "title": "Measure brake pad and rotor wear",
+    "kind": "guide"
+  },
+  {
+    "id": "/guides/cold-tire-pressure-check",
+    "path": "/guides/cold-tire-pressure-check",
+    "title": "Check and set cold tire pressures",
+    "kind": "guide"
+  },
+  {
+    "id": "/guides/cooling-fan-airflow-check",
+    "path": "/guides/cooling-fan-airflow-check",
+    "title": "Separate an airflow concern from a fan diagnosis",
+    "kind": "guide"
+  },
+  {
+    "id": "/guides/cooling-system-visual-check",
+    "path": "/guides/cooling-system-visual-check",
+    "title": "Start an overheating investigation with a cold inspection",
+    "kind": "guide"
+  },
+  {
+    "id": "/guides/diagnose-blown-fuse",
+    "path": "/guides/diagnose-blown-fuse",
+    "title": "Find and test a blown fuse",
+    "kind": "guide"
+  },
+  {
+    "id": "/guides/differential-fluid-service",
+    "path": "/guides/differential-fluid-service",
+    "title": "Service the rear differential oil",
+    "kind": "guide"
+  },
+  {
+    "id": "/guides/e34-525i-five-speed-swap",
+    "path": "/guides/e34-525i-five-speed-swap",
+    "title": "Plan an E34 525i five-speed manual swap",
+    "kind": "guide"
+  },
+  {
+    "id": "/guides/e34-525i-s52-engine-swap",
+    "path": "/guides/e34-525i-s52-engine-swap",
+    "title": "Plan an S52 swap into an M50 E34 525i",
+    "kind": "guide"
+  },
+  {
+    "id": "/guides/e34-540i-six-speed-conversion",
+    "path": "/guides/e34-540i-six-speed-conversion",
+    "title": "Plan an E34 540i six-speed conversion",
+    "kind": "guide"
+  },
+  {
+    "id": "/guides/e34-blower-speed-diagnosis",
+    "path": "/guides/e34-blower-speed-diagnosis",
+    "title": "Diagnose a blower that only works on high",
+    "kind": "guide"
+  },
+  {
+    "id": "/guides/e34-cabin-filter-replacement",
+    "path": "/guides/e34-cabin-filter-replacement",
+    "title": "Replace the HVAC cabin microfilter",
+    "kind": "guide"
+  },
+  {
+    "id": "/guides/e34-electric-fan-conversion",
+    "path": "/guides/e34-electric-fan-conversion",
+    "title": "Plan a mechanical fan delete with electric cooling",
+    "kind": "guide"
+  },
+  {
+    "id": "/guides/e34-m60b30-to-b40-swap",
+    "path": "/guides/e34-m60b30-to-b40-swap",
+    "title": "Plan an M60B30 to M60B40 engine swap",
+    "kind": "guide"
+  },
+  {
+    "id": "/guides/e34-self-leveling-suspension-conversion",
+    "path": "/guides/e34-self-leveling-suspension-conversion",
+    "title": "Plan a self-leveling suspension delete or repair",
+    "kind": "guide"
+  },
+  {
+    "id": "/guides/engine-air-filter-replacement",
+    "path": "/guides/engine-air-filter-replacement",
+    "title": "Replace the engine air filter",
+    "kind": "guide"
+  },
+  {
+    "id": "/guides/factory-halogen-headlight-bulb",
+    "path": "/guides/factory-halogen-headlight-bulb",
+    "title": "Replace a factory twist-lock halogen headlight bulb",
+    "kind": "guide"
+  },
+  {
+    "id": "/guides/factory-manual-clutch-installation",
+    "path": "/guides/factory-manual-clutch-installation",
+    "title": "Replace the clutch with the manual gearbox removed",
+    "kind": "guide"
+  },
+  {
+    "id": "/guides/factory-sliding-caliper-brake-pads",
+    "path": "/guides/factory-sliding-caliper-brake-pads",
+    "title": "Replace brake pads on factory sliding calipers",
+    "kind": "guide"
+  },
+  {
+    "id": "/guides/front-door-window-dropped-inspection",
+    "path": "/guides/front-door-window-dropped-inspection",
+    "title": "Check a front door window that dropped or sits crooked",
+    "kind": "guide"
+  },
+  {
+    "id": "/guides/front-strut-component-identification",
+    "path": "/guides/front-strut-component-identification",
+    "title": "Identify a front strut assembly and its production differences",
+    "kind": "guide"
+  },
+  {
+    "id": "/guides/hood-support-struts",
+    "path": "/guides/hood-support-struts",
+    "title": "Replace the hood support struts",
+    "kind": "guide"
+  },
+  {
+    "id": "/guides/identify-transmission-tag",
+    "path": "/guides/identify-transmission-tag",
+    "title": "Identify an E34 gearbox from its tag",
+    "kind": "guide"
+  },
+  {
+    "id": "/guides/identify-your-engine",
+    "path": "/guides/identify-your-engine",
+    "title": "Identify the engine before choosing a procedure",
+    "kind": "guide"
+  },
+  {
+    "id": "/guides/m20-timing-belt",
+    "path": "/guides/m20-timing-belt",
+    "title": "Replace the M20 timing belt and tensioner",
+    "kind": "guide"
+  },
+  {
+    "id": "/guides/m50-engine-oil-and-filter",
+    "path": "/guides/m50-engine-oil-and-filter",
+    "title": "Change the oil and cartridge filter on an M50 525i",
+    "kind": "guide"
+  },
+  {
+    "id": "/guides/m50-spark-plug-replacement",
+    "path": "/guides/m50-spark-plug-replacement",
+    "title": "Replace the M50 or M50TU spark plugs",
+    "kind": "guide"
+  },
+  {
+    "id": "/guides/m50-valve-cover-gasket",
+    "path": "/guides/m50-valve-cover-gasket",
+    "title": "Replace the M50 valve-cover gasket",
+    "kind": "guide"
+  },
+  {
+    "id": "/guides/m50-water-pump-job-planning",
+    "path": "/guides/m50-water-pump-job-planning",
+    "title": "Plan an M50 coolant-pump job",
+    "kind": "guide"
+  },
+  {
+    "id": "/guides/m50tu-single-vanos-service",
+    "path": "/guides/m50tu-single-vanos-service",
+    "title": "Remove and reinstall M50TU single VANOS",
+    "kind": "guide"
+  },
+  {
+    "id": "/guides/m50tu-vanos-delete-planning",
+    "path": "/guides/m50tu-vanos-delete-planning",
+    "title": "Evaluate a fixed-timing M50TU VANOS delete",
+    "kind": "guide"
+  },
+  {
+    "id": "/guides/m50tu-vanos-diagnosis",
+    "path": "/guides/m50tu-vanos-diagnosis",
+    "title": "Diagnose M50TU single VANOS travel",
+    "kind": "guide"
+  },
+  {
+    "id": "/guides/m50tu-vanos-piston-seals",
+    "path": "/guides/m50tu-vanos-piston-seals",
+    "title": "Renew the M50TU VANOS piston seals on the bench",
+    "kind": "guide"
+  },
+  {
+    "id": "/guides/manual-transmission-fluid",
+    "path": "/guides/manual-transmission-fluid",
+    "title": "Drain and refill a factory manual gearbox",
+    "kind": "guide"
+  },
+  {
+    "id": "/guides/power-steering-fluid-level-inspection",
+    "path": "/guides/power-steering-fluid-level-inspection",
+    "title": "Identify and check the power-steering fluid",
+    "kind": "guide"
+  },
+  {
+    "id": "/guides/sedan-tail-lamp-bulb",
+    "path": "/guides/sedan-tail-lamp-bulb",
+    "title": "Replace a body-mounted tail lamp bulb on an E34 Sedan",
+    "kind": "guide"
+  },
+  {
+    "id": "/guides/windshield-washer-pump",
+    "path": "/guides/windshield-washer-pump",
+    "title": "Replace the windshield washer pump",
+    "kind": "guide"
+  },
+  {
+    "id": "/guides/windshield-wiper-blade-replacement",
+    "path": "/guides/windshield-wiper-blade-replacement",
+    "title": "Replace the front windshield wiper blades",
+    "kind": "guide"
+  },
+  {
+    "id": "/manual",
+    "path": "/manual",
+    "title": "Service manual",
+    "kind": "page"
+  },
+  {
+    "id": "/manual/010",
+    "path": "/manual/010",
+    "title": "Fundamentals for the DIY owner",
+    "kind": "manual"
+  },
+  {
+    "id": "/manual/020",
+    "path": "/manual/020",
+    "title": "Maintenance program",
+    "kind": "manual"
+  },
+  {
+    "id": "/manual/100",
+    "path": "/manual/100",
+    "title": "Engine - general",
+    "kind": "manual"
+  },
+  {
+    "id": "/manual/110",
+    "path": "/manual/110",
+    "title": "Engine removal and installation",
+    "kind": "manual"
+  },
+  {
+    "id": "/manual/113",
+    "path": "/manual/113",
+    "title": "Cylinder head removal and installation",
+    "kind": "manual"
+  },
+  {
+    "id": "/manual/116",
+    "path": "/manual/116",
+    "title": "Cylinder head and valvetrain",
+    "kind": "manual"
+  },
+  {
+    "id": "/manual/117",
+    "path": "/manual/117",
+    "title": "Camshaft timing chain",
+    "kind": "manual"
+  },
+  {
+    "id": "/manual/118",
+    "path": "/manual/118",
+    "title": "Camshaft timing belt",
+    "kind": "manual"
+  },
+  {
+    "id": "/manual/119",
+    "path": "/manual/119",
+    "title": "Lubrication system",
+    "kind": "manual"
+  },
+  {
+    "id": "/manual/120",
+    "path": "/manual/120",
+    "title": "Ignition system and DME",
+    "kind": "manual"
+  },
+  {
+    "id": "/manual/121",
+    "path": "/manual/121",
+    "title": "Battery, starter and alternator",
+    "kind": "manual"
+  },
+  {
+    "id": "/manual/130",
+    "path": "/manual/130",
+    "title": "Fuel injection and DME",
+    "kind": "manual"
+  },
+  {
+    "id": "/manual/160",
+    "path": "/manual/160",
+    "title": "Fuel tank and fuel pump",
+    "kind": "manual"
+  },
+  {
+    "id": "/manual/170",
+    "path": "/manual/170",
+    "title": "Radiator and cooling system",
+    "kind": "manual"
+  },
+  {
+    "id": "/manual/180",
+    "path": "/manual/180",
+    "title": "Exhaust system",
+    "kind": "manual"
+  },
+  {
+    "id": "/manual/200",
+    "path": "/manual/200",
+    "title": "Transmission - general",
+    "kind": "manual"
+  },
+  {
+    "id": "/manual/210",
+    "path": "/manual/210",
+    "title": "Clutch",
+    "kind": "manual"
+  },
+  {
+    "id": "/manual/230",
+    "path": "/manual/230",
+    "title": "Manual transmission",
+    "kind": "manual"
+  },
+  {
+    "id": "/manual/240",
+    "path": "/manual/240",
+    "title": "Automatic transmission",
+    "kind": "manual"
+  },
+  {
+    "id": "/manual/250",
+    "path": "/manual/250",
+    "title": "Gearshift linkage",
+    "kind": "manual"
+  },
+  {
+    "id": "/manual/260",
+    "path": "/manual/260",
+    "title": "Driveshaft",
+    "kind": "manual"
+  },
+  {
+    "id": "/manual/300",
+    "path": "/manual/300",
+    "title": "Suspension, steering and brakes - general",
+    "kind": "manual"
+  },
+  {
+    "id": "/manual/310",
+    "path": "/manual/310",
+    "title": "Front suspension",
+    "kind": "manual"
+  },
+  {
+    "id": "/manual/320",
+    "path": "/manual/320",
+    "title": "Steering and wheel alignment",
+    "kind": "manual"
+  },
+  {
+    "id": "/manual/330",
+    "path": "/manual/330",
+    "title": "Rear suspension",
+    "kind": "manual"
+  },
+  {
+    "id": "/manual/331",
+    "path": "/manual/331",
+    "title": "Final drive",
+    "kind": "manual"
+  },
+  {
+    "id": "/manual/340",
+    "path": "/manual/340",
+    "title": "Brakes",
+    "kind": "manual"
+  },
+  {
+    "id": "/manual/400",
+    "path": "/manual/400",
+    "title": "Body - general",
+    "kind": "manual"
+  },
+  {
+    "id": "/manual/410",
+    "path": "/manual/410",
+    "title": "Fenders and engine hood",
+    "kind": "manual"
+  },
+  {
+    "id": "/manual/411",
+    "path": "/manual/411",
+    "title": "Doors",
+    "kind": "manual"
+  },
+  {
+    "id": "/manual/412",
+    "path": "/manual/412",
+    "title": "Trunk lid and tailgate",
+    "kind": "manual"
+  },
+  {
+    "id": "/manual/510",
+    "path": "/manual/510",
+    "title": "Exterior trim and bumpers",
+    "kind": "manual"
+  },
+  {
+    "id": "/manual/512",
+    "path": "/manual/512",
+    "title": "Door windows",
+    "kind": "manual"
+  },
+  {
+    "id": "/manual/513",
+    "path": "/manual/513",
+    "title": "Interior trim",
+    "kind": "manual"
+  },
+  {
+    "id": "/manual/515",
+    "path": "/manual/515",
+    "title": "Central locking",
+    "kind": "manual"
+  },
+  {
+    "id": "/manual/520",
+    "path": "/manual/520",
+    "title": "Seats",
+    "kind": "manual"
+  },
+  {
+    "id": "/manual/540",
+    "path": "/manual/540",
+    "title": "Sunroof",
+    "kind": "manual"
+  },
+  {
+    "id": "/manual/600",
+    "path": "/manual/600",
+    "title": "Electrical system - general",
+    "kind": "manual"
+  },
+  {
+    "id": "/manual/610",
+    "path": "/manual/610",
+    "title": "Fuses and relays",
+    "kind": "manual"
+  },
+  {
+    "id": "/manual/611",
+    "path": "/manual/611",
+    "title": "Wipers and washers",
+    "kind": "manual"
+  },
+  {
+    "id": "/manual/612",
+    "path": "/manual/612",
+    "title": "Switches and electrical accessories",
+    "kind": "manual"
+  },
+  {
+    "id": "/manual/620",
+    "path": "/manual/620",
+    "title": "Instruments",
+    "kind": "manual"
+  },
+  {
+    "id": "/manual/630",
+    "path": "/manual/630",
+    "title": "Exterior lighting",
+    "kind": "manual"
+  },
+  {
+    "id": "/manual/640",
+    "path": "/manual/640",
+    "title": "Heating and air conditioning",
+    "kind": "manual"
+  },
+  {
+    "id": "/manual/650",
+    "path": "/manual/650",
+    "title": "Radio",
+    "kind": "manual"
+  },
+  {
+    "id": "/manual/720",
+    "path": "/manual/720",
+    "title": "Seat belts",
+    "kind": "manual"
+  },
+  {
+    "id": "/manual/721",
+    "path": "/manual/721",
+    "title": "Airbag system (SRS)",
+    "kind": "manual"
+  },
+  {
+    "id": "/marketplace",
+    "path": "/marketplace",
+    "title": "Exchange",
+    "kind": "page"
+  },
+  {
+    "id": "/models/518g",
+    "path": "/models/518g",
+    "title": "518g",
+    "kind": "model"
+  },
+  {
+    "id": "/models/518i",
+    "path": "/models/518i",
+    "title": "518i",
+    "kind": "model"
+  },
+  {
+    "id": "/models/520i",
+    "path": "/models/520i",
+    "title": "520i",
+    "kind": "model"
+  },
+  {
+    "id": "/models/524td",
+    "path": "/models/524td",
+    "title": "524td",
+    "kind": "model"
+  },
+  {
+    "id": "/models/525i",
+    "path": "/models/525i",
+    "title": "525i",
+    "kind": "model"
+  },
+  {
+    "id": "/models/525iX",
+    "path": "/models/525iX",
+    "title": "525iX",
+    "kind": "model"
+  },
+  {
+    "id": "/models/525td",
+    "path": "/models/525td",
+    "title": "525td",
+    "kind": "model"
+  },
+  {
+    "id": "/models/525tds",
+    "path": "/models/525tds",
+    "title": "525tds",
+    "kind": "model"
+  },
+  {
+    "id": "/models/530i",
+    "path": "/models/530i",
+    "title": "530i",
+    "kind": "model"
+  },
+  {
+    "id": "/models/535i",
+    "path": "/models/535i",
+    "title": "535i",
+    "kind": "model"
+  },
+  {
+    "id": "/models/540i",
+    "path": "/models/540i",
+    "title": "540i",
+    "kind": "model"
+  },
+  {
+    "id": "/models/M5",
+    "path": "/models/M5",
+    "title": "M5",
+    "kind": "model"
+  },
+  {
+    "id": "/parts/catalog",
+    "path": "/parts/catalog",
+    "title": "OEM catalog",
+    "kind": "page"
+  },
+  {
+    "id": "/parts/interchange",
+    "path": "/parts/interchange",
+    "title": "Interchange",
+    "kind": "page"
+  },
+  {
+    "id": "/quick-reference",
+    "path": "/quick-reference",
+    "title": "Quick reference",
+    "kind": "page"
+  },
+  {
+    "id": "/quick-reference/fluids",
+    "path": "/quick-reference/fluids",
+    "title": "Fluids & capacities",
+    "kind": "quick"
+  },
+  {
+    "id": "/quick-reference/fuses",
+    "path": "/quick-reference/fuses",
+    "title": "Fuse diagrams",
+    "kind": "quick"
+  },
+  {
+    "id": "/quick-reference/locations",
+    "path": "/quick-reference/locations",
+    "title": "Component locations",
+    "kind": "quick"
+  },
+  {
+    "id": "/quick-reference/model",
+    "path": "/quick-reference/model",
+    "title": "3D exploded view",
+    "kind": "quick"
+  },
+  {
+    "id": "/repairs",
+    "path": "/repairs",
+    "title": "Walkthroughs",
+    "kind": "page"
+  },
+  {
+    "id": "/resources",
+    "path": "/resources",
+    "title": "Resources",
+    "kind": "page"
+  },
+  {
+    "id": "/roadmap",
+    "path": "/roadmap",
+    "title": "Roadmap",
+    "kind": "page"
+  },
+  {
+    "id": "/scanner",
+    "path": "/scanner",
+    "title": "Component identification",
+    "kind": "page"
+  },
+  {
+    "id": "/search",
+    "path": "/search",
+    "title": "Site search",
+    "kind": "page"
+  },
+  {
+    "id": "/shop",
+    "path": "/shop",
+    "title": "Merchandise",
+    "kind": "page"
+  },
+  {
+    "id": "/workshop",
+    "path": "/workshop",
+    "title": "Workshop",
+    "kind": "page"
+  },
+  {
+    "id": "diagnostic:braking",
+    "path": "/diagnostics",
+    "title": "braking",
+    "kind": "diagnostic"
+  },
+  {
+    "id": "diagnostic:no-start",
+    "path": "/diagnostics",
+    "title": "no-start",
+    "kind": "diagnostic"
+  },
+  {
+    "id": "diagnostic:overheating",
+    "path": "/diagnostics",
+    "title": "overheating",
+    "kind": "diagnostic"
+  },
+  {
+    "id": "diagnostic:vibration",
+    "path": "/diagnostics",
+    "title": "vibration",
+    "kind": "diagnostic"
+  },
+  {
+    "id": "drawing:front-brake",
+    "path": "/parts",
+    "title": "Front caliper & brake pads",
+    "kind": "drawing"
+  },
+  {
+    "id": "drawing:front-brake-disc",
+    "path": "/parts",
+    "title": "Front disc & protection shield",
+    "kind": "drawing"
+  },
+  {
+    "id": "drawing:front-caliper-service",
+    "path": "/parts",
+    "title": "Front caliper — service figure",
+    "kind": "drawing"
+  },
+  {
+    "id": "drawing:front-strut",
+    "path": "/parts",
+    "title": "Front spring strut",
+    "kind": "drawing"
+  },
+  {
+    "id": "drawing:front-strut-damper",
+    "path": "/parts",
+    "title": "Front strut housing & damper",
+    "kind": "drawing"
+  },
+  {
+    "id": "drawing:front-strut-upper",
+    "path": "/parts",
+    "title": "Upper strut mount & spring pads",
+    "kind": "drawing"
+  },
+  {
+    "id": "drawing:master-cylinder-service",
+    "path": "/parts",
+    "title": "Brake master cylinder",
+    "kind": "drawing"
+  },
+  {
+    "id": "drawing:parking-brake-service",
+    "path": "/parts",
+    "title": "Parking brake mechanism",
+    "kind": "drawing"
+  },
+  {
+    "id": "drawing:radiator-service",
+    "path": "/parts",
+    "title": "Radiator & cooling layout",
+    "kind": "drawing"
+  },
+  {
+    "id": "drawing:rear-caliper-service",
+    "path": "/parts",
+    "title": "Rear caliper — service figure",
+    "kind": "drawing"
+  },
+  {
+    "id": "drawing:water-pump",
+    "path": "/parts",
+    "title": "Water pump & thermostat",
+    "kind": "drawing"
+  },
+  {
+    "id": "node:e34body:assembly",
+    "path": "/workshop",
+    "title": "Sedan exterior",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34body:front-bumper",
+    "path": "/workshop",
+    "title": "Front bumper",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34body:front-door-glass-left",
+    "path": "/workshop",
+    "title": "left side glass",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34body:front-door-glass-right",
+    "path": "/workshop",
+    "title": "right side glass",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34body:front-door-left",
+    "path": "/workshop",
+    "title": "left front door",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34body:front-door-right",
+    "path": "/workshop",
+    "title": "right front door",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34body:front-fender-left",
+    "path": "/workshop",
+    "title": "left front fender",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34body:front-fender-right",
+    "path": "/workshop",
+    "title": "right front fender",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34body:front-license-plate",
+    "path": "/workshop",
+    "title": "Front registration plate",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34body:front-valance",
+    "path": "/workshop",
+    "title": "Front lower valance",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34body:fuel-door",
+    "path": "/workshop",
+    "title": "Fuel filler door",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34body:headlamp-left-inner",
+    "path": "/workshop",
+    "title": "left high-beam headlamp",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34body:headlamp-left-outer",
+    "path": "/workshop",
+    "title": "left low-beam headlamp",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34body:headlamp-right-inner",
+    "path": "/workshop",
+    "title": "right high-beam headlamp",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34body:headlamp-right-outer",
+    "path": "/workshop",
+    "title": "right low-beam headlamp",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34body:hood",
+    "path": "/workshop",
+    "title": "Hood",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34body:mirror-left",
+    "path": "/workshop",
+    "title": "left exterior mirror",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34body:mirror-right",
+    "path": "/workshop",
+    "title": "right exterior mirror",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34body:rear-bumper",
+    "path": "/workshop",
+    "title": "Rear bumper",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34body:rear-door-glass-left",
+    "path": "/workshop",
+    "title": "left side glass",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34body:rear-door-glass-right",
+    "path": "/workshop",
+    "title": "right side glass",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34body:rear-door-left",
+    "path": "/workshop",
+    "title": "left rear door",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34body:rear-door-right",
+    "path": "/workshop",
+    "title": "right rear door",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34body:rear-quarter-left",
+    "path": "/workshop",
+    "title": "left rear quarter",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34body:rear-quarter-right",
+    "path": "/workshop",
+    "title": "right rear quarter",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34body:rear-window",
+    "path": "/workshop",
+    "title": "Rear window",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34body:rocker-left",
+    "path": "/workshop",
+    "title": "left rocker panel",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34body:rocker-right",
+    "path": "/workshop",
+    "title": "right rocker panel",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34body:roof",
+    "path": "/workshop",
+    "title": "Roof panel",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34body:roundel-front",
+    "path": "/workshop",
+    "title": "Front BMW roundel",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34body:roundel-rear",
+    "path": "/workshop",
+    "title": "Rear BMW roundel",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34body:shell",
+    "path": "/workshop",
+    "title": "Body shell and pillars",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34body:side-moulding-e34-body-14-left",
+    "path": "/workshop",
+    "title": "left protective side moulding",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34body:side-moulding-e34-body-14-right",
+    "path": "/workshop",
+    "title": "right protective side moulding",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34body:side-moulding-e34-body-15-left",
+    "path": "/workshop",
+    "title": "left protective side moulding",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34body:side-moulding-e34-body-15-right",
+    "path": "/workshop",
+    "title": "right protective side moulding",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34body:side-moulding-e34-body-16-left",
+    "path": "/workshop",
+    "title": "left protective side moulding",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34body:side-moulding-e34-body-16-right",
+    "path": "/workshop",
+    "title": "right protective side moulding",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34body:sunroof",
+    "path": "/workshop",
+    "title": "Sliding sunroof panel",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34body:tail-light-left",
+    "path": "/workshop",
+    "title": "left rear combination lamp",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34body:tail-light-right",
+    "path": "/workshop",
+    "title": "right rear combination lamp",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34body:trunk",
+    "path": "/workshop",
+    "title": "Trunk lid",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34body:trunk-lamp-left",
+    "path": "/workshop",
+    "title": "left trunk-mounted rear lamp",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34body:trunk-lamp-right",
+    "path": "/workshop",
+    "title": "right trunk-mounted rear lamp",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34body:windshield",
+    "path": "/workshop",
+    "title": "Windshield",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:abs-hydraulic-unit",
+    "path": "/workshop",
+    "title": "ABS hydraulic block, pump and hard-line connections",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:airbox",
+    "path": "/workshop",
+    "title": "Intake air cleaner housing, lid ribs and clips",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:bellhousing",
+    "path": "/workshop",
+    "title": "Clutch bellhousing and engine mating flange",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:blower-motor",
+    "path": "/workshop",
+    "title": "Cowl-mounted twin squirrel-cage blower",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:body",
+    "path": "/workshop",
+    "title": "Body · assembled layout",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:body-wiring-harness",
+    "path": "/workshop",
+    "title": "Clipped body wiring trunk and engine-bay harness branches",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:brake-booster-master",
+    "path": "/workshop",
+    "title": "Brake vacuum booster, master cylinder and fluid reservoir",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:brake-caliper-front--1",
+    "path": "/workshop",
+    "title": "Right front floating brake caliper and carrier",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:brake-caliper-front-1",
+    "path": "/workshop",
+    "title": "Left front floating brake caliper and carrier",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:brake-caliper-rear--1",
+    "path": "/workshop",
+    "title": "Right rear floating brake caliper and carrier",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:brake-caliper-rear-1",
+    "path": "/workshop",
+    "title": "Left rear floating brake caliper and carrier",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:brake-disc-front--1",
+    "path": "/workshop",
+    "title": "Right front brake disc and central hat",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:brake-disc-front-1",
+    "path": "/workshop",
+    "title": "Left front brake disc and central hat",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:brake-disc-rear--1",
+    "path": "/workshop",
+    "title": "Right rear brake disc and central hat",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:brake-disc-rear-1",
+    "path": "/workshop",
+    "title": "Left rear brake disc and central hat",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:brake-hose-front--1",
+    "path": "/workshop",
+    "title": "Right front flexible brake hose and ABS lead",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:brake-hose-front-1",
+    "path": "/workshop",
+    "title": "Left front flexible brake hose and ABS lead",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:brake-hose-rear--1",
+    "path": "/workshop",
+    "title": "Right rear flexible brake hose and ABS lead",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:brake-hose-rear-1",
+    "path": "/workshop",
+    "title": "Left rear flexible brake hose and ABS lead",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:brake-pad-front--1",
+    "path": "/workshop",
+    "title": "Right front inner and outer brake pads",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:brake-pad-front-1",
+    "path": "/workshop",
+    "title": "Left front inner and outer brake pads",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:brake-pad-rear--1",
+    "path": "/workshop",
+    "title": "Right rear inner and outer brake pads",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:brake-pad-rear-1",
+    "path": "/workshop",
+    "title": "Left rear inner and outer brake pads",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:brake-shield-front--1",
+    "path": "/workshop",
+    "title": "Right front brake backing shield",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:brake-shield-front-1",
+    "path": "/workshop",
+    "title": "Left front brake backing shield",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:brake-shield-rear--1",
+    "path": "/workshop",
+    "title": "Right rear brake backing shield",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:brake-shield-rear-1",
+    "path": "/workshop",
+    "title": "Left rear brake backing shield",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:braking",
+    "path": "/workshop",
+    "title": "Braking · assembled layout",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:cabin-carpet",
+    "path": "/workshop",
+    "title": "Cabin floor, pillars and inner body lining",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:catalyst-center-resonator",
+    "path": "/workshop",
+    "title": "Twin catalyst/center exhaust housings and heat shields",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:center-bearing",
+    "path": "/workshop",
+    "title": "Propeller-shaft center support bearing and bracket",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:center-drag-link",
+    "path": "/workshop",
+    "title": "Center steering tie rod / drag link",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:chassis-rail--1",
+    "path": "/workshop",
+    "title": "Right front chassis rail",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:chassis-rail-1",
+    "path": "/workshop",
+    "title": "Left front chassis rail",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:clutch-assembly",
+    "path": "/workshop",
+    "title": "Clutch friction disc and diaphragm pressure cover",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:clutch-slave-cylinder",
+    "path": "/workshop",
+    "title": "Clutch slave cylinder and hydraulic line",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:cooling",
+    "path": "/workshop",
+    "title": "Cooling · assembled layout",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:dash-vent-center",
+    "path": "/workshop",
+    "title": "center dashboard air vent",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:dash-vent-driver",
+    "path": "/workshop",
+    "title": "driver dashboard air vent",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:dash-vent-passenger",
+    "path": "/workshop",
+    "title": "passenger dashboard air vent",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:dashboard",
+    "path": "/workshop",
+    "title": "E34 dashboard, vents and center controls",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:differential",
+    "path": "/workshop",
+    "title": "Differential · assembled layout",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:differential-case",
+    "path": "/workshop",
+    "title": "Rear differential cast housing, cover and mounting ear",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:differential-input-flange",
+    "path": "/workshop",
+    "title": "Differential input flange and rear shaft CV coupling",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:door-card-front--1",
+    "path": "/workshop",
+    "title": "right front door trim",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:door-card-rear--1",
+    "path": "/workshop",
+    "title": "right rear door trim",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:door-card-rear-1",
+    "path": "/workshop",
+    "title": "left rear door trim",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:driveshaft",
+    "path": "/workshop",
+    "title": "Driveshaft · assembled layout",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:electrical",
+    "path": "/workshop",
+    "title": "Electrical · assembled layout",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:electronics-box",
+    "path": "/workshop",
+    "title": "Right cowl electronics enclosure and DME connector bank",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:engine-cooling-fan",
+    "path": "/workshop",
+    "title": "Eleven-blade engine cooling fan and viscous coupling",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:exhaust",
+    "path": "/workshop",
+    "title": "Exhaust · assembled layout",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:exhaust-downpipes",
+    "path": "/workshop",
+    "title": "Twin exhaust downpipes from engine exhaust side",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:expansion-tank",
+    "path": "/workshop",
+    "title": "Coolant expansion tank, level neck and pressure cap",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:fan-shroud",
+    "path": "/workshop",
+    "title": "Radiator fan shroud and circular throat",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:firewall",
+    "path": "/workshop",
+    "title": "Firewall and pedal bulkhead",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:flexible-drive-coupling",
+    "path": "/workshop",
+    "title": "Guibo flexible drive coupling and six fasteners",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:floor-pan",
+    "path": "/workshop",
+    "title": "Passenger floor pan and stamped ribs",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:fresh-air-snorkel",
+    "path": "/workshop",
+    "title": "Front fresh-air intake snorkel",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:front-antiroll-bar",
+    "path": "/workshop",
+    "title": "Front anti-roll bar and mounting bushes",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:front-control-arm--1",
+    "path": "/workshop",
+    "title": "Right front lower control arm and ball joint",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:front-control-arm-1",
+    "path": "/workshop",
+    "title": "Left front lower control arm and ball joint",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:front-damper--1",
+    "path": "/workshop",
+    "title": "Right front damper piston and dust boot",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:front-damper-1",
+    "path": "/workshop",
+    "title": "Left front damper piston and dust boot",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:front-drop-link--1",
+    "path": "/workshop",
+    "title": "Right front anti-roll link",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:front-drop-link-1",
+    "path": "/workshop",
+    "title": "Left front anti-roll link",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:front-fuse-relay-box",
+    "path": "/workshop",
+    "title": "Front fuse and relay distribution box",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:front-seat--1",
+    "path": "/workshop",
+    "title": "Passenger E34 front seat",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:front-seat-1",
+    "path": "/workshop",
+    "title": "Driver E34 front seat",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:front-spring--1",
+    "path": "/workshop",
+    "title": "Right front coil spring",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:front-spring-1",
+    "path": "/workshop",
+    "title": "Left front coil spring",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:front-spring-seat--1",
+    "path": "/workshop",
+    "title": "Right front spring seats and upper mount",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:front-spring-seat-1",
+    "path": "/workshop",
+    "title": "Left front spring seats and upper mount",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:front-strut--1",
+    "path": "/workshop",
+    "title": "Right front MacPherson strut housing",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:front-strut-1",
+    "path": "/workshop",
+    "title": "Left front MacPherson strut housing",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:front-subframe",
+    "path": "/workshop",
+    "title": "Front engine carrier and connecting crossmember",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:front-thrust-arm--1",
+    "path": "/workshop",
+    "title": "Right front thrust arm and hydraulic bushing",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:front-thrust-arm-1",
+    "path": "/workshop",
+    "title": "Left front thrust arm and hydraulic bushing",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:fuel",
+    "path": "/workshop",
+    "title": "Fuel · assembled layout",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:fuel-filler-neck",
+    "path": "/workshop",
+    "title": "Right rear fuel filler neck and vent line",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:fuel-filter",
+    "path": "/workshop",
+    "title": "Underfloor inline fuel filter, clamp and unions",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:fuel-pump-sender",
+    "path": "/workshop",
+    "title": "In-tank pump and sender access flanges",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:fuel-supply-return-lines",
+    "path": "/workshop",
+    "title": "Underfloor fuel supply, return and clipped vent lines",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:fuel-tank",
+    "path": "/workshop",
+    "title": "Rear under-luggage-compartment fuel tank and pressed seam",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:gear-lever",
+    "path": "/workshop",
+    "title": "Gear lever and gaiter",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:gearbox-crossmember",
+    "path": "/workshop",
+    "title": "Transmission crossmember, rubber mounts and shift linkage",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:halfshaft--1",
+    "path": "/workshop",
+    "title": "Right rear halfshaft, CV joints and bellows",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:halfshaft-1",
+    "path": "/workshop",
+    "title": "Left rear halfshaft, CV joints and bellows",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:handbrake-lever",
+    "path": "/workshop",
+    "title": "Parking brake lever",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:headliner",
+    "path": "/workshop",
+    "title": "Contoured headliner",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:heater-hoses",
+    "path": "/workshop",
+    "title": "Heater supply and return hoses at firewall",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:hub-front--1",
+    "path": "/workshop",
+    "title": "Right front hub and five-bolt flange",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:hub-front-1",
+    "path": "/workshop",
+    "title": "Left front hub and five-bolt flange",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:hub-rear--1",
+    "path": "/workshop",
+    "title": "Right rear hub and five-bolt flange",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:hub-rear-1",
+    "path": "/workshop",
+    "title": "Left rear hub and five-bolt flange",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:hvac",
+    "path": "/workshop",
+    "title": "Hvac · assembled layout",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:hvac-ducts",
+    "path": "/workshop",
+    "title": "Defroster distribution, dashboard and rear footwell ducts",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:hvac-heater-box",
+    "path": "/workshop",
+    "title": "Heater/evaporator box and heater core casing",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:idler-arm",
+    "path": "/workshop",
+    "title": "Right-side steering idler arm and support",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:instrument-cluster",
+    "path": "/workshop",
+    "title": "E34 instrument cluster and binnacle",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:intake",
+    "path": "/workshop",
+    "title": "Intake · assembled layout",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:intake-boot-maf",
+    "path": "/workshop",
+    "title": "Air-flow meter and ribbed intake boot",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:interior",
+    "path": "/workshop",
+    "title": "Interior · assembled layout",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:lower-radiator-hose",
+    "path": "/workshop",
+    "title": "Lower radiator hose and return bend",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:luggage-floor",
+    "path": "/workshop",
+    "title": "Luggage floor and spare-wheel well",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:manual-gearbox",
+    "path": "/workshop",
+    "title": "Longitudinal manual gearbox case and ribs",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:parking-brake-shoes--1",
+    "path": "/workshop",
+    "title": "Right rear drum-in-disc parking brake shoes and expander",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:parking-brake-shoes-1",
+    "path": "/workshop",
+    "title": "Left rear drum-in-disc parking brake shoes and expander",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:pedal-box",
+    "path": "/workshop",
+    "title": "Driver pedal box",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:pitman-arm",
+    "path": "/workshop",
+    "title": "Steering pitman arm",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:propeller-shaft",
+    "path": "/workshop",
+    "title": "Two-piece propeller shaft and universal joint",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:radiator",
+    "path": "/workshop",
+    "title": "Radiator core, end tanks and upper mounts",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:rear-antiroll-bar",
+    "path": "/workshop",
+    "title": "Rear anti-roll bar and mounting bushes",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:rear-belt--1",
+    "path": "/workshop",
+    "title": "Right rear shoulder belt and latch",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:rear-belt-1",
+    "path": "/workshop",
+    "title": "Left rear shoulder belt and latch",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:rear-center-lap-belt",
+    "path": "/workshop",
+    "title": "Rear center lap belt and paired buckles",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:rear-coil-spring--1",
+    "path": "/workshop",
+    "title": "Right rear coil spring and retaining seats",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:rear-coil-spring-1",
+    "path": "/workshop",
+    "title": "Left rear coil spring and retaining seats",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:rear-damper--1",
+    "path": "/workshop",
+    "title": "Right rear spring-strut damper and mount",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:rear-damper-1",
+    "path": "/workshop",
+    "title": "Left rear spring-strut damper and mount",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:rear-drop-link--1",
+    "path": "/workshop",
+    "title": "Right rear anti-roll link",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:rear-drop-link-1",
+    "path": "/workshop",
+    "title": "Left rear anti-roll link",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:rear-exhaust-pipes",
+    "path": "/workshop",
+    "title": "Rear axle clearance exhaust bends",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:rear-muffler",
+    "path": "/workshop",
+    "title": "Left rear muffler and dual tailpipes",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:rear-seat-battery",
+    "path": "/workshop",
+    "title": "Rear-seat battery, hold-down and insulated terminals",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:rear-seat-cushion",
+    "path": "/workshop",
+    "title": "E34 rear bench and backrest",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:rear-subframe",
+    "path": "/workshop",
+    "title": "Rear axle carrier with four isolation mounts",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:rear-trailing-arm--1",
+    "path": "/workshop",
+    "title": "Right rear semi-trailing arm and pivot bushings",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:rear-trailing-arm-1",
+    "path": "/workshop",
+    "title": "Left rear semi-trailing arm and pivot bushings",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:safety",
+    "path": "/workshop",
+    "title": "Safety · assembled layout",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:seat-belt-front--1",
+    "path": "/workshop",
+    "title": "Passenger three-point belt, upper guide and buckle",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:seat-belt-front-1",
+    "path": "/workshop",
+    "title": "Driver three-point belt, upper guide and buckle",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:seatbelt-left",
+    "path": "/workshop",
+    "title": "left front seat belt",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:seatbelt-right",
+    "path": "/workshop",
+    "title": "right front seat belt",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:sill--1",
+    "path": "/workshop",
+    "title": "Right inner sill and seat crossmembers",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:sill-1",
+    "path": "/workshop",
+    "title": "Left inner sill and seat crossmembers",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:steering",
+    "path": "/workshop",
+    "title": "Steering · assembled layout",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:steering-column",
+    "path": "/workshop",
+    "title": "Cabin steering column shroud",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:steering-gearbox",
+    "path": "/workshop",
+    "title": "Power-assisted steering gearbox",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:steering-wheel",
+    "path": "/workshop",
+    "title": "E34 steering wheel",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:suspension",
+    "path": "/workshop",
+    "title": "Suspension · assembled layout",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:tie-rod--1",
+    "path": "/workshop",
+    "title": "Right adjustable outer tie rod",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:tie-rod-1",
+    "path": "/workshop",
+    "title": "Left adjustable outer tie rod",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:transmission",
+    "path": "/workshop",
+    "title": "Transmission · assembled layout",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:transmission-tunnel",
+    "path": "/workshop",
+    "title": "Raised transmission and propeller-shaft tunnel",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34sys:upper-radiator-hose",
+    "path": "/workshop",
+    "title": "Upper radiator hose, elbows and clamps",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34trim:fuel-door-hinge",
+    "path": "/workshop",
+    "title": "Fuel door hinge",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34trim:fuel-filler-pocket",
+    "path": "/workshop",
+    "title": "Fuel filler pocket and cap",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34trim:glove-box-bin",
+    "path": "/workshop",
+    "title": "Glove box storage liner",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34trim:glove-box-door",
+    "path": "/workshop",
+    "title": "Glove box door and latch",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34trim:luggage-floor-carpet",
+    "path": "/workshop",
+    "title": "Spare-wheel cover and luggage carpet",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34trim:spare-wheel",
+    "path": "/workshop",
+    "title": "Spare wheel and tire",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34trim:spare-wheel-retainer",
+    "path": "/workshop",
+    "title": "Spare-wheel retaining screw",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34trim:sunroof-aperture-finisher",
+    "path": "/workshop",
+    "title": "Headliner opening edge trim",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34trim:sunroof-liner",
+    "path": "/workshop",
+    "title": "Sliding sunroof cloth liner",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34trim:trunk-hinge-left",
+    "path": "/workshop",
+    "title": "Left trunk hinge",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34trim:trunk-hinge-right",
+    "path": "/workshop",
+    "title": "Right trunk hinge",
+    "kind": "component"
+  },
+  {
+    "id": "node:e34trim:trunk-lid-inner",
+    "path": "/workshop",
+    "title": "Trunk lid tool tray",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:ac-compressor",
+    "path": "/workshop",
+    "title": "Air-conditioning compressor / clutch reference",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:accessories",
+    "path": "/workshop",
+    "title": "Accessory drive and starting system",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:accessory-belt",
+    "path": "/workshop",
+    "title": "Multi-rib accessory belt reference",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:alternator",
+    "path": "/workshop",
+    "title": "Ventilated alternator housing",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:belt-tensioner",
+    "path": "/workshop",
+    "title": "Accessory-belt tensioner reference",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:block",
+    "path": "/workshop",
+    "title": "Cast-iron cylinder block with six integral bores",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:cam-cap:-1:1",
+    "path": "/workshop",
+    "title": "Exhaust cam bearing cap 1",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:cam-cap:-1:2",
+    "path": "/workshop",
+    "title": "Exhaust cam bearing cap 2",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:cam-cap:-1:3",
+    "path": "/workshop",
+    "title": "Exhaust cam bearing cap 3",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:cam-cap:-1:4",
+    "path": "/workshop",
+    "title": "Exhaust cam bearing cap 4",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:cam-cap:-1:5",
+    "path": "/workshop",
+    "title": "Exhaust cam bearing cap 5",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:cam-cap:-1:6",
+    "path": "/workshop",
+    "title": "Exhaust cam bearing cap 6",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:cam-cap:-1:7",
+    "path": "/workshop",
+    "title": "Exhaust cam bearing cap 7",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:cam-cap:1:1",
+    "path": "/workshop",
+    "title": "Intake cam bearing cap 1",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:cam-cap:1:2",
+    "path": "/workshop",
+    "title": "Intake cam bearing cap 2",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:cam-cap:1:3",
+    "path": "/workshop",
+    "title": "Intake cam bearing cap 3",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:cam-cap:1:4",
+    "path": "/workshop",
+    "title": "Intake cam bearing cap 4",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:cam-cap:1:5",
+    "path": "/workshop",
+    "title": "Intake cam bearing cap 5",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:cam-cap:1:6",
+    "path": "/workshop",
+    "title": "Intake cam bearing cap 6",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:cam-cap:1:7",
+    "path": "/workshop",
+    "title": "Intake cam bearing cap 7",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:cam-carrier:exhaust",
+    "path": "/workshop",
+    "title": "Exhaust cam carrier",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:cam-carrier:intake",
+    "path": "/workshop",
+    "title": "Intake cam carrier",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:cam-sprocket:exhaust",
+    "path": "/workshop",
+    "title": "Exhaust cam timing sprocket",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:cam-sprocket:intake",
+    "path": "/workshop",
+    "title": "Intake cam timing sprocket",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:camshaft:exhaust",
+    "path": "/workshop",
+    "title": "Exhaust camshaft with twelve lobes",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:camshaft:intake",
+    "path": "/workshop",
+    "title": "Intake camshaft with twelve lobes",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:chain-guide:-1",
+    "path": "/workshop",
+    "title": "Fixed timing-chain guide",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:chain-guide:1",
+    "path": "/workshop",
+    "title": "Tensioning timing-chain guide",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:coil-cover",
+    "path": "/workshop",
+    "title": "Central ignition-coil cover",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:cooling",
+    "path": "/workshop",
+    "title": "Coolant pump, thermostat and hoses",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:cover-bolt:0:-1",
+    "path": "/workshop",
+    "title": "Hex fastener — envelope only",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:cover-bolt:0:1",
+    "path": "/workshop",
+    "title": "Hex fastener — envelope only",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:cover-bolt:1:-1",
+    "path": "/workshop",
+    "title": "Hex fastener — envelope only",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:cover-bolt:1:1",
+    "path": "/workshop",
+    "title": "Hex fastener — envelope only",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:cover-bolt:2:-1",
+    "path": "/workshop",
+    "title": "Hex fastener — envelope only",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:cover-bolt:2:1",
+    "path": "/workshop",
+    "title": "Hex fastener — envelope only",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:cover-bolt:3:-1",
+    "path": "/workshop",
+    "title": "Hex fastener — envelope only",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:cover-bolt:3:1",
+    "path": "/workshop",
+    "title": "Hex fastener — envelope only",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:cover-bolt:4:-1",
+    "path": "/workshop",
+    "title": "Hex fastener — envelope only",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:cover-bolt:4:1",
+    "path": "/workshop",
+    "title": "Hex fastener — envelope only",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:cover-bolt:5:-1",
+    "path": "/workshop",
+    "title": "Hex fastener — envelope only",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:cover-bolt:5:1",
+    "path": "/workshop",
+    "title": "Hex fastener — envelope only",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:cover-bolt:6:-1",
+    "path": "/workshop",
+    "title": "Hex fastener — envelope only",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:cover-bolt:6:1",
+    "path": "/workshop",
+    "title": "Hex fastener — envelope only",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:cover-bolt:7:-1",
+    "path": "/workshop",
+    "title": "Hex fastener — envelope only",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:cover-bolt:7:1",
+    "path": "/workshop",
+    "title": "Hex fastener — envelope only",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:crank-sprocket",
+    "path": "/workshop",
+    "title": "Crankshaft timing sprocket",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:crankshaft",
+    "path": "/workshop",
+    "title": "Six-throw counterweighted crankshaft",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:cylinder-head",
+    "path": "/workshop",
+    "title": "Aluminium crossflow cylinder head",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:engine",
+    "path": "/workshop",
+    "title": "M50TU B25 inline-six reference",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:exhaust",
+    "path": "/workshop",
+    "title": "Exhaust manifolds / collectors",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:exhaust-manifold:1",
+    "path": "/workshop",
+    "title": "Three-cylinder exhaust manifold 1",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:exhaust-manifold:2",
+    "path": "/workshop",
+    "title": "Three-cylinder exhaust manifold 2",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:flywheel",
+    "path": "/workshop",
+    "title": "Flywheel / starter ring-gear reference",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:front-cover-bolt:0",
+    "path": "/workshop",
+    "title": "Hex fastener — envelope only",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:front-cover-bolt:1",
+    "path": "/workshop",
+    "title": "Hex fastener — envelope only",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:front-cover-bolt:2",
+    "path": "/workshop",
+    "title": "Hex fastener — envelope only",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:front-cover-bolt:3",
+    "path": "/workshop",
+    "title": "Hex fastener — envelope only",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:front-cover-bolt:4",
+    "path": "/workshop",
+    "title": "Hex fastener — envelope only",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:front-cover-bolt:5",
+    "path": "/workshop",
+    "title": "Hex fastener — envelope only",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:fuel-rail",
+    "path": "/workshop",
+    "title": "Six-injector fuel rail",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:head-bolt:1:-1",
+    "path": "/workshop",
+    "title": "Hex fastener — envelope only",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:head-bolt:1:1",
+    "path": "/workshop",
+    "title": "Hex fastener — envelope only",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:head-bolt:2:-1",
+    "path": "/workshop",
+    "title": "Hex fastener — envelope only",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:head-bolt:2:1",
+    "path": "/workshop",
+    "title": "Hex fastener — envelope only",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:head-bolt:3:-1",
+    "path": "/workshop",
+    "title": "Hex fastener — envelope only",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:head-bolt:3:1",
+    "path": "/workshop",
+    "title": "Hex fastener — envelope only",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:head-bolt:4:-1",
+    "path": "/workshop",
+    "title": "Hex fastener — envelope only",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:head-bolt:4:1",
+    "path": "/workshop",
+    "title": "Hex fastener — envelope only",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:head-bolt:5:-1",
+    "path": "/workshop",
+    "title": "Hex fastener — envelope only",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:head-bolt:5:1",
+    "path": "/workshop",
+    "title": "Hex fastener — envelope only",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:head-bolt:6:-1",
+    "path": "/workshop",
+    "title": "Hex fastener — envelope only",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:head-bolt:6:1",
+    "path": "/workshop",
+    "title": "Hex fastener — envelope only",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:head-bolt:7:-1",
+    "path": "/workshop",
+    "title": "Hex fastener — envelope only",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:head-bolt:7:1",
+    "path": "/workshop",
+    "title": "Hex fastener — envelope only",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:head-gasket",
+    "path": "/workshop",
+    "title": "Cylinder-head gasket reference",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:idle-control-valve",
+    "path": "/workshop",
+    "title": "Idle-air control valve and bypass hoses",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:ignition-coil:1",
+    "path": "/workshop",
+    "title": "Direct ignition coil 1",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:ignition-coil:2",
+    "path": "/workshop",
+    "title": "Direct ignition coil 2",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:ignition-coil:3",
+    "path": "/workshop",
+    "title": "Direct ignition coil 3",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:ignition-coil:4",
+    "path": "/workshop",
+    "title": "Direct ignition coil 4",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:ignition-coil:5",
+    "path": "/workshop",
+    "title": "Direct ignition coil 5",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:ignition-coil:6",
+    "path": "/workshop",
+    "title": "Direct ignition coil 6",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:injector:1",
+    "path": "/workshop",
+    "title": "Fuel injector 1",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:injector:2",
+    "path": "/workshop",
+    "title": "Fuel injector 2",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:injector:3",
+    "path": "/workshop",
+    "title": "Fuel injector 3",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:injector:4",
+    "path": "/workshop",
+    "title": "Fuel injector 4",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:injector:5",
+    "path": "/workshop",
+    "title": "Fuel injector 5",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:injector:6",
+    "path": "/workshop",
+    "title": "Fuel injector 6",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:intake",
+    "path": "/workshop",
+    "title": "Six-runner intake and fuel delivery",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:intake-boot",
+    "path": "/workshop",
+    "title": "Intake elbow / bellows reference",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:intake-plenum",
+    "path": "/workshop",
+    "title": "M50 long-runner intake plenum",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:intake-runner:1",
+    "path": "/workshop",
+    "title": "Curved intake runner 1",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:intake-runner:2",
+    "path": "/workshop",
+    "title": "Curved intake runner 2",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:intake-runner:3",
+    "path": "/workshop",
+    "title": "Curved intake runner 3",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:intake-runner:4",
+    "path": "/workshop",
+    "title": "Curved intake runner 4",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:intake-runner:5",
+    "path": "/workshop",
+    "title": "Curved intake runner 5",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:intake-runner:6",
+    "path": "/workshop",
+    "title": "Curved intake runner 6",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:lifter:exhaust:1:1",
+    "path": "/workshop",
+    "title": "Hydraulic lifter exhaust 1.1",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:lifter:exhaust:1:2",
+    "path": "/workshop",
+    "title": "Hydraulic lifter exhaust 1.2",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:lifter:exhaust:2:1",
+    "path": "/workshop",
+    "title": "Hydraulic lifter exhaust 2.1",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:lifter:exhaust:2:2",
+    "path": "/workshop",
+    "title": "Hydraulic lifter exhaust 2.2",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:lifter:exhaust:3:1",
+    "path": "/workshop",
+    "title": "Hydraulic lifter exhaust 3.1",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:lifter:exhaust:3:2",
+    "path": "/workshop",
+    "title": "Hydraulic lifter exhaust 3.2",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:lifter:exhaust:4:1",
+    "path": "/workshop",
+    "title": "Hydraulic lifter exhaust 4.1",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:lifter:exhaust:4:2",
+    "path": "/workshop",
+    "title": "Hydraulic lifter exhaust 4.2",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:lifter:exhaust:5:1",
+    "path": "/workshop",
+    "title": "Hydraulic lifter exhaust 5.1",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:lifter:exhaust:5:2",
+    "path": "/workshop",
+    "title": "Hydraulic lifter exhaust 5.2",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:lifter:exhaust:6:1",
+    "path": "/workshop",
+    "title": "Hydraulic lifter exhaust 6.1",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:lifter:exhaust:6:2",
+    "path": "/workshop",
+    "title": "Hydraulic lifter exhaust 6.2",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:lifter:intake:1:1",
+    "path": "/workshop",
+    "title": "Hydraulic lifter intake 1.1",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:lifter:intake:1:2",
+    "path": "/workshop",
+    "title": "Hydraulic lifter intake 1.2",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:lifter:intake:2:1",
+    "path": "/workshop",
+    "title": "Hydraulic lifter intake 2.1",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:lifter:intake:2:2",
+    "path": "/workshop",
+    "title": "Hydraulic lifter intake 2.2",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:lifter:intake:3:1",
+    "path": "/workshop",
+    "title": "Hydraulic lifter intake 3.1",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:lifter:intake:3:2",
+    "path": "/workshop",
+    "title": "Hydraulic lifter intake 3.2",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:lifter:intake:4:1",
+    "path": "/workshop",
+    "title": "Hydraulic lifter intake 4.1",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:lifter:intake:4:2",
+    "path": "/workshop",
+    "title": "Hydraulic lifter intake 4.2",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:lifter:intake:5:1",
+    "path": "/workshop",
+    "title": "Hydraulic lifter intake 5.1",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:lifter:intake:5:2",
+    "path": "/workshop",
+    "title": "Hydraulic lifter intake 5.2",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:lifter:intake:6:1",
+    "path": "/workshop",
+    "title": "Hydraulic lifter intake 6.1",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:lifter:intake:6:2",
+    "path": "/workshop",
+    "title": "Hydraulic lifter intake 6.2",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:lower-timing-cover",
+    "path": "/workshop",
+    "title": "Profiled lower front timing cover",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:lubrication",
+    "path": "/workshop",
+    "title": "Oil pan, pump, pickup and filter",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:main-bolt:1:-1",
+    "path": "/workshop",
+    "title": "Hex fastener — envelope only",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:main-bolt:1:1",
+    "path": "/workshop",
+    "title": "Hex fastener — envelope only",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:main-bolt:2:-1",
+    "path": "/workshop",
+    "title": "Hex fastener — envelope only",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:main-bolt:2:1",
+    "path": "/workshop",
+    "title": "Hex fastener — envelope only",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:main-bolt:3:-1",
+    "path": "/workshop",
+    "title": "Hex fastener — envelope only",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:main-bolt:3:1",
+    "path": "/workshop",
+    "title": "Hex fastener — envelope only",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:main-bolt:4:-1",
+    "path": "/workshop",
+    "title": "Hex fastener — envelope only",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:main-bolt:4:1",
+    "path": "/workshop",
+    "title": "Hex fastener — envelope only",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:main-bolt:5:-1",
+    "path": "/workshop",
+    "title": "Hex fastener — envelope only",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:main-bolt:5:1",
+    "path": "/workshop",
+    "title": "Hex fastener — envelope only",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:main-bolt:6:-1",
+    "path": "/workshop",
+    "title": "Hex fastener — envelope only",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:main-bolt:6:1",
+    "path": "/workshop",
+    "title": "Hex fastener — envelope only",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:main-bolt:7:-1",
+    "path": "/workshop",
+    "title": "Hex fastener — envelope only",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:main-bolt:7:1",
+    "path": "/workshop",
+    "title": "Hex fastener — envelope only",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:main-cap:1",
+    "path": "/workshop",
+    "title": "Main bearing cap 1",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:main-cap:2",
+    "path": "/workshop",
+    "title": "Main bearing cap 2",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:main-cap:3",
+    "path": "/workshop",
+    "title": "Main bearing cap 3",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:main-cap:4",
+    "path": "/workshop",
+    "title": "Main bearing cap 4",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:main-cap:5",
+    "path": "/workshop",
+    "title": "Main bearing cap 5",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:main-cap:6",
+    "path": "/workshop",
+    "title": "Main bearing cap 6",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:main-cap:7",
+    "path": "/workshop",
+    "title": "Main bearing cap 7",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:oil-drain-plug",
+    "path": "/workshop",
+    "title": "Oil-pan drain plug",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:oil-filler-cap",
+    "path": "/workshop",
+    "title": "Oil-filler cap",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:oil-filter-element",
+    "path": "/workshop",
+    "title": "Pleated oil-filter cartridge — HU 926/3 x dimensional reference",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:oil-filter-housing",
+    "path": "/workshop",
+    "title": "Oil-filter housing and cartridge cap",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:oil-pan",
+    "path": "/workshop",
+    "title": "E34 front-sump oil-pan reference",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:oil-pickup",
+    "path": "/workshop",
+    "title": "Oil pickup tube and strainer",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:oil-pump",
+    "path": "/workshop",
+    "title": "Chain-driven oil pump",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:oil-pump-chain",
+    "path": "/workshop",
+    "title": "Oil-pump drive chain",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:piston-pin:1",
+    "path": "/workshop",
+    "title": "Full-floating piston pin 1",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:piston-pin:2",
+    "path": "/workshop",
+    "title": "Full-floating piston pin 2",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:piston-pin:3",
+    "path": "/workshop",
+    "title": "Full-floating piston pin 3",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:piston-pin:4",
+    "path": "/workshop",
+    "title": "Full-floating piston pin 4",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:piston-pin:5",
+    "path": "/workshop",
+    "title": "Full-floating piston pin 5",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:piston-pin:6",
+    "path": "/workshop",
+    "title": "Full-floating piston pin 6",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:piston-ring:1:1",
+    "path": "/workshop",
+    "title": "Compression ring 1.1",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:piston-ring:1:2",
+    "path": "/workshop",
+    "title": "Compression ring 1.2",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:piston-ring:1:3",
+    "path": "/workshop",
+    "title": "Oil scraper ring 1.3",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:piston-ring:2:1",
+    "path": "/workshop",
+    "title": "Compression ring 2.1",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:piston-ring:2:2",
+    "path": "/workshop",
+    "title": "Compression ring 2.2",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:piston-ring:2:3",
+    "path": "/workshop",
+    "title": "Oil scraper ring 2.3",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:piston-ring:3:1",
+    "path": "/workshop",
+    "title": "Compression ring 3.1",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:piston-ring:3:2",
+    "path": "/workshop",
+    "title": "Compression ring 3.2",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:piston-ring:3:3",
+    "path": "/workshop",
+    "title": "Oil scraper ring 3.3",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:piston-ring:4:1",
+    "path": "/workshop",
+    "title": "Compression ring 4.1",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:piston-ring:4:2",
+    "path": "/workshop",
+    "title": "Compression ring 4.2",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:piston-ring:4:3",
+    "path": "/workshop",
+    "title": "Oil scraper ring 4.3",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:piston-ring:5:1",
+    "path": "/workshop",
+    "title": "Compression ring 5.1",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:piston-ring:5:2",
+    "path": "/workshop",
+    "title": "Compression ring 5.2",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:piston-ring:5:3",
+    "path": "/workshop",
+    "title": "Oil scraper ring 5.3",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:piston-ring:6:1",
+    "path": "/workshop",
+    "title": "Compression ring 6.1",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:piston-ring:6:2",
+    "path": "/workshop",
+    "title": "Compression ring 6.2",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:piston-ring:6:3",
+    "path": "/workshop",
+    "title": "Oil scraper ring 6.3",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:piston-rod:1",
+    "path": "/workshop",
+    "title": "Cylinder 1 piston / rod assembly",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:piston-rod:2",
+    "path": "/workshop",
+    "title": "Cylinder 2 piston / rod assembly",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:piston-rod:3",
+    "path": "/workshop",
+    "title": "Cylinder 3 piston / rod assembly",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:piston-rod:4",
+    "path": "/workshop",
+    "title": "Cylinder 4 piston / rod assembly",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:piston-rod:5",
+    "path": "/workshop",
+    "title": "Cylinder 5 piston / rod assembly",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:piston-rod:6",
+    "path": "/workshop",
+    "title": "Cylinder 6 piston / rod assembly",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:piston:1",
+    "path": "/workshop",
+    "title": "Three-ring piston 1",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:piston:2",
+    "path": "/workshop",
+    "title": "Three-ring piston 2",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:piston:3",
+    "path": "/workshop",
+    "title": "Three-ring piston 3",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:piston:4",
+    "path": "/workshop",
+    "title": "Three-ring piston 4",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:piston:5",
+    "path": "/workshop",
+    "title": "Three-ring piston 5",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:piston:6",
+    "path": "/workshop",
+    "title": "Three-ring piston 6",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:power-steering-pump",
+    "path": "/workshop",
+    "title": "Power-steering pump",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:pulley:alternator",
+    "path": "/workshop",
+    "title": "Alternator pulley",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:pulley:crank",
+    "path": "/workshop",
+    "title": "Crank vibration damper / pulley",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:pulley:idler",
+    "path": "/workshop",
+    "title": "Accessory idler pulley",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:pulley:power-steering",
+    "path": "/workshop",
+    "title": "Power-steering pulley",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:pulley:water-pump",
+    "path": "/workshop",
+    "title": "Water-pump pulley",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:pump-nut:-1:-1",
+    "path": "/workshop",
+    "title": "Hex fastener — envelope only",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:pump-nut:-1:1",
+    "path": "/workshop",
+    "title": "Hex fastener — envelope only",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:pump-nut:1:-1",
+    "path": "/workshop",
+    "title": "Hex fastener — envelope only",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:pump-nut:1:1",
+    "path": "/workshop",
+    "title": "Hex fastener — envelope only",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:rod-bolt:1:-1",
+    "path": "/workshop",
+    "title": "Hex fastener — envelope only",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:rod-bolt:1:1",
+    "path": "/workshop",
+    "title": "Hex fastener — envelope only",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:rod-bolt:2:-1",
+    "path": "/workshop",
+    "title": "Hex fastener — envelope only",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:rod-bolt:2:1",
+    "path": "/workshop",
+    "title": "Hex fastener — envelope only",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:rod-bolt:3:-1",
+    "path": "/workshop",
+    "title": "Hex fastener — envelope only",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:rod-bolt:3:1",
+    "path": "/workshop",
+    "title": "Hex fastener — envelope only",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:rod-bolt:4:-1",
+    "path": "/workshop",
+    "title": "Hex fastener — envelope only",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:rod-bolt:4:1",
+    "path": "/workshop",
+    "title": "Hex fastener — envelope only",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:rod-bolt:5:-1",
+    "path": "/workshop",
+    "title": "Hex fastener — envelope only",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:rod-bolt:5:1",
+    "path": "/workshop",
+    "title": "Hex fastener — envelope only",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:rod-bolt:6:-1",
+    "path": "/workshop",
+    "title": "Hex fastener — envelope only",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:rod-bolt:6:1",
+    "path": "/workshop",
+    "title": "Hex fastener — envelope only",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:rod-cap:1",
+    "path": "/workshop",
+    "title": "Connecting-rod big-end cap 1",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:rod-cap:2",
+    "path": "/workshop",
+    "title": "Connecting-rod big-end cap 2",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:rod-cap:3",
+    "path": "/workshop",
+    "title": "Connecting-rod big-end cap 3",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:rod-cap:4",
+    "path": "/workshop",
+    "title": "Connecting-rod big-end cap 4",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:rod-cap:5",
+    "path": "/workshop",
+    "title": "Connecting-rod big-end cap 5",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:rod-cap:6",
+    "path": "/workshop",
+    "title": "Connecting-rod big-end cap 6",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:rod:1",
+    "path": "/workshop",
+    "title": "Connecting rod 1",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:rod:2",
+    "path": "/workshop",
+    "title": "Connecting rod 2",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:rod:3",
+    "path": "/workshop",
+    "title": "Connecting rod 3",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:rod:4",
+    "path": "/workshop",
+    "title": "Connecting rod 4",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:rod:5",
+    "path": "/workshop",
+    "title": "Connecting rod 5",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:rod:6",
+    "path": "/workshop",
+    "title": "Connecting rod 6",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:short-block",
+    "path": "/workshop",
+    "title": "Short block / rotating assembly",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:spark-plug:1",
+    "path": "/workshop",
+    "title": "Spark plug 1",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:spark-plug:2",
+    "path": "/workshop",
+    "title": "Spark plug 2",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:spark-plug:3",
+    "path": "/workshop",
+    "title": "Spark plug 3",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:spark-plug:4",
+    "path": "/workshop",
+    "title": "Spark plug 4",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:spark-plug:5",
+    "path": "/workshop",
+    "title": "Spark plug 5",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:spark-plug:6",
+    "path": "/workshop",
+    "title": "Spark plug 6",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:starter",
+    "path": "/workshop",
+    "title": "Starter motor and solenoid",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:thermostat",
+    "path": "/workshop",
+    "title": "Thermostat valve reference",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:thermostat-housing",
+    "path": "/workshop",
+    "title": "Thermostat housing and hose outlets",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:throttle-body",
+    "path": "/workshop",
+    "title": "Throttle body and cable quadrant",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:timing",
+    "path": "/workshop",
+    "title": "Primary / secondary chain drive and covers",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:timing-chain:primary",
+    "path": "/workshop",
+    "title": "Primary timing chain",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:timing-chain:secondary",
+    "path": "/workshop",
+    "title": "Secondary camshaft timing chain",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:top-end",
+    "path": "/workshop",
+    "title": "Cylinder head and valvetrain",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:valve-cover",
+    "path": "/workshop",
+    "title": "Ribbed cam / valve cover with six coil wells",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:valve-spring:exhaust:1:1",
+    "path": "/workshop",
+    "title": "Valve spring exhaust 1.1",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:valve-spring:exhaust:1:2",
+    "path": "/workshop",
+    "title": "Valve spring exhaust 1.2",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:valve-spring:exhaust:2:1",
+    "path": "/workshop",
+    "title": "Valve spring exhaust 2.1",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:valve-spring:exhaust:2:2",
+    "path": "/workshop",
+    "title": "Valve spring exhaust 2.2",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:valve-spring:exhaust:3:1",
+    "path": "/workshop",
+    "title": "Valve spring exhaust 3.1",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:valve-spring:exhaust:3:2",
+    "path": "/workshop",
+    "title": "Valve spring exhaust 3.2",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:valve-spring:exhaust:4:1",
+    "path": "/workshop",
+    "title": "Valve spring exhaust 4.1",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:valve-spring:exhaust:4:2",
+    "path": "/workshop",
+    "title": "Valve spring exhaust 4.2",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:valve-spring:exhaust:5:1",
+    "path": "/workshop",
+    "title": "Valve spring exhaust 5.1",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:valve-spring:exhaust:5:2",
+    "path": "/workshop",
+    "title": "Valve spring exhaust 5.2",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:valve-spring:exhaust:6:1",
+    "path": "/workshop",
+    "title": "Valve spring exhaust 6.1",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:valve-spring:exhaust:6:2",
+    "path": "/workshop",
+    "title": "Valve spring exhaust 6.2",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:valve-spring:intake:1:1",
+    "path": "/workshop",
+    "title": "Valve spring intake 1.1",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:valve-spring:intake:1:2",
+    "path": "/workshop",
+    "title": "Valve spring intake 1.2",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:valve-spring:intake:2:1",
+    "path": "/workshop",
+    "title": "Valve spring intake 2.1",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:valve-spring:intake:2:2",
+    "path": "/workshop",
+    "title": "Valve spring intake 2.2",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:valve-spring:intake:3:1",
+    "path": "/workshop",
+    "title": "Valve spring intake 3.1",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:valve-spring:intake:3:2",
+    "path": "/workshop",
+    "title": "Valve spring intake 3.2",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:valve-spring:intake:4:1",
+    "path": "/workshop",
+    "title": "Valve spring intake 4.1",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:valve-spring:intake:4:2",
+    "path": "/workshop",
+    "title": "Valve spring intake 4.2",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:valve-spring:intake:5:1",
+    "path": "/workshop",
+    "title": "Valve spring intake 5.1",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:valve-spring:intake:5:2",
+    "path": "/workshop",
+    "title": "Valve spring intake 5.2",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:valve-spring:intake:6:1",
+    "path": "/workshop",
+    "title": "Valve spring intake 6.1",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:valve-spring:intake:6:2",
+    "path": "/workshop",
+    "title": "Valve spring intake 6.2",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:valve:exhaust:1:1",
+    "path": "/workshop",
+    "title": "Exhaust valve 1.1",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:valve:exhaust:1:2",
+    "path": "/workshop",
+    "title": "Exhaust valve 1.2",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:valve:exhaust:2:1",
+    "path": "/workshop",
+    "title": "Exhaust valve 2.1",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:valve:exhaust:2:2",
+    "path": "/workshop",
+    "title": "Exhaust valve 2.2",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:valve:exhaust:3:1",
+    "path": "/workshop",
+    "title": "Exhaust valve 3.1",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:valve:exhaust:3:2",
+    "path": "/workshop",
+    "title": "Exhaust valve 3.2",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:valve:exhaust:4:1",
+    "path": "/workshop",
+    "title": "Exhaust valve 4.1",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:valve:exhaust:4:2",
+    "path": "/workshop",
+    "title": "Exhaust valve 4.2",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:valve:exhaust:5:1",
+    "path": "/workshop",
+    "title": "Exhaust valve 5.1",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:valve:exhaust:5:2",
+    "path": "/workshop",
+    "title": "Exhaust valve 5.2",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:valve:exhaust:6:1",
+    "path": "/workshop",
+    "title": "Exhaust valve 6.1",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:valve:exhaust:6:2",
+    "path": "/workshop",
+    "title": "Exhaust valve 6.2",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:valve:intake:1:1",
+    "path": "/workshop",
+    "title": "Intake valve 1.1",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:valve:intake:1:2",
+    "path": "/workshop",
+    "title": "Intake valve 1.2",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:valve:intake:2:1",
+    "path": "/workshop",
+    "title": "Intake valve 2.1",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:valve:intake:2:2",
+    "path": "/workshop",
+    "title": "Intake valve 2.2",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:valve:intake:3:1",
+    "path": "/workshop",
+    "title": "Intake valve 3.1",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:valve:intake:3:2",
+    "path": "/workshop",
+    "title": "Intake valve 3.2",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:valve:intake:4:1",
+    "path": "/workshop",
+    "title": "Intake valve 4.1",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:valve:intake:4:2",
+    "path": "/workshop",
+    "title": "Intake valve 4.2",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:valve:intake:5:1",
+    "path": "/workshop",
+    "title": "Intake valve 5.1",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:valve:intake:5:2",
+    "path": "/workshop",
+    "title": "Intake valve 5.2",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:valve:intake:6:1",
+    "path": "/workshop",
+    "title": "Intake valve 6.1",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:valve:intake:6:2",
+    "path": "/workshop",
+    "title": "Intake valve 6.2",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:vanos",
+    "path": "/workshop",
+    "title": "Single VANOS intake-cam actuator housing",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:vanos-piston",
+    "path": "/workshop",
+    "title": "VANOS piston / gear-cup reference",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:vanos-solenoid",
+    "path": "/workshop",
+    "title": "VANOS oil-control solenoid",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:water-pump",
+    "path": "/workshop",
+    "title": "Coolant pump with four retaining ears",
+    "kind": "component"
+  },
+  {
+    "id": "node:m50:water-pump-impeller",
+    "path": "/workshop",
+    "title": "Coolant-pump impeller reference",
+    "kind": "component"
+  },
+  {
+    "id": "node:system:body",
+    "path": "/workshop",
+    "title": "Body & chassis",
+    "kind": "system"
+  },
+  {
+    "id": "node:system:braking",
+    "path": "/workshop",
+    "title": "Braking",
+    "kind": "system"
+  },
+  {
+    "id": "node:system:cooling",
+    "path": "/workshop",
+    "title": "Cooling",
+    "kind": "system"
+  },
+  {
+    "id": "node:system:differential",
+    "path": "/workshop",
+    "title": "Differential",
+    "kind": "system"
+  },
+  {
+    "id": "node:system:driveshaft",
+    "path": "/workshop",
+    "title": "Driveshaft",
+    "kind": "system"
+  },
+  {
+    "id": "node:system:electrical",
+    "path": "/workshop",
+    "title": "Electrical",
+    "kind": "system"
+  },
+  {
+    "id": "node:system:engine",
+    "path": "/workshop",
+    "title": "Engine",
+    "kind": "system"
+  },
+  {
+    "id": "node:system:exhaust",
+    "path": "/workshop",
+    "title": "Exhaust",
+    "kind": "system"
+  },
+  {
+    "id": "node:system:exterior",
+    "path": "/workshop",
+    "title": "Exterior",
+    "kind": "system"
+  },
+  {
+    "id": "node:system:fuel",
+    "path": "/workshop",
+    "title": "Fuel",
+    "kind": "system"
+  },
+  {
+    "id": "node:system:hvac",
+    "path": "/workshop",
+    "title": "HVAC",
+    "kind": "system"
+  },
+  {
+    "id": "node:system:intake",
+    "path": "/workshop",
+    "title": "Intake",
+    "kind": "system"
+  },
+  {
+    "id": "node:system:interior",
+    "path": "/workshop",
+    "title": "Interior",
+    "kind": "system"
+  },
+  {
+    "id": "node:system:lighting",
+    "path": "/workshop",
+    "title": "Lighting",
+    "kind": "system"
+  },
+  {
+    "id": "node:system:lubrication",
+    "path": "/workshop",
+    "title": "Lubrication",
+    "kind": "system"
+  },
+  {
+    "id": "node:system:safety",
+    "path": "/workshop",
+    "title": "Safety systems",
+    "kind": "system"
+  },
+  {
+    "id": "node:system:steering",
+    "path": "/workshop",
+    "title": "Steering",
+    "kind": "system"
+  },
+  {
+    "id": "node:system:suspension",
+    "path": "/workshop",
+    "title": "Suspension",
+    "kind": "system"
+  },
+  {
+    "id": "node:system:transmission",
+    "path": "/workshop",
+    "title": "Transmission",
+    "kind": "system"
+  },
+  {
+    "id": "node:vehicle",
+    "path": "/workshop",
+    "title": "1995 BMW 525i Sedan reference",
+    "kind": "component"
+  },
+  {
+    "id": "node:wheel:front-left",
+    "path": "/workshop",
+    "title": "front left · 205/65 R15",
+    "kind": "component"
+  },
+  {
+    "id": "node:wheel:front-right",
+    "path": "/workshop",
+    "title": "front right · 205/65 R15",
+    "kind": "component"
+  },
+  {
+    "id": "node:wheel:rear-left",
+    "path": "/workshop",
+    "title": "rear left · 205/65 R15",
+    "kind": "component"
+  },
+  {
+    "id": "node:wheel:rear-right",
+    "path": "/workshop",
+    "title": "rear right · 205/65 R15",
+    "kind": "component"
+  }
+]

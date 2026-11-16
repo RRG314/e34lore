@@ -1,0 +1,62 @@
+name: Verify E34 Lore
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+  schedule:
+    - cron: '15 9 * * 1'
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+      - name: Scan source history for credentials
+        shell: bash
+        run: |
+          scan_dir="$(mktemp -d)"
+          curl --fail --silent --show-error --location --proto '=https' --tlsv1.2 https://github.com/gitleaks/gitleaks/releases/download/v8.30.0/gitleaks_8.30.0_linux_x64.tar.gz --output "$scan_dir/gitleaks.tar.gz"
+          echo "79a3ab579b53f71efd634f3aaf7e04a0fa0cf206b7ed434638d1547a2470a66e  $scan_dir/gitleaks.tar.gz" | sha256sum --check
+          tar -xzf "$scan_dir/gitleaks.tar.gz" -C "$scan_dir" gitleaks
+          "$scan_dir/gitleaks" git --redact=100 --no-banner --timeout 120 .
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: 22
+          cache: npm
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: '3.12'
+      - run: npm run install:ci
+      - run: npm audit --audit-level=high
+      - run: npm run check
+        env:
+          E34_E30_BUILD: "1"
+          E34_LOCAL_BUILD: "1"
+      - name: Verify isolated PostgreSQL policies
+        shell: bash
+        run: |
+          postgres_bin="$(pg_config --bindir)"
+          test -x "$postgres_bin/initdb"
+          E34_POSTGRES_BIN="$postgres_bin" npm run test:security:db
+          E34_POSTGRES_BIN="$postgres_bin" npm run test:affiliates:db
+  android:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-java@b843ebf9b913146b38da2eaa7aeddf76074ae1ad # v6
+        with:
+          distribution: temurin
+          java-version: '21'
+      - name: Compile Android bundle and test APK
+        working-directory: android/project
+        run: ./gradlew --no-daemon :app:bundleRelease :app:assembleDebug

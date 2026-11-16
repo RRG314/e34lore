@@ -1,0 +1,134 @@
+{
+  "date": "2026-11-09T13:34:27.204012+00:00",
+  "baseCommit": "1f6fcbe80b039a79a9d5bd7eb20107c800104271",
+  "branch": "steven/scanner-bearing-local",
+  "localOnly": true,
+  "pushed": false,
+  "published": false,
+  "sourceFilesSha256": "aff129d252fec0fe59af5fe1b8798c2bb3c583ac6b09d64534b08b9d7cd6aa04",
+  "sourceFiles": [
+    {
+      "path": "app/scanner.css",
+      "sha256": "1df90a73eb6f8ca7d3e682d20aca465ed1dc0ca98fcdd9664201a0840505eb40"
+    },
+    {
+      "path": "scripts/vite/scanner-runtime-plugin.ts",
+      "sha256": "a971ace400ebde519429e40066af65a53f46301df9152b98ff0c68a23f13f5b6"
+    },
+    {
+      "path": "src/components/Shell.tsx",
+      "sha256": "b659710e2f80ffc89771e99bdc23058a4372dad799737079c96af351693bab9a"
+    },
+    {
+      "path": "src/digital-twin/public/ReferenceWorkshop.tsx",
+      "sha256": "f696f92a861b0a58d6a1752c380538fd92dea7c9f9043c656ff71d239a7e5f5a"
+    },
+    {
+      "path": "src/repair/BearingInspection.tsx",
+      "sha256": "8e08be857f1332639bfc09353449fd22cf6064ab2184daa4ba8e56f9a0de045f"
+    },
+    {
+      "path": "src/repair/bearing-inspection.ts",
+      "sha256": "b7d36372a43841f891e1856cf35244f079bd571c654f0e491af9b96a93618fa3"
+    },
+    {
+      "path": "src/scanner/FamilyResults.tsx",
+      "sha256": "ab6d2c24c4253434d2c88a26a71718723e0a4305112c9453e8e32d628b79e5e0"
+    },
+    {
+      "path": "src/scanner/ImageCapture.tsx",
+      "sha256": "1ee22fb779092df17f947b231acc9a7aa87d1e189aae70231eef368cb20e1d87"
+    },
+    {
+      "path": "src/scanner/Scanner.tsx",
+      "sha256": "c9b7300a348200793ff8d4876adaf7bd76c85050b4f1977b717b468d9b3457a0"
+    },
+    {
+      "path": "src/scanner/families.ts",
+      "sha256": "8068583259639f9d86ab6f68341cfe8a58ec07b633c0b1ec6c13aa16041f6e82"
+    },
+    {
+      "path": "src/scanner/family-comparison.ts",
+      "sha256": "24474831622ca2b6675fd27345b6e8b1b75ccb57b3f8d0ca418614be6d7cda1e"
+    },
+    {
+      "path": "src/scanner/family-vectors.json",
+      "sha256": "7fb6dbc9692e8c41a4d4433544e3f0eb7b4a802cbe753c798921f4c097f3df11"
+    },
+    {
+      "path": "src/scanner/inference.ts",
+      "sha256": "96cf583e8a811b65d06bcfc408e1320e0bca5ac595d7e3666391f86fc2b3af25"
+    },
+    {
+      "path": "src/scanner/inference.worker.ts",
+      "sha256": "d48fbf37ef15bcd872d1c73f043d75383b730ffa997547799386c74d44e4109f"
+    },
+    {
+      "path": "tests/release-http.mjs",
+      "sha256": "f2c34160a8c331d7159c5efc9bb007420dfaff2945c712e426ffdc2ed609030e"
+    },
+    {
+      "path": "tests/scanner-bearing.test.ts",
+      "sha256": "f765e46b44ea5d7b06671bdf491df0e917818fe2d264c99136a67376e2a2bf08"
+    },
+    {
+      "path": "tools/scanner/build-family-vectors.mjs",
+      "sha256": "f188a7174ff4aea68008983c486757406566a54dfad30577dc1932e8419823d1"
+    },
+    {
+      "path": "tools/scanner/evaluate-families.mjs",
+      "sha256": "ec84318af0d2cc4625cb68fecddb8269ed64dd7b144b2e290b72738c5e4637f4"
+    },
+    {
+      "path": "tools/scanner/fetch-family-evaluation.mjs",
+      "sha256": "883355a7058d41dff41c6e52d35b9081968fa26d2f00ac1220159c6a5aee01cf"
+    },
+    {
+      "path": "vite.config.ts",
+      "sha256": "b6f6a310c07bf06f8921e1a0c13f448bd1c094e46cb124534d2b88debfa9e624"
+    }
+  ],
+  "tests": {
+    "unit": 423,
+    "unitFiles": 43,
+    "python": 40,
+    "typecheck": "pass",
+    "productionBuild": "pass",
+    "releaseHttp": 18,
+    "securityHttp": 32,
+    "focusedLint": "pass",
+    "gitDiffCheck": "pass",
+    "acceptedModelAndCatalogAssets": "unchanged",
+    "inheritedRepositoryLintDebt": "not a full-repository lint pass"
+  },
+  "browser": {
+    "computerUrl": "http://127.0.0.1:3010/scanner",
+    "phoneWifiUrl": "http://127.0.0.1:3010/scanner",
+    "loopbackComparisonMs": 1215,
+    "lanComparisonMs": 4147,
+    "twoViewRun": "completed, unresolved",
+    "savedView": "display and analysis synchronized; counted once",
+    "catalogRecord": "bmw-26121226657 read successfully; comparison provenance retained",
+    "inspection": "16 checks in five stages; local progress restored on reload; 540i driveline isolation verified",
+    "mobileOverflow": false,
+    "physicalPhoneTest": "pending owner",
+    "physicalOwnerBearing": "not yet supplied",
+    "knownDevelopmentWarning": "React development eval blocked by retained CSP"
+  },
+  "dataChanges": {
+    "hostedMigrations": false,
+    "hostedMemberWrites": false,
+    "productionFlags": false,
+    "photosUploaded": false
+  },
+  "limits": {
+    "positiveConvenienceTop1": "3/9",
+    "bearingExample": "ranked first; unresolved",
+    "exactOemAcceptance": false,
+    "releaseAccepted": false
+  },
+  "proof": [
+    "outputs/scanner-bearing-local/mobile-comparison.png",
+    "outputs/scanner-bearing-local/bearing-inspection.png"
+  ]
+}

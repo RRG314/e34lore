@@ -1,0 +1,17 @@
+# E34 Lore scanner reference image credits
+
+All references are experimental category examples. A source vehicle or component is not evidence of E34 compatibility. Each photograph and its resized/cropped derivative retains the source license. No endorsement is implied.
+
+Model: [CLIP ViT-B/32](https://huggingface.co/Xenova/clip-vit-base-patch32/tree/6b7c523703ae26e39be4b03774966f8571c7f523) (MIT), image-only q8 ONNX.
+
+- **engine — independent photo reference** — Jiří Sedláček; [source](https://commons.wikimedia.org/wiki/File:BMW_M50_engine_in_BMW-Museum_in_Munich,_Bayern.JPG), [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0). Resized to 320px maximum dimension, JPEG re-encoded, metadata omitted. Source notes: M50 engine museum display; source describes engine, not installed E34 build.
+- **alternator — independent photo reference** — EL Guarito; [source](https://commons.wikimedia.org/wiki/File:Alternador_003.jpg), [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0). Resized to 320px maximum dimension, JPEG re-encoded, metadata omitted. Source notes: Automotive alternator; generic category only.
+- **oil filter — independent photo reference** — Dvortygirl; [source](https://commons.wikimedia.org/wiki/File:Engine_oil_filter.JPG), [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0). Resized to 320px maximum dimension, JPEG re-encoded, metadata omitted. Source notes: Generic oil filter; category only.
+- **spark plug — independent photo reference** — Ralf Schumacher, Dresden SchumacherDresden; [source](https://commons.wikimedia.org/wiki/File:Spark-plug01.jpeg), [CC BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0/). Resized to 320px maximum dimension, JPEG re-encoded, metadata omitted. Source notes: Generic spark plug; category only.
+- **thermostat housing — independent photo reference** — dave_7 from Lethbridge, Canada; [source](https://commons.wikimedia.org/wiki/File:Thermostat_housing_-_before_(4096036434).jpg), [CC BY 2.0](https://creativecommons.org/licenses/by/2.0). Resized to 320px maximum dimension, JPEG re-encoded, metadata omitted. Source notes: Thermostat housing; source-specific vehicle unknown.
+- **water pump — independent photo reference** — Maly LOLek; [source](https://commons.wikimedia.org/wiki/File:Pompa_wody2.jpg), [CC BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0/). Resized to 320px maximum dimension, JPEG re-encoded, metadata omitted. Source notes: Generic automotive coolant pump; exact OEM and vehicle unverified.
+- **brake caliper — independent photo reference** — 4300streetcar; [source](https://commons.wikimedia.org/wiki/File:2020_Chevrolet_Bolt_EV_front_disc_brake_1.jpg), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0). Cropped visible right-side brake caliper (x720 y390 w130 h200 in1280px source thumbnail); resized320px maximum; JPEG re-encoded, metadata omitted. Source notes: Chevrolet Bolt front brake assembly; category reference only, no E34 fitment.
+
+Synthetic r14 examples retain the existing E34 Lore model credits and accuracy limits. They are model renders, not product photographs.
+
+Base r14 model credit retained: [UVZZZ / Silbergrau](https://sketchfab.com/3d-models/bmw-525i-e34-project-zomboid-c65aa3b7687d4f5dbbabdfad0b7816bb), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). E34 Lore reconstruction modifications and component renders are illustrative; aggregate model credits do not certify individual OEM geometry.

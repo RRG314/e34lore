@@ -1,0 +1,11 @@
+# Private administrator security status
+
+8 November 2026. The owner clarified that the status page is useful in administration and requested restoring it. This supersedes the prior [removal](security-status-removal.md).
+
+Restored the original aggregate-only `/manage/security` component, lazy route and metadata. The dashboard action is now conditional on the existing successful administrator/current-MFA authorization response and current account scope. It is absent from public navigation and anonymous management HTML. Direct page access shows sign-in/verification guidance without revealing status data; the existing database `security_status` function independently denies guests, ordinary members and moderators, and requires a live administrator session with verified MFA. No new role, credential, permission, backend setting or database migration is introduced.
+
+Published **Sites version40** at https://e34lore.com, source `8272713d1812f4574b996492a158fe8f33dbe974`, through PR17. Deployment succeeded at 2026-11-08T08:29:44.360555Z. Normalized archive SHA256 `95210ce7cd64d7bd401051d40f2e63090554a9126c02df6a81c0a7c28bd57e94`,2,125 files,172,707,840 bytes.
+
+TypeScript, all318 application tests and production build pass. Local and actual custom-domain checks pass75 server-rendered routes/data assertions and32 HTTP security boundaries, including absence of the admin link in anonymous dashboard HTML and denial of anonymous status RPC access. Existing isolated SQL assertions enforce administrator versus moderator/anonymous access. Matching-source GitHub website/SQL and Android jobs both pass in run42463084868. Committed-source Gitleaks passes.
+
+Actual Chrome without a local signed-in account shows sign-in guidance and no inventory data. The real owner's live administrator/MFA session sees the restored dashboard link and opens the page, which confirms current MFA through the database and displays live aggregate safeguards. Local ignored proof: `outputs/restore-admin-security-status/live-admin-security.png`. Owned port3004 preview stopped. No backend data, credential, security policy or optional analytics setting changed. This receipt is a documentation-only follow-up to the tested and deployed source.

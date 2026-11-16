@@ -1,0 +1,151 @@
+{
+  "schema": 1,
+  "checks": [
+    {
+      "referenceId": "e34-525i-sedan-automatic",
+      "revision": 23,
+      "manifestSha256": "07d858ddc5abb25b43a823e5082cf9d17b55e018df6317cf8f4c1c343569bd2d",
+      "nodeId": "m50:oil-filter-element",
+      "assetSha256": "32334cd0a373f0e424a00b996a71353b0556f9371f440ecf323dac4e03d9d99c",
+      "canonicalId": "bmw-11421730389",
+      "oem": "11421730389",
+      "kind": "outer-envelope-only",
+      "displaySize": "Ø81 × 110 mm",
+      "measuredMm": [
+        81.008083,
+        109.999999,
+        81.008083
+      ],
+      "listedMm": [
+        81,
+        110,
+        81
+      ],
+      "source": "https://www.mann-filter.com/uk-en/catalogue/search-results/product.html/hu926/3x_mann-filter.html",
+      "sourceTitle": "MANN-FILTER HU 926/3 x",
+      "checkedOn": "2026-11-09",
+      "limitations": "Bore, detailed shape, tolerances, installed placement and fitment are not verified."
+    },
+    {
+      "referenceId": "e34-525i-sedan-automatic",
+      "revision": 24,
+      "manifestSha256": "c26f8aecf883dd9788fa086d78c4850773e233c4c287de457539c1774fa49646",
+      "nodeId": "m50:oil-filter-element",
+      "assetSha256": "32334cd0a373f0e424a00b996a71353b0556f9371f440ecf323dac4e03d9d99c",
+      "canonicalId": "bmw-11421730389",
+      "oem": "11421730389",
+      "kind": "outer-envelope-only",
+      "displaySize": "Ø81 × 110 mm",
+      "measuredMm": [
+        81.008083,
+        109.999999,
+        81.008083
+      ],
+      "listedMm": [
+        81,
+        110,
+        81
+      ],
+      "source": "https://www.mann-filter.com/uk-en/catalogue/search-results/product.html/hu926/3x_mann-filter.html",
+      "sourceTitle": "MANN-FILTER HU 926/3 x",
+      "checkedOn": "2026-11-09",
+      "limitations": "Bore, detailed shape, tolerances, installed placement and fitment are not verified."
+    },
+    {
+      "referenceId": "e34-525i-sedan-automatic",
+      "revision": 24,
+      "manifestSha256": "c26f8aecf883dd9788fa086d78c4850773e233c4c287de457539c1774fa49646",
+      "nodeId": "e34sys:air-filter-element",
+      "assetSha256": "1dfadd8363621513969e69a008ccd638f6d8e66ef40a6a9c9dbc7e60521f428e",
+      "canonicalId": "bmw-13721730918",
+      "oem": "13721730918",
+      "kind": "outer-envelope-only",
+      "measuredMm": [
+        325.00000021606684,
+        57.00000012293458,
+        150.00000021606684
+      ],
+      "listedMm": [
+        325,
+        57,
+        150
+      ],
+      "displaySize": "325 × 150 × 57 mm",
+      "source": "https://www.mann-filter.com/uk-en/catalogue/search-results/product.html/c33130_mann-filter.html",
+      "sourceTitle": "MANN-FILTER C 33 130",
+      "checkedOn": "2026-11-10",
+      "limitations": "Outer dimensions only. Pleat count, sealing geometry, housing clearances, installed placement and vehicle fitment are not verified."
+    },
+    {
+      "referenceId": "e34-525i-sedan-automatic",
+      "revision": 24,
+      "manifestSha256": "c26f8aecf883dd9788fa086d78c4850773e233c4c287de457539c1774fa49646",
+      "nodeId": "e34sys:engine-cooling-fan",
+      "assetSha256": "7e1df3047a69f04fd0d492a3504b00a84c13c385026e67976da7642c7e489173",
+      "canonicalId": "bmw-11521712058",
+      "oem": "11521712058",
+      "kind": "diameter-and-blade-count-only",
+      "displaySize": "Ø420 mm · 11 blades",
+      "measuredMm": [
+        61.09999865293503,
+        417.88454353809357,
+        418.30311715602875
+      ],
+      "listedMm": [
+        420
+      ],
+      "source": "https://www.cojaliparts.com/en/reference/11521712058/fan-blades/8111602/",
+      "sourceTitle": "Cojali 8111602 · BMW11521712058",
+      "checkedOn": "2026-11-10",
+      "limitations": "Diameter and blade count only. Blade pitch, section, thickness, fastener spacing, viscous coupling, shroud clearance and installed fitment are illustrative."
+    },
+    {
+      "nodeId": "e34auto:output-seal",
+      "canonicalId": "bmw-24131218847",
+      "oem": "24131218847",
+      "kind": "catalog-size-only",
+      "displaySize": "38 × 58 × 10 mm",
+      "measuredMm": [
+        37.99999877810478,
+        58.000001637535995,
+        9.999990463256836
+      ],
+      "listedMm": [
+        38,
+        58,
+        10
+      ],
+      "source": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-525i-sedan_e34/automatic_transmission/output_a4s_270r_310r.html",
+      "sourceTitle": "BMW 24131218847",
+      "checkedOn": "2026-11-10",
+      "limitations": "The listed bore and outside diameter were checked, along with width. Mating tolerances and installed fit remain unmeasured.",
+      "referenceId": "e34-525i-sedan-automatic",
+      "assetSha256": "a1ee7a25f93a58c987edaa8be4701f194e9dba44ed0ef4cc0b82256b939dd510",
+      "revision": 24,
+      "manifestSha256": "c26f8aecf883dd9788fa086d78c4850773e233c4c287de457539c1774fa49646"
+    },
+    {
+      "nodeId": "e34sys:center-bearing-insert",
+      "canonicalId": "bmw-26121225071",
+      "oem": "26121225071",
+      "kind": "catalog-size-only",
+      "displaySize": "30 × 55 mm",
+      "measuredMm": [
+        29.999999212805864,
+        55.00000027727278
+      ],
+      "listedMm": [
+        30,
+        55
+      ],
+      "source": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-525i-sedan_e34/steering_drive_shaft/drive_shaft_universal_joint_centre_mounting.html",
+      "sourceTitle": "BMW 26121225071",
+      "checkedOn": "2026-11-10",
+      "limitations": "The listed bore and outside diameter were checked. Bearing width and ball count are approximate. Mating tolerances and installed fit remain unmeasured.",
+      "referenceId": "e34-525i-sedan-automatic",
+      "assetSha256": "9e89e5a2514509b26557573ac772d070ae91a44cf0efe5c431e17c46d33846ed",
+      "revision": 24,
+      "manifestSha256": "c26f8aecf883dd9788fa086d78c4850773e233c4c287de457539c1774fa49646"
+    }
+  ]
+}

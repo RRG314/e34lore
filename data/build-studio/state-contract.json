@@ -1,0 +1,824 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "schemaVersion": {
+      "type": "number",
+      "const": 1
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 120
+    },
+    "description": {
+      "type": "string",
+      "maxLength": 5000
+    },
+    "publicDescription": {
+      "type": "string",
+      "maxLength": 3000
+    },
+    "style": {
+      "type": "string",
+      "enum": [
+        "factory",
+        "restoration",
+        "period",
+        "alpina-inspired",
+        "schnitzer-inspired",
+        "hartge-inspired",
+        "bbs-inspired",
+        "street",
+        "track",
+        "engine-swap",
+        "custom-interior",
+        "experimental"
+      ]
+    },
+    "lifecycle": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "active",
+        "completed",
+        "archived"
+      ]
+    },
+    "reference": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-zA-Z0-9:_-]{1,100}$"
+        },
+        "revision": {
+          "type": "integer",
+          "exclusiveMinimum": 0,
+          "maximum": 9007199254740991
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        }
+      },
+      "required": [
+        "id",
+        "revision",
+        "sha256"
+      ],
+      "additionalProperties": false
+    },
+    "baseConfiguration": {
+      "type": "object",
+      "properties": {
+        "model": {
+          "type": "string",
+          "maxLength": 80
+        },
+        "engine": {
+          "type": "string",
+          "maxLength": 80
+        },
+        "year": {
+          "type": "string",
+          "maxLength": 4
+        },
+        "month": {
+          "type": "string",
+          "maxLength": 2
+        },
+        "market": {
+          "type": "string",
+          "maxLength": 40
+        },
+        "body": {
+          "type": "string",
+          "maxLength": 40
+        },
+        "transmission": {
+          "type": "string",
+          "maxLength": 40
+        },
+        "steering": {
+          "type": "string",
+          "maxLength": 40
+        }
+      },
+      "required": [
+        "model",
+        "engine",
+        "year",
+        "month",
+        "market",
+        "body",
+        "transmission",
+        "steering"
+      ],
+      "additionalProperties": false
+    },
+    "targetConfiguration": {
+      "type": "object",
+      "properties": {
+        "model": {
+          "type": "string",
+          "maxLength": 80
+        },
+        "engine": {
+          "type": "string",
+          "maxLength": 80
+        },
+        "year": {
+          "type": "string",
+          "maxLength": 4
+        },
+        "month": {
+          "type": "string",
+          "maxLength": 2
+        },
+        "market": {
+          "type": "string",
+          "maxLength": 40
+        },
+        "body": {
+          "type": "string",
+          "maxLength": 40
+        },
+        "transmission": {
+          "type": "string",
+          "maxLength": 40
+        },
+        "steering": {
+          "type": "string",
+          "maxLength": 40
+        }
+      },
+      "required": [
+        "model",
+        "engine",
+        "year",
+        "month",
+        "market",
+        "body",
+        "transmission",
+        "steering"
+      ],
+      "additionalProperties": false
+    },
+    "appearance": {
+      "type": "object",
+      "properties": {
+        "paint": {
+          "type": "object",
+          "properties": {
+            "enabled": {
+              "type": "boolean"
+            },
+            "color": {
+              "type": "string",
+              "pattern": "^#[a-fA-F0-9]{6}$"
+            },
+            "finish": {
+              "type": "string",
+              "enum": [
+                "gloss",
+                "satin",
+                "matte",
+                "metallic"
+              ]
+            },
+            "factoryCode": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "pattern": "^\\d{3}$"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "enabled",
+            "color",
+            "finish",
+            "factoryCode"
+          ],
+          "additionalProperties": false
+        },
+        "upholstery": {
+          "type": "object",
+          "properties": {
+            "enabled": {
+              "type": "boolean"
+            },
+            "color": {
+              "type": "string",
+              "pattern": "^#[a-fA-F0-9]{6}$"
+            },
+            "finish": {
+              "type": "string",
+              "enum": [
+                "fabric",
+                "leather"
+              ]
+            }
+          },
+          "required": [
+            "enabled",
+            "color",
+            "finish"
+          ],
+          "additionalProperties": false
+        },
+        "trim": {
+          "type": "object",
+          "properties": {
+            "enabled": {
+              "type": "boolean"
+            },
+            "color": {
+              "type": "string",
+              "pattern": "^#[a-fA-F0-9]{6}$"
+            }
+          },
+          "required": [
+            "enabled",
+            "color"
+          ],
+          "additionalProperties": false
+        },
+        "wheels": {
+          "type": "object",
+          "properties": {
+            "finishEnabled": {
+              "type": "boolean"
+            },
+            "packageId": {
+              "type": "string",
+              "enum": [
+                "reference",
+                "e34-original-ten-spoke-v1",
+                "e34-artist-wheel-v1",
+                "e34-factory-1-v1",
+                "e34-factory-2-v1",
+                "e34-factory-3-v1",
+                "e34-factory-4-v1",
+                "e34-factory-5-v1",
+                "e34-factory-5-composite-v1",
+                "e34-factory-5-trx-v1",
+                "e34-factory-6-v1",
+                "e34-factory-7-v1",
+                "e34-factory-7-td-v1",
+                "e34-factory-10-v1",
+                "e34-factory-10-ii-v1",
+                "e34-factory-12-v1",
+                "e34-factory-14-v1",
+                "e34-factory-16-v1",
+                "e34-factory-18-v1",
+                "e34-factory-19-v1",
+                "e34-factory-20-v1",
+                "e34-factory-21-v1",
+                "e34-factory-26-v1",
+                "e34-factory-29-v1",
+                "e34-factory-32-v1",
+                "e34-factory-37-v1",
+                "e34-factory-trx-1-v1",
+                "e34-factory-trx-2-v1",
+                "e30-factory-steel-14-v1",
+                "e30-factory-bottlecap-14-v1",
+                "e30-factory-cross-spoke-14-v1",
+                "e30-factory-cross-spoke-15-v1",
+                "e30-factory-star-spoke-15-v1"
+              ]
+            },
+            "color": {
+              "type": "string",
+              "pattern": "^#[a-fA-F0-9]{6}$"
+            },
+            "scale": {
+              "type": "number",
+              "minimum": 0.9,
+              "maximum": 1.12
+            },
+            "widthScale": {
+              "type": "number",
+              "minimum": 0.85,
+              "maximum": 1.15
+            }
+          },
+          "required": [
+            "packageId",
+            "color",
+            "scale",
+            "widthScale"
+          ],
+          "additionalProperties": false
+        },
+        "rideHeight": {
+          "type": "number",
+          "minimum": -1,
+          "maximum": 1
+        },
+        "engineAccent": {
+          "type": "object",
+          "properties": {
+            "enabled": {
+              "type": "boolean"
+            },
+            "color": {
+              "type": "string",
+              "pattern": "^#[a-fA-F0-9]{6}$"
+            }
+          },
+          "required": [
+            "enabled",
+            "color"
+          ],
+          "additionalProperties": false
+        },
+        "quality": {
+          "type": "string",
+          "enum": [
+            "low",
+            "balanced",
+            "high"
+          ]
+        }
+      },
+      "required": [
+        "paint",
+        "upholstery",
+        "trim",
+        "wheels",
+        "rideHeight",
+        "engineAccent",
+        "quality"
+      ],
+      "additionalProperties": false
+    },
+    "components": {
+      "maxItems": 150,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9:_-]{1,100}$"
+          },
+          "system": {
+            "type": "string",
+            "enum": [
+              "engine",
+              "transmission",
+              "differential",
+              "driveshaft",
+              "suspension",
+              "steering",
+              "brakes",
+              "wheels",
+              "cooling",
+              "exhaust",
+              "intake",
+              "electrical",
+              "ecu",
+              "fuel",
+              "body",
+              "interior",
+              "accessories"
+            ]
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "oem",
+              "aftermarket",
+              "custom"
+            ]
+          },
+          "partId": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^[a-zA-Z0-9:_-]{1,100}$"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "number": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^\\d{11}$"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 160
+          },
+          "manufacturer": {
+            "type": "string",
+            "maxLength": 100
+          },
+          "productCode": {
+            "type": "string",
+            "maxLength": 100
+          },
+          "quantity": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 1000
+          },
+          "stage": {
+            "type": "string",
+            "enum": [
+              "planned",
+              "researched",
+              "purchased",
+              "received",
+              "working",
+              "installed",
+              "tested",
+              "verified",
+              "deferred"
+            ]
+          },
+          "estimate": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 100000000000
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "actual": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 100000000000
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "publicCost": {
+            "type": "boolean"
+          },
+          "privateNotes": {
+            "type": "string",
+            "maxLength": 4000
+          },
+          "publicNotes": {
+            "type": "string",
+            "maxLength": 1000
+          },
+          "guideIds": {
+            "maxItems": 12,
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[a-zA-Z0-9:_-]{1,100}$"
+            }
+          },
+          "wheelFitment": {
+            "anyOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "diameterIn": {
+                    "anyOf": [
+                      {
+                        "type": "number",
+                        "minimum": 10,
+                        "maximum": 24
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "widthIn": {
+                    "anyOf": [
+                      {
+                        "type": "number",
+                        "minimum": 3,
+                        "maximum": 15
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "offsetMm": {
+                    "anyOf": [
+                      {
+                        "type": "number",
+                        "minimum": -100,
+                        "maximum": 100
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "boltPattern": {
+                    "type": "string",
+                    "maxLength": 30
+                  },
+                  "centerBoreMm": {
+                    "anyOf": [
+                      {
+                        "type": "number",
+                        "minimum": 30,
+                        "maximum": 150
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "brakeClearanceConfirmed": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "diameterIn",
+                  "widthIn",
+                  "offsetMm",
+                  "boltPattern",
+                  "centerBoreMm",
+                  "brakeClearanceConfirmed"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "fabrication": {
+            "type": "string",
+            "enum": [
+              "unknown",
+              "required",
+              "none-documented"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "system",
+          "kind",
+          "partId",
+          "number",
+          "name",
+          "manufacturer",
+          "productCode",
+          "quantity",
+          "stage",
+          "estimate",
+          "actual",
+          "publicCost",
+          "privateNotes",
+          "publicNotes",
+          "guideIds",
+          "wheelFitment",
+          "fabrication"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "tasks": {
+      "maxItems": 300,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9:_-]{1,100}$"
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 160
+          },
+          "componentId": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^[a-zA-Z0-9:_-]{1,100}$"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "system": {
+            "type": "string",
+            "enum": [
+              "engine",
+              "transmission",
+              "differential",
+              "driveshaft",
+              "suspension",
+              "steering",
+              "brakes",
+              "wheels",
+              "cooling",
+              "exhaust",
+              "intake",
+              "electrical",
+              "ecu",
+              "fuel",
+              "body",
+              "interior",
+              "accessories"
+            ]
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "planned",
+              "researched",
+              "purchased",
+              "received",
+              "working",
+              "installed",
+              "tested",
+              "verified",
+              "deferred"
+            ]
+          },
+          "dependencies": {
+            "maxItems": 30,
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[a-zA-Z0-9:_-]{1,100}$"
+            }
+          },
+          "guideId": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^[a-zA-Z0-9:_-]{1,100}$"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "dueOn": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "completedOn": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "notes": {
+            "type": "string",
+            "maxLength": 4000
+          },
+          "public": {
+            "type": "boolean"
+          },
+          "transferred": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "id",
+          "title",
+          "componentId",
+          "system",
+          "status",
+          "dependencies",
+          "guideId",
+          "dueOn",
+          "completedOn",
+          "notes",
+          "public",
+          "transferred"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "milestones": {
+      "maxItems": 50,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9:_-]{1,100}$"
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 160
+          },
+          "date": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "notes": {
+            "type": "string",
+            "maxLength": 2000
+          },
+          "public": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "id",
+          "title",
+          "date",
+          "notes",
+          "public"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "photoIds": {
+      "maxItems": 24,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "uuid",
+        "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$"
+      }
+    },
+    "currency": {
+      "type": "string",
+      "enum": [
+        "USD",
+        "EUR",
+        "GBP",
+        "CAD",
+        "AUD"
+      ]
+    },
+    "privateNotes": {
+      "type": "string",
+      "maxLength": 12000
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "title",
+    "description",
+    "publicDescription",
+    "style",
+    "lifecycle",
+    "reference",
+    "baseConfiguration",
+    "targetConfiguration",
+    "appearance",
+    "components",
+    "tasks",
+    "milestones",
+    "photoIds",
+    "currency",
+    "privateNotes"
+  ],
+  "additionalProperties": false
+}

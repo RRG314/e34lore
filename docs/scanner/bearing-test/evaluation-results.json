@@ -1,0 +1,417 @@
+{
+  "schema": 1,
+  "date": "2026-11-09T13:28:19.300Z",
+  "model": {
+    "id": "Xenova/clip-vit-base-patch32",
+    "revision": "6b7c523703ae26e39be4b03774966f8571c7f523",
+    "dtype": "q8",
+    "license": "MIT"
+  },
+  "taxonomySha256": "d3213ff64731bb2c07bc1e4c6bab702c9d4aebad2fb191a5821aa338aab80e57",
+  "loadMs": 599.408875,
+  "runtime": "Node CPU, not phone acceptance",
+  "limits": "Convenience checks. One retailer bearing photo, not independent OEM ground truth. No test-time prompt tuning; no trained E34 recognition or calibrated probability. No physical owner images supplied yet.",
+  "records": [
+    {
+      "id": "bearing-meyle-fcp",
+      "expected": "center-support-bearing",
+      "sha256": "a10525285747ca5546078ef155ad4a43728f8293184ea896b0cebe6117391878",
+      "ms": 58.738707999999974,
+      "candidates": [
+        {
+          "id": "center-support-bearing",
+          "score": 0.2991227488698677,
+          "viewScores": [
+            0.2991227488698677
+          ],
+          "votes": 1
+        },
+        {
+          "id": "flex-disc",
+          "score": 0.29588458682111135,
+          "viewScores": [
+            0.29588458682111135
+          ],
+          "votes": 0
+        },
+        {
+          "id": "control-arm-bushing",
+          "score": 0.2951633530607946,
+          "viewScores": [
+            0.2951633530607946
+          ],
+          "votes": 0
+        }
+      ],
+      "views": 1,
+      "accepted": false,
+      "status": "inconclusive",
+      "reason": "The comparisons are too close or too weak to distinguish. Try a different angle on a plain background.",
+      "strongestAlternative": {
+        "id": "flex-disc",
+        "score": 0.29588458682111135
+      }
+    },
+    {
+      "id": "m50-engine-bay",
+      "expected": "engine",
+      "sha256": "cab9f072682aae36b2f25dcda88a5821e3d38e6a6fc9b6cd0553c5db81212509",
+      "ms": 42.211249999999836,
+      "candidates": [
+        {
+          "id": "oil-filter",
+          "score": 0.29688842511035674,
+          "viewScores": [
+            0.29688842511035674
+          ],
+          "votes": 1
+        },
+        {
+          "id": "radiator",
+          "score": 0.2960685433479277,
+          "viewScores": [
+            0.2960685433479277
+          ],
+          "votes": 0
+        },
+        {
+          "id": "injector",
+          "score": 0.29297671339802256,
+          "viewScores": [
+            0.29297671339802256
+          ],
+          "votes": 0
+        }
+      ],
+      "views": 1,
+      "accepted": false,
+      "status": "inconclusive",
+      "reason": "The comparisons are too close or too weak to distinguish. Try a different angle on a plain background.",
+      "strongestAlternative": {
+        "id": "radiator",
+        "score": 0.2960685433479277
+      }
+    },
+    {
+      "id": "chevrolet-alternator",
+      "expected": "alternator",
+      "sha256": "b5b28ba573ff1eacde2836b7de8791043dc92aeebb0e391f4a872c5393bb1659",
+      "ms": 38.927875000000085,
+      "candidates": [
+        {
+          "id": "brake-caliper",
+          "score": 0.3153780609483459,
+          "viewScores": [
+            0.3153780609483459
+          ],
+          "votes": 1
+        },
+        {
+          "id": "wheel-hub",
+          "score": 0.31186792344772274,
+          "viewScores": [
+            0.31186792344772274
+          ],
+          "votes": 0
+        },
+        {
+          "id": "starter",
+          "score": 0.307784008096415,
+          "viewScores": [
+            0.307784008096415
+          ],
+          "votes": 0
+        }
+      ],
+      "views": 1,
+      "accepted": false,
+      "status": "inconclusive",
+      "reason": "The comparisons are too close or too weak to distinguish. Try a different angle on a plain background.",
+      "strongestAlternative": {
+        "id": "wheel-hub",
+        "score": 0.31186792344772274
+      }
+    },
+    {
+      "id": "cutaway-alternator",
+      "expected": "alternator",
+      "sha256": "c5c7666f1d5709fd9bf2dc39545296a1d9542f0fb4f88435fb41e94a6f377b86",
+      "ms": 39.981374999999844,
+      "candidates": [
+        {
+          "id": "battery",
+          "score": 0.30093003040545135,
+          "viewScores": [
+            0.30093003040545135
+          ],
+          "votes": 1
+        },
+        {
+          "id": "water-pump",
+          "score": 0.3006376174913798,
+          "viewScores": [
+            0.3006376174913798
+          ],
+          "votes": 0
+        },
+        {
+          "id": "spark-plug",
+          "score": 0.29963205983234636,
+          "viewScores": [
+            0.29963205983234636
+          ],
+          "votes": 0
+        }
+      ],
+      "views": 1,
+      "accepted": false,
+      "status": "inconclusive",
+      "reason": "The comparisons are too close or too weak to distinguish. Try a different angle on a plain background.",
+      "strongestAlternative": {
+        "id": "water-pump",
+        "score": 0.3006376174913798
+      }
+    },
+    {
+      "id": "brake-calipers",
+      "expected": "brake-caliper",
+      "sha256": "9f2c17729d114f016b89bb896c01b7b17aba38f7066c2f8df539cfcf4a881e72",
+      "ms": 42.73129200000017,
+      "candidates": [
+        {
+          "id": "center-support-bearing",
+          "score": 0.26917004634015834,
+          "viewScores": [
+            0.26917004634015834
+          ],
+          "votes": 1
+        },
+        {
+          "id": "brake-caliper",
+          "score": 0.26667456334364315,
+          "viewScores": [
+            0.26667456334364315
+          ],
+          "votes": 0
+        },
+        {
+          "id": "fastener",
+          "score": 0.2633835686866136,
+          "viewScores": [
+            0.2633835686866136
+          ],
+          "votes": 0
+        }
+      ],
+      "views": 1,
+      "accepted": false,
+      "status": "inconclusive",
+      "reason": "The comparisons are too close or too weak to distinguish. Try a different angle on a plain background.",
+      "strongestAlternative": {
+        "id": "brake-caliper",
+        "score": 0.26667456334364315
+      }
+    },
+    {
+      "id": "filter-cutaway",
+      "expected": "oil-filter",
+      "sha256": "d8a425da6268c9d839582f1f6628db124db1380677934108a8b47f6fe7ac2b99",
+      "ms": 37.469082999999955,
+      "candidates": [
+        {
+          "id": "oil-filter",
+          "score": 0.2810862458249457,
+          "viewScores": [
+            0.2810862458249457
+          ],
+          "votes": 1
+        },
+        {
+          "id": "headlight",
+          "score": 0.2748717303239973,
+          "viewScores": [
+            0.2748717303239973
+          ],
+          "votes": 0
+        },
+        {
+          "id": "air-filter",
+          "score": 0.27443793632766694,
+          "viewScores": [
+            0.27443793632766694
+          ],
+          "votes": 0
+        }
+      ],
+      "views": 1,
+      "accepted": false,
+      "status": "inconclusive",
+      "reason": "The comparisons are too close or too weak to distinguish. Try a different angle on a plain background.",
+      "strongestAlternative": {
+        "id": "headlight",
+        "score": 0.2748717303239973
+      }
+    },
+    {
+      "id": "spark-plug",
+      "expected": "spark-plug",
+      "sha256": "4ec75dd7eef657a76e55bb7075f4d663f4763ed84e34961b4b7e174b3af6b740",
+      "ms": 46.88241700000003,
+      "candidates": [
+        {
+          "id": "spark-plug",
+          "score": 0.29674273160427544,
+          "viewScores": [
+            0.29674273160427544
+          ],
+          "votes": 1
+        },
+        {
+          "id": "sensor",
+          "score": 0.2914240844102299,
+          "viewScores": [
+            0.2914240844102299
+          ],
+          "votes": 0
+        },
+        {
+          "id": "injector",
+          "score": 0.27543551434728725,
+          "viewScores": [
+            0.27543551434728725
+          ],
+          "votes": 0
+        }
+      ],
+      "views": 1,
+      "accepted": false,
+      "status": "inconclusive",
+      "reason": "The comparisons are too close or too weak to distinguish. Try a different angle on a plain background.",
+      "strongestAlternative": {
+        "id": "sensor",
+        "score": 0.2914240844102299
+      }
+    },
+    {
+      "id": "thermostat-housing",
+      "expected": "thermostat",
+      "sha256": "f93f0e8b784d9ba4c8f2d4064d170815b3a2f92a4e3057a83926615998c527e7",
+      "ms": 41.76570800000013,
+      "candidates": [
+        {
+          "id": "spark-plug",
+          "score": 0.29252934379095274,
+          "viewScores": [
+            0.29252934379095274
+          ],
+          "votes": 1
+        },
+        {
+          "id": "injector",
+          "score": 0.29010950953203635,
+          "viewScores": [
+            0.29010950953203635
+          ],
+          "votes": 0
+        },
+        {
+          "id": "engine-mount",
+          "score": 0.2897237695599551,
+          "viewScores": [
+            0.2897237695599551
+          ],
+          "votes": 0
+        }
+      ],
+      "views": 1,
+      "accepted": false,
+      "status": "inconclusive",
+      "reason": "The comparisons are too close or too weak to distinguish. Try a different angle on a plain background.",
+      "strongestAlternative": {
+        "id": "injector",
+        "score": 0.29010950953203635
+      }
+    },
+    {
+      "id": "industrial-pump-negative",
+      "expected": "unknown",
+      "sha256": "4d43c5b8a221d0672346cb7aee3f47a943a1870f22d3e6e6ca4ce1622f8537b0",
+      "ms": 43.074749999999995,
+      "candidates": [
+        {
+          "id": "center-support-bearing",
+          "score": 0.26269757958586737,
+          "viewScores": [
+            0.26269757958586737
+          ],
+          "votes": 1
+        },
+        {
+          "id": "engine",
+          "score": 0.25501637386718123,
+          "viewScores": [
+            0.25501637386718123
+          ],
+          "votes": 0
+        },
+        {
+          "id": "water-pump",
+          "score": 0.2476536200954298,
+          "viewScores": [
+            0.2476536200954298
+          ],
+          "votes": 0
+        }
+      ],
+      "views": 1,
+      "accepted": false,
+      "status": "inconclusive",
+      "reason": "The comparisons are too close or too weak to distinguish. Try a different angle on a plain background.",
+      "strongestAlternative": {
+        "id": "engine",
+        "score": 0.25501637386718123
+      }
+    },
+    {
+      "id": "citroen-water-pump-test",
+      "expected": "water-pump",
+      "sha256": "ee4a32f9503821690f91b87dbf6c729a84afd414ac3e35565489300ce16dd924",
+      "ms": 37.42941699999983,
+      "candidates": [
+        {
+          "id": "spark-plug",
+          "score": 0.29402599715738365,
+          "viewScores": [
+            0.29402599715738365
+          ],
+          "votes": 1
+        },
+        {
+          "id": "wheel-hub",
+          "score": 0.2939874214304165,
+          "viewScores": [
+            0.2939874214304165
+          ],
+          "votes": 0
+        },
+        {
+          "id": "cv-joint",
+          "score": 0.29004262078304754,
+          "viewScores": [
+            0.29004262078304754
+          ],
+          "votes": 0
+        }
+      ],
+      "views": 1,
+      "accepted": false,
+      "status": "inconclusive",
+      "reason": "The comparisons are too close or too weak to distinguish. Try a different angle on a plain background.",
+      "strongestAlternative": {
+        "id": "wheel-hub",
+        "score": 0.2939874214304165
+      }
+    }
+  ],
+  "peakRssBytes": 398557184
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.e34lore.app",
+      "sha256_cert_fingerprints": [
+        "A9:39:D8:19:50:E7:72:8A:F9:77:8A:4A:C8:39:37:3F:2E:50:E8:3C:E6:6D:82:66:67:3F:39:E5:38:05:70:F2"
+      ]
+    }
+  }
+]

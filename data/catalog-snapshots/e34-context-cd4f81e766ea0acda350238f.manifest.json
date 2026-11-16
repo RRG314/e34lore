@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "file": "e34-context-cd4f81e766ea0acda350238f.jsonl.gz",
+  "compressed_sha256": "001b7382977c3ff45d8800c0a238e08185e9d026accc09fd62218b5f0cd5f1a8",
+  "manifest": {
+    "schema_version": 1,
+    "source": "Public source ordering facts",
+    "context": {
+      "platform": "E34",
+      "model": "525i",
+      "modelYear": 1991,
+      "body": null,
+      "engine": "M20",
+      "market": null,
+      "contextEvidence": "Observed model-root link plus index H1; marketing prose excluded."
+    },
+    "inventory_sha256": "1229711e5ee94f352d524512172d76347d7019c9ed932ec3dc770e7973bc3656",
+    "expected_pages": 379,
+    "selected_pages": 379,
+    "started_at": "2026-11-05T21:25:28.850087+00:00",
+    "successful_pages": 374,
+    "rejected_records": 0,
+    "parts": 8870,
+    "drawings": 452,
+    "errors": [
+      {
+        "url": "https://www.bmwpartsdeal.com/parts-list/1991-bmw-525i-m20_engine_e34/audio_navigation_electronic_systems/alarm_system.html",
+        "error": "No cached source snapshot"
+      },
+      {
+        "url": "https://www.bmwpartsdeal.com/parts-list/1991-bmw-525i-m20_engine_e34/engine_electrical_system/ignition_wiring.html",
+        "error": "No cached source snapshot"
+      },
+      {
+        "url": "https://www.bmwpartsdeal.com/parts-list/1991-bmw-525i-m20_engine_e34/retrofitting_conversion_accessories/bicycle_rack_trailer_coupling.html",
+        "error": "No cached source snapshot"
+      },
+      {
+        "url": "https://www.bmwpartsdeal.com/parts-list/1991-bmw-525i-m20_engine_e34/vehicle_electrical_system/circular_connector_d_2_5_mm_system.html",
+        "error": "No cached source snapshot"
+      },
+      {
+        "url": "https://www.bmwpartsdeal.com/parts-list/1991-bmw-525i-m20_engine_e34/vehicle_electrical_system/door_cable_harness.html",
+        "error": "No cached source snapshot"
+      }
+    ],
+    "scope": "Model-year/body source selection; unselected options and source restrictions retained. No universal fitment or complete-E34 claim.",
+    "completed_at": "2026-11-05T21:25:32.240332+00:00",
+    "status": "partial",
+    "facts_sha256": "78b0604d86a31800e7d2f951a2eae4444b8fb40fd2184fd007696353976b33d5"
+  }
+}

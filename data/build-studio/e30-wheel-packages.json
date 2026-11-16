@@ -1,0 +1,67 @@
+[
+  {
+    "id": "e30-factory-steel-14-v1",
+    "label": "Steel",
+    "dimensions": "5.5J × 14 ET35",
+    "number": "36111178826",
+    "source": "https://www.bmwpartsdeal.com/parts-list/1991-bmw-325i-coupe_e30/wheels/steel_rim.html",
+    "group": "E30",
+    "url": "/models/e30-lore/r1137/fc39322fcb2dae6cc566e5d768b33b123144d7fcd4830d9cd98e603590e9f16d.glb",
+    "bytes": 404172,
+    "sha256": "fc39322fcb2dae6cc566e5d768b33b123144d7fcd4830d9cd98e603590e9f16d",
+    "lodLow": null,
+    "normalization": 1
+  },
+  {
+    "id": "e30-factory-bottlecap-14-v1",
+    "label": "Bottlecap alloy",
+    "dimensions": "6J × 14 ET35",
+    "number": "36111125688",
+    "source": "https://www.bmwpartsdeal.com/parts-list/1991-bmw-325i-coupe_e30/wheels/alloy_rim_style.html",
+    "group": "E30",
+    "url": "/models/e30-lore/r1137/f09bc4c0cb1edc2ebe69833ab80a7220179c2a5d7fec7a76b67bf79b3a8918fd.glb",
+    "bytes": 141328,
+    "sha256": "f09bc4c0cb1edc2ebe69833ab80a7220179c2a5d7fec7a76b67bf79b3a8918fd",
+    "lodLow": null,
+    "normalization": 1
+  },
+  {
+    "id": "e30-factory-cross-spoke-14-v1",
+    "label": "Style 5 · Cross-spoke",
+    "dimensions": "6.5J × 14 ET30",
+    "number": "36112225540",
+    "source": "https://www.bmwpartsdeal.com/parts-list/1991-bmw-325i-coupe_e30/wheels/cross_spoke_styling.html",
+    "group": "E30",
+    "url": "/models/e30-lore/r1137/8835e7f2034c55e8efd06281b811fe6ba010bb005dd1f51609fc1c2f0745b30e.glb",
+    "bytes": 142744,
+    "sha256": "8835e7f2034c55e8efd06281b811fe6ba010bb005dd1f51609fc1c2f0745b30e",
+    "lodLow": null,
+    "normalization": 1
+  },
+  {
+    "id": "e30-factory-cross-spoke-15-v1",
+    "label": "Style 5 · Cross-spoke",
+    "dimensions": "7J × 15 ET24",
+    "number": "36111179066",
+    "source": "https://www.bmwpartsdeal.com/parts-list/1991-bmw-325i-coupe_e30/wheels/cross_spoke_styling.html",
+    "group": "E30",
+    "url": "/models/e30-lore/r1137/3fb785766fb0a274cfb59c32dd27c81a8f37d626e5d3aeedd514a2eff4b01c01.glb",
+    "bytes": 142744,
+    "sha256": "3fb785766fb0a274cfb59c32dd27c81a8f37d626e5d3aeedd514a2eff4b01c01",
+    "lodLow": null,
+    "normalization": 1
+  },
+  {
+    "id": "e30-factory-star-spoke-15-v1",
+    "label": "Style 10 · Star-spoke",
+    "dimensions": "7J × 15 ET24",
+    "number": "36111181240",
+    "source": "https://www.bmwpartsdeal.com/parts-list/1991-bmw-325i-coupe_e30/wheels/star_spoke_styling.html",
+    "group": "E30",
+    "url": "/models/e30-lore/r1137/fba13424d7cdd7bce930637adbc1c65f56beff30a6ffc5d94acaf7c7baa552f3.glb",
+    "bytes": 104384,
+    "sha256": "fba13424d7cdd7bce930637adbc1c65f56beff30a6ffc5d94acaf7c7baa552f3",
+    "lodLow": null,
+    "normalization": 1
+  }
+]

@@ -1,0 +1,35 @@
+[
+  {
+    "family": "M20",
+    "title": "M20 engine in a 1989 BMW 525i",
+    "localPath": "/assets/engines/m20-e34-525i.jpg",
+    "filePageUrl": "https://commons.wikimedia.org/wiki/File:BMW_M20B25-motor.JPG",
+    "creator": "C.Bakker at Dutch Wikipedia",
+    "license": "Public domain (released by the author; PD-user)",
+    "licenseUrl": "https://commons.wikimedia.org/wiki/File:BMW_M20B25-motor.JPG#Licensing",
+    "width": 640,
+    "height": 480
+  },
+  {
+    "family": "M30",
+    "title": "M30B35 engine in a 1988 BMW E34 535",
+    "localPath": "/assets/engines/m30-e34-535i.jpg",
+    "filePageUrl": "https://commons.wikimedia.org/wiki/File:Bmw-m30b35-left.jpg",
+    "creator": "AlexanderM",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "width": 1062,
+    "height": 559
+  },
+  {
+    "family": "M50",
+    "title": "M50-family engine in a 1993 BMW 525i E34 Touring",
+    "localPath": "/assets/engines/m50-e34-525i-touring.jpg",
+    "filePageUrl": "https://commons.wikimedia.org/wiki/File:BMW_E34_Touring_Lazurblau_1993_4.jpg",
+    "creator": "Pierre Scheidegger",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+    "width": 3456,
+    "height": 2304
+  }
+]

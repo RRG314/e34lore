@@ -1,0 +1,90 @@
+{
+  "id": "/",
+  "name": "E34 Lore",
+  "short_name": "E34 Lore",
+  "description": "BMW E34 and E30 parts, repairs, interactive Workshop and your private garage.",
+  "lang": "en",
+  "start_url": "/?source=app",
+  "scope": "/",
+  "display": "standalone",
+  "launch_handler": { "client_mode": "navigate-existing" },
+  "background_color": "#f6f5ef",
+  "theme_color": "#252e29",
+  "categories": [
+    "reference",
+    "auto",
+    "social"
+  ],
+  "icons": [
+    {
+      "src": "/icons/e34-grille-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/e34-grille-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/e34-grille-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Part Scanner",
+      "url": "/scanner",
+      "description": "Photograph and compare a part"
+    },
+    {
+      "name": "Parts catalog",
+      "url": "/parts/catalog",
+      "description": "OEM numbers and source diagrams"
+    },
+    {
+      "name": "Build Studio",
+      "url": "/workshop?mode=build",
+      "description": "Plan and save an E34 build"
+    },
+    {
+      "name": "My Garage",
+      "url": "/garage",
+      "description": "Vehicle records and restoration journals"
+    },
+    {
+      "name": "Walkthroughs",
+      "url": "/repairs",
+      "description": "Open the repair reference library"
+    },
+    {
+      "name": "Community",
+      "url": "/community",
+      "description": "Technical questions and owners\u2019 stories"
+    },
+    {
+      "name": "Workshop",
+      "url": "/workshop",
+      "description": "Explore the interactive E34 reference"
+    },
+    {
+      "name": "Quick reference",
+      "url": "/quick-reference",
+      "description": "Fluids, fuses and component locations"
+    },
+    {
+      "name": "E30 Workshop",
+      "url": "/e30/workshop",
+      "description": "Explore the interactive E30 325i"
+    },
+    {
+      "name": "Interchange",
+      "url": "/parts/interchange",
+      "description": "Replacement numbers and documented interchange"
+    }
+  ]
+}

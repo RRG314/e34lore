@@ -1,0 +1,1 @@
+alter policy authenticated_posts_read on public.posts using(author_id=(select auth.uid()) or (not hidden and exists(select 1 from public.threads where id=thread_id and not hidden)) or (select e34_private.has_role('moderator')));

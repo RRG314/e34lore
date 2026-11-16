@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 2,
+  "configurationId": "e34-525i-sedan-automatic",
+  "revision": 23,
+  "scope": "Current runtime manifest audit. Counts describe source associations, not a complete mechanical reconstruction.",
+  "geometryAvailable": 448,
+  "individuallySelectable": 448,
+  "sourceLinked": 448,
+  "withSpecificManualLocator": 372,
+  "withGeneralManualLocatorOnly": 76,
+  "withAuthoredRepairGuide": 37,
+  "withStructuredProcedure": 34,
+  "outerEnvelopeChecked": 1,
+  "dimensionallyVerifiedComponents": 0,
+  "missingGeometry": [
+    "Automatic gearbox internals",
+    "Torque converter"
+  ],
+  "unverified": [
+    "Full dimensional accuracy",
+    "Installed component placement",
+    "Mounting interfaces",
+    "Physical removal clearances"
+  ],
+  "legacyGraphAudit": "data/digital-twin/legacy-graph-coverage.json"
+}

@@ -1,0 +1,3142 @@
+{
+  "schemaVersion": 1,
+  "source": "BMWPartsDeal",
+  "sourceUrl": "https://www.bmwpartsdeal.com/1995-bmw-540i-sedan_e34-parts.html",
+  "sourceHttpStatus": 200,
+  "sourceModelRoot": "https://www.bmwpartsdeal.com/bmw-540i-parts.html",
+  "sourceHtmlSha256": "bb079bef328a303e89b13276711a6462333f5a237de550f0e24342c261810be2",
+  "heading": "1995 BMW 540i Sedan(E34) Parts",
+  "context": {
+    "platform": "E34",
+    "model": "540i",
+    "modelYear": 1995,
+    "body": "Sedan",
+    "engine": null,
+    "market": null,
+    "contextEvidence": "Observed model-root link plus index H1; marketing prose excluded."
+  },
+  "routeCount": 390,
+  "leafFetchesPerformed": 0,
+  "routes": [
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/audio_navigation_electronic_systems/alarm_system.html",
+      "title": "Alarm System",
+      "categorySlug": "audio_navigation_electronic_systems",
+      "leafSlug": "alarm_system",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/audio_navigation_electronic_systems/antenna.html",
+      "title": "Antenna",
+      "categorySlug": "audio_navigation_electronic_systems",
+      "leafSlug": "antenna",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/audio_navigation_electronic_systems/earth_strap_for_engine_hood.html",
+      "title": "Earth Strap For Engine Hood",
+      "categorySlug": "audio_navigation_electronic_systems",
+      "leafSlug": "earth_strap_for_engine_hood",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/audio_navigation_electronic_systems/electric_parts_airbag.html",
+      "title": "Electric Parts, Airbag",
+      "categorySlug": "audio_navigation_electronic_systems",
+      "leafSlug": "electric_parts_airbag",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/audio_navigation_electronic_systems/loudspeaker.html",
+      "title": "Loudspeaker",
+      "categorySlug": "audio_navigation_electronic_systems",
+      "leafSlug": "loudspeaker",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/audio_navigation_electronic_systems/radio_accessories.html",
+      "title": "Radio Accessories",
+      "categorySlug": "audio_navigation_electronic_systems",
+      "leafSlug": "radio_accessories",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/audio_navigation_electronic_systems/radio_adapter_wiring.html",
+      "title": "Radio Adapter Wiring",
+      "categorySlug": "audio_navigation_electronic_systems",
+      "leafSlug": "radio_adapter_wiring",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/audio_navigation_electronic_systems/single_components_cd_changer.html",
+      "title": "Single Components CD Changer",
+      "categorySlug": "audio_navigation_electronic_systems",
+      "leafSlug": "single_components_cd_changer",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/audio_navigation_electronic_systems/single_components_hifi_system.html",
+      "title": "Single Components HIFI System",
+      "categorySlug": "audio_navigation_electronic_systems",
+      "leafSlug": "single_components_hifi_system",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/audio_navigation_electronic_systems/single_parts_for_rear_window_antenna.html",
+      "title": "Single Parts For Rear Window Antenna",
+      "categorySlug": "audio_navigation_electronic_systems",
+      "leafSlug": "single_parts_for_rear_window_antenna",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/audio_navigation_electronic_systems/theft_alarm_infrared_control.html",
+      "title": "Theft Alarm / Infrared Control",
+      "categorySlug": "audio_navigation_electronic_systems",
+      "leafSlug": "theft_alarm_infrared_control",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/automatic_transmission/attaching_parts_control_valve_assy_a5s560z.html",
+      "title": "Attaching Parts / Control Valve Assy (A5S560Z)",
+      "categorySlug": "automatic_transmission",
+      "leafSlug": "attaching_parts_control_valve_assy_a5s560z",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/automatic_transmission/automatic_gearbox_a5s560z.html",
+      "title": "Automatic Gearbox A5S560Z",
+      "categorySlug": "automatic_transmission",
+      "leafSlug": "automatic_gearbox_a5s560z",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/automatic_transmission/brake_clutch_a5s560z.html",
+      "title": "Brake Clutch (A5S560Z)",
+      "categorySlug": "automatic_transmission",
+      "leafSlug": "brake_clutch_a5s560z",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/automatic_transmission/control_unit_egs_programmed.html",
+      "title": "Control Unit Egs, Programmed",
+      "categorySlug": "automatic_transmission",
+      "leafSlug": "control_unit_egs_programmed",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/automatic_transmission/control_valve_assy_a5s560z.html",
+      "title": "Control Valve Assy (A5S560Z)",
+      "categorySlug": "automatic_transmission",
+      "leafSlug": "control_valve_assy_a5s560z",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/automatic_transmission/drive_clutch_a5s560z.html",
+      "title": "Drive Clutch (A5S560Z)",
+      "categorySlug": "automatic_transmission",
+      "leafSlug": "drive_clutch_a5s560z",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/automatic_transmission/gearbox_mounting.html",
+      "title": "Gearbox Mounting",
+      "categorySlug": "automatic_transmission",
+      "leafSlug": "gearbox_mounting",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/automatic_transmission/gearbox_suspension.html",
+      "title": "Gearbox Suspension",
+      "categorySlug": "automatic_transmission",
+      "leafSlug": "gearbox_suspension",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/automatic_transmission/lubrication_system_a5s560z.html",
+      "title": "Lubrication System (A5S560Z)",
+      "categorySlug": "automatic_transmission",
+      "leafSlug": "lubrication_system_a5s560z",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/automatic_transmission/oil_pan_a5s560z.html",
+      "title": "Oil Pan (A5S560Z)",
+      "categorySlug": "automatic_transmission",
+      "leafSlug": "oil_pan_a5s560z",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/automatic_transmission/output_a5s560z.html",
+      "title": "Output (A5S560Z)",
+      "categorySlug": "automatic_transmission",
+      "leafSlug": "output_a5s560z",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/automatic_transmission/parking_lock_a5s560z.html",
+      "title": "Parking Lock (A5S560Z)",
+      "categorySlug": "automatic_transmission",
+      "leafSlug": "parking_lock_a5s560z",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/automatic_transmission/planet_wheel_set_a5s560z.html",
+      "title": "Planet Wheel Set (A5S560Z)",
+      "categorySlug": "automatic_transmission",
+      "leafSlug": "planet_wheel_set_a5s560z",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/automatic_transmission/transmission_housing_a5s560z.html",
+      "title": "Transmission Housing (A5S560Z)",
+      "categorySlug": "automatic_transmission",
+      "leafSlug": "transmission_housing_a5s560z",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/bodywork/body_side_frame_partition.html",
+      "title": "Body-Side Frame / Partition",
+      "categorySlug": "bodywork",
+      "leafSlug": "body_side_frame_partition",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/bodywork/central_locking_system.html",
+      "title": "Central Locking System",
+      "categorySlug": "bodywork",
+      "leafSlug": "central_locking_system",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/bodywork/door_handle_front_lock_key.html",
+      "title": "Door Handle Front / Lock / Key",
+      "categorySlug": "bodywork",
+      "leafSlug": "door_handle_front_lock_key",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/bodywork/door_lock_front.html",
+      "title": "Door Lock Front",
+      "categorySlug": "bodywork",
+      "leafSlug": "door_lock_front",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/bodywork/door_weatherstrip.html",
+      "title": "Door Weatherstrip",
+      "categorySlug": "bodywork",
+      "leafSlug": "door_weatherstrip",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/bodywork/engine_hood_mechanism.html",
+      "title": "Engine Hood Mechanism",
+      "categorySlug": "bodywork",
+      "leafSlug": "engine_hood_mechanism",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/bodywork/floor_panel_trunk_wheel_housing_rear.html",
+      "title": "Floor Panel Trunk / Wheel Housing Rear",
+      "categorySlug": "bodywork",
+      "leafSlug": "floor_panel_trunk_wheel_housing_rear",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/bodywork/floor_parts_rear_exterior.html",
+      "title": "Floor Parts Rear Exterior",
+      "categorySlug": "bodywork",
+      "leafSlug": "floor_parts_rear_exterior",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/bodywork/front_body_bracket.html",
+      "title": "Front Body Bracket",
+      "categorySlug": "bodywork",
+      "leafSlug": "front_body_bracket",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/bodywork/front_door_hinge_door_brake.html",
+      "title": "Front Door - Hinge / Door Brake",
+      "categorySlug": "bodywork",
+      "leafSlug": "front_door_hinge_door_brake",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/bodywork/front_door_control_door_lock.html",
+      "title": "Front Door Control / Door Lock",
+      "categorySlug": "bodywork",
+      "leafSlug": "front_door_control_door_lock",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/bodywork/front_panel.html",
+      "title": "Front Panel",
+      "categorySlug": "bodywork",
+      "leafSlug": "front_panel",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/bodywork/hood.html",
+      "title": "Hood",
+      "categorySlug": "bodywork",
+      "leafSlug": "hood",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/bodywork/locking_system_door.html",
+      "title": "Locking System, Door",
+      "categorySlug": "bodywork",
+      "leafSlug": "locking_system_door",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/bodywork/mechanical_connecting_and_repair_elements.html",
+      "title": "Mechanical Connecting And Repair Elements",
+      "categorySlug": "bodywork",
+      "leafSlug": "mechanical_connecting_and_repair_elements",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/bodywork/one_key_locking.html",
+      "title": "One-Key Locking",
+      "categorySlug": "bodywork",
+      "leafSlug": "one_key_locking",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/bodywork/rear_door_hinge_door_brake.html",
+      "title": "Rear Door - Hinge / Door Brake",
+      "categorySlug": "bodywork",
+      "leafSlug": "rear_door_hinge_door_brake",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/bodywork/rear_spoiler.html",
+      "title": "Rear Spoiler",
+      "categorySlug": "bodywork",
+      "leafSlug": "rear_spoiler",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/bodywork/roof.html",
+      "title": "Roof",
+      "categorySlug": "bodywork",
+      "leafSlug": "roof",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/bodywork/side_frame.html",
+      "title": "Side Frame",
+      "categorySlug": "bodywork",
+      "leafSlug": "side_frame",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/bodywork/side_panel_tail_trim.html",
+      "title": "Side Panel / Tail Trim",
+      "categorySlug": "bodywork",
+      "leafSlug": "side_panel_tail_trim",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/bodywork/side_panel_front.html",
+      "title": "Side Panel, Front",
+      "categorySlug": "bodywork",
+      "leafSlug": "side_panel_front",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/bodywork/single_components_for_trunk_lid.html",
+      "title": "Single Components For Trunk Lid",
+      "categorySlug": "bodywork",
+      "leafSlug": "single_components_for_trunk_lid",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/bodywork/splash_wall_parts.html",
+      "title": "Splash Wall Parts",
+      "categorySlug": "bodywork",
+      "leafSlug": "splash_wall_parts",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/bodywork/trunk_lid_closing_system.html",
+      "title": "Trunk Lid / Closing System",
+      "categorySlug": "bodywork",
+      "leafSlug": "trunk_lid_closing_system",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/bodywork/wheelhouse_engine_support.html",
+      "title": "Wheelhouse / Engine Support",
+      "categorySlug": "bodywork",
+      "leafSlug": "wheelhouse_engine_support",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/brakes_pedals/accelerator_pedal_bowden_cable.html",
+      "title": "Accelerator Pedal / Bowden Cable",
+      "categorySlug": "brakes_pedals",
+      "leafSlug": "accelerator_pedal_bowden_cable",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/brakes_pedals/anti_block_system_control_unit.html",
+      "title": "Anti Block System - Control Unit",
+      "categorySlug": "brakes_pedals",
+      "leafSlug": "anti_block_system_control_unit",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/brakes_pedals/brake_linkage_engine_compartment.html",
+      "title": "Brake Linkage - Engine Compartment",
+      "categorySlug": "brakes_pedals",
+      "leafSlug": "brake_linkage_engine_compartment",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/brakes_pedals/brake_master_cylinder_expansion_tank.html",
+      "title": "Brake Master Cylinder / Expansion Tank",
+      "categorySlug": "brakes_pedals",
+      "leafSlug": "brake_master_cylinder_expansion_tank",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/brakes_pedals/brake_pipe_front_abs.html",
+      "title": "Brake Pipe Front ABS",
+      "categorySlug": "brakes_pedals",
+      "leafSlug": "brake_pipe_front_abs",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/brakes_pedals/brake_pipe_front_abs_asc_t.html",
+      "title": "Brake Pipe Front ABS/ASC+T",
+      "categorySlug": "brakes_pedals",
+      "leafSlug": "brake_pipe_front_abs_asc_t",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/brakes_pedals/brake_pipe_rear_abs.html",
+      "title": "Brake Pipe Rear ABS",
+      "categorySlug": "brakes_pedals",
+      "leafSlug": "brake_pipe_rear_abs",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/brakes_pedals/brake_pipe_rear_abs_asc_t.html",
+      "title": "Brake Pipe Rear ABS/ASC+T",
+      "categorySlug": "brakes_pedals",
+      "leafSlug": "brake_pipe_rear_abs_asc_t",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/brakes_pedals/front_brake_brake_disc.html",
+      "title": "Front Brake / Brake Disc",
+      "categorySlug": "brakes_pedals",
+      "leafSlug": "front_brake_brake_disc",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/brakes_pedals/front_wheel_brake_brake_pad_sensor.html",
+      "title": "Front Wheel Brake, Brake Pad Sensor",
+      "categorySlug": "brakes_pedals",
+      "leafSlug": "front_wheel_brake_brake_pad_sensor",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/brakes_pedals/handbrake_lever.html",
+      "title": "Handbrake Lever",
+      "categorySlug": "brakes_pedals",
+      "leafSlug": "handbrake_lever",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/brakes_pedals/hydro_unit_abs_asc_t.html",
+      "title": "Hydro Unit ABS / ASC+T",
+      "categorySlug": "brakes_pedals",
+      "leafSlug": "hydro_unit_abs_asc_t",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/brakes_pedals/parking_brake_brake_shoes.html",
+      "title": "Parking Brake / Brake Shoes",
+      "categorySlug": "brakes_pedals",
+      "leafSlug": "parking_brake_brake_shoes",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/brakes_pedals/pedals_stop_light_switch.html",
+      "title": "Pedals / Stop Light Switch",
+      "categorySlug": "brakes_pedals",
+      "leafSlug": "pedals_stop_light_switch",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/brakes_pedals/power_brake_unit_depression.html",
+      "title": "Power Brake Unit Depression",
+      "categorySlug": "brakes_pedals",
+      "leafSlug": "power_brake_unit_depression",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/brakes_pedals/rear_wheel_brake_brake_pad_sensor.html",
+      "title": "Rear Wheel Brake, Brake Pad Sensor",
+      "categorySlug": "brakes_pedals",
+      "leafSlug": "rear_wheel_brake_brake_pad_sensor",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/cooling_exhaust_system/exhaust_system.html",
+      "title": "Exhaust System",
+      "categorySlug": "cooling_exhaust_system",
+      "leafSlug": "exhaust_system",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/cooling_exhaust_system/exhaust_system_with_catalytic_converter.html",
+      "title": "Exhaust System With Catalytic Converter",
+      "categorySlug": "cooling_exhaust_system",
+      "leafSlug": "exhaust_system_with_catalytic_converter",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/cooling_exhaust_system/expansion_tank.html",
+      "title": "Expansion Tank",
+      "categorySlug": "cooling_exhaust_system",
+      "leafSlug": "expansion_tank",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/cooling_exhaust_system/radiator_frame.html",
+      "title": "Radiator / Frame",
+      "categorySlug": "cooling_exhaust_system",
+      "leafSlug": "radiator_frame",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/cooling_exhaust_system/transmission_oil_cooling.html",
+      "title": "Transmission Oil Cooling",
+      "categorySlug": "cooling_exhaust_system",
+      "leafSlug": "transmission_oil_cooling",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/distance_systems_cruise_control/cruise_control.html",
+      "title": "Cruise Control",
+      "categorySlug": "distance_systems_cruise_control",
+      "leafSlug": "cruise_control",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/engine/belt_drive_climate_compressor.html",
+      "title": "Belt Drive Climate Compressor",
+      "categorySlug": "engine",
+      "leafSlug": "belt_drive_climate_compressor",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/engine/belt_drive_water_pump_alternator.html",
+      "title": "Belt Drive Water Pump / Alternator",
+      "categorySlug": "engine",
+      "leafSlug": "belt_drive_water_pump_alternator",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/engine/belt_drive_vibration_damper.html",
+      "title": "Belt Drive-Vibration Damper",
+      "categorySlug": "engine",
+      "leafSlug": "belt_drive_vibration_damper",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/engine/cooling_system_fan_fan_coupling.html",
+      "title": "Cooling System - Fan / Fan Coupling",
+      "categorySlug": "engine",
+      "leafSlug": "cooling_system_fan_fan_coupling",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/engine/cooling_system_water_hoses.html",
+      "title": "Cooling System - Water Hoses",
+      "categorySlug": "engine",
+      "leafSlug": "cooling_system_water_hoses",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/engine/cooling_system_pipe.html",
+      "title": "Cooling System Pipe",
+      "categorySlug": "engine",
+      "leafSlug": "cooling_system_pipe",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/engine/crankcase_ventilation.html",
+      "title": "Crankcase - Ventilation",
+      "categorySlug": "engine",
+      "leafSlug": "crankcase_ventilation",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/engine/crankshaft_pistons.html",
+      "title": "Crankshaft - Pistons",
+      "categorySlug": "engine",
+      "leafSlug": "crankshaft_pistons",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/engine/crankshaft_connecting_rod.html",
+      "title": "Crankshaft Connecting Rod",
+      "categorySlug": "engine",
+      "leafSlug": "crankshaft_connecting_rod",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/engine/crankshaft_with_bearing_shells.html",
+      "title": "Crankshaft With Bearing Shells",
+      "categorySlug": "engine",
+      "leafSlug": "crankshaft_with_bearing_shells",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/engine/cylinder_head_attached_parts.html",
+      "title": "Cylinder Head & Attached Parts",
+      "categorySlug": "engine",
+      "leafSlug": "cylinder_head_attached_parts",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/engine/cylinder_head_cover.html",
+      "title": "Cylinder Head Cover",
+      "categorySlug": "engine",
+      "leafSlug": "cylinder_head_cover",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/engine/engine_acoustics.html",
+      "title": "Engine Acoustics",
+      "categorySlug": "engine",
+      "leafSlug": "engine_acoustics",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/engine/engine_block_mounting_parts.html",
+      "title": "Engine Block & Mounting Parts",
+      "categorySlug": "engine",
+      "leafSlug": "engine_block_mounting_parts",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/engine/engine_suspension_damper.html",
+      "title": "Engine Suspension / Damper",
+      "categorySlug": "engine",
+      "leafSlug": "engine_suspension_damper",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/engine/exhaust_manifold.html",
+      "title": "Exhaust Manifold",
+      "categorySlug": "engine",
+      "leafSlug": "exhaust_manifold",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/engine/flywheel_twin_mass_flywheel.html",
+      "title": "Flywheel / Twin Mass Flywheel",
+      "categorySlug": "engine",
+      "leafSlug": "flywheel_twin_mass_flywheel",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/engine/flywheel_automatic.html",
+      "title": "Flywheel Automatic",
+      "categorySlug": "engine",
+      "leafSlug": "flywheel_automatic",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/engine/intake_manifold_system.html",
+      "title": "Intake Manifold System",
+      "categorySlug": "engine",
+      "leafSlug": "intake_manifold_system",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/engine/lubrication_system_oil_filter.html",
+      "title": "Lubrication System - Oil Filter",
+      "categorySlug": "engine",
+      "leafSlug": "lubrication_system_oil_filter",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/engine/lubrication_system_oil_pump_with_drive.html",
+      "title": "Lubrication System / Oil Pump With Drive",
+      "categorySlug": "engine",
+      "leafSlug": "lubrication_system_oil_pump_with_drive",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/engine/oil_pan_oil_level_indicator.html",
+      "title": "Oil Pan / Oil Level Indicator",
+      "categorySlug": "engine",
+      "leafSlug": "oil_pan_oil_level_indicator",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/engine/short_engine.html",
+      "title": "Short Engine",
+      "categorySlug": "engine",
+      "leafSlug": "short_engine",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/engine/timing_timing_chain_lower_p.html",
+      "title": "Timing - Timing Chain Lower P",
+      "categorySlug": "engine",
+      "leafSlug": "timing_timing_chain_lower_p",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/engine/timing_case.html",
+      "title": "Timing Case",
+      "categorySlug": "engine",
+      "leafSlug": "timing_case",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/engine/timing_gear_timing_chain_top.html",
+      "title": "Timing Gear Timing Chain Top",
+      "categorySlug": "engine",
+      "leafSlug": "timing_gear_timing_chain_top",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/engine/valve_timing_gear_camshaft.html",
+      "title": "Valve Timing Gear, Camshaft",
+      "categorySlug": "engine",
+      "leafSlug": "valve_timing_gear_camshaft",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/engine/water_pump_thermostat.html",
+      "title": "Water Pump - Thermostat",
+      "categorySlug": "engine",
+      "leafSlug": "water_pump_thermostat",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/engine_electrical_system/alternator_parts.html",
+      "title": "Alternator Parts",
+      "categorySlug": "engine_electrical_system",
+      "leafSlug": "alternator_parts",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/engine_electrical_system/basic_control_unit_dme.html",
+      "title": "Basic Control Unit DME",
+      "categorySlug": "engine_electrical_system",
+      "leafSlug": "basic_control_unit_dme",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/engine_electrical_system/battery_cable.html",
+      "title": "Battery Cable",
+      "categorySlug": "engine_electrical_system",
+      "leafSlug": "battery_cable",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/engine_electrical_system/cable_harness_fixings.html",
+      "title": "Cable Harness Fixings",
+      "categorySlug": "engine_electrical_system",
+      "leafSlug": "cable_harness_fixings",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/engine_electrical_system/compact_alternator.html",
+      "title": "Compact Alternator",
+      "categorySlug": "engine_electrical_system",
+      "leafSlug": "compact_alternator",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/engine_electrical_system/engine_wiring_harness.html",
+      "title": "Engine Wiring Harness",
+      "categorySlug": "engine_electrical_system",
+      "leafSlug": "engine_wiring_harness",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/engine_electrical_system/ignition_coil_spark_plug_connector_spark_plug.html",
+      "title": "Ignition Coil / Spark Plug Connector / Spark Plug",
+      "categorySlug": "engine_electrical_system",
+      "leafSlug": "ignition_coil_spark_plug_connector_spark_plug",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/engine_electrical_system/label_spark_plug_change_high_power.html",
+      "title": "Label, Spark Plug Change High Power",
+      "categorySlug": "engine_electrical_system",
+      "leafSlug": "label_spark_plug_change_high_power",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/engine_electrical_system/relay_motor_control_unit_box.html",
+      "title": "Relay Motor / Control Unit-Box",
+      "categorySlug": "engine_electrical_system",
+      "leafSlug": "relay_motor_control_unit_box",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/engine_electrical_system/relay_motor.html",
+      "title": "Relay, Motor",
+      "categorySlug": "engine_electrical_system",
+      "leafSlug": "relay_motor",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/engine_electrical_system/starter.html",
+      "title": "Starter",
+      "categorySlug": "engine_electrical_system",
+      "leafSlug": "starter",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/engine_electrical_system/wiring_connections.html",
+      "title": "Wiring Connections",
+      "categorySlug": "engine_electrical_system",
+      "leafSlug": "wiring_connections",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/engine_electrical_system/wiring_harness_ads.html",
+      "title": "Wiring Harness ADS",
+      "categorySlug": "engine_electrical_system",
+      "leafSlug": "wiring_harness_ads",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/front_rear_axle/coil_spring.html",
+      "title": "Coil Spring",
+      "categorySlug": "front_rear_axle",
+      "leafSlug": "coil_spring",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/front_rear_axle/cross_member_wishbone_rod.html",
+      "title": "Cross Member / Wishbone / Rod",
+      "categorySlug": "front_rear_axle",
+      "leafSlug": "cross_member_wishbone_rod",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/front_rear_axle/differential_suspension.html",
+      "title": "Differential Suspension",
+      "categorySlug": "front_rear_axle",
+      "leafSlug": "differential_suspension",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/front_rear_axle/drive_flange_suspension_gasket.html",
+      "title": "Drive Flange Suspension / Gasket",
+      "categorySlug": "front_rear_axle",
+      "leafSlug": "drive_flange_suspension_gasket",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/front_rear_axle/final_drive_cover_trigger_contact.html",
+      "title": "Final Drive Cover / Trigger Contact",
+      "categorySlug": "front_rear_axle",
+      "leafSlug": "final_drive_cover_trigger_contact",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/front_rear_axle/front_axle_support.html",
+      "title": "Front Axle Support",
+      "categorySlug": "front_rear_axle",
+      "leafSlug": "front_axle_support",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/front_rear_axle/front_spring_strut_shock_absorber.html",
+      "title": "Front Spring Strut / Shock Absorber",
+      "categorySlug": "front_rear_axle",
+      "leafSlug": "front_spring_strut_shock_absorber",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/front_rear_axle/guide_support_spring_pad_attaching_parts.html",
+      "title": "Guide Support / Spring Pad / Attaching Parts",
+      "categorySlug": "front_rear_axle",
+      "leafSlug": "guide_support_spring_pad_attaching_parts",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/front_rear_axle/levelling_device_pressure_accumulator.html",
+      "title": "Levelling Device / Pressure Accumulator",
+      "categorySlug": "front_rear_axle",
+      "leafSlug": "levelling_device_pressure_accumulator",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/front_rear_axle/levelling_device_tubing_attaching_parts.html",
+      "title": "Levelling Device / Tubing / Attaching Parts",
+      "categorySlug": "front_rear_axle",
+      "leafSlug": "levelling_device_tubing_attaching_parts",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/front_rear_axle/output_shaft.html",
+      "title": "Output Shaft",
+      "categorySlug": "front_rear_axle",
+      "leafSlug": "output_shaft",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/front_rear_axle/rear_axle_carrier.html",
+      "title": "Rear Axle Carrier",
+      "categorySlug": "front_rear_axle",
+      "leafSlug": "rear_axle_carrier",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/front_rear_axle/rear_axle_support_wheel_suspension.html",
+      "title": "Rear Axle Support / Wheel Suspension",
+      "categorySlug": "front_rear_axle",
+      "leafSlug": "rear_axle_support_wheel_suspension",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/front_rear_axle/rear_spring_strut.html",
+      "title": "Rear Spring Strut",
+      "categorySlug": "front_rear_axle",
+      "leafSlug": "rear_spring_strut",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/front_rear_axle/rear_spring_strut_assy_edc_levelling_device.html",
+      "title": "Rear Spring Strut Assy EDC / Levelling Device",
+      "categorySlug": "front_rear_axle",
+      "leafSlug": "rear_spring_strut_assy_edc_levelling_device",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/front_rear_axle/rear_axle_drive.html",
+      "title": "Rear-Axle-Drive",
+      "categorySlug": "front_rear_axle",
+      "leafSlug": "rear_axle_drive",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/front_rear_axle/side_shaft_wheel_bearings.html",
+      "title": "Side Shaft/Wheel Bearings",
+      "categorySlug": "front_rear_axle",
+      "leafSlug": "side_shaft_wheel_bearings",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/front_rear_axle/stabilizer_front.html",
+      "title": "Stabilizer, Front",
+      "categorySlug": "front_rear_axle",
+      "leafSlug": "stabilizer_front",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/front_rear_axle/stabilizer_rear.html",
+      "title": "Stabilizer, Rear",
+      "categorySlug": "front_rear_axle",
+      "leafSlug": "stabilizer_rear",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/front_rear_axle/wheel_bearings.html",
+      "title": "Wheel Bearings",
+      "categorySlug": "front_rear_axle",
+      "leafSlug": "wheel_bearings",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/fuel_system/activated_charcoal_filter_tubing.html",
+      "title": "Activated Charcoal Filter / Tubing",
+      "categorySlug": "fuel_system",
+      "leafSlug": "activated_charcoal_filter_tubing",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/fuel_system/expansion_tank_tubing.html",
+      "title": "Expansion Tank / Tubing",
+      "categorySlug": "fuel_system",
+      "leafSlug": "expansion_tank_tubing",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/fuel_system/fuel_pipes_and_fuel_filters.html",
+      "title": "Fuel Pipes And Fuel Filters",
+      "categorySlug": "fuel_system",
+      "leafSlug": "fuel_pipes_and_fuel_filters",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/fuel_system/fuel_supply_double_filter.html",
+      "title": "Fuel Supply / Double Filter",
+      "categorySlug": "fuel_system",
+      "leafSlug": "fuel_supply_double_filter",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/fuel_system/fuel_tank_breather_valve_disturb_air_valve.html",
+      "title": "Fuel Tank Breather Valve / Disturb. Air Valve",
+      "categorySlug": "fuel_system",
+      "leafSlug": "fuel_tank_breather_valve_disturb_air_valve",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/fuel_system/intake_silencer_filter_cartridge.html",
+      "title": "Intake Silencer / Filter Cartridge",
+      "categorySlug": "fuel_system",
+      "leafSlug": "intake_silencer_filter_cartridge",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/fuel_system/mass_air_flow_sensor.html",
+      "title": "Mass Air Flow Sensor",
+      "categorySlug": "fuel_system",
+      "leafSlug": "mass_air_flow_sensor",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/fuel_system/metal_fuel_tank.html",
+      "title": "Metal Fuel Tank",
+      "categorySlug": "fuel_system",
+      "leafSlug": "metal_fuel_tank",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/fuel_system/secondary_throttle_housing_tube_asc.html",
+      "title": "Secondary Throttle Housing Tube ASC",
+      "categorySlug": "fuel_system",
+      "leafSlug": "secondary_throttle_housing_tube_asc",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/fuel_system/sending_unit_assy_metal_tank.html",
+      "title": "Sending Unit Assy Metal Tank",
+      "categorySlug": "fuel_system",
+      "leafSlug": "sending_unit_assy_metal_tank",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/fuel_system/throttle_housing_assy.html",
+      "title": "Throttle Housing Assy",
+      "categorySlug": "fuel_system",
+      "leafSlug": "throttle_housing_assy",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/fuel_system/valves_pipes_of_fuel_injection_system.html",
+      "title": "Valves / Pipes Of Fuel Injection System",
+      "categorySlug": "fuel_system",
+      "leafSlug": "valves_pipes_of_fuel_injection_system",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/gearshift_clutch/clutch_control.html",
+      "title": "Clutch Control",
+      "categorySlug": "gearshift_clutch",
+      "leafSlug": "clutch_control",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/gearshift_clutch/gearshift_clutch.html",
+      "title": "Gearshift / Clutch",
+      "categorySlug": "gearshift_clutch",
+      "leafSlug": "gearshift_clutch",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/gearshift_clutch/gearshift_knobs_coverings_plaques.html",
+      "title": "Gearshift Knobs / Coverings / Plaques",
+      "categorySlug": "gearshift_clutch",
+      "leafSlug": "gearshift_knobs_coverings_plaques",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/gearshift_clutch/gearshift_mechanical_transmission.html",
+      "title": "Gearshift, Mechanical Transmission",
+      "categorySlug": "gearshift_clutch",
+      "leafSlug": "gearshift_mechanical_transmission",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/gearshift_clutch/shift_interlock_automatic_transmission.html",
+      "title": "Shift Interlock Automatic Transmission",
+      "categorySlug": "gearshift_clutch",
+      "leafSlug": "shift_interlock_automatic_transmission",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/heater_and_air_conditioning/actuator_air_conditioning.html",
+      "title": "Actuator Air Conditioning",
+      "categorySlug": "heater_and_air_conditioning",
+      "leafSlug": "actuator_air_conditioning",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/heater_and_air_conditioning/air_conditioning_control.html",
+      "title": "Air Conditioning Control",
+      "categorySlug": "heater_and_air_conditioning",
+      "leafSlug": "air_conditioning_control",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/heater_and_air_conditioning/air_outlet.html",
+      "title": "Air Outlet",
+      "categorySlug": "heater_and_air_conditioning",
+      "leafSlug": "air_outlet",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/heater_and_air_conditioning/bowden_cable_for_air_conditioning_flap_regulation.html",
+      "title": "Bowden Cable For Air Conditioning Flap Regulation",
+      "categorySlug": "heater_and_air_conditioning",
+      "leafSlug": "bowden_cable_for_air_conditioning_flap_regulation",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/heater_and_air_conditioning/climate_capacitor_additional_blower.html",
+      "title": "Climate Capacitor / Additional Blower",
+      "categorySlug": "heater_and_air_conditioning",
+      "leafSlug": "climate_capacitor_additional_blower",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/heater_and_air_conditioning/control_unit_air_conditioning_limit_switch.html",
+      "title": "Control Unit Air Conditioning / Limit Switch",
+      "categorySlug": "heater_and_air_conditioning",
+      "leafSlug": "control_unit_air_conditioning_limit_switch",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/heater_and_air_conditioning/coolant_lines.html",
+      "title": "Coolant Lines",
+      "categorySlug": "heater_and_air_conditioning",
+      "leafSlug": "coolant_lines",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/heater_and_air_conditioning/drying_container.html",
+      "title": "Drying Container",
+      "categorySlug": "heater_and_air_conditioning",
+      "leafSlug": "drying_container",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/heater_and_air_conditioning/electric_parts_for_ac_unit.html",
+      "title": "Electric Parts For Ac Unit",
+      "categorySlug": "heater_and_air_conditioning",
+      "leafSlug": "electric_parts_for_ac_unit",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/heater_and_air_conditioning/evaporator_expansion_valve.html",
+      "title": "Evaporator / Expansion Valve",
+      "categorySlug": "heater_and_air_conditioning",
+      "leafSlug": "evaporator_expansion_valve",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/heater_and_air_conditioning/heater_closing_panel.html",
+      "title": "Heater Closing Panel",
+      "categorySlug": "heater_and_air_conditioning",
+      "leafSlug": "heater_closing_panel",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/heater_and_air_conditioning/heater_duct_rear_covering.html",
+      "title": "Heater Duct Rear / Covering",
+      "categorySlug": "heater_and_air_conditioning",
+      "leafSlug": "heater_duct_rear_covering",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/heater_and_air_conditioning/heater_radiator_air_conditioning.html",
+      "title": "Heater Radiator Air Conditioning",
+      "categorySlug": "heater_and_air_conditioning",
+      "leafSlug": "heater_radiator_air_conditioning",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/heater_and_air_conditioning/housing_parts_air_conditioning.html",
+      "title": "Housing Parts - Air Conditioning",
+      "categorySlug": "heater_and_air_conditioning",
+      "leafSlug": "housing_parts_air_conditioning",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/heater_and_air_conditioning/magnetic_clutch.html",
+      "title": "Magnetic Clutch",
+      "categorySlug": "heater_and_air_conditioning",
+      "leafSlug": "magnetic_clutch",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/heater_and_air_conditioning/microfilter.html",
+      "title": "Microfilter",
+      "categorySlug": "heater_and_air_conditioning",
+      "leafSlug": "microfilter",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/heater_and_air_conditioning/outflow_nozzles_covers.html",
+      "title": "Outflow Nozzles / Covers",
+      "categorySlug": "heater_and_air_conditioning",
+      "leafSlug": "outflow_nozzles_covers",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/heater_and_air_conditioning/rp_air_conditioning_compressor.html",
+      "title": "Rp Air Conditioning Compressor",
+      "categorySlug": "heater_and_air_conditioning",
+      "leafSlug": "rp_air_conditioning_compressor",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/heater_and_air_conditioning/sensor_f_auc.html",
+      "title": "Sensor F. Auc",
+      "categorySlug": "heater_and_air_conditioning",
+      "leafSlug": "sensor_f_auc",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/heater_and_air_conditioning/water_valve_water_hose.html",
+      "title": "Water Valve / Water Hose",
+      "categorySlug": "heater_and_air_conditioning",
+      "leafSlug": "water_valve_water_hose",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/individual_equipment/individual_carbon_fiber_equipment.html",
+      "title": "Individual Carbon Fiber Equipment",
+      "categorySlug": "individual_equipment",
+      "leafSlug": "individual_carbon_fiber_equipment",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/inspection_kits_equipment_parts/assorted_information_plates.html",
+      "title": "Assorted Information Plates",
+      "categorySlug": "inspection_kits_equipment_parts",
+      "leafSlug": "assorted_information_plates",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/inspection_kits_equipment_parts/information_plate_fuel.html",
+      "title": "Information Plate, Fuel",
+      "categorySlug": "inspection_kits_equipment_parts",
+      "leafSlug": "information_plate_fuel",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/inspection_kits_equipment_parts/instruction_notice_airbag.html",
+      "title": "Instruction Notice, Airbag",
+      "categorySlug": "inspection_kits_equipment_parts",
+      "leafSlug": "instruction_notice_airbag",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/inspection_kits_equipment_parts/label_outer_paint.html",
+      "title": "Label \"Outer Paint\"",
+      "categorySlug": "inspection_kits_equipment_parts",
+      "leafSlug": "label_outer_paint",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/inspection_kits_equipment_parts/m_mobility_system.html",
+      "title": "M Mobility System",
+      "categorySlug": "inspection_kits_equipment_parts",
+      "leafSlug": "m_mobility_system",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/inspection_kits_equipment_parts/tool_kit_lifting_jack.html",
+      "title": "Tool Kit / Lifting Jack",
+      "categorySlug": "inspection_kits_equipment_parts",
+      "leafSlug": "tool_kit_lifting_jack",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/inspection_kits_equipment_parts/tool_kit_tool_box.html",
+      "title": "Tool Kit / Tool Box",
+      "categorySlug": "inspection_kits_equipment_parts",
+      "leafSlug": "tool_kit_tool_box",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/instruments_measuring_systems/additional_information_instruments.html",
+      "title": "Additional Information Instruments",
+      "categorySlug": "instruments_measuring_systems",
+      "leafSlug": "additional_information_instruments",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/instruments_measuring_systems/instruments.html",
+      "title": "Instruments",
+      "categorySlug": "instruments_measuring_systems",
+      "leafSlug": "instruments",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/instruments_measuring_systems/instruments_combination_single_components.html",
+      "title": "Instruments Combination - Single Components",
+      "categorySlug": "instruments_measuring_systems",
+      "leafSlug": "instruments_combination_single_components",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/instruments_measuring_systems/on_board_computer.html",
+      "title": "On-Board Computer",
+      "categorySlug": "instruments_measuring_systems",
+      "leafSlug": "on_board_computer",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/lighting/fog_lights.html",
+      "title": "Fog Lights",
+      "categorySlug": "lighting",
+      "leafSlug": "fog_lights",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/lighting/headlight.html",
+      "title": "Headlight",
+      "categorySlug": "lighting",
+      "leafSlug": "headlight",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/lighting/rear_light.html",
+      "title": "Rear Light",
+      "categorySlug": "lighting",
+      "leafSlug": "rear_light",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/lighting/side_marker_light.html",
+      "title": "Side Marker Light",
+      "categorySlug": "lighting",
+      "leafSlug": "side_marker_light",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/lighting/single_components_for_headlight.html",
+      "title": "Single Components For Headlight",
+      "categorySlug": "lighting",
+      "leafSlug": "single_components_for_headlight",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/lighting/turn_indicator.html",
+      "title": "Turn Indicator",
+      "categorySlug": "lighting",
+      "leafSlug": "turn_indicator",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/lighting/various_lamps.html",
+      "title": "Various Lamps",
+      "categorySlug": "lighting",
+      "leafSlug": "various_lamps",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/manual_transmission/gear_wheel_set_parts_s6s420g.html",
+      "title": "Gear Wheel Set Parts (S6S420G)",
+      "categorySlug": "manual_transmission",
+      "leafSlug": "gear_wheel_set_parts_s6s420g",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/manual_transmission/gearbox_mounting.html",
+      "title": "Gearbox Mounting",
+      "categorySlug": "manual_transmission",
+      "leafSlug": "gearbox_mounting",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/manual_transmission/gearbox_suspension.html",
+      "title": "Gearbox Suspension",
+      "categorySlug": "manual_transmission",
+      "leafSlug": "gearbox_suspension",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/manual_transmission/housing_attaching_parts_s6s420g.html",
+      "title": "Housing & Attaching Parts (S6S420G)",
+      "categorySlug": "manual_transmission",
+      "leafSlug": "housing_attaching_parts_s6s420g",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/manual_transmission/inner_gear_shifting_parts_s6s420g.html",
+      "title": "Inner Gear Shifting Parts (S6S420G)",
+      "categorySlug": "manual_transmission",
+      "leafSlug": "inner_gear_shifting_parts_s6s420g",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/manual_transmission/manual_gearbox_s6s_420g.html",
+      "title": "Manual Gearbox S6S 420G",
+      "categorySlug": "manual_transmission",
+      "leafSlug": "manual_gearbox_s6s_420g",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/restraint_system_and_accessories/flag_holder.html",
+      "title": "Flag Holder",
+      "categorySlug": "restraint_system_and_accessories",
+      "leafSlug": "flag_holder",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/restraint_system_and_accessories/rear_safety_belt_mounting_parts.html",
+      "title": "Rear Safety Belt Mounting Parts",
+      "categorySlug": "restraint_system_and_accessories",
+      "leafSlug": "rear_safety_belt_mounting_parts",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/restraint_system_and_accessories/safety_belt_adjuster.html",
+      "title": "Safety Belt Adjuster",
+      "categorySlug": "restraint_system_and_accessories",
+      "leafSlug": "safety_belt_adjuster",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/restraint_system_and_accessories/safety_belt_rear.html",
+      "title": "Safety Belt Rear",
+      "categorySlug": "restraint_system_and_accessories",
+      "leafSlug": "safety_belt_rear",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/restraint_system_and_accessories/seatbelts.html",
+      "title": "Seatbelts",
+      "categorySlug": "restraint_system_and_accessories",
+      "leafSlug": "seatbelts",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/restraint_system_and_accessories/ski_bag.html",
+      "title": "Ski Bag",
+      "categorySlug": "restraint_system_and_accessories",
+      "leafSlug": "ski_bag",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/restraint_system_and_accessories/ski_bag_single_parts.html",
+      "title": "Ski Bag, Single Parts",
+      "categorySlug": "restraint_system_and_accessories",
+      "leafSlug": "ski_bag_single_parts",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/retrofitting_conversion_accessories/base_support_system.html",
+      "title": "Base Support System",
+      "categorySlug": "retrofitting_conversion_accessories",
+      "leafSlug": "base_support_system",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/retrofitting_conversion_accessories/bicycle_rack_trailer_coupling.html",
+      "title": "Bicycle Rack, Trailer Coupling",
+      "categorySlug": "retrofitting_conversion_accessories",
+      "leafSlug": "bicycle_rack_trailer_coupling",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/retrofitting_conversion_accessories/car_care_products.html",
+      "title": "Car Care Products",
+      "categorySlug": "retrofitting_conversion_accessories",
+      "leafSlug": "car_care_products",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/retrofitting_conversion_accessories/cd_player_changer.html",
+      "title": "CD Player / Changer",
+      "categorySlug": "retrofitting_conversion_accessories",
+      "leafSlug": "cd_player_changer",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/retrofitting_conversion_accessories/cd_player_cover.html",
+      "title": "CD Player Cover",
+      "categorySlug": "retrofitting_conversion_accessories",
+      "leafSlug": "cd_player_cover",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/retrofitting_conversion_accessories/clear_cover_fog_lights.html",
+      "title": "Clear Cover Fog lights",
+      "categorySlug": "retrofitting_conversion_accessories",
+      "leafSlug": "clear_cover_fog_lights",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/retrofitting_conversion_accessories/cool_bag.html",
+      "title": "Cool Bag",
+      "categorySlug": "retrofitting_conversion_accessories",
+      "leafSlug": "cool_bag",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/retrofitting_conversion_accessories/dog_harness.html",
+      "title": "Dog Harness",
+      "categorySlug": "retrofitting_conversion_accessories",
+      "leafSlug": "dog_harness",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/retrofitting_conversion_accessories/driver_utility_set.html",
+      "title": "Driver Utility Set",
+      "categorySlug": "retrofitting_conversion_accessories",
+      "leafSlug": "driver_utility_set",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/retrofitting_conversion_accessories/electronic_tire_pressure_gauge.html",
+      "title": "Electronic Tire Pressure Gauge",
+      "categorySlug": "retrofitting_conversion_accessories",
+      "leafSlug": "electronic_tire_pressure_gauge",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/retrofitting_conversion_accessories/evolution_4_car_cover.html",
+      "title": "Evolution 4 Car Cover",
+      "categorySlug": "retrofitting_conversion_accessories",
+      "leafSlug": "evolution_4_car_cover",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/retrofitting_conversion_accessories/first_aid_kit.html",
+      "title": "First-Aid Kit",
+      "categorySlug": "retrofitting_conversion_accessories",
+      "leafSlug": "first_aid_kit",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/retrofitting_conversion_accessories/halogen_map_light.html",
+      "title": "Halogen Map Light",
+      "categorySlug": "retrofitting_conversion_accessories",
+      "leafSlug": "halogen_map_light",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/retrofitting_conversion_accessories/hood_parts.html",
+      "title": "Hood Parts",
+      "categorySlug": "retrofitting_conversion_accessories",
+      "leafSlug": "hood_parts",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/retrofitting_conversion_accessories/led_flashlight.html",
+      "title": "LED Flashlight",
+      "categorySlug": "retrofitting_conversion_accessories",
+      "leafSlug": "led_flashlight",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/retrofitting_conversion_accessories/luggage_basket.html",
+      "title": "Luggage Basket",
+      "categorySlug": "retrofitting_conversion_accessories",
+      "leafSlug": "luggage_basket",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/retrofitting_conversion_accessories/m_emblem.html",
+      "title": "M Emblem",
+      "categorySlug": "retrofitting_conversion_accessories",
+      "leafSlug": "m_emblem",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/retrofitting_conversion_accessories/multi_purpose_roof_box.html",
+      "title": "Multi-Purpose Roof Box",
+      "categorySlug": "retrofitting_conversion_accessories",
+      "leafSlug": "multi_purpose_roof_box",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/retrofitting_conversion_accessories/noah_car_cover.html",
+      "title": "Noah Car Cover",
+      "categorySlug": "retrofitting_conversion_accessories",
+      "leafSlug": "noah_car_cover",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/retrofitting_conversion_accessories/number_plate_frame.html",
+      "title": "Number Plate Frame",
+      "categorySlug": "retrofitting_conversion_accessories",
+      "leafSlug": "number_plate_frame",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/retrofitting_conversion_accessories/operating_fluids.html",
+      "title": "Operating Fluids",
+      "categorySlug": "retrofitting_conversion_accessories",
+      "leafSlug": "operating_fluids",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/retrofitting_conversion_accessories/ornamental_strips_universell.html",
+      "title": "Ornamental Strips \"Universell\"",
+      "categorySlug": "retrofitting_conversion_accessories",
+      "leafSlug": "ornamental_strips_universell",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/retrofitting_conversion_accessories/racing_bike_rack.html",
+      "title": "Racing Bike Rack",
+      "categorySlug": "retrofitting_conversion_accessories",
+      "leafSlug": "racing_bike_rack",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/retrofitting_conversion_accessories/retrofit_kit_m_aerodynamic_package.html",
+      "title": "Retrofit Kit M Aerodynamic Package",
+      "categorySlug": "retrofitting_conversion_accessories",
+      "leafSlug": "retrofit_kit_m_aerodynamic_package",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/retrofitting_conversion_accessories/roof_box.html",
+      "title": "Roof Box",
+      "categorySlug": "retrofitting_conversion_accessories",
+      "leafSlug": "roof_box",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/retrofitting_conversion_accessories/sheepskin_wash_polish_mitt.html",
+      "title": "Sheepskin Wash / Polish Mitt",
+      "categorySlug": "retrofitting_conversion_accessories",
+      "leafSlug": "sheepskin_wash_polish_mitt",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/retrofitting_conversion_accessories/spare_bulbs_box.html",
+      "title": "Spare Bulbs Box",
+      "categorySlug": "retrofitting_conversion_accessories",
+      "leafSlug": "spare_bulbs_box",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/retrofitting_conversion_accessories/stainless_steel_license_plate_frame.html",
+      "title": "Stainless Steel License Plate Frame",
+      "categorySlug": "retrofitting_conversion_accessories",
+      "leafSlug": "stainless_steel_license_plate_frame",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/retrofitting_conversion_accessories/suppression_filter.html",
+      "title": "Suppression Filter",
+      "categorySlug": "retrofitting_conversion_accessories",
+      "leafSlug": "suppression_filter",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/retrofitting_conversion_accessories/surfboard_rack.html",
+      "title": "Surfboard Rack",
+      "categorySlug": "retrofitting_conversion_accessories",
+      "leafSlug": "surfboard_rack",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/retrofitting_conversion_accessories/tag.html",
+      "title": "Tag",
+      "categorySlug": "retrofitting_conversion_accessories",
+      "leafSlug": "tag",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/retrofitting_conversion_accessories/tailpipe_trim.html",
+      "title": "Tailpipe Trim",
+      "categorySlug": "retrofitting_conversion_accessories",
+      "leafSlug": "tailpipe_trim",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/retrofitting_conversion_accessories/tire_mobility_set.html",
+      "title": "Tire Mobility Set",
+      "categorySlug": "retrofitting_conversion_accessories",
+      "leafSlug": "tire_mobility_set",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/retrofitting_conversion_accessories/touring_bicycle_holder.html",
+      "title": "Touring Bicycle Holder",
+      "categorySlug": "retrofitting_conversion_accessories",
+      "leafSlug": "touring_bicycle_holder",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/retrofitting_conversion_accessories/trailer_rear_supports.html",
+      "title": "Trailer Rear Supports",
+      "categorySlug": "retrofitting_conversion_accessories",
+      "leafSlug": "trailer_rear_supports",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/retrofitting_conversion_accessories/trailer_transport_module.html",
+      "title": "Trailer Transport Module",
+      "categorySlug": "retrofitting_conversion_accessories",
+      "leafSlug": "trailer_transport_module",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/retrofitting_conversion_accessories/trailer_individual_parts_brake_pull_rods.html",
+      "title": "Trailer, Individual Parts, Brake Pull Rods",
+      "categorySlug": "retrofitting_conversion_accessories",
+      "leafSlug": "trailer_individual_parts_brake_pull_rods",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/retrofitting_conversion_accessories/trailer_individual_parts_chassis_frame.html",
+      "title": "Trailer, Individual Parts, Chassis Frame",
+      "categorySlug": "retrofitting_conversion_accessories",
+      "leafSlug": "trailer_individual_parts_chassis_frame",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/retrofitting_conversion_accessories/trailer_individual_parts_deflector_housing.html",
+      "title": "Trailer, Individual Parts, Deflector Housing",
+      "categorySlug": "retrofitting_conversion_accessories",
+      "leafSlug": "trailer_individual_parts_deflector_housing",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/retrofitting_conversion_accessories/trailer_individual_parts_electrical_system.html",
+      "title": "Trailer, Individual Parts, Electrical System",
+      "categorySlug": "retrofitting_conversion_accessories",
+      "leafSlug": "trailer_individual_parts_electrical_system",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/retrofitting_conversion_accessories/trailer_individual_parts_floor_assy.html",
+      "title": "Trailer, Individual Parts, Floor Assy",
+      "categorySlug": "retrofitting_conversion_accessories",
+      "leafSlug": "trailer_individual_parts_floor_assy",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/retrofitting_conversion_accessories/trailer_individual_parts_load_ramp_catch.html",
+      "title": "Trailer, Individual Parts, Load Ramp Catch",
+      "categorySlug": "retrofitting_conversion_accessories",
+      "leafSlug": "trailer_individual_parts_load_ramp_catch",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/retrofitting_conversion_accessories/trailer_individual_parts_load_ramp_well.html",
+      "title": "Trailer, Individual Parts, Load Ramp Well",
+      "categorySlug": "retrofitting_conversion_accessories",
+      "leafSlug": "trailer_individual_parts_load_ramp_well",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/retrofitting_conversion_accessories/trailer_individual_parts_overrun_facility.html",
+      "title": "Trailer, Individual Parts, Overrun Facility",
+      "categorySlug": "retrofitting_conversion_accessories",
+      "leafSlug": "trailer_individual_parts_overrun_facility",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/retrofitting_conversion_accessories/trailer_individual_parts_plastic_parts.html",
+      "title": "Trailer, Individual Parts, Plastic Parts",
+      "categorySlug": "retrofitting_conversion_accessories",
+      "leafSlug": "trailer_individual_parts_plastic_parts",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/retrofitting_conversion_accessories/trailer_individual_parts_ram_guard.html",
+      "title": "Trailer, Individual Parts, Ram Guard",
+      "categorySlug": "retrofitting_conversion_accessories",
+      "leafSlug": "trailer_individual_parts_ram_guard",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/retrofitting_conversion_accessories/trailer_individual_parts_rear_support.html",
+      "title": "Trailer, Individual Parts, Rear Support",
+      "categorySlug": "retrofitting_conversion_accessories",
+      "leafSlug": "trailer_individual_parts_rear_support",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/retrofitting_conversion_accessories/trailer_individual_parts_towbar.html",
+      "title": "Trailer, Individual Parts, Towbar",
+      "categorySlug": "retrofitting_conversion_accessories",
+      "leafSlug": "trailer_individual_parts_towbar",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/retrofitting_conversion_accessories/trailer_individual_parts_wheel_brake.html",
+      "title": "Trailer, Individual Parts, Wheel Brake",
+      "categorySlug": "retrofitting_conversion_accessories",
+      "leafSlug": "trailer_individual_parts_wheel_brake",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/retrofitting_conversion_accessories/trailer_individual_parts_wheel_suspension.html",
+      "title": "Trailer, Individual Parts, Wheel Suspension",
+      "categorySlug": "retrofitting_conversion_accessories",
+      "leafSlug": "trailer_individual_parts_wheel_suspension",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/retrofitting_conversion_accessories/ultralow_car_cover.html",
+      "title": "Ultralow Car Cover",
+      "categorySlug": "retrofitting_conversion_accessories",
+      "leafSlug": "ultralow_car_cover",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/retrofitting_conversion_accessories/universal_support.html",
+      "title": "Universal Support",
+      "categorySlug": "retrofitting_conversion_accessories",
+      "leafSlug": "universal_support",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/retrofitting_conversion_accessories/warning_vest.html",
+      "title": "Warning Vest",
+      "categorySlug": "retrofitting_conversion_accessories",
+      "leafSlug": "warning_vest",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/seats/armrest_front.html",
+      "title": "Armrest, Front",
+      "categorySlug": "seats",
+      "leafSlug": "armrest_front",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/seats/bmw_repair_sports_seat.html",
+      "title": "BMW Repair Sports Seat",
+      "categorySlug": "seats",
+      "leafSlug": "bmw_repair_sports_seat",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/seats/bmw_sport_seat_panel_rear.html",
+      "title": "BMW Sport Seat Panel Rear",
+      "categorySlug": "seats",
+      "leafSlug": "bmw_sport_seat_panel_rear",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/seats/bmw_sports_seat_cover.html",
+      "title": "BMW Sports Seat Cover",
+      "categorySlug": "seats",
+      "leafSlug": "bmw_sports_seat_cover",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/seats/bmw_sports_seat_coverings.html",
+      "title": "BMW Sports Seat Coverings",
+      "categorySlug": "seats",
+      "leafSlug": "bmw_sports_seat_coverings",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/seats/bmw_sports_seat_frame_electrical.html",
+      "title": "BMW Sports Seat Frame Electrical",
+      "categorySlug": "seats",
+      "leafSlug": "bmw_sports_seat_frame_electrical",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/seats/bmw_sports_seat_frame_mechanical.html",
+      "title": "BMW Sports Seat Frame Mechanical",
+      "categorySlug": "seats",
+      "leafSlug": "bmw_sports_seat_frame_mechanical",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/seats/bmw_sports_seat_mechanically_adjustable.html",
+      "title": "BMW Sports Seat Mechanically Adjustable",
+      "categorySlug": "seats",
+      "leafSlug": "bmw_sports_seat_mechanically_adjustable",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/seats/bmw_sports_seat_rail_electrical.html",
+      "title": "BMW Sports Seat Rail Electrical",
+      "categorySlug": "seats",
+      "leafSlug": "bmw_sports_seat_rail_electrical",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/seats/bmw_sports_seat_rail_mechanical.html",
+      "title": "BMW Sports Seat Rail Mechanical",
+      "categorySlug": "seats",
+      "leafSlug": "bmw_sports_seat_rail_mechanical",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/seats/center_armrest_rear.html",
+      "title": "Center Armrest Rear",
+      "categorySlug": "seats",
+      "leafSlug": "center_armrest_rear",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/seats/electrical_headrest_rear.html",
+      "title": "Electrical Headrest Rear",
+      "categorySlug": "seats",
+      "leafSlug": "electrical_headrest_rear",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/seats/front_seat.html",
+      "title": "Front Seat",
+      "categorySlug": "seats",
+      "leafSlug": "front_seat",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/seats/front_seat_frame_mechanical_electrical_single_parts.html",
+      "title": "Front Seat Frame Mechanical / Electrical / Single Parts",
+      "categorySlug": "seats",
+      "leafSlug": "front_seat_frame_mechanical_electrical_single_parts",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/seats/front_seat_rail.html",
+      "title": "Front Seat Rail",
+      "categorySlug": "seats",
+      "leafSlug": "front_seat_rail",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/seats/mechanical_headrest_rear.html",
+      "title": "Mechanical Headrest Rear",
+      "categorySlug": "seats",
+      "leafSlug": "mechanical_headrest_rear",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/seats/rear_panel.html",
+      "title": "Rear Panel",
+      "categorySlug": "seats",
+      "leafSlug": "rear_panel",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/seats/rear_seat_cover.html",
+      "title": "Rear Seat Cover",
+      "categorySlug": "seats",
+      "leafSlug": "rear_seat_cover",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/seats/rear_seat_parts.html",
+      "title": "Rear Seat Parts",
+      "categorySlug": "seats",
+      "leafSlug": "rear_seat_parts",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/seats/repair_seat.html",
+      "title": "Repair Seat",
+      "categorySlug": "seats",
+      "leafSlug": "repair_seat",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/seats/seat_cover_front.html",
+      "title": "Seat Cover Front",
+      "categorySlug": "seats",
+      "leafSlug": "seat_cover_front",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/seats/seat_front_seat_coverings.html",
+      "title": "Seat Front Seat Coverings",
+      "categorySlug": "seats",
+      "leafSlug": "seat_front_seat_coverings",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/seats/seat_heating.html",
+      "title": "Seat Heating",
+      "categorySlug": "seats",
+      "leafSlug": "seat_heating",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/seats/through_loading_facility_seat_cover.html",
+      "title": "Through-Loading Facility - Seat Cover",
+      "categorySlug": "seats",
+      "leafSlug": "through_loading_facility_seat_cover",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/seats/through_loading_facility_rear_seat.html",
+      "title": "Through-Loading Facility / Rear Seat",
+      "categorySlug": "seats",
+      "leafSlug": "through_loading_facility_rear_seat",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/seats/through_loading_facility_single_parts.html",
+      "title": "Through-Loading Facility / Single Parts",
+      "categorySlug": "seats",
+      "leafSlug": "through_loading_facility_single_parts",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/seats/two_piece_center_armrest_rear.html",
+      "title": "Two-Piece Center Armrest Rear",
+      "categorySlug": "seats",
+      "leafSlug": "two_piece_center_armrest_rear",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/sliding_roof_folding_top/slide_lifting_roof_cover_ceiling_frame.html",
+      "title": "Slide Lifting Roof-Cover / Ceiling Frame",
+      "categorySlug": "sliding_roof_folding_top",
+      "leafSlug": "slide_lifting_roof_cover_ceiling_frame",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/sliding_roof_folding_top/sliding_lifting_roof_drive.html",
+      "title": "Sliding Lifting Roof Drive",
+      "categorySlug": "sliding_roof_folding_top",
+      "leafSlug": "sliding_lifting_roof_drive",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/steering_drive_shaft/drive_shaft_constant_velocity_joint.html",
+      "title": "Drive Shaft (Constant-Velocity Joint)",
+      "categorySlug": "steering_drive_shaft",
+      "leafSlug": "drive_shaft_constant_velocity_joint",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/steering_drive_shaft/drive_shaft_center_bearing_constant_velocity_joint.html",
+      "title": "Drive Shaft-Center Bearing-Constant Velocity Joint",
+      "categorySlug": "steering_drive_shaft",
+      "leafSlug": "drive_shaft_center_bearing_constant_velocity_joint",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/steering_drive_shaft/hydro_steering_oil_pipes.html",
+      "title": "Hydro Steering - Oil Pipes",
+      "categorySlug": "steering_drive_shaft",
+      "leafSlug": "hydro_steering_oil_pipes",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/steering_drive_shaft/hydro_steering_servotronic.html",
+      "title": "Hydro Steering - Servotronic",
+      "categorySlug": "steering_drive_shaft",
+      "leafSlug": "hydro_steering_servotronic",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/steering_drive_shaft/hydro_steering_tandem_vane_pump.html",
+      "title": "Hydro Steering - Tandem Vane Pump",
+      "categorySlug": "steering_drive_shaft",
+      "leafSlug": "hydro_steering_tandem_vane_pump",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/steering_drive_shaft/m_sports_steering_wheel_airbag.html",
+      "title": "M Sports Steering Wheel, Airbag",
+      "categorySlug": "steering_drive_shaft",
+      "leafSlug": "m_sports_steering_wheel_airbag",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/steering_drive_shaft/oil_carrier_single_parts.html",
+      "title": "Oil Carrier / Single Parts",
+      "categorySlug": "steering_drive_shaft",
+      "leafSlug": "oil_carrier_single_parts",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/steering_drive_shaft/oil_carrier_asc_t_single_parts.html",
+      "title": "Oil Carrier ASC+T / Single Parts",
+      "categorySlug": "steering_drive_shaft",
+      "leafSlug": "oil_carrier_asc_t_single_parts",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/steering_drive_shaft/oil_pipes_asc_t.html",
+      "title": "Oil Pipes, ASC+T",
+      "categorySlug": "steering_drive_shaft",
+      "leafSlug": "oil_pipes_asc_t",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/steering_drive_shaft/power_steering.html",
+      "title": "Power Steering",
+      "categorySlug": "steering_drive_shaft",
+      "leafSlug": "power_steering",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/steering_drive_shaft/power_steering_pump.html",
+      "title": "Power Steering Pump",
+      "categorySlug": "steering_drive_shaft",
+      "leafSlug": "power_steering_pump",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/steering_drive_shaft/sports_steering_wheel.html",
+      "title": "Sports Steering Wheel",
+      "categorySlug": "steering_drive_shaft",
+      "leafSlug": "sports_steering_wheel",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/steering_drive_shaft/steering_column_adjustable_single_parts.html",
+      "title": "Steering Column - Adjustable / Single Parts",
+      "categorySlug": "steering_drive_shaft",
+      "leafSlug": "steering_column_adjustable_single_parts",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/steering_drive_shaft/steering_column_electrical_adjust_single_parts.html",
+      "title": "Steering Column - Electrical Adjust. / Single Parts",
+      "categorySlug": "steering_drive_shaft",
+      "leafSlug": "steering_column_electrical_adjust_single_parts",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/steering_drive_shaft/steering_column_lower_joint_assy.html",
+      "title": "Steering Column - Lower Joint Assy",
+      "categorySlug": "steering_drive_shaft",
+      "leafSlug": "steering_column_lower_joint_assy",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/steering_drive_shaft/steering_column_steering_spindle.html",
+      "title": "Steering Column - Steering Spindle",
+      "categorySlug": "steering_drive_shaft",
+      "leafSlug": "steering_column_steering_spindle",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/steering_drive_shaft/steering_column_tube_trim_panel.html",
+      "title": "Steering Column - Tube / Trim Panel",
+      "categorySlug": "steering_drive_shaft",
+      "leafSlug": "steering_column_tube_trim_panel",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/steering_drive_shaft/steering_linkage_tie_rods.html",
+      "title": "Steering Linkage / Tie Rods",
+      "categorySlug": "steering_drive_shaft",
+      "leafSlug": "steering_linkage_tie_rods",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/steering_drive_shaft/steering_lock_ignition_switch.html",
+      "title": "Steering Lock / Ignition Switch",
+      "categorySlug": "steering_drive_shaft",
+      "leafSlug": "steering_lock_ignition_switch",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/steering_drive_shaft/steering_wheel.html",
+      "title": "Steering Wheel",
+      "categorySlug": "steering_drive_shaft",
+      "leafSlug": "steering_wheel",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/steering_drive_shaft/steering_wheel_airbag.html",
+      "title": "Steering Wheel Airbag",
+      "categorySlug": "steering_drive_shaft",
+      "leafSlug": "steering_wheel_airbag",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/vehicle_electrical_system/battery_empty.html",
+      "title": "Battery, Empty",
+      "categorySlug": "vehicle_electrical_system",
+      "leafSlug": "battery_empty",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/vehicle_electrical_system/body_control_units_and_modules.html",
+      "title": "Body Control Units And Modules",
+      "categorySlug": "vehicle_electrical_system",
+      "leafSlug": "body_control_units_and_modules",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/vehicle_electrical_system/cable_covering.html",
+      "title": "Cable Covering",
+      "categorySlug": "vehicle_electrical_system",
+      "leafSlug": "cable_covering",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/vehicle_electrical_system/cable_yarded_material.html",
+      "title": "Cable-Yarded Material",
+      "categorySlug": "vehicle_electrical_system",
+      "leafSlug": "cable_yarded_material",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/vehicle_electrical_system/circular_connector_d_2_5_mm_system.html",
+      "title": "Circular Connector / D 2, 5 mm System",
+      "categorySlug": "vehicle_electrical_system",
+      "leafSlug": "circular_connector_d_2_5_mm_system",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/vehicle_electrical_system/door_cable_harness.html",
+      "title": "Door Cable Harness",
+      "categorySlug": "vehicle_electrical_system",
+      "leafSlug": "door_cable_harness",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/vehicle_electrical_system/ews_control_unit_tr_module_support.html",
+      "title": "EWS Control Unit / tr Module / Support",
+      "categorySlug": "vehicle_electrical_system",
+      "leafSlug": "ews_control_unit_tr_module_support",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/vehicle_electrical_system/horn.html",
+      "title": "Horn",
+      "categorySlug": "vehicle_electrical_system",
+      "leafSlug": "horn",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/vehicle_electrical_system/main_wiring_harness.html",
+      "title": "Main Wiring Harness",
+      "categorySlug": "vehicle_electrical_system",
+      "leafSlug": "main_wiring_harness",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/vehicle_electrical_system/plug_terminal_elo.html",
+      "title": "Plug Terminal ELO",
+      "categorySlug": "vehicle_electrical_system",
+      "leafSlug": "plug_terminal_elo",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/vehicle_electrical_system/repair_parts_coaxial_cable_housing.html",
+      "title": "Repair Parts, Coaxial Cable, Housing",
+      "categorySlug": "vehicle_electrical_system",
+      "leafSlug": "repair_parts_coaxial_cable_housing",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/vehicle_electrical_system/round_socket_system_d_1_5_mm.html",
+      "title": "Round Socket System D 1.5 Mm",
+      "categorySlug": "vehicle_electrical_system",
+      "leafSlug": "round_socket_system_d_1_5_mm",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/vehicle_electrical_system/single_components_for_fuse_box.html",
+      "title": "Single Components For Fuse Box",
+      "categorySlug": "vehicle_electrical_system",
+      "leafSlug": "single_components_for_fuse_box",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/vehicle_electrical_system/single_components_for_rear_carrier.html",
+      "title": "Single Components For Rear Carrier",
+      "categorySlug": "vehicle_electrical_system",
+      "leafSlug": "single_components_for_rear_carrier",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/vehicle_electrical_system/single_components_for_wiper_arm.html",
+      "title": "Single Components For Wiper Arm",
+      "categorySlug": "vehicle_electrical_system",
+      "leafSlug": "single_components_for_wiper_arm",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/vehicle_electrical_system/single_parts_for_head_lamp_cleaning.html",
+      "title": "Single Parts For Head Lamp Cleaning",
+      "categorySlug": "vehicle_electrical_system",
+      "leafSlug": "single_parts_for_head_lamp_cleaning",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/vehicle_electrical_system/single_parts_for_windshield_cleaning.html",
+      "title": "Single Parts For Windshield Cleaning",
+      "categorySlug": "vehicle_electrical_system",
+      "leafSlug": "single_parts_for_windshield_cleaning",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/vehicle_electrical_system/single_wiper_parts.html",
+      "title": "Single Wiper Parts",
+      "categorySlug": "vehicle_electrical_system",
+      "leafSlug": "single_wiper_parts",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/vehicle_electrical_system/steering_column_switch.html",
+      "title": "Steering Column Switch",
+      "categorySlug": "vehicle_electrical_system",
+      "leafSlug": "steering_column_switch",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/vehicle_electrical_system/various_additional_wiring_sets.html",
+      "title": "Various Additional Wiring Sets",
+      "categorySlug": "vehicle_electrical_system",
+      "leafSlug": "various_additional_wiring_sets",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/vehicle_electrical_system/various_cable_clamps.html",
+      "title": "Various Cable Clamps",
+      "categorySlug": "vehicle_electrical_system",
+      "leafSlug": "various_cable_clamps",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/vehicle_electrical_system/various_cable_holders.html",
+      "title": "Various Cable Holders",
+      "categorySlug": "vehicle_electrical_system",
+      "leafSlug": "various_cable_holders",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/vehicle_electrical_system/various_cable_terminals.html",
+      "title": "Various Cable Terminals",
+      "categorySlug": "vehicle_electrical_system",
+      "leafSlug": "various_cable_terminals",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/vehicle_electrical_system/various_micro_switches.html",
+      "title": "Various Micro Switches",
+      "categorySlug": "vehicle_electrical_system",
+      "leafSlug": "various_micro_switches",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/vehicle_electrical_system/various_parts_wiring_harness_repair.html",
+      "title": "Various Parts, Wiring Harness Repair",
+      "categorySlug": "vehicle_electrical_system",
+      "leafSlug": "various_parts_wiring_harness_repair",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/vehicle_electrical_system/various_plug_terminals.html",
+      "title": "Various Plug Terminals",
+      "categorySlug": "vehicle_electrical_system",
+      "leafSlug": "various_plug_terminals",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/vehicle_electrical_system/various_relays.html",
+      "title": "Various Relays",
+      "categorySlug": "vehicle_electrical_system",
+      "leafSlug": "various_relays",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/vehicle_electrical_system/various_switches.html",
+      "title": "Various Switches",
+      "categorySlug": "vehicle_electrical_system",
+      "leafSlug": "various_switches",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/vehicle_electrical_system/various_wiring_connectors.html",
+      "title": "Various Wiring Connectors",
+      "categorySlug": "vehicle_electrical_system",
+      "leafSlug": "various_wiring_connectors",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/vehicle_electrical_system/wiring_additional_heater_independent_ventilation_system.html",
+      "title": "Wiring Additional Heater / Independent Ventilation System",
+      "categorySlug": "vehicle_electrical_system",
+      "leafSlug": "wiring_additional_heater_independent_ventilation_system",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/vehicle_electrical_system/wiring_electrical_seat_adjustment.html",
+      "title": "Wiring Electrical Seat Adjustment",
+      "categorySlug": "vehicle_electrical_system",
+      "leafSlug": "wiring_electrical_seat_adjustment",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/vehicle_trim/bumper_guard.html",
+      "title": "Bumper Guard",
+      "categorySlug": "vehicle_trim",
+      "leafSlug": "bumper_guard",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/vehicle_trim/bumper_trim_panel_rear.html",
+      "title": "Bumper Trim Panel, Rear",
+      "categorySlug": "vehicle_trim",
+      "leafSlug": "bumper_trim_panel_rear",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/vehicle_trim/carrier_bumper_front.html",
+      "title": "Carrier, Bumper Front",
+      "categorySlug": "vehicle_trim",
+      "leafSlug": "carrier_bumper_front",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/vehicle_trim/carrier_bumper_rear.html",
+      "title": "Carrier, Bumper Rear",
+      "categorySlug": "vehicle_trim",
+      "leafSlug": "carrier_bumper_rear",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/vehicle_trim/centre_console.html",
+      "title": "Centre Console",
+      "categorySlug": "vehicle_trim",
+      "leafSlug": "centre_console",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/vehicle_trim/colour_sample_box.html",
+      "title": "Colour Sample Box",
+      "categorySlug": "vehicle_trim",
+      "leafSlug": "colour_sample_box",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/vehicle_trim/cover_running_metre.html",
+      "title": "Cover, Running Metre",
+      "categorySlug": "vehicle_trim",
+      "leafSlug": "cover_running_metre",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/vehicle_trim/dashboard_covering_passenger_s_airbag.html",
+      "title": "Dashboard Covering / Passenger's Airbag",
+      "categorySlug": "vehicle_trim",
+      "leafSlug": "dashboard_covering_passenger_s_airbag",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/vehicle_trim/door_trim_panel.html",
+      "title": "Door Trim Panel",
+      "categorySlug": "vehicle_trim",
+      "leafSlug": "door_trim_panel",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/vehicle_trim/door_trim_rear.html",
+      "title": "Door Trim, Rear",
+      "categorySlug": "vehicle_trim",
+      "leafSlug": "door_trim_rear",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/vehicle_trim/door_window_lifting_mechanism.html",
+      "title": "Door Window Lifting Mechanism",
+      "categorySlug": "vehicle_trim",
+      "leafSlug": "door_window_lifting_mechanism",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/vehicle_trim/edge_protection_rockers_covers.html",
+      "title": "Edge Protection / Rockers Covers",
+      "categorySlug": "vehicle_trim",
+      "leafSlug": "edge_protection_rockers_covers",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/vehicle_trim/emblems_letterings.html",
+      "title": "Emblems / Letterings",
+      "categorySlug": "vehicle_trim",
+      "leafSlug": "emblems_letterings",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/vehicle_trim/exterior_trim_grille.html",
+      "title": "Exterior Trim / Grille",
+      "categorySlug": "vehicle_trim",
+      "leafSlug": "exterior_trim_grille",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/vehicle_trim/fine_wood_trim.html",
+      "title": "Fine Wood Trim",
+      "categorySlug": "vehicle_trim",
+      "leafSlug": "fine_wood_trim",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/vehicle_trim/floor_covering.html",
+      "title": "Floor Covering",
+      "categorySlug": "vehicle_trim",
+      "leafSlug": "floor_covering",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/vehicle_trim/floor_mats_lock.html",
+      "title": "Floor Mats Lock",
+      "categorySlug": "vehicle_trim",
+      "leafSlug": "floor_mats_lock",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/vehicle_trim/front_bumper_trim_m_technic.html",
+      "title": "Front Bumper Trim, M Technic",
+      "categorySlug": "vehicle_trim",
+      "leafSlug": "front_bumper_trim_m_technic",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/vehicle_trim/glazing.html",
+      "title": "Glazing",
+      "categorySlug": "vehicle_trim",
+      "leafSlug": "glazing",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/vehicle_trim/glazing_mounting_parts.html",
+      "title": "Glazing, Mounting Parts",
+      "categorySlug": "vehicle_trim",
+      "leafSlug": "glazing_mounting_parts",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/vehicle_trim/glove_box.html",
+      "title": "Glove Box",
+      "categorySlug": "vehicle_trim",
+      "leafSlug": "glove_box",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/vehicle_trim/glove_box_driver_side.html",
+      "title": "Glove Box Driver Side",
+      "categorySlug": "vehicle_trim",
+      "leafSlug": "glove_box_driver_side",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/vehicle_trim/grille.html",
+      "title": "Grille",
+      "categorySlug": "vehicle_trim",
+      "leafSlug": "grille",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/vehicle_trim/heat_insulation_engine_compartment_screening.html",
+      "title": "Heat Insulation / Engine Compartment Screening",
+      "categorySlug": "vehicle_trim",
+      "leafSlug": "heat_insulation_engine_compartment_screening",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/vehicle_trim/heat_insulator_floor_panel_trunk.html",
+      "title": "Heat Insulator Floor Panel Trunk",
+      "categorySlug": "vehicle_trim",
+      "leafSlug": "heat_insulator_floor_panel_trunk",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/vehicle_trim/interior_rear_view_mirror.html",
+      "title": "Interior Rear-View Mirror",
+      "categorySlug": "vehicle_trim",
+      "leafSlug": "interior_rear_view_mirror",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/vehicle_trim/interior_trim_lateral.html",
+      "title": "Interior Trim Lateral",
+      "categorySlug": "vehicle_trim",
+      "leafSlug": "interior_trim_lateral",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/vehicle_trim/m_outside_mirror.html",
+      "title": "M Outside Mirror",
+      "categorySlug": "vehicle_trim",
+      "leafSlug": "m_outside_mirror",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/vehicle_trim/m_trim_sill_wheel_arch.html",
+      "title": "M Trim, Sill / Wheel Arch",
+      "categorySlug": "vehicle_trim",
+      "leafSlug": "m_trim_sill_wheel_arch",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/vehicle_trim/ornamental_strips.html",
+      "title": "Ornamental Strips",
+      "categorySlug": "vehicle_trim",
+      "leafSlug": "ornamental_strips",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/vehicle_trim/outside_mirror.html",
+      "title": "Outside Mirror",
+      "categorySlug": "vehicle_trim",
+      "leafSlug": "outside_mirror",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/vehicle_trim/rear_bumper_trim_panel_m_technic.html",
+      "title": "Rear Bumper Trim Panel - M Technic",
+      "categorySlug": "vehicle_trim",
+      "leafSlug": "rear_bumper_trim_panel_m_technic",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/vehicle_trim/rear_window_shelf_sun_blind.html",
+      "title": "Rear Window Shelf / Sun Blind",
+      "categorySlug": "vehicle_trim",
+      "leafSlug": "rear_window_shelf_sun_blind",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/vehicle_trim/roller_sun_visor_rear_door.html",
+      "title": "Roller Sun Visor, Rear Door",
+      "categorySlug": "vehicle_trim",
+      "leafSlug": "roller_sun_visor_rear_door",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/vehicle_trim/roof_trim_headlining_moulded_handle.html",
+      "title": "Roof Trim - Headlining Moulded / Handle",
+      "categorySlug": "vehicle_trim",
+      "leafSlug": "roof_trim_headlining_moulded_handle",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/vehicle_trim/sealing_cap_plug.html",
+      "title": "Sealing Cap/Plug",
+      "categorySlug": "vehicle_trim",
+      "leafSlug": "sealing_cap_plug",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/vehicle_trim/sound_insulation.html",
+      "title": "Sound Insulation",
+      "categorySlug": "vehicle_trim",
+      "leafSlug": "sound_insulation",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/vehicle_trim/storing_partition.html",
+      "title": "Storing Partition",
+      "categorySlug": "vehicle_trim",
+      "leafSlug": "storing_partition",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/vehicle_trim/sun_visors.html",
+      "title": "Sun Visors",
+      "categorySlug": "vehicle_trim",
+      "leafSlug": "sun_visors",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/vehicle_trim/trim_through_loading_facility.html",
+      "title": "Trim / Through-Loading Facility",
+      "categorySlug": "vehicle_trim",
+      "leafSlug": "trim_through_loading_facility",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/vehicle_trim/trim_panel_dashboard.html",
+      "title": "Trim Panel Dashboard",
+      "categorySlug": "vehicle_trim",
+      "leafSlug": "trim_panel_dashboard",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/vehicle_trim/trim_panel_bumper.html",
+      "title": "Trim Panel, Bumper",
+      "categorySlug": "vehicle_trim",
+      "leafSlug": "trim_panel_bumper",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/vehicle_trim/trunk_trim_panel.html",
+      "title": "Trunk Trim Panel",
+      "categorySlug": "vehicle_trim",
+      "leafSlug": "trunk_trim_panel",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/wheels/10_spoke_styling.html",
+      "title": "10-Spoke Styling",
+      "categorySlug": "wheels",
+      "leafSlug": "10_spoke_styling",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/wheels/balance_weight.html",
+      "title": "Balance Weight",
+      "categorySlug": "wheels",
+      "leafSlug": "balance_weight",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/wheels/bmw_styling.html",
+      "title": "BMW - Styling",
+      "categorySlug": "wheels",
+      "leafSlug": "bmw_styling",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/wheels/cross_spoke_styling.html",
+      "title": "Cross-Spoke Styling",
+      "categorySlug": "wheels",
+      "leafSlug": "cross_spoke_styling",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/wheels/cross_spoke_composite_wheel.html",
+      "title": "Cross-Spoke, Composite Wheel",
+      "categorySlug": "wheels",
+      "leafSlug": "cross_spoke_composite_wheel",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/wheels/multi_spoke_styling.html",
+      "title": "Multi-Spoke Styling",
+      "categorySlug": "wheels",
+      "leafSlug": "multi_spoke_styling",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/wheels/set_wheel_locks.html",
+      "title": "Set Wheel Locks",
+      "categorySlug": "wheels",
+      "leafSlug": "set_wheel_locks",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/wheels/star_spoke_styling.html",
+      "title": "Star-Spoke Styling",
+      "categorySlug": "wheels",
+      "leafSlug": "star_spoke_styling",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/wheels/td_styling.html",
+      "title": "Td Styling",
+      "categorySlug": "wheels",
+      "leafSlug": "td_styling",
+      "status": "discovered",
+      "fetched": false
+    },
+    {
+      "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/wheels/wheel_bolt_lock_with_adaptor.html",
+      "title": "Wheel Bolt Lock With Adaptor",
+      "categorySlug": "wheels",
+      "leafSlug": "wheel_bolt_lock_with_adaptor",
+      "status": "discovered",
+      "fetched": false
+    }
+  ]
+}

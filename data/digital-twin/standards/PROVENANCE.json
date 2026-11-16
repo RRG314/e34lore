@@ -1,0 +1,51 @@
+{
+  "repository": "https://github.com/gumyr/cq_warehouse",
+  "license": "Apache-2.0",
+  "licenseSourceUrl": "https://github.com/gumyr/cq_warehouse/blob/main/LICENSE",
+  "retrievedOn": "2026-11-05",
+  "limitations": [
+    "Data tables only; no borrowed Python was executed.",
+    "ISO/DIN nominal geometry does not establish BMW part identity, revision, material, coating, grade or torque.",
+    "Main-branch URLs are mutable; content SHA-256 records preserve the inspected files."
+  ],
+  "files": [
+    {
+      "file": "hex_head_parameters.csv",
+      "sourceUrl": "https://raw.githubusercontent.com/gumyr/cq_warehouse/main/src/cq_warehouse/hex_head_parameters.csv",
+      "bytes": 1470,
+      "sha256": "aecb2b7927db46df16d710c707fe6accc06960260858680e25a771b460f9705e",
+      "immutableSourceUrl": "https://raw.githubusercontent.com/gumyr/cq_warehouse/a57bb7a24762d367d66369f280a24c38a64e73dd/src/cq_warehouse/hex_head_parameters.csv"
+    },
+    {
+      "file": "hex_nut_parameters.csv",
+      "sourceUrl": "https://raw.githubusercontent.com/gumyr/cq_warehouse/main/src/cq_warehouse/hex_nut_parameters.csv",
+      "bytes": 781,
+      "sha256": "1564c763a25eccb8e1ac992ab777355cfae88396ae8f96d18eab1a0b3117e56d",
+      "immutableSourceUrl": "https://raw.githubusercontent.com/gumyr/cq_warehouse/a57bb7a24762d367d66369f280a24c38a64e73dd/src/cq_warehouse/hex_nut_parameters.csv"
+    },
+    {
+      "file": "plain_washer_parameters.csv",
+      "sourceUrl": "https://raw.githubusercontent.com/gumyr/cq_warehouse/main/src/cq_warehouse/plain_washer_parameters.csv",
+      "bytes": 1210,
+      "sha256": "d40ece8029ec2c64723bd42490dcbf6bf11090d4ecf6c746779e520ecbd1fb55",
+      "immutableSourceUrl": "https://raw.githubusercontent.com/gumyr/cq_warehouse/a57bb7a24762d367d66369f280a24c38a64e73dd/src/cq_warehouse/plain_washer_parameters.csv"
+    },
+    {
+      "file": "socket_head_cap_parameters.csv",
+      "sourceUrl": "https://raw.githubusercontent.com/gumyr/cq_warehouse/main/src/cq_warehouse/socket_head_cap_parameters.csv",
+      "bytes": 2718,
+      "sha256": "31d9762f952acb29de1ba6f0dc99b9edeb336f996033b80b29b2c6236977b752",
+      "immutableSourceUrl": "https://raw.githubusercontent.com/gumyr/cq_warehouse/a57bb7a24762d367d66369f280a24c38a64e73dd/src/cq_warehouse/socket_head_cap_parameters.csv"
+    },
+    {
+      "file": "nominal_screw_lengths.csv",
+      "sourceUrl": "https://raw.githubusercontent.com/gumyr/cq_warehouse/main/src/cq_warehouse/nominal_screw_lengths.csv",
+      "bytes": 2062,
+      "sha256": "104e3ef1cfaacb1cd199255e8e4e744b9a942c5c6211268f188d4f5457e0e05a",
+      "immutableSourceUrl": "https://raw.githubusercontent.com/gumyr/cq_warehouse/a57bb7a24762d367d66369f280a24c38a64e73dd/src/cq_warehouse/nominal_screw_lengths.csv"
+    }
+  ],
+  "repositoryCommitObserved": "a57bb7a24762d367d66369f280a24c38a64e73dd",
+  "noticeFilesAtRepositoryRoot": [],
+  "immutableLicenseSourceUrl": "https://raw.githubusercontent.com/gumyr/cq_warehouse/a57bb7a24762d367d66369f280a24c38a64e73dd/LICENSE"
+}

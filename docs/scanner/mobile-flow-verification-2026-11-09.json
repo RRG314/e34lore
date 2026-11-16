@@ -1,0 +1,259 @@
+{
+  "date": "2026-11-09T15:03:20.104546+00:00",
+  "baseCommit": "1f6fcbe80b039a79a9d5bd7eb20107c800104271",
+  "branch": "steven/scanner-bearing-local",
+  "localOnly": true,
+  "pushed": false,
+  "published": false,
+  "sourceFilesSha256": "cab2d0295f3d37f375dc594e64c45b5966118ca33e100275030031d9066b5145",
+  "sourceFiles": [
+    {
+      "path": "app/scanner.css",
+      "sha256": "f1c4a029bd1d9272b1c8023f90bf0cb69ee5b549ea38446d12f423dc369d8334"
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "53a754dcdd6fdee77abe8890a1a75a208cb1af5df36e300059ac3270853f9ff5"
+    },
+    {
+      "path": "package.json",
+      "sha256": "3b51b0feb885ea1abcbaa715ab622e4eeffb92491bb5ce13d6361c282448d5ce"
+    },
+    {
+      "path": "scripts/prepare-scanner-models.mjs",
+      "sha256": "d9d02f44322095fc52dfd3df83238c0364c4a15ef97e0ad85fcad25aa5b597c8"
+    },
+    {
+      "path": "scripts/vite/scanner-runtime-plugin.ts",
+      "sha256": "1df3682908086f8cc7b3a712c896c2e692aea22a25c09689e5afe07ed16ffb16"
+    },
+    {
+      "path": "src/components/Shell.tsx",
+      "sha256": "b659710e2f80ffc89771e99bdc23058a4372dad799737079c96af351693bab9a"
+    },
+    {
+      "path": "src/data/roadmap.ts",
+      "sha256": "edfaff72cd063611a154b787a09a22075664a700dd27ef26b3203f16e2936e11"
+    },
+    {
+      "path": "src/digital-twin/public/CatalogProcedures.tsx",
+      "sha256": "fde142a2efa804e78573ed2a1665f78ab8e570ef69615af103b18d390a4b1c41"
+    },
+    {
+      "path": "src/digital-twin/public/ReferenceWorkshop.tsx",
+      "sha256": "6ab66a7c68222a202861360a5338d66f923856ad81c01c2b8b86f2ab46d3bbb8"
+    },
+    {
+      "path": "src/digital-twin/public/catalog.ts",
+      "sha256": "f74d9c374a3c68759544d13aee7824545fe5ddbf61a582fdd35aee42de10a881"
+    },
+    {
+      "path": "src/digital-twin/public/load-reference.ts",
+      "sha256": "65bfd37f43e786073e470aa89ae0cabde9ca618dd2140b3e2c0b9166a91db448"
+    },
+    {
+      "path": "src/digital-twin/public/renderer.ts",
+      "sha256": "98b85b82faaf0d8655c36ca35d23071c20af824a903444466040132bd68d7549"
+    },
+    {
+      "path": "src/graphics/sha256.ts",
+      "sha256": "c405d67ee9062ea822de53c30b04a8c3915f95022ebf2a6180f3dff2f8c75b8a"
+    },
+    {
+      "path": "src/repair/BearingInspection.tsx",
+      "sha256": "a86f7175cc30187c334146651baeaf297fc1ba695d95c32d5e67ff5cfb4a3258"
+    },
+    {
+      "path": "src/repair/BearingServiceReference.tsx",
+      "sha256": "75e3f175030e95c4caf397a18fdcbb7053075e7ed5b204ab293ebdc1cd58517f"
+    },
+    {
+      "path": "src/repair/bearing-inspection.ts",
+      "sha256": "9f260fab208fee6bfdd346a93e5a41be54fe923593113f7ca481bee17ec0eba1"
+    },
+    {
+      "path": "src/repair/use-journey.ts",
+      "sha256": "c3709bfb9e654b83b67980362af6dd590227ece51e280ce243bc9c21b0f15742"
+    },
+    {
+      "path": "src/scanner/FamilyResults.tsx",
+      "sha256": "eeb6d2ea31aeaf9d3c1a3bd6d40fe1f7c364cd3ca31f32a6feaa8b78cd98ba31"
+    },
+    {
+      "path": "src/scanner/History.tsx",
+      "sha256": "d67e8e55c28ec92ce1e46844cedaa7f1c9db171f09843d5dfe1a239720d54c0a"
+    },
+    {
+      "path": "src/scanner/ImageCapture.tsx",
+      "sha256": "7a8a01138106ce569b4832ecf7f03a65286ff7f4139c7e3672e398c7618f2427"
+    },
+    {
+      "path": "src/scanner/ScanPartReview.tsx",
+      "sha256": "b340346adae37c47a179c428e1ee47f5f93e9bc64d9f2ad1bf15a059d9fbc76a"
+    },
+    {
+      "path": "src/scanner/Scanner.tsx",
+      "sha256": "34662ae4d886acceff563d42bebb69b547549ff5c0301da2d9d088da6112749f"
+    },
+    {
+      "path": "src/scanner/families.ts",
+      "sha256": "8068583259639f9d86ab6f68341cfe8a58ec07b633c0b1ec6c13aa16041f6e82"
+    },
+    {
+      "path": "src/scanner/family-comparison.ts",
+      "sha256": "24474831622ca2b6675fd27345b6e8b1b75ccb57b3f8d0ca418614be6d7cda1e"
+    },
+    {
+      "path": "src/scanner/family-vectors.json",
+      "sha256": "7fb6dbc9692e8c41a4d4433544e3f0eb7b4a802cbe753c798921f4c097f3df11"
+    },
+    {
+      "path": "src/scanner/inference.ts",
+      "sha256": "96cf583e8a811b65d06bcfc408e1320e0bca5ac595d7e3666391f86fc2b3af25"
+    },
+    {
+      "path": "src/scanner/inference.worker.ts",
+      "sha256": "501a85fe237085f3e9b2fc6c65803fbcbcaa96da6311a0197e75d189c39245ea"
+    },
+    {
+      "path": "src/scanner/observation-evidence.ts",
+      "sha256": "3b60021308ee96e8ecacb93bbc3b40f55c012bd66a78fb540fb287480457a5d0"
+    },
+    {
+      "path": "src/scanner/photo-session.ts",
+      "sha256": "d01e362b72e6de5c2f7bc0af41dc3acabda626fdc9b4b0b93cc5844636437fca"
+    },
+    {
+      "path": "src/scanner/photo-storage.ts",
+      "sha256": "0f40dc5088ce8c69a99eef290bb4f99389607ce579aa8f685de34cb648e701d9"
+    },
+    {
+      "path": "src/scanner/use-photo-session.ts",
+      "sha256": "fb1eeafcbb3b7fcbef02f7589d39f89cb02d12236276c01a5caaf9b301336d6b"
+    },
+    {
+      "path": "src/servicing/part-location.ts",
+      "sha256": "1afd545e60df34967fc7022b9a3ad6bdfd55154580c8fce661ae42372cab95a1"
+    },
+    {
+      "path": "tests/release-http.mjs",
+      "sha256": "09e6f87739f06b646574ea53d5d64cdb1934afb308d8e31e4966a7fdb475f4ba"
+    },
+    {
+      "path": "tests/scanner-bearing.test.ts",
+      "sha256": "f765e46b44ea5d7b06671bdf491df0e917818fe2d264c99136a67376e2a2bf08"
+    },
+    {
+      "path": "tests/scanner-observation-evidence.test.ts",
+      "sha256": "5ed444a537476beaa7bfac6765d4f657b485cd8348eef535fd59eace538df266"
+    },
+    {
+      "path": "tests/scanner-part-location.test.ts",
+      "sha256": "5eaa6d9ca289c8efd95944c0e03739a2e7efe16bdb0f125dffddf08f973560ed"
+    },
+    {
+      "path": "tests/scanner-photo-session.test.ts",
+      "sha256": "ebab50e18bc1f75b5433e9ae9a31d8a0acc91caf73e9c9315caf2d903da7d09b"
+    },
+    {
+      "path": "tests/scanner-pipeline.sql",
+      "sha256": "f942317e64156049cf1b6fa59f20ce6e36d835b13f9188473bc9526d082c6bee"
+    },
+    {
+      "path": "tests/viewer-hash.test.ts",
+      "sha256": "f9e77004b1af6a6d4e35b570983fc2988616a8b224ebc383cf454053ec34e8aa"
+    },
+    {
+      "path": "tools/scanner/build-family-vectors.mjs",
+      "sha256": "f188a7174ff4aea68008983c486757406566a54dfad30577dc1932e8419823d1"
+    },
+    {
+      "path": "tools/scanner/evaluate-families.mjs",
+      "sha256": "ec84318af0d2cc4625cb68fecddb8269ed64dd7b144b2e290b72738c5e4637f4"
+    },
+    {
+      "path": "tools/scanner/fetch-family-evaluation.mjs",
+      "sha256": "883355a7058d41dff41c6e52d35b9081968fa26d2f00ac1220159c6a5aee01cf"
+    },
+    {
+      "path": "vite.config.ts",
+      "sha256": "b6f6a310c07bf06f8921e1a0c13f448bd1c094e46cb124534d2b88debfa9e624"
+    }
+  ],
+  "tests": {
+    "unit": 436,
+    "unitFiles": 47,
+    "python": 40,
+    "typecheck": "pass",
+    "focusedLint": "pass",
+    "isolatedSqlRlsAndRestore": "pass",
+    "productionBuild": "pass",
+    "releaseHttp": 19,
+    "securityHttp": 32,
+    "acceptedModelAndCatalogAssets": "unchanged",
+    "gitDiffCheck": "pass",
+    "fullRepositoryLint": "not claimed; inherited debt"
+  },
+  "browser": {
+    "computerUrl": "http://127.0.0.1:3010/scanner",
+    "phoneWifiUrl": "http://127.0.0.1:3010/scanner",
+    "browser": "Mac Chrome, LAN URL and 390px viewport; default desktop restored",
+    "photoSet": "three automatic photos retained after full reload",
+    "retainedContext": "comparison, canonical part, diagram source, reference model and notes",
+    "selectedPart": "bmw-26121226657",
+    "source": "1994 540i Sedan drive shaft/center bearing/CV assembly",
+    "reference": "e34-540i-sedan-automatic",
+    "diagram": "complete source drawing, position 06 selected, pan/zoom/expand controls",
+    "car": "source-backed assembly location; Inspect part isolates; Whole car restores assembled underbody view",
+    "repair": "shared ten-step written reference, tools, removal details, source-specific torque table; five-stage inspection remains distinct",
+    "physicalAndroidLatestRevision": "pending owner retest",
+    "authenticatedGarageSaveLatestRevision": "pending owner browser; existing schema/ownership contract passed isolated SQL tests"
+  },
+  "manual": {
+    "source": "owner-supplied Bentley E34 PDF",
+    "pages": [
+      "260-4",
+      "260-5",
+      "260-6",
+      "260-7",
+      "260-8"
+    ],
+    "renderedPagesReviewed": [
+      "260-6",
+      "260-7",
+      "260-8"
+    ],
+    "fullAnimatedBearingProcedure": false,
+    "boltRetainedHardwareDetails": "not established by circlip illustration"
+  },
+  "dataChanges": {
+    "hostedMigrations": false,
+    "hostedMemberWrites": false,
+    "productionFlags": false,
+    "photosUploaded": false,
+    "photosSavedToGarage": false,
+    "garagePayload": "private part reference/candidate and notes only"
+  },
+  "limits": {
+    "positiveConvenienceTop1": "3/9, unchanged",
+    "exactOemAcceptance": false,
+    "exactPartCad": false,
+    "releaseAccepted": false
+  },
+  "logs": [
+    "work/bearing-test/flow-unit-final.txt",
+    "work/bearing-test/python-tests.txt",
+    "work/bearing-test/flow-typecheck-final.txt",
+    "work/bearing-test/flow-lint-all.txt",
+    "work/bearing-test/flow-database-final.txt",
+    "work/bearing-test/flow-build-final.txt",
+    "work/bearing-test/flow-release-http-final.txt",
+    "work/bearing-test/flow-security-http-final.txt"
+  ],
+  "proof": [
+    "outputs/scanner-bearing-local/full-assembly-diagram.png",
+    "outputs/scanner-bearing-local/selected-car-location.png",
+    "outputs/scanner-bearing-local/mobile-bearing-service.png",
+    "outputs/scanner-bearing-local/mobile-isolated-location.png"
+  ]
+}

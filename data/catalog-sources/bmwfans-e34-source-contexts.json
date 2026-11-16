@@ -1,0 +1,1506 @@
+{
+  "schemaVersion": 1,
+  "source": "BMWFans",
+  "sourceUrl": "https://bmwfans.info/parts-catalog/E34/",
+  "httpStatus": 200,
+  "sourceHtmlSha256": "377f096bb2a752a52cf41fa7f39041a5a96238d9cb5f46a400c6c7beb8eb8bfe",
+  "parseMethod": "Locate var data =, decode the JSON value with Python json.JSONDecoder.raw_decode; no eval or JavaScript execution.",
+  "contextCount": 49,
+  "contexts": [
+    {
+      "platform": "E34",
+      "body": "Sedan",
+      "bodyCode": "LIM",
+      "region": "Europe",
+      "regionCode": "ECE",
+      "model": "518i",
+      "engineFamily": "M40",
+      "sourceSelectorIdentity": "518i|M40|518i-M40",
+      "modelSelectionUrl": "https://bmwfans.info/parts-catalog/E34-Sedan/Europe/518i-M40",
+      "urlEvidence": "Assembled only from public selector-data URL fields; individual HTTP route not verified.",
+      "selectorYearChoices": [
+        1989,
+        1990,
+        1991,
+        1992,
+        1993,
+        1994
+      ],
+      "yearMeaning": "Calendar-year choices in this catalog selector; not certified production dates or U.S. model-year applicability.",
+      "steeringCodes": [
+        "N",
+        "L",
+        "R"
+      ],
+      "transmissionCodes": [
+        "N",
+        "M",
+        "A"
+      ],
+      "fitmentStatus": "not evaluated",
+      "partLeafDataFetched": false
+    },
+    {
+      "platform": "E34",
+      "body": "Sedan",
+      "bodyCode": "LIM",
+      "region": "Europe",
+      "regionCode": "ECE",
+      "model": "518i",
+      "engineFamily": "M43",
+      "sourceSelectorIdentity": "518i|M43|518i-M43",
+      "modelSelectionUrl": "https://bmwfans.info/parts-catalog/E34-Sedan/Europe/518i-M43",
+      "urlEvidence": "Assembled only from public selector-data URL fields; individual HTTP route not verified.",
+      "selectorYearChoices": [
+        1990,
+        1993,
+        1994,
+        1995
+      ],
+      "yearMeaning": "Calendar-year choices in this catalog selector; not certified production dates or U.S. model-year applicability.",
+      "steeringCodes": [
+        "N",
+        "L",
+        "R"
+      ],
+      "transmissionCodes": [
+        "N",
+        "M",
+        "A"
+      ],
+      "fitmentStatus": "not evaluated",
+      "partLeafDataFetched": false
+    },
+    {
+      "platform": "E34",
+      "body": "Sedan",
+      "bodyCode": "LIM",
+      "region": "Europe",
+      "regionCode": "ECE",
+      "model": "520i",
+      "engineFamily": "M20",
+      "sourceSelectorIdentity": "520i|M20|520i-M20",
+      "modelSelectionUrl": "https://bmwfans.info/parts-catalog/E34-Sedan/Europe/520i-M20",
+      "urlEvidence": "Assembled only from public selector-data URL fields; individual HTTP route not verified.",
+      "selectorYearChoices": [
+        1987,
+        1988,
+        1989,
+        1990
+      ],
+      "yearMeaning": "Calendar-year choices in this catalog selector; not certified production dates or U.S. model-year applicability.",
+      "steeringCodes": [
+        "N",
+        "L",
+        "R"
+      ],
+      "transmissionCodes": [
+        "N",
+        "M",
+        "A"
+      ],
+      "fitmentStatus": "not evaluated",
+      "partLeafDataFetched": false
+    },
+    {
+      "platform": "E34",
+      "body": "Sedan",
+      "bodyCode": "LIM",
+      "region": "Europe",
+      "regionCode": "ECE",
+      "model": "520i",
+      "engineFamily": "M50",
+      "sourceSelectorIdentity": "520i|M50|520i-M50",
+      "modelSelectionUrl": "https://bmwfans.info/parts-catalog/E34-Sedan/Europe/520i-M50",
+      "urlEvidence": "Assembled only from public selector-data URL fields; individual HTTP route not verified.",
+      "selectorYearChoices": [
+        1989,
+        1990,
+        1991,
+        1992,
+        1993,
+        1994,
+        1995
+      ],
+      "yearMeaning": "Calendar-year choices in this catalog selector; not certified production dates or U.S. model-year applicability.",
+      "steeringCodes": [
+        "N",
+        "L",
+        "R"
+      ],
+      "transmissionCodes": [
+        "N",
+        "M",
+        "A"
+      ],
+      "fitmentStatus": "not evaluated",
+      "partLeafDataFetched": false
+    },
+    {
+      "platform": "E34",
+      "body": "Sedan",
+      "bodyCode": "LIM",
+      "region": "Europe",
+      "regionCode": "ECE",
+      "model": "524td",
+      "engineFamily": "M21",
+      "sourceSelectorIdentity": "524td|M21|524td-M21",
+      "modelSelectionUrl": "https://bmwfans.info/parts-catalog/E34-Sedan/Europe/524td-M21",
+      "urlEvidence": "Assembled only from public selector-data URL fields; individual HTTP route not verified.",
+      "selectorYearChoices": [
+        1987,
+        1988,
+        1989,
+        1990,
+        1991
+      ],
+      "yearMeaning": "Calendar-year choices in this catalog selector; not certified production dates or U.S. model-year applicability.",
+      "steeringCodes": [
+        "L"
+      ],
+      "transmissionCodes": [
+        "N",
+        "M",
+        "A"
+      ],
+      "fitmentStatus": "not evaluated",
+      "partLeafDataFetched": false
+    },
+    {
+      "platform": "E34",
+      "body": "Sedan",
+      "bodyCode": "LIM",
+      "region": "Europe",
+      "regionCode": "ECE",
+      "model": "525i",
+      "engineFamily": "M20",
+      "sourceSelectorIdentity": "525i|M20|525i-M20",
+      "modelSelectionUrl": "https://bmwfans.info/parts-catalog/E34-Sedan/Europe/525i-M20",
+      "urlEvidence": "Assembled only from public selector-data URL fields; individual HTTP route not verified.",
+      "selectorYearChoices": [
+        1987,
+        1988,
+        1989,
+        1990
+      ],
+      "yearMeaning": "Calendar-year choices in this catalog selector; not certified production dates or U.S. model-year applicability.",
+      "steeringCodes": [
+        "N",
+        "L",
+        "R"
+      ],
+      "transmissionCodes": [
+        "N",
+        "M",
+        "A"
+      ],
+      "fitmentStatus": "not evaluated",
+      "partLeafDataFetched": false
+    },
+    {
+      "platform": "E34",
+      "body": "Sedan",
+      "bodyCode": "LIM",
+      "region": "Europe",
+      "regionCode": "ECE",
+      "model": "525i",
+      "engineFamily": "M50",
+      "sourceSelectorIdentity": "525i|M50|525i-M50",
+      "modelSelectionUrl": "https://bmwfans.info/parts-catalog/E34-Sedan/Europe/525i-M50",
+      "urlEvidence": "Assembled only from public selector-data URL fields; individual HTTP route not verified.",
+      "selectorYearChoices": [
+        1989,
+        1990,
+        1991,
+        1992,
+        1993,
+        1994,
+        1995
+      ],
+      "yearMeaning": "Calendar-year choices in this catalog selector; not certified production dates or U.S. model-year applicability.",
+      "steeringCodes": [
+        "N",
+        "L",
+        "R"
+      ],
+      "transmissionCodes": [
+        "N",
+        "M",
+        "A"
+      ],
+      "fitmentStatus": "not evaluated",
+      "partLeafDataFetched": false
+    },
+    {
+      "platform": "E34",
+      "body": "Sedan",
+      "bodyCode": "LIM",
+      "region": "Europe",
+      "regionCode": "ECE",
+      "model": "525ix",
+      "engineFamily": "M50",
+      "sourceSelectorIdentity": "525ix|M50|525ix-M50",
+      "modelSelectionUrl": "https://bmwfans.info/parts-catalog/E34-Sedan/Europe/525ix-M50",
+      "urlEvidence": "Assembled only from public selector-data URL fields; individual HTTP route not verified.",
+      "selectorYearChoices": [
+        1991,
+        1992,
+        1993,
+        1994,
+        1995
+      ],
+      "yearMeaning": "Calendar-year choices in this catalog selector; not certified production dates or U.S. model-year applicability.",
+      "steeringCodes": [
+        "N",
+        "L",
+        "R"
+      ],
+      "transmissionCodes": [
+        "N",
+        "M",
+        "A"
+      ],
+      "fitmentStatus": "not evaluated",
+      "partLeafDataFetched": false
+    },
+    {
+      "platform": "E34",
+      "body": "Sedan",
+      "bodyCode": "LIM",
+      "region": "Europe",
+      "regionCode": "ECE",
+      "model": "525td",
+      "engineFamily": "M51",
+      "sourceSelectorIdentity": "525td|M51|525td-M51",
+      "modelSelectionUrl": "https://bmwfans.info/parts-catalog/E34-Sedan/Europe/525td-M51",
+      "urlEvidence": "Assembled only from public selector-data URL fields; individual HTTP route not verified.",
+      "selectorYearChoices": [
+        1992,
+        1993,
+        1994,
+        1995
+      ],
+      "yearMeaning": "Calendar-year choices in this catalog selector; not certified production dates or U.S. model-year applicability.",
+      "steeringCodes": [
+        "N",
+        "L",
+        "R"
+      ],
+      "transmissionCodes": [
+        "N",
+        "M",
+        "A"
+      ],
+      "fitmentStatus": "not evaluated",
+      "partLeafDataFetched": false
+    },
+    {
+      "platform": "E34",
+      "body": "Sedan",
+      "bodyCode": "LIM",
+      "region": "Europe",
+      "regionCode": "ECE",
+      "model": "525tds",
+      "engineFamily": "M51",
+      "sourceSelectorIdentity": "525tds|M51|525tds-M51",
+      "modelSelectionUrl": "https://bmwfans.info/parts-catalog/E34-Sedan/Europe/525tds-M51",
+      "urlEvidence": "Assembled only from public selector-data URL fields; individual HTTP route not verified.",
+      "selectorYearChoices": [
+        1990,
+        1991,
+        1992,
+        1993,
+        1994,
+        1995
+      ],
+      "yearMeaning": "Calendar-year choices in this catalog selector; not certified production dates or U.S. model-year applicability.",
+      "steeringCodes": [
+        "N",
+        "L",
+        "R"
+      ],
+      "transmissionCodes": [
+        "N",
+        "A",
+        "M"
+      ],
+      "fitmentStatus": "not evaluated",
+      "partLeafDataFetched": false
+    },
+    {
+      "platform": "E34",
+      "body": "Sedan",
+      "bodyCode": "LIM",
+      "region": "Europe",
+      "regionCode": "ECE",
+      "model": "530i",
+      "engineFamily": "M30",
+      "sourceSelectorIdentity": "530i|M30|530i-M30",
+      "modelSelectionUrl": "https://bmwfans.info/parts-catalog/E34-Sedan/Europe/530i-M30",
+      "urlEvidence": "Assembled only from public selector-data URL fields; individual HTTP route not verified.",
+      "selectorYearChoices": [
+        1987,
+        1988,
+        1989,
+        1990
+      ],
+      "yearMeaning": "Calendar-year choices in this catalog selector; not certified production dates or U.S. model-year applicability.",
+      "steeringCodes": [
+        "N",
+        "L",
+        "R"
+      ],
+      "transmissionCodes": [
+        "N",
+        "M",
+        "A"
+      ],
+      "fitmentStatus": "not evaluated",
+      "partLeafDataFetched": false
+    },
+    {
+      "platform": "E34",
+      "body": "Sedan",
+      "bodyCode": "LIM",
+      "region": "Europe",
+      "regionCode": "ECE",
+      "model": "530i",
+      "engineFamily": "M60",
+      "sourceSelectorIdentity": "530i|M60|530i-M60",
+      "modelSelectionUrl": "https://bmwfans.info/parts-catalog/E34-Sedan/Europe/530i-M60",
+      "urlEvidence": "Assembled only from public selector-data URL fields; individual HTTP route not verified.",
+      "selectorYearChoices": [
+        1992,
+        1993,
+        1994,
+        1995
+      ],
+      "yearMeaning": "Calendar-year choices in this catalog selector; not certified production dates or U.S. model-year applicability.",
+      "steeringCodes": [
+        "N",
+        "L",
+        "R"
+      ],
+      "transmissionCodes": [
+        "N",
+        "M",
+        "A"
+      ],
+      "fitmentStatus": "not evaluated",
+      "partLeafDataFetched": false
+    },
+    {
+      "platform": "E34",
+      "body": "Sedan",
+      "bodyCode": "LIM",
+      "region": "Europe",
+      "regionCode": "ECE",
+      "model": "535i",
+      "engineFamily": "M30",
+      "sourceSelectorIdentity": "535i|M30|535i-M30",
+      "modelSelectionUrl": "https://bmwfans.info/parts-catalog/E34-Sedan/Europe/535i-M30",
+      "urlEvidence": "Assembled only from public selector-data URL fields; individual HTTP route not verified.",
+      "selectorYearChoices": [
+        1987,
+        1988,
+        1989,
+        1990,
+        1991,
+        1992,
+        1993
+      ],
+      "yearMeaning": "Calendar-year choices in this catalog selector; not certified production dates or U.S. model-year applicability.",
+      "steeringCodes": [
+        "N",
+        "L",
+        "R"
+      ],
+      "transmissionCodes": [
+        "N",
+        "M",
+        "A"
+      ],
+      "fitmentStatus": "not evaluated",
+      "partLeafDataFetched": false
+    },
+    {
+      "platform": "E34",
+      "body": "Sedan",
+      "bodyCode": "LIM",
+      "region": "Europe",
+      "regionCode": "ECE",
+      "model": "540i",
+      "engineFamily": "M60",
+      "sourceSelectorIdentity": "540i|M60|540i-M60",
+      "modelSelectionUrl": "https://bmwfans.info/parts-catalog/E34-Sedan/Europe/540i-M60",
+      "urlEvidence": "Assembled only from public selector-data URL fields; individual HTTP route not verified.",
+      "selectorYearChoices": [
+        1992,
+        1993,
+        1994,
+        1995
+      ],
+      "yearMeaning": "Calendar-year choices in this catalog selector; not certified production dates or U.S. model-year applicability.",
+      "steeringCodes": [
+        "N",
+        "L",
+        "R"
+      ],
+      "transmissionCodes": [
+        "N",
+        "M",
+        "A"
+      ],
+      "fitmentStatus": "not evaluated",
+      "partLeafDataFetched": false
+    },
+    {
+      "platform": "E34",
+      "body": "Sedan",
+      "bodyCode": "LIM",
+      "region": "Europe",
+      "regionCode": "ECE",
+      "model": "M5 3.6",
+      "engineFamily": "S38",
+      "sourceSelectorIdentity": "<m>/</m>M5 3.6|S38|M5_3.6-S38",
+      "modelSelectionUrl": "https://bmwfans.info/parts-catalog/E34-Sedan/Europe/M5_3.6-S38",
+      "urlEvidence": "Assembled only from public selector-data URL fields; individual HTTP route not verified.",
+      "selectorYearChoices": [
+        1988,
+        1989,
+        1990,
+        1991,
+        1992
+      ],
+      "yearMeaning": "Calendar-year choices in this catalog selector; not certified production dates or U.S. model-year applicability.",
+      "steeringCodes": [
+        "N",
+        "L",
+        "R"
+      ],
+      "transmissionCodes": [
+        "M"
+      ],
+      "fitmentStatus": "not evaluated",
+      "partLeafDataFetched": false
+    },
+    {
+      "platform": "E34",
+      "body": "Sedan",
+      "bodyCode": "LIM",
+      "region": "Europe",
+      "regionCode": "ECE",
+      "model": "M5 3.8",
+      "engineFamily": "S38",
+      "sourceSelectorIdentity": "<m>/</m>M5 3.8|S38|M5_3.8-S38",
+      "modelSelectionUrl": "https://bmwfans.info/parts-catalog/E34-Sedan/Europe/M5_3.8-S38",
+      "urlEvidence": "Assembled only from public selector-data URL fields; individual HTTP route not verified.",
+      "selectorYearChoices": [
+        1991,
+        1992,
+        1993,
+        1994,
+        1995
+      ],
+      "yearMeaning": "Calendar-year choices in this catalog selector; not certified production dates or U.S. model-year applicability.",
+      "steeringCodes": [
+        "N",
+        "L",
+        "R"
+      ],
+      "transmissionCodes": [
+        "M"
+      ],
+      "fitmentStatus": "not evaluated",
+      "partLeafDataFetched": false
+    },
+    {
+      "platform": "E34",
+      "body": "Sedan",
+      "bodyCode": "LIM",
+      "region": "USA",
+      "regionCode": "USA",
+      "model": "525i",
+      "engineFamily": "M20",
+      "sourceSelectorIdentity": "525i|M20|525i-M20",
+      "modelSelectionUrl": "https://bmwfans.info/parts-catalog/E34-Sedan/USA/525i-M20",
+      "urlEvidence": "Assembled only from public selector-data URL fields; individual HTTP route not verified.",
+      "selectorYearChoices": [
+        1988,
+        1989,
+        1990
+      ],
+      "yearMeaning": "Calendar-year choices in this catalog selector; not certified production dates or U.S. model-year applicability.",
+      "steeringCodes": [
+        "L"
+      ],
+      "transmissionCodes": [
+        "N",
+        "M",
+        "A"
+      ],
+      "fitmentStatus": "not evaluated",
+      "partLeafDataFetched": false
+    },
+    {
+      "platform": "E34",
+      "body": "Sedan",
+      "bodyCode": "LIM",
+      "region": "USA",
+      "regionCode": "USA",
+      "model": "525i",
+      "engineFamily": "M50",
+      "sourceSelectorIdentity": "525i|M50|525i-M50",
+      "modelSelectionUrl": "https://bmwfans.info/parts-catalog/E34-Sedan/USA/525i-M50",
+      "urlEvidence": "Assembled only from public selector-data URL fields; individual HTTP route not verified.",
+      "selectorYearChoices": [
+        1990,
+        1991,
+        1992,
+        1993,
+        1994,
+        1995
+      ],
+      "yearMeaning": "Calendar-year choices in this catalog selector; not certified production dates or U.S. model-year applicability.",
+      "steeringCodes": [
+        "L"
+      ],
+      "transmissionCodes": [
+        "N",
+        "M",
+        "A"
+      ],
+      "fitmentStatus": "not evaluated",
+      "partLeafDataFetched": false
+    },
+    {
+      "platform": "E34",
+      "body": "Sedan",
+      "bodyCode": "LIM",
+      "region": "USA",
+      "regionCode": "USA",
+      "model": "530i",
+      "engineFamily": "M60",
+      "sourceSelectorIdentity": "530i|M60|530i-M60",
+      "modelSelectionUrl": "https://bmwfans.info/parts-catalog/E34-Sedan/USA/530i-M60",
+      "urlEvidence": "Assembled only from public selector-data URL fields; individual HTTP route not verified.",
+      "selectorYearChoices": [
+        1992,
+        1993,
+        1994,
+        1995
+      ],
+      "yearMeaning": "Calendar-year choices in this catalog selector; not certified production dates or U.S. model-year applicability.",
+      "steeringCodes": [
+        "L"
+      ],
+      "transmissionCodes": [
+        "N",
+        "M",
+        "A"
+      ],
+      "fitmentStatus": "not evaluated",
+      "partLeafDataFetched": false
+    },
+    {
+      "platform": "E34",
+      "body": "Sedan",
+      "bodyCode": "LIM",
+      "region": "USA",
+      "regionCode": "USA",
+      "model": "535i",
+      "engineFamily": "M30",
+      "sourceSelectorIdentity": "535i|M30|535i-M30",
+      "modelSelectionUrl": "https://bmwfans.info/parts-catalog/E34-Sedan/USA/535i-M30",
+      "urlEvidence": "Assembled only from public selector-data URL fields; individual HTTP route not verified.",
+      "selectorYearChoices": [
+        1988,
+        1989,
+        1990,
+        1991,
+        1992,
+        1993
+      ],
+      "yearMeaning": "Calendar-year choices in this catalog selector; not certified production dates or U.S. model-year applicability.",
+      "steeringCodes": [
+        "L"
+      ],
+      "transmissionCodes": [
+        "N",
+        "M",
+        "A"
+      ],
+      "fitmentStatus": "not evaluated",
+      "partLeafDataFetched": false
+    },
+    {
+      "platform": "E34",
+      "body": "Sedan",
+      "bodyCode": "LIM",
+      "region": "USA",
+      "regionCode": "USA",
+      "model": "540i",
+      "engineFamily": "M60",
+      "sourceSelectorIdentity": "540i|M60|540i-M60",
+      "modelSelectionUrl": "https://bmwfans.info/parts-catalog/E34-Sedan/USA/540i-M60",
+      "urlEvidence": "Assembled only from public selector-data URL fields; individual HTTP route not verified.",
+      "selectorYearChoices": [
+        1992,
+        1993,
+        1994,
+        1995
+      ],
+      "yearMeaning": "Calendar-year choices in this catalog selector; not certified production dates or U.S. model-year applicability.",
+      "steeringCodes": [
+        "L"
+      ],
+      "transmissionCodes": [
+        "N",
+        "M",
+        "A"
+      ],
+      "fitmentStatus": "not evaluated",
+      "partLeafDataFetched": false
+    },
+    {
+      "platform": "E34",
+      "body": "Sedan",
+      "bodyCode": "LIM",
+      "region": "USA",
+      "regionCode": "USA",
+      "model": "M5 3.6",
+      "engineFamily": "S38",
+      "sourceSelectorIdentity": "<m>/</m>M5 3.6|S38|M5_3.6-S38",
+      "modelSelectionUrl": "https://bmwfans.info/parts-catalog/E34-Sedan/USA/M5_3.6-S38",
+      "urlEvidence": "Assembled only from public selector-data URL fields; individual HTTP route not verified.",
+      "selectorYearChoices": [
+        1989,
+        1990,
+        1991,
+        1992,
+        1993
+      ],
+      "yearMeaning": "Calendar-year choices in this catalog selector; not certified production dates or U.S. model-year applicability.",
+      "steeringCodes": [
+        "L"
+      ],
+      "transmissionCodes": [
+        "M"
+      ],
+      "fitmentStatus": "not evaluated",
+      "partLeafDataFetched": false
+    },
+    {
+      "platform": "E34",
+      "body": "Sedan",
+      "bodyCode": "LIM",
+      "region": "Japan",
+      "regionCode": "JAP",
+      "model": "520i",
+      "engineFamily": "M50",
+      "sourceSelectorIdentity": "520i|M50|520i-M50",
+      "modelSelectionUrl": "https://bmwfans.info/parts-catalog/E34-Sedan/Japan/520i-M50",
+      "urlEvidence": "Assembled only from public selector-data URL fields; individual HTTP route not verified.",
+      "selectorYearChoices": [
+        1990,
+        1991,
+        1992,
+        1993,
+        1994,
+        1995
+      ],
+      "yearMeaning": "Calendar-year choices in this catalog selector; not certified production dates or U.S. model-year applicability.",
+      "steeringCodes": [
+        "R"
+      ],
+      "transmissionCodes": [
+        "A"
+      ],
+      "fitmentStatus": "not evaluated",
+      "partLeafDataFetched": false
+    },
+    {
+      "platform": "E34",
+      "body": "Sedan",
+      "bodyCode": "LIM",
+      "region": "Japan",
+      "regionCode": "JAP",
+      "model": "525i",
+      "engineFamily": "M20",
+      "sourceSelectorIdentity": "525i|M20|525i-M20",
+      "modelSelectionUrl": "https://bmwfans.info/parts-catalog/E34-Sedan/Japan/525i-M20",
+      "urlEvidence": "Assembled only from public selector-data URL fields; individual HTTP route not verified.",
+      "selectorYearChoices": [
+        1987,
+        1988,
+        1989,
+        1990
+      ],
+      "yearMeaning": "Calendar-year choices in this catalog selector; not certified production dates or U.S. model-year applicability.",
+      "steeringCodes": [
+        "N",
+        "L",
+        "R"
+      ],
+      "transmissionCodes": [
+        "A"
+      ],
+      "fitmentStatus": "not evaluated",
+      "partLeafDataFetched": false
+    },
+    {
+      "platform": "E34",
+      "body": "Sedan",
+      "bodyCode": "LIM",
+      "region": "Japan",
+      "regionCode": "JAP",
+      "model": "525i",
+      "engineFamily": "M50",
+      "sourceSelectorIdentity": "525i|M50|525i-M50",
+      "modelSelectionUrl": "https://bmwfans.info/parts-catalog/E34-Sedan/Japan/525i-M50",
+      "urlEvidence": "Assembled only from public selector-data URL fields; individual HTTP route not verified.",
+      "selectorYearChoices": [
+        1989,
+        1990,
+        1991,
+        1992,
+        1993,
+        1994,
+        1995
+      ],
+      "yearMeaning": "Calendar-year choices in this catalog selector; not certified production dates or U.S. model-year applicability.",
+      "steeringCodes": [
+        "N",
+        "L",
+        "R"
+      ],
+      "transmissionCodes": [
+        "A"
+      ],
+      "fitmentStatus": "not evaluated",
+      "partLeafDataFetched": false
+    },
+    {
+      "platform": "E34",
+      "body": "Sedan",
+      "bodyCode": "LIM",
+      "region": "Japan",
+      "regionCode": "JAP",
+      "model": "535i",
+      "engineFamily": "M30",
+      "sourceSelectorIdentity": "535i|M30|535i-M30",
+      "modelSelectionUrl": "https://bmwfans.info/parts-catalog/E34-Sedan/Japan/535i-M30",
+      "urlEvidence": "Assembled only from public selector-data URL fields; individual HTTP route not verified.",
+      "selectorYearChoices": [
+        1987,
+        1988,
+        1989,
+        1990,
+        1991,
+        1992
+      ],
+      "yearMeaning": "Calendar-year choices in this catalog selector; not certified production dates or U.S. model-year applicability.",
+      "steeringCodes": [
+        "L"
+      ],
+      "transmissionCodes": [
+        "A"
+      ],
+      "fitmentStatus": "not evaluated",
+      "partLeafDataFetched": false
+    },
+    {
+      "platform": "E34",
+      "body": "Sedan",
+      "bodyCode": "LIM",
+      "region": "Japan",
+      "regionCode": "JAP",
+      "model": "M5 3.6",
+      "engineFamily": "S38",
+      "sourceSelectorIdentity": "<m>/</m>M5 3.6|S38|M5_3.6-S38",
+      "modelSelectionUrl": "https://bmwfans.info/parts-catalog/E34-Sedan/Japan/M5_3.6-S38",
+      "urlEvidence": "Assembled only from public selector-data URL fields; individual HTTP route not verified.",
+      "selectorYearChoices": [
+        1988,
+        1989,
+        1990,
+        1991,
+        1992
+      ],
+      "yearMeaning": "Calendar-year choices in this catalog selector; not certified production dates or U.S. model-year applicability.",
+      "steeringCodes": [
+        "L"
+      ],
+      "transmissionCodes": [
+        "M"
+      ],
+      "fitmentStatus": "not evaluated",
+      "partLeafDataFetched": false
+    },
+    {
+      "platform": "E34",
+      "body": "Sedan",
+      "bodyCode": "LIM",
+      "region": "Japan",
+      "regionCode": "JAP",
+      "model": "M5 3.8",
+      "engineFamily": "S38",
+      "sourceSelectorIdentity": "<m>/</m>M5 3.8|S38|M5_3.8-S38",
+      "modelSelectionUrl": "https://bmwfans.info/parts-catalog/E34-Sedan/Japan/M5_3.8-S38",
+      "urlEvidence": "Assembled only from public selector-data URL fields; individual HTTP route not verified.",
+      "selectorYearChoices": [
+        1991,
+        1992,
+        1993,
+        1994,
+        1995
+      ],
+      "yearMeaning": "Calendar-year choices in this catalog selector; not certified production dates or U.S. model-year applicability.",
+      "steeringCodes": [
+        "L"
+      ],
+      "transmissionCodes": [
+        "M"
+      ],
+      "fitmentStatus": "not evaluated",
+      "partLeafDataFetched": false
+    },
+    {
+      "platform": "E34",
+      "body": "Sedan",
+      "bodyCode": "LIM",
+      "region": "Thailand",
+      "regionCode": "THA",
+      "model": "525i",
+      "engineFamily": "M50",
+      "sourceSelectorIdentity": "525i|M50|525i-M50",
+      "modelSelectionUrl": "https://bmwfans.info/parts-catalog/E34-Sedan/Thailand/525i-M50",
+      "urlEvidence": "Assembled only from public selector-data URL fields; individual HTTP route not verified.",
+      "selectorYearChoices": [
+        1990,
+        1991,
+        1992,
+        1993,
+        1994,
+        1995,
+        1996
+      ],
+      "yearMeaning": "Calendar-year choices in this catalog selector; not certified production dates or U.S. model-year applicability.",
+      "steeringCodes": [
+        "R"
+      ],
+      "transmissionCodes": [
+        "A"
+      ],
+      "fitmentStatus": "not evaluated",
+      "partLeafDataFetched": false
+    },
+    {
+      "platform": "E34",
+      "body": "Sedan",
+      "bodyCode": "LIM",
+      "region": "South Africa",
+      "regionCode": "ZA",
+      "model": "520i",
+      "engineFamily": "M50",
+      "sourceSelectorIdentity": "520i|M50|520i-M50",
+      "modelSelectionUrl": "https://bmwfans.info/parts-catalog/E34-Sedan/South_Africa/520i-M50",
+      "urlEvidence": "Assembled only from public selector-data URL fields; individual HTTP route not verified.",
+      "selectorYearChoices": [
+        1990,
+        1991,
+        1992,
+        1993
+      ],
+      "yearMeaning": "Calendar-year choices in this catalog selector; not certified production dates or U.S. model-year applicability.",
+      "steeringCodes": [
+        "R"
+      ],
+      "transmissionCodes": [
+        "N",
+        "M",
+        "A"
+      ],
+      "fitmentStatus": "not evaluated",
+      "partLeafDataFetched": false
+    },
+    {
+      "platform": "E34",
+      "body": "Sedan",
+      "bodyCode": "LIM",
+      "region": "South Africa",
+      "regionCode": "ZA",
+      "model": "525i",
+      "engineFamily": "M20",
+      "sourceSelectorIdentity": "525i|M20|525i-M20",
+      "modelSelectionUrl": "https://bmwfans.info/parts-catalog/E34-Sedan/South_Africa/525i-M20",
+      "urlEvidence": "Assembled only from public selector-data URL fields; individual HTTP route not verified.",
+      "selectorYearChoices": [
+        1988,
+        1989,
+        1990
+      ],
+      "yearMeaning": "Calendar-year choices in this catalog selector; not certified production dates or U.S. model-year applicability.",
+      "steeringCodes": [
+        "R"
+      ],
+      "transmissionCodes": [
+        "N",
+        "M",
+        "A"
+      ],
+      "fitmentStatus": "not evaluated",
+      "partLeafDataFetched": false
+    },
+    {
+      "platform": "E34",
+      "body": "Sedan",
+      "bodyCode": "LIM",
+      "region": "South Africa",
+      "regionCode": "ZA",
+      "model": "525i",
+      "engineFamily": "M50",
+      "sourceSelectorIdentity": "525i|M50|525i-M50",
+      "modelSelectionUrl": "https://bmwfans.info/parts-catalog/E34-Sedan/South_Africa/525i-M50",
+      "urlEvidence": "Assembled only from public selector-data URL fields; individual HTTP route not verified.",
+      "selectorYearChoices": [
+        1990,
+        1991,
+        1992,
+        1993,
+        1994,
+        1995,
+        1996
+      ],
+      "yearMeaning": "Calendar-year choices in this catalog selector; not certified production dates or U.S. model-year applicability.",
+      "steeringCodes": [
+        "R"
+      ],
+      "transmissionCodes": [
+        "N",
+        "M",
+        "A"
+      ],
+      "fitmentStatus": "not evaluated",
+      "partLeafDataFetched": false
+    },
+    {
+      "platform": "E34",
+      "body": "Sedan",
+      "bodyCode": "LIM",
+      "region": "South Africa",
+      "regionCode": "ZA",
+      "model": "530i",
+      "engineFamily": "M60",
+      "sourceSelectorIdentity": "530i|M60|530i-M60",
+      "modelSelectionUrl": "https://bmwfans.info/parts-catalog/E34-Sedan/South_Africa/530i-M60",
+      "urlEvidence": "Assembled only from public selector-data URL fields; individual HTTP route not verified.",
+      "selectorYearChoices": [
+        1992,
+        1993,
+        1994,
+        1995,
+        1996
+      ],
+      "yearMeaning": "Calendar-year choices in this catalog selector; not certified production dates or U.S. model-year applicability.",
+      "steeringCodes": [
+        "R"
+      ],
+      "transmissionCodes": [
+        "N",
+        "M",
+        "A"
+      ],
+      "fitmentStatus": "not evaluated",
+      "partLeafDataFetched": false
+    },
+    {
+      "platform": "E34",
+      "body": "Sedan",
+      "bodyCode": "LIM",
+      "region": "South Africa",
+      "regionCode": "ZA",
+      "model": "535i",
+      "engineFamily": "M30",
+      "sourceSelectorIdentity": "535i|M30|535i-M30",
+      "modelSelectionUrl": "https://bmwfans.info/parts-catalog/E34-Sedan/South_Africa/535i-M30",
+      "urlEvidence": "Assembled only from public selector-data URL fields; individual HTTP route not verified.",
+      "selectorYearChoices": [
+        1988,
+        1989,
+        1990,
+        1991,
+        1992,
+        1993
+      ],
+      "yearMeaning": "Calendar-year choices in this catalog selector; not certified production dates or U.S. model-year applicability.",
+      "steeringCodes": [
+        "R"
+      ],
+      "transmissionCodes": [
+        "N",
+        "M",
+        "A"
+      ],
+      "fitmentStatus": "not evaluated",
+      "partLeafDataFetched": false
+    },
+    {
+      "platform": "E34",
+      "body": "Sedan",
+      "bodyCode": "LIM",
+      "region": "South Africa",
+      "regionCode": "ZA",
+      "model": "540i",
+      "engineFamily": "M60",
+      "sourceSelectorIdentity": "540i|M60|540i-M60",
+      "modelSelectionUrl": "https://bmwfans.info/parts-catalog/E34-Sedan/South_Africa/540i-M60",
+      "urlEvidence": "Assembled only from public selector-data URL fields; individual HTTP route not verified.",
+      "selectorYearChoices": [
+        1992,
+        1993,
+        1994,
+        1995,
+        1996
+      ],
+      "yearMeaning": "Calendar-year choices in this catalog selector; not certified production dates or U.S. model-year applicability.",
+      "steeringCodes": [
+        "R"
+      ],
+      "transmissionCodes": [
+        "N",
+        "A",
+        "M"
+      ],
+      "fitmentStatus": "not evaluated",
+      "partLeafDataFetched": false
+    },
+    {
+      "platform": "E34",
+      "body": "Sedan",
+      "bodyCode": "LIM",
+      "region": "South Africa",
+      "regionCode": "ZA",
+      "model": "M5 3.6",
+      "engineFamily": "S38",
+      "sourceSelectorIdentity": "<m>/</m>M5 3.6|S38|M5_3.6-S38",
+      "modelSelectionUrl": "https://bmwfans.info/parts-catalog/E34-Sedan/South_Africa/M5_3.6-S38",
+      "urlEvidence": "Assembled only from public selector-data URL fields; individual HTTP route not verified.",
+      "selectorYearChoices": [
+        1990,
+        1991,
+        1992,
+        1993
+      ],
+      "yearMeaning": "Calendar-year choices in this catalog selector; not certified production dates or U.S. model-year applicability.",
+      "steeringCodes": [
+        "R"
+      ],
+      "transmissionCodes": [
+        "M"
+      ],
+      "fitmentStatus": "not evaluated",
+      "partLeafDataFetched": false
+    },
+    {
+      "platform": "E34",
+      "body": "Touring",
+      "bodyCode": "TOU",
+      "region": "Europe",
+      "regionCode": "ECE",
+      "model": "518g",
+      "engineFamily": "M43",
+      "sourceSelectorIdentity": "518g|M43|518g-M43",
+      "modelSelectionUrl": "https://bmwfans.info/parts-catalog/E34-Touring/Europe/518g-M43",
+      "urlEvidence": "Assembled only from public selector-data URL fields; individual HTTP route not verified.",
+      "selectorYearChoices": [
+        1995,
+        1996
+      ],
+      "yearMeaning": "Calendar-year choices in this catalog selector; not certified production dates or U.S. model-year applicability.",
+      "steeringCodes": [
+        "L"
+      ],
+      "transmissionCodes": [
+        "M"
+      ],
+      "fitmentStatus": "not evaluated",
+      "partLeafDataFetched": false
+    },
+    {
+      "platform": "E34",
+      "body": "Touring",
+      "bodyCode": "TOU",
+      "region": "Europe",
+      "regionCode": "ECE",
+      "model": "518i",
+      "engineFamily": "M40",
+      "sourceSelectorIdentity": "518i|M40|518i-M40",
+      "modelSelectionUrl": "https://bmwfans.info/parts-catalog/E34-Touring/Europe/518i-M40",
+      "urlEvidence": "Assembled only from public selector-data URL fields; individual HTTP route not verified.",
+      "selectorYearChoices": [
+        1992,
+        1993,
+        1994
+      ],
+      "yearMeaning": "Calendar-year choices in this catalog selector; not certified production dates or U.S. model-year applicability.",
+      "steeringCodes": [
+        "L"
+      ],
+      "transmissionCodes": [
+        "M"
+      ],
+      "fitmentStatus": "not evaluated",
+      "partLeafDataFetched": false
+    },
+    {
+      "platform": "E34",
+      "body": "Touring",
+      "bodyCode": "TOU",
+      "region": "Europe",
+      "regionCode": "ECE",
+      "model": "518i",
+      "engineFamily": "M43",
+      "sourceSelectorIdentity": "518i|M43|518i-M43",
+      "modelSelectionUrl": "https://bmwfans.info/parts-catalog/E34-Touring/Europe/518i-M43",
+      "urlEvidence": "Assembled only from public selector-data URL fields; individual HTTP route not verified.",
+      "selectorYearChoices": [
+        1993,
+        1994,
+        1995,
+        1996
+      ],
+      "yearMeaning": "Calendar-year choices in this catalog selector; not certified production dates or U.S. model-year applicability.",
+      "steeringCodes": [
+        "N",
+        "L",
+        "R"
+      ],
+      "transmissionCodes": [
+        "M"
+      ],
+      "fitmentStatus": "not evaluated",
+      "partLeafDataFetched": false
+    },
+    {
+      "platform": "E34",
+      "body": "Touring",
+      "bodyCode": "TOU",
+      "region": "Europe",
+      "regionCode": "ECE",
+      "model": "520i",
+      "engineFamily": "M50",
+      "sourceSelectorIdentity": "520i|M50|520i-M50",
+      "modelSelectionUrl": "https://bmwfans.info/parts-catalog/E34-Touring/Europe/520i-M50",
+      "urlEvidence": "Assembled only from public selector-data URL fields; individual HTTP route not verified.",
+      "selectorYearChoices": [
+        1990,
+        1991,
+        1992,
+        1993,
+        1994,
+        1995,
+        1996
+      ],
+      "yearMeaning": "Calendar-year choices in this catalog selector; not certified production dates or U.S. model-year applicability.",
+      "steeringCodes": [
+        "N",
+        "L",
+        "R"
+      ],
+      "transmissionCodes": [
+        "N",
+        "M",
+        "A"
+      ],
+      "fitmentStatus": "not evaluated",
+      "partLeafDataFetched": false
+    },
+    {
+      "platform": "E34",
+      "body": "Touring",
+      "bodyCode": "TOU",
+      "region": "Europe",
+      "regionCode": "ECE",
+      "model": "525i",
+      "engineFamily": "M50",
+      "sourceSelectorIdentity": "525i|M50|525i-M50",
+      "modelSelectionUrl": "https://bmwfans.info/parts-catalog/E34-Touring/Europe/525i-M50",
+      "urlEvidence": "Assembled only from public selector-data URL fields; individual HTTP route not verified.",
+      "selectorYearChoices": [
+        1990,
+        1991,
+        1992,
+        1993,
+        1994,
+        1995,
+        1996
+      ],
+      "yearMeaning": "Calendar-year choices in this catalog selector; not certified production dates or U.S. model-year applicability.",
+      "steeringCodes": [
+        "N",
+        "L",
+        "R"
+      ],
+      "transmissionCodes": [
+        "N",
+        "M",
+        "A"
+      ],
+      "fitmentStatus": "not evaluated",
+      "partLeafDataFetched": false
+    },
+    {
+      "platform": "E34",
+      "body": "Touring",
+      "bodyCode": "TOU",
+      "region": "Europe",
+      "regionCode": "ECE",
+      "model": "525ix",
+      "engineFamily": "M50",
+      "sourceSelectorIdentity": "525ix|M50|525ix-M50",
+      "modelSelectionUrl": "https://bmwfans.info/parts-catalog/E34-Touring/Europe/525ix-M50",
+      "urlEvidence": "Assembled only from public selector-data URL fields; individual HTTP route not verified.",
+      "selectorYearChoices": [
+        1991,
+        1992,
+        1993,
+        1994,
+        1995,
+        1996
+      ],
+      "yearMeaning": "Calendar-year choices in this catalog selector; not certified production dates or U.S. model-year applicability.",
+      "steeringCodes": [
+        "N",
+        "L",
+        "R"
+      ],
+      "transmissionCodes": [
+        "N",
+        "M",
+        "A"
+      ],
+      "fitmentStatus": "not evaluated",
+      "partLeafDataFetched": false
+    },
+    {
+      "platform": "E34",
+      "body": "Touring",
+      "bodyCode": "TOU",
+      "region": "Europe",
+      "regionCode": "ECE",
+      "model": "525td",
+      "engineFamily": "M51",
+      "sourceSelectorIdentity": "525td|M51|525td-M51",
+      "modelSelectionUrl": "https://bmwfans.info/parts-catalog/E34-Touring/Europe/525td-M51",
+      "urlEvidence": "Assembled only from public selector-data URL fields; individual HTTP route not verified.",
+      "selectorYearChoices": [
+        1992,
+        1993,
+        1994,
+        1995,
+        1996
+      ],
+      "yearMeaning": "Calendar-year choices in this catalog selector; not certified production dates or U.S. model-year applicability.",
+      "steeringCodes": [
+        "L"
+      ],
+      "transmissionCodes": [
+        "N",
+        "A",
+        "M"
+      ],
+      "fitmentStatus": "not evaluated",
+      "partLeafDataFetched": false
+    },
+    {
+      "platform": "E34",
+      "body": "Touring",
+      "bodyCode": "TOU",
+      "region": "Europe",
+      "regionCode": "ECE",
+      "model": "525tds",
+      "engineFamily": "M51",
+      "sourceSelectorIdentity": "525tds|M51|525tds-M51",
+      "modelSelectionUrl": "https://bmwfans.info/parts-catalog/E34-Touring/Europe/525tds-M51",
+      "urlEvidence": "Assembled only from public selector-data URL fields; individual HTTP route not verified.",
+      "selectorYearChoices": [
+        1991,
+        1992,
+        1993,
+        1994,
+        1995,
+        1996
+      ],
+      "yearMeaning": "Calendar-year choices in this catalog selector; not certified production dates or U.S. model-year applicability.",
+      "steeringCodes": [
+        "N",
+        "L",
+        "R"
+      ],
+      "transmissionCodes": [
+        "N",
+        "M",
+        "A"
+      ],
+      "fitmentStatus": "not evaluated",
+      "partLeafDataFetched": false
+    },
+    {
+      "platform": "E34",
+      "body": "Touring",
+      "bodyCode": "TOU",
+      "region": "Europe",
+      "regionCode": "ECE",
+      "model": "530i",
+      "engineFamily": "M60",
+      "sourceSelectorIdentity": "530i|M60|530i-M60",
+      "modelSelectionUrl": "https://bmwfans.info/parts-catalog/E34-Touring/Europe/530i-M60",
+      "urlEvidence": "Assembled only from public selector-data URL fields; individual HTTP route not verified.",
+      "selectorYearChoices": [
+        1992,
+        1993,
+        1994,
+        1995,
+        1996
+      ],
+      "yearMeaning": "Calendar-year choices in this catalog selector; not certified production dates or U.S. model-year applicability.",
+      "steeringCodes": [
+        "N",
+        "L",
+        "R"
+      ],
+      "transmissionCodes": [
+        "N",
+        "M",
+        "A"
+      ],
+      "fitmentStatus": "not evaluated",
+      "partLeafDataFetched": false
+    },
+    {
+      "platform": "E34",
+      "body": "Touring",
+      "bodyCode": "TOU",
+      "region": "Europe",
+      "regionCode": "ECE",
+      "model": "540i",
+      "engineFamily": "M60",
+      "sourceSelectorIdentity": "540i|M60|540i-M60",
+      "modelSelectionUrl": "https://bmwfans.info/parts-catalog/E34-Touring/Europe/540i-M60",
+      "urlEvidence": "Assembled only from public selector-data URL fields; individual HTTP route not verified.",
+      "selectorYearChoices": [
+        1993,
+        1994,
+        1995,
+        1996
+      ],
+      "yearMeaning": "Calendar-year choices in this catalog selector; not certified production dates or U.S. model-year applicability.",
+      "steeringCodes": [
+        "N",
+        "L",
+        "R"
+      ],
+      "transmissionCodes": [
+        "N",
+        "M",
+        "A"
+      ],
+      "fitmentStatus": "not evaluated",
+      "partLeafDataFetched": false
+    },
+    {
+      "platform": "E34",
+      "body": "Touring",
+      "bodyCode": "TOU",
+      "region": "Europe",
+      "regionCode": "ECE",
+      "model": "M5",
+      "engineFamily": "S38",
+      "sourceSelectorIdentity": "<m>/</m>M5|S38|M5-S38",
+      "modelSelectionUrl": "https://bmwfans.info/parts-catalog/E34-Touring/Europe/M5-S38",
+      "urlEvidence": "Assembled only from public selector-data URL fields; individual HTTP route not verified.",
+      "selectorYearChoices": [
+        1992,
+        1993,
+        1994,
+        1995
+      ],
+      "yearMeaning": "Calendar-year choices in this catalog selector; not certified production dates or U.S. model-year applicability.",
+      "steeringCodes": [
+        "L"
+      ],
+      "transmissionCodes": [
+        "M"
+      ],
+      "fitmentStatus": "not evaluated",
+      "partLeafDataFetched": false
+    },
+    {
+      "platform": "E34",
+      "body": "Touring",
+      "bodyCode": "TOU",
+      "region": "USA",
+      "regionCode": "USA",
+      "model": "525i",
+      "engineFamily": "M50",
+      "sourceSelectorIdentity": "525i|M50|525i-M50",
+      "modelSelectionUrl": "https://bmwfans.info/parts-catalog/E34-Touring/USA/525i-M50",
+      "urlEvidence": "Assembled only from public selector-data URL fields; individual HTTP route not verified.",
+      "selectorYearChoices": [
+        1991,
+        1992,
+        1993,
+        1994,
+        1995,
+        1996
+      ],
+      "yearMeaning": "Calendar-year choices in this catalog selector; not certified production dates or U.S. model-year applicability.",
+      "steeringCodes": [
+        "L"
+      ],
+      "transmissionCodes": [
+        "A"
+      ],
+      "fitmentStatus": "not evaluated",
+      "partLeafDataFetched": false
+    },
+    {
+      "platform": "E34",
+      "body": "Touring",
+      "bodyCode": "TOU",
+      "region": "USA",
+      "regionCode": "USA",
+      "model": "530i",
+      "engineFamily": "M60",
+      "sourceSelectorIdentity": "530i|M60|530i-M60",
+      "modelSelectionUrl": "https://bmwfans.info/parts-catalog/E34-Touring/USA/530i-M60",
+      "urlEvidence": "Assembled only from public selector-data URL fields; individual HTTP route not verified.",
+      "selectorYearChoices": [
+        1992,
+        1993,
+        1994,
+        1995
+      ],
+      "yearMeaning": "Calendar-year choices in this catalog selector; not certified production dates or U.S. model-year applicability.",
+      "steeringCodes": [
+        "L"
+      ],
+      "transmissionCodes": [
+        "A"
+      ],
+      "fitmentStatus": "not evaluated",
+      "partLeafDataFetched": false
+    }
+  ],
+  "accessBoundary": {
+    "terminalRequests": {
+      "e34Root": 200,
+      "sedanSelector": 403,
+      "touringSelector": 403
+    },
+    "publicIndexedViews": "Europe sedan and Touring selector pages and six target model pages were readable through web search/open. This is discovery evidence, not permission or proof that bulk terminal leaf fetching will work.",
+    "action": "No blocked routes retried, no challenge solving, no alternate user agents, no login/API/paywall bypass. Do not enqueue all model leaves from this research."
+  },
+  "sourceDisclaimer": "BMWFans states it is not affiliated with BMW AG and its catalog information comes from public Internet sources. It is reference evidence, not manufacturer certification."
+}

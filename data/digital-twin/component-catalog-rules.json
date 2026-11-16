@@ -1,0 +1,4505 @@
+{
+  "schemaVersion": 1,
+  "rules": [
+    {
+      "pattern": "^m50:(?:block)$",
+      "title": "Cylinder block",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "100",
+          "page": 1
+        }
+      ],
+      "selectors": [
+        {
+          "page": "engine_block_mounting_parts",
+          "match": "^Engine block"
+        }
+      ]
+    },
+    {
+      "pattern": "^m50:(?:crankshaft)$",
+      "title": "Crankshaft",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "100",
+          "page": 4
+        }
+      ],
+      "selectors": [
+        {
+          "page": "crankshaft_with_bearing_shells",
+          "match": "^Crankshaft"
+        }
+      ]
+    },
+    {
+      "pattern": "^m50:(?:rod:\\d+)$",
+      "title": "Connecting rod",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "100",
+          "page": 4
+        }
+      ],
+      "selectors": [
+        {
+          "page": "crankshaft_connecting_rod",
+          "match": "^(Set connecting rod|Connecting rod)$"
+        }
+      ]
+    },
+    {
+      "pattern": "^m50:(?:rod-cap:\\d+)$",
+      "title": "Connecting-rod cap",
+      "kind": "supplied-with",
+      "note": "The cap is shown with its matched rod. These source tables do not list this cap as a separate replacement.",
+      "manual": [
+        {
+          "chapter": "100",
+          "page": 4
+        }
+      ],
+      "selectors": [
+        {
+          "page": "crankshaft_connecting_rod",
+          "match": "^(Set connecting rod|Connecting rod)$"
+        }
+      ]
+    },
+    {
+      "pattern": "^m50:(?:rod-bolt:.*)$",
+      "title": "Connecting-rod bolt",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "100",
+          "page": 4
+        }
+      ],
+      "selectors": [
+        {
+          "page": "crankshaft_connecting_rod",
+          "match": "^Connecting rod bolt$"
+        }
+      ]
+    },
+    {
+      "pattern": "^m50:(?:piston:\\d+)$",
+      "title": "Piston",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "100",
+          "page": 4
+        }
+      ],
+      "selectors": [
+        {
+          "page": "crankshaft_pistons",
+          "match": "^(Mahle piston|Piston)$"
+        }
+      ]
+    },
+    {
+      "pattern": "^m50:(?:piston-pin:\\d+)$",
+      "title": "Piston pin",
+      "kind": "supplied-with",
+      "note": "This source lists piston assemblies and ring kits, rather than a separate pin for the illustrated piston.",
+      "manual": [
+        {
+          "chapter": "100",
+          "page": 4
+        }
+      ],
+      "selectors": [
+        {
+          "page": "crankshaft_pistons",
+          "match": "^(Mahle piston|Piston)$"
+        }
+      ]
+    },
+    {
+      "pattern": "^m50:(?:piston-ring:.*)$",
+      "title": "Piston ring",
+      "kind": "set",
+      "note": "Numbers identify ring repair sets. Verify bore, oversize and the installed piston; a set number is not an individual ring number.",
+      "manual": [
+        {
+          "chapter": "100",
+          "page": 4
+        }
+      ],
+      "selectors": [
+        {
+          "page": "crankshaft_pistons",
+          "match": "^Repair kit piston rings$"
+        }
+      ]
+    },
+    {
+      "pattern": "^m50:(?:main-cap:\\d+)$",
+      "title": "Main bearing cap",
+      "kind": "supplied-with",
+      "note": "Main caps belong to the matched block assembly in these sources; do not interchange caps by appearance.",
+      "manual": [
+        {
+          "chapter": "100",
+          "page": 4
+        }
+      ],
+      "selectors": [
+        {
+          "page": "engine_block_mounting_parts",
+          "match": "^Engine block"
+        }
+      ]
+    },
+    {
+      "pattern": "^m50:(?:main-bolt:.*)$",
+      "title": "Main bearing bolt",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "100",
+          "page": 4
+        }
+      ],
+      "selectors": [
+        {
+          "page": "engine_block_mounting_parts",
+          "match": "^Bearing bolt$"
+        }
+      ]
+    },
+    {
+      "pattern": "^m50:(?:flywheel)$",
+      "title": "Flywheel and ring gear",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "210",
+          "page": 4
+        }
+      ],
+      "selectors": [
+        {
+          "page": "flywheel_twin_mass_flywheel",
+          "match": "(Flywheel|flywheel|ring gear)"
+        }
+      ]
+    },
+    {
+      "pattern": "^m50:(?:oil-pan)$",
+      "title": "Engine oil pan",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "119",
+          "page": 5
+        }
+      ],
+      "selectors": [
+        {
+          "page": "oil_pan_oil_level_indicator",
+          "match": "^Oil Pan$"
+        }
+      ]
+    },
+    {
+      "pattern": "^m50:(?:oil-drain-plug)$",
+      "title": "Engine oil drain plug",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "020",
+          "page": 9
+        }
+      ],
+      "selectors": [
+        {
+          "page": "oil_pan_oil_level_indicator",
+          "match": "^Screw plug$"
+        }
+      ]
+    },
+    {
+      "pattern": "^m50:(?:oil-pump)$",
+      "title": "Oil pump",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "119",
+          "page": 7
+        }
+      ],
+      "selectors": [
+        {
+          "page": "lubrication_system_oil_pump_with_drive",
+          "match": "^Oil Pump$"
+        }
+      ]
+    },
+    {
+      "pattern": "^m50:(?:oil-pickup)$",
+      "title": "Oil pickup and strainer",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "119",
+          "page": 7
+        }
+      ],
+      "selectors": [
+        {
+          "page": "lubrication_system_oil_pump_with_drive",
+          "match": "^Suction pipe$"
+        }
+      ]
+    },
+    {
+      "pattern": "^m50:(?:oil-filter-housing)$",
+      "title": "Oil-filter housing and cap",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "020",
+          "page": 9
+        }
+      ],
+      "selectors": [
+        {
+          "page": "lubrication_system_oil_filter",
+          "match": "(Oil filter|oil filter|Cover|cover)"
+        }
+      ]
+    },
+    {
+      "pattern": "^m50:(?:oil-filter-element)$",
+      "title": "Oil-filter element",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "020",
+          "page": 9
+        }
+      ],
+      "selectors": [
+        {
+          "page": "lubrication_system_oil_filter",
+          "match": "(Filter element|filter element|Set oil-filter|Oil filter insert)"
+        }
+      ]
+    },
+    {
+      "pattern": "^m50:(?:cylinder-head)$",
+      "title": "Cylinder head",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "113",
+          "page": 4
+        }
+      ],
+      "selectors": [
+        {
+          "page": "cylinder_head_attached_parts",
+          "match": "^Cylinder head with bearing ledges$"
+        }
+      ]
+    },
+    {
+      "pattern": "^m50:(?:head-gasket)$",
+      "title": "Cylinder-head gasket",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "113",
+          "page": 4
+        }
+      ],
+      "selectors": [
+        {
+          "page": "cylinder_head_attached_parts",
+          "match": "^Cylinder-head gasket|^Gasket asbestos free$"
+        }
+      ]
+    },
+    {
+      "pattern": "^m50:(?:cam-carrier:intake)$",
+      "title": "Intake camshaft bearing ledge",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "116",
+          "page": 11
+        }
+      ],
+      "selectors": [
+        {
+          "page": "cylinder_head_attached_parts",
+          "match": "^Bearing Ledge intake$"
+        }
+      ]
+    },
+    {
+      "pattern": "^m50:(?:camshaft:intake)$",
+      "title": "Intake camshaft",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "116",
+          "page": 16
+        }
+      ],
+      "selectors": [
+        {
+          "page": "valve_timing_gear_camshaft",
+          "match": "^Inlet camshaft$"
+        }
+      ]
+    },
+    {
+      "pattern": "^m50:(?:valve:intake:.*)$",
+      "title": "Intake valve",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "116",
+          "page": 18
+        }
+      ],
+      "selectors": [
+        {
+          "page": "valve_timing_gear_camshaft",
+          "match": "^Intake valve"
+        }
+      ]
+    },
+    {
+      "pattern": "^m50:(?:valve-spring:intake:.*)$",
+      "title": "Intake valve spring",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "116",
+          "page": 19
+        }
+      ],
+      "selectors": [
+        {
+          "page": "valve_timing_gear_camshaft",
+          "match": "^Valve spring$"
+        }
+      ]
+    },
+    {
+      "pattern": "^m50:(?:lifter:intake:.*)$",
+      "title": "Intake hydraulic lifter",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "116",
+          "page": 17
+        }
+      ],
+      "selectors": [
+        {
+          "page": "valve_timing_gear_camshaft",
+          "match": "^Hydraulic valve lifter$"
+        }
+      ]
+    },
+    {
+      "pattern": "^m50:(?:cam-carrier:exhaust)$",
+      "title": "Exhaust camshaft bearing ledge",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "116",
+          "page": 11
+        }
+      ],
+      "selectors": [
+        {
+          "page": "cylinder_head_attached_parts",
+          "match": "^Bearing Ledge exhaust$"
+        }
+      ]
+    },
+    {
+      "pattern": "^m50:(?:camshaft:exhaust)$",
+      "title": "Exhaust camshaft",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "116",
+          "page": 16
+        }
+      ],
+      "selectors": [
+        {
+          "page": "valve_timing_gear_camshaft",
+          "match": "^Outlet camshaft$"
+        }
+      ]
+    },
+    {
+      "pattern": "^m50:(?:valve:exhaust:.*)$",
+      "title": "Exhaust valve",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "116",
+          "page": 18
+        }
+      ],
+      "selectors": [
+        {
+          "page": "valve_timing_gear_camshaft",
+          "match": "^(Exhaust valve|Exh. valve)"
+        }
+      ]
+    },
+    {
+      "pattern": "^m50:(?:valve-spring:exhaust:.*)$",
+      "title": "Exhaust valve spring",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "116",
+          "page": 19
+        }
+      ],
+      "selectors": [
+        {
+          "page": "valve_timing_gear_camshaft",
+          "match": "^Valve spring$"
+        }
+      ]
+    },
+    {
+      "pattern": "^m50:(?:lifter:exhaust:.*)$",
+      "title": "Exhaust hydraulic lifter",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "116",
+          "page": 17
+        }
+      ],
+      "selectors": [
+        {
+          "page": "valve_timing_gear_camshaft",
+          "match": "^Hydraulic valve lifter$"
+        }
+      ]
+    },
+    {
+      "pattern": "^m50:(?:cam-cap:-1:.*)$",
+      "title": "Exhaust camshaft bearing cap",
+      "kind": "supplied-with",
+      "note": "The illustrated bearing cap is associated with its bearing ledge; verify the matched assembly rather than ordering a generic cap.",
+      "manual": [
+        {
+          "chapter": "116",
+          "page": 11
+        }
+      ],
+      "selectors": [
+        {
+          "page": "cylinder_head_attached_parts",
+          "match": "^Bearing Ledge Exhaust$"
+        }
+      ]
+    },
+    {
+      "pattern": "^m50:(?:cam-cap:1:.*)$",
+      "title": "Intake camshaft bearing cap",
+      "kind": "supplied-with",
+      "note": "The illustrated bearing cap is associated with its bearing ledge; verify the matched assembly rather than ordering a generic cap.",
+      "manual": [
+        {
+          "chapter": "116",
+          "page": 11
+        }
+      ],
+      "selectors": [
+        {
+          "page": "cylinder_head_attached_parts",
+          "match": "^Bearing Ledge Intake$"
+        }
+      ]
+    },
+    {
+      "pattern": "^m50:(?:head-bolt:.*)$",
+      "title": "Cylinder-head bolt",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "113",
+          "page": 11
+        }
+      ],
+      "selectors": [
+        {
+          "page": "cylinder_head_attached_parts",
+          "match": "^Cylinder head bolt|^Torx bolt"
+        }
+      ]
+    },
+    {
+      "pattern": "^m50:(?:valve-cover)$",
+      "title": "Cylinder-head cover",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "116",
+          "page": 3
+        }
+      ],
+      "selectors": [
+        {
+          "page": "cylinder_head_cover",
+          "match": "^Cylinder Head Cover$"
+        }
+      ]
+    },
+    {
+      "pattern": "^m50:(?:cover-bolt:.*)$",
+      "title": "Cylinder-head cover fastener",
+      "kind": "assembly",
+      "note": "The reference fastener shapes do not establish a thread or length. These are the catalog fasteners for the cover assembly.",
+      "manual": [
+        {
+          "chapter": "116",
+          "page": 3
+        }
+      ],
+      "selectors": [
+        {
+          "page": "cylinder_head_cover",
+          "match": "^(Cap nut|Stud bolt|Hex Bolt)$"
+        }
+      ]
+    },
+    {
+      "pattern": "^m50:(?:coil-cover)$",
+      "title": "Ignition-coil cover",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "120",
+          "page": 6
+        }
+      ],
+      "selectors": [
+        {
+          "page": "cylinder_head_cover",
+          "match": "^Cover$"
+        }
+      ]
+    },
+    {
+      "pattern": "^m50:(?:oil-filler-cap)$",
+      "title": "Oil filler cap",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "020",
+          "page": 9
+        }
+      ],
+      "selectors": [
+        {
+          "page": "cylinder_head_cover",
+          "match": "^Sealing cap, oil filler neck$"
+        }
+      ]
+    },
+    {
+      "pattern": "^m50:(?:ignition-coil:.*)$",
+      "title": "Ignition coil",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "120",
+          "page": 5
+        }
+      ],
+      "selectors": [
+        {
+          "page": "ignition_coil_spark_plug",
+          "match": "^Ignition coil"
+        }
+      ]
+    },
+    {
+      "pattern": "^m50:(?:spark-plug:.*)$",
+      "title": "Spark plug",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "020",
+          "page": 10
+        }
+      ],
+      "selectors": [
+        {
+          "page": "ignition_coil_spark_plug",
+          "match": "^Spark plug"
+        }
+      ]
+    },
+    {
+      "pattern": "^m50:(?:cam-sprocket:.*)$",
+      "title": "Camshaft timing sprocket",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "117",
+          "page": 7
+        }
+      ],
+      "selectors": [
+        {
+          "page": "timing_gear_timing_chain_top",
+          "match": "^Sprocket$"
+        }
+      ]
+    },
+    {
+      "pattern": "^m50:(?:crank-sprocket)$",
+      "title": "Crankshaft timing sprocket",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "117",
+          "page": 7
+        }
+      ],
+      "selectors": [
+        {
+          "page": "timing_timing_chain_lower_p",
+          "match": "^Sprocket$"
+        }
+      ]
+    },
+    {
+      "pattern": "^m50:(?:timing-chain:primary)$",
+      "title": "Primary timing chain",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "117",
+          "page": 1
+        }
+      ],
+      "selectors": [
+        {
+          "page": "timing_timing_chain_lower_p",
+          "match": "^Timing chain$"
+        }
+      ]
+    },
+    {
+      "pattern": "^m50:(?:timing-chain:secondary)$",
+      "title": "Secondary timing chain",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "117",
+          "page": 7
+        }
+      ],
+      "selectors": [
+        {
+          "page": "timing_gear_timing_chain_top",
+          "match": "^Timing chain$"
+        }
+      ]
+    },
+    {
+      "pattern": "^m50:(?:oil-pump-chain)$",
+      "title": "Oil-pump drive chain",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "119",
+          "page": 7
+        }
+      ],
+      "selectors": [
+        {
+          "page": "lubrication_system_oil_pump_with_drive",
+          "match": "^Chain$"
+        }
+      ]
+    },
+    {
+      "pattern": "^m50:(?:chain-guide:.*)$",
+      "title": "Timing-chain guide",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "117",
+          "page": 7
+        }
+      ],
+      "selectors": [
+        {
+          "page": "timing_timing_chain_lower_p",
+          "match": "^(Guide rail|Chain tensioner)$"
+        },
+        {
+          "page": "timing_gear_timing_chain_top",
+          "match": "^(Guide rail|Chain tensioner)$"
+        }
+      ]
+    },
+    {
+      "pattern": "^m50:(?:lower-timing-cover)$",
+      "title": "Lower timing cover",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "117",
+          "page": 1
+        }
+      ],
+      "selectors": [
+        {
+          "page": "timing_case",
+          "match": "(Timing|timing|Cover|cover)"
+        }
+      ]
+    },
+    {
+      "pattern": "^m50:(?:front-cover-bolt:.*)$",
+      "title": "Timing-cover fastener",
+      "kind": "assembly",
+      "note": "Illustrated fastener geometry is not a measured thread/length. Use the source position and installed cover.",
+      "manual": [
+        {
+          "chapter": "117",
+          "page": 7
+        }
+      ],
+      "selectors": [
+        {
+          "page": "timing_case",
+          "match": "^Hex Bolt"
+        }
+      ]
+    },
+    {
+      "pattern": "^m50:(?:vanos)$",
+      "title": "Single VANOS adjustment unit",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "117",
+          "page": 18
+        }
+      ],
+      "selectors": [
+        {
+          "page": "cylinder_head_vanos",
+          "match": "^Exch Adjustment Unit$"
+        }
+      ]
+    },
+    {
+      "pattern": "^m50:(?:vanos-piston)$",
+      "title": "VANOS piston",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "117",
+          "page": 18
+        }
+      ],
+      "selectors": [
+        {
+          "page": "cylinder_head_vanos",
+          "match": "^Piston$"
+        }
+      ]
+    },
+    {
+      "pattern": "^m50:(?:vanos-solenoid)$",
+      "title": "VANOS solenoid",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "117",
+          "page": 17
+        }
+      ],
+      "selectors": [
+        {
+          "page": "cylinder_head_vanos",
+          "match": "^Solenoid switch$"
+        }
+      ]
+    },
+    {
+      "pattern": "^m50:(?:intake-plenum)$",
+      "title": "Intake manifold",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "130",
+          "page": 18
+        }
+      ],
+      "selectors": [
+        {
+          "page": "intake_manifold_system",
+          "match": "^Intake manifold"
+        }
+      ]
+    },
+    {
+      "pattern": "^m50:(?:intake-runner:.*)$",
+      "title": "Intake manifold runner",
+      "kind": "supplied-with",
+      "note": "The runner is part of the molded manifold. The catalog number identifies the manifold, not a separate runner.",
+      "manual": [
+        {
+          "chapter": "130",
+          "page": 18
+        }
+      ],
+      "selectors": [
+        {
+          "page": "intake_manifold_system",
+          "match": "^Intake manifold"
+        }
+      ]
+    },
+    {
+      "pattern": "^m50:(?:injector:.*)$",
+      "title": "Fuel injector",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "130",
+          "page": 14
+        }
+      ],
+      "selectors": [
+        {
+          "page": "valves_pipes_of_fuel_injection_system",
+          "match": "(Injection valve|Injector|injector)"
+        }
+      ]
+    },
+    {
+      "pattern": "^m50:(?:fuel-rail)$",
+      "title": "Fuel rail",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "130",
+          "page": 16
+        }
+      ],
+      "selectors": [
+        {
+          "page": "valves_pipes_of_fuel_injection_system",
+          "match": "(Fuel rail|fuel rail|Injection tube|Fuel pipe)"
+        }
+      ]
+    },
+    {
+      "pattern": "^m50:(?:throttle-body)$",
+      "title": "Throttle housing",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "130",
+          "page": 18
+        }
+      ],
+      "selectors": [
+        {
+          "page": "throttle_housing_assy",
+          "match": "(Throttle housing|throttle housing)"
+        }
+      ]
+    },
+    {
+      "pattern": "^m50:(?:intake-boot)$",
+      "title": "Intake bellows",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "130",
+          "page": 18
+        }
+      ],
+      "selectors": [
+        {
+          "page": "mass_air_flow_sensor",
+          "match": "(Rubber boot|rubber boot|Bellows|bellows)"
+        }
+      ]
+    },
+    {
+      "pattern": "^m50:(?:idle-control-valve)$",
+      "title": "Idle-control valve and hoses",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "130",
+          "page": 9
+        }
+      ],
+      "selectors": [
+        {
+          "page": "intake_manifold_system",
+          "match": "(Idle regulating valve|Hose|hose)"
+        }
+      ]
+    },
+    {
+      "pattern": "^m50:(?:exhaust-manifold:.*)$",
+      "title": "Exhaust manifold",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "180",
+          "page": 4
+        }
+      ],
+      "selectors": [
+        {
+          "page": "exhaust_manifold",
+          "match": "^Exhaust manifold"
+        }
+      ]
+    },
+    {
+      "pattern": "^m50:(?:water-pump)$",
+      "title": "Mechanical coolant pump",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "170",
+          "page": 8
+        }
+      ],
+      "selectors": [
+        {
+          "page": "water_pump_thermostat",
+          "match": "^Coolant pump"
+        }
+      ]
+    },
+    {
+      "pattern": "^m50:(?:pump-nut:.*)$",
+      "title": "Coolant-pump retaining nut",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "170",
+          "page": 8
+        }
+      ],
+      "selectors": [
+        {
+          "page": "water_pump_thermostat",
+          "match": "^Hex nut with plate$"
+        }
+      ]
+    },
+    {
+      "pattern": "^m50:(?:water-pump-impeller)$",
+      "title": "Coolant-pump impeller",
+      "kind": "supplied-with",
+      "note": "The impeller is an internal part of the replacement pump in this source, not a separately listed service part.",
+      "manual": [
+        {
+          "chapter": "170",
+          "page": 8
+        }
+      ],
+      "selectors": [
+        {
+          "page": "water_pump_thermostat",
+          "match": "^Coolant pump"
+        }
+      ]
+    },
+    {
+      "pattern": "^m50:(?:thermostat-housing)$",
+      "title": "Thermostat housing",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "170",
+          "page": 10
+        }
+      ],
+      "selectors": [
+        {
+          "page": "water_pump_thermostat",
+          "match": "^Connection flange$"
+        }
+      ]
+    },
+    {
+      "pattern": "^m50:(?:thermostat)$",
+      "title": "Thermostat",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "170",
+          "page": 10
+        }
+      ],
+      "selectors": [
+        {
+          "page": "water_pump_thermostat",
+          "match": "^Thermostat$"
+        }
+      ]
+    },
+    {
+      "pattern": "^m50:(?:pulley:crank)$",
+      "title": "Crankshaft vibration damper",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "020",
+          "page": 13
+        }
+      ],
+      "selectors": [
+        {
+          "page": "belt_drive_vibration_damper",
+          "match": "(Vibration damper|vibration damper|Belt pulley)"
+        }
+      ]
+    },
+    {
+      "pattern": "^m50:(?:pulley:water-pump)$",
+      "title": "Coolant-pump pulley",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "020",
+          "page": 13
+        }
+      ],
+      "selectors": [
+        {
+          "page": "belt_drive_water_pump_alternator",
+          "match": "(Pulley|pulley)"
+        }
+      ]
+    },
+    {
+      "pattern": "^m50:(?:pulley:alternator)$",
+      "title": "Alternator pulley",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "121",
+          "page": 4
+        }
+      ],
+      "selectors": [
+        {
+          "page": "alternator_parts",
+          "match": "(Pulley|pulley)"
+        },
+        {
+          "page": "alternator_individual_parts",
+          "match": "(Pulley|pulley)"
+        }
+      ]
+    },
+    {
+      "pattern": "^m50:(?:pulley:power-steering)$",
+      "title": "Power-steering pulley",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "320",
+          "page": 3
+        }
+      ],
+      "selectors": [
+        {
+          "page": "hydro_steering_vane_pump",
+          "match": "(Pulley|pulley)"
+        }
+      ]
+    },
+    {
+      "pattern": "^m50:(?:pulley:idler)$",
+      "title": "Accessory-belt idler pulley",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "020",
+          "page": 13
+        }
+      ],
+      "selectors": [
+        {
+          "page": "belt_drive_water_pump_alternator",
+          "match": "^Deflection pulley$"
+        }
+      ]
+    },
+    {
+      "pattern": "^m50:(?:alternator)$",
+      "title": "Alternator",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "121",
+          "page": 4
+        }
+      ],
+      "selectors": [
+        {
+          "page": "alternator",
+          "match": "(Alternator|alternator)"
+        }
+      ]
+    },
+    {
+      "pattern": "^m50:(?:power-steering-pump)$",
+      "title": "Power-steering pump",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "320",
+          "page": 3
+        }
+      ],
+      "selectors": [
+        {
+          "page": "hydro_steering_vane_pump",
+          "match": "(Vane pump|vane pump)"
+        },
+        {
+          "page": "hydro_steering_tandem_vane_pump",
+          "match": "(Vane pump|vane pump)"
+        }
+      ]
+    },
+    {
+      "pattern": "^m50:(?:ac-compressor)$",
+      "title": "Air-conditioning compressor",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "640",
+          "page": 9
+        }
+      ],
+      "selectors": [
+        {
+          "page": "rp_air_conditioning_compressor",
+          "match": "(Compressor|compressor)"
+        }
+      ]
+    },
+    {
+      "pattern": "^m50:(?:starter)$",
+      "title": "Starter motor",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "121",
+          "page": 6
+        }
+      ],
+      "selectors": [
+        {
+          "page": "starter",
+          "match": "(Starter|starter)"
+        }
+      ]
+    },
+    {
+      "pattern": "^m50:(?:belt-tensioner)$",
+      "title": "Accessory-belt tensioner",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "020",
+          "page": 13
+        }
+      ],
+      "selectors": [
+        {
+          "page": "belt_drive_water_pump_alternator",
+          "match": "(belt tensioner|Belt tensioner)"
+        }
+      ]
+    },
+    {
+      "pattern": "^m50:(?:accessory-belt)$",
+      "title": "Accessory drive belt",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "020",
+          "page": 13
+        }
+      ],
+      "selectors": [
+        {
+          "page": "belt_drive_water_pump_alternator",
+          "match": "^Ribbed v-belt$"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:floor-pan|transmission-tunnel)$",
+      "title": "Floor and transmission tunnel",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "400",
+          "page": 1
+        }
+      ],
+      "selectors": [
+        {
+          "page": "floor_panel_trunk_wheel_housing_rear",
+          "match": ".*"
+        },
+        {
+          "page": "splash_wall_parts",
+          "match": ".*"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:firewall)$",
+      "title": "Firewall and bulkhead",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "400",
+          "page": 1
+        }
+      ],
+      "selectors": [
+        {
+          "page": "splash_wall_parts",
+          "match": ".*"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:sill--?1)$",
+      "title": "Inner sill and seat supports",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "400",
+          "page": 1
+        }
+      ],
+      "selectors": [
+        {
+          "page": "side_frame",
+          "match": ".*"
+        },
+        {
+          "page": "body_side_frame_partition",
+          "match": ".*"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:chassis-rail--?1)$",
+      "title": "Front chassis rail",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "400",
+          "page": 1
+        }
+      ],
+      "selectors": [
+        {
+          "page": "wheelhouse_engine_support",
+          "match": ".*"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:luggage-floor)$",
+      "title": "Luggage floor and spare-wheel well",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "400",
+          "page": 1
+        }
+      ],
+      "selectors": [
+        {
+          "page": "floor_panel_trunk_wheel_housing_rear",
+          "match": ".*"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:dashboard)$",
+      "title": "Dashboard and controls",
+      "kind": "assembly",
+      "note": "The source mesh contains several trim and control pieces. Catalog entries retain trim-color and equipment restrictions.",
+      "manual": [
+        {
+          "chapter": "513",
+          "page": 2
+        }
+      ],
+      "selectors": [
+        {
+          "page": "trim_panel_dashboard",
+          "match": ".*"
+        },
+        {
+          "page": "dashboard_covering_passenger_s_airbag",
+          "match": ".*"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:instrument-cluster)$",
+      "title": "Instrument cluster",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "620",
+          "page": 2
+        }
+      ],
+      "selectors": [
+        {
+          "page": "instruments",
+          "match": ".*"
+        },
+        {
+          "page": "instruments_combination_single_components",
+          "match": ".*"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:dash-vent-.*)$",
+      "title": "Dashboard air outlet",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "640",
+          "page": 6
+        }
+      ],
+      "selectors": [
+        {
+          "page": "air_outlet",
+          "match": ".*"
+        },
+        {
+          "page": "outflow_nozzles_covers",
+          "match": ".*"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:gear-lever)$",
+      "title": "Gear lever and gaiter",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "250",
+          "page": 2
+        }
+      ],
+      "selectors": [
+        {
+          "page": "gearshift_mechanical_transmission",
+          "match": ".*"
+        },
+        {
+          "page": "gearshift_knobs_coverings_plaques",
+          "match": ".*"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:handbrake-lever)$",
+      "title": "Parking brake lever",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "340",
+          "page": 10
+        }
+      ],
+      "selectors": [
+        {
+          "page": "handbrake_lever",
+          "match": ".*"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:front-seat--?1)$",
+      "title": "Front seat",
+      "kind": "assembly",
+      "note": "Seat type, upholstery, heating and adjustment equipment must be checked on the car.",
+      "manual": [
+        {
+          "chapter": "520",
+          "page": 1
+        }
+      ],
+      "selectors": [
+        {
+          "page": "front_seat",
+          "match": ".*"
+        },
+        {
+          "page": "front_seat_frame_mechanical_electrical_single_parts",
+          "match": ".*"
+        },
+        {
+          "page": "front_seat_rail",
+          "match": ".*"
+        },
+        {
+          "page": "seat_cover_front",
+          "match": ".*"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:rear-seat-cushion)$",
+      "title": "Rear seat and backrest",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "520",
+          "page": 5
+        }
+      ],
+      "selectors": [
+        {
+          "page": "rear_seat_parts",
+          "match": ".*"
+        },
+        {
+          "page": "rear_seat_cover",
+          "match": ".*"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:door-card-front--?1)$",
+      "title": "Front door trim",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "411",
+          "page": 3
+        }
+      ],
+      "selectors": [
+        {
+          "page": "door_trim_panel",
+          "match": ".*"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:door-card-rear--?1)$",
+      "title": "Rear door trim",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "411",
+          "page": 3
+        }
+      ],
+      "selectors": [
+        {
+          "page": "door_trim_rear",
+          "match": ".*"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:headliner)$",
+      "title": "Headlining and upper trim",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "513",
+          "page": 4
+        }
+      ],
+      "selectors": [
+        {
+          "page": "roof_trim_headlining_moulded_handle",
+          "match": ".*"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:cabin-carpet)$",
+      "title": "Cabin carpet and inner lining",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "513",
+          "page": 4
+        }
+      ],
+      "selectors": [
+        {
+          "page": "floor_covering",
+          "match": ".*"
+        },
+        {
+          "page": "interior_trim_lateral",
+          "match": ".*"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:steering-wheel)$",
+      "title": "Steering wheel",
+      "kind": "assembly",
+      "note": "Airbag type, production date and wheel option remain unconfirmed for this artist model.",
+      "manual": [
+        {
+          "chapter": "320",
+          "page": 1
+        }
+      ],
+      "selectors": [
+        {
+          "page": "steering_wheel_airbag",
+          "match": ".*"
+        },
+        {
+          "page": "steering_wheel",
+          "match": ".*"
+        },
+        {
+          "page": "sports_steering_wheel",
+          "match": ".*"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:steering-column)$",
+      "title": "Steering-column trim",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "320",
+          "page": 1
+        }
+      ],
+      "selectors": [
+        {
+          "page": "steering_column_tube_trim_panel",
+          "match": ".*"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:steering-gearbox)$",
+      "title": "Power steering gearbox",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "320",
+          "page": 5
+        }
+      ],
+      "selectors": [
+        {
+          "page": "power_steering",
+          "match": ".*"
+        },
+        {
+          "page": "hydro_steering_servotronic",
+          "match": ".*"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:pitman-arm|idler-arm)$",
+      "title": "Steering linkage support arm",
+      "kind": "assembly",
+      "note": "Check the source drawing position: the artist arm geometry does not establish a BMW service designation.",
+      "manual": [
+        {
+          "chapter": "320",
+          "page": 6
+        }
+      ],
+      "selectors": [
+        {
+          "page": "steering_linkage_tie_rods",
+          "match": "^(Pitman arm|Drop arm|Rubber mounting)$"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:center-drag-link)$",
+      "title": "Center steering link",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "320",
+          "page": 8
+        }
+      ],
+      "selectors": [
+        {
+          "page": "steering_linkage_tie_rods",
+          "match": "^Tie rod, center$"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:tie-rod--?1)$",
+      "title": "Outer tie-rod assembly",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "320",
+          "page": 7
+        }
+      ],
+      "selectors": [
+        {
+          "page": "steering_linkage_tie_rods",
+          "match": "^Tie rod$"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:front-subframe)$",
+      "title": "Front axle support",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "310",
+          "page": 11
+        }
+      ],
+      "selectors": [
+        {
+          "page": "front_axle_support",
+          "match": ".*"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:rear-subframe)$",
+      "title": "Rear axle carrier",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "330",
+          "page": 8
+        }
+      ],
+      "selectors": [
+        {
+          "page": "rear_axle_carrier",
+          "match": ".*"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:front-strut-1)$",
+      "title": "Left front strut housing",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "310",
+          "page": 2
+        }
+      ],
+      "selectors": [
+        {
+          "page": "front_spring_strut_shock_absorber",
+          "match": "(Spring strut|spring strut|Swivel bearing).*left|left.*(Spring strut|spring strut)"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:front-damper-1)$",
+      "title": "Left front damper",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "310",
+          "page": 3
+        }
+      ],
+      "selectors": [
+        {
+          "page": "front_spring_strut_shock_absorber",
+          "match": "(Shock absorber|shock absorber|Absorber)"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:front-spring-1)$",
+      "title": "Left front spring",
+      "kind": "assembly",
+      "note": "Use the vehicle-specific spring table and equipment/axle-load selection; this reference spring does not identify an option code.",
+      "manual": [
+        {
+          "chapter": "310",
+          "page": 3
+        }
+      ],
+      "selectors": [
+        {
+          "page": "coil_spring",
+          "match": "(Coil spring|coil spring)"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:front-spring-seat-1)$",
+      "title": "Left front spring seats and upper mount",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "310",
+          "page": 3
+        }
+      ],
+      "selectors": [
+        {
+          "page": "guide_support_spring_pad_attaching_parts",
+          "match": ".*"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:front-control-arm-1)$",
+      "title": "Left front lower control arm",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "310",
+          "page": 5
+        }
+      ],
+      "selectors": [
+        {
+          "page": "cross_member_wishbone_rod",
+          "match": "^Wishbone, left"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:front-thrust-arm-1)$",
+      "title": "Left front thrust arm",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "310",
+          "page": 9
+        }
+      ],
+      "selectors": [
+        {
+          "page": "cross_member_wishbone_rod",
+          "match": "^Rod without rubber mounting left"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:rear-trailing-arm-1)$",
+      "title": "Left rear trailing arm",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "330",
+          "page": 8
+        }
+      ],
+      "selectors": [
+        {
+          "page": "rear_axle_support_wheel_suspension",
+          "match": "(Trailing arm|trailing arm).*left|left.*(Trailing arm|trailing arm)"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:rear-damper-1)$",
+      "title": "Left rear damper and mount",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "330",
+          "page": 3
+        }
+      ],
+      "selectors": [
+        {
+          "page": "rear_spring_strut",
+          "match": ".*"
+        },
+        {
+          "page": "rear_m_techn_sports_chassis_spring_strut",
+          "match": ".*"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:rear-coil-spring-1)$",
+      "title": "Left rear spring",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "330",
+          "page": 3
+        }
+      ],
+      "selectors": [
+        {
+          "page": "rear_spring_strut",
+          "match": "(Coil spring|coil spring|Spring pad|spring pad)"
+        },
+        {
+          "page": "rear_m_techn_sports_chassis_spring_strut",
+          "match": "(Coil spring|coil spring|Spring pad|spring pad)"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:front-drop-link-1)$",
+      "title": "Left front stabilizer link",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "310",
+          "page": 8
+        }
+      ],
+      "selectors": [
+        {
+          "page": "stabilizer_front",
+          "match": "(Stabilizer link|stabilizer link|Swing support|swing support|Rod|rod)"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:rear-drop-link-1)$",
+      "title": "Left rear stabilizer link",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "330",
+          "page": 8
+        }
+      ],
+      "selectors": [
+        {
+          "page": "stabilizer_rear",
+          "match": "(Stabilizer link|stabilizer link|Swing support|swing support|Rod|rod)"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:hub-front-1)$",
+      "title": "Left front hub",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "310",
+          "page": 7
+        }
+      ],
+      "selectors": [
+        {
+          "page": "wheel_bearings",
+          "match": "(Wheel hub|wheel hub|Wheel bearing|wheel bearing)"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:hub-rear-1)$",
+      "title": "Left rear hub",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "330",
+          "page": 5
+        }
+      ],
+      "selectors": [
+        {
+          "page": "side_shaft_wheel_bearings",
+          "match": "(Drive flange|Angular contact ball bearing)"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:brake-disc-front-1)$",
+      "title": "Left front brake disc",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "340",
+          "page": 6
+        }
+      ],
+      "selectors": [
+        {
+          "page": "front_brake_brake_disc",
+          "match": "^Brake disc"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:brake-caliper-front-1)$",
+      "title": "Left front caliper and carrier",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "340",
+          "page": 5
+        }
+      ],
+      "selectors": [
+        {
+          "page": "front_wheel_brake_brake_pad_sensor",
+          "match": "(Caliper|Caliper housing).*left|^Calliper carrier$"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:brake-pad-front-1)$",
+      "title": "Left front brake pads",
+      "kind": "set",
+      "note": "The catalog item is a pad repair set; verify axle, caliper and sensor arrangement.",
+      "manual": [
+        {
+          "chapter": "340",
+          "page": 4
+        }
+      ],
+      "selectors": [
+        {
+          "page": "front_wheel_brake_brake_pad_sensor",
+          "match": "(brake pads|Brake pads)"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:brake-shield-front-1)$",
+      "title": "Left front brake shield",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "340",
+          "page": 6
+        }
+      ],
+      "selectors": [
+        {
+          "page": "front_brake_brake_disc",
+          "match": "(Protection plate|protection plate).*left"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:brake-hose-front-1)$",
+      "title": "Left front brake hose and ABS lead",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "340",
+          "page": 12
+        }
+      ],
+      "selectors": [
+        {
+          "page": "brake_pipe_front_abs",
+          "match": "(Brake hose|brake hose|Pulse generator|pulse generator|Wheel speed|wheel speed)"
+        },
+        {
+          "page": "front_spring_strut_shock_absorber",
+          "match": "(Brake hose|brake hose|Pulse generator|pulse generator|Wheel speed|wheel speed)"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:brake-disc-rear-1)$",
+      "title": "Left rear brake disc",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "340",
+          "page": 6
+        }
+      ],
+      "selectors": [
+        {
+          "page": "rear_wheel_brake_brake_pad_sensor",
+          "match": "^Brake disc"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:brake-caliper-rear-1)$",
+      "title": "Left rear caliper and carrier",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "340",
+          "page": 5
+        }
+      ],
+      "selectors": [
+        {
+          "page": "rear_wheel_brake_brake_pad_sensor",
+          "match": "(Caliper|Caliper housing).*left|^Calliper carrier$"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:brake-pad-rear-1)$",
+      "title": "Left rear brake pads",
+      "kind": "set",
+      "note": "The catalog item is a pad repair set; verify axle, caliper and sensor arrangement.",
+      "manual": [
+        {
+          "chapter": "340",
+          "page": 4
+        }
+      ],
+      "selectors": [
+        {
+          "page": "rear_wheel_brake_brake_pad_sensor",
+          "match": "(brake pads|Brake pads)"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:brake-shield-rear-1)$",
+      "title": "Left rear brake shield",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "340",
+          "page": 6
+        }
+      ],
+      "selectors": [
+        {
+          "page": "rear_wheel_brake_brake_pad_sensor",
+          "match": "(Protection plate|protection plate).*left"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:brake-hose-rear-1)$",
+      "title": "Left rear brake hose and ABS lead",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "340",
+          "page": 12
+        }
+      ],
+      "selectors": [
+        {
+          "page": "brake_pipe_rear_abs",
+          "match": "(Brake hose|brake hose|Pulse generator|pulse generator|Wheel speed|wheel speed)"
+        },
+        {
+          "page": "rear_axle_support_wheel_suspension",
+          "match": "(Brake hose|brake hose|Pulse generator|pulse generator|Wheel speed|wheel speed)"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:parking-brake-shoes-1)$",
+      "title": "Left parking brake shoes",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "340",
+          "page": 11
+        }
+      ],
+      "selectors": [
+        {
+          "page": "parking_brake_brake_shoes",
+          "match": "(brake shoes|Brake shoes|Expanding lock|expanding lock)"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:halfshaft-1)$",
+      "title": "Left rear drive axle",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "330",
+          "page": 7
+        }
+      ],
+      "selectors": [
+        {
+          "page": "output_shaft",
+          "match": ".*"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:front-strut--1)$",
+      "title": "Right front strut housing",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "310",
+          "page": 2
+        }
+      ],
+      "selectors": [
+        {
+          "page": "front_spring_strut_shock_absorber",
+          "match": "(Spring strut|spring strut|Swivel bearing).*right|right.*(Spring strut|spring strut)"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:front-damper--1)$",
+      "title": "Right front damper",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "310",
+          "page": 3
+        }
+      ],
+      "selectors": [
+        {
+          "page": "front_spring_strut_shock_absorber",
+          "match": "(Shock absorber|shock absorber|Absorber)"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:front-spring--1)$",
+      "title": "Right front spring",
+      "kind": "assembly",
+      "note": "Use the vehicle-specific spring table and equipment/axle-load selection; this reference spring does not identify an option code.",
+      "manual": [
+        {
+          "chapter": "310",
+          "page": 3
+        }
+      ],
+      "selectors": [
+        {
+          "page": "coil_spring",
+          "match": "(Coil spring|coil spring)"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:front-spring-seat--1)$",
+      "title": "Right front spring seats and upper mount",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "310",
+          "page": 3
+        }
+      ],
+      "selectors": [
+        {
+          "page": "guide_support_spring_pad_attaching_parts",
+          "match": ".*"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:front-control-arm--1)$",
+      "title": "Right front lower control arm",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "310",
+          "page": 5
+        }
+      ],
+      "selectors": [
+        {
+          "page": "cross_member_wishbone_rod",
+          "match": "^Wishbone, right"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:front-thrust-arm--1)$",
+      "title": "Right front thrust arm",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "310",
+          "page": 9
+        }
+      ],
+      "selectors": [
+        {
+          "page": "cross_member_wishbone_rod",
+          "match": "^Rod without rubber mounting right"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:rear-trailing-arm--1)$",
+      "title": "Right rear trailing arm",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "330",
+          "page": 8
+        }
+      ],
+      "selectors": [
+        {
+          "page": "rear_axle_support_wheel_suspension",
+          "match": "(Trailing arm|trailing arm).*right|right.*(Trailing arm|trailing arm)"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:rear-damper--1)$",
+      "title": "Right rear damper and mount",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "330",
+          "page": 3
+        }
+      ],
+      "selectors": [
+        {
+          "page": "rear_spring_strut",
+          "match": ".*"
+        },
+        {
+          "page": "rear_m_techn_sports_chassis_spring_strut",
+          "match": ".*"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:rear-coil-spring--1)$",
+      "title": "Right rear spring",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "330",
+          "page": 3
+        }
+      ],
+      "selectors": [
+        {
+          "page": "rear_spring_strut",
+          "match": "(Coil spring|coil spring|Spring pad|spring pad)"
+        },
+        {
+          "page": "rear_m_techn_sports_chassis_spring_strut",
+          "match": "(Coil spring|coil spring|Spring pad|spring pad)"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:front-drop-link--1)$",
+      "title": "Right front stabilizer link",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "310",
+          "page": 8
+        }
+      ],
+      "selectors": [
+        {
+          "page": "stabilizer_front",
+          "match": "(Stabilizer link|stabilizer link|Swing support|swing support|Rod|rod)"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:rear-drop-link--1)$",
+      "title": "Right rear stabilizer link",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "330",
+          "page": 8
+        }
+      ],
+      "selectors": [
+        {
+          "page": "stabilizer_rear",
+          "match": "(Stabilizer link|stabilizer link|Swing support|swing support|Rod|rod)"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:hub-front--1)$",
+      "title": "Right front hub",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "310",
+          "page": 7
+        }
+      ],
+      "selectors": [
+        {
+          "page": "wheel_bearings",
+          "match": "(Wheel hub|wheel hub|Wheel bearing|wheel bearing)"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:hub-rear--1)$",
+      "title": "Right rear hub",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "330",
+          "page": 5
+        }
+      ],
+      "selectors": [
+        {
+          "page": "side_shaft_wheel_bearings",
+          "match": "(Drive flange|Angular contact ball bearing)"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:brake-disc-front--1)$",
+      "title": "Right front brake disc",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "340",
+          "page": 6
+        }
+      ],
+      "selectors": [
+        {
+          "page": "front_brake_brake_disc",
+          "match": "^Brake disc"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:brake-caliper-front--1)$",
+      "title": "Right front caliper and carrier",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "340",
+          "page": 5
+        }
+      ],
+      "selectors": [
+        {
+          "page": "front_wheel_brake_brake_pad_sensor",
+          "match": "(Caliper|Caliper housing).*right|^Calliper carrier$"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:brake-pad-front--1)$",
+      "title": "Right front brake pads",
+      "kind": "set",
+      "note": "The catalog item is a pad repair set; verify axle, caliper and sensor arrangement.",
+      "manual": [
+        {
+          "chapter": "340",
+          "page": 4
+        }
+      ],
+      "selectors": [
+        {
+          "page": "front_wheel_brake_brake_pad_sensor",
+          "match": "(brake pads|Brake pads)"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:brake-shield-front--1)$",
+      "title": "Right front brake shield",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "340",
+          "page": 6
+        }
+      ],
+      "selectors": [
+        {
+          "page": "front_brake_brake_disc",
+          "match": "(Protection plate|protection plate).*right"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:brake-hose-front--1)$",
+      "title": "Right front brake hose and ABS lead",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "340",
+          "page": 12
+        }
+      ],
+      "selectors": [
+        {
+          "page": "brake_pipe_front_abs",
+          "match": "(Brake hose|brake hose|Pulse generator|pulse generator|Wheel speed|wheel speed)"
+        },
+        {
+          "page": "front_spring_strut_shock_absorber",
+          "match": "(Brake hose|brake hose|Pulse generator|pulse generator|Wheel speed|wheel speed)"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:brake-disc-rear--1)$",
+      "title": "Right rear brake disc",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "340",
+          "page": 6
+        }
+      ],
+      "selectors": [
+        {
+          "page": "rear_wheel_brake_brake_pad_sensor",
+          "match": "^Brake disc"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:brake-caliper-rear--1)$",
+      "title": "Right rear caliper and carrier",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "340",
+          "page": 5
+        }
+      ],
+      "selectors": [
+        {
+          "page": "rear_wheel_brake_brake_pad_sensor",
+          "match": "(Caliper|Caliper housing).*right|^Calliper carrier$"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:brake-pad-rear--1)$",
+      "title": "Right rear brake pads",
+      "kind": "set",
+      "note": "The catalog item is a pad repair set; verify axle, caliper and sensor arrangement.",
+      "manual": [
+        {
+          "chapter": "340",
+          "page": 4
+        }
+      ],
+      "selectors": [
+        {
+          "page": "rear_wheel_brake_brake_pad_sensor",
+          "match": "(brake pads|Brake pads)"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:brake-shield-rear--1)$",
+      "title": "Right rear brake shield",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "340",
+          "page": 6
+        }
+      ],
+      "selectors": [
+        {
+          "page": "rear_wheel_brake_brake_pad_sensor",
+          "match": "(Protection plate|protection plate).*right"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:brake-hose-rear--1)$",
+      "title": "Right rear brake hose and ABS lead",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "340",
+          "page": 12
+        }
+      ],
+      "selectors": [
+        {
+          "page": "brake_pipe_rear_abs",
+          "match": "(Brake hose|brake hose|Pulse generator|pulse generator|Wheel speed|wheel speed)"
+        },
+        {
+          "page": "rear_axle_support_wheel_suspension",
+          "match": "(Brake hose|brake hose|Pulse generator|pulse generator|Wheel speed|wheel speed)"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:parking-brake-shoes--1)$",
+      "title": "Right parking brake shoes",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "340",
+          "page": 11
+        }
+      ],
+      "selectors": [
+        {
+          "page": "parking_brake_brake_shoes",
+          "match": "(brake shoes|Brake shoes|Expanding lock|expanding lock)"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:halfshaft--1)$",
+      "title": "Right rear drive axle",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "330",
+          "page": 7
+        }
+      ],
+      "selectors": [
+        {
+          "page": "output_shaft",
+          "match": ".*"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:front-antiroll-bar)$",
+      "title": "Front anti-roll bar and bushes",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "310",
+          "page": 8
+        }
+      ],
+      "selectors": [
+        {
+          "page": "stabilizer_front",
+          "match": "(Stabilizer|stabilizer|Rubber mounting|rubber mounting)"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:rear-antiroll-bar)$",
+      "title": "Rear anti-roll bar and bushes",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "330",
+          "page": 8
+        }
+      ],
+      "selectors": [
+        {
+          "page": "stabilizer_rear",
+          "match": "(Stabilizer|stabilizer|Rubber mounting|rubber mounting)"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:brake-booster-master)$",
+      "title": "Brake booster, master cylinder and reservoir",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "340",
+          "page": 8
+        }
+      ],
+      "selectors": [
+        {
+          "page": "power_brake_unit_depression",
+          "match": ".*"
+        },
+        {
+          "page": "brake_master_cylinder_expansion_tank",
+          "match": ".*"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:abs-hydraulic-unit)$",
+      "title": "ABS hydraulic unit",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "340",
+          "page": 12
+        }
+      ],
+      "selectors": [
+        {
+          "page": "anti_block_system_control_unit",
+          "match": "(Hydro|hydro|Pressure modulator|pressure modulator|ABS)"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:manual-gearbox|bellhousing)$",
+      "title": "Manual transmission and bellhousing",
+      "kind": "assembly",
+      "note": "The manual reference does not establish the exact gearbox tag or housing variant. Check the installed transmission before ordering.",
+      "manual": [
+        {
+          "chapter": "230",
+          "page": 5
+        }
+      ],
+      "selectors": [
+        {
+          "page": "manual_gearbox_s5d",
+          "match": ".*"
+        },
+        {
+          "page": "housing_mounting_parts_s5d",
+          "match": ".*"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:clutch-assembly)$",
+      "title": "Clutch disc and pressure plate",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "210",
+          "page": 4
+        }
+      ],
+      "selectors": [
+        {
+          "page": "gearshift_clutch",
+          "match": ".*"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:gearbox-crossmember)$",
+      "title": "Gearbox crossmember and mounts",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "230",
+          "page": 5
+        }
+      ],
+      "selectors": [
+        {
+          "page": "manual_transmission/gearbox_suspension",
+          "match": ".*"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:clutch-slave-cylinder)$",
+      "title": "Clutch slave cylinder",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "210",
+          "page": 3
+        }
+      ],
+      "selectors": [
+        {
+          "page": "clutch_control",
+          "match": "(Output cylinder|output cylinder|Clutch slave|clutch slave)"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:flexible-drive-coupling)$",
+      "title": "Driveshaft flex disc",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "260",
+          "page": 7
+        }
+      ],
+      "selectors": [
+        {
+          "page": "drive_shaft_universal_joint_centre_mounting",
+          "match": "(Universal joint|universal joint|Flexible disc|flexible disc|Joint|joint)"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:propeller-shaft)$",
+      "title": "Propeller shaft",
+      "kind": "assembly",
+      "note": "Match the source gearbox and production restrictions before choosing a complete shaft.",
+      "manual": [
+        {
+          "chapter": "260",
+          "page": 4
+        }
+      ],
+      "selectors": [
+        {
+          "page": "drive_shaft_constant_velocity_joint",
+          "match": "[Dd]rive shaft"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:center-bearing)$",
+      "title": "Driveshaft center bearing and support",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "260",
+          "page": 7
+        }
+      ],
+      "selectors": [
+        {
+          "page": "drive_shaft_universal_joint_centre_mounting",
+          "match": "(Centre mount|centre mount|Center mount|center mount|bearing|Bearing)"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:differential-case)$",
+      "title": "Final drive housing and cover",
+      "kind": "assembly",
+      "note": "Housing, ratio and limited-slip options are separate catalog choices; the artist case does not identify a ratio.",
+      "manual": [
+        {
+          "chapter": "331",
+          "page": 2
+        }
+      ],
+      "selectors": [
+        {
+          "page": "differential_suspension",
+          "match": ".*"
+        },
+        {
+          "page": "final_drive_cover_trigger_contact",
+          "match": ".*"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:differential-input-flange)$",
+      "title": "Differential input flange and shaft CV joint",
+      "kind": "assembly",
+      "note": "These entries identify the shaft-side CV coupling and service parts, not a verified differential pinion-flange identity.",
+      "manual": [
+        {
+          "chapter": "331",
+          "page": 3
+        }
+      ],
+      "selectors": [
+        {
+          "page": "drive_shaft_universal_joint_centre_mounting",
+          "match": "(Const.*joint|Constant-velocity joint)"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:radiator)$",
+      "title": "Radiator and mounts",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "170",
+          "page": 11
+        }
+      ],
+      "selectors": [
+        {
+          "page": "radiator",
+          "match": "(Radiator|radiator|Mounting|mounting)"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:fan-shroud)$",
+      "title": "Cooling fan shroud",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "170",
+          "page": 12
+        }
+      ],
+      "selectors": [
+        {
+          "page": "fan_shroud",
+          "match": "(Fan shroud|fan shroud)"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:engine-cooling-fan)$",
+      "title": "Engine cooling fan and viscous coupling",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "170",
+          "page": 12
+        }
+      ],
+      "selectors": [
+        {
+          "page": "cooling_system_fan_fan_coupling",
+          "match": ".*"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:expansion-tank)$",
+      "title": "Coolant expansion tank and cap",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "170",
+          "page": 1
+        }
+      ],
+      "selectors": [
+        {
+          "page": "radiator",
+          "match": "(Expansion tank|expansion tank|Cover lid|cover lid|Filler cap|filler cap)"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:upper-radiator-hose)$",
+      "title": "Upper radiator hose",
+      "kind": "assembly",
+      "note": "Match the diagram position and routing on the car. The combined source hose table has several non-interchangeable hoses.",
+      "manual": [
+        {
+          "chapter": "170",
+          "page": 11
+        }
+      ],
+      "selectors": [
+        {
+          "page": "cooling_system_water_hoses",
+          "match": "(Hose|hose)"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:lower-radiator-hose)$",
+      "title": "Lower radiator hose",
+      "kind": "assembly",
+      "note": "Match the diagram position and routing on the car. The combined source hose table has several non-interchangeable hoses.",
+      "manual": [
+        {
+          "chapter": "170",
+          "page": 11
+        }
+      ],
+      "selectors": [
+        {
+          "page": "cooling_system_water_hoses",
+          "match": "(Hose|hose)"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:heater-hoses)$",
+      "title": "Heater hoses",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "640",
+          "page": 3
+        }
+      ],
+      "selectors": [
+        {
+          "page": "water_valve_water_hose",
+          "match": ".*"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:airbox)$",
+      "title": "Air-cleaner housing and element",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "020",
+          "page": 10
+        }
+      ],
+      "selectors": [
+        {
+          "page": "intake_silencer_filter_cartridge",
+          "match": ".*"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:intake-boot-maf)$",
+      "title": "Airflow meter and intake boot",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "130",
+          "page": 19
+        }
+      ],
+      "selectors": [
+        {
+          "page": "mass_air_flow_sensor",
+          "match": ".*"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:fresh-air-snorkel)$",
+      "title": "Fresh-air intake duct",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "020",
+          "page": 10
+        }
+      ],
+      "selectors": [
+        {
+          "page": "intake_silencer_filter_cartridge",
+          "match": "(Suction|suction|Air duct|air duct|Intake|intake)"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:hvac-heater-box)$",
+      "title": "HVAC casing, heater and evaporator",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "640",
+          "page": 4
+        }
+      ],
+      "selectors": [
+        {
+          "page": "housing_parts_air_conditioning",
+          "match": ".*"
+        },
+        {
+          "page": "heater_radiator_air_conditioning",
+          "match": ".*"
+        },
+        {
+          "page": "evaporator_expansion_valve",
+          "match": ".*"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:blower-motor)$",
+      "title": "Heater blower motor",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "640",
+          "page": 1
+        }
+      ],
+      "selectors": [
+        {
+          "page": "electric_parts_for_ac_unit",
+          "match": "(Blower|blower)"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:hvac-ducts)$",
+      "title": "Cabin air distribution ducts",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "640",
+          "page": 6
+        }
+      ],
+      "selectors": [
+        {
+          "page": "heater_duct_rear_covering",
+          "match": ".*"
+        },
+        {
+          "page": "outflow_nozzles_covers",
+          "match": ".*"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:fuel-tank)$",
+      "title": "Fuel tank",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "160",
+          "page": 2
+        }
+      ],
+      "selectors": [
+        {
+          "page": "metal_fuel_tank",
+          "match": "(Fuel tank|fuel tank)"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:fuel-pump-sender)$",
+      "title": "Fuel pump and sender assembly",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "160",
+          "page": 3
+        }
+      ],
+      "selectors": [
+        {
+          "page": "sending_unit_assy_metal_tank",
+          "match": ".*"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:fuel-filler-neck)$",
+      "title": "Fuel filler and vent pipes",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "160",
+          "page": 1
+        }
+      ],
+      "selectors": [
+        {
+          "page": "metal_fuel_tank",
+          "match": ".*"
+        },
+        {
+          "page": "expansion_tank_tubing",
+          "match": ".*"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:fuel-filter)$",
+      "title": "Fuel filter",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "020",
+          "page": 11
+        }
+      ],
+      "selectors": [
+        {
+          "page": "fuel_supply_single_filter",
+          "match": "^Fuel filter$"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:fuel-supply-return-lines)$",
+      "title": "Fuel supply, return and vent pipes",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "160",
+          "page": 1
+        }
+      ],
+      "selectors": [
+        {
+          "page": "fuel_supply_single_filter",
+          "match": ".*"
+        },
+        {
+          "page": "expansion_tank_tubing",
+          "match": ".*"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:exhaust-downpipes|catalyst-center-resonator)$",
+      "title": "Front exhaust and catalyst",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "180",
+          "page": 3
+        }
+      ],
+      "selectors": [
+        {
+          "page": "catalytic_converter_front_silencer",
+          "match": ".*"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:rear-exhaust-pipes|rear-muffler)$",
+      "title": "Rear exhaust and silencer",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "180",
+          "page": 3
+        }
+      ],
+      "selectors": [
+        {
+          "page": "exhaust_system",
+          "match": ".*"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:rear-seat-battery)$",
+      "title": "Battery and mounting",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "121",
+          "page": 1
+        }
+      ],
+      "selectors": [
+        {
+          "page": "battery",
+          "match": ".*"
+        },
+        {
+          "page": "battery_empty",
+          "match": ".*"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:front-fuse-relay-box)$",
+      "title": "Front fuse and relay box",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "610",
+          "page": 1
+        }
+      ],
+      "selectors": [
+        {
+          "page": "single_components_for_fuse_box",
+          "match": ".*"
+        },
+        {
+          "page": "various_relays",
+          "match": ".*"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:electronics-box)$",
+      "title": "Engine electronics enclosure",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "610",
+          "page": 2
+        }
+      ],
+      "selectors": [
+        {
+          "page": "relay_motor_control_unit_box",
+          "match": ".*"
+        },
+        {
+          "page": "basic_control_unit_dme",
+          "match": ".*"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:body-wiring-harness)$",
+      "title": "Body and engine wiring harnesses",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "600",
+          "page": 3
+        }
+      ],
+      "selectors": [
+        {
+          "page": "main_wiring_harness",
+          "match": ".*"
+        },
+        {
+          "page": "engine_wiring_harness",
+          "match": ".*"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:seat-belt-front--?1|seatbelt-left|seatbelt-right)$",
+      "title": "Front seat belt and mounting",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "720",
+          "page": 1
+        }
+      ],
+      "selectors": [
+        {
+          "page": "seatbelts",
+          "match": ".*"
+        },
+        {
+          "page": "safety_belt_adjuster",
+          "match": ".*"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:rear-belt--?1|rear-center-lap-belt)$",
+      "title": "Rear seat belt",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "720",
+          "page": 3
+        }
+      ],
+      "selectors": [
+        {
+          "page": "safety_belt_rear",
+          "match": ".*"
+        },
+        {
+          "page": "rear_safety_belt_mounting_parts",
+          "match": ".*"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34sys:(?:pedal-box)$",
+      "title": "Pedal box",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "340",
+          "page": 10
+        }
+      ],
+      "selectors": [
+        {
+          "page": "pedals_supporting_bracket_brake_pedal",
+          "match": ".*"
+        },
+        {
+          "page": "pedals_stop_light_switch",
+          "match": ".*"
+        },
+        {
+          "page": "clutch_control",
+          "match": ".*"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34body:(?:front-license-plate|rear-license-plate)$",
+      "title": "Registration plate and holder",
+      "kind": "reference",
+      "note": "The registration characters are not a BMW replacement part. Related holder and attachment records are listed below.",
+      "manual": [
+        {
+          "chapter": "510",
+          "page": 3
+        }
+      ],
+      "selectors": [
+        {
+          "page": "trim_panel_bumper",
+          "match": ".*"
+        },
+        {
+          "page": "single_components_for_trunk_lid",
+          "match": ".*"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34body:(?:headlamp-left-inner)$",
+      "title": "Left high-beam headlamp",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "630",
+          "page": 2
+        }
+      ],
+      "selectors": [
+        {
+          "page": "single_components_for_headlight",
+          "match": "^[Hh]igh[- ]beam insert left$"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34body:(?:headlamp-left-outer)$",
+      "title": "Left low-beam headlamp",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "630",
+          "page": 2
+        }
+      ],
+      "selectors": [
+        {
+          "page": "single_components_for_headlight",
+          "match": "^[Ll]ow[- ]beam insert left$"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34body:(?:rear-quarter-left)$",
+      "title": "Left rear quarter panel",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "400",
+          "page": 1
+        }
+      ],
+      "selectors": [
+        {
+          "page": "side_panel_tail_trim",
+          "match": "^Left rear side panel|^Section of rear left fender"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34body:(?:front-fender-left)$",
+      "title": "Left front fender",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "410",
+          "page": 1
+        }
+      ],
+      "selectors": [
+        {
+          "page": "side_panel_front",
+          "match": "^Side panel, front left$"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34body:(?:mirror-left)$",
+      "title": "Left exterior mirror",
+      "kind": "assembly",
+      "note": "Complete mirror assemblies vary with production and equipment. Glass, covers and drives have separate service records in the source assembly.",
+      "manual": [
+        {
+          "chapter": "510",
+          "page": 2
+        }
+      ],
+      "selectors": [
+        {
+          "page": "outside_mirror",
+          "match": "^Electr.exterior heatable mirror left$"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34body:(?:rocker-left)$",
+      "title": "Left rocker and sill",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "400",
+          "page": 1
+        }
+      ],
+      "selectors": [
+        {
+          "page": "side_frame",
+          "match": ".*"
+        },
+        {
+          "page": "edge_protection_rockers_covers",
+          "match": ".*"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34body:(?:front-door-glass-left)$",
+      "title": "Left front door glass",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "512",
+          "page": 1
+        }
+      ],
+      "selectors": [
+        {
+          "page": "glazing",
+          "match": "^Door window.*front.*left"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34body:(?:front-door-left)$",
+      "title": "Left front door",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "411",
+          "page": 1
+        }
+      ],
+      "selectors": [
+        {
+          "page": "front_door_hinge_door_brake",
+          "match": "^Door.*front.*left$"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34body:(?:rear-door-glass-left)$",
+      "title": "Left rear door glass",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "512",
+          "page": 2
+        }
+      ],
+      "selectors": [
+        {
+          "page": "glazing",
+          "match": "^Door window.*rear.*left"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34body:(?:rear-door-left)$",
+      "title": "Left rear door",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "411",
+          "page": 1
+        }
+      ],
+      "selectors": [
+        {
+          "page": "rear_door_hinge_door_brake",
+          "match": "^Door.*rear.*left$"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34body:(?:tail-light-left)$",
+      "title": "Left body-mounted rear lamp",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "630",
+          "page": 4
+        }
+      ],
+      "selectors": [
+        {
+          "page": "rear_light",
+          "match": "^Rear light in the side panel, left$"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34body:(?:trunk-lamp-left)$",
+      "title": "Left trunk-mounted rear lamp",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "630",
+          "page": 4
+        }
+      ],
+      "selectors": [
+        {
+          "page": "rear_light",
+          "match": "^Rear light in trunk lid, left$"
+        }
+      ],
+      "manualOnly": true
+    },
+    {
+      "pattern": "^e34body:(?:headlamp-right-inner)$",
+      "title": "Right high-beam headlamp",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "630",
+          "page": 2
+        }
+      ],
+      "selectors": [
+        {
+          "page": "single_components_for_headlight",
+          "match": "^[Hh]igh[- ]beam insert right$"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34body:(?:headlamp-right-outer)$",
+      "title": "Right low-beam headlamp",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "630",
+          "page": 2
+        }
+      ],
+      "selectors": [
+        {
+          "page": "single_components_for_headlight",
+          "match": "^[Ll]ow[- ]beam insert right$"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34body:(?:rear-quarter-right)$",
+      "title": "Right rear quarter panel",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "400",
+          "page": 1
+        }
+      ],
+      "selectors": [
+        {
+          "page": "side_panel_tail_trim",
+          "match": "^Right rear side panel|^Section of rear right fender"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34body:(?:front-fender-right)$",
+      "title": "Right front fender",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "410",
+          "page": 1
+        }
+      ],
+      "selectors": [
+        {
+          "page": "side_panel_front",
+          "match": "^Side panel, front right$"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34body:(?:mirror-right)$",
+      "title": "Right exterior mirror",
+      "kind": "assembly",
+      "note": "Complete mirror assemblies vary with production and equipment. Glass, covers and drives have separate service records in the source assembly.",
+      "manual": [
+        {
+          "chapter": "510",
+          "page": 2
+        }
+      ],
+      "selectors": [
+        {
+          "page": "outside_mirror",
+          "match": "^Electr.exterior heatable mirror right$"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34body:(?:rocker-right)$",
+      "title": "Right rocker and sill",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "400",
+          "page": 1
+        }
+      ],
+      "selectors": [
+        {
+          "page": "side_frame",
+          "match": ".*"
+        },
+        {
+          "page": "edge_protection_rockers_covers",
+          "match": ".*"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34body:(?:front-door-glass-right)$",
+      "title": "Right front door glass",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "512",
+          "page": 1
+        }
+      ],
+      "selectors": [
+        {
+          "page": "glazing",
+          "match": "^Door window.*front.*right"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34body:(?:front-door-right)$",
+      "title": "Right front door",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "411",
+          "page": 1
+        }
+      ],
+      "selectors": [
+        {
+          "page": "front_door_hinge_door_brake",
+          "match": "^Door.*front.*right$"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34body:(?:rear-door-glass-right)$",
+      "title": "Right rear door glass",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "512",
+          "page": 2
+        }
+      ],
+      "selectors": [
+        {
+          "page": "glazing",
+          "match": "^Door window.*rear.*right"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34body:(?:rear-door-right)$",
+      "title": "Right rear door",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "411",
+          "page": 1
+        }
+      ],
+      "selectors": [
+        {
+          "page": "rear_door_hinge_door_brake",
+          "match": "^Door.*rear.*right$"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34body:(?:tail-light-right)$",
+      "title": "Right body-mounted rear lamp",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "630",
+          "page": 4
+        }
+      ],
+      "selectors": [
+        {
+          "page": "rear_light",
+          "match": "^Rear light in the side panel, right$"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34body:(?:trunk-lamp-right)$",
+      "title": "Right trunk-mounted rear lamp",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "630",
+          "page": 4
+        }
+      ],
+      "selectors": [
+        {
+          "page": "rear_light",
+          "match": "^Rear light in trunk lid, right$"
+        }
+      ],
+      "manualOnly": true
+    },
+    {
+      "pattern": "^e34body:(?:side-moulding-e34-body-.*)$",
+      "title": "Protective side moulding",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "510",
+          "page": 1
+        }
+      ],
+      "selectors": [
+        {
+          "page": "ornamental_strips",
+          "match": ".*"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34body:(?:rear-bumper)$",
+      "title": "Rear bumper assembly",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "510",
+          "page": 4
+        }
+      ],
+      "selectors": [
+        {
+          "page": "carrier_bumper_rear",
+          "match": ".*"
+        },
+        {
+          "page": "bumper_trim_panel_rear",
+          "match": ".*"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34body:(?:front-bumper)$",
+      "title": "Front bumper assembly",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "510",
+          "page": 3
+        }
+      ],
+      "selectors": [
+        {
+          "page": "carrier_bumper_front",
+          "match": ".*"
+        },
+        {
+          "page": "trim_panel_bumper",
+          "match": ".*"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34body:(?:shell)$",
+      "title": "Body shell and pillars",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "400",
+          "page": 1
+        }
+      ],
+      "selectors": [
+        {
+          "page": "side_frame",
+          "match": ".*"
+        },
+        {
+          "page": "body_side_frame_partition",
+          "match": ".*"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34body:(?:roof)$",
+      "title": "Roof panel",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "400",
+          "page": 1
+        }
+      ],
+      "selectors": [
+        {
+          "page": "roof",
+          "match": "(Roof|roof)"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34body:(?:windshield)$",
+      "title": "Windscreen",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "512",
+          "page": 1
+        }
+      ],
+      "selectors": [
+        {
+          "page": "glazing",
+          "match": "^Windscreen"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34body:(?:rear-window)$",
+      "title": "Rear window",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "512",
+          "page": 2
+        }
+      ],
+      "selectors": [
+        {
+          "page": "glazing",
+          "match": "^Rear window"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34body:(?:front-valance)$",
+      "title": "Front lower valance",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "510",
+          "page": 3
+        }
+      ],
+      "selectors": [
+        {
+          "page": "front_panel",
+          "match": ".*"
+        },
+        {
+          "page": "trim_panel_bumper",
+          "match": ".*"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34body:(?:hood)$",
+      "title": "Engine hood",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "410",
+          "page": 2
+        }
+      ],
+      "selectors": [
+        {
+          "page": "hood",
+          "match": "^Engine hood f "
+        }
+      ]
+    },
+    {
+      "pattern": "^e34body:(?:trunk)$",
+      "title": "Sedan trunk lid",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "412",
+          "page": 1
+        }
+      ],
+      "selectors": [
+        {
+          "page": "single_components_for_trunk_lid",
+          "match": ".*"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34body:(?:roundel-front)$",
+      "title": "Front BMW emblem",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "510",
+          "page": 1
+        }
+      ],
+      "selectors": [
+        {
+          "page": "emblems_letterings",
+          "match": "(Emblem|emblem|Badge|badge)"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34body:(?:roundel-rear)$",
+      "title": "Rear BMW emblem",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "510",
+          "page": 1
+        }
+      ],
+      "selectors": [
+        {
+          "page": "emblems_letterings",
+          "match": "(Emblem|emblem|Badge|badge)"
+        }
+      ]
+    },
+    {
+      "pattern": "^wheel:.*$",
+      "title": "Wheel, tire and mounting",
+      "kind": "assembly",
+      "note": "The original basket-weave illustration and nominal 205/65 R15 tire size do not establish a specific BMW wheel option. Check diameter, width, offset and wheel markings.",
+      "manual": [
+        {
+          "chapter": "010",
+          "page": 11
+        }
+      ],
+      "selectors": [
+        {
+          "page": "cross_spoke_styling",
+          "match": ".*"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34body:(?:sunroof)$",
+      "title": "Sliding sunroof panel",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "400",
+          "page": 1
+        }
+      ],
+      "selectors": [
+        {
+          "page": "slide_lifting_roof_cover_ceiling_frame",
+          "match": "^Sliding lifting roof cover$"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34body:(?:fuel-door)$",
+      "title": "Fuel filler door",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "160",
+          "page": 1
+        }
+      ],
+      "selectors": [
+        {
+          "page": "side_panel_tail_trim",
+          "match": "^Fill-In Flap$"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34trim:(?:glove-box-door)$",
+      "title": "Glove box door and latch",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "513",
+          "page": 4
+        }
+      ],
+      "selectors": [
+        {
+          "page": "glove_box",
+          "match": "^(Glove box vinyl|Catch|Catch lower part|Catch upper part|Covering glove box)$"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34trim:(?:glove-box-bin)$",
+      "title": "Glove box storage liner",
+      "kind": "supplied-with",
+      "note": "The source lists the glove box assembly. Verify the liner before ordering.",
+      "manual": [
+        {
+          "chapter": "513",
+          "page": 4
+        }
+      ],
+      "selectors": [
+        {
+          "page": "glove_box",
+          "match": "^Glove box vinyl$"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34trim:(?:luggage-floor-carpet)$",
+      "title": "Spare-wheel cover and luggage carpet",
+      "kind": "reference",
+      "note": "These are luggage trim references. Check the installed cover separately.",
+      "manual": [
+        {
+          "chapter": "400",
+          "page": 2
+        }
+      ],
+      "selectors": [
+        {
+          "page": "trunk_trim_panel",
+          "match": "^(Compensating mat|Trunk mat with tension straps)$"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34trim:(?:spare-wheel)$",
+      "title": "Spare wheel and tire",
+      "kind": "reference",
+      "note": "The rim is a catalog reference. Confirm the actual spare, tire size and pressure on the vehicle.",
+      "manual": [
+        {
+          "chapter": "020",
+          "page": 16
+        }
+      ],
+      "selectors": [
+        {
+          "page": "steel_rim",
+          "match": "^Steel rim schwarz$"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34trim:(?:spare-wheel-retainer)$",
+      "title": "Spare-wheel retaining hardware",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "400",
+          "page": 2
+        }
+      ],
+      "selectors": [
+        {
+          "page": "tool_kit_lifting_jack",
+          "match": "^(Bracket for spare wheel|Wing nut)$"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34trim:(?:fuel-door-hinge)$",
+      "title": "Fuel door hinge",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "160",
+          "page": 1
+        }
+      ],
+      "selectors": [
+        {
+          "page": "side_panel_tail_trim",
+          "match": "^Hinge$"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34trim:(?:fuel-filler-pocket)$",
+      "title": "Fuel filler pocket and cap",
+      "kind": "assembly",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "160",
+          "page": 1
+        }
+      ],
+      "selectors": [
+        {
+          "page": "side_panel_tail_trim",
+          "match": "^Support filler cap$"
+        },
+        {
+          "page": "metal_fuel_tank",
+          "match": "^Filler cap without lock$"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34trim:(?:sunroof-liner)$",
+      "title": "Sliding sunroof liner",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "400",
+          "page": 2
+        }
+      ],
+      "selectors": [
+        {
+          "page": "slide_lifting_roof_cover_ceiling_frame",
+          "match": "^Ceiling frame covered velours$"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34trim:(?:sunroof-aperture-finisher)$",
+      "title": "Sunroof opening trim",
+      "kind": "reference",
+      "note": "Check trim and upholstery against the installed headliner.",
+      "manual": [
+        {
+          "chapter": "400",
+          "page": 2
+        }
+      ],
+      "selectors": [
+        {
+          "page": "roof_trim_headlining_moulded_handle",
+          "match": "^Headliner sunroof$"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34trim:(?:trunk-lid-inner)$",
+      "title": "Trunk lid tool tray",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "412",
+          "page": 1
+        }
+      ],
+      "selectors": [
+        {
+          "page": "tool_kit_tool_box",
+          "match": "^Tool box$"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34trim:(?:trunk-hinge-left)$",
+      "title": "Left trunk hinge",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "412",
+          "page": 1
+        }
+      ],
+      "selectors": [
+        {
+          "page": "single_components_for_trunk_lid",
+          "match": "^left trunk lid hinge$"
+        }
+      ]
+    },
+    {
+      "pattern": "^e34trim:(?:trunk-hinge-right)$",
+      "title": "Right trunk hinge",
+      "kind": "component",
+      "note": "",
+      "manual": [
+        {
+          "chapter": "412",
+          "page": 1
+        }
+      ],
+      "selectors": [
+        {
+          "page": "single_components_for_trunk_lid",
+          "match": "^right trunk lid hinge$"
+        }
+      ]
+    }
+  ]
+}

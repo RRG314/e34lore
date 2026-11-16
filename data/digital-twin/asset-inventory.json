@@ -1,0 +1,631 @@
+{
+  "schemaVersion": 1,
+  "researchedOn": "2026-11-05",
+  "purpose": "Private asset and method research; not a published asset manifest or fitment catalog",
+  "targetConfiguration": {
+    "vehicle": "1995 BMW E34 525i",
+    "engineFamily": "M50",
+    "variantNote": "Expected M50TU configuration must be fixed against build date, engine identity and actual vehicle before assigning geometry.",
+    "market": null,
+    "body": null,
+    "productionDate": null,
+    "transmission": null,
+    "asBuiltModificationState": null
+  },
+  "scopeAndBoundaries": {
+    "appCodeChanged": false,
+    "databaseChanged": false,
+    "thirdPartyCodeExecuted": false,
+    "paidOrSignedInAccessUsed": false,
+    "modelDownloadsPerformed": false,
+    "smallLicensedDataStaged": true,
+    "accessMethod": "Primary source pages and normal unauthenticated public metadata APIs. HTTP 403/402 detail-page boundaries were not bypassed.",
+    "downloadUrlPolicy": "Use actual existing local licensed files or primary model pages. Null directDownloadUrl is intentional: no guessed archive URLs, private viewer payload extraction or access bypass."
+  },
+  "summary": {
+    "usableExistingVisualAssetFamilies": 1,
+    "newLicensedDataLibrariesStaged": 1,
+    "verifiedCompleteM50EngineAssemblies": 0,
+    "verified1995E34EngineBayAssemblies": 0,
+    "allRequiredInternalAndSmallPartsEstablished": false
+  },
+  "assets": [
+    {
+      "id": "existing-lab-e34-525i-teaching-mesh",
+      "name": "BMW 525i e34 | Project Zomboid",
+      "status": "reusable_visual_reference",
+      "targetApplicability": "E34 sedan body overview only; engine bay and component geometry not established",
+      "sourceUrl": "https://sketchfab.com/3d-models/bmw-525i-e34-project-zomboid-c65aa3b7687d4f5dbbabdfad0b7816bb",
+      "metadataUrl": "https://api.sketchfab.com/v3/models/c65aa3b7687d4f5dbbabdfad0b7816bb",
+      "creator": {
+        "sourceAttribution": "Uralvagonzavod",
+        "currentDisplayName": "Silbergrau",
+        "username": "UVZZZ",
+        "profileUrl": "https://sketchfab.com/UVZZZ"
+      },
+      "format": [
+        "GLB 2.0"
+      ],
+      "download": {
+        "sourceReportsDownloadable": true,
+        "downloadPageUrl": "https://sketchfab.com/3d-models/bmw-525i-e34-project-zomboid-c65aa3b7687d4f5dbbabdfad0b7816bb",
+        "directDownloadUrl": null,
+        "acquiredDuringThisResearch": false,
+        "localFiles": [
+          {
+            "path": "/models/e34-525i/e34-body.glb",
+            "bytes": 1835452,
+            "sha256": "54b09cc9b8bd14d008933637be86f1a04c74474a02cb02da39c9fb3ef9e47c53"
+          },
+          {
+            "path": "/models/e34-525i/e34-wheel.glb",
+            "bytes": 71772,
+            "sha256": "9fa22896feab63d5d8f5ca665d1bb1a54a05d659c3e6582791c2cd3f8f5638da"
+          }
+        ]
+      },
+      "license": {
+        "declaredSpdx": "CC-BY-4.0",
+        "sourceUrl": "http://creativecommons.org/licenses/by/4.0/",
+        "localNotice": "/models/e34-525i/LICENSE.md",
+        "requirements": [
+          "Credit supplied creator and source; link license; preserve changes notice.",
+          "These models remain CC BY 4.0 independently of the application license."
+        ]
+      },
+      "dimensionalEvidence": {
+        "classification": "illustrative_unmeasured",
+        "metricAccuracyMm": null,
+        "measuredDimensions": null,
+        "notes": [
+          "Game asset intended for Project Zomboid.",
+          "Lab adaptation scaled tires to an assumed radius; not a measured E34 scale validation."
+        ]
+      },
+      "segmentation": {
+        "verified": true,
+        "bodyMeshCount": 21,
+        "bodyNodeCount": 21,
+        "wheelMeshCount": 1,
+        "notes": [
+          "Local GLB JSON containers inspected; mesh names are ordinal e34-body-* names rather than authenticated OEM components.",
+          "Wheel is independently centered; no engineering assembly, hardware, engine internals or BOM link established."
+        ]
+      },
+      "evidenceFiles": [
+        "sketchfab-e34-525i-metadata.json",
+        "existing-lab-glb-inspection.json"
+      ],
+      "allowedResearchUse": "Reuse existing licensed files for a labeled visual orientation layer; no geometry-based fitment, repair clearance or measurement claims."
+    },
+    {
+      "id": "cc-by-e34-body-candidate",
+      "name": "BMW E34 5-Series 1987-1996",
+      "status": "candidate_visual_reference_not_acquired",
+      "sourceUrl": "https://sketchfab.com/3d-models/bmw-e34-5-series-1987-1996-1cdb8a361e5c487c9218bbccd2575efa",
+      "metadataUrl": "https://api.sketchfab.com/v3/models/1cdb8a361e5c487c9218bbccd2575efa",
+      "creator": {
+        "username": "szymonpasterczyk",
+        "displayName": "Merc_TV"
+      },
+      "format": null,
+      "download": {
+        "sourceReportsDownloadable": true,
+        "downloadPageUrl": "https://sketchfab.com/3d-models/bmw-e34-5-series-1987-1996-1cdb8a361e5c487c9218bbccd2575efa",
+        "directDownloadUrl": null,
+        "acquiredDuringThisResearch": false,
+        "notes": "Public metadata exposes no archive format/URL; no sign-in or download attempted."
+      },
+      "license": {
+        "declaredSpdx": "CC-BY-4.0",
+        "sourceUrl": "http://creativecommons.org/licenses/by/4.0/",
+        "scope": "Uploader-declared license verified in official metadata; underlying creation provenance not independently established."
+      },
+      "dimensionalEvidence": {
+        "classification": "unestablished",
+        "metricAccuracyMm": null,
+        "notes": "No dimensioned drawings, physical checks, scan report or exact 1995 525i assembly identity supplied in public description."
+      },
+      "segmentation": {
+        "verified": false,
+        "sourceVertexCount": 340168,
+        "sourceFaceCount": 611633,
+        "notes": "Higher polygon count does not prove semantic segmentation, internal coverage or dimensional fidelity."
+      },
+      "targetApplicability": "E34 visual body candidate; exact engine/chassis variant and detailed components unverified",
+      "evidenceFiles": [
+        "sketchfab-e34-5-series-body-metadata.json"
+      ]
+    },
+    {
+      "id": "cc-by-e34-sedan-touring-candidate",
+      "name": "BMW 5 Series E34 Sedan And Touring",
+      "status": "candidate_visual_reference_not_acquired",
+      "sourceUrl": "https://sketchfab.com/3d-models/bmw-5-series-e34-sedan-and-touring-e3d8d4f5cdd24a549b54d10f0f0ec8f8",
+      "metadataUrl": "https://api.sketchfab.com/v3/models/e3d8d4f5cdd24a549b54d10f0f0ec8f8",
+      "creator": {
+        "username": "niev",
+        "displayName": "Nieve5677"
+      },
+      "format": null,
+      "download": {
+        "sourceReportsDownloadable": true,
+        "downloadPageUrl": "https://sketchfab.com/3d-models/bmw-5-series-e34-sedan-and-touring-e3d8d4f5cdd24a549b54d10f0f0ec8f8",
+        "directDownloadUrl": null,
+        "acquiredDuringThisResearch": false,
+        "notes": "Public metadata exposes no archive format/URL; no sign-in or download attempted."
+      },
+      "license": {
+        "declaredSpdx": "CC-BY-4.0",
+        "sourceUrl": "http://creativecommons.org/licenses/by/4.0/",
+        "scope": "Uploader-declared license verified in official metadata; underlying creation provenance not independently established."
+      },
+      "dimensionalEvidence": {
+        "classification": "unestablished",
+        "metricAccuracyMm": null,
+        "notes": "No dimensioned drawings, physical checks, scan report or exact 1995 525i assembly identity supplied in public description."
+      },
+      "segmentation": {
+        "verified": false,
+        "sourceVertexCount": 1187650,
+        "sourceFaceCount": 2312198,
+        "notes": "Higher polygon count does not prove semantic segmentation, internal coverage or dimensional fidelity."
+      },
+      "targetApplicability": "E34 visual body candidate; exact engine/chassis variant and detailed components unverified",
+      "evidenceFiles": [
+        "sketchfab-e34-sedan-touring-metadata.json"
+      ]
+    },
+    {
+      "id": "e34-front-rigil-scan",
+      "name": "BMW E34 Front - Einscan Rigil IR mode",
+      "status": "restricted_license_reference_only",
+      "sourceUrl": "https://sketchfab.com/3d-models/bmw-e34-front-einscan-rigil-ir-mode-f1062fc54e7a4ee2927d984f3bbe06a8",
+      "metadataUrl": "https://api.sketchfab.com/v3/models/f1062fc54e7a4ee2927d984f3bbe06a8",
+      "creator": {
+        "username": "PrintedForFun",
+        "displayName": "PrintedForFun"
+      },
+      "format": null,
+      "download": {
+        "sourceReportsDownloadable": true,
+        "downloadPageUrl": "https://sketchfab.com/3d-models/bmw-e34-front-einscan-rigil-ir-mode-f1062fc54e7a4ee2927d984f3bbe06a8",
+        "directDownloadUrl": null,
+        "acquiredDuringThisResearch": false
+      },
+      "license": {
+        "declaredSpdx": "CC-BY-NC-4.0",
+        "sourceUrl": "http://creativecommons.org/licenses/by-nc/4.0/",
+        "requirements": [
+          "Attribution and changes notice.",
+          "Noncommercial restriction; not cleared for this platform publication."
+        ],
+        "scope": "License is visible in official metadata; no geometry downloaded."
+      },
+      "dimensionalEvidence": {
+        "classification": "creator_described_scan_no_validation",
+        "creatorClaimedSamplingResolutionMm": 1,
+        "metricAccuracyMm": null,
+        "notes": [
+          "Creator describes IR large-parts mode with texture/geometry hybrid tracking.",
+          "Creator reports harsh side sunlight, waxed surfaces and center-hood tracking difficulty.",
+          "Sampling resolution is not a measurement accuracy certificate.",
+          "Reduced/aligned in Quicksurface; no reference-distance checks or known 1995 525i identity supplied."
+        ]
+      },
+      "segmentation": {
+        "verified": false,
+        "sourceVertexCount": 1892191,
+        "sourceFaceCount": 3744996,
+        "notes": "Front exterior scan, not a verified segmented engine bay or internals."
+      },
+      "targetApplicability": "E34 front exterior reference; variant, exact dimensions and underside coverage unknown",
+      "evidenceFiles": [
+        "sketchfab-e34-front-scan-metadata.json"
+      ]
+    },
+    {
+      "id": "m50b25-nv-block-scan",
+      "name": "1992 BMW 525i M50B25 NV Block",
+      "status": "unlicensed_reference_only",
+      "sourceUrl": "https://sketchfab.com/3d-models/1992-bmw-525i-m50b25-nv-block-203b08ba853e42ca9100655b7492d869",
+      "metadataUrl": "https://api.sketchfab.com/v3/models/203b08ba853e42ca9100655b7492d869",
+      "creator": {
+        "username": "altrous",
+        "displayName": "Altrous"
+      },
+      "format": null,
+      "download": {
+        "sourceReportsDownloadable": false,
+        "downloadPageUrl": "https://sketchfab.com/3d-models/1992-bmw-525i-m50b25-nv-block-203b08ba853e42ca9100655b7492d869",
+        "directDownloadUrl": null,
+        "acquiredDuringThisResearch": false,
+        "notes": "Official public metadata says not downloadable; creator references separate purchase/contact. No paid access, contact or signup attempted."
+      },
+      "license": {
+        "declaredSpdx": null,
+        "sourceUrl": null,
+        "scope": "No reuse license in official public metadata. A viewer or creator purchase link does not establish redistribution rights."
+      },
+      "dimensionalEvidence": {
+        "classification": "creator_accuracy_claim_not_independently_verified",
+        "creatorClaimedAccuracyMm": {
+          "plusMinus": 1
+        },
+        "metricAccuracyMm": null,
+        "notes": [
+          "Creator describes scans of real parts and disclaims application fitment.",
+          "No calibration certificate, datums, dimensional check report, source part number, tolerances or internal geometry coverage verified.",
+          "Surface scan cannot establish unobserved passages, hidden bores or assembly internals."
+        ]
+      },
+      "segmentation": {
+        "verified": false,
+        "sourceVertexCount": 2068751,
+        "sourceFaceCount": 4093666,
+        "notes": "Individual named component scan; no internal/subpart scene structure verified."
+      },
+      "targetApplicability": "1992 525i M50B25 non-VANOS; not automatically 1995 M50TU",
+      "evidenceFiles": [
+        "sketchfab-m50-block-metadata.json"
+      ]
+    },
+    {
+      "id": "m50-e36-water-pump-scan",
+      "name": "1995 BMW 325i E36 M50 Waterpump",
+      "status": "unlicensed_reference_only",
+      "sourceUrl": "https://sketchfab.com/3d-models/1995-bmw-325i-e36-m50-waterpump-dc7b190feb8b409fae9aab73e75244a4",
+      "metadataUrl": "https://api.sketchfab.com/v3/models/dc7b190feb8b409fae9aab73e75244a4",
+      "creator": {
+        "username": "altrous",
+        "displayName": "Altrous"
+      },
+      "format": null,
+      "download": {
+        "sourceReportsDownloadable": false,
+        "downloadPageUrl": "https://sketchfab.com/3d-models/1995-bmw-325i-e36-m50-waterpump-dc7b190feb8b409fae9aab73e75244a4",
+        "directDownloadUrl": null,
+        "acquiredDuringThisResearch": false,
+        "notes": "Official public metadata says not downloadable; creator references separate purchase/contact. No paid access, contact or signup attempted."
+      },
+      "license": {
+        "declaredSpdx": null,
+        "sourceUrl": null,
+        "scope": "No reuse license in official public metadata. A viewer or creator purchase link does not establish redistribution rights."
+      },
+      "dimensionalEvidence": {
+        "classification": "creator_accuracy_claim_not_independently_verified",
+        "creatorClaimedAccuracyMm": {
+          "plusMinus": 1
+        },
+        "metricAccuracyMm": null,
+        "notes": [
+          "Creator describes scans of real parts and disclaims application fitment.",
+          "No calibration certificate, datums, dimensional check report, source part number, tolerances or internal geometry coverage verified.",
+          "Surface scan cannot establish unobserved passages, hidden bores or assembly internals."
+        ]
+      },
+      "segmentation": {
+        "verified": false,
+        "sourceVertexCount": 847221,
+        "sourceFaceCount": 1692704,
+        "notes": "Individual named component scan; no internal/subpart scene structure verified."
+      },
+      "targetApplicability": "1995 325i E36 M50; E34 applicability and exact OEM number unverified",
+      "evidenceFiles": [
+        "sketchfab-m50-waterpump-metadata.json"
+      ]
+    },
+    {
+      "id": "m50-oil-filter-housing-scan",
+      "name": "BMW M50 Oil Filter Housing Unit",
+      "status": "unlicensed_reference_only",
+      "sourceUrl": "https://sketchfab.com/3d-models/bmw-m50-oil-filter-housing-unit-efd1ec0cc981434caff6e744dab670da",
+      "metadataUrl": "https://api.sketchfab.com/v3/models/efd1ec0cc981434caff6e744dab670da",
+      "creator": {
+        "username": "altrous",
+        "displayName": "Altrous"
+      },
+      "format": null,
+      "download": {
+        "sourceReportsDownloadable": false,
+        "downloadPageUrl": "https://sketchfab.com/3d-models/bmw-m50-oil-filter-housing-unit-efd1ec0cc981434caff6e744dab670da",
+        "directDownloadUrl": null,
+        "acquiredDuringThisResearch": false,
+        "notes": "Official public metadata says not downloadable; creator references separate purchase/contact. No paid access, contact or signup attempted."
+      },
+      "license": {
+        "declaredSpdx": null,
+        "sourceUrl": null,
+        "scope": "No reuse license in official public metadata. A viewer or creator purchase link does not establish redistribution rights."
+      },
+      "dimensionalEvidence": {
+        "classification": "creator_accuracy_claim_not_independently_verified",
+        "creatorClaimedAccuracyMm": {
+          "plusMinus": 1
+        },
+        "metricAccuracyMm": null,
+        "notes": [
+          "Creator describes scans of real parts and disclaims application fitment.",
+          "No calibration certificate, datums, dimensional check report, source part number, tolerances or internal geometry coverage verified.",
+          "Surface scan cannot establish unobserved passages, hidden bores or assembly internals."
+        ]
+      },
+      "segmentation": {
+        "verified": false,
+        "sourceVertexCount": 1028383,
+        "sourceFaceCount": 2044549,
+        "notes": "Individual named component scan; no internal/subpart scene structure verified."
+      },
+      "targetApplicability": "M50 family only; exact revision and E34 applicability unverified",
+      "evidenceFiles": [
+        "sketchfab-m50-oil-filter-housing-metadata.json"
+      ]
+    },
+    {
+      "id": "m50-nv-valve-cover-scan",
+      "name": "BMW E36 M50 NV Valve Cover",
+      "status": "unlicensed_reference_only",
+      "sourceUrl": "https://sketchfab.com/3d-models/bmw-e36-m50-nv-valve-cover-5b658b074144406aacae676de4eb612c",
+      "metadataUrl": "https://api.sketchfab.com/v3/models/5b658b074144406aacae676de4eb612c",
+      "creator": {
+        "username": "altrous",
+        "displayName": "Altrous"
+      },
+      "format": null,
+      "download": {
+        "sourceReportsDownloadable": false,
+        "downloadPageUrl": "https://sketchfab.com/3d-models/bmw-e36-m50-nv-valve-cover-5b658b074144406aacae676de4eb612c",
+        "directDownloadUrl": null,
+        "acquiredDuringThisResearch": false,
+        "notes": "Official public metadata says not downloadable; creator references separate purchase/contact. No paid access, contact or signup attempted."
+      },
+      "license": {
+        "declaredSpdx": null,
+        "sourceUrl": null,
+        "scope": "No reuse license in official public metadata. A viewer or creator purchase link does not establish redistribution rights."
+      },
+      "dimensionalEvidence": {
+        "classification": "creator_accuracy_claim_not_independently_verified",
+        "creatorClaimedAccuracyMm": {
+          "plusMinus": 1
+        },
+        "metricAccuracyMm": null,
+        "notes": [
+          "Creator describes scans of real parts and disclaims application fitment.",
+          "No calibration certificate, datums, dimensional check report, source part number, tolerances or internal geometry coverage verified.",
+          "Surface scan cannot establish unobserved passages, hidden bores or assembly internals."
+        ]
+      },
+      "segmentation": {
+        "verified": false,
+        "sourceVertexCount": 794788,
+        "sourceFaceCount": 1589124,
+        "notes": "Individual named component scan; no internal/subpart scene structure verified."
+      },
+      "targetApplicability": "E36 M50 non-VANOS; not automatically 1995 M50TU",
+      "evidenceFiles": [
+        "sketchfab-m50-valve-cover-metadata.json"
+      ]
+    },
+    {
+      "id": "e34-1995-oil-pan-scan",
+      "name": "1995 BMW E34 Oil Pan (Raw)",
+      "status": "unlicensed_reference_only",
+      "sourceUrl": "https://sketchfab.com/3d-models/1995-bmw-e34-oil-pan-raw-8bf237d0730345f79970c9ff40799f70",
+      "metadataUrl": "https://api.sketchfab.com/v3/models/8bf237d0730345f79970c9ff40799f70",
+      "creator": {
+        "username": "altrous",
+        "displayName": "Altrous"
+      },
+      "format": null,
+      "download": {
+        "sourceReportsDownloadable": false,
+        "downloadPageUrl": "https://sketchfab.com/3d-models/1995-bmw-e34-oil-pan-raw-8bf237d0730345f79970c9ff40799f70",
+        "directDownloadUrl": null,
+        "acquiredDuringThisResearch": false,
+        "notes": "Official public metadata says not downloadable; creator references separate purchase/contact. No paid access, contact or signup attempted."
+      },
+      "license": {
+        "declaredSpdx": null,
+        "sourceUrl": null,
+        "scope": "No reuse license in official public metadata. A viewer or creator purchase link does not establish redistribution rights."
+      },
+      "dimensionalEvidence": {
+        "classification": "creator_accuracy_claim_not_independently_verified",
+        "creatorClaimedAccuracyMm": {
+          "plusMinus": 1
+        },
+        "metricAccuracyMm": null,
+        "notes": [
+          "Creator describes scans of real parts and disclaims application fitment.",
+          "No calibration certificate, datums, dimensional check report, source part number, tolerances or internal geometry coverage verified.",
+          "Surface scan cannot establish unobserved passages, hidden bores or assembly internals."
+        ]
+      },
+      "segmentation": {
+        "verified": false,
+        "sourceVertexCount": 1405634,
+        "sourceFaceCount": 2797277,
+        "notes": "Individual named component scan; no internal/subpart scene structure verified."
+      },
+      "targetApplicability": "Title says 1995 E34; engine, OEM number and revision unverified",
+      "evidenceFiles": [
+        "sketchfab-e34-oil-pan-metadata.json"
+      ]
+    },
+    {
+      "id": "m50-e36-oil-pump-scan",
+      "name": "BMW E36 M50 Oil Pump",
+      "status": "unlicensed_reference_only",
+      "sourceUrl": "https://sketchfab.com/3d-models/bmw-e36-m50-oil-pump-2ac2afc83a2545b395d1cf2dcf98c834",
+      "metadataUrl": "https://api.sketchfab.com/v3/models/2ac2afc83a2545b395d1cf2dcf98c834",
+      "creator": {
+        "username": "altrous",
+        "displayName": "Altrous"
+      },
+      "format": null,
+      "download": {
+        "sourceReportsDownloadable": false,
+        "downloadPageUrl": "https://sketchfab.com/3d-models/bmw-e36-m50-oil-pump-2ac2afc83a2545b395d1cf2dcf98c834",
+        "directDownloadUrl": null,
+        "acquiredDuringThisResearch": false,
+        "notes": "Official public metadata says not downloadable; creator references separate purchase/contact. No paid access, contact or signup attempted."
+      },
+      "license": {
+        "declaredSpdx": null,
+        "sourceUrl": null,
+        "scope": "No reuse license in official public metadata. A viewer or creator purchase link does not establish redistribution rights."
+      },
+      "dimensionalEvidence": {
+        "classification": "creator_accuracy_claim_not_independently_verified",
+        "creatorClaimedAccuracyMm": {
+          "plusMinus": 1
+        },
+        "metricAccuracyMm": null,
+        "notes": [
+          "Creator describes scans of real parts and disclaims application fitment.",
+          "No calibration certificate, datums, dimensional check report, source part number, tolerances or internal geometry coverage verified.",
+          "Surface scan cannot establish unobserved passages, hidden bores or assembly internals."
+        ]
+      },
+      "segmentation": {
+        "verified": false,
+        "sourceVertexCount": 2039501,
+        "sourceFaceCount": 4062318,
+        "notes": "Individual named component scan; no internal/subpart scene structure verified."
+      },
+      "targetApplicability": "E36 M50; E34 applicability and exact OEM number unverified",
+      "evidenceFiles": [
+        "sketchfab-m50-oil-pump-metadata.json"
+      ]
+    },
+    {
+      "id": "cq-warehouse-standard-fastener-data",
+      "name": "cq_warehouse parametric ISO/DIN fasteners",
+      "status": "reusable_nominal_geometry_data",
+      "sourceUrl": "https://github.com/gumyr/cq_warehouse",
+      "documentationUrl": "https://cq-warehouse.readthedocs.io/en/latest/fastener.html",
+      "creator": {
+        "organizationOrAuthor": "gumyr and cq_warehouse contributors"
+      },
+      "format": [
+        "CSV dimensional tables",
+        "STEP/STL can be generated by library; none generated in this task"
+      ],
+      "download": {
+        "directDownloadUrls": [
+          "https://raw.githubusercontent.com/gumyr/cq_warehouse/a57bb7a24762d367d66369f280a24c38a64e73dd/src/cq_warehouse/hex_head_parameters.csv",
+          "https://raw.githubusercontent.com/gumyr/cq_warehouse/a57bb7a24762d367d66369f280a24c38a64e73dd/src/cq_warehouse/hex_nut_parameters.csv",
+          "https://raw.githubusercontent.com/gumyr/cq_warehouse/a57bb7a24762d367d66369f280a24c38a64e73dd/src/cq_warehouse/plain_washer_parameters.csv",
+          "https://raw.githubusercontent.com/gumyr/cq_warehouse/a57bb7a24762d367d66369f280a24c38a64e73dd/src/cq_warehouse/socket_head_cap_parameters.csv",
+          "https://raw.githubusercontent.com/gumyr/cq_warehouse/a57bb7a24762d367d66369f280a24c38a64e73dd/src/cq_warehouse/nominal_screw_lengths.csv"
+        ],
+        "acquiredDuringThisResearch": true,
+        "localDirectory": "licensed-fastener-tables",
+        "files": [
+          {
+            "file": "hex_head_parameters.csv",
+            "sourceUrl": "https://raw.githubusercontent.com/gumyr/cq_warehouse/main/src/cq_warehouse/hex_head_parameters.csv",
+            "bytes": 1470,
+            "sha256": "aecb2b7927db46df16d710c707fe6accc06960260858680e25a771b460f9705e",
+            "immutableSourceUrl": "https://raw.githubusercontent.com/gumyr/cq_warehouse/a57bb7a24762d367d66369f280a24c38a64e73dd/src/cq_warehouse/hex_head_parameters.csv"
+          },
+          {
+            "file": "hex_nut_parameters.csv",
+            "sourceUrl": "https://raw.githubusercontent.com/gumyr/cq_warehouse/main/src/cq_warehouse/hex_nut_parameters.csv",
+            "bytes": 781,
+            "sha256": "1564c763a25eccb8e1ac992ab777355cfae88396ae8f96d18eab1a0b3117e56d",
+            "immutableSourceUrl": "https://raw.githubusercontent.com/gumyr/cq_warehouse/a57bb7a24762d367d66369f280a24c38a64e73dd/src/cq_warehouse/hex_nut_parameters.csv"
+          },
+          {
+            "file": "plain_washer_parameters.csv",
+            "sourceUrl": "https://raw.githubusercontent.com/gumyr/cq_warehouse/main/src/cq_warehouse/plain_washer_parameters.csv",
+            "bytes": 1210,
+            "sha256": "d40ece8029ec2c64723bd42490dcbf6bf11090d4ecf6c746779e520ecbd1fb55",
+            "immutableSourceUrl": "https://raw.githubusercontent.com/gumyr/cq_warehouse/a57bb7a24762d367d66369f280a24c38a64e73dd/src/cq_warehouse/plain_washer_parameters.csv"
+          },
+          {
+            "file": "socket_head_cap_parameters.csv",
+            "sourceUrl": "https://raw.githubusercontent.com/gumyr/cq_warehouse/main/src/cq_warehouse/socket_head_cap_parameters.csv",
+            "bytes": 2718,
+            "sha256": "31d9762f952acb29de1ba6f0dc99b9edeb336f996033b80b29b2c6236977b752",
+            "immutableSourceUrl": "https://raw.githubusercontent.com/gumyr/cq_warehouse/a57bb7a24762d367d66369f280a24c38a64e73dd/src/cq_warehouse/socket_head_cap_parameters.csv"
+          },
+          {
+            "file": "nominal_screw_lengths.csv",
+            "sourceUrl": "https://raw.githubusercontent.com/gumyr/cq_warehouse/main/src/cq_warehouse/nominal_screw_lengths.csv",
+            "bytes": 2062,
+            "sha256": "104e3ef1cfaacb1cd199255e8e4e744b9a942c5c6211268f188d4f5457e0e05a",
+            "immutableSourceUrl": "https://raw.githubusercontent.com/gumyr/cq_warehouse/a57bb7a24762d367d66369f280a24c38a64e73dd/src/cq_warehouse/nominal_screw_lengths.csv"
+          }
+        ]
+      },
+      "license": {
+        "declaredSpdx": "Apache-2.0",
+        "sourceUrl": "https://raw.githubusercontent.com/gumyr/cq_warehouse/a57bb7a24762d367d66369f280a24c38a64e73dd/LICENSE",
+        "localNotice": "licensed-fastener-tables/LICENSE",
+        "repositoryRootNoticeFilesObserved": [],
+        "scope": "Repository license and small inert table files saved; no generator/library code executed."
+      },
+      "dimensionalEvidence": {
+        "classification": "standard_nominal_dimensions_not_oem_identity",
+        "metricAccuracyMm": null,
+        "notes": [
+          "Tables and generator support specified ISO/DIN fastener families; validate applicable standard/revision before engineering use.",
+          "A source-confirmed M-size/pitch/length/head family is required per BMW hardware instance.",
+          "Generic geometry does not establish OEM grade, coating, shank/thread length, captive washer, flange, tolerance class or torque.",
+          "Library documentation says some dimensional ranges use maximum values and simple geometry omits modeled threads."
+        ]
+      },
+      "segmentation": {
+        "verified": true,
+        "notes": "Each standard nut/screw/washer can be an independent generated object; no BMW BOM association established."
+      },
+      "targetApplicability": "Generic standard fasteners only, after nominal standard and instance identity are sourced",
+      "evidenceFiles": [
+        "cq-warehouse-license.txt",
+        "cq-warehouse-fastener.rst",
+        "licensed-fastener-tables/PROVENANCE.json"
+      ]
+    },
+    {
+      "id": "cults-e36-engine-bay-scan",
+      "name": "BMW E36 Sedan Engine Bay M50 3d scan",
+      "status": "inaccessible_wrong_chassis_not_acquired",
+      "sourceUrl": "https://cults3d.com/en/3d-model/gadget/bmw-e36-sedan-engine-bay-m50-3d-scan",
+      "creator": {
+        "username": "drew_jdm",
+        "evidence": "Creator primary collection is indexed by search; detailed source page access returned HTTP 403."
+      },
+      "format": {
+        "searchIndexed": "STL",
+        "verifiedFile": null
+      },
+      "download": {
+        "directDownloadUrl": null,
+        "acquiredDuringThisResearch": false
+      },
+      "license": {
+        "declaredSpdx": null,
+        "sourceUrl": null,
+        "scope": "Reuse terms not established from accessible primary detail page; no aggregator license claim adopted."
+      },
+      "dimensionalEvidence": {
+        "classification": "unestablished",
+        "metricAccuracyMm": null
+      },
+      "segmentation": {
+        "verified": false
+      },
+      "targetApplicability": "E36 engine bay, not E34; no E34 fitment inferred"
+    }
+  ],
+  "requiredNextEvidence": [
+    "Exact build/market/body/transmission/engine and part-revision identity for target.",
+    "Permissioned or owned scans/CAD for E34 engine-bay structure, M50TU exterior, accessories, cooling, internals, hoses, routing, connectors, brackets and hardware.",
+    "Physical scale/datum/check measurements and per-component uncertainty; hidden/internal surfaces need direct access, trustworthy dimensioned sources or appropriate imaging.",
+    "Semantic part segmentation and authenticated BOM links; geometry mesh counts alone are not component completeness.",
+    "Content review before any fitment, torque, collision, repair or safety claim."
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "id": "e34-reconstruction-reference",
+  "revision": 39,
+  "manifestUrl": "/models/e34-lore/r39/manifest.6ef63dee732b00e887cdd2b51fe8037993d3289b3c77eeddd3b7477ca24dc769.json",
+  "sha256": "6ef63dee732b00e887cdd2b51fe8037993d3289b3c77eeddd3b7477ca24dc769",
+  "renderableCount": 468,
+  "assetBytes": 5716140,
+  "studioCommit": "3433928e083b73363bb9d17947873e770fd567ae"
+}

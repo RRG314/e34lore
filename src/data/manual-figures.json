@@ -1,0 +1,1059 @@
+[
+  {
+    "id": "front-strut-exploded",
+    "pdfPage": 280,
+    "printedPage": "310-4",
+    "figure": "5",
+    "title": "Exploded view of front strut assembly",
+    "scope": "Manual depicts separate 1989-1992 and 1993-and-later upper stacks. Do not merge these into a universal stack.",
+    "nativeCalloutType": "numbers",
+    "parts": [
+      {
+        "id": "1",
+        "nativeCallout": "1",
+        "label": "Protective cap",
+        "oemPartNumber": null,
+        "anchors": [
+          {
+            "x": 0.32367,
+            "y": 0.10597
+          },
+          {
+            "x": 0.73671,
+            "y": 0.1185
+          }
+        ],
+        "anchorMeaning": "Approximate human-selected center of the depicted component; normalized relative to the crop; not segmentation."
+      },
+      {
+        "id": "2",
+        "nativeCallout": "2",
+        "label": "Top nut (self-locking)",
+        "oemPartNumber": null,
+        "anchors": [
+          {
+            "x": 0.32367,
+            "y": 0.14547
+          },
+          {
+            "x": 0.73671,
+            "y": 0.15414
+          }
+        ],
+        "anchorMeaning": "Approximate human-selected center of the depicted component; normalized relative to the crop; not segmentation."
+      },
+      {
+        "id": "3",
+        "nativeCallout": "3",
+        "label": "Washer",
+        "oemPartNumber": null,
+        "anchors": [
+          {
+            "x": 0.32367,
+            "y": 0.17534
+          },
+          {
+            "x": 0.73671,
+            "y": 0.17534
+          }
+        ],
+        "anchorMeaning": "Approximate human-selected center of the depicted component; normalized relative to the crop; not segmentation."
+      },
+      {
+        "id": "4",
+        "nativeCallout": "4",
+        "label": "Upper strut mount",
+        "oemPartNumber": null,
+        "anchors": [
+          {
+            "x": 0.3285,
+            "y": 0.25626
+          },
+          {
+            "x": 0.73671,
+            "y": 0.22351
+          }
+        ],
+        "anchorMeaning": "Approximate human-selected center of the depicted component; normalized relative to the crop; not segmentation."
+      },
+      {
+        "id": "5",
+        "nativeCallout": "5",
+        "label": "Upper spring seat",
+        "oemPartNumber": null,
+        "anchors": [
+          {
+            "x": 0.73671,
+            "y": 0.33237
+          }
+        ],
+        "anchorMeaning": "Approximate human-selected center of the depicted component; normalized relative to the crop; not segmentation."
+      },
+      {
+        "id": "6",
+        "nativeCallout": "6",
+        "label": "Rubber spring pad",
+        "oemPartNumber": null,
+        "anchors": [
+          {
+            "x": 0.32367,
+            "y": 0.36224
+          },
+          {
+            "x": 0.73671,
+            "y": 0.39017
+          }
+        ],
+        "anchorMeaning": "Approximate human-selected center of the depicted component; normalized relative to the crop; not segmentation."
+      },
+      {
+        "id": "7",
+        "nativeCallout": "7",
+        "label": "Strut cartridge retaining collar",
+        "oemPartNumber": null,
+        "anchors": [
+          {
+            "x": 0.343,
+            "y": 0.51349
+          }
+        ],
+        "anchorMeaning": "Approximate human-selected center of the depicted component; normalized relative to the crop; not segmentation."
+      },
+      {
+        "id": "8",
+        "nativeCallout": "8",
+        "label": "Spring",
+        "oemPartNumber": null,
+        "anchors": [
+          {
+            "x": 0.3285,
+            "y": 0.63487
+          }
+        ],
+        "anchorMeaning": "Approximate human-selected center of the depicted component; normalized relative to the crop; not segmentation."
+      },
+      {
+        "id": "9",
+        "nativeCallout": "9",
+        "label": "Strut cartridge",
+        "oemPartNumber": null,
+        "anchors": [
+          {
+            "x": 0.33816,
+            "y": 0.62428
+          }
+        ],
+        "anchorMeaning": "Approximate human-selected center of the depicted component; normalized relative to the crop; not segmentation."
+      },
+      {
+        "id": "10",
+        "nativeCallout": "10",
+        "label": "Strut housing",
+        "oemPartNumber": null,
+        "anchors": [
+          {
+            "x": 0.31643,
+            "y": 0.80154
+          }
+        ],
+        "anchorMeaning": "Approximate human-selected center of the depicted component; normalized relative to the crop; not segmentation."
+      },
+      {
+        "id": "11",
+        "nativeCallout": "11",
+        "label": "Bump stop",
+        "oemPartNumber": null,
+        "anchors": [
+          {
+            "x": 0.64493,
+            "y": 0.60983
+          }
+        ],
+        "anchorMeaning": "Approximate human-selected center of the depicted component; normalized relative to the crop; not segmentation."
+      },
+      {
+        "id": "12",
+        "nativeCallout": "12",
+        "label": "Protective tube",
+        "oemPartNumber": null,
+        "anchors": [
+          {
+            "x": 0.64493,
+            "y": 0.72062
+          }
+        ],
+        "anchorMeaning": "Approximate human-selected center of the depicted component; normalized relative to the crop; not segmentation."
+      }
+    ],
+    "image": "/assets/diagrams/front-strut-exploded.png",
+    "width": 414,
+    "height": 1038,
+    "publisher": "Bentley Publishers",
+    "sourceResolutionPpi": 72
+  },
+  {
+    "id": "radiator-assembly-m20-m50",
+    "pdfPage": 205,
+    "printedPage": "170-1",
+    "figure": "1",
+    "title": "Radiator assembly for M20 and M50 engines",
+    "scope": "The source caption specifically identifies M20 and M50 engines. It does not establish M30 or M60 fitment.",
+    "nativeCalloutType": "letters",
+    "parts": [
+      {
+        "id": "A",
+        "nativeCallout": "A",
+        "label": "Expansion tank",
+        "oemPartNumber": null,
+        "anchors": [
+          {
+            "x": 0.20952,
+            "y": 0.41892
+          }
+        ],
+        "anchorMeaning": "Approximate human-selected center of the depicted component; normalized relative to the crop; not segmentation."
+      },
+      {
+        "id": "B",
+        "nativeCallout": "B",
+        "label": "Radiator drain screw",
+        "oemPartNumber": null,
+        "anchors": [
+          {
+            "x": 0.07619,
+            "y": 0.6036
+          }
+        ],
+        "anchorMeaning": "Approximate human-selected center of the depicted component; normalized relative to the crop; not segmentation."
+      },
+      {
+        "id": "C",
+        "nativeCallout": "C",
+        "label": "Coolant level sensor",
+        "oemPartNumber": null,
+        "anchors": [
+          {
+            "x": 0.70714,
+            "y": 0.67117
+          }
+        ],
+        "anchorMeaning": "Approximate human-selected center of the depicted component; normalized relative to the crop; not segmentation."
+      },
+      {
+        "id": "D",
+        "nativeCallout": "D",
+        "label": "Auxiliary fan temperature switch",
+        "oemPartNumber": null,
+        "anchors": [
+          {
+            "x": 0.92857,
+            "y": 0.05856
+          }
+        ],
+        "anchorMeaning": "Approximate human-selected center of the depicted component; normalized relative to the crop; not segmentation."
+      }
+    ],
+    "image": "/assets/diagrams/radiator-assembly-m20-m50.png",
+    "width": 420,
+    "height": 444,
+    "publisher": "Bentley Publishers",
+    "sourceResolutionPpi": 72
+  },
+  {
+    "id": "front-brake-caliper-exploded",
+    "pdfPage": 322,
+    "printedPage": "340-6",
+    "figure": "7",
+    "title": "Front brake caliper assembly",
+    "scope": "Source illustration of front brake assembly. The wear-sensor label says left wheel only. It does not provide a complete variant/production fitment matrix.",
+    "nativeCalloutType": "written labels; no native part numbers",
+    "parts": [
+      {
+        "id": "guide-bolts",
+        "nativeCallout": null,
+        "label": "Caliper guide bolts",
+        "oemPartNumber": null,
+        "anchors": [
+          {
+            "x": 0.21089,
+            "y": 0.18234
+          },
+          {
+            "x": 0.21553,
+            "y": 0.3071
+          }
+        ],
+        "anchorMeaning": "Approximate human-selected center of the depicted component; normalized relative to the crop; not segmentation."
+      },
+      {
+        "id": "guide-bolt-covers",
+        "nativeCallout": null,
+        "label": "Guide bolt covers",
+        "oemPartNumber": null,
+        "anchors": [
+          {
+            "x": 0.15875,
+            "y": 0.17083
+          },
+          {
+            "x": 0.15875,
+            "y": 0.28791
+          }
+        ],
+        "anchorMeaning": "Approximate human-selected center of the depicted component; normalized relative to the crop; not segmentation."
+      },
+      {
+        "id": "guide-bolt-caps",
+        "nativeCallout": null,
+        "label": "Guide bolt caps",
+        "oemPartNumber": null,
+        "anchors": [
+          {
+            "x": 0.11935,
+            "y": 0.12476
+          },
+          {
+            "x": 0.11703,
+            "y": 0.2476
+          }
+        ],
+        "anchorMeaning": "Approximate human-selected center of the depicted component; normalized relative to the crop; not segmentation."
+      },
+      {
+        "id": "bleeder",
+        "nativeCallout": null,
+        "label": "Bleeder valve and dust cap",
+        "oemPartNumber": null,
+        "anchors": [
+          {
+            "x": 0.30012,
+            "y": 0.09597
+          }
+        ],
+        "anchorMeaning": "Approximate human-selected center of the depicted component; normalized relative to the crop; not segmentation."
+      },
+      {
+        "id": "caliper",
+        "nativeCallout": null,
+        "label": "Brake caliper",
+        "oemPartNumber": null,
+        "anchors": [
+          {
+            "x": 0.30823,
+            "y": 0.28215
+          }
+        ],
+        "anchorMeaning": "Approximate human-selected center of the depicted component; normalized relative to the crop; not segmentation."
+      },
+      {
+        "id": "piston-seal",
+        "nativeCallout": null,
+        "label": "O-ring",
+        "oemPartNumber": null,
+        "anchors": [
+          {
+            "x": 0.38934,
+            "y": 0.33397
+          }
+        ],
+        "anchorMeaning": "Approximate human-selected center of the depicted component; normalized relative to the crop; not segmentation."
+      },
+      {
+        "id": "piston",
+        "nativeCallout": null,
+        "label": "Caliper piston",
+        "oemPartNumber": null,
+        "anchors": [
+          {
+            "x": 0.44264,
+            "y": 0.35317
+          }
+        ],
+        "anchorMeaning": "Approximate human-selected center of the depicted component; normalized relative to the crop; not segmentation."
+      },
+      {
+        "id": "dust-seal",
+        "nativeCallout": null,
+        "label": "Dust seal",
+        "oemPartNumber": null,
+        "anchors": [
+          {
+            "x": 0.49826,
+            "y": 0.3858
+          }
+        ],
+        "anchorMeaning": "Approximate human-selected center of the depicted component; normalized relative to the crop; not segmentation."
+      },
+      {
+        "id": "circlip",
+        "nativeCallout": null,
+        "label": "Circlip",
+        "oemPartNumber": null,
+        "anchors": [
+          {
+            "x": 0.53187,
+            "y": 0.41267
+          }
+        ],
+        "anchorMeaning": "Approximate human-selected center of the depicted component; normalized relative to the crop; not segmentation."
+      },
+      {
+        "id": "pads",
+        "nativeCallout": null,
+        "label": "Brake pads",
+        "oemPartNumber": null,
+        "anchors": [
+          {
+            "x": 0.59791,
+            "y": 0.43762
+          },
+          {
+            "x": 0.65585,
+            "y": 0.47409
+          }
+        ],
+        "anchorMeaning": "Approximate human-selected center of the depicted component; normalized relative to the crop; not segmentation."
+      },
+      {
+        "id": "wear-sensor",
+        "nativeCallout": null,
+        "label": "Brake pad wear sensor (left wheel only)",
+        "oemPartNumber": null,
+        "anchors": [
+          {
+            "x": 0.69177,
+            "y": 0.14012
+          }
+        ],
+        "anchorMeaning": "Approximate human-selected center of the depicted component; normalized relative to the crop; not segmentation."
+      },
+      {
+        "id": "pad-carrier",
+        "nativeCallout": null,
+        "label": "Brake pad carrier",
+        "oemPartNumber": null,
+        "anchors": [
+          {
+            "x": 0.76709,
+            "y": 0.51823
+          }
+        ],
+        "anchorMeaning": "Approximate human-selected center of the depicted component; normalized relative to the crop; not segmentation."
+      },
+      {
+        "id": "anti-rattle",
+        "nativeCallout": null,
+        "label": "Anti-rattle spring",
+        "oemPartNumber": null,
+        "anchors": [
+          {
+            "x": 0.8737,
+            "y": 0.58541
+          }
+        ],
+        "anchorMeaning": "Approximate human-selected center of the depicted component; normalized relative to the crop; not segmentation."
+      },
+      {
+        "id": "rotor",
+        "nativeCallout": null,
+        "label": "Ventilated rotor",
+        "oemPartNumber": null,
+        "anchors": [
+          {
+            "x": 0.25029,
+            "y": 0.64299
+          }
+        ],
+        "anchorMeaning": "Approximate human-selected center of the depicted component; normalized relative to the crop; not segmentation."
+      },
+      {
+        "id": "rotor-screw",
+        "nativeCallout": null,
+        "label": "Rotor mounting screw",
+        "oemPartNumber": null,
+        "anchors": [
+          {
+            "x": 0.38239,
+            "y": 0.73321
+          }
+        ],
+        "anchorMeaning": "Approximate human-selected center of the depicted component; normalized relative to the crop; not segmentation."
+      },
+      {
+        "id": "carrier-bolt",
+        "nativeCallout": null,
+        "label": "Mounting bolt",
+        "oemPartNumber": null,
+        "anchors": [
+          {
+            "x": 0.63152,
+            "y": 0.65643
+          }
+        ],
+        "anchorMeaning": "Approximate human-selected center of the depicted component; normalized relative to the crop; not segmentation."
+      }
+    ],
+    "image": "/assets/diagrams/front-brake-caliper-exploded.png",
+    "width": 863,
+    "height": 521,
+    "publisher": "Bentley Publishers",
+    "sourceResolutionPpi": 72
+  },
+  {
+    "id": "rear-brake-caliper-exploded",
+    "pdfPage": 323,
+    "printedPage": "340-7",
+    "figure": "9",
+    "title": "Rear brake caliper assembly",
+    "scope": "Source illustration of rear disc and parking-brake assembly. The wear-sensor label says right wheel only. Production/option fitment is not established by this image alone.",
+    "nativeCalloutType": "written labels; no native part numbers",
+    "parts": [
+      {
+        "id": "guide-bolts",
+        "nativeCallout": null,
+        "label": "Caliper guide bolts",
+        "oemPartNumber": null,
+        "anchors": [
+          {
+            "x": 0.20992,
+            "y": 0.1953
+          },
+          {
+            "x": 0.20992,
+            "y": 0.30741
+          }
+        ],
+        "anchorMeaning": "Approximate human-selected center of the depicted component; normalized relative to the crop; not segmentation."
+      },
+      {
+        "id": "guide-bolt-caps",
+        "nativeCallout": null,
+        "label": "Guide bolt caps",
+        "oemPartNumber": null,
+        "anchors": [
+          {
+            "x": 0.10727,
+            "y": 0.1519
+          },
+          {
+            "x": 0.10727,
+            "y": 0.25678
+          }
+        ],
+        "anchorMeaning": "Approximate human-selected center of the depicted component; normalized relative to the crop; not segmentation."
+      },
+      {
+        "id": "guide-bolt-covers",
+        "nativeCallout": null,
+        "label": "Guide bolt covers",
+        "oemPartNumber": null,
+        "anchors": [
+          {
+            "x": 0.15571,
+            "y": 0.18264
+          },
+          {
+            "x": 0.15571,
+            "y": 0.28752
+          }
+        ],
+        "anchorMeaning": "Approximate human-selected center of the depicted component; normalized relative to the crop; not segmentation."
+      },
+      {
+        "id": "bleeder",
+        "nativeCallout": null,
+        "label": "Bleeder valve and dust cap",
+        "oemPartNumber": null,
+        "anchors": [
+          {
+            "x": 0.29527,
+            "y": 0.10669
+          }
+        ],
+        "anchorMeaning": "Approximate human-selected center of the depicted component; normalized relative to the crop; not segmentation."
+      },
+      {
+        "id": "caliper",
+        "nativeCallout": null,
+        "label": "Brake caliper",
+        "oemPartNumber": null,
+        "anchors": [
+          {
+            "x": 0.29181,
+            "y": 0.27848
+          }
+        ],
+        "anchorMeaning": "Approximate human-selected center of the depicted component; normalized relative to the crop; not segmentation."
+      },
+      {
+        "id": "piston-seal",
+        "nativeCallout": null,
+        "label": "O-ring",
+        "oemPartNumber": null,
+        "anchors": [
+          {
+            "x": 0.3887,
+            "y": 0.29837
+          }
+        ],
+        "anchorMeaning": "Approximate human-selected center of the depicted component; normalized relative to the crop; not segmentation."
+      },
+      {
+        "id": "piston",
+        "nativeCallout": null,
+        "label": "Caliper piston",
+        "oemPartNumber": null,
+        "anchors": [
+          {
+            "x": 0.44175,
+            "y": 0.31646
+          }
+        ],
+        "anchorMeaning": "Approximate human-selected center of the depicted component; normalized relative to the crop; not segmentation."
+      },
+      {
+        "id": "dust-seal",
+        "nativeCallout": null,
+        "label": "Dust seal",
+        "oemPartNumber": null,
+        "anchors": [
+          {
+            "x": 0.49712,
+            "y": 0.33454
+          }
+        ],
+        "anchorMeaning": "Approximate human-selected center of the depicted component; normalized relative to the crop; not segmentation."
+      },
+      {
+        "id": "circlip",
+        "nativeCallout": null,
+        "label": "Circlip",
+        "oemPartNumber": null,
+        "anchors": [
+          {
+            "x": 0.53633,
+            "y": 0.34358
+          }
+        ],
+        "anchorMeaning": "Approximate human-selected center of the depicted component; normalized relative to the crop; not segmentation."
+      },
+      {
+        "id": "cover",
+        "nativeCallout": null,
+        "label": "Cover",
+        "oemPartNumber": null,
+        "anchors": [
+          {
+            "x": 0.51557,
+            "y": 0.13382
+          }
+        ],
+        "anchorMeaning": "Approximate human-selected center of the depicted component; normalized relative to the crop; not segmentation."
+      },
+      {
+        "id": "pads",
+        "nativeCallout": null,
+        "label": "Brake pads",
+        "oemPartNumber": null,
+        "anchors": [
+          {
+            "x": 0.59516,
+            "y": 0.39421
+          },
+          {
+            "x": 0.65052,
+            "y": 0.41953
+          }
+        ],
+        "anchorMeaning": "Approximate human-selected center of the depicted component; normalized relative to the crop; not segmentation."
+      },
+      {
+        "id": "wear-sensor",
+        "nativeCallout": null,
+        "label": "Brake pad wear sensor (right wheel only)",
+        "oemPartNumber": null,
+        "anchors": [
+          {
+            "x": 0.66436,
+            "y": 0.07595
+          }
+        ],
+        "anchorMeaning": "Approximate human-selected center of the depicted component; normalized relative to the crop; not segmentation."
+      },
+      {
+        "id": "pad-carrier",
+        "nativeCallout": null,
+        "label": "Brake pad carrier",
+        "oemPartNumber": null,
+        "anchors": [
+          {
+            "x": 0.76817,
+            "y": 0.44485
+          }
+        ],
+        "anchorMeaning": "Approximate human-selected center of the depicted component; normalized relative to the crop; not segmentation."
+      },
+      {
+        "id": "anti-rattle",
+        "nativeCallout": null,
+        "label": "Anti-rattle spring",
+        "oemPartNumber": null,
+        "anchors": [
+          {
+            "x": 0.8812,
+            "y": 0.5009
+          }
+        ],
+        "anchorMeaning": "Approximate human-selected center of the depicted component; normalized relative to the crop; not segmentation."
+      },
+      {
+        "id": "carrier-bolt",
+        "nativeCallout": null,
+        "label": "Mounting bolt",
+        "oemPartNumber": null,
+        "anchors": [
+          {
+            "x": 0.6609,
+            "y": 0.53165
+          }
+        ],
+        "anchorMeaning": "Approximate human-selected center of the depicted component; normalized relative to the crop; not segmentation."
+      },
+      {
+        "id": "rotor",
+        "nativeCallout": null,
+        "label": "Rotor",
+        "oemPartNumber": null,
+        "anchors": [
+          {
+            "x": 0.62514,
+            "y": 0.72694
+          }
+        ],
+        "anchorMeaning": "Approximate human-selected center of the depicted component; normalized relative to the crop; not segmentation."
+      },
+      {
+        "id": "rotor-screw",
+        "nativeCallout": null,
+        "label": "Rotor mounting screw",
+        "oemPartNumber": null,
+        "anchors": [
+          {
+            "x": 0.70819,
+            "y": 0.74141
+          }
+        ],
+        "anchorMeaning": "Approximate human-selected center of the depicted component; normalized relative to the crop; not segmentation."
+      },
+      {
+        "id": "parking-shoe",
+        "nativeCallout": null,
+        "label": "Parking brake shoe",
+        "oemPartNumber": null,
+        "anchors": [
+          {
+            "x": 0.41522,
+            "y": 0.62568
+          }
+        ],
+        "anchorMeaning": "Approximate human-selected center of the depicted component; normalized relative to the crop; not segmentation."
+      },
+      {
+        "id": "parking-cable",
+        "nativeCallout": null,
+        "label": "Parking brake cable",
+        "oemPartNumber": null,
+        "anchors": [
+          {
+            "x": 0.17762,
+            "y": 0.56239
+          }
+        ],
+        "anchorMeaning": "Approximate human-selected center of the depicted component; normalized relative to the crop; not segmentation."
+      },
+      {
+        "id": "parking-actuator",
+        "nativeCallout": null,
+        "label": "Parking brake actuator",
+        "oemPartNumber": null,
+        "anchors": [
+          {
+            "x": 0.38985,
+            "y": 0.65099
+          }
+        ],
+        "anchorMeaning": "Approximate human-selected center of the depicted component; normalized relative to the crop; not segmentation."
+      },
+      {
+        "id": "upper-return",
+        "nativeCallout": null,
+        "label": "Upper return spring",
+        "oemPartNumber": null,
+        "anchors": [
+          {
+            "x": 0.41176,
+            "y": 0.55515
+          }
+        ],
+        "anchorMeaning": "Approximate human-selected center of the depicted component; normalized relative to the crop; not segmentation."
+      },
+      {
+        "id": "shoe-adjuster",
+        "nativeCallout": null,
+        "label": "Shoe adjuster",
+        "oemPartNumber": null,
+        "anchors": [
+          {
+            "x": 0.42791,
+            "y": 0.74864
+          }
+        ],
+        "anchorMeaning": "Approximate human-selected center of the depicted component; normalized relative to the crop; not segmentation."
+      },
+      {
+        "id": "lower-return",
+        "nativeCallout": null,
+        "label": "Lower return spring",
+        "oemPartNumber": null,
+        "anchors": [
+          {
+            "x": 0.48443,
+            "y": 0.75588
+          }
+        ],
+        "anchorMeaning": "Approximate human-selected center of the depicted component; normalized relative to the crop; not segmentation."
+      },
+      {
+        "id": "shoe-retainer",
+        "nativeCallout": null,
+        "label": "Spring and spring retainer",
+        "oemPartNumber": null,
+        "anchors": [
+          {
+            "x": 0.50519,
+            "y": 0.59494
+          }
+        ],
+        "anchorMeaning": "Approximate human-selected center of the depicted component; normalized relative to the crop; not segmentation."
+      }
+    ],
+    "image": "/assets/diagrams/rear-brake-caliper-exploded.png",
+    "width": 867,
+    "height": 553,
+    "publisher": "Bentley Publishers",
+    "sourceResolutionPpi": 72
+  },
+  {
+    "id": "master-cylinder-exploded",
+    "pdfPage": 324,
+    "printedPage": "340-8",
+    "figure": "11",
+    "title": "Master cylinder and related parts",
+    "scope": "Source illustration of master-cylinder components. The image establishes names and assembly relationships, not current OEM numbers or variant fitment.",
+    "nativeCalloutType": "written labels; no native part numbers",
+    "parts": [
+      {
+        "id": "cap",
+        "nativeCallout": null,
+        "label": "Cap with fluid level switch",
+        "oemPartNumber": null,
+        "anchors": [
+          {
+            "x": 0.27962,
+            "y": 0.10673
+          }
+        ],
+        "anchorMeaning": "Approximate human-selected center of the depicted component; normalized relative to the crop; not segmentation."
+      },
+      {
+        "id": "reservoir",
+        "nativeCallout": null,
+        "label": "Brake fluid reservoir",
+        "oemPartNumber": null,
+        "anchors": [
+          {
+            "x": 0.3981,
+            "y": 0.38051
+          }
+        ],
+        "anchorMeaning": "Approximate human-selected center of the depicted component; normalized relative to the crop; not segmentation."
+      },
+      {
+        "id": "grommets",
+        "nativeCallout": null,
+        "label": "Reservoir mounting grommets",
+        "oemPartNumber": null,
+        "anchors": [
+          {
+            "x": 0.41943,
+            "y": 0.53364
+          },
+          {
+            "x": 0.59005,
+            "y": 0.48724
+          }
+        ],
+        "anchorMeaning": "Approximate human-selected center of the depicted component; normalized relative to the crop; not segmentation."
+      },
+      {
+        "id": "master-cylinder",
+        "nativeCallout": null,
+        "label": "Master cylinder",
+        "oemPartNumber": null,
+        "anchors": [
+          {
+            "x": 0.4455,
+            "y": 0.65661
+          }
+        ],
+        "anchorMeaning": "Approximate human-selected center of the depicted component; normalized relative to the crop; not segmentation."
+      },
+      {
+        "id": "mounting-nuts",
+        "nativeCallout": null,
+        "label": "Master cylinder mounting nuts",
+        "oemPartNumber": null,
+        "anchors": [
+          {
+            "x": 0.34597,
+            "y": 0.76566
+          },
+          {
+            "x": 0.48578,
+            "y": 0.76798
+          }
+        ],
+        "anchorMeaning": "Approximate human-selected center of the depicted component; normalized relative to the crop; not segmentation."
+      },
+      {
+        "id": "seal",
+        "nativeCallout": null,
+        "label": "O-ring",
+        "oemPartNumber": null,
+        "anchors": [
+          {
+            "x": 0.73223,
+            "y": 0.62413
+          }
+        ],
+        "anchorMeaning": "Approximate human-selected center of the depicted component; normalized relative to the crop; not segmentation."
+      }
+    ],
+    "image": "/assets/diagrams/master-cylinder-exploded.png",
+    "width": 422,
+    "height": 431,
+    "publisher": "Bentley Publishers",
+    "sourceResolutionPpi": 72
+  },
+  {
+    "id": "parking-brake-exploded",
+    "pdfPage": 326,
+    "printedPage": "340-10",
+    "figure": "15",
+    "title": "Parking brake assembly",
+    "scope": "Source diagram of the drum-in-hat parking-brake mechanism. No native numbered callouts or OEM numbers appear.",
+    "nativeCalloutType": "written labels; no native part numbers",
+    "parts": [
+      {
+        "id": "cable",
+        "nativeCallout": null,
+        "label": "Parking brake cable",
+        "oemPartNumber": null,
+        "anchors": [
+          {
+            "x": 0.13604,
+            "y": 0.33333
+          }
+        ],
+        "anchorMeaning": "Approximate human-selected center of the depicted component; normalized relative to the crop; not segmentation."
+      },
+      {
+        "id": "shoe",
+        "nativeCallout": null,
+        "label": "Parking brake shoe",
+        "oemPartNumber": null,
+        "anchors": [
+          {
+            "x": 0.36516,
+            "y": 0.3642
+          },
+          {
+            "x": 0.50835,
+            "y": 0.40123
+          }
+        ],
+        "anchorMeaning": "Approximate human-selected center of the depicted component; normalized relative to the crop; not segmentation."
+      },
+      {
+        "id": "shoe-retainer",
+        "nativeCallout": null,
+        "label": "Shoe retainer and spring",
+        "oemPartNumber": null,
+        "anchors": [
+          {
+            "x": 0.57757,
+            "y": 0.33642
+          }
+        ],
+        "anchorMeaning": "Approximate human-selected center of the depicted component; normalized relative to the crop; not segmentation."
+      },
+      {
+        "id": "actuator",
+        "nativeCallout": null,
+        "label": "Parking brake actuator",
+        "oemPartNumber": null,
+        "anchors": [
+          {
+            "x": 0.37232,
+            "y": 0.47222
+          }
+        ],
+        "anchorMeaning": "Approximate human-selected center of the depicted component; normalized relative to the crop; not segmentation."
+      },
+      {
+        "id": "upper-return",
+        "nativeCallout": null,
+        "label": "Upper return spring",
+        "oemPartNumber": null,
+        "anchors": [
+          {
+            "x": 0.31742,
+            "y": 0.34877
+          }
+        ],
+        "anchorMeaning": "Approximate human-selected center of the depicted component; normalized relative to the crop; not segmentation."
+      },
+      {
+        "id": "adjuster",
+        "nativeCallout": null,
+        "label": "Shoe adjuster",
+        "oemPartNumber": null,
+        "anchors": [
+          {
+            "x": 0.47494,
+            "y": 0.53704
+          }
+        ],
+        "anchorMeaning": "Approximate human-selected center of the depicted component; normalized relative to the crop; not segmentation."
+      },
+      {
+        "id": "lower-return",
+        "nativeCallout": null,
+        "label": "Lower return spring",
+        "oemPartNumber": null,
+        "anchors": [
+          {
+            "x": 0.58473,
+            "y": 0.5463
+          }
+        ],
+        "anchorMeaning": "Approximate human-selected center of the depicted component; normalized relative to the crop; not segmentation."
+      }
+    ],
+    "image": "/assets/diagrams/parking-brake-exploded.png",
+    "width": 419,
+    "height": 324,
+    "publisher": "Bentley Publishers",
+    "sourceResolutionPpi": 72
+  }
+]

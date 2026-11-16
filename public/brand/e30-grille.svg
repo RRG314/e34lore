@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 72" fill="none">
+ <title>E30 Lore front grille</title>
+ <rect width="320" height="72" rx="3" fill="#000"/>
+ <g stroke="#fff" stroke-linejoin="round">
+  <path d="M125 17H29C15 17 8 23 8 36s7 19 21 19h96m70-38h96c14 0 21 6 21 19s-7 19-21 19h-96" stroke-width="2"/>
+  <path d="M96 23h29m-27 7h27m-26 7h26m-28 7h28m-32 6h32m70-27h29m-29 7h27m-27 7h26m-26 7h28m-28 6h32" stroke-width="1.5"/>
+  <g stroke-width="2.6"><circle cx="31" cy="36" r="16"/><circle cx="74" cy="36" r="16"/><circle cx="246" cy="36" r="16"/><circle cx="289" cy="36" r="16"/></g>
+  <g stroke-width="1"><circle cx="31" cy="36" r="12"/><circle cx="74" cy="36" r="12"/><circle cx="246" cy="36" r="12"/><circle cx="289" cy="36" r="12"/></g>
+  <path d="M129 14h24c3 0 4 2 4 5v32c0 4-2 7-6 7h-18c-4 0-6-3-7-7l-3-30c0-4 2-7 6-7Zm62 0h-24c-3 0-4 2-4 5v32c0 4 2 7 6 7h18c4 0 6-3 7-7l3-30c0-4-2-7-6-7Z" stroke-width="3"/>
+  <path d="m130 21 3 30m4-30 2 30m5-30 1 30m6-30v30m39-30-3 30m-4-30-2 30m-5-30-1 30m-6-30v30" stroke-width="1.8"/>
+ </g>
+</svg>

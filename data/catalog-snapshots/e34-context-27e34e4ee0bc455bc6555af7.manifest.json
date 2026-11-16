@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "file": "e34-context-27e34e4ee0bc455bc6555af7.jsonl.gz",
+  "compressed_sha256": "28e057c0f6791370614260a1149c383e8584d3efc658af39628e36090256f700",
+  "manifest": {
+    "schema_version": 1,
+    "source": "Public source ordering facts",
+    "context": {
+      "platform": "E34",
+      "model": "540i",
+      "modelYear": 1995,
+      "body": "Sedan",
+      "engine": null,
+      "market": null,
+      "contextEvidence": "Observed model-root link plus index H1; marketing prose excluded."
+    },
+    "inventory_sha256": "8b6523a0bf8ca9e5b97796227d7dda245e83fdc3d23e4e303f39e2a0c40909f2",
+    "expected_pages": 390,
+    "selected_pages": 390,
+    "started_at": "2026-11-05T20:53:55.151065+00:00",
+    "successful_pages": 386,
+    "rejected_records": 0,
+    "parts": 7886,
+    "drawings": 452,
+    "errors": [
+      {
+        "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/engine/valve_timing_gear_camshaft.html",
+        "error": "No cached source snapshot"
+      },
+      {
+        "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/engine/water_pump_thermostat.html",
+        "error": "No cached source snapshot"
+      },
+      {
+        "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/retrofitting_conversion_accessories/base_support_system.html",
+        "error": "No cached source snapshot"
+      },
+      {
+        "url": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/steering_drive_shaft/steering_wheel_airbag.html",
+        "error": "No cached source snapshot"
+      }
+    ],
+    "scope": "Model-year/body source selection; unselected options and source restrictions retained. No universal fitment or complete-E34 claim.",
+    "completed_at": "2026-11-05T20:53:58.174708+00:00",
+    "status": "partial",
+    "facts_sha256": "8c1a0d3fd1fd17adb55ed534b5fc1ea8d1aea07505605c37691edd365890784a"
+  }
+}

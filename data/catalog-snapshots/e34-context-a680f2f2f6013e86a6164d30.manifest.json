@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "file": "e34-context-a680f2f2f6013e86a6164d30.jsonl.gz",
+  "compressed_sha256": "3b4dcd87ccc2e93e6daaa17042b9c47b756da9146dfd60d810cb64502ac95c2c",
+  "manifest": {
+    "schema_version": 1,
+    "source": "Public source ordering facts",
+    "context": {
+      "platform": "E34",
+      "model": "540i",
+      "modelYear": 1994,
+      "body": "Sedan",
+      "engine": null,
+      "market": null,
+      "contextEvidence": "Observed model-root link plus index H1; marketing prose excluded."
+    },
+    "inventory_sha256": "b2827366584bf073416a1d929bca3e1280319be8f86ca528b57abf5dcb7322c0",
+    "expected_pages": 390,
+    "selected_pages": 390,
+    "started_at": "2026-11-08T15:14:30.773047+00:00",
+    "successful_pages": 387,
+    "rejected_records": 226,
+    "parts": 7690,
+    "drawings": 454,
+    "errors": [
+      {
+        "url": "https://www.bmwpartsdeal.com/parts-list/1994-bmw-540i-sedan_e34/engine/engine_block_mounting_parts.html",
+        "error": "No cached source snapshot"
+      },
+      {
+        "url": "https://www.bmwpartsdeal.com/parts-list/1994-bmw-540i-sedan_e34/restraint_system_and_accessories/ski_bag_single_parts.html",
+        "error": "No cached source snapshot"
+      },
+      {
+        "url": "https://www.bmwpartsdeal.com/parts-list/1994-bmw-540i-sedan_e34/vehicle_electrical_system/round_socket_system_d_1_5_mm.html",
+        "error": "No cached source snapshot"
+      }
+    ],
+    "scope": "Model-year/body source selection; unselected options and source restrictions retained. No universal fitment or complete-E34 claim.",
+    "completed_at": "2026-11-08T15:14:33.504382+00:00",
+    "status": "partial",
+    "facts_sha256": "e4df4328b16555fa5bdd67419f6a219bcb33afbfeeaf14fb2992fd6cf263ee88"
+  }
+}

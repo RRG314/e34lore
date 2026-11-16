@@ -1,0 +1,2870 @@
+{
+  "schemaVersion": 1,
+  "method": "Original parametric nominal circular seals; no manufacturer tolerances, material specification, installed deformation or fitment is inferred.",
+  "seals": [
+    {
+      "partId": "bmw-07119900149",
+      "number": "07119900149",
+      "name": "O-ring 15X1,8",
+      "insideDiameterMm": 15,
+      "crossSectionMm": 1.8,
+      "outerDiameterMm": 18.6,
+      "geometryId": "nominal-seal:bmw-07119900149",
+      "interpretation": "Catalog A×B interpreted as nominal inside diameter × circular cross-section. This interpretation needs technical review for each BMW application.",
+      "dimensionConventionSource": "https://www.trelleborg.com/seals/-/media/tss-media-repository/tss_website/pdf-and-other-literature/catalogs/o_ring_gb_en.pdf",
+      "accuracy": {
+        "visual": "illustrative",
+        "dimensions": "illustrative",
+        "alignment": "missing",
+        "mechanical": "missing",
+        "removal": "missing"
+      },
+      "evidence": [
+        {
+          "positionId": "catalog-assembly-cb42b0bbcc7ef97becb2b737-8dd763c0c51dc726c64d58fc",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-525i-wagon_e34/bodywork/single_components_for_trunk_lid.html",
+          "recordSha256": "8dd763c0c51dc726c64d58fca603174b2c78f95f6cca6eee639d139f78b7588c",
+          "number": "07119900149",
+          "expression": "15X1,8",
+          "dimensions": [
+            15,
+            1.8
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-eb471a32f0913925ca2d9758-8dd763c0c51dc726c64d58fc",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-530i-wagon_e34/bodywork/single_components_for_trunk_lid.html",
+          "recordSha256": "8dd763c0c51dc726c64d58fca603174b2c78f95f6cca6eee639d139f78b7588c",
+          "number": "07119900149",
+          "expression": "15X1,8",
+          "dimensions": [
+            15,
+            1.8
+          ]
+        }
+      ]
+    },
+    {
+      "partId": "bmw-07119906328",
+      "number": "07119906328",
+      "name": "O-ring 10X2",
+      "insideDiameterMm": 10,
+      "crossSectionMm": 2,
+      "outerDiameterMm": 14,
+      "geometryId": "nominal-seal:bmw-07119906328",
+      "interpretation": "Catalog A×B interpreted as nominal inside diameter × circular cross-section. This interpretation needs technical review for each BMW application.",
+      "dimensionConventionSource": "https://www.trelleborg.com/seals/-/media/tss-media-repository/tss_website/pdf-and-other-literature/catalogs/o_ring_gb_en.pdf",
+      "accuracy": {
+        "visual": "illustrative",
+        "dimensions": "illustrative",
+        "alignment": "missing",
+        "mechanical": "missing",
+        "removal": "missing"
+      },
+      "evidence": [
+        {
+          "positionId": "catalog-assembly-3c8e20898698632af445551c-da62f1ac2d4953c600eb066f",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1993-bmw-m5-sedan_e34/engine/timing_and_valve_train_timing_chain.html",
+          "recordSha256": "da62f1ac2d4953c600eb066f38416c89f0dd6c807f5e3d58016075b890d599bb",
+          "number": "07119906328",
+          "expression": "10X2",
+          "dimensions": [
+            10,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "partId": "bmw-07119906350",
+      "number": "07119906350",
+      "name": "O-ring 20X3,55",
+      "insideDiameterMm": 20,
+      "crossSectionMm": 3.55,
+      "outerDiameterMm": 27.1,
+      "geometryId": "nominal-seal:bmw-07119906350",
+      "interpretation": "Catalog A×B interpreted as nominal inside diameter × circular cross-section. This interpretation needs technical review for each BMW application.",
+      "dimensionConventionSource": "https://www.trelleborg.com/seals/-/media/tss-media-repository/tss_website/pdf-and-other-literature/catalogs/o_ring_gb_en.pdf",
+      "accuracy": {
+        "visual": "illustrative",
+        "dimensions": "illustrative",
+        "alignment": "missing",
+        "mechanical": "missing",
+        "removal": "missing"
+      },
+      "evidence": [
+        {
+          "positionId": "catalog-assembly-08535e903c4e1a7ec6acbcaa-ec5214d7647287355e6d27d1",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/vehicle_trim/carrier_bumper_rear.html",
+          "recordSha256": "ec5214d7647287355e6d27d17f145990066b28ecaee45adb29b34d8eeae9ca3b",
+          "number": "07119906350",
+          "expression": "20X3,55",
+          "dimensions": [
+            20,
+            3.55
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-230262fc426a32ce93ed4834-1ef22a0c4e154fe47ff5adee",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1991-bmw-525i-m50_engine_e34/vehicle_trim/carrier_bumper_front.html",
+          "recordSha256": "1ef22a0c4e154fe47ff5adee772906a688688a8af114c8f4f915b0e98cd26a57",
+          "number": "07119906350",
+          "expression": "20X3,55",
+          "dimensions": [
+            20,
+            3.55
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-38017972f6e24a68e231c1d5-ec5214d7647287355e6d27d1",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1991-bmw-525i-m50_engine_e34/vehicle_trim/carrier_bumper_rear.html",
+          "recordSha256": "ec5214d7647287355e6d27d17f145990066b28ecaee45adb29b34d8eeae9ca3b",
+          "number": "07119906350",
+          "expression": "20X3,55",
+          "dimensions": [
+            20,
+            3.55
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-4c706b257150383e7910eec4-ec5214d7647287355e6d27d1",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1993-bmw-m5-sedan_e34/vehicle_trim/carrier_bumper_rear.html",
+          "recordSha256": "ec5214d7647287355e6d27d17f145990066b28ecaee45adb29b34d8eeae9ca3b",
+          "number": "07119906350",
+          "expression": "20X3,55",
+          "dimensions": [
+            20,
+            3.55
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-5314811e77e5fe0beace31b2-1ef22a0c4e154fe47ff5adee",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1994-bmw-525i-sedan_e34/vehicle_trim/carrier_bumper_front.html",
+          "recordSha256": "1ef22a0c4e154fe47ff5adee772906a688688a8af114c8f4f915b0e98cd26a57",
+          "number": "07119906350",
+          "expression": "20X3,55",
+          "dimensions": [
+            20,
+            3.55
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-6f778d6c6c090467986bbe38-1ef22a0c4e154fe47ff5adee",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1993-bmw-535i-sedan_e34/vehicle_trim/carrier_bumper_front.html",
+          "recordSha256": "1ef22a0c4e154fe47ff5adee772906a688688a8af114c8f4f915b0e98cd26a57",
+          "number": "07119906350",
+          "expression": "20X3,55",
+          "dimensions": [
+            20,
+            3.55
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-713e7c34b1786c541efcbce1-1ef22a0c4e154fe47ff5adee",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/vehicle_trim/carrier_bumper_front.html",
+          "recordSha256": "1ef22a0c4e154fe47ff5adee772906a688688a8af114c8f4f915b0e98cd26a57",
+          "number": "07119906350",
+          "expression": "20X3,55",
+          "dimensions": [
+            20,
+            3.55
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-7c3ddac748bc08c832262850-ec5214d7647287355e6d27d1",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-530i-wagon_e34/vehicle_trim/carrier_bumper_rear.html",
+          "recordSha256": "ec5214d7647287355e6d27d17f145990066b28ecaee45adb29b34d8eeae9ca3b",
+          "number": "07119906350",
+          "expression": "20X3,55",
+          "dimensions": [
+            20,
+            3.55
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-9a2070e41234a9de3235275d-1ef22a0c4e154fe47ff5adee",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1991-bmw-525i-m20_engine_e34/vehicle_trim/carrier_bumper_front.html",
+          "recordSha256": "1ef22a0c4e154fe47ff5adee772906a688688a8af114c8f4f915b0e98cd26a57",
+          "number": "07119906350",
+          "expression": "20X3,55",
+          "dimensions": [
+            20,
+            3.55
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-9a244a7bb98902383b051260-1ef22a0c4e154fe47ff5adee",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-525i-wagon_e34/vehicle_trim/carrier_bumper_front.html",
+          "recordSha256": "1ef22a0c4e154fe47ff5adee772906a688688a8af114c8f4f915b0e98cd26a57",
+          "number": "07119906350",
+          "expression": "20X3,55",
+          "dimensions": [
+            20,
+            3.55
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-a7638432b1380952212a3ad9-ec5214d7647287355e6d27d1",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1994-bmw-525i-sedan_e34/vehicle_trim/carrier_bumper_rear.html",
+          "recordSha256": "ec5214d7647287355e6d27d17f145990066b28ecaee45adb29b34d8eeae9ca3b",
+          "number": "07119906350",
+          "expression": "20X3,55",
+          "dimensions": [
+            20,
+            3.55
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-b787a7680d2412ac5485bdbd-1ef22a0c4e154fe47ff5adee",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1993-bmw-m5-sedan_e34/vehicle_trim/carrier_bumper_front.html",
+          "recordSha256": "1ef22a0c4e154fe47ff5adee772906a688688a8af114c8f4f915b0e98cd26a57",
+          "number": "07119906350",
+          "expression": "20X3,55",
+          "dimensions": [
+            20,
+            3.55
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-c6bd677f758cb64619abda71-ec5214d7647287355e6d27d1",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1994-bmw-530i-sedan_e34/vehicle_trim/carrier_bumper_rear.html",
+          "recordSha256": "ec5214d7647287355e6d27d17f145990066b28ecaee45adb29b34d8eeae9ca3b",
+          "number": "07119906350",
+          "expression": "20X3,55",
+          "dimensions": [
+            20,
+            3.55
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-d8d432991eab324c5b7950d3-ec5214d7647287355e6d27d1",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1993-bmw-535i-sedan_e34/vehicle_trim/carrier_bumper_rear.html",
+          "recordSha256": "ec5214d7647287355e6d27d17f145990066b28ecaee45adb29b34d8eeae9ca3b",
+          "number": "07119906350",
+          "expression": "20X3,55",
+          "dimensions": [
+            20,
+            3.55
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-dc8864a58bc3e6489395fb2e-1ef22a0c4e154fe47ff5adee",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-530i-wagon_e34/vehicle_trim/carrier_bumper_front.html",
+          "recordSha256": "1ef22a0c4e154fe47ff5adee772906a688688a8af114c8f4f915b0e98cd26a57",
+          "number": "07119906350",
+          "expression": "20X3,55",
+          "dimensions": [
+            20,
+            3.55
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-de08118486495260b64cb2c6-ec5214d7647287355e6d27d1",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-525i-wagon_e34/vehicle_trim/carrier_bumper_rear.html",
+          "recordSha256": "ec5214d7647287355e6d27d17f145990066b28ecaee45adb29b34d8eeae9ca3b",
+          "number": "07119906350",
+          "expression": "20X3,55",
+          "dimensions": [
+            20,
+            3.55
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-e7adc615d922c4ec25071c7e-1ef22a0c4e154fe47ff5adee",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1994-bmw-530i-sedan_e34/vehicle_trim/carrier_bumper_front.html",
+          "recordSha256": "1ef22a0c4e154fe47ff5adee772906a688688a8af114c8f4f915b0e98cd26a57",
+          "number": "07119906350",
+          "expression": "20X3,55",
+          "dimensions": [
+            20,
+            3.55
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-fa8e42ce1e3ac30cb3c24f85-ec5214d7647287355e6d27d1",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1991-bmw-525i-m20_engine_e34/vehicle_trim/carrier_bumper_rear.html",
+          "recordSha256": "ec5214d7647287355e6d27d17f145990066b28ecaee45adb29b34d8eeae9ca3b",
+          "number": "07119906350",
+          "expression": "20X3,55",
+          "dimensions": [
+            20,
+            3.55
+          ]
+        }
+      ]
+    },
+    {
+      "partId": "bmw-07119906360",
+      "number": "07119906360",
+      "name": "O-ring 17X2,65",
+      "insideDiameterMm": 17,
+      "crossSectionMm": 2.65,
+      "outerDiameterMm": 22.3,
+      "geometryId": "nominal-seal:bmw-07119906360",
+      "interpretation": "Catalog A×B interpreted as nominal inside diameter × circular cross-section. This interpretation needs technical review for each BMW application.",
+      "dimensionConventionSource": "https://www.trelleborg.com/seals/-/media/tss-media-repository/tss_website/pdf-and-other-literature/catalogs/o_ring_gb_en.pdf",
+      "accuracy": {
+        "visual": "illustrative",
+        "dimensions": "illustrative",
+        "alignment": "missing",
+        "mechanical": "missing",
+        "removal": "missing"
+      },
+      "evidence": [
+        {
+          "positionId": "catalog-assembly-4ea8eae7e9c4001f7ddad219-3530fc39d30ddfafd513c0eb",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-530i-wagon_e34/engine/crankcase_ventilation.html",
+          "recordSha256": "3530fc39d30ddfafd513c0eb20efc04fa06696101289b369c3b5fa68b7627872",
+          "number": "07119906360",
+          "expression": "17X2,65",
+          "dimensions": [
+            17,
+            2.65
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-5039ed3c80851fc005506f57-3530fc39d30ddfafd513c0eb",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/engine/crankcase_ventilation.html",
+          "recordSha256": "3530fc39d30ddfafd513c0eb20efc04fa06696101289b369c3b5fa68b7627872",
+          "number": "07119906360",
+          "expression": "17X2,65",
+          "dimensions": [
+            17,
+            2.65
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-8a8fb46532089b7055e21c30-3530fc39d30ddfafd513c0eb",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1994-bmw-530i-sedan_e34/engine/crankcase_ventilation.html",
+          "recordSha256": "3530fc39d30ddfafd513c0eb20efc04fa06696101289b369c3b5fa68b7627872",
+          "number": "07119906360",
+          "expression": "17X2,65",
+          "dimensions": [
+            17,
+            2.65
+          ]
+        }
+      ]
+    },
+    {
+      "partId": "bmw-07119906361",
+      "number": "07119906361",
+      "name": "O-ring 7,1X1,8",
+      "insideDiameterMm": 7.1,
+      "crossSectionMm": 1.8,
+      "outerDiameterMm": 10.7,
+      "geometryId": "nominal-seal:bmw-07119906361",
+      "interpretation": "Catalog A×B interpreted as nominal inside diameter × circular cross-section. This interpretation needs technical review for each BMW application.",
+      "dimensionConventionSource": "https://www.trelleborg.com/seals/-/media/tss-media-repository/tss_website/pdf-and-other-literature/catalogs/o_ring_gb_en.pdf",
+      "accuracy": {
+        "visual": "illustrative",
+        "dimensions": "illustrative",
+        "alignment": "missing",
+        "mechanical": "missing",
+        "removal": "missing"
+      },
+      "evidence": [
+        {
+          "positionId": "catalog-assembly-0884d4b69d1c4bd35af014e6-b1e9b9d7839f620f74dec60d",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-530i-wagon_e34/engine/timing_gear_timing_chain_top.html",
+          "recordSha256": "b1e9b9d7839f620f74dec60d02d34264516b17649ebc30691f30328b187ff8c9",
+          "number": "07119906361",
+          "expression": "7,1X1,8",
+          "dimensions": [
+            7.1,
+            1.8
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-9a5de310c7eb8fd0e9501f37-b1e9b9d7839f620f74dec60d",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/engine/timing_gear_timing_chain_top.html",
+          "recordSha256": "b1e9b9d7839f620f74dec60d02d34264516b17649ebc30691f30328b187ff8c9",
+          "number": "07119906361",
+          "expression": "7,1X1,8",
+          "dimensions": [
+            7.1,
+            1.8
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-f6f575328d27e8fc1be888a7-b1e9b9d7839f620f74dec60d",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1994-bmw-530i-sedan_e34/engine/timing_gear_timing_chain_top.html",
+          "recordSha256": "b1e9b9d7839f620f74dec60d02d34264516b17649ebc30691f30328b187ff8c9",
+          "number": "07119906361",
+          "expression": "7,1X1,8",
+          "dimensions": [
+            7.1,
+            1.8
+          ]
+        }
+      ]
+    },
+    {
+      "partId": "bmw-07119906363",
+      "number": "07119906363",
+      "name": "O-ring 11,2X1,8",
+      "insideDiameterMm": 11.2,
+      "crossSectionMm": 1.8,
+      "outerDiameterMm": 14.799999999999999,
+      "geometryId": "nominal-seal:bmw-07119906363",
+      "interpretation": "Catalog A×B interpreted as nominal inside diameter × circular cross-section. This interpretation needs technical review for each BMW application.",
+      "dimensionConventionSource": "https://www.trelleborg.com/seals/-/media/tss-media-repository/tss_website/pdf-and-other-literature/catalogs/o_ring_gb_en.pdf",
+      "accuracy": {
+        "visual": "illustrative",
+        "dimensions": "illustrative",
+        "alignment": "missing",
+        "mechanical": "missing",
+        "removal": "missing"
+      },
+      "evidence": [
+        {
+          "positionId": "catalog-assembly-32d569950cb59cf266cd4fd7-7c4bb598db36c2b4202f545d",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-530i-wagon_e34/engine/timing_timing_chain_lower_p.html",
+          "recordSha256": "7c4bb598db36c2b4202f545d645ab67b8f3dbecc6686050c5e236d6c28c1ac78",
+          "number": "07119906363",
+          "expression": "11,2X1,8",
+          "dimensions": [
+            11.2,
+            1.8
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-38706d6362f9c725dfd2d155-7c4bb598db36c2b4202f545d",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/engine/timing_timing_chain_lower_p.html",
+          "recordSha256": "7c4bb598db36c2b4202f545d645ab67b8f3dbecc6686050c5e236d6c28c1ac78",
+          "number": "07119906363",
+          "expression": "11,2X1,8",
+          "dimensions": [
+            11.2,
+            1.8
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-3e453ba4a9d326094978bf1b-7c4bb598db36c2b4202f545d",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1994-bmw-530i-sedan_e34/engine/timing_timing_chain_lower_p.html",
+          "recordSha256": "7c4bb598db36c2b4202f545d645ab67b8f3dbecc6686050c5e236d6c28c1ac78",
+          "number": "07119906363",
+          "expression": "11,2X1,8",
+          "dimensions": [
+            11.2,
+            1.8
+          ]
+        }
+      ]
+    },
+    {
+      "partId": "bmw-11121265087",
+      "number": "11121265087",
+      "name": "O-ring 53X2",
+      "insideDiameterMm": 53,
+      "crossSectionMm": 2,
+      "outerDiameterMm": 57,
+      "geometryId": "nominal-seal:bmw-11121265087",
+      "interpretation": "Catalog A×B interpreted as nominal inside diameter × circular cross-section. This interpretation needs technical review for each BMW application.",
+      "dimensionConventionSource": "https://www.trelleborg.com/seals/-/media/tss-media-repository/tss_website/pdf-and-other-literature/catalogs/o_ring_gb_en.pdf",
+      "accuracy": {
+        "visual": "illustrative",
+        "dimensions": "illustrative",
+        "alignment": "missing",
+        "mechanical": "missing",
+        "removal": "missing"
+      },
+      "evidence": [
+        {
+          "positionId": "catalog-assembly-ed8c22248aecaaf10d62b2e5-04bfc4520cbb16cc79640599",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1991-bmw-525i-m20_engine_e34/engine/cylinder_head_attached_parts.html",
+          "recordSha256": "04bfc4520cbb16cc7964059937a93055f80c9ae8c2b5924c4b1f0c590353270c",
+          "number": "11121265087",
+          "expression": "53X2",
+          "dimensions": [
+            53,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "partId": "bmw-11121304173",
+      "number": "11121304173",
+      "name": "O-ring 12X1,5",
+      "insideDiameterMm": 12,
+      "crossSectionMm": 1.5,
+      "outerDiameterMm": 15,
+      "geometryId": "nominal-seal:bmw-11121304173",
+      "interpretation": "Catalog A×B interpreted as nominal inside diameter × circular cross-section. This interpretation needs technical review for each BMW application.",
+      "dimensionConventionSource": "https://www.trelleborg.com/seals/-/media/tss-media-repository/tss_website/pdf-and-other-literature/catalogs/o_ring_gb_en.pdf",
+      "accuracy": {
+        "visual": "illustrative",
+        "dimensions": "illustrative",
+        "alignment": "missing",
+        "mechanical": "missing",
+        "removal": "missing"
+      },
+      "evidence": [
+        {
+          "positionId": "catalog-assembly-85d256d05b8124ef79570760-e0d0a74b19e7d74d25b1279a",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1993-bmw-m5-sedan_e34/engine/cylinder_head_intermediate_housing.html",
+          "recordSha256": "e0d0a74b19e7d74d25b1279a9b4ac80f6a25a4f7eae9e3420e526ad5942d5add",
+          "number": "11121304173",
+          "expression": "12X1,5",
+          "dimensions": [
+            12,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "partId": "bmw-11121304174",
+      "number": "11121304174",
+      "name": "O-ring 28X2",
+      "insideDiameterMm": 28,
+      "crossSectionMm": 2,
+      "outerDiameterMm": 32,
+      "geometryId": "nominal-seal:bmw-11121304174",
+      "interpretation": "Catalog A×B interpreted as nominal inside diameter × circular cross-section. This interpretation needs technical review for each BMW application.",
+      "dimensionConventionSource": "https://www.trelleborg.com/seals/-/media/tss-media-repository/tss_website/pdf-and-other-literature/catalogs/o_ring_gb_en.pdf",
+      "accuracy": {
+        "visual": "illustrative",
+        "dimensions": "illustrative",
+        "alignment": "missing",
+        "mechanical": "missing",
+        "removal": "missing"
+      },
+      "evidence": [
+        {
+          "positionId": "catalog-assembly-85d256d05b8124ef79570760-8d29a31359660e204445230a",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1993-bmw-m5-sedan_e34/engine/cylinder_head_intermediate_housing.html",
+          "recordSha256": "8d29a31359660e204445230a142f63c23edbd769f76ebde7bd74c7189df4f336",
+          "number": "11121304174",
+          "expression": "28X2",
+          "dimensions": [
+            28,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "partId": "bmw-11151730724",
+      "number": "11151730724",
+      "name": "O-ring 18,5X3,3",
+      "insideDiameterMm": 18.5,
+      "crossSectionMm": 3.3,
+      "outerDiameterMm": 25.1,
+      "geometryId": "nominal-seal:bmw-11151730724",
+      "interpretation": "Catalog A×B interpreted as nominal inside diameter × circular cross-section. This interpretation needs technical review for each BMW application.",
+      "dimensionConventionSource": "https://www.trelleborg.com/seals/-/media/tss-media-repository/tss_website/pdf-and-other-literature/catalogs/o_ring_gb_en.pdf",
+      "accuracy": {
+        "visual": "illustrative",
+        "dimensions": "illustrative",
+        "alignment": "missing",
+        "mechanical": "missing",
+        "removal": "missing"
+      },
+      "evidence": [
+        {
+          "positionId": "catalog-assembly-76a3198cc2cbe453f235b5dd-9622f22bcf72063e845fe79b",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1991-bmw-525i-m50_engine_e34/engine/crankcase_ventilation.html",
+          "recordSha256": "9622f22bcf72063e845fe79b8dc5de6a2b3dd42413f8c5059a5e62bfbd15c9c8",
+          "number": "11151730724",
+          "expression": "18,5X3,3",
+          "dimensions": [
+            18.5,
+            3.3
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-b9e2ca3b70dd83bcbf12c862-9622f22bcf72063e845fe79b",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-525i-wagon_e34/engine/crankcase_ventilation.html",
+          "recordSha256": "9622f22bcf72063e845fe79b8dc5de6a2b3dd42413f8c5059a5e62bfbd15c9c8",
+          "number": "11151730724",
+          "expression": "18,5X3,3",
+          "dimensions": [
+            18.5,
+            3.3
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-f445f5bc7f1f84c92f226048-9622f22bcf72063e845fe79b",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1994-bmw-525i-sedan_e34/engine/crankcase_ventilation.html",
+          "recordSha256": "9622f22bcf72063e845fe79b8dc5de6a2b3dd42413f8c5059a5e62bfbd15c9c8",
+          "number": "11151730724",
+          "expression": "18,5X3,3",
+          "dimensions": [
+            18.5,
+            3.3
+          ]
+        }
+      ]
+    },
+    {
+      "partId": "bmw-11151736140",
+      "number": "11151736140",
+      "name": "O-ring 20,0X3,55",
+      "insideDiameterMm": 20,
+      "crossSectionMm": 3.55,
+      "outerDiameterMm": 27.1,
+      "geometryId": "nominal-seal:bmw-11151736140",
+      "interpretation": "Catalog A×B interpreted as nominal inside diameter × circular cross-section. This interpretation needs technical review for each BMW application.",
+      "dimensionConventionSource": "https://www.trelleborg.com/seals/-/media/tss-media-repository/tss_website/pdf-and-other-literature/catalogs/o_ring_gb_en.pdf",
+      "accuracy": {
+        "visual": "illustrative",
+        "dimensions": "illustrative",
+        "alignment": "missing",
+        "mechanical": "missing",
+        "removal": "missing"
+      },
+      "evidence": [
+        {
+          "positionId": "catalog-assembly-4ea8eae7e9c4001f7ddad219-1fe31b37b991eeb163e9dff6",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-530i-wagon_e34/engine/crankcase_ventilation.html",
+          "recordSha256": "1fe31b37b991eeb163e9dff60d07b1eea851c0bc06d764964411d0e256c99589",
+          "number": "11151736140",
+          "expression": "20,0X3,55",
+          "dimensions": [
+            20,
+            3.55
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-5039ed3c80851fc005506f57-1fe31b37b991eeb163e9dff6",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/engine/crankcase_ventilation.html",
+          "recordSha256": "1fe31b37b991eeb163e9dff60d07b1eea851c0bc06d764964411d0e256c99589",
+          "number": "11151736140",
+          "expression": "20,0X3,55",
+          "dimensions": [
+            20,
+            3.55
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-6a3ff800743fc2601e797d7e-94766cd018a75dbb8f585be4",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1994-bmw-530i-sedan_e34/engine/intake_manifold_system.html",
+          "recordSha256": "94766cd018a75dbb8f585be40dfd96c53ccc6135428dae20e48631a53a449d2c",
+          "number": "11151736140",
+          "expression": "20,0X3,55",
+          "dimensions": [
+            20,
+            3.55
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-7eadeeedc45f1a43990a1eae-94766cd018a75dbb8f585be4",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/engine/intake_manifold_system.html",
+          "recordSha256": "94766cd018a75dbb8f585be40dfd96c53ccc6135428dae20e48631a53a449d2c",
+          "number": "11151736140",
+          "expression": "20,0X3,55",
+          "dimensions": [
+            20,
+            3.55
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-89870e741188705d295a4960-94766cd018a75dbb8f585be4",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-530i-wagon_e34/engine/intake_manifold_system.html",
+          "recordSha256": "94766cd018a75dbb8f585be40dfd96c53ccc6135428dae20e48631a53a449d2c",
+          "number": "11151736140",
+          "expression": "20,0X3,55",
+          "dimensions": [
+            20,
+            3.55
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-8a8fb46532089b7055e21c30-1fe31b37b991eeb163e9dff6",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1994-bmw-530i-sedan_e34/engine/crankcase_ventilation.html",
+          "recordSha256": "1fe31b37b991eeb163e9dff60d07b1eea851c0bc06d764964411d0e256c99589",
+          "number": "11151736140",
+          "expression": "20,0X3,55",
+          "dimensions": [
+            20,
+            3.55
+          ]
+        }
+      ]
+    },
+    {
+      "partId": "bmw-11151747978",
+      "number": "11151747978",
+      "name": "O-ring 16X3,55",
+      "insideDiameterMm": 16,
+      "crossSectionMm": 3.55,
+      "outerDiameterMm": 23.1,
+      "geometryId": "nominal-seal:bmw-11151747978",
+      "interpretation": "Catalog A×B interpreted as nominal inside diameter × circular cross-section. This interpretation needs technical review for each BMW application.",
+      "dimensionConventionSource": "https://www.trelleborg.com/seals/-/media/tss-media-repository/tss_website/pdf-and-other-literature/catalogs/o_ring_gb_en.pdf",
+      "accuracy": {
+        "visual": "illustrative",
+        "dimensions": "illustrative",
+        "alignment": "missing",
+        "mechanical": "missing",
+        "removal": "missing"
+      },
+      "evidence": [
+        {
+          "positionId": "catalog-assembly-4ea8eae7e9c4001f7ddad219-6d40c098462066b1a612741a",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-530i-wagon_e34/engine/crankcase_ventilation.html",
+          "recordSha256": "6d40c098462066b1a612741a7aebb75559745af9d5b1bb7753b23352ccd96ec0",
+          "number": "11151747978",
+          "expression": "16X3,55",
+          "dimensions": [
+            16,
+            3.55
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-5039ed3c80851fc005506f57-6d40c098462066b1a612741a",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/engine/crankcase_ventilation.html",
+          "recordSha256": "6d40c098462066b1a612741a7aebb75559745af9d5b1bb7753b23352ccd96ec0",
+          "number": "11151747978",
+          "expression": "16X3,55",
+          "dimensions": [
+            16,
+            3.55
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-8a8fb46532089b7055e21c30-6d40c098462066b1a612741a",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1994-bmw-530i-sedan_e34/engine/crankcase_ventilation.html",
+          "recordSha256": "6d40c098462066b1a612741a7aebb75559745af9d5b1bb7753b23352ccd96ec0",
+          "number": "11151747978",
+          "expression": "16X3,55",
+          "dimensions": [
+            16,
+            3.55
+          ]
+        }
+      ]
+    },
+    {
+      "partId": "bmw-11311304257",
+      "number": "11311304257",
+      "name": "O-ring 16X2",
+      "insideDiameterMm": 16,
+      "crossSectionMm": 2,
+      "outerDiameterMm": 20,
+      "geometryId": "nominal-seal:bmw-11311304257",
+      "interpretation": "Catalog A×B interpreted as nominal inside diameter × circular cross-section. This interpretation needs technical review for each BMW application.",
+      "dimensionConventionSource": "https://www.trelleborg.com/seals/-/media/tss-media-repository/tss_website/pdf-and-other-literature/catalogs/o_ring_gb_en.pdf",
+      "accuracy": {
+        "visual": "illustrative",
+        "dimensions": "illustrative",
+        "alignment": "missing",
+        "mechanical": "missing",
+        "removal": "missing"
+      },
+      "evidence": [
+        {
+          "positionId": "catalog-assembly-3c8e20898698632af445551c-33cff6e0f200f0763a3fa324",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1993-bmw-m5-sedan_e34/engine/timing_and_valve_train_timing_chain.html",
+          "recordSha256": "33cff6e0f200f0763a3fa3248f146bd9b75ce58dd048756744459726c3508fbb",
+          "number": "11311304257",
+          "expression": "16X2",
+          "dimensions": [
+            16,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "partId": "bmw-11311307408",
+      "number": "11311307408",
+      "name": "O-ring 14X2,5",
+      "insideDiameterMm": 14,
+      "crossSectionMm": 2.5,
+      "outerDiameterMm": 19,
+      "geometryId": "nominal-seal:bmw-11311307408",
+      "interpretation": "Catalog A×B interpreted as nominal inside diameter × circular cross-section. This interpretation needs technical review for each BMW application.",
+      "dimensionConventionSource": "https://www.trelleborg.com/seals/-/media/tss-media-repository/tss_website/pdf-and-other-literature/catalogs/o_ring_gb_en.pdf",
+      "accuracy": {
+        "visual": "illustrative",
+        "dimensions": "illustrative",
+        "alignment": "missing",
+        "mechanical": "missing",
+        "removal": "missing"
+      },
+      "evidence": [
+        {
+          "positionId": "catalog-assembly-3c8e20898698632af445551c-db47f5529be0e1802b8d4d81",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1993-bmw-m5-sedan_e34/engine/timing_and_valve_train_timing_chain.html",
+          "recordSha256": "db47f5529be0e1802b8d4d81bd1a264f9c4edbfca7d72860f80eee93679f6436",
+          "number": "11311307408",
+          "expression": "14X2,5",
+          "dimensions": [
+            14,
+            2.5
+          ]
+        }
+      ]
+    },
+    {
+      "partId": "bmw-11361703713",
+      "number": "11361703713",
+      "name": "O-ring 21X2,5",
+      "insideDiameterMm": 21,
+      "crossSectionMm": 2.5,
+      "outerDiameterMm": 26,
+      "geometryId": "nominal-seal:bmw-11361703713",
+      "interpretation": "Catalog A×B interpreted as nominal inside diameter × circular cross-section. This interpretation needs technical review for each BMW application.",
+      "dimensionConventionSource": "https://www.trelleborg.com/seals/-/media/tss-media-repository/tss_website/pdf-and-other-literature/catalogs/o_ring_gb_en.pdf",
+      "accuracy": {
+        "visual": "illustrative",
+        "dimensions": "illustrative",
+        "alignment": "missing",
+        "mechanical": "missing",
+        "removal": "missing"
+      },
+      "evidence": [
+        {
+          "positionId": "catalog-assembly-82cc77ccc22e46a78426e1fc-e361be2d28561388defdaa6d",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1994-bmw-525i-sedan_e34/engine/cylinder_head_vanos.html",
+          "recordSha256": "e361be2d28561388defdaa6d470fc2a51e1d69eb55d2077e5fdeb15dc9159f21",
+          "number": "11361703713",
+          "expression": "21X2,5",
+          "dimensions": [
+            21,
+            2.5
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-aa9a247e0201849cacb20455-e361be2d28561388defdaa6d",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-525i-wagon_e34/engine/cylinder_head_vanos.html",
+          "recordSha256": "e361be2d28561388defdaa6d470fc2a51e1d69eb55d2077e5fdeb15dc9159f21",
+          "number": "11361703713",
+          "expression": "21X2,5",
+          "dimensions": [
+            21,
+            2.5
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-df9050fbaeb6c4faaa808de4-e361be2d28561388defdaa6d",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1991-bmw-525i-m50_engine_e34/engine/cylinder_head_vanos.html",
+          "recordSha256": "e361be2d28561388defdaa6d470fc2a51e1d69eb55d2077e5fdeb15dc9159f21",
+          "number": "11361703713",
+          "expression": "21X2,5",
+          "dimensions": [
+            21,
+            2.5
+          ]
+        }
+      ]
+    },
+    {
+      "partId": "bmw-11411304178",
+      "number": "11411304178",
+      "name": "O-ring 22X2",
+      "insideDiameterMm": 22,
+      "crossSectionMm": 2,
+      "outerDiameterMm": 26,
+      "geometryId": "nominal-seal:bmw-11411304178",
+      "interpretation": "Catalog A×B interpreted as nominal inside diameter × circular cross-section. This interpretation needs technical review for each BMW application.",
+      "dimensionConventionSource": "https://www.trelleborg.com/seals/-/media/tss-media-repository/tss_website/pdf-and-other-literature/catalogs/o_ring_gb_en.pdf",
+      "accuracy": {
+        "visual": "illustrative",
+        "dimensions": "illustrative",
+        "alignment": "missing",
+        "mechanical": "missing",
+        "removal": "missing"
+      },
+      "evidence": [
+        {
+          "positionId": "catalog-assembly-59793f473c1ad91eff1b1faf-87d37d14416c4c639bb79dea",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1993-bmw-m5-sedan_e34/engine/cylinder_head_attached_parts.html",
+          "recordSha256": "87d37d14416c4c639bb79dea88ebfc22e58bce329ea11169f22433dd24ecda9f",
+          "number": "11411304178",
+          "expression": "22X2",
+          "dimensions": [
+            22,
+            2
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-df5f481eb5ae352a30509760-a2e5815d066757a64e813cdc",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1993-bmw-m5-sedan_e34/engine/cooling_system_water_hoses.html",
+          "recordSha256": "a2e5815d066757a64e813cdca473ee04f06170a2e2cf30566f2e43772cbbc49f",
+          "number": "11411304178",
+          "expression": "22X2",
+          "dimensions": [
+            22,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "partId": "bmw-11421702905",
+      "number": "11421702905",
+      "name": "O-ring 14,0X2,0",
+      "insideDiameterMm": 14,
+      "crossSectionMm": 2,
+      "outerDiameterMm": 18,
+      "geometryId": "nominal-seal:bmw-11421702905",
+      "interpretation": "Catalog A×B interpreted as nominal inside diameter × circular cross-section. This interpretation needs technical review for each BMW application.",
+      "dimensionConventionSource": "https://www.trelleborg.com/seals/-/media/tss-media-repository/tss_website/pdf-and-other-literature/catalogs/o_ring_gb_en.pdf",
+      "accuracy": {
+        "visual": "illustrative",
+        "dimensions": "illustrative",
+        "alignment": "missing",
+        "mechanical": "missing",
+        "removal": "missing"
+      },
+      "evidence": [
+        {
+          "positionId": "catalog-assembly-86b13e4b2c3e1e9f8bf071d5-bb9e14dd9d70202041d9d498",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-530i-wagon_e34/engine/lubrication_system_oil_filter.html",
+          "recordSha256": "bb9e14dd9d70202041d9d498f6c1c474a42735f6c04eabf877bc9ba876f0aceb",
+          "number": "11421702905",
+          "expression": "14,0X2,0",
+          "dimensions": [
+            14,
+            2
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-ae47bac05484876b99fcb9f9-bb9e14dd9d70202041d9d498",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1994-bmw-530i-sedan_e34/engine/lubrication_system_oil_filter.html",
+          "recordSha256": "bb9e14dd9d70202041d9d498f6c1c474a42735f6c04eabf877bc9ba876f0aceb",
+          "number": "11421702905",
+          "expression": "14,0X2,0",
+          "dimensions": [
+            14,
+            2
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-cded9d648163b1921bd79615-bb9e14dd9d70202041d9d498",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/engine/lubrication_system_oil_filter.html",
+          "recordSha256": "bb9e14dd9d70202041d9d498f6c1c474a42735f6c04eabf877bc9ba876f0aceb",
+          "number": "11421702905",
+          "expression": "14,0X2,0",
+          "dimensions": [
+            14,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "partId": "bmw-11421711076",
+      "number": "11421711076",
+      "name": "O-ring 4,5X1,5",
+      "insideDiameterMm": 4.5,
+      "crossSectionMm": 1.5,
+      "outerDiameterMm": 7.5,
+      "geometryId": "nominal-seal:bmw-11421711076",
+      "interpretation": "Catalog A×B interpreted as nominal inside diameter × circular cross-section. This interpretation needs technical review for each BMW application.",
+      "dimensionConventionSource": "https://www.trelleborg.com/seals/-/media/tss-media-repository/tss_website/pdf-and-other-literature/catalogs/o_ring_gb_en.pdf",
+      "accuracy": {
+        "visual": "illustrative",
+        "dimensions": "illustrative",
+        "alignment": "missing",
+        "mechanical": "missing",
+        "removal": "missing"
+      },
+      "evidence": [
+        {
+          "positionId": "catalog-assembly-686bb35d09f1720af6557b8d-08cc75cb81812687a262b445",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1993-bmw-535i-sedan_e34/engine/lubrication_system_oil_filter.html",
+          "recordSha256": "08cc75cb81812687a262b445249997988da551ebf448fd07c07cd4ba006fe7cb",
+          "number": "11421711076",
+          "expression": "4,5X1,5",
+          "dimensions": [
+            4.5,
+            1.5
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-82d115c9f69b0ba0ed4b6e2d-d6717afe8ef5cf722a2e0e8b",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-525i-wagon_e34/engine/lubrication_system_oil_filter.html",
+          "recordSha256": "d6717afe8ef5cf722a2e0e8bcf0faa60cc78ef2bd784023b2788fef520aed0a0",
+          "number": "11421711076",
+          "expression": "4,5X1,5",
+          "dimensions": [
+            4.5,
+            1.5
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-d25294f71081001cf0ce117f-08cc75cb81812687a262b445",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1993-bmw-m5-sedan_e34/engine/lubrication_system_oil_filter.html",
+          "recordSha256": "08cc75cb81812687a262b445249997988da551ebf448fd07c07cd4ba006fe7cb",
+          "number": "11421711076",
+          "expression": "4,5X1,5",
+          "dimensions": [
+            4.5,
+            1.5
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-daf1ab407bc73632e65d911b-d6717afe8ef5cf722a2e0e8b",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1994-bmw-525i-sedan_e34/engine/lubrication_system_oil_filter.html",
+          "recordSha256": "d6717afe8ef5cf722a2e0e8bcf0faa60cc78ef2bd784023b2788fef520aed0a0",
+          "number": "11421711076",
+          "expression": "4,5X1,5",
+          "dimensions": [
+            4.5,
+            1.5
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-fb5f5914eb056d21974b1037-d6717afe8ef5cf722a2e0e8b",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1991-bmw-525i-m50_engine_e34/engine/lubrication_system_oil_filter.html",
+          "recordSha256": "d6717afe8ef5cf722a2e0e8bcf0faa60cc78ef2bd784023b2788fef520aed0a0",
+          "number": "11421711076",
+          "expression": "4,5X1,5",
+          "dimensions": [
+            4.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "partId": "bmw-11421713597",
+      "number": "11421713597",
+      "name": "O-ring 6,0X2,5",
+      "insideDiameterMm": 6,
+      "crossSectionMm": 2.5,
+      "outerDiameterMm": 11,
+      "geometryId": "nominal-seal:bmw-11421713597",
+      "interpretation": "Catalog A×B interpreted as nominal inside diameter × circular cross-section. This interpretation needs technical review for each BMW application.",
+      "dimensionConventionSource": "https://www.trelleborg.com/seals/-/media/tss-media-repository/tss_website/pdf-and-other-literature/catalogs/o_ring_gb_en.pdf",
+      "accuracy": {
+        "visual": "illustrative",
+        "dimensions": "illustrative",
+        "alignment": "missing",
+        "mechanical": "missing",
+        "removal": "missing"
+      },
+      "evidence": [
+        {
+          "positionId": "catalog-assembly-1ad77f184789864c6741b5e3-558b5cb035c6c6785eb0a83f",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1994-bmw-530i-sedan_e34/engine/lubrication_system_oil_pump_with_drive.html",
+          "recordSha256": "558b5cb035c6c6785eb0a83fbcd12f3beb9a56ed876bc8ae9145db3423a2a04e",
+          "number": "11421713597",
+          "expression": "6,0X2,5",
+          "dimensions": [
+            6,
+            2.5
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-32d569950cb59cf266cd4fd7-e0a5901db54eafcebac85ccd",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-530i-wagon_e34/engine/timing_timing_chain_lower_p.html",
+          "recordSha256": "e0a5901db54eafcebac85ccd686e1a5adbebe91331840a6422cf2c2243174c58",
+          "number": "11421713597",
+          "expression": "6,0X2,5",
+          "dimensions": [
+            6,
+            2.5
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-38706d6362f9c725dfd2d155-e0a5901db54eafcebac85ccd",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/engine/timing_timing_chain_lower_p.html",
+          "recordSha256": "e0a5901db54eafcebac85ccd686e1a5adbebe91331840a6422cf2c2243174c58",
+          "number": "11421713597",
+          "expression": "6,0X2,5",
+          "dimensions": [
+            6,
+            2.5
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-3e453ba4a9d326094978bf1b-e0a5901db54eafcebac85ccd",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1994-bmw-530i-sedan_e34/engine/timing_timing_chain_lower_p.html",
+          "recordSha256": "e0a5901db54eafcebac85ccd686e1a5adbebe91331840a6422cf2c2243174c58",
+          "number": "11421713597",
+          "expression": "6,0X2,5",
+          "dimensions": [
+            6,
+            2.5
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-a0340fc4ae11cdaca2486b29-558b5cb035c6c6785eb0a83f",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/engine/lubrication_system_oil_pump_with_drive.html",
+          "recordSha256": "558b5cb035c6c6785eb0a83fbcd12f3beb9a56ed876bc8ae9145db3423a2a04e",
+          "number": "11421713597",
+          "expression": "6,0X2,5",
+          "dimensions": [
+            6,
+            2.5
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-faf90344304b0e208449d9f2-558b5cb035c6c6785eb0a83f",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-530i-wagon_e34/engine/lubrication_system_oil_pump_with_drive.html",
+          "recordSha256": "558b5cb035c6c6785eb0a83fbcd12f3beb9a56ed876bc8ae9145db3423a2a04e",
+          "number": "11421713597",
+          "expression": "6,0X2,5",
+          "dimensions": [
+            6,
+            2.5
+          ]
+        }
+      ]
+    },
+    {
+      "partId": "bmw-11421741000",
+      "number": "11421741000",
+      "name": "O-ring 91X4",
+      "insideDiameterMm": 91,
+      "crossSectionMm": 4,
+      "outerDiameterMm": 99,
+      "geometryId": "nominal-seal:bmw-11421741000",
+      "interpretation": "Catalog A×B interpreted as nominal inside diameter × circular cross-section. This interpretation needs technical review for each BMW application.",
+      "dimensionConventionSource": "https://www.trelleborg.com/seals/-/media/tss-media-repository/tss_website/pdf-and-other-literature/catalogs/o_ring_gb_en.pdf",
+      "accuracy": {
+        "visual": "illustrative",
+        "dimensions": "illustrative",
+        "alignment": "missing",
+        "mechanical": "missing",
+        "removal": "missing"
+      },
+      "evidence": [
+        {
+          "positionId": "catalog-assembly-686bb35d09f1720af6557b8d-79979fc268133dffaf5a9e0d",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1993-bmw-535i-sedan_e34/engine/lubrication_system_oil_filter.html",
+          "recordSha256": "79979fc268133dffaf5a9e0dee0e5648622f320eb1856f12048031b0959bb240",
+          "number": "11421741000",
+          "expression": "91X4",
+          "dimensions": [
+            91,
+            4
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-82d115c9f69b0ba0ed4b6e2d-c901b3726549c1a4f170af81",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-525i-wagon_e34/engine/lubrication_system_oil_filter.html",
+          "recordSha256": "c901b3726549c1a4f170af81c00d6b86496ffba048ea9b3cb7df4ce5b4c2363c",
+          "number": "11421741000",
+          "expression": "91X4",
+          "dimensions": [
+            91,
+            4
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-86b13e4b2c3e1e9f8bf071d5-6c1f2a2ef93ffa4f304c95fc",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-530i-wagon_e34/engine/lubrication_system_oil_filter.html",
+          "recordSha256": "6c1f2a2ef93ffa4f304c95fc48f0706edf63068c3150b42b5d1971f31ba1e1d6",
+          "number": "11421741000",
+          "expression": "91X4",
+          "dimensions": [
+            91,
+            4
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-ae47bac05484876b99fcb9f9-6c1f2a2ef93ffa4f304c95fc",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1994-bmw-530i-sedan_e34/engine/lubrication_system_oil_filter.html",
+          "recordSha256": "6c1f2a2ef93ffa4f304c95fc48f0706edf63068c3150b42b5d1971f31ba1e1d6",
+          "number": "11421741000",
+          "expression": "91X4",
+          "dimensions": [
+            91,
+            4
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-cded9d648163b1921bd79615-6c1f2a2ef93ffa4f304c95fc",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/engine/lubrication_system_oil_filter.html",
+          "recordSha256": "6c1f2a2ef93ffa4f304c95fc48f0706edf63068c3150b42b5d1971f31ba1e1d6",
+          "number": "11421741000",
+          "expression": "91X4",
+          "dimensions": [
+            91,
+            4
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-d25294f71081001cf0ce117f-79979fc268133dffaf5a9e0d",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1993-bmw-m5-sedan_e34/engine/lubrication_system_oil_filter.html",
+          "recordSha256": "79979fc268133dffaf5a9e0dee0e5648622f320eb1856f12048031b0959bb240",
+          "number": "11421741000",
+          "expression": "91X4",
+          "dimensions": [
+            91,
+            4
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-daf1ab407bc73632e65d911b-c901b3726549c1a4f170af81",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1994-bmw-525i-sedan_e34/engine/lubrication_system_oil_filter.html",
+          "recordSha256": "c901b3726549c1a4f170af81c00d6b86496ffba048ea9b3cb7df4ce5b4c2363c",
+          "number": "11421741000",
+          "expression": "91X4",
+          "dimensions": [
+            91,
+            4
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-fb5f5914eb056d21974b1037-c901b3726549c1a4f170af81",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1991-bmw-525i-m50_engine_e34/engine/lubrication_system_oil_filter.html",
+          "recordSha256": "c901b3726549c1a4f170af81c00d6b86496ffba048ea9b3cb7df4ce5b4c2363c",
+          "number": "11421741000",
+          "expression": "91X4",
+          "dimensions": [
+            91,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "partId": "bmw-11431287541",
+      "number": "11431287541",
+      "name": "O-ring 14,5X3",
+      "insideDiameterMm": 14.5,
+      "crossSectionMm": 3,
+      "outerDiameterMm": 20.5,
+      "geometryId": "nominal-seal:bmw-11431287541",
+      "interpretation": "Catalog A×B interpreted as nominal inside diameter × circular cross-section. This interpretation needs technical review for each BMW application.",
+      "dimensionConventionSource": "https://www.trelleborg.com/seals/-/media/tss-media-repository/tss_website/pdf-and-other-literature/catalogs/o_ring_gb_en.pdf",
+      "accuracy": {
+        "visual": "illustrative",
+        "dimensions": "illustrative",
+        "alignment": "missing",
+        "mechanical": "missing",
+        "removal": "missing"
+      },
+      "evidence": [
+        {
+          "positionId": "catalog-assembly-0d827960f5b2a0c746c600ce-6a82887193661c6bcc7da5a2",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-525i-wagon_e34/engine/oil_pan_oil_level_indicator.html",
+          "recordSha256": "6a82887193661c6bcc7da5a205e29d428acc7665575fafe77e141fa43ede8f65",
+          "number": "11431287541",
+          "expression": "14,5X3",
+          "dimensions": [
+            14.5,
+            3
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-70d33a45b6e2bd3acb98949e-6a82887193661c6bcc7da5a2",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1994-bmw-525i-sedan_e34/engine/oil_pan_oil_level_indicator.html",
+          "recordSha256": "6a82887193661c6bcc7da5a205e29d428acc7665575fafe77e141fa43ede8f65",
+          "number": "11431287541",
+          "expression": "14,5X3",
+          "dimensions": [
+            14.5,
+            3
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-c2035fbce3cd25b39bfc305b-6a82887193661c6bcc7da5a2",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1991-bmw-525i-m50_engine_e34/engine/oil_pan_oil_level_indicator.html",
+          "recordSha256": "6a82887193661c6bcc7da5a205e29d428acc7665575fafe77e141fa43ede8f65",
+          "number": "11431287541",
+          "expression": "14,5X3",
+          "dimensions": [
+            14.5,
+            3
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-df354c04f8c6583d5f231ae1-cbf67353cdd0c5a02d88a4f1",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1991-bmw-525i-m20_engine_e34/engine/oil_pan_oil_level_indicator.html",
+          "recordSha256": "cbf67353cdd0c5a02d88a4f1979b246ce22506ad57ac829221da50405ccb180a",
+          "number": "11431287541",
+          "expression": "14,5X3",
+          "dimensions": [
+            14.5,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "partId": "bmw-11431707164",
+      "number": "11431707164",
+      "name": "O-ring 15,0X5,0",
+      "insideDiameterMm": 15,
+      "crossSectionMm": 5,
+      "outerDiameterMm": 25,
+      "geometryId": "nominal-seal:bmw-11431707164",
+      "interpretation": "Catalog A×B interpreted as nominal inside diameter × circular cross-section. This interpretation needs technical review for each BMW application.",
+      "dimensionConventionSource": "https://www.trelleborg.com/seals/-/media/tss-media-repository/tss_website/pdf-and-other-literature/catalogs/o_ring_gb_en.pdf",
+      "accuracy": {
+        "visual": "illustrative",
+        "dimensions": "illustrative",
+        "alignment": "missing",
+        "mechanical": "missing",
+        "removal": "missing"
+      },
+      "evidence": [
+        {
+          "positionId": "catalog-assembly-00719f3de265dd725749bff2-1127fb405b5f0dba5a1e8e49",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-530i-wagon_e34/engine/oil_pan_oil_level_indicator.html",
+          "recordSha256": "1127fb405b5f0dba5a1e8e497bf5a2ef75d312e2e2e28135b421b97079294ce8",
+          "number": "11431707164",
+          "expression": "15,0X5,0",
+          "dimensions": [
+            15,
+            5
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-2fe2bb00791c71dc539a2e08-1127fb405b5f0dba5a1e8e49",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/engine/oil_pan_oil_level_indicator.html",
+          "recordSha256": "1127fb405b5f0dba5a1e8e497bf5a2ef75d312e2e2e28135b421b97079294ce8",
+          "number": "11431707164",
+          "expression": "15,0X5,0",
+          "dimensions": [
+            15,
+            5
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-3db7417ab27a2b8a74404bac-1127fb405b5f0dba5a1e8e49",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1994-bmw-530i-sedan_e34/engine/oil_pan_oil_level_indicator.html",
+          "recordSha256": "1127fb405b5f0dba5a1e8e497bf5a2ef75d312e2e2e28135b421b97079294ce8",
+          "number": "11431707164",
+          "expression": "15,0X5,0",
+          "dimensions": [
+            15,
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "partId": "bmw-11431717666",
+      "number": "11431717666",
+      "name": "O-ring 9X2,2",
+      "insideDiameterMm": 9,
+      "crossSectionMm": 2.2,
+      "outerDiameterMm": 13.4,
+      "geometryId": "nominal-seal:bmw-11431717666",
+      "interpretation": "Catalog A×B interpreted as nominal inside diameter × circular cross-section. This interpretation needs technical review for each BMW application.",
+      "dimensionConventionSource": "https://www.trelleborg.com/seals/-/media/tss-media-repository/tss_website/pdf-and-other-literature/catalogs/o_ring_gb_en.pdf",
+      "accuracy": {
+        "visual": "illustrative",
+        "dimensions": "illustrative",
+        "alignment": "missing",
+        "mechanical": "missing",
+        "removal": "missing"
+      },
+      "evidence": [
+        {
+          "positionId": "catalog-assembly-00719f3de265dd725749bff2-0664caa42653674ecc6739fa",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-530i-wagon_e34/engine/oil_pan_oil_level_indicator.html",
+          "recordSha256": "0664caa42653674ecc6739fa77c910b06850fb41c6923231595a49a26aceef2e",
+          "number": "11431717666",
+          "expression": "9X2,2",
+          "dimensions": [
+            9,
+            2.2
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-2fe2bb00791c71dc539a2e08-0664caa42653674ecc6739fa",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/engine/oil_pan_oil_level_indicator.html",
+          "recordSha256": "0664caa42653674ecc6739fa77c910b06850fb41c6923231595a49a26aceef2e",
+          "number": "11431717666",
+          "expression": "9X2,2",
+          "dimensions": [
+            9,
+            2.2
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-3db7417ab27a2b8a74404bac-0664caa42653674ecc6739fa",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1994-bmw-530i-sedan_e34/engine/oil_pan_oil_level_indicator.html",
+          "recordSha256": "0664caa42653674ecc6739fa77c910b06850fb41c6923231595a49a26aceef2e",
+          "number": "11431717666",
+          "expression": "9X2,2",
+          "dimensions": [
+            9,
+            2.2
+          ]
+        }
+      ]
+    },
+    {
+      "partId": "pump-seal",
+      "number": "11511711484",
+      "name": "O-ring 68X5",
+      "insideDiameterMm": 68,
+      "crossSectionMm": 5,
+      "outerDiameterMm": 78,
+      "geometryId": "nominal-seal:pump-seal",
+      "interpretation": "Catalog A×B interpreted as nominal inside diameter × circular cross-section. This interpretation needs technical review for each BMW application.",
+      "dimensionConventionSource": "https://www.trelleborg.com/seals/-/media/tss-media-repository/tss_website/pdf-and-other-literature/catalogs/o_ring_gb_en.pdf",
+      "accuracy": {
+        "visual": "illustrative",
+        "dimensions": "illustrative",
+        "alignment": "missing",
+        "mechanical": "missing",
+        "removal": "missing"
+      },
+      "evidence": [
+        {
+          "positionId": "catalog-assembly-7e5dc2aca2498d81e62273f1-4f6780a796fd2eb0f6051d2a",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1994-bmw-525i-sedan_e34/engine/water_pump_thermostat.html",
+          "recordSha256": "4f6780a796fd2eb0f6051d2a00c59bd304ff1c09cdebf037187f0a5bc1be161d",
+          "number": "11511711484",
+          "expression": "68X5",
+          "dimensions": [
+            68,
+            5
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-c6f5a6e8f6fa71b37edf3bd4-4f6780a796fd2eb0f6051d2a",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-525i-wagon_e34/engine/water_pump_thermostat.html",
+          "recordSha256": "4f6780a796fd2eb0f6051d2a00c59bd304ff1c09cdebf037187f0a5bc1be161d",
+          "number": "11511711484",
+          "expression": "68X5",
+          "dimensions": [
+            68,
+            5
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-f423d1fb8f5fe7404a59bbd7-4f6780a796fd2eb0f6051d2a",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1991-bmw-525i-m50_engine_e34/engine/water_pump_thermostat.html",
+          "recordSha256": "4f6780a796fd2eb0f6051d2a00c59bd304ff1c09cdebf037187f0a5bc1be161d",
+          "number": "11511711484",
+          "expression": "68X5",
+          "dimensions": [
+            68,
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "partId": "thermostat-seal",
+      "number": "11531265084",
+      "name": "O-ring 60X3,5",
+      "insideDiameterMm": 60,
+      "crossSectionMm": 3.5,
+      "outerDiameterMm": 67,
+      "geometryId": "nominal-seal:thermostat-seal",
+      "interpretation": "Catalog A×B interpreted as nominal inside diameter × circular cross-section. This interpretation needs technical review for each BMW application.",
+      "dimensionConventionSource": "https://www.trelleborg.com/seals/-/media/tss-media-repository/tss_website/pdf-and-other-literature/catalogs/o_ring_gb_en.pdf",
+      "accuracy": {
+        "visual": "illustrative",
+        "dimensions": "illustrative",
+        "alignment": "missing",
+        "mechanical": "missing",
+        "removal": "missing"
+      },
+      "evidence": [
+        {
+          "positionId": "catalog-assembly-1bb3ad365c3ed7d4d518e764-9485b10d7092bd6cc8cd6403",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1993-bmw-535i-sedan_e34/engine/cooling_system_thermostat_housing.html",
+          "recordSha256": "9485b10d7092bd6cc8cd6403b8fc547730c53cd6318f32a9fc7b33afa4125ba7",
+          "number": "11531265084",
+          "expression": "60X3,5",
+          "dimensions": [
+            60,
+            3.5
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-2eb93a2e8a860462ddd8641d-7375bd1c19d9c85ddbda9815",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1991-bmw-525i-m20_engine_e34/engine/cooling_system_thermostat_housing.html",
+          "recordSha256": "7375bd1c19d9c85ddbda9815ced1dff7322183cbe2e9209defd65c7a2e844e0c",
+          "number": "11531265084",
+          "expression": "60X3,5",
+          "dimensions": [
+            60,
+            3.5
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-7e5dc2aca2498d81e62273f1-420392eac048dd40c62efbc8",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1994-bmw-525i-sedan_e34/engine/water_pump_thermostat.html",
+          "recordSha256": "420392eac048dd40c62efbc8327fb77a6f51b77871a1b5cf9839e22f62c228d7",
+          "number": "11531265084",
+          "expression": "60X3,5",
+          "dimensions": [
+            60,
+            3.5
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-c6f5a6e8f6fa71b37edf3bd4-420392eac048dd40c62efbc8",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-525i-wagon_e34/engine/water_pump_thermostat.html",
+          "recordSha256": "420392eac048dd40c62efbc8327fb77a6f51b77871a1b5cf9839e22f62c228d7",
+          "number": "11531265084",
+          "expression": "60X3,5",
+          "dimensions": [
+            60,
+            3.5
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-f423d1fb8f5fe7404a59bbd7-420392eac048dd40c62efbc8",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1991-bmw-525i-m50_engine_e34/engine/water_pump_thermostat.html",
+          "recordSha256": "420392eac048dd40c62efbc8327fb77a6f51b77871a1b5cf9839e22f62c228d7",
+          "number": "11531265084",
+          "expression": "60X3,5",
+          "dimensions": [
+            60,
+            3.5
+          ]
+        }
+      ]
+    },
+    {
+      "partId": "bmw-11531304176",
+      "number": "11531304176",
+      "name": "O-ring 35,2X3",
+      "insideDiameterMm": 35.2,
+      "crossSectionMm": 3,
+      "outerDiameterMm": 41.2,
+      "geometryId": "nominal-seal:bmw-11531304176",
+      "interpretation": "Catalog A×B interpreted as nominal inside diameter × circular cross-section. This interpretation needs technical review for each BMW application.",
+      "dimensionConventionSource": "https://www.trelleborg.com/seals/-/media/tss-media-repository/tss_website/pdf-and-other-literature/catalogs/o_ring_gb_en.pdf",
+      "accuracy": {
+        "visual": "illustrative",
+        "dimensions": "illustrative",
+        "alignment": "missing",
+        "mechanical": "missing",
+        "removal": "missing"
+      },
+      "evidence": [
+        {
+          "positionId": "catalog-assembly-df5f481eb5ae352a30509760-de982a070ac2be167f32add0",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1993-bmw-m5-sedan_e34/engine/cooling_system_water_hoses.html",
+          "recordSha256": "de982a070ac2be167f32add066885b30ab03d33a3aa8c25759c9e279fca74ea6",
+          "number": "11531304176",
+          "expression": "35,2X3",
+          "dimensions": [
+            35.2,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "partId": "bmw-11611730725",
+      "number": "11611730725",
+      "name": "O-ring 24X3,5",
+      "insideDiameterMm": 24,
+      "crossSectionMm": 3.5,
+      "outerDiameterMm": 31,
+      "geometryId": "nominal-seal:bmw-11611730725",
+      "interpretation": "Catalog A×B interpreted as nominal inside diameter × circular cross-section. This interpretation needs technical review for each BMW application.",
+      "dimensionConventionSource": "https://www.trelleborg.com/seals/-/media/tss-media-repository/tss_website/pdf-and-other-literature/catalogs/o_ring_gb_en.pdf",
+      "accuracy": {
+        "visual": "illustrative",
+        "dimensions": "illustrative",
+        "alignment": "missing",
+        "mechanical": "missing",
+        "removal": "missing"
+      },
+      "evidence": [
+        {
+          "positionId": "catalog-assembly-666c6d46907b350b62d9f833-5a2f5b175ea8a9891f003642",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-525i-wagon_e34/engine/intake_manifold_system.html",
+          "recordSha256": "5a2f5b175ea8a9891f003642ed3930776dc5235a86b652c29d10468b08a812a6",
+          "number": "11611730725",
+          "expression": "24X3,5",
+          "dimensions": [
+            24,
+            3.5
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-a151a1c7146aeb8c973e5068-88680b915550a49d4760e872",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1991-bmw-525i-m50_engine_e34/engine/intake_manifold_system.html",
+          "recordSha256": "88680b915550a49d4760e872ac4d69108a56ebbca08c9474ef68e63b4ea027bd",
+          "number": "11611730725",
+          "expression": "24X3,5",
+          "dimensions": [
+            24,
+            3.5
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-a151a1c7146aeb8c973e5068-8eb8bde2b75e4c5dfe295a30",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1991-bmw-525i-m50_engine_e34/engine/intake_manifold_system.html",
+          "recordSha256": "8eb8bde2b75e4c5dfe295a305d0b430b601a21cb5e5a440c594e84c64073b187",
+          "number": "11611730725",
+          "expression": "24X3,5",
+          "dimensions": [
+            24,
+            3.5
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-a7452e8e1297cac6d4669480-88680b915550a49d4760e872",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1994-bmw-525i-sedan_e34/engine/intake_manifold_system.html",
+          "recordSha256": "88680b915550a49d4760e872ac4d69108a56ebbca08c9474ef68e63b4ea027bd",
+          "number": "11611730725",
+          "expression": "24X3,5",
+          "dimensions": [
+            24,
+            3.5
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-a7452e8e1297cac6d4669480-8eb8bde2b75e4c5dfe295a30",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1994-bmw-525i-sedan_e34/engine/intake_manifold_system.html",
+          "recordSha256": "8eb8bde2b75e4c5dfe295a305d0b430b601a21cb5e5a440c594e84c64073b187",
+          "number": "11611730725",
+          "expression": "24X3,5",
+          "dimensions": [
+            24,
+            3.5
+          ]
+        }
+      ]
+    },
+    {
+      "partId": "bmw-11611735479",
+      "number": "11611735479",
+      "name": "O-ring 7,4X2,8",
+      "insideDiameterMm": 7.4,
+      "crossSectionMm": 2.8,
+      "outerDiameterMm": 13,
+      "geometryId": "nominal-seal:bmw-11611735479",
+      "interpretation": "Catalog A×B interpreted as nominal inside diameter × circular cross-section. This interpretation needs technical review for each BMW application.",
+      "dimensionConventionSource": "https://www.trelleborg.com/seals/-/media/tss-media-repository/tss_website/pdf-and-other-literature/catalogs/o_ring_gb_en.pdf",
+      "accuracy": {
+        "visual": "illustrative",
+        "dimensions": "illustrative",
+        "alignment": "missing",
+        "mechanical": "missing",
+        "removal": "missing"
+      },
+      "evidence": [
+        {
+          "positionId": "catalog-assembly-a151a1c7146aeb8c973e5068-8cb3f0481aa4f26e7c8f51c3",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1991-bmw-525i-m50_engine_e34/engine/intake_manifold_system.html",
+          "recordSha256": "8cb3f0481aa4f26e7c8f51c3b7c197681be6777590781799dcdf934f9ac64ffb",
+          "number": "11611735479",
+          "expression": "7,4X2,8",
+          "dimensions": [
+            7.4,
+            2.8
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-a151a1c7146aeb8c973e5068-a761060d0fd2a1258a65d34d",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1991-bmw-525i-m50_engine_e34/engine/intake_manifold_system.html",
+          "recordSha256": "a761060d0fd2a1258a65d34da078a6df1edafd4f926ccacfee532f8c18c98ce7",
+          "number": "11611735479",
+          "expression": "7,4X2,8",
+          "dimensions": [
+            7.4,
+            2.8
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-a7452e8e1297cac6d4669480-8cb3f0481aa4f26e7c8f51c3",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1994-bmw-525i-sedan_e34/engine/intake_manifold_system.html",
+          "recordSha256": "8cb3f0481aa4f26e7c8f51c3b7c197681be6777590781799dcdf934f9ac64ffb",
+          "number": "11611735479",
+          "expression": "7,4X2,8",
+          "dimensions": [
+            7.4,
+            2.8
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-a7452e8e1297cac6d4669480-a761060d0fd2a1258a65d34d",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1994-bmw-525i-sedan_e34/engine/intake_manifold_system.html",
+          "recordSha256": "a761060d0fd2a1258a65d34da078a6df1edafd4f926ccacfee532f8c18c98ce7",
+          "number": "11611735479",
+          "expression": "7,4X2,8",
+          "dimensions": [
+            7.4,
+            2.8
+          ]
+        }
+      ]
+    },
+    {
+      "partId": "bmw-11611735859",
+      "number": "11611735859",
+      "name": "O-ring 9,12X3,53",
+      "insideDiameterMm": 9.12,
+      "crossSectionMm": 3.53,
+      "outerDiameterMm": 16.18,
+      "geometryId": "nominal-seal:bmw-11611735859",
+      "interpretation": "Catalog A×B interpreted as nominal inside diameter × circular cross-section. This interpretation needs technical review for each BMW application.",
+      "dimensionConventionSource": "https://www.trelleborg.com/seals/-/media/tss-media-repository/tss_website/pdf-and-other-literature/catalogs/o_ring_gb_en.pdf",
+      "accuracy": {
+        "visual": "illustrative",
+        "dimensions": "illustrative",
+        "alignment": "missing",
+        "mechanical": "missing",
+        "removal": "missing"
+      },
+      "evidence": [
+        {
+          "positionId": "catalog-assembly-666c6d46907b350b62d9f833-23b49ca6db87e9f6cc55c98f",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-525i-wagon_e34/engine/intake_manifold_system.html",
+          "recordSha256": "23b49ca6db87e9f6cc55c98fcf35d8c647a5cf03b82862d2ce9d6658a5fbf84b",
+          "number": "11611735859",
+          "expression": "9,12X3,53",
+          "dimensions": [
+            9.12,
+            3.53
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-a151a1c7146aeb8c973e5068-7a7bb402917b49b7f649432f",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1991-bmw-525i-m50_engine_e34/engine/intake_manifold_system.html",
+          "recordSha256": "7a7bb402917b49b7f649432f384b5cfa6ed1c39912ef83bf0b8574445910e667",
+          "number": "11611735859",
+          "expression": "9,12X3,53",
+          "dimensions": [
+            9.12,
+            3.53
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-a7452e8e1297cac6d4669480-7a7bb402917b49b7f649432f",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1994-bmw-525i-sedan_e34/engine/intake_manifold_system.html",
+          "recordSha256": "7a7bb402917b49b7f649432f384b5cfa6ed1c39912ef83bf0b8574445910e667",
+          "number": "11611735859",
+          "expression": "9,12X3,53",
+          "dimensions": [
+            9.12,
+            3.53
+          ]
+        }
+      ]
+    },
+    {
+      "partId": "bmw-11617502761",
+      "number": "11617502761",
+      "name": "O-ring 7X3",
+      "insideDiameterMm": 7,
+      "crossSectionMm": 3,
+      "outerDiameterMm": 13,
+      "geometryId": "nominal-seal:bmw-11617502761",
+      "interpretation": "Catalog A×B interpreted as nominal inside diameter × circular cross-section. This interpretation needs technical review for each BMW application.",
+      "dimensionConventionSource": "https://www.trelleborg.com/seals/-/media/tss-media-repository/tss_website/pdf-and-other-literature/catalogs/o_ring_gb_en.pdf",
+      "accuracy": {
+        "visual": "illustrative",
+        "dimensions": "illustrative",
+        "alignment": "missing",
+        "mechanical": "missing",
+        "removal": "missing"
+      },
+      "evidence": [
+        {
+          "positionId": "catalog-assembly-a151a1c7146aeb8c973e5068-2cdfc45b76bb8000daa2a294",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1991-bmw-525i-m50_engine_e34/engine/intake_manifold_system.html",
+          "recordSha256": "2cdfc45b76bb8000daa2a294d23b0ba94ca6db8cdc1ad6d3a0ec76b5b3d6e681",
+          "number": "11617502761",
+          "expression": "7X3",
+          "dimensions": [
+            7,
+            3
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-a151a1c7146aeb8c973e5068-5ceac9e88d9c78f3c77a92e3",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1991-bmw-525i-m50_engine_e34/engine/intake_manifold_system.html",
+          "recordSha256": "5ceac9e88d9c78f3c77a92e36831c7e6e094f06a024070fd4e4dd0ea23b4b14f",
+          "number": "11617502761",
+          "expression": "7X3",
+          "dimensions": [
+            7,
+            3
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-a7452e8e1297cac6d4669480-2cdfc45b76bb8000daa2a294",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1994-bmw-525i-sedan_e34/engine/intake_manifold_system.html",
+          "recordSha256": "2cdfc45b76bb8000daa2a294d23b0ba94ca6db8cdc1ad6d3a0ec76b5b3d6e681",
+          "number": "11617502761",
+          "expression": "7X3",
+          "dimensions": [
+            7,
+            3
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-a7452e8e1297cac6d4669480-5ceac9e88d9c78f3c77a92e3",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1994-bmw-525i-sedan_e34/engine/intake_manifold_system.html",
+          "recordSha256": "5ceac9e88d9c78f3c77a92e36831c7e6e094f06a024070fd4e4dd0ea23b4b14f",
+          "number": "11617502761",
+          "expression": "7X3",
+          "dimensions": [
+            7,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "partId": "bmw-12111252257",
+      "number": "12111252257",
+      "name": "O-ring 60X3",
+      "insideDiameterMm": 60,
+      "crossSectionMm": 3,
+      "outerDiameterMm": 66,
+      "geometryId": "nominal-seal:bmw-12111252257",
+      "interpretation": "Catalog A×B interpreted as nominal inside diameter × circular cross-section. This interpretation needs technical review for each BMW application.",
+      "dimensionConventionSource": "https://www.trelleborg.com/seals/-/media/tss-media-repository/tss_website/pdf-and-other-literature/catalogs/o_ring_gb_en.pdf",
+      "accuracy": {
+        "visual": "illustrative",
+        "dimensions": "illustrative",
+        "alignment": "missing",
+        "mechanical": "missing",
+        "removal": "missing"
+      },
+      "evidence": [
+        {
+          "positionId": "catalog-assembly-f7a2a5c4b1ec1b5a3888c98c-59e2b20015372a7d81c15899",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1993-bmw-m5-sedan_e34/engine/cylinder_head_cover.html",
+          "recordSha256": "59e2b20015372a7d81c158992b272ddf1ceb50765db73e511a2a8739f21a9756",
+          "number": "12111252257",
+          "expression": "60X3",
+          "dimensions": [
+            60,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "partId": "bmw-12141727220",
+      "number": "12141727220",
+      "name": "O-ring 18X2",
+      "insideDiameterMm": 18,
+      "crossSectionMm": 2,
+      "outerDiameterMm": 22,
+      "geometryId": "nominal-seal:bmw-12141727220",
+      "interpretation": "Catalog A×B interpreted as nominal inside diameter × circular cross-section. This interpretation needs technical review for each BMW application.",
+      "dimensionConventionSource": "https://www.trelleborg.com/seals/-/media/tss-media-repository/tss_website/pdf-and-other-literature/catalogs/o_ring_gb_en.pdf",
+      "accuracy": {
+        "visual": "illustrative",
+        "dimensions": "illustrative",
+        "alignment": "missing",
+        "mechanical": "missing",
+        "removal": "missing"
+      },
+      "evidence": [
+        {
+          "positionId": "catalog-assembly-7eefc8a9f5ce1152d44032a3-0f9518a444eefcbaff2c05e4",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-525i-wagon_e34/engine/cylinder_head_attached_parts.html",
+          "recordSha256": "0f9518a444eefcbaff2c05e490fbc4ecfd6a49957400a2e232feb009d4eb1d59",
+          "number": "12141727220",
+          "expression": "18X2",
+          "dimensions": [
+            18,
+            2
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-a79006680958f2923a1498ff-b367957fdeb30ad1e91d71f4",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1994-bmw-530i-sedan_e34/engine/timing_case.html",
+          "recordSha256": "b367957fdeb30ad1e91d71f43f55a121cf879ca1e5860dc043622d31fc1de8e8",
+          "number": "12141727220",
+          "expression": "18X2",
+          "dimensions": [
+            18,
+            2
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-ac5e5bda0d581979206b05ab-0f9518a444eefcbaff2c05e4",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1991-bmw-525i-m50_engine_e34/engine/cylinder_head_attached_parts.html",
+          "recordSha256": "0f9518a444eefcbaff2c05e490fbc4ecfd6a49957400a2e232feb009d4eb1d59",
+          "number": "12141727220",
+          "expression": "18X2",
+          "dimensions": [
+            18,
+            2
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-c13e59162abd09465e122f2a-b367957fdeb30ad1e91d71f4",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-530i-wagon_e34/engine/timing_case.html",
+          "recordSha256": "b367957fdeb30ad1e91d71f43f55a121cf879ca1e5860dc043622d31fc1de8e8",
+          "number": "12141727220",
+          "expression": "18X2",
+          "dimensions": [
+            18,
+            2
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-e06bb240cfd184e1ee7a450e-0f9518a444eefcbaff2c05e4",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1994-bmw-525i-sedan_e34/engine/cylinder_head_attached_parts.html",
+          "recordSha256": "0f9518a444eefcbaff2c05e490fbc4ecfd6a49957400a2e232feb009d4eb1d59",
+          "number": "12141727220",
+          "expression": "18X2",
+          "dimensions": [
+            18,
+            2
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-e4374e552e3a201a475088c3-b367957fdeb30ad1e91d71f4",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/engine/timing_case.html",
+          "recordSha256": "b367957fdeb30ad1e91d71f43f55a121cf879ca1e5860dc043622d31fc1de8e8",
+          "number": "12141727220",
+          "expression": "18X2",
+          "dimensions": [
+            18,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "partId": "bmw-12141748398",
+      "number": "12141748398",
+      "name": "O-ring 17X3",
+      "insideDiameterMm": 17,
+      "crossSectionMm": 3,
+      "outerDiameterMm": 23,
+      "geometryId": "nominal-seal:bmw-12141748398",
+      "interpretation": "Catalog A×B interpreted as nominal inside diameter × circular cross-section. This interpretation needs technical review for each BMW application.",
+      "dimensionConventionSource": "https://www.trelleborg.com/seals/-/media/tss-media-repository/tss_website/pdf-and-other-literature/catalogs/o_ring_gb_en.pdf",
+      "accuracy": {
+        "visual": "illustrative",
+        "dimensions": "illustrative",
+        "alignment": "missing",
+        "mechanical": "missing",
+        "removal": "missing"
+      },
+      "evidence": [
+        {
+          "positionId": "catalog-assembly-82cc77ccc22e46a78426e1fc-5082ffb084b20bb31b4b0687",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1994-bmw-525i-sedan_e34/engine/cylinder_head_vanos.html",
+          "recordSha256": "5082ffb084b20bb31b4b068774dcc94c53ad846d909c06d80f3587c1ab19b9d2",
+          "number": "12141748398",
+          "expression": "17X3",
+          "dimensions": [
+            17,
+            3
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-aa9a247e0201849cacb20455-5082ffb084b20bb31b4b0687",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-525i-wagon_e34/engine/cylinder_head_vanos.html",
+          "recordSha256": "5082ffb084b20bb31b4b068774dcc94c53ad846d909c06d80f3587c1ab19b9d2",
+          "number": "12141748398",
+          "expression": "17X3",
+          "dimensions": [
+            17,
+            3
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-df9050fbaeb6c4faaa808de4-5082ffb084b20bb31b4b0687",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1991-bmw-525i-m50_engine_e34/engine/cylinder_head_vanos.html",
+          "recordSha256": "5082ffb084b20bb31b4b068774dcc94c53ad846d909c06d80f3587c1ab19b9d2",
+          "number": "12141748398",
+          "expression": "17X3",
+          "dimensions": [
+            17,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "partId": "bmw-12311718712",
+      "number": "12311718712",
+      "name": "O-ring 22X4",
+      "insideDiameterMm": 22,
+      "crossSectionMm": 4,
+      "outerDiameterMm": 30,
+      "geometryId": "nominal-seal:bmw-12311718712",
+      "interpretation": "Catalog A×B interpreted as nominal inside diameter × circular cross-section. This interpretation needs technical review for each BMW application.",
+      "dimensionConventionSource": "https://www.trelleborg.com/seals/-/media/tss-media-repository/tss_website/pdf-and-other-literature/catalogs/o_ring_gb_en.pdf",
+      "accuracy": {
+        "visual": "illustrative",
+        "dimensions": "illustrative",
+        "alignment": "missing",
+        "mechanical": "missing",
+        "removal": "missing"
+      },
+      "evidence": [
+        {
+          "positionId": "catalog-assembly-02e17fd2b7b0c82c2e107865-37b4df8c4dc04b68c59082a7",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/engine/engine_suspension_damper.html",
+          "recordSha256": "37b4df8c4dc04b68c59082a7a1a51e27ac7033865903217b3a0024960e9d8a8b",
+          "number": "12311718712",
+          "expression": "22X4",
+          "dimensions": [
+            22,
+            4
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-0b15e32aa03e2cd419b802e2-37b4df8c4dc04b68c59082a7",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-530i-wagon_e34/engine/engine_suspension_damper.html",
+          "recordSha256": "37b4df8c4dc04b68c59082a7a1a51e27ac7033865903217b3a0024960e9d8a8b",
+          "number": "12311718712",
+          "expression": "22X4",
+          "dimensions": [
+            22,
+            4
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-81c70a2d4e199b12a70d77cc-37b4df8c4dc04b68c59082a7",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1994-bmw-530i-sedan_e34/engine/engine_suspension_damper.html",
+          "recordSha256": "37b4df8c4dc04b68c59082a7a1a51e27ac7033865903217b3a0024960e9d8a8b",
+          "number": "12311718712",
+          "expression": "22X4",
+          "dimensions": [
+            22,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "partId": "bmw-13531720251",
+      "number": "13531720251",
+      "name": "O-ring 20X2,5",
+      "insideDiameterMm": 20,
+      "crossSectionMm": 2.5,
+      "outerDiameterMm": 25,
+      "geometryId": "nominal-seal:bmw-13531720251",
+      "interpretation": "Catalog A×B interpreted as nominal inside diameter × circular cross-section. This interpretation needs technical review for each BMW application.",
+      "dimensionConventionSource": "https://www.trelleborg.com/seals/-/media/tss-media-repository/tss_website/pdf-and-other-literature/catalogs/o_ring_gb_en.pdf",
+      "accuracy": {
+        "visual": "illustrative",
+        "dimensions": "illustrative",
+        "alignment": "missing",
+        "mechanical": "missing",
+        "removal": "missing"
+      },
+      "evidence": [
+        {
+          "positionId": "catalog-assembly-0c4bfbe6dbc0b1b7c33cec5d-b71bbfaad4dde1afe3c02f29",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-525i-wagon_e34/fuel_system/valves_pipes_of_fuel_injection_system.html",
+          "recordSha256": "b71bbfaad4dde1afe3c02f291762a3a5bc5002a823613f0c846409f0c4902c1e",
+          "number": "13531720251",
+          "expression": "20X2,5",
+          "dimensions": [
+            20,
+            2.5
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-25f036b2221dbd0121675bea-b71bbfaad4dde1afe3c02f29",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1994-bmw-525i-sedan_e34/fuel_system/valves_pipes_of_fuel_injection_system.html",
+          "recordSha256": "b71bbfaad4dde1afe3c02f291762a3a5bc5002a823613f0c846409f0c4902c1e",
+          "number": "13531720251",
+          "expression": "20X2,5",
+          "dimensions": [
+            20,
+            2.5
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-7839397fb6c2476c8e4c29ed-16125181f7db165a182356ad",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1994-bmw-530i-sedan_e34/fuel_system/valves_pipes_of_fuel_injection_system.html",
+          "recordSha256": "16125181f7db165a182356adbad454883c10a413463caae5c2f6d5a536eed2dc",
+          "number": "13531720251",
+          "expression": "20X2,5",
+          "dimensions": [
+            20,
+            2.5
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-7e175998b0d59065ee06fe40-16125181f7db165a182356ad",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-530i-wagon_e34/fuel_system/valves_pipes_of_fuel_injection_system.html",
+          "recordSha256": "16125181f7db165a182356adbad454883c10a413463caae5c2f6d5a536eed2dc",
+          "number": "13531720251",
+          "expression": "20X2,5",
+          "dimensions": [
+            20,
+            2.5
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-99438afeab19ef273b7fbc65-f8988950773f0d1631ad8e87",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1993-bmw-m5-sedan_e34/fuel_system/valves_pipes_of_fuel_injection_system.html",
+          "recordSha256": "f8988950773f0d1631ad8e87867f5a1b295dbbb5d74d3e23760a8bab0a1909e9",
+          "number": "13531720251",
+          "expression": "20X2,5",
+          "dimensions": [
+            20,
+            2.5
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-9afe90e7c08093bd4f084244-16125181f7db165a182356ad",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/fuel_system/valves_pipes_of_fuel_injection_system.html",
+          "recordSha256": "16125181f7db165a182356adbad454883c10a413463caae5c2f6d5a536eed2dc",
+          "number": "13531720251",
+          "expression": "20X2,5",
+          "dimensions": [
+            20,
+            2.5
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-a4101814e0f69290d7ea5931-b71bbfaad4dde1afe3c02f29",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1991-bmw-525i-m50_engine_e34/fuel_system/valves_pipes_of_fuel_injection_system.html",
+          "recordSha256": "b71bbfaad4dde1afe3c02f291762a3a5bc5002a823613f0c846409f0c4902c1e",
+          "number": "13531720251",
+          "expression": "20X2,5",
+          "dimensions": [
+            20,
+            2.5
+          ]
+        }
+      ]
+    },
+    {
+      "partId": "bmw-13531720252",
+      "number": "13531720252",
+      "name": "O-ring 5X1,5",
+      "insideDiameterMm": 5,
+      "crossSectionMm": 1.5,
+      "outerDiameterMm": 8,
+      "geometryId": "nominal-seal:bmw-13531720252",
+      "interpretation": "Catalog A×B interpreted as nominal inside diameter × circular cross-section. This interpretation needs technical review for each BMW application.",
+      "dimensionConventionSource": "https://www.trelleborg.com/seals/-/media/tss-media-repository/tss_website/pdf-and-other-literature/catalogs/o_ring_gb_en.pdf",
+      "accuracy": {
+        "visual": "illustrative",
+        "dimensions": "illustrative",
+        "alignment": "missing",
+        "mechanical": "missing",
+        "removal": "missing"
+      },
+      "evidence": [
+        {
+          "positionId": "catalog-assembly-0c4bfbe6dbc0b1b7c33cec5d-3b054fc505e1ac22604cc5a4",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-525i-wagon_e34/fuel_system/valves_pipes_of_fuel_injection_system.html",
+          "recordSha256": "3b054fc505e1ac22604cc5a41d8413d0fb1d10850663adb8231af55d0dab390b",
+          "number": "13531720252",
+          "expression": "5X1,5",
+          "dimensions": [
+            5,
+            1.5
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-25f036b2221dbd0121675bea-3b054fc505e1ac22604cc5a4",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1994-bmw-525i-sedan_e34/fuel_system/valves_pipes_of_fuel_injection_system.html",
+          "recordSha256": "3b054fc505e1ac22604cc5a41d8413d0fb1d10850663adb8231af55d0dab390b",
+          "number": "13531720252",
+          "expression": "5X1,5",
+          "dimensions": [
+            5,
+            1.5
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-7839397fb6c2476c8e4c29ed-0eb56785f2aacf4c423a8b38",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1994-bmw-530i-sedan_e34/fuel_system/valves_pipes_of_fuel_injection_system.html",
+          "recordSha256": "0eb56785f2aacf4c423a8b38bb5e3fbafe18d68a1b8cadd701b02183b7a37479",
+          "number": "13531720252",
+          "expression": "5X1,5",
+          "dimensions": [
+            5,
+            1.5
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-7e175998b0d59065ee06fe40-0eb56785f2aacf4c423a8b38",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-530i-wagon_e34/fuel_system/valves_pipes_of_fuel_injection_system.html",
+          "recordSha256": "0eb56785f2aacf4c423a8b38bb5e3fbafe18d68a1b8cadd701b02183b7a37479",
+          "number": "13531720252",
+          "expression": "5X1,5",
+          "dimensions": [
+            5,
+            1.5
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-99438afeab19ef273b7fbc65-73686ecf258f8bafa9007769",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1993-bmw-m5-sedan_e34/fuel_system/valves_pipes_of_fuel_injection_system.html",
+          "recordSha256": "73686ecf258f8bafa90077697089199389bebc34ea7f766bfa20aa79b4b3bc31",
+          "number": "13531720252",
+          "expression": "5X1,5",
+          "dimensions": [
+            5,
+            1.5
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-9afe90e7c08093bd4f084244-0eb56785f2aacf4c423a8b38",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/fuel_system/valves_pipes_of_fuel_injection_system.html",
+          "recordSha256": "0eb56785f2aacf4c423a8b38bb5e3fbafe18d68a1b8cadd701b02183b7a37479",
+          "number": "13531720252",
+          "expression": "5X1,5",
+          "dimensions": [
+            5,
+            1.5
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-a4101814e0f69290d7ea5931-3b054fc505e1ac22604cc5a4",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1991-bmw-525i-m50_engine_e34/fuel_system/valves_pipes_of_fuel_injection_system.html",
+          "recordSha256": "3b054fc505e1ac22604cc5a41d8413d0fb1d10850663adb8231af55d0dab390b",
+          "number": "13531720252",
+          "expression": "5X1,5",
+          "dimensions": [
+            5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "partId": "bmw-13641730767",
+      "number": "13641730767",
+      "name": "O-ring 7,52X3,53",
+      "insideDiameterMm": 7.52,
+      "crossSectionMm": 3.53,
+      "outerDiameterMm": 14.579999999999998,
+      "geometryId": "nominal-seal:bmw-13641730767",
+      "interpretation": "Catalog A×B interpreted as nominal inside diameter × circular cross-section. This interpretation needs technical review for each BMW application.",
+      "dimensionConventionSource": "https://www.trelleborg.com/seals/-/media/tss-media-repository/tss_website/pdf-and-other-literature/catalogs/o_ring_gb_en.pdf",
+      "accuracy": {
+        "visual": "illustrative",
+        "dimensions": "illustrative",
+        "alignment": "missing",
+        "mechanical": "missing",
+        "removal": "missing"
+      },
+      "evidence": [
+        {
+          "positionId": "catalog-assembly-0c4bfbe6dbc0b1b7c33cec5d-b70f49e44aeb1c158777b341",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-525i-wagon_e34/fuel_system/valves_pipes_of_fuel_injection_system.html",
+          "recordSha256": "b70f49e44aeb1c158777b34180ff3553076211df995a0d5d3502f6bac5d793fb",
+          "number": "13641730767",
+          "expression": "7,52X3,53",
+          "dimensions": [
+            7.52,
+            3.53
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-25f036b2221dbd0121675bea-b70f49e44aeb1c158777b341",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1994-bmw-525i-sedan_e34/fuel_system/valves_pipes_of_fuel_injection_system.html",
+          "recordSha256": "b70f49e44aeb1c158777b34180ff3553076211df995a0d5d3502f6bac5d793fb",
+          "number": "13641730767",
+          "expression": "7,52X3,53",
+          "dimensions": [
+            7.52,
+            3.53
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-7839397fb6c2476c8e4c29ed-9fd53f03acfb4ff0fa01abf0",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1994-bmw-530i-sedan_e34/fuel_system/valves_pipes_of_fuel_injection_system.html",
+          "recordSha256": "9fd53f03acfb4ff0fa01abf0e3cb41bd5b88843d3c6f2b3d7d897b063d7fec0c",
+          "number": "13641730767",
+          "expression": "7,52X3,53",
+          "dimensions": [
+            7.52,
+            3.53
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-7e175998b0d59065ee06fe40-9fd53f03acfb4ff0fa01abf0",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-530i-wagon_e34/fuel_system/valves_pipes_of_fuel_injection_system.html",
+          "recordSha256": "9fd53f03acfb4ff0fa01abf0e3cb41bd5b88843d3c6f2b3d7d897b063d7fec0c",
+          "number": "13641730767",
+          "expression": "7,52X3,53",
+          "dimensions": [
+            7.52,
+            3.53
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-99438afeab19ef273b7fbc65-b70f49e44aeb1c158777b341",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1993-bmw-m5-sedan_e34/fuel_system/valves_pipes_of_fuel_injection_system.html",
+          "recordSha256": "b70f49e44aeb1c158777b34180ff3553076211df995a0d5d3502f6bac5d793fb",
+          "number": "13641730767",
+          "expression": "7,52X3,53",
+          "dimensions": [
+            7.52,
+            3.53
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-9afe90e7c08093bd4f084244-9fd53f03acfb4ff0fa01abf0",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/fuel_system/valves_pipes_of_fuel_injection_system.html",
+          "recordSha256": "9fd53f03acfb4ff0fa01abf0e3cb41bd5b88843d3c6f2b3d7d897b063d7fec0c",
+          "number": "13641730767",
+          "expression": "7,52X3,53",
+          "dimensions": [
+            7.52,
+            3.53
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-a4101814e0f69290d7ea5931-b70f49e44aeb1c158777b341",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1991-bmw-525i-m50_engine_e34/fuel_system/valves_pipes_of_fuel_injection_system.html",
+          "recordSha256": "b70f49e44aeb1c158777b34180ff3553076211df995a0d5d3502f6bac5d793fb",
+          "number": "13641730767",
+          "expression": "7,52X3,53",
+          "dimensions": [
+            7.52,
+            3.53
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-e1f99007a4d6c79ead0a5363-b70f49e44aeb1c158777b341",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1993-bmw-535i-sedan_e34/fuel_system/valves_pipes_of_fuel_injection_system.html",
+          "recordSha256": "b70f49e44aeb1c158777b34180ff3553076211df995a0d5d3502f6bac5d793fb",
+          "number": "13641730767",
+          "expression": "7,52X3,53",
+          "dimensions": [
+            7.52,
+            3.53
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-ff63f4f3d25197732aaf824b-b70f49e44aeb1c158777b341",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1991-bmw-525i-m20_engine_e34/fuel_system/valves_pipes_of_fuel_injection_system.html",
+          "recordSha256": "b70f49e44aeb1c158777b34180ff3553076211df995a0d5d3502f6bac5d793fb",
+          "number": "13641730767",
+          "expression": "7,52X3,53",
+          "dimensions": [
+            7.52,
+            3.53
+          ]
+        }
+      ]
+    },
+    {
+      "partId": "bmw-16141179153",
+      "number": "16141179153",
+      "name": "O-ring 7X1,5",
+      "insideDiameterMm": 7,
+      "crossSectionMm": 1.5,
+      "outerDiameterMm": 10,
+      "geometryId": "nominal-seal:bmw-16141179153",
+      "interpretation": "Catalog A×B interpreted as nominal inside diameter × circular cross-section. This interpretation needs technical review for each BMW application.",
+      "dimensionConventionSource": "https://www.trelleborg.com/seals/-/media/tss-media-repository/tss_website/pdf-and-other-literature/catalogs/o_ring_gb_en.pdf",
+      "accuracy": {
+        "visual": "illustrative",
+        "dimensions": "illustrative",
+        "alignment": "missing",
+        "mechanical": "missing",
+        "removal": "missing"
+      },
+      "evidence": [
+        {
+          "positionId": "catalog-assembly-12e6d193c3c3ee6c749a060b-c3b91315de53c0bac4910e34",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1994-bmw-525i-sedan_e34/fuel_system/sending_unit_assy_metal_tank.html",
+          "recordSha256": "c3b91315de53c0bac4910e34477932c9ba0a3c213c00a54125b1980e1df42037",
+          "number": "16141179153",
+          "expression": "7X1,5",
+          "dimensions": [
+            7,
+            1.5
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-491788a2c79c092961cbed8e-c3b91315de53c0bac4910e34",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/fuel_system/sending_unit_assy_metal_tank.html",
+          "recordSha256": "c3b91315de53c0bac4910e34477932c9ba0a3c213c00a54125b1980e1df42037",
+          "number": "16141179153",
+          "expression": "7X1,5",
+          "dimensions": [
+            7,
+            1.5
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-64c9349713444aa7e122282f-c3b91315de53c0bac4910e34",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1993-bmw-535i-sedan_e34/fuel_system/sending_unit_assy_metal_tank.html",
+          "recordSha256": "c3b91315de53c0bac4910e34477932c9ba0a3c213c00a54125b1980e1df42037",
+          "number": "16141179153",
+          "expression": "7X1,5",
+          "dimensions": [
+            7,
+            1.5
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-794ea1d5d7c3e239fba8b1fa-c3b91315de53c0bac4910e34",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1991-bmw-525i-m50_engine_e34/fuel_system/sending_unit_assy_metal_tank.html",
+          "recordSha256": "c3b91315de53c0bac4910e34477932c9ba0a3c213c00a54125b1980e1df42037",
+          "number": "16141179153",
+          "expression": "7X1,5",
+          "dimensions": [
+            7,
+            1.5
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-965410dcc0b9fa3b84704655-c3b91315de53c0bac4910e34",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-525i-wagon_e34/fuel_system/sending_unit_assy_metal_tank.html",
+          "recordSha256": "c3b91315de53c0bac4910e34477932c9ba0a3c213c00a54125b1980e1df42037",
+          "number": "16141179153",
+          "expression": "7X1,5",
+          "dimensions": [
+            7,
+            1.5
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-c0b279e7a10896943936a984-c3b91315de53c0bac4910e34",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1993-bmw-m5-sedan_e34/fuel_system/sending_unit_assy_metal_tank.html",
+          "recordSha256": "c3b91315de53c0bac4910e34477932c9ba0a3c213c00a54125b1980e1df42037",
+          "number": "16141179153",
+          "expression": "7X1,5",
+          "dimensions": [
+            7,
+            1.5
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-cdaf31e6be7ee91d26407c70-c3b91315de53c0bac4910e34",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1991-bmw-525i-m20_engine_e34/fuel_system/sending_unit_assy_metal_tank.html",
+          "recordSha256": "c3b91315de53c0bac4910e34477932c9ba0a3c213c00a54125b1980e1df42037",
+          "number": "16141179153",
+          "expression": "7X1,5",
+          "dimensions": [
+            7,
+            1.5
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-e7855d7db2831b9c1d92e6df-c3b91315de53c0bac4910e34",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-530i-wagon_e34/fuel_system/sending_unit_assy_metal_tank.html",
+          "recordSha256": "c3b91315de53c0bac4910e34477932c9ba0a3c213c00a54125b1980e1df42037",
+          "number": "16141179153",
+          "expression": "7X1,5",
+          "dimensions": [
+            7,
+            1.5
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-eeddd8d4623456f43d5bebd7-c3b91315de53c0bac4910e34",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1994-bmw-530i-sedan_e34/fuel_system/sending_unit_assy_metal_tank.html",
+          "recordSha256": "c3b91315de53c0bac4910e34477932c9ba0a3c213c00a54125b1980e1df42037",
+          "number": "16141179153",
+          "expression": "7X1,5",
+          "dimensions": [
+            7,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "partId": "bmw-17211723942",
+      "number": "17211723942",
+      "name": "O-ring 33,3X2,4",
+      "insideDiameterMm": 33.3,
+      "crossSectionMm": 2.4,
+      "outerDiameterMm": 38.099999999999994,
+      "geometryId": "nominal-seal:bmw-17211723942",
+      "interpretation": "Catalog A×B interpreted as nominal inside diameter × circular cross-section. This interpretation needs technical review for each BMW application.",
+      "dimensionConventionSource": "https://www.trelleborg.com/seals/-/media/tss-media-repository/tss_website/pdf-and-other-literature/catalogs/o_ring_gb_en.pdf",
+      "accuracy": {
+        "visual": "illustrative",
+        "dimensions": "illustrative",
+        "alignment": "missing",
+        "mechanical": "missing",
+        "removal": "missing"
+      },
+      "evidence": [
+        {
+          "positionId": "catalog-assembly-4a7b6b99db2d317eae171147-17173a22b541f75e483dbe71",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/cooling_exhaust_system/transmission_oil_cooling.html",
+          "recordSha256": "17173a22b541f75e483dbe715964a0c99cd4e67dbece4f6c40b6c50b802c0a38",
+          "number": "17211723942",
+          "expression": "33,3X2,4",
+          "dimensions": [
+            33.3,
+            2.4
+          ]
+        }
+      ]
+    },
+    {
+      "partId": "bmw-17211723943",
+      "number": "17211723943",
+      "name": "O-ring 13,9X1,78",
+      "insideDiameterMm": 13.9,
+      "crossSectionMm": 1.78,
+      "outerDiameterMm": 17.46,
+      "geometryId": "nominal-seal:bmw-17211723943",
+      "interpretation": "Catalog A×B interpreted as nominal inside diameter × circular cross-section. This interpretation needs technical review for each BMW application.",
+      "dimensionConventionSource": "https://www.trelleborg.com/seals/-/media/tss-media-repository/tss_website/pdf-and-other-literature/catalogs/o_ring_gb_en.pdf",
+      "accuracy": {
+        "visual": "illustrative",
+        "dimensions": "illustrative",
+        "alignment": "missing",
+        "mechanical": "missing",
+        "removal": "missing"
+      },
+      "evidence": [
+        {
+          "positionId": "catalog-assembly-4a7b6b99db2d317eae171147-82b23ec8ad2256a1522b120b",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/cooling_exhaust_system/transmission_oil_cooling.html",
+          "recordSha256": "82b23ec8ad2256a1522b120b73d124967cc350a84e0d0bd39b09e835a7e8e9d3",
+          "number": "17211723943",
+          "expression": "13,9X1,78",
+          "dimensions": [
+            13.9,
+            1.78
+          ]
+        }
+      ]
+    },
+    {
+      "partId": "bmw-17222245358",
+      "number": "17222245358",
+      "name": "O-ring 13,4X1,78",
+      "insideDiameterMm": 13.4,
+      "crossSectionMm": 1.78,
+      "outerDiameterMm": 16.96,
+      "geometryId": "nominal-seal:bmw-17222245358",
+      "interpretation": "Catalog A×B interpreted as nominal inside diameter × circular cross-section. This interpretation needs technical review for each BMW application.",
+      "dimensionConventionSource": "https://www.trelleborg.com/seals/-/media/tss-media-repository/tss_website/pdf-and-other-literature/catalogs/o_ring_gb_en.pdf",
+      "accuracy": {
+        "visual": "illustrative",
+        "dimensions": "illustrative",
+        "alignment": "missing",
+        "mechanical": "missing",
+        "removal": "missing"
+      },
+      "evidence": [
+        {
+          "positionId": "catalog-assembly-44bd12808725c9d25d33475f-b5332afb0c7a46621964e997",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1993-bmw-535i-sedan_e34/cooling_exhaust_system/engine_oil_cooling.html",
+          "recordSha256": "b5332afb0c7a46621964e9977e27da49664827a26dd5e63fbbe40e04586b00bf",
+          "number": "17222245358",
+          "expression": "13,4X1,78",
+          "dimensions": [
+            13.4,
+            1.78
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-fe04e9a0335c71f3198f0558-28289cdcf528083906734fde",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1993-bmw-m5-sedan_e34/cooling_exhaust_system/engine_oil_cooling.html",
+          "recordSha256": "28289cdcf528083906734fde9b943962564005a07fd3bbe4a55f2843a2d0fcc3",
+          "number": "17222245358",
+          "expression": "13,4X1,78",
+          "dimensions": [
+            13.4,
+            1.78
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-fe04e9a0335c71f3198f0558-5479e8f62e2549fda1ec6338",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1993-bmw-m5-sedan_e34/cooling_exhaust_system/engine_oil_cooling.html",
+          "recordSha256": "5479e8f62e2549fda1ec6338028afac261645e0b3cf346bc141057ee9fb995a0",
+          "number": "17222245358",
+          "expression": "13,4X1,78",
+          "dimensions": [
+            13.4,
+            1.78
+          ]
+        }
+      ]
+    },
+    {
+      "partId": "bmw-23211228152",
+      "number": "23211228152",
+      "name": "O-ring 44X1,5",
+      "insideDiameterMm": 44,
+      "crossSectionMm": 1.5,
+      "outerDiameterMm": 47,
+      "geometryId": "nominal-seal:bmw-23211228152",
+      "interpretation": "Catalog A×B interpreted as nominal inside diameter × circular cross-section. This interpretation needs technical review for each BMW application.",
+      "dimensionConventionSource": "https://www.trelleborg.com/seals/-/media/tss-media-repository/tss_website/pdf-and-other-literature/catalogs/o_ring_gb_en.pdf",
+      "accuracy": {
+        "visual": "illustrative",
+        "dimensions": "illustrative",
+        "alignment": "missing",
+        "mechanical": "missing",
+        "removal": "missing"
+      },
+      "evidence": [
+        {
+          "positionId": "catalog-assembly-1e203520fa48f7346d8f248e-065e51ccfa13268eab73640b",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1991-bmw-525i-m20_engine_e34/manual_transmission/gear_wheel_set_single_part_getrag_260_5_50.html",
+          "recordSha256": "065e51ccfa13268eab73640bbdf33aced984bc52f13a585899b38228aa745ca2",
+          "number": "23211228152",
+          "expression": "44X1,5",
+          "dimensions": [
+            44,
+            1.5
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-342960d383128fc86b06b337-d42c9cd438cd4a97e6a9f4b9",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1993-bmw-535i-sedan_e34/manual_transmission/gear_wheel_set_single_parts_getrag_260_6.html",
+          "recordSha256": "d42c9cd438cd4a97e6a9f4b9a83b0181b634d1b12712485d368f6ae7196b2925",
+          "number": "23211228152",
+          "expression": "44X1,5",
+          "dimensions": [
+            44,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "partId": "bmw-24201217321",
+      "number": "24201217321",
+      "name": "O-ring 128X3",
+      "insideDiameterMm": 128,
+      "crossSectionMm": 3,
+      "outerDiameterMm": 134,
+      "geometryId": "nominal-seal:bmw-24201217321",
+      "interpretation": "Catalog A×B interpreted as nominal inside diameter × circular cross-section. This interpretation needs technical review for each BMW application.",
+      "dimensionConventionSource": "https://www.trelleborg.com/seals/-/media/tss-media-repository/tss_website/pdf-and-other-literature/catalogs/o_ring_gb_en.pdf",
+      "accuracy": {
+        "visual": "illustrative",
+        "dimensions": "illustrative",
+        "alignment": "missing",
+        "mechanical": "missing",
+        "removal": "missing"
+      },
+      "evidence": [
+        {
+          "positionId": "catalog-assembly-7aa179a8d9250c0a103613fc-a63650a9551d0939c54f92c0",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1994-bmw-530i-sedan_e34/automatic_transmission/output_a5s310z.html",
+          "recordSha256": "a63650a9551d0939c54f92c0bcbe7507a7eb07e6359ce17deaa0e1e8d39ed281",
+          "number": "24201217321",
+          "expression": "128X3",
+          "dimensions": [
+            128,
+            3
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-dd9f295ecae511c667214efc-a63650a9551d0939c54f92c0",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-530i-wagon_e34/automatic_transmission/output_a5s310z.html",
+          "recordSha256": "a63650a9551d0939c54f92c0bcbe7507a7eb07e6359ce17deaa0e1e8d39ed281",
+          "number": "24201217321",
+          "expression": "128X3",
+          "dimensions": [
+            128,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "partId": "bmw-24211217132",
+      "number": "24211217132",
+      "name": "O-ring 25,12X1,78",
+      "insideDiameterMm": 25.12,
+      "crossSectionMm": 1.78,
+      "outerDiameterMm": 28.68,
+      "geometryId": "nominal-seal:bmw-24211217132",
+      "interpretation": "Catalog A×B interpreted as nominal inside diameter × circular cross-section. This interpretation needs technical review for each BMW application.",
+      "dimensionConventionSource": "https://www.trelleborg.com/seals/-/media/tss-media-repository/tss_website/pdf-and-other-literature/catalogs/o_ring_gb_en.pdf",
+      "accuracy": {
+        "visual": "illustrative",
+        "dimensions": "illustrative",
+        "alignment": "missing",
+        "mechanical": "missing",
+        "removal": "missing"
+      },
+      "evidence": [
+        {
+          "positionId": "catalog-assembly-339c9077fff35ac3f9b870a6-2caf6192cd0e2f1787af81ba",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1991-bmw-525i-m20_engine_e34/automatic_transmission/planet_wheel_sets_zf_4hp22_24.html",
+          "recordSha256": "2caf6192cd0e2f1787af81baa77563aab7781e9c1926ee13122596547fc3cfa5",
+          "number": "24211217132",
+          "expression": "25,12X1,78",
+          "dimensions": [
+            25.12,
+            1.78
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-87bebbf2c703b1f60d89b3cf-2caf6192cd0e2f1787af81ba",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1993-bmw-535i-sedan_e34/automatic_transmission/planet_wheel_sets_zf_4hp22_24.html",
+          "recordSha256": "2caf6192cd0e2f1787af81baa77563aab7781e9c1926ee13122596547fc3cfa5",
+          "number": "24211217132",
+          "expression": "25,12X1,78",
+          "dimensions": [
+            25.12,
+            1.78
+          ]
+        }
+      ]
+    },
+    {
+      "partId": "bmw-24311217133",
+      "number": "24311217133",
+      "name": "O-ring 124,5X3",
+      "insideDiameterMm": 124.5,
+      "crossSectionMm": 3,
+      "outerDiameterMm": 130.5,
+      "geometryId": "nominal-seal:bmw-24311217133",
+      "interpretation": "Catalog A×B interpreted as nominal inside diameter × circular cross-section. This interpretation needs technical review for each BMW application.",
+      "dimensionConventionSource": "https://www.trelleborg.com/seals/-/media/tss-media-repository/tss_website/pdf-and-other-literature/catalogs/o_ring_gb_en.pdf",
+      "accuracy": {
+        "visual": "illustrative",
+        "dimensions": "illustrative",
+        "alignment": "missing",
+        "mechanical": "missing",
+        "removal": "missing"
+      },
+      "evidence": [
+        {
+          "positionId": "catalog-assembly-2ad3a75127acba9212df3825-23de84def158431ebf5a6dbb",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1991-bmw-525i-m20_engine_e34/automatic_transmission/housing_parts_lubrication_system_zf_4hp22_24.html",
+          "recordSha256": "23de84def158431ebf5a6dbb38886a6d70582c8b7345d406f809e2f5ad37f73d",
+          "number": "24311217133",
+          "expression": "124,5X3",
+          "dimensions": [
+            124.5,
+            3
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-c12e9cde6232b932af5da00d-23de84def158431ebf5a6dbb",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1993-bmw-535i-sedan_e34/automatic_transmission/housing_parts_lubrication_system_zf_4hp22_24.html",
+          "recordSha256": "23de84def158431ebf5a6dbb38886a6d70582c8b7345d406f809e2f5ad37f73d",
+          "number": "24311217133",
+          "expression": "124,5X3",
+          "dimensions": [
+            124.5,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "partId": "bmw-24311219166",
+      "number": "24311219166",
+      "name": "O-ring 210X3",
+      "insideDiameterMm": 210,
+      "crossSectionMm": 3,
+      "outerDiameterMm": 216,
+      "geometryId": "nominal-seal:bmw-24311219166",
+      "interpretation": "Catalog A×B interpreted as nominal inside diameter × circular cross-section. This interpretation needs technical review for each BMW application.",
+      "dimensionConventionSource": "https://www.trelleborg.com/seals/-/media/tss-media-repository/tss_website/pdf-and-other-literature/catalogs/o_ring_gb_en.pdf",
+      "accuracy": {
+        "visual": "illustrative",
+        "dimensions": "illustrative",
+        "alignment": "missing",
+        "mechanical": "missing",
+        "removal": "missing"
+      },
+      "evidence": [
+        {
+          "positionId": "catalog-assembly-3f9179d8c665063f6fdebdfc-2c50d54a93a1a3d939f2ee99",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1994-bmw-530i-sedan_e34/automatic_transmission/lubrication_system_brake_clutch_c1_a5s310z.html",
+          "recordSha256": "2c50d54a93a1a3d939f2ee997d9b88e521276ad3d1e60d9cf15c4efc8e8f91ec",
+          "number": "24311219166",
+          "expression": "210X3",
+          "dimensions": [
+            210,
+            3
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-b4e64830f344ae8d2044868a-2c50d54a93a1a3d939f2ee99",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-530i-wagon_e34/automatic_transmission/lubrication_system_brake_clutch_c1_a5s310z.html",
+          "recordSha256": "2c50d54a93a1a3d939f2ee997d9b88e521276ad3d1e60d9cf15c4efc8e8f91ec",
+          "number": "24311219166",
+          "expression": "210X3",
+          "dimensions": [
+            210,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "partId": "bmw-24311421583",
+      "number": "24311421583",
+      "name": "O-ring 249X3",
+      "insideDiameterMm": 249,
+      "crossSectionMm": 3,
+      "outerDiameterMm": 255,
+      "geometryId": "nominal-seal:bmw-24311421583",
+      "interpretation": "Catalog A×B interpreted as nominal inside diameter × circular cross-section. This interpretation needs technical review for each BMW application.",
+      "dimensionConventionSource": "https://www.trelleborg.com/seals/-/media/tss-media-repository/tss_website/pdf-and-other-literature/catalogs/o_ring_gb_en.pdf",
+      "accuracy": {
+        "visual": "illustrative",
+        "dimensions": "illustrative",
+        "alignment": "missing",
+        "mechanical": "missing",
+        "removal": "missing"
+      },
+      "evidence": [
+        {
+          "positionId": "catalog-assembly-8e3e05dccdd76b9368196cb1-974fcf3312308dd6f79945a7",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/automatic_transmission/lubrication_system_a5s560z.html",
+          "recordSha256": "974fcf3312308dd6f79945a7c170f340355edb2671581ecee77166fd02a6561e",
+          "number": "24311421583",
+          "expression": "249X3",
+          "dimensions": [
+            249,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "partId": "bmw-34511159421",
+      "number": "34511159421",
+      "name": "O-ring 40X3",
+      "insideDiameterMm": 40,
+      "crossSectionMm": 3,
+      "outerDiameterMm": 46,
+      "geometryId": "nominal-seal:bmw-34511159421",
+      "interpretation": "Catalog A×B interpreted as nominal inside diameter × circular cross-section. This interpretation needs technical review for each BMW application.",
+      "dimensionConventionSource": "https://www.trelleborg.com/seals/-/media/tss-media-repository/tss_website/pdf-and-other-literature/catalogs/o_ring_gb_en.pdf",
+      "accuracy": {
+        "visual": "illustrative",
+        "dimensions": "illustrative",
+        "alignment": "missing",
+        "mechanical": "missing",
+        "removal": "missing"
+      },
+      "evidence": [
+        {
+          "positionId": "catalog-assembly-14a6322a85f43fd3d07af349-6c809ca5cd2b40cce9e55742",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1994-bmw-530i-sedan_e34/steering_drive_shaft/oil_pipes_asc_t.html",
+          "recordSha256": "6c809ca5cd2b40cce9e5574213bb7d045b8e7323587e9b9c505e2bed2ba4bf16",
+          "number": "34511159421",
+          "expression": "40X3",
+          "dimensions": [
+            40,
+            3
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-9ee771db1f30fc9ce46d77ad-6c809ca5cd2b40cce9e55742",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-540i-sedan_e34/steering_drive_shaft/oil_pipes_asc_t.html",
+          "recordSha256": "6c809ca5cd2b40cce9e5574213bb7d045b8e7323587e9b9c505e2bed2ba4bf16",
+          "number": "34511159421",
+          "expression": "40X3",
+          "dimensions": [
+            40,
+            3
+          ]
+        },
+        {
+          "positionId": "catalog-assembly-b4bc45866909ad43d0116d9a-6c809ca5cd2b40cce9e55742",
+          "sourceUrl": "https://www.bmwpartsdeal.com/parts-list/1995-bmw-530i-wagon_e34/steering_drive_shaft/oil_pipes_asc_t.html",
+          "recordSha256": "6c809ca5cd2b40cce9e5574213bb7d045b8e7323587e9b9c505e2bed2ba4bf16",
+          "number": "34511159421",
+          "expression": "40X3",
+          "dimensions": [
+            40,
+            3
+          ]
+        }
+      ]
+    }
+  ],
+  "rejected": []
+}

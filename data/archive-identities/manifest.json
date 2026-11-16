@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "source_url": "https://huggingface.co/datasets/CraigFf/bmweb-etk/resolve/16a2ec76850fd70d24a6376aadfe179f310008b9/E34.etk",
+  "source_revision": "16a2ec76850fd70d24a6376aadfe179f310008b9",
+  "archive_sha256": "ef3a8ea9b7072d1c7a15ef9e08b4dba30bb4a7894ebd36a0c3db34be64917228",
+  "facts_sha256": "dde757c06d0f1da7348490d0dccda5c4c02919da5531600682a4059d8c10ed21",
+  "identities": 24236,
+  "accepted_source_rows": 105331,
+  "rejected": [
+    {
+      "diagram": "31_0430",
+      "reference": null,
+      "reason": "No explicit four-digit prefix and seven-digit suffix"
+    },
+    {
+      "diagram": "33_0859",
+      "reference": null,
+      "reason": "No explicit four-digit prefix and seven-digit suffix"
+    }
+  ],
+  "scope": "Factual identity index only. Source vehicle associations and omitted option tables do not establish physical fitment. Ordering conditions and archive illustrations are not imported by this job.",
+  "artwork_imported": false,
+  "fitment_imported": false
+}

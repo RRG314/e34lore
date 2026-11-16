@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "file": "e34-context-6d5a38bb69a703fc6ba90c73.jsonl.gz",
+  "compressed_sha256": "dd7eb5f19150e524f64b0250e668ff91a83b65793dbb8f73cb10b29411294d9b",
+  "manifest": {
+    "schema_version": 1,
+    "source": "Public source ordering facts",
+    "context": {
+      "platform": "E34",
+      "model": "530i",
+      "modelYear": 1994,
+      "body": "Sedan",
+      "engine": null,
+      "market": null,
+      "contextEvidence": "Observed model-root link plus index H1; marketing prose excluded."
+    },
+    "inventory_sha256": "10b8c47b3128c25d408c63d80027ef9d6de61432dcf9c4c26fc28a07ad184958",
+    "expected_pages": 389,
+    "selected_pages": 389,
+    "started_at": "2026-11-05T21:09:32.482555+00:00",
+    "successful_pages": 385,
+    "rejected_records": 0,
+    "parts": 7918,
+    "drawings": 447,
+    "errors": [
+      {
+        "url": "https://www.bmwpartsdeal.com/parts-list/1994-bmw-530i-sedan_e34/bodywork/locking_system_door.html",
+        "error": "No cached source snapshot"
+      },
+      {
+        "url": "https://www.bmwpartsdeal.com/parts-list/1994-bmw-530i-sedan_e34/fuel_system/fuel_supply_single_filter.html",
+        "error": "No cached source snapshot"
+      },
+      {
+        "url": "https://www.bmwpartsdeal.com/parts-list/1994-bmw-530i-sedan_e34/retrofitting_conversion_accessories/trailer_transport_module.html",
+        "error": "No cached source snapshot"
+      },
+      {
+        "url": "https://www.bmwpartsdeal.com/parts-list/1994-bmw-530i-sedan_e34/vehicle_trim/door_window_lifting_mechanism.html",
+        "error": "No cached source snapshot"
+      }
+    ],
+    "scope": "Model-year/body source selection; unselected options and source restrictions retained. No universal fitment or complete-E34 claim.",
+    "completed_at": "2026-11-05T21:09:35.605735+00:00",
+    "status": "partial",
+    "facts_sha256": "1a19642905efe6ac56d14f7cc20e995fc86cbc8790b2d9713f01e3f94c6ac079"
+  }
+}
