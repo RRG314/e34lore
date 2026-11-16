@@ -3,7 +3,13 @@
 import{readFile,writeFile,mkdir}from'node:fs/promises';
 import{createHash}from'node:crypto';
 import{createClient}from'@supabase/supabase-js';
-const config=JSON.parse(await readFile('src/data/backend.json','utf8'));
+const config = {
+  url: process.env.NEXT_PUBLIC_SUPABASE_URL,
+  publishableKey: process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY,
+};
+if (!config.url || !config.publishableKey) {
+  throw new Error("Set NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY.");
+}
 const db=createClient(config.url,config.publishableKey,{auth:{persistSession:false,autoRefreshToken:false}});
 const parts=[];for(let from=0;;from+=1000){
  const result=await db.from('parts').select('id,number_normalized').order('id').range(from,from+999).abortSignal(AbortSignal.timeout(15000));

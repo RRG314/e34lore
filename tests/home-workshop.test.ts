@@ -1,3 +1,4 @@
+import { releasePublic, hasReleasePack } from './release-content';
 import { describe, it, expect, vi, afterEach } from 'vitest';
 import fs from 'node:fs';
 import { createHash } from 'node:crypto';
@@ -17,17 +18,17 @@ describe('shared homepage workshop reference', () => {
         expect(Buffer.from(bytes)).toEqual(payload);
         await expect(boundedModelBytes(new Response(packed), payload.length - 1)).rejects.toThrow('too large');
     });
-    it('loads the exact same pinned model as the full reader', async () => { const bytes = fs.readFileSync('public' + release.manifestUrl); expect(createHash('sha256').update(bytes).digest('hex')).toBe(release.sha256); vi.stubGlobal('fetch', vi.fn(async () => new Response(bytes))); const m = await loadReference(new AbortController().signal); expect(m.revision).toBe(release.revision); expect(m.nodes.filter(n => n.assetId)).toHaveLength(release.renderableCount); });
-    it('rejects changed manifest bytes even when the claimed ID/revision stays the same', async () => { const bytes = fs.readFileSync('public' + release.manifestUrl, 'utf8') + ' '; vi.stubGlobal('fetch', vi.fn(async () => new Response(bytes))); await expect(loadReference(new AbortController().signal)).rejects.toThrow('version'); });
+    it.skipIf(!hasReleasePack)('loads the exact same pinned model as the full reader', async () => { const bytes = fs.readFileSync(releasePublic + release.manifestUrl); expect(createHash('sha256').update(bytes).digest('hex')).toBe(release.sha256); vi.stubGlobal('fetch', vi.fn(async () => new Response(bytes))); const m = await loadReference(new AbortController().signal); expect(m.revision).toBe(release.revision); expect(m.nodes.filter(n => n.assetId)).toHaveLength(release.renderableCount); });
+    it.skipIf(!hasReleasePack)('rejects changed manifest bytes even when the claimed ID/revision stays the same', async () => { const bytes = fs.readFileSync(releasePublic + release.manifestUrl, 'utf8') + ' '; vi.stubGlobal('fetch', vi.fn(async () => new Response(bytes))); await expect(loadReference(new AbortController().signal)).rejects.toThrow('version'); });
     it('retains real licensed image sources for the expanded reel', () => { expect(photos.length).toBeGreaterThanOrEqual(6); expect(new Set(photos.map(p => p.id)).size).toBe(photos.length); for (const p of photos) {
-        expect(fs.statSync('public' + p.localPath).size).toBeGreaterThan(10000);
+        expect(fs.statSync(releasePublic + p.localPath).size).toBeGreaterThan(10000);
         expect(p.filePageUrl).toMatch(/^https:\/\/commons.wikimedia.org\/wiki\/File/);
         expect(p.licenseUrl).toMatch(/^https:\/\/creativecommons.org\//);
         expect(p.creator).toBeTruthy();
     } });
     it('provides a canonical phone installation QR and valid grille app icons', () => { expect(fs.readFileSync('public/assets/e34-lore-install-qr.svg', 'utf8')).toContain('<svg'); const manifest: {shortcuts:{url:string}[];icons:{src:string;sizes:string}[]} = JSON.parse(fs.readFileSync('public/manifest.webmanifest', 'utf8')); expect(manifest.shortcuts.map((s) => s.url)).toContain('/workshop'); expect(manifest.shortcuts.map((s) => s.url)).toContain('/quick-reference'); for (const i of manifest.icons) {
         expect(i.src).toContain('grille');
-        const b = fs.readFileSync('public' + i.src);
+        const b = fs.readFileSync(releasePublic + i.src);
         expect(b.subarray(0, 8).toString('hex')).toBe('89504e470d0a1a0a');
         expect(b.readUInt32BE(16)).toBe(Number(i.sizes.split('x')[0]));
     } });
@@ -38,7 +39,7 @@ describe('shared homepage workshop reference', () => {
         expect(new Set(e30Photos.map(photo => photo.id)).size).toBe(e30Photos.length);
         for (const photo of e30Photos) {
             expect(e30Models).toContain(photo.model);
-            expect(fs.statSync('public' + photo.localPath).size).toBeGreaterThan(10000);
+            expect(fs.statSync(releasePublic + photo.localPath).size).toBeGreaterThan(10000);
             expect(photo.filePageUrl).toMatch(/^https:\/\/commons.wikimedia.org\/wiki\/File:/);
             expect(photo.creator).toBeTruthy();
             expect(photo.changes).toBeTruthy();

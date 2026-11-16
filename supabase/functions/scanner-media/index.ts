@@ -4,7 +4,6 @@ import { scannerMedia } from "./core.mjs";
 const origins = [
   "https://e34lore.com",
   "https://www.e34lore.com",
-  "https://e34-collective.sreid1118.chatgpt.site",
   "http://127.0.0.1:3000",
   "http://127.0.0.1:3002",
   "http://127.0.0.1:3004",

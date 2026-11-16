@@ -1,3 +1,4 @@
+import { releasePublic } from './release-content';
 import {afterAll,beforeAll,describe,expect,it} from 'vitest';
 import {execFileSync} from 'node:child_process';
 import {mkdirSync,mkdtempSync,readFileSync,rmSync} from 'node:fs';

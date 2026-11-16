@@ -1,5 +1,6 @@
 /** Public editorial identities only. No member/user IDs are exported. */
 import fs from "node:fs";
+import { siteContent } from "./site-content.mjs";
 import { manualGuides, manualChapters } from "../src/data/manual.ts";
 import { models, articles, assemblies } from "../src/data/catalog.ts";
 import { diagnosticFlows } from "../src/domain/diagnostics.ts";
@@ -10,12 +11,17 @@ const referenceSections = [
     .split("] as const")[0]
     .matchAll(/id: "([^"]+)", title: "([^"]+)"/g),
 ].map((x) => ({ id: x[1], title: x[2] }));
-const release = JSON.parse(
-  fs.readFileSync("data/digital-twin/public-reference.json", "utf8"),
-);
-const manifest = JSON.parse(
-  fs.readFileSync("public" + release.manifestUrl, "utf8"),
-);
+const content = siteContent();
+const checking = process.argv.includes("--check");
+const registry = "src/analytics/resources.json";
+if (!content.release && !checking) throw Error("Updating model resource IDs requires E34_ASSET_PACK.");
+const release = JSON.parse(fs.readFileSync("data/digital-twin/public-reference.json", "utf8"));
+const nodeResources = content.release
+  ? JSON.parse(fs.readFileSync(content.publicDir + release.manifestUrl, "utf8")).nodes.map(x => ({
+      id: "node:" + x.id, path: "/workshop", title: x.name || x.id,
+      kind: x.kind === "system" ? "system" : "component",
+    }))
+  : JSON.parse(fs.readFileSync(registry, "utf8")).filter(row => row.id.startsWith("node:"));
 const rows = [];
 const add = (id, path, title, kind) => rows.push({ id, path, title, kind });
 for (const [path, title] of [
@@ -73,28 +79,22 @@ for (const x of referenceSections)
   add("/quick-reference/" + x.id, "/quick-reference/" + x.id, x.title, "quick");
 for (const x of assemblies)
   add("drawing:" + x.id, "/parts", x.title, "drawing");
-for (const x of manifest.nodes)
-  add(
-    "node:" + x.id,
-    "/workshop",
-    x.name || x.id,
-    x.kind === "system" ? "system" : "component",
-  );
+rows.push(...nodeResources);
 for (const id of Object.keys(diagnosticFlows))
   add("diagnostic:" + id, "/diagnostics", id, "diagnostic");
 const unique = [...new Map(rows.map((r) => [r.id, r])).values()].sort((a, b) =>
   a.id.localeCompare(b.id),
 );
 const json = JSON.stringify(unique, null, 2) + "\n";
-if (process.argv.includes("--check")) {
+if (checking) {
   if (
-    fs.readFileSync("src/analytics/resources.json", "utf8") !== json ||
+    fs.readFileSync(registry, "utf8") !== json ||
     fs.readFileSync("supabase/functions/analytics/resources.json", "utf8") !==
       json
   )
     throw Error("Analytics public resource registry is stale.");
 } else {
-  fs.writeFileSync("src/analytics/resources.json", json);
+  fs.writeFileSync(registry, json);
   fs.writeFileSync("supabase/functions/analytics/resources.json", json);
   console.log("Registered " + unique.length + " public analytics resources.");
 }

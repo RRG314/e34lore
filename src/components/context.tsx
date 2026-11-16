@@ -2,6 +2,7 @@
 import {navigateDocument} from "./DocumentLink";
 import { useEffect, useState, useCallback, type ReactNode } from "react";
 import { db } from "../lib/supabase";
+import { demoBackend } from "../lib/backend";
 import { AppContext, rememberVehicle } from "../lib/app-state";
 import { OwnedCarsProvider } from "../vehicle/use-owned-cars";
 export { db } from "../lib/supabase";
@@ -45,6 +46,10 @@ export function AppProvider({ children, series = defaultSeries, seriesEnabled = 
   }, [message]);
   const requireAuth = () => {
     if (user && !user.is_anonymous) return true;
+    if (demoBackend) {
+      toast("Connect a local Supabase instance to save or contribute.");
+      return false;
+    }
     navigateDocument(
       "/account?next=" +
         encodeURIComponent(window.location.pathname + window.location.search),

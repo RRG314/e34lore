@@ -5,7 +5,7 @@ export type PolicySection = {id: string; title: string; paragraphs: string[]};
 export const terms: PolicySection[] = [
   {id:'service',title:'Using E34 Lore',paragraphs:[
     'E34 Lore is operated by E34 Lore as an independent BMW reference and community. You may browse, link to pages, keep vehicle records and use the sharing features provided. Accounts must represent their actual owner. Do not impersonate others, interfere with the service, evade restrictions or use another person’s account.',
-    'Keep your sign-in methods secure. Choose a public username that does not reveal your email or private details. Guest contributions use a browser-bound identity; clearing that browser’s data may prevent you from managing them. Accounts and contributions are for people aged 13 or older, or the higher minimum age required where they live. The service is not directed to children under 13. If additional guardian permission is required where you live, obtain it before creating an account.'
+    'Keep your sign-in methods secure. Choose a public username that does not reveal your email or private details. Use an email-confirmed account for discussion, reports and technical corrections. Accounts and contributions are for people aged 13 or older, or the higher minimum age required where they live. The service is not directed to children under 13. If additional guardian permission is required where you live, obtain it before creating an account.'
   ]},
   {id:'reference',title:'Reference information and repair work',paragraphs:[
     'Check the model, production date, engine, transmission, market and installed equipment against each source. A BMW number, similar shape or community recommendation alone does not establish fitment. Guides identify their source and scope; source checking is separate from independent technical review.',
@@ -36,7 +36,7 @@ export const privacy: PolicySection[] = [
   {id:'visibility',title:'What other people can see',paragraphs:[
     'VINs you save in My Garage are private and can be removed there. A VIN lookup sends NHTSA a vehicle pattern with the serial number and check digit omitted. Your garage export includes any saved VINs.',
     'Your public username, published discussions and separately shared car stories, approved photos and journal snapshots can be seen by visitors. Your email, private notes, costs, mileage and unpublished garage records are not public profile information. Check text and pictures before publishing. Photo processing removes metadata; visible plates, faces and addresses remain.',
-    'Guest posts use an anonymous Supabase account associated with this browser. Questions and replies wait for moderator approval before publication. A Guest label is shown instead of an email address. Clearing browser data or switching accounts does not transfer management of those submissions.',
+    'New guest sign-ins are disabled. Earlier guest submissions may still show a Guest label. Use an email-confirmed account to submit a report or a technical correction.',
     'Helpful and Bad advice counts are public aggregates; a Bad advice explanation is a public reply. Reports, vote identities, blocks, restrictions and appeals have owner or staff access controls. Authorized moderators use an authenticator for protected staff actions.'
   ]},
   {id:'storage',title:'Browser storage, measurement and external links',paragraphs:[

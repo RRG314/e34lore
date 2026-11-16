@@ -12,13 +12,22 @@ import e30Exterior from '../../../data/digital-twin/e30-exterior-reference.json'
 import type {VehicleReference} from '../../vehicle/reference-context';
 import type {Series} from '../../series/registry';
 import { parseReference } from './model';
+import { demoAssets } from '../../lib/backend';
+import demoPins from '../../demo/model-pins.json';
 export const defaultVehicleReferenceId=automatic525i.id;
-export const vehicleReferences=[localCandidate||releasedService,{...current,label:'525i Sedan · Manual',year:1995,model:'525i',body:'Sedan',engine:'M50TU',transmission:'Manual'},...variants].sort((a,b)=>a.model.localeCompare(b.model,undefined,{numeric:true})||(a.body==='Sedan'?0:1)-(b.body==='Sedan'?0:1)||(a.transmission==='Automatic'?0:1)-(b.transmission==='Automatic'?0:1));
-const e30References = localE30 ? [localE30,...localE30Variants] : [];
+const releasedVehicles=[localCandidate||releasedService,{...current,label:'525i Sedan · Manual',year:1995,model:'525i',body:'Sedan',engine:'M50TU',transmission:'Manual'},...variants].sort((a,b)=>a.model.localeCompare(b.model,undefined,{numeric:true})||(a.body==='Sedan'?0:1)-(b.body==='Sedan'?0:1)||(a.transmission==='Automatic'?0:1)-(b.transmission==='Automatic'?0:1));
+export const vehicleReferences = demoAssets ? [demoPins.e34] : releasedVehicles;
+const e30References = demoAssets ? [demoPins.e30] : localE30 ? [localE30,...localE30Variants] : [];
 export function referencesForSeries(series: Series): (VehicleReference & {label:string;revision:number;sha256:string})[] {
   return series === 'e30' ? e30References : vehicleReferences;
 }
 export function referenceRelease(revision?:string|number,reference?:string){
+ if (demoAssets) {
+  const pins = Object.values(demoPins);
+  const match = reference ? pins.find(pin => pin.id === reference)
+    : revision ? pins.find(pin => String(pin.revision) === String(revision)) : pins[0];
+  return match && (!revision || String(revision) === String(match.revision)) ? match : null;
+ }
  const chosen=reference?[...vehicleReferences,...e30References,...(import.meta.env.DEV&&localE30?[e30Exterior]:[]),...localE30Archives].find(r=>r.id===reference):undefined;
  if(revision===undefined||revision==='')return chosen||(!reference?current:null);
  const key=String(revision);if(!/^[1-9]\d*$/.test(key))return null;

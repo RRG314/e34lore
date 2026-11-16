@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="260" viewBox="0 0 420 260">
+<title>Sample cooling assembly</title>
+<rect width="420" height="260" fill="#f5f4ee"/>
+<g fill="none" stroke="#303c3b" stroke-width="2">
+ <path d="M43 56h74v136H43zM52 65h56v117H52z"/>
+ <path d="M61 68v111m10-111v111m10-111v111m10-111v111m10-111v111"/>
+ <path stroke-dasharray="5 5" d="M119 126h76m70 0h89"/>
+ <path d="M190 103h19l13-16h41l15 18v42l-15 17h-41l-13-15h-19z" fill="#dba272"/>
+ <circle cx="239" cy="125" r="24" fill="#f5dfcb"/>
+ <circle cx="239" cy="125" r="9"/>
+ <path d="M334 111h41v30h-41zm8 4v22m10-22v22m10-22v22"/>
+ <path d="M269 93l30-43h33"/>
+</g>
+<g fill="#303c3b" font-family="system-ui,sans-serif" font-size="16">
+ <text x="336" y="55">01</text>
+ <text x="43" y="223">Sample coolant pump</text>
+</g>
+</svg>

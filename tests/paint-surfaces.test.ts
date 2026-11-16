@@ -1,3 +1,4 @@
+import { releasePublic } from './release-content';
 import {describe,it,expect} from 'vitest';
 import * as T from 'three';
 import {readFileSync} from 'node:fs';
@@ -9,7 +10,7 @@ import targets from '../data/build-studio/appearance-targets.json';
 // Decode the accepted GLB itself. These tests protect real mirror glass and
 // bumper trim, not just a selector whose shape mirrors the implementation.
 const asset=targets.assetPins.find(p=>p.id==='assembled:body-v7')!;
-const bytes=readFileSync(new URL('../public'+asset.url,import.meta.url));
+const bytes=readFileSync((releasePublic + asset.url));
 const json=JSON.parse(bytes.subarray(20,20+bytes.readUInt32LE(12)).toString()) as {
   meshes:{name:string;primitives:{indices:number;attributes:Record<string,number>}[]}[];
   accessors:{bufferView:number;byteOffset?:number;componentType:number;type:string;count:number;normalized?:boolean}[];
@@ -61,8 +62,8 @@ describe('Unsupported appearance assets',()=>{it('keeps unknown source revisions
 
 it('targets every Touring paint primitive, keeping each adjacent black, chrome and glass primitive unchanged',()=>{
  const source=targets.assetPins.find(p=>p.id.startsWith('assembled:body-touring'))!,pin=targets.manifestPins.find(p=>p.id==='e34-530i-touring-manual')!;
- const glb=readFileSync('public'+source.url),document=JSON.parse(glb.subarray(20,20+glb.readUInt32LE(12)).toString()) as {nodes:{name?:string;mesh?:number;children?:number[]}[];meshes:{primitives:{material:number}[]}[];materials:{name:string}[]};
- const manifest=JSON.parse(readFileSync('public'+pin.manifestUrl,'utf8')) as {nodes:{id:string;assetId:string|null;meshNames:string[]}[]};
+ const glb=readFileSync(releasePublic +source.url),document=JSON.parse(glb.subarray(20,20+glb.readUInt32LE(12)).toString()) as {nodes:{name?:string;mesh?:number;children?:number[]}[];meshes:{primitives:{material:number}[]}[];materials:{name:string}[]};
+ const manifest=JSON.parse(readFileSync(releasePublic +pin.manifestUrl,'utf8')) as {nodes:{id:string;assetId:string|null;meshNames:string[]}[]};
  function materials(id:number):number[]{const n=document.nodes[id];return n.mesh!==undefined?document.meshes[n.mesh].primitives.map(p=>p.material):(n.children||[]).flatMap(materials);}
  let paints=0;
  for(const node of manifest.nodes.filter(n=>n.assetId===source.id))for(const name of node.meshNames){

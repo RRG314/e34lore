@@ -1,18 +1,18 @@
 // Read-only checks against the owned production Site or a loopback Worker.
 // Never follows a referral, loads an ad, creates an offer or simulates a sale.
 import assert from "node:assert/strict";
-import hostedBackend from "../src/data/backend.json" with { type: "json" };
 const origin = process.env.E34_TEST_ORIGIN || "http://127.0.0.1:3003";
 assert.ok(["e34lore.com", "www.e34lore.com", "127.0.0.1", "localhost"].includes(new URL(origin).hostname));
-const backend = process.env.E34_TEST_HOSTED_READONLY === "1" ? hostedBackend : {
+const hosted = process.env.E34_TEST_HOSTED_READONLY === "1";
+const backend = {
   url: process.env.NEXT_PUBLIC_SUPABASE_URL || "http://127.0.0.1:54321",
   publishableKey: process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY,
 };
-if (backend !== hostedBackend) {
+if (!hosted) {
   assert.ok(["127.0.0.1", "localhost", "[::1]"].includes(new URL(backend.url).hostname),
     "Use a loopback backend unless running the maintainer's hosted read-only checks");
-  assert.ok(backend.publishableKey, "Set NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY for the local backend");
 }
+assert.ok(backend.publishableKey, "Set NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY for the backend being checked");
 let checks = 0;
 const request = (url, options = {}) => fetch(url, { ...options, signal: AbortSignal.timeout(15000), redirect: "manual" });
 async function rpc(name, body = {}) {

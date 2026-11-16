@@ -2,6 +2,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
+import { siteContent } from './site-content.mjs';
 import { privateAssetReason, reviewedAssetPayload } from './ip/asset-boundary.mjs';
 import { immutableAssetAliases } from './ip/immutable-asset-aliases.mjs';
 import { e30ReleaseEnabled } from './vite/e30-release-plugin.mjs';
@@ -24,10 +25,11 @@ async function inspect(directory){
  }
 }
 await inspect('dist/client');
-const release = JSON.parse(await fs.readFile('data/ip/public-assets.json', 'utf8'));
-const aliases = e30ReleaseEnabled() ? immutableAssetAliases('public') : {};
-const compressedManifests = e30ReleaseEnabled() ? releaseManifestPaths() : new Set();
-const { compressed, omitted } = e30ReleaseEnabled() ? modelAssetPackage(aliases) : { compressed: new Set(), omitted: new Set() };
+const content=siteContent(), fullRelease=content.release && e30ReleaseEnabled();
+const release = JSON.parse(await fs.readFile(content.assetIndex, 'utf8'));
+const aliases = fullRelease ? immutableAssetAliases(content.publicDir) : {};
+const compressedManifests = fullRelease ? releaseManifestPaths() : new Set();
+const { compressed, omitted } = fullRelease ? modelAssetPackage(aliases) : { compressed: new Set(), omitted: new Set() };
 for (const [filename, expected] of Object.entries(release.files)) {
  if (omitted.has('/'+filename)) {
   await assert.rejects(fs.stat('dist/client/'+filename), {code:'ENOENT'}, 'Preview asset was packaged: '+filename);

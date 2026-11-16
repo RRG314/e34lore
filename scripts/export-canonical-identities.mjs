@@ -1,8 +1,12 @@
 import fs from "node:fs";
 import { createClient } from "@supabase/supabase-js";
-const c = JSON.parse(
-  fs.readFileSync(new URL("../src/data/backend.json", import.meta.url), "utf8"),
-);
+const c = {
+  url: process.env.NEXT_PUBLIC_SUPABASE_URL,
+  publishableKey: process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY,
+};
+if (!c.url || !c.publishableKey) {
+  throw new Error("Set NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY.");
+}
 const db = createClient(c.url, c.publishableKey, {
   auth: { persistSession: false },
 });

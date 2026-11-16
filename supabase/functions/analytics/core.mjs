@@ -8,7 +8,6 @@ import { getDomain } from "tldts";
 export const origins = [
   "https://e34lore.com",
   "https://www.e34lore.com",
-  "https://e34-collective.sreid1118.chatgpt.site",
 ];
 export function referrerDomain(value) {
   try {

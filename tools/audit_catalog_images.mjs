@@ -6,7 +6,13 @@ import { setTimeout as delay } from "node:timers/promises";
 import { createClient } from "@supabase/supabase-js";
 
 const root = path.resolve(import.meta.dirname, "..");
-const config = JSON.parse(await fs.readFile(path.join(root, "src/data/backend.json"), "utf8"));
+const config = {
+  url: process.env.NEXT_PUBLIC_SUPABASE_URL,
+  publishableKey: process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY,
+};
+if (!config.url || !config.publishableKey) {
+  throw new Error("Set NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY.");
+}
 const db = createClient(config.url, config.publishableKey, { auth: { persistSession: false } });
 const rows = [];
 for (let from = 0; ; from += 1000) {

@@ -1,4 +1,4 @@
-import backend from "../lib/backend";
+import backend, { demoBackend } from "../lib/backend";
 
 export const publicActivityLabels: Readonly<Record<string, string>> = {
   scanner_open: "Opened Part Scanner",
@@ -18,7 +18,7 @@ const counted = new Set<string>();
 
 /** One increment per action and document, without sending an identity or page URL. */
 export function countPublicActivity(action: string) {
-  if (typeof window === "undefined" || location.hostname !== "e34lore.com" || !location.pathname ||
+  if (demoBackend || typeof window === "undefined" || location.hostname !== "e34lore.com" || !location.pathname ||
       navigator.webdriver || !Object.hasOwn(publicActivityLabels, action)) return;
   const path = location.pathname.replace(/\/$/, "") || "/";
   const e30 = path === "/e30" || path.startsWith("/e30/");

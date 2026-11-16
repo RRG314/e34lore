@@ -1,3 +1,4 @@
+import { releasePublic } from './release-content';
 import {createElement} from 'react';
 import {renderToStaticMarkup} from 'react-dom/server';
 import {AppProvider} from '../src/components/context';
@@ -24,13 +25,13 @@ import {wiringAsset,wiringScope,wiringReferences,wiringFor,wiringWorkshopHref} f
 import {withWiring,wiringGeometry} from '../src/digital-twin/public/wiring-model';
 import {offsets} from '../src/digital-twin/public/layout';
 const releases=[...variants,automatic525i];
-const models=releases.map(r=>parseReference(JSON.parse(fs.readFileSync('public'+r.manifestUrl,'utf8'))));
+const models=releases.map(r=>parseReference(JSON.parse(fs.readFileSync(releasePublic +r.manifestUrl,'utf8'))));
 const digest=(b:Uint8Array)=>createHash('sha256').update(b).digest('hex');
-const readModel=(pin:{manifestUrl:string})=>parseReference(JSON.parse(fs.readFileSync('public'+pin.manifestUrl,'utf8')));
+const readModel=(pin:{manifestUrl:string})=>parseReference(JSON.parse(fs.readFileSync(releasePublic +pin.manifestUrl,'utf8')));
 afterEach(()=>vi.unstubAllGlobals());
 describe('native workshop model switching',()=>{
  it.each([e30,service525i])('limits wiring to the matching $id and separates sleeves before the branches',pin=>{
-   const manifest=parseReference(JSON.parse(fs.readFileSync('public'+pin.manifestUrl,'utf8')));
+   const manifest=parseReference(JSON.parse(fs.readFileSync(releasePublic +pin.manifestUrl,'utf8')));
    const model=withWiring(manifest);
    expect(withWiring({...manifest,id:'unsupported-reference'}).nodes).toBe(manifest.nodes);
    expect(visibleNodes(model,defaultView()).some(node=>node.assetId===wiringAsset)).toBe(false);
@@ -120,11 +121,11 @@ describe('native workshop model switching',()=>{
  it('keeps previous published panel references available by their original hashes',()=>{
   for(const reference of panelArchives){
    expect(referenceRelease(reference.revision,reference.id)).toEqual(reference);
-   expect(digest(fs.readFileSync('public'+reference.manifestUrl))).toBe(reference.sha256);
+   expect(digest(fs.readFileSync(releasePublic +reference.manifestUrl))).toBe(reference.sha256);
   }
  });
  it.each(releases)('loads the actual $id rather than filtering the 525i',async r=>{
-  vi.stubGlobal('fetch',vi.fn(async(input:string)=>new Response(fs.readFileSync('public'+input))));
+  vi.stubGlobal('fetch',vi.fn(async(input:string)=>new Response(fs.readFileSync(releasePublic +input))));
   const m=await loadReference(new AbortController().signal,r.revision,r.id);
   expect(m.id).toBe(r.id);expect(m.nodes.some(n=>n.id==='vehicle')).toBe(true);
   expect(m.nodes.filter(n=>n.assetId)).toHaveLength(r.renderableCount);
@@ -140,34 +141,34 @@ describe('native workshop model switching',()=>{
  it('keeps all referenced GLBs and actual thumbnails pinned to their content',()=>{
   const checked=new Set<string>();
   for(const [index,m]of models.entries()){
-   const r=releases[index];expect(digest(fs.readFileSync('public'+r.manifestUrl))).toBe(r.sha256);
-   for(const a of m.assets){if(checked.has(a.url))continue;checked.add(a.url);const b=fs.readFileSync('public'+a.url);expect(b.length).toBe(a.bytes);expect(digest(b)).toBe(a.sha256);expect(b.subarray(0,4).toString()).toBe('glTF');}
+   const r=releases[index];expect(digest(fs.readFileSync(releasePublic +r.manifestUrl))).toBe(r.sha256);
+   for(const a of m.assets){if(checked.has(a.url))continue;checked.add(a.url);const b=fs.readFileSync(releasePublic +a.url);expect(b.length).toBe(a.bytes);expect(digest(b)).toBe(a.sha256);expect(b.subarray(0,4).toString()).toBe('glTF');}
    const prior=panelArchives.find(pin=>pin.id===r.id);
-   const previous=prior?parseReference(JSON.parse(fs.readFileSync('public'+prior.manifestUrl,'utf8'))):null;
-   for(const n of m.nodes.filter(n=>n.assetId)){const original=previous?.nodes.find(node=>node.id===n.id);if(!original?.thumbnail&&!n.thumbnail)continue;expect(n.thumbnail).toBeTruthy();const image=fs.readFileSync('public'+n.thumbnail);expect(image.subarray(1,4).toString()).toBe('PNG');expect(digest(image)).toBe(n.thumbnail!.split('/').at(-1)!.slice(0,-4));}
+   const previous=prior?parseReference(JSON.parse(fs.readFileSync(releasePublic +prior.manifestUrl,'utf8'))):null;
+   for(const n of m.nodes.filter(n=>n.assetId)){const original=previous?.nodes.find(node=>node.id===n.id);if(!original?.thumbnail&&!n.thumbnail)continue;expect(n.thumbnail).toBeTruthy();const image=fs.readFileSync(releasePublic +n.thumbnail);expect(image.subarray(1,4).toString()).toBe('PNG');expect(digest(image)).toBe(n.thumbnail!.split('/').at(-1)!.slice(0,-4));}
   }
  });
  it('keeps every catalog position attached to the selected source context',()=>{
   const pages=new Map<string,CatalogPage>();
   for(const m of models){const c=m.catalog!;
-   for(const a of Object.values(c.assemblies)){if(!pages.has(a.url)){const bytes=fs.readFileSync('public'+a.url);expect(digest(bytes)).toBe(a.sha256);pages.set(a.url,JSON.parse(bytes.toString()));}const page=pages.get(a.url)!;expect(page.contextId).toBe(c.context.id);expect(page.assemblyId).toBe(a.id);expect(page.items).toHaveLength(a.itemCount);}
+   for(const a of Object.values(c.assemblies)){if(!pages.has(a.url)){const bytes=fs.readFileSync(releasePublic +a.url);expect(digest(bytes)).toBe(a.sha256);pages.set(a.url,JSON.parse(bytes.toString()));}const page=pages.get(a.url)!;expect(page.contextId).toBe(c.context.id);expect(page.assemblyId).toBe(a.id);expect(page.items).toHaveLength(a.itemCount);}
    for(const binding of Object.values(c.bindings))for(const position of binding.positions){const assembly=c.assemblies[position.assemblyId];expect(assembly).toBeTruthy();const found=pages.get(assembly.url)!.items.find(p=>p.id===position.id);expect(found?.partId).toBe(position.partId);expect(found?.number).toBe(position.number);}
   }
  });
  it('checks the original manifest hash after decoding the production payload', async () => {
-  const bytes = fs.readFileSync('public'+service525i.manifestUrl);
+  const bytes = fs.readFileSync(releasePublic +service525i.manifestUrl);
   vi.stubGlobal('fetch',vi.fn(async() => new Response(new Uint8Array(gzipSync(bytes)))));
   expect((await loadReference(new AbortController().signal, service525i.revision, service525i.id)).id).toBe(service525i.id);
   vi.stubGlobal('fetch',vi.fn(async() => new Response(new Uint8Array(gzipSync(Buffer.from('{}'))))));
   await expect(loadReference(new AbortController().signal, service525i.revision, service525i.id)).rejects.toThrow('version did not match');
  });
  it('uses the updated automatic geometry while keeping the original receipt',async()=>{
-  vi.stubGlobal('fetch',vi.fn(async(input:string)=>new Response(fs.readFileSync('public'+input))));
+  vi.stubGlobal('fetch',vi.fn(async(input:string)=>new Response(fs.readFileSync(releasePublic +input))));
   const latest=await loadReference(new AbortController().signal,undefined,automatic525i.id);
   expect(latest.revision).toBe(service525i.revision);
   expect(latest.nodes.filter(n=>n.assetId)).toHaveLength(service525i.renderableCount);
   expect(latest.nodes.find(n=>n.id==='e34sys:center-bearing-insert')?.oem).toBe('26121225071');
-  for(const asset of latest.assets)expect(digest(fs.readFileSync('public'+asset.url))).toBe(asset.sha256);
+  for(const asset of latest.assets)expect(digest(fs.readFileSync(releasePublic +asset.url))).toBe(asset.sha256);
   expect(referenceRelease(automatic525i.revision,automatic525i.id)).toEqual(automatic525i);
  });
  it('retains views for every model when another model is saved or deleted',()=>{
@@ -199,15 +200,15 @@ describe('consistent held separation',()=>{
   const visible=visibleNodes(m,{...defaultView(),explosion:4});expect(visible.length).toBe(m.nodes.filter(n=>n.assetId).length);
  });
  it('leaves the existing 525i geometry and component separation policy intact',()=>{
-  const base=parseReference(JSON.parse(fs.readFileSync('public'+current.manifestUrl,'utf8')));
-  expect(digest(fs.readFileSync('public'+current.manifestUrl))).toBe(current.sha256);expect(base.vehicleReference).toBeUndefined();
+  const base=parseReference(JSON.parse(fs.readFileSync(releasePublic +current.manifestUrl,'utf8')));
+  expect(digest(fs.readFileSync(releasePublic +current.manifestUrl))).toBe(current.sha256);expect(base.vehicleReference).toBeUndefined();
   const n=base.nodes.find(n=>n.id==='m50:water-pump')!;expect(componentPlan(base,'vehicle',n)).toEqual({group:n.id,path:[[1.4,.35,0].map((x,i)=>x+componentPlan(base,'m50:assembly',n).path[0][i]*.65)],start:0,end:1});
  });
 });
 
 describe('opening panel coverage', () => {
  it.each(['left', 'right'])('shows the E30 %s door shell and card together with the body on', side => {
-  const model = parseReference(JSON.parse(fs.readFileSync('public' + e30.manifestUrl, 'utf8')));
+  const model = parseReference(JSON.parse(fs.readFileSync(releasePublic + e30.manifestUrl, 'utf8')));
   const door = 'e30body:door-' + side;
   const visible = visibleNodes(model, { ...defaultView(), openPanels: [door] });
   expect(visible.map(node => node.id)).toEqual(expect.arrayContaining([door, door + ':inner-shell', door + ':door-card']));
@@ -216,7 +217,7 @@ describe('opening panel coverage', () => {
   }
  });
  it.each([...vehicleReferences, e30])('retains independently inspectable panels and archived records for $id', pin => {
-  const model = parseReference(JSON.parse(fs.readFileSync('public'+pin.manifestUrl,'utf8')));
+  const model = parseReference(JSON.parse(fs.readFileSync(releasePublic +pin.manifestUrl,'utf8')));
   const labels = model.openingPanels!.map(panel => panel.label);
   expect(labels).toEqual(expect.arrayContaining(['Hood','Fuel door','Glove box','Spare-wheel cover']));
   const doors = model.openingPanels!.filter(panel => /^(?:Left|Right|Front|Rear).*door$/i.test(panel.label));
@@ -226,7 +227,7 @@ describe('opening panel coverage', () => {
   else expect(labels).toContain('Sunroof');
   const previousPin = panelArchives.filter(archive => archive.id===pin.id).sort((a,b) => b.revision-a.revision)[0];
   expect(previousPin).toBeDefined();
-  const previous = parseReference(JSON.parse(fs.readFileSync('public'+previousPin!.manifestUrl,'utf8')));
+  const previous = parseReference(JSON.parse(fs.readFileSync(releasePublic +previousPin!.manifestUrl,'utf8')));
   for (const [id,binding] of Object.entries(previous.catalog?.bindings??{})) {
    expect(model.catalog?.bindings[id]?.assemblyIds).toEqual(binding.assemblyIds);
    expect(model.catalog?.bindings[id]?.positions).toEqual(binding.positions);
