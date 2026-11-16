@@ -40,14 +40,16 @@ function cylinder(group, mat, from, to, r0, r1 = r0, sides = 16) {
 }
 
 // All footprints use the assembled car's coordinates, with the front in +X.
-const rect = (x, z, length, width, radius) => ({ x, z, length, width, radius });
-function outline({ x, z, length, width, radius }) {
+const rect = (x, z, length, width, radius, rearWidth = width) => ({ x, z, length, width, radius, rearWidth });
+function outline({ x, z, length, width, radius, rearWidth }) {
   const result = [];
   for (const [i, sx, sz] of [[0, 1, 1], [1, -1, 1], [2, -1, -1], [3, 1, -1]]) {
     for (let j = 0; j <= 4; j++) {
       const angle = Math.PI * (i + j / 4) / 2;
-      result.push(new Vector2(x + sx * (length / 2 - radius) + radius * Math.cos(angle),
-        z + sz * (width / 2 - radius) + radius * Math.sin(angle)));
+      const dx = sx * (length / 2 - radius) + radius * Math.cos(angle);
+      const dz = sz * (width / 2 - radius) + radius * Math.sin(angle);
+      const widthAtCorner = lerp(rearWidth, width, dx / length + .5);
+      result.push(new Vector2(x + dx, z + dz * (widthAtCorner / width)));
     }
   }
   return result;
@@ -55,6 +57,7 @@ function outline({ x, z, length, width, radius }) {
 
 const resize = (footprint, inset) => ({
   ...footprint, length: footprint.length - inset * 2, width: footprint.width - inset * 2,
+  rearWidth: footprint.rearWidth - inset * 2,
   radius: Math.max(.001, footprint.radius - inset),
 });
 const elevation = (points, height) => points.map(({ x, y }) => new Vector3(x, height(x, y), y));
@@ -352,9 +355,9 @@ export function e34Console(part) {
   // width is scaled against the 180 mm radio opening, and the rear aligns
   // with the existing tunnel, seat clearance and rear air-grille mounts.
   const rearProfile = [
-    [-.565, .111, .548, .418], [-.550, .115, .552, .407], [-.488, .115, .558, .414],
-    [-.464, .116, .569, .416], [-.439, .118, .591, .421], [-.410, .119, .609, .428],
-    [-.365, .120, .623, .441], [-.264, .122, .633, .457], [-.154, .125, .644, .487],
+    [-.472, .099, .548, .418], [-.459, .111, .552, .410], [-.418, .115, .558, .416],
+    [-.394, .117, .569, .420], [-.370, .118, .596, .428], [-.333, .120, .618, .441],
+    [-.264, .122, .633, .457], [-.154, .125, .644, .487],
   ];
   const frontProfile = [
     [-.155, .125, .644, .487], [-.127, .126, .648, .495], [-.051, .127, .650, .509],
@@ -365,18 +368,20 @@ export function e34Console(part) {
   ];
   const rearAt = profile(rearProfile), frontAt = profile(frontProfile);
   const dropsAtDriver = z => clamp((.009 - z) / .029);
-  const rearRelief = (x, z) => -.043 * dropsAtDriver(z) * clamp((x + .477) / .072);
+  const rearRelief = (x, z) => -.043 * dropsAtDriver(z) * clamp((x + .410) / .068);
   const rise = profile([[.275, 0], [.343, .004], [.390, .018], [.452, .035], [.495, .037], [.549, .027]]);
   const frontRelief = (x, z) => rise(x)[1] * clamp((Math.abs(z) - .098) / .052)
     - .038 * dropsAtDriver(z) * clamp((.037 - x) / .071);
   const back = (x, z) => rearAt(x)[2] + rearRelief(x, z);
   const deckHeight = x => frontAt(x)[2];
   const frontSurface = (x, z) => deckHeight(x) + frontRelief(x, z);
-  const brake = rect(-.307, -.059, .283, .083, .021);
-  const sideBin = rect(-.315, .058, .265, .090, .012);
-  const rearBin = rect(-.518, 0, .062, .184, .011);
+  const brake = rect(-.278, -.059, .232, .083, .021);
+  const sideBin = rect(-.285, .058, .217, .090, .012);
+  const rearBin = rect(-.433, 0, .056, .177, .011);
   const changeBin = rect(-.065, -.056, .147, .092, .012);
-  const partition = rect(.208, 0, .327, .227, .016);
+  // The 1994 BMW trim brochure shows the wood panel widening toward the
+  // dash, with the automatic gate inset on the driver's side.
+  const partition = rect(.203, 0, .321, .249, .015, .183);
   const gateTop = rect(.183, -.034, .221, .084, .008);
   const ash = rect(.421, .003, .054, .185, .008);
   const stemX = .259, z = -.025, handleY = deckHeight(stemX) + .109;
@@ -407,7 +412,7 @@ export function e34Console(part) {
   const ashHeight = x => deckHeight(x);
   part('e34trim:front-ashtray-frame', group => frame(group, ash, resize(ash, .006), ashHeight, insert));
   part('e34trim:front-ashtray', group => ashtray(group, resize(ash, .0075), x => ashHeight(x) - .001));
-  part('e34trim:program-switch', group => rocker(group, .205, -.098, deckHeight, 'program'));
+  part('e34trim:program-switch', group => rocker(group, .210, -.091, deckHeight, 'program'));
   part('e34trim:hazard-switch', group => rocker(group, .014, .055, deckHeight, 'hazard'));
   part('e34trim:window-switches', group => {
     cover(group, rect(-.074, .057, .108, .081, .005), x => deckHeight(x) + .002, .005, rubber);
@@ -420,8 +425,8 @@ export function e30Console(part, automatic) {
   const rear = 'e30assembly:cabin-floor:console';
   const front = 'e30trim:front-console';
   const rearProfile = [
-    [-.754, .077, .526, .460], [-.729, .103, .536, .454], [-.665, .110, .541, .450],
-    [-.505, .108, .533, .450], [-.357, .110, .532, .443],
+    [-.586, .078, .526, .460], [-.568, .101, .535, .452], [-.523, .107, .540, .450],
+    [-.481, .108, .533, .450], [-.357, .110, .532, .443],
     [-.220, .117, .538, .445], [-.101, .120, .544, .449], [.018, .119, .551, .454],
   ];
   const frontProfile = [
@@ -432,8 +437,8 @@ export function e30Console(part, automatic) {
   const rearAt = profile(rearProfile), frontAt = profile(frontProfile);
   const back = x => rearAt(x)[2], deckHeight = x => frontAt(x)[2];
   const brake = rect(-.275, -.041, .379, .109, .032);
-  const rearAsh = rect(-.690, .001, .073, .146, .012);
-  const tray = rect(-.508, .052, .092, .065, .012);
+  const rearAsh = rect(-.537, .001, .064, .142, .010);
+  const tray = rect(-.454, .052, .091, .065, .012);
   const frontAsh = rect(.406, .015, .115, .181, .009);
   const gear = automatic ? rect(.151, 0, .194, .152, .012) : rect(.148, 0, .160, .145, .018);
 
