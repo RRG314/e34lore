@@ -359,21 +359,13 @@ function rearQuarterReturn(group,side) {
     return sideSkinPoint(rearQuarterEnd,y,side,rearOpening);
   };
   patch(group,paint,(u,v)=>betweenEdges(inner,outer,lower,upper,u,v),24,22);
-  // Seat the bottom edge of the quarter against the lens gasket. Once it
-  // clears the lens, the return turns forward into the side of the quarter.
+  // Bring the quarter up to the outer gasket along the lamp's curved edge.
+  const [,bottom]=rearLensPoint(side,1,0), [,top]=rearLensPoint(side,1,1);
   const endY=lower(0)[1];
   patch(group,paint,(u,v)=>{
-    const y=interpolate(.550,endY,v);
-    let edge=rearLensPoint(side,1,v);
-    for(let i=0;i<12;i++){
-      const mid=(y-edge[1])/.18;
-      v=Math.max(0,Math.min(1,v+mid));
-      edge=rearLensPoint(side,1,v);
-    }
-    const end=sideSkinPoint(rearQuarterEnd,y,side,rearOpening);
-    const outside=Math.abs(edge[2])+.0028;
-    const x=interpolate(edge[0]+.006,Math.max(end[0],edge[0]+.007),u);
-    return [x,y,side*interpolate(outside,Math.max(outside,Math.abs(end[2])),u)];
+    const y=interpolate(.548,endY,v);
+    const [x,,z]=rearLensPoint(side,1,Math.max(.003,Math.min(.997,(y-bottom)/(top-bottom))));
+    return mix([x+.0035,y,z+side*.003],sideSkinPoint(rearQuarterEnd,y,side,rearOpening),u);
   },18,29);
   // Close the narrow underside of the corner above the lens; seat it
   // behind the top gasket rather than continuing any metal into the lens.
@@ -386,21 +378,17 @@ function rearQuarterReturn(group,side) {
 function rearPanelPoint(u,v) {
   const t=2*u-1, a=Math.abs(t);
   const hem=trunkHem(u,1);
-  const z=t*interpolate(.789,trunkHalfWidth*.995,smooth((v-.66)/.34));
+  const z=t*interpolate(.783,trunkHalfWidth*.995,smooth((v-.66)/.34));
   const y=interpolate(.544,hem[1]-.004,v);
-  let x=interpolate(-2.125+.047*a**4,hem[0]+.004,smooth(v));
-  if(Math.abs(z)>.315) {
-    let lo=0,hi=1;
-    for(let i=0;i<13;i++){
-      const m=(lo+hi)/2,l=rearLensPoint(1,m,v);
-      if(l[2]<Math.abs(z))lo=m;else hi=m;
-    }
-    const lensX=rearLensPoint(1,(hi+lo)/2,v)[0];
-    // The tail panel forms the recessed lamp pocket, not a skin over its
-    // amber outer section. Keep the narrow painted rail under the lens.
-    if(y>.550)x=Math.max(x,lensX+.015);
-  }
-  return [x,y,z];
+  const plate=interpolate(-2.125+.047*a**4,hem[0]+.004,smooth(v));
+  const lampV=Math.max(0,Math.min(1,(y-.566)/.162));
+  const [,,inboard]=rearLensPoint(1,0,lampV), [,,outboard]=rearLensPoint(1,1,lampV);
+  const lensU=Math.max(0,Math.min(1,(Math.abs(z)-inboard)/(outboard-inboard)));
+  const [lensX]=rearLensPoint(1,lensU,lampV);
+  // The painted rail is close to the lens base; inside the aperture the
+  // stamping steps forward so the lens and its gasket can seat over it.
+  const seat=lensX+.003+.007*smooth((y-.563)/.022);
+  return [interpolate(plate,seat,smooth((Math.abs(z)-.295)/.036)),y,z];
 }
 
 // On the late bumper the three black mouldings follow one swept cover.
@@ -995,6 +983,12 @@ export function buildE30Exterior(add) {
   },{page:'front_panel',paintSurface:true});
   add('e30body:assembly','rear-bumper','Rear bumper and rub strip',[0,0,0],[-1.03,-.01,0],g=>{
     patch(g,paint,(u,v)=>coverContour(2*u-1,v),164,24);
+    // The upper edge of the cover turns under the painted rear panel.
+    patch(g,paint,(u,v)=>{
+      const t=2*u-1, reach=interpolate(.058,.031,smooth((Math.abs(t)-.64)/.25));
+      const [x,y,z]=coverContour(t,1,-reach*v);
+      return [x,y-.005*v,z];
+    },164,8);
     // OEM center moulding and two side strips are cut from the same profile.
     for(const [start,end] of [[-.994,-.682],[-.679,.679],[.682,.994]]){
       patch(g,rubber,(u,v)=>bumperMouldingPoint(interpolate(start,end,u),v),

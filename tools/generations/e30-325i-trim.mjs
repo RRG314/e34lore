@@ -67,29 +67,25 @@ export function drawDoorMirror(group, side, paint, onDoorGlass) {
 }
 
 export function rearLensPoint(side,u,v,depth=0) {
-  // The red and clear sections share a shallow rear-facing surface. Only
-  // the short outer amber corner turns forward into the quarter panel.
+  // The late coupe lamp follows the rear panel's bow into the amber corner.
   const edge=Math.max(0,(Math.abs(2*v-1)-.86)/.14);
   const round=1-Math.sqrt(1-edge*edge);
-  const z=lerp(lerp(.327,.314,v)+.008*round,.787-.010*round,u);
-  const y=lerp(.554+.002*u,.730-.002*u,v);
-  const turn=Math.max(0,(u-.82)/.18);
-  const x=-2.137+.012*u+.012*u*u+.030*turn**3
+  const z=lerp(lerp(.327,.314,v)+.008*round,.775-.008*round,u);
+  const y=lerp(.565+.002*u,.730-.002*u,v);
+  const turn=Math.max(0,(u-.77)/.23);
+  const x=-2.120+.011*u+.028*u*u+.019*turn**2.3
     +.0025*(2*v-1)**4-depth;
   return [x,y,side*z];
 }
 
 export function drawRearLamp(group,side) {
-  // Form the complete housing and the seat behind the black perimeter gasket.
-  patch(group,seal,(u,v)=>rearLensPoint(side,u,v,-.009),68,20);
-  for(const u of [0,1])patch(group,seal,(v,t)=>{
-    const [x,y,z]=rearLensPoint(side,u,v,-.001);
-    return [x+.025*t,y,z+(u===0?.007:-.010)*side*t];
-  },35,7);
-  for(const v of [0,1])patch(group,seal,(u,t)=>{
-    const [x,y,z]=rearLensPoint(side,u,v,-.001);
-    return [x+.026*t,y+(v===0?.007:-.007)*t,z];
-  },64,7);
+  // The visible lip is shallow. The shell behind it tapers into the aperture.
+  const rim=(u,v)=>rearLensPoint(side,u,v,-.001);
+  const back=(u,v)=>rearLensPoint(side,lerp(.025,.975,u),lerp(.035,.965,v),-.026);
+  patch(group,seal,rim,68,20);
+  patch(group,seal,back,68,20);
+  for(const u of [0,1])patch(group,seal,(v,t)=>mix(rim(u,v),back(u,v),t),35,5);
+  for(const v of [0,1])patch(group,seal,(u,t)=>mix(rim(u,v),back(u,v),t),64,5);
   const zones=[[.015,.287],[.287,.523],[.523,.829],[.829,.986]];
   for(const [i,[start,end]] of zones.entries()){
     const lens=(u,v,depth=.0015)=>rearLensPoint(side,lerp(start,end,u),v,depth);
@@ -105,6 +101,6 @@ export function drawRearLamp(group,side) {
         patch(group,flutes[shade],(a,b)=>lens(at+(a-.5)*.008,lerp(lo,hi,b),.0028+.00024*Math.sin(Math.PI*a)),3,7);
     }
   }
-  for(const v of [.009,.991])bead(group,seal,u=>rearLensPoint(side,u,v,-.0005),.002,78);
-  for(const u of [.005,.995])bead(group,seal,v=>rearLensPoint(side,u,v,-.0005),.0019,30);
+  for(const v of [.009,.991])bead(group,seal,u=>rim(u,v),.0015,78);
+  for(const u of [.005,.995])bead(group,seal,v=>rim(u,v),.0015,30);
 }

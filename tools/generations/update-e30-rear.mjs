@@ -10,13 +10,13 @@ import { immutable, localReferenceTools, readJson, replaceJson, sha } from '../g
 import { buildE30Exterior, paint } from './e30-325i-exterior.mjs';
 import { rearLensPoint } from './e30-325i-trim.mjs';
 
-const revision = 1180;
+const revision = 1181;
 const pinPath = 'data/digital-twin/e30-candidate.json';
 const archivePath = 'data/digital-twin/workshop-panel-archives.json';
 const current = await readJson(pinPath);
 const archives = await readJson(archivePath);
-const prior = [current, ...archives].find(pin => pin.id === current.id && pin.revision === 1179);
-assert(prior && current.revision <= revision, 'Expected the 325i revision 1179 exterior');
+const prior = [current, ...archives].find(pin => pin.id === current.id && pin.revision === 1180);
+assert(prior && current.revision <= revision, 'Expected the 325i revision 1180 exterior');
 
 const previousManifest = await fs.readFile('public' + prior.manifestUrl);
 assert.equal(sha(previousManifest), prior.sha256);
@@ -29,13 +29,13 @@ const loader = new GLTFLoader().setMeshoptDecoder(MeshoptDecoder);
 const { scene } = await loader.parseAsync(original.buffer.slice(original.byteOffset, original.byteOffset + original.length), '');
 scene.updateMatrixWorld(true);
 
-function paintedMeshes(key) {
+function panelMeshes(key, material) {
   const group = scene.getObjectByName(nodes.get('e30body:' + key).meshNames[0]);
   const meshes = [];
   group.traverse(object => {
-    if (object.isMesh && object.material.name === paint.name) meshes.push(object);
+    if (object.isMesh && (!material || object.material.name === material)) meshes.push(object);
   });
-  assert(meshes.length, 'Missing painted surface for ' + key);
+  assert(meshes.length, 'Missing surface for ' + key);
   return meshes;
 }
 
@@ -44,12 +44,15 @@ function rearHit(meshes, y, z) {
   rearRay.ray.origin.set(-2.23, y, z);
   return rearRay.intersectObjects(meshes)[0];
 }
+const paintedMeshes = key => panelMeshes(key, paint.name);
 const oldLid = paintedMeshes('trunk');
 const lowerFace = [-.60, 0, .60].map(z => {
   const y = .7305 + .012 * (1 - (z / .7254) ** 2);
   return { y, z, x: rearHit(oldLid, y, z).point.x };
 });
-const panels = new Set(['trunk', 'tail-panel', 'rear-quarter-left', 'rear-quarter-right']);
+const oldLamp = panelMeshes('tail-light-right');
+const oldProjection = rearHit(oldLamp, .644, .383).point.x;
+const panels = new Set(['tail-panel', 'rear-quarter-left', 'rear-quarter-right', 'tail-light-left', 'tail-light-right', 'rear-bumper']);
 buildE30Exterior((parent, key, _name, _position, _direction, draw) => {
   if (parent !== 'e30body:assembly' || !panels.delete(key)) return;
   const node = nodes.get('e30body:' + key);
@@ -79,8 +82,13 @@ for (const { x, y, z } of lowerFace) {
 
 const downRay = new Raycaster(new Vector3(), new Vector3(0, -1, 0), 0, .4);
 const tail = paintedMeshes('tail-panel');
+const bumper = paintedMeshes('rear-bumper');
 for (const [name, side] of [['left', -1], ['right', 1]]) {
   const quarter = paintedMeshes('rear-quarter-' + name);
+  const lamp = panelMeshes('tail-light-' + name);
+  const newProjection = rearHit(lamp, .644, side * .383).point.x;
+  assert(newProjection - oldProjection > .010 && newProjection - oldProjection < .023,
+    name + ' lens should sit closer to the plate panel');
   for (const x of [-1.62, -1.82, -1.98, -2.051]) {
     const edges = [[], []];
     for (let i = 0; i <= 68; i++) {
@@ -93,12 +101,18 @@ for (const [name, side] of [['left', -1], ['right', 1]]) {
     const gap = edges[1][0] - edges[0].at(-1);
     assert(gap >= 0 && gap < .010, name + ' lid seam at ' + x + ': ' + gap);
   }
-  for (const u of [.80, .90, .96]) {
+  for (const u of [.12, .30, .48, .66, .80, .90, .96]) {
     for (const v of [.25, .50, .77, .92]) {
       const [x, y, z] = rearLensPoint(side, u, v, .0015);
       const hit = rearHit([...quarter, ...tail], y, z);
-      assert(!hit || hit.point.x > x + .003, name + ' quarter overlaps the tail light');
+      assert(!hit || hit.point.x > x + .001, name + ' body overlaps the lamp at ' + [u, v]);
     }
+    const [x, y, z] = rearLensPoint(side, u, 0);
+    const rail = rearHit(tail, y - .007, z);
+    assert(rail && Math.abs(rail.point.x - x) < .008, name + ' lower rail does not seat below the lamp at ' + u);
+    downRay.ray.origin.set(rail.point.x - .011, .70, z);
+    const cover = downRay.intersectObjects(bumper)[0];
+    assert(cover && cover.point.y > .537, name + ' gap below the painted rail at ' + u);
   }
 }
 
