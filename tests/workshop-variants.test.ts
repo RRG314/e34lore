@@ -18,11 +18,59 @@ import {referenceRelease,loadReference,vehicleReferences} from '../src/digital-t
 import {referenceVariantOffsets,clearDisplayRay} from '../src/digital-twin/public/variant-layout';
 import type {CatalogPage} from '../src/digital-twin/public/catalog';
 import {componentPlan} from '../src/digital-twin/public/component-separation';
+import {wiringAsset,wiringScope,wiringReferences} from '../src/data/wiring-routes';
+import {withWiring,wiringGeometry} from '../src/digital-twin/public/wiring-model';
+import {offsets} from '../src/digital-twin/public/layout';
 const releases=[...variants,automatic525i];
 const models=releases.map(r=>parseReference(JSON.parse(fs.readFileSync('public'+r.manifestUrl,'utf8'))));
 const digest=(b:Uint8Array)=>createHash('sha256').update(b).digest('hex');
 afterEach(()=>vi.unstubAllGlobals());
 describe('native workshop model switching',()=>{
+ it.each([e30,service525i])('limits wiring to the matching $id and separates sleeves before the branches',pin=>{
+   const manifest=parseReference(JSON.parse(fs.readFileSync('public'+pin.manifestUrl,'utf8')));
+   const model=withWiring(manifest);
+   expect(withWiring({...manifest,revision:manifest.revision-1}).nodes).toBe(manifest.nodes);
+   expect(visibleNodes(model,defaultView()).some(node=>node.assetId===wiringAsset)).toBe(false);
+   expect(visibleNodes(model,{...defaultView(),explosion:4}).some(node=>node.assetId===wiringAsset)).toBe(false);
+   const isolated={...defaultView(),scope:wiringScope,shell:'hidden' as const};
+   const wires=visibleNodes(model,isolated);
+   expect(wires).not.toHaveLength(0);
+   expect(wires.every(node=>node.assetId===wiringAsset)).toBe(true);
+   expect(visibleNodes(model,{...isolated,shell:'ghost'}).some(node=>node.assetId!==wiringAsset)).toBe(true);
+   const assembled=offsets(model,isolated), exploded=offsets(model,{...isolated,explosion:4});
+   const partlyExploded=offsets(model,{...isolated,explosion:2});
+   for(const node of wires){
+     const geometry=wiringGeometry(model,node.id)!;
+     expect(geometry.points.length).toBeGreaterThan(1);
+     expect(assembled.get(node.id)).toEqual([0,0,0]);
+     expect(exploded.get(node.id)).not.toEqual([0,0,0]);
+     if(geometry.sleeve) expect(partlyExploded.get(node.id)).not.toEqual([0,0,0]);
+     else expect(partlyExploded.get(node.id)).toEqual([0,0,0]);
+   }
+   const branch=wires.find(node=>node.kind==='assembly')!;
+   const single={...isolated,scope:branch.id,explosion:4};
+   expect(visibleNodes(model,single).map(node=>node.id)).toEqual([branch.id,branch.id+':sleeve']);
+   expect(offsets(model,single).get(branch.id)).toEqual([0,0,0]);
+   expect(offsets(model,single).get(branch.id+':sleeve')).not.toEqual([0,0,0]);
+   expect(visibleNodes(model,{...single,shell:'ghost'}).filter(node=>node.assetId===wiringAsset)).toHaveLength(2);
+   expect(savedView({name:'Harness view',revision:pin.revision,view:isolated,camera:null},model)).not.toBeNull();
+ });
+ it('keeps adjacent E30 loom sections joined in their installed positions',()=>{
+   const routes=wiringReferences.e30.routes;
+   const get = (id:string) => routes.find(route=>route.id===id)!.points;
+   expect(get('front-left').at(-1)).toEqual(get('front-panel')[0]);
+   expect(get('front-left')[0]).toEqual(get('sill')[0]);
+   expect(get('sill').at(-1)).toEqual(get('left-rear')[0]);
+   expect(get('left-rear').at(-1)).toEqual(get('rear-panel')[0]);
+   expect(get('sill')).toContainEqual(get('dash')[0]);
+   expect(get('dash').at(-1)).toEqual(get('door-right')[0]);
+ });
+ it('shares the E34 battery and rear distribution endpoints across the three connected routes',()=>{
+   const get=(id:string)=>wiringReferences.e34.routes.find(route=>route.id===id)!.points;
+   expect(get('battery')[0]).toEqual(get('rear-seat')[0]);
+   expect(get('sill').at(-1)).toEqual(get('rear-seat').at(-1));
+   expect(get('trunk')[0]).toEqual(get('rear-seat').at(-1));
+ });
  it('exposes all model choices in the same native workshop control',()=>{const html=renderToStaticMarkup(createElement(AppProvider,null,createElement(VehicleReferenceSelector,{reference:'e34-540i-sedan-automatic'})));expect(html).toContain('aria-label="Car model"');expect((html.match(/<option /g)||[]).length).toBe(10);expect(html).toContain('value="e34-540i-sedan-automatic" selected=""');});
  it('retains the original 525i release and eight distinct configurations',()=>{
   expect(vehicleReferences).toHaveLength(10);expect(new Set(vehicleReferences.map(r=>r.revision)).size).toBe(10);
