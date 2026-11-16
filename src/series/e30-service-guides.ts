@@ -2,14 +2,17 @@ import type { ManualGuide } from '../data/manual';
 import { repairSpecs } from '../servicing/repair-specs';
 import { e30FactorySourceHash } from './e30-factory-guides';
 import { e30ManualGroupForPage } from './e30-factory-index';
+import { e30MaintenanceProcedures } from './e30-maintenance-procedures';
 
-type Procedure = {
+export type Procedure = {
   id: string;
   system: string;
   level: ManualGuide['level'];
   duration: string;
   pages: readonly number[];
   requiredParts?: string[];
+  handbook?: boolean;
+  relatedGuides?: string[];
   section: string;
   cautions: string[];
   steps: readonly (readonly [title: string, instruction: string, check: string, page?: number])[];
@@ -186,7 +189,7 @@ const steps: Procedure[] = [
   },
 ];
 
-export const e30ServiceGuides: ManualGuide[] = steps.map(job => {
+export const e30ServiceGuides: ManualGuide[] = [...steps, ...e30MaintenanceProcedures].map(job => {
   const spec = repairSpecs.find(item => item.series === 'e30' && item.guide === job.id);
   if (!spec?.tools?.length || !spec.specs?.length) throw Error('Missing service specifications for ' + job.id);
   const pageLink = (pdf: number) => {
@@ -200,11 +203,16 @@ export const e30ServiceGuides: ManualGuide[] = steps.map(job => {
     kind:'replacement',duration:job.duration,durationBasis:'Planning estimate for stock hardware in serviceable condition.',
     summary:spec.scope,
     reviewStatus:'draft',sourceChecked:true,applicability:spec.scope,
-    source:{id:'e30-factory-repair-upload',title:'BMW E30 Repair Manual',section:job.section,pdfPages:[...job.pages]},
+    source:{
+      id:job.handbook ? 'e30-owner-handbook' : 'e30-factory-repair-upload',
+      title:job.handbook ? 'BMW 325i / 325is owner’s handbook' : 'BMW E30 Repair Manual',
+      section:job.section,pdfPages:[...job.pages],
+    },
+    ...(job.relatedGuides ? {relatedGuides:job.relatedGuides} : {}),
     evidence:[...new Map(evidence.map(source => [source.href,source])).values()],
     tools:[...spec.tools],cautions:job.cautions,
     jobSupport:{
-      reviewedOn:'2026-11-16',sourceSha256:e30FactorySourceHash,
+      reviewedOn:'2026-11-16',sourceSha256:job.handbook ? 'df0694c579fdbd0e4e671675f510db3fc09fd136b70e4c034fea28c607a387f3' : e30FactorySourceHash,
       requiredParts:job.requiredParts ?? [],conditionalParts:[],stopConditions:[],
       steps:job.steps.map(([, , , pdf],index)=>({
         number:index+1,tools:[],

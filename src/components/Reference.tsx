@@ -649,7 +649,7 @@ export function GuidePage({
           {g.relatedGuides && (
             <section className="related-links" aria-label="Related walkthroughs">
               {g.relatedGuides.flatMap((id) => {
-                const related = manualGuides.find((guide) => guide.slug === id);
+                const related = (series === "e30" ? e30Guides : manualGuides).find((guide) => guide.slug === id);
                 return related ? [<DocumentLink key={id} href={"/guides/" + id}>{related.title} <ArrowRight size={17} /></DocumentLink>] : [];
               })}
             </section>
