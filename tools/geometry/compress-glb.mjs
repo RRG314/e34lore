@@ -15,17 +15,21 @@ export async function compressGeometryGlb(glb){
     const accesses=doc.accessors.filter(accessor=>accessor.bufferView===index);
     if(accesses.length!==1)throw Error('Expected one accessor per geometry buffer view');
     const [accessor]=accesses;
-    const stride=view.byteLength/accessor.count;
     const mode=view.target===34963?'TRIANGLES':'ATTRIBUTES';
-    if(!Number.isInteger(stride)||view.buffer!==0||accessor.byteOffset)throw Error('Unexpected geometry stride');
+    const stride=mode==='TRIANGLES'?({5123:2,5125:4}[accessor.componentType]):view.byteLength/accessor.count;
+    const length=accessor.count*stride;
+    // A 16-bit index buffer with an odd element count has two bytes of GLB padding.
+    if(!Number.isInteger(stride)||Math.ceil(length/4)*4!==view.byteLength||view.buffer!==0||accessor.byteOffset)
+      throw Error('Unexpected geometry stride');
     const start=view.byteOffset||0;
-    const block=Buffer.from(MeshoptEncoder.encodeGltfBuffer(original.subarray(start,start+view.byteLength),
+    const block=Buffer.from(MeshoptEncoder.encodeGltfBuffer(original.subarray(start,start+length),
       accessor.count,stride,mode,0));
     const pad=Buffer.alloc((4-block.length%4)%4);
     view.extensions={...view.extensions,[ext]:{
       buffer:0,byteOffset:offset,byteLength:block.length,byteStride:stride,count:accessor.count,mode,
     }};
     view.buffer=1;
+    view.byteLength=length;
     blocks.push(block,pad);
     offset+=block.length+pad.length;
   }

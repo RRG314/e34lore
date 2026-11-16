@@ -9,6 +9,8 @@ export function local525iFit(command) {
   const filename=path.join(root,'fit-review.json');
   if(!fs.existsSync(filename))return null;
   const receipt=JSON.parse(fs.readFileSync(filename,'utf8'));
+  const release=JSON.parse(fs.readFileSync('data/digital-twin/525i-service-release.json','utf8'));
+  if(receipt.release.id===release.id&&receipt.release.revision<release.revision)return null;
   const prefix='/models/e34-lore/r'+receipt.release.revision+'/';
   const valid=/^(?:manifest\.)?[a-f0-9]{64}\.(?:json|glb)$/;
   const files=new Map(receipt.files.map(file=>{

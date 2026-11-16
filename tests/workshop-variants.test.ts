@@ -234,3 +234,26 @@ describe('opening panel coverage', () => {
   }
  });
 });
+
+describe('center console references', () => {
+ it.each([
+  {pin:service525i, console:'e34trim:storing-partition', grip:'e34trim:selector-grip', number:'25161216464'},
+  ...[e30,...e30Variants].map(pin=>({
+   pin, console:'e30trim:front-console',
+   grip:pin.transmission==='Automatic'?'e30trim:automatic-lever':'e30trim:manual-shift-knob',
+   number:pin.transmission==='Automatic'?'25161216464':'25117500299',
+  })),
+ ])('shows the correct selector in the cabin and separates it from the trim for $pin.label', ({pin,console:consoleId,grip,number})=>{
+  const model=readModel(pin);
+  const view={...defaultView(),scope:'system:center-console'};
+  const cabin=visibleNodes(model,{...defaultView(),cabin:'driver'}).map(node=>node.id);
+  expect(cabin).toEqual(expect.arrayContaining([consoleId,grip]));
+  expect(model.catalog?.bindings[grip]?.positions.map(position=>position.number)).toContain(number);
+  const assembled=offsets(model,view), exploded=offsets(model,{...view,explosion:4});
+  expect(assembled.get(grip)).toEqual([0,0,0]);
+  expect(exploded.get(grip)).toBeDefined();
+  expect(exploded.get(grip)).not.toEqual(exploded.get(consoleId));
+  const oppositeGrip=pin.transmission==='Automatic'?'e30trim:manual-shift-knob':'e30trim:automatic-lever';
+  expect(cabin).not.toContain(oppositeGrip);
+ });
+});

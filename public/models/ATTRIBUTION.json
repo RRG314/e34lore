@@ -124,8 +124,9 @@
         1042,
         14,
         1043,
-        39,
         1044,
+        39,
+        1045,
         23
       ]
     },
@@ -157,8 +158,9 @@
         1042,
         14,
         1043,
-        39,
         1044,
+        39,
+        1045,
         23
       ]
     },
@@ -190,8 +192,9 @@
         1042,
         14,
         1043,
-        39,
         1044,
+        39,
+        1045,
         23
       ]
     },
@@ -429,7 +432,10 @@
         1181,
         1182,
         1183,
-        1184
+        1184,
+        1185,
+        1186,
+        1187
       ]
     },
     {
@@ -498,7 +504,9 @@
         1180,
         1181,
         1182,
-        1184
+        1184,
+        1185,
+        1187
       ]
     },
     {
@@ -527,6 +535,7 @@
       "referenceRevisions": [
         1042,
         1043,
+        1044,
         40,
         41,
         42,
@@ -534,7 +543,7 @@
         44,
         45,
         39,
-        1044
+        1045
       ]
     },
     {
@@ -597,7 +606,8 @@
       "referenceRevisions": [
         1042,
         1043,
-        1044
+        1044,
+        1045
       ]
     },
     {
@@ -620,7 +630,8 @@
       "referenceRevisions": [
         1042,
         1043,
-        1044
+        1044,
+        1045
       ]
     },
     {
@@ -1386,7 +1397,10 @@
         1181,
         1182,
         1183,
-        1184
+        1184,
+        1185,
+        1186,
+        1187
       ]
     },
     {
@@ -1425,7 +1439,10 @@
         1181,
         1182,
         1183,
-        1184
+        1184,
+        1185,
+        1186,
+        1187
       ]
     },
     {
@@ -1512,7 +1529,10 @@
         1181,
         1182,
         1183,
-        1184
+        1184,
+        1185,
+        1186,
+        1187
       ]
     },
     {
@@ -1564,7 +1584,10 @@
         1181,
         1182,
         1183,
-        1184
+        1184,
+        1185,
+        1186,
+        1187
       ]
     },
     {
@@ -1620,7 +1643,8 @@
       "changes": "See the versioned manifest for creators and adaptation notes. This index does not grant a new license.",
       "referenceRevisions": [
         1043,
-        1044
+        1044,
+        1045
       ]
     },
     {
@@ -1669,7 +1693,10 @@
         1181,
         1182,
         1183,
-        1184
+        1184,
+        1185,
+        1186,
+        1187
       ]
     },
     {
@@ -1813,6 +1840,95 @@
       "changes": "See the versioned manifest for creators and adaptation notes. This index does not grant a new license."
     },
     {
+      "file": "/models/e34-lore/r1044/75f6ce65a093c3ad7119c9dc99b1ffd0bc0715b7abd4007fad10bad41b942707.glb",
+      "bytes": 1383192,
+      "sha256": "75f6ce65a093c3ad7119c9dc99b1ffd0bc0715b7abd4007fad10bad41b942707",
+      "id": "authored:525i-visual-detail",
+      "revision": 1044,
+      "sourceCredit": [
+        {
+          "author": "E34 Lore · original procedural component study",
+          "url": "https://e34lore.com/copyright",
+          "license": "Original study; local review only",
+          "licenseUrl": "https://e34lore.com/copyright"
+        }
+      ],
+      "manifest": "/models/e34-lore/r1044/manifest.b1140a18ff3f78effd05fdff754e883d89dd4a6ec80911e425bfbb473426649a.json",
+      "notice": "/models/e34-525i/LICENSE.md",
+      "changes": "See the versioned manifest for creators and adaptation notes. This index does not grant a new license.",
+      "referenceRevisions": [
+        1044,
+        1045
+      ]
+    },
+    {
+      "file": "/models/e30-lore/r1182/d046882882061b17131ddfeb6aba7dc128379b27201c986b16b43499b80af5b4.glb",
+      "bytes": 5589308,
+      "sha256": "d046882882061b17131ddfeb6aba7dc128379b27201c986b16b43499b80af5b4",
+      "id": "e30:325i-exterior",
+      "revision": 1182,
+      "sourceCredit": [
+        {
+          "author": "E34 Lore",
+          "url": "https://e34lore.com/e30",
+          "license": "E34 Lore viewer geometry",
+          "licenseUrl": "https://e34lore.com/terms"
+        }
+      ],
+      "manifest": "/models/e30-lore/r1182/manifest.693470dd848e85fe79ba49d1743b6dc7108e5339b41f246a50a8943c2fb97d07.json",
+      "changes": "See the versioned manifest for creators and adaptation notes. This index does not grant a new license.",
+      "referenceRevisions": [
+        1182,
+        1183,
+        1184,
+        1185,
+        1186,
+        1187
+      ]
+    },
+    {
+      "file": "/models/e30-lore/r1183/4c50234f27ee3438297e1c77cb6dac51325443f5426dd29095ff8fc0632f5c51.glb",
+      "bytes": 254640,
+      "sha256": "4c50234f27ee3438297e1c77cb6dac51325443f5426dd29095ff8fc0632f5c51",
+      "id": "e30-325i-coupe-automatic:equipment",
+      "revision": 1183,
+      "sourceCredit": [
+        {
+          "author": "E34 Lore",
+          "url": "https://e34lore.com/e30",
+          "license": "E34 Lore viewer geometry",
+          "licenseUrl": "https://e34lore.com/terms"
+        }
+      ],
+      "manifest": "/models/e30-lore/r1183/manifest.093d31008b6b60faf07a241d4d7ab2644c9f35442836e12d8fcd35c1c96adc7c.json",
+      "changes": "See the versioned manifest for creators and adaptation notes. This index does not grant a new license.",
+      "referenceRevisions": [
+        1183,
+        1186
+      ]
+    },
+    {
+      "file": "/models/e30-lore/r1184/1480930d51e1a9b217ffd7a754a81117d7636f518c32abcb34d3a2ec7e19aeeb.glb",
+      "bytes": 55676,
+      "sha256": "1480930d51e1a9b217ffd7a754a81117d7636f518c32abcb34d3a2ec7e19aeeb",
+      "id": "e30-325i-coupe-rear-spoiler:equipment",
+      "revision": 1184,
+      "sourceCredit": [
+        {
+          "author": "E34 Lore",
+          "url": "https://e34lore.com/e30",
+          "license": "E34 Lore viewer geometry",
+          "licenseUrl": "https://e34lore.com/terms"
+        }
+      ],
+      "manifest": "/models/e30-lore/r1184/manifest.0443f8f56f250e1d6bbc64505d47b9d8b7ea043389423a3f558515b5ca89454f.json",
+      "changes": "See the versioned manifest for creators and adaptation notes. This index does not grant a new license.",
+      "referenceRevisions": [
+        1184,
+        1187
+      ]
+    },
+    {
       "file": "/models/e34-lore/r39/d94c83464168d66723e34e68eed0ef09e2af3879ed123841465c86571657d1d7.glb",
       "bytes": 129164,
       "sha256": "d94c83464168d66723e34e68eed0ef09e2af3879ed123841465c86571657d1d7",
@@ -1876,11 +1992,11 @@
       ]
     },
     {
-      "file": "/models/e34-lore/r1044/75f6ce65a093c3ad7119c9dc99b1ffd0bc0715b7abd4007fad10bad41b942707.glb",
-      "bytes": 1383192,
-      "sha256": "75f6ce65a093c3ad7119c9dc99b1ffd0bc0715b7abd4007fad10bad41b942707",
-      "id": "authored:525i-visual-detail",
-      "revision": 1044,
+      "file": "/models/e34-lore/r1045/eada97960f5a00d173d9b5cd4f104cb5bd1ab4376178cf3dd3c318881ed2cd59.glb",
+      "bytes": 234932,
+      "sha256": "eada97960f5a00d173d9b5cd4f104cb5bd1ab4376178cf3dd3c318881ed2cd59",
+      "id": "e34:center-console",
+      "revision": 1045,
       "sourceCredit": [
         {
           "author": "E34 Lore · original procedural component study",
@@ -1889,16 +2005,16 @@
           "licenseUrl": "https://e34lore.com/copyright"
         }
       ],
-      "manifest": "/models/e34-lore/r1044/manifest.b1140a18ff3f78effd05fdff754e883d89dd4a6ec80911e425bfbb473426649a.json",
+      "manifest": "/models/e34-lore/r1045/manifest.78c758e62f95d87aafafc6eb81b2d9c05ebd0fc5d750d06fb3f5376c46b32a67.json",
       "notice": "/models/e34-525i/LICENSE.md",
       "changes": "See the versioned manifest for creators and adaptation notes. This index does not grant a new license."
     },
     {
-      "file": "/models/e30-lore/r1182/d046882882061b17131ddfeb6aba7dc128379b27201c986b16b43499b80af5b4.glb",
-      "bytes": 5589308,
-      "sha256": "d046882882061b17131ddfeb6aba7dc128379b27201c986b16b43499b80af5b4",
-      "id": "e30:325i-exterior",
-      "revision": 1182,
+      "file": "/models/e30-lore/r1185/9d05a5eeec665ca891335a9c03f2cbf259def2e31fba901bd7900f90bc9f2b42.glb",
+      "bytes": 101580,
+      "sha256": "9d05a5eeec665ca891335a9c03f2cbf259def2e31fba901bd7900f90bc9f2b42",
+      "id": "e30:center-console",
+      "revision": 1185,
       "sourceCredit": [
         {
           "author": "E34 Lore",
@@ -1907,20 +2023,19 @@
           "licenseUrl": "https://e34lore.com/terms"
         }
       ],
-      "manifest": "/models/e30-lore/r1182/manifest.693470dd848e85fe79ba49d1743b6dc7108e5339b41f246a50a8943c2fb97d07.json",
+      "manifest": "/models/e30-lore/r1185/manifest.52cdff219e88fd45ba5ba4478fd889bb6616bb589f65165c9e2caff956b0c5fb.json",
       "changes": "See the versioned manifest for creators and adaptation notes. This index does not grant a new license.",
       "referenceRevisions": [
-        1182,
-        1183,
-        1184
+        1185,
+        1187
       ]
     },
     {
-      "file": "/models/e30-lore/r1183/4c50234f27ee3438297e1c77cb6dac51325443f5426dd29095ff8fc0632f5c51.glb",
-      "bytes": 254640,
-      "sha256": "4c50234f27ee3438297e1c77cb6dac51325443f5426dd29095ff8fc0632f5c51",
-      "id": "e30-325i-coupe-automatic:equipment",
-      "revision": 1183,
+      "file": "/models/e30-lore/r1186/1c7892f7f9a88bb2ce82ea5349735082f8e50e502fda985b2e671a07a4d26f2e.glb",
+      "bytes": 155088,
+      "sha256": "1c7892f7f9a88bb2ce82ea5349735082f8e50e502fda985b2e671a07a4d26f2e",
+      "id": "e30:center-console",
+      "revision": 1186,
       "sourceCredit": [
         {
           "author": "E34 Lore",
@@ -1929,24 +2044,7 @@
           "licenseUrl": "https://e34lore.com/terms"
         }
       ],
-      "manifest": "/models/e30-lore/r1183/manifest.093d31008b6b60faf07a241d4d7ab2644c9f35442836e12d8fcd35c1c96adc7c.json",
-      "changes": "See the versioned manifest for creators and adaptation notes. This index does not grant a new license."
-    },
-    {
-      "file": "/models/e30-lore/r1184/1480930d51e1a9b217ffd7a754a81117d7636f518c32abcb34d3a2ec7e19aeeb.glb",
-      "bytes": 55676,
-      "sha256": "1480930d51e1a9b217ffd7a754a81117d7636f518c32abcb34d3a2ec7e19aeeb",
-      "id": "e30-325i-coupe-rear-spoiler:equipment",
-      "revision": 1184,
-      "sourceCredit": [
-        {
-          "author": "E34 Lore",
-          "url": "https://e34lore.com/e30",
-          "license": "E34 Lore viewer geometry",
-          "licenseUrl": "https://e34lore.com/terms"
-        }
-      ],
-      "manifest": "/models/e30-lore/r1184/manifest.0443f8f56f250e1d6bbc64505d47b9d8b7ea043389423a3f558515b5ca89454f.json",
+      "manifest": "/models/e30-lore/r1186/manifest.9960f691e7158fa4d114d53522ecd22c2ac97c5a22be38e1a5bca0abb53dc114.json",
       "changes": "See the versioned manifest for creators and adaptation notes. This index does not grant a new license."
     },
     {
