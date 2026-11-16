@@ -18,7 +18,7 @@ import {referenceRelease,loadReference,vehicleReferences} from '../src/digital-t
 import {referenceVariantOffsets,clearDisplayRay} from '../src/digital-twin/public/variant-layout';
 import type {CatalogPage} from '../src/digital-twin/public/catalog';
 import {componentPlan} from '../src/digital-twin/public/component-separation';
-import {wiringAsset,wiringScope,wiringReferences} from '../src/data/wiring-routes';
+import {wiringAsset,wiringScope,wiringReferences,wiringFor,wiringWorkshopHref} from '../src/data/wiring-routes';
 import {withWiring,wiringGeometry} from '../src/digital-twin/public/wiring-model';
 import {offsets} from '../src/digital-twin/public/layout';
 const releases=[...variants,automatic525i];
@@ -29,7 +29,7 @@ describe('native workshop model switching',()=>{
  it.each([e30,service525i])('limits wiring to the matching $id and separates sleeves before the branches',pin=>{
    const manifest=parseReference(JSON.parse(fs.readFileSync('public'+pin.manifestUrl,'utf8')));
    const model=withWiring(manifest);
-   expect(withWiring({...manifest,revision:manifest.revision-1}).nodes).toBe(manifest.nodes);
+   expect(withWiring({...manifest,id:'unsupported-reference'}).nodes).toBe(manifest.nodes);
    expect(visibleNodes(model,defaultView()).some(node=>node.assetId===wiringAsset)).toBe(false);
    expect(visibleNodes(model,{...defaultView(),explosion:4}).some(node=>node.assetId===wiringAsset)).toBe(false);
    const isolated={...defaultView(),scope:wiringScope,shell:'hidden' as const};
@@ -54,6 +54,12 @@ describe('native workshop model switching',()=>{
    expect(offsets(model,single).get(branch.id+':sleeve')).not.toEqual([0,0,0]);
    expect(visibleNodes(model,{...single,shell:'ghost'}).filter(node=>node.assetId===wiringAsset)).toHaveLength(2);
    expect(savedView({name:'Harness view',revision:pin.revision,view:isolated,camera:null},model)).not.toBeNull();
+ });
+ it('links the current E30 wiring view and retains the previous revision',()=>{
+   const params=new URL(wiringWorkshopHref('e30'),'https://e34lore.com').searchParams;
+   expect(params.get('model_revision')).toBe(String(e30.revision));
+   expect(wiringFor({id:e30.id,revision:1179})).toBe(wiringReferences.e30);
+   expect(wiringFor({id:e30.id,revision:1178})).toBeUndefined();
  });
  it('keeps adjacent E30 loom sections joined in their installed positions',()=>{
    const routes=wiringReferences.e30.routes;

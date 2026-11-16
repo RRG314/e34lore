@@ -58,6 +58,7 @@ const frontFenderEnd=1.962;
 const rearQuarterEnd=-2.051;
 const hoodBack=.861, hoodNose=frontBumperX-.070, hoodHalfWidth=.716;
 const rearDeckEnd=-2.119, trunkHalfWidth=.729;
+const trunkHemHeight=.090, trunkRollRadius=.027, trunkFaceRake=.060;
 
 function hoodEdge(u) {
   return [interpolate(hoodBack,hoodNose-.045,u),
@@ -66,7 +67,8 @@ function hoodEdge(u) {
 }
 
 function trunkEdge(u) {
-  return [interpolate(-1.522,rearDeckEnd+.039,u),
+  const edgeRoll=.023*smooth((u-.80)/.20);
+  return [interpolate(-1.522,rearDeckEnd+.039,u)+edgeRoll,
     interpolate(.849,.819,u)+.009*Math.sin(Math.PI*u),
     interpolate(.748,trunkHalfWidth,smooth(u))];
 }
@@ -274,11 +276,25 @@ function trunkPoint(u,v) {
   return [x-.039*(1-.74*lateral*lateral-.26*lateral**6)*u**3,y+.012*(1-lateral*lateral),lateral*z];
 }
 
-const trunkHemHeight=.090;
 function trunkHem(u,v) {
   const [x,y,z]=trunkPoint(1,u);
-  const a=v*Math.PI/2;
-  return [x-.013*Math.sin(a)+.015*v**3,y-trunkHemHeight*(1-Math.cos(a)),z*(1-.005*v)];
+  const [deckX,deckY]=trunkPoint(.999,u);
+  const start=Math.atan2(deckY-y,deckX-x);
+  const end=Math.PI/2+Math.atan(trunkFaceRake);
+  const angle=interpolate(start,end,Math.min(1,2*v));
+  const rollDrop=trunkRollRadius*(Math.cos(start)-Math.cos(angle));
+  const faceDrop=Math.max(0,2*v-1)*(trunkHemHeight-rollDrop);
+  return [
+    x-trunkRollRadius*(Math.sin(angle)-Math.sin(start))+trunkFaceRake*faceDrop,
+    y-rollDrop-faceDrop,
+    z*(1-.005*v),
+  ];
+}
+
+// The 1991 coupe turns through a short radius above the near-flat badge face.
+// https://carsandbids.com/auctions/3vVZ1qQd/1991-bmw-325i-coupe
+function trunkSkin(u,v) {
+  return u<=.80?trunkPoint(u/.80,v):trunkHem(v,(u-.80)/.20);
 }
 
 // Use the same start curve as the side skin and the same end curve as the
@@ -749,15 +765,15 @@ function frontLamp(group,z,radius) {
   }
 }
 
-function roundel(group,position,vertical) {
+function roundel(group,position,vertical,tilt=0) {
   const radius=vertical?.039:.041;
   const badge = addMesh(group,new CylinderGeometry(radius,radius,.004,48),steel,position);
   const inner = addMesh(group,new CylinderGeometry(radius*.91,radius*.91,.005,48),grille,position);
-  if(vertical) badge.rotation.z=inner.rotation.z=Math.PI/2;
+  if(vertical) badge.rotation.z=inner.rotation.z=Math.PI/2+tilt;
   const bmwBlue = color('Badge blue',0x2a75ad,.45);
   for(const i of [0,1,2,3]){
     const disc = addMesh(group,new CylinderGeometry(radius*.66,radius*.66,.006,16,1,false,i*Math.PI/2,Math.PI/2),i%2?reverse:bmwBlue,position);
-    if(vertical) disc.rotation.z=Math.PI/2;
+    if(vertical) disc.rotation.z=Math.PI/2+tilt;
   }
 }
 
@@ -849,20 +865,22 @@ export function buildE30Exterior(add) {
     roundel(g,[x,y+.002,0],false);
   },{page:'hood',paintSurface:true,cabinVisible:true});
   add('e30body:assembly','trunk','Trunk lid',[0,0,0],[-.59,1.18,0],g=>{
-    patch(g,paint,trunkPoint,52,44);
-    patch(g,paint,trunkHem,56,12);
+    patch(g,paint,trunkSkin,120,56);
     // The underside of the hem stays behind the gap and moves with the lid.
     patch(g,lining,(u,v)=>{
       const [x,y,z]=trunkHem(u,1);
       return [x+.003+.009*v,y-.001-.004*v,z*(1-.004*v)];
     },62,5);
     function trunkBadge(z,y) {
-      const u=(1+z/trunkHalfWidth)/2;
-      const depth=Math.max(0,Math.min(1,(trunkHem(u,0)[1]-y)/trunkHemHeight));
-      const v=Math.acos(1-depth)/(Math.PI/2);
-      return [trunkHem(u,v)[0]-.002,y,z];
+      const face=v=>trunkHem((1+z/(trunkHalfWidth*(1-.005*v)))/2,v);
+      let lo=0,hi=1;
+      for(let i=0;i<16;i++){
+        const mid=(lo+hi)/2;
+        if(face(mid)[1]>y)lo=mid;else hi=mid;
+      }
+      return [face((lo+hi)/2)[0]-.002,y,z];
     }
-    roundel(g,trunkBadge(0,.785),true);
+    roundel(g,trunkBadge(0,.781),true,Math.atan(trunkFaceRake));
     modelLettering(g,trunkBadge);
   },{page:'trunk_lid_closing_system',paintSurface:true,cabinVisible:true});
   add('e30body:assembly','roof','Roof skin',[0,0,0],[-.08,1.53,0],g=>{
