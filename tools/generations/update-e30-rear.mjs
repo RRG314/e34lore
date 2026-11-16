@@ -10,13 +10,13 @@ import { immutable, localReferenceTools, readJson, replaceJson, sha } from '../g
 import { buildE30Exterior, paint } from './e30-325i-exterior.mjs';
 import { rearLensPoint } from './e30-325i-trim.mjs';
 
-const revision = 1181;
+const revision = 1182;
 const pinPath = 'data/digital-twin/e30-candidate.json';
 const archivePath = 'data/digital-twin/workshop-panel-archives.json';
 const current = await readJson(pinPath);
 const archives = await readJson(archivePath);
-const prior = [current, ...archives].find(pin => pin.id === current.id && pin.revision === 1180);
-assert(prior && current.revision <= revision, 'Expected the 325i revision 1180 exterior');
+const prior = [current, ...archives].find(pin => pin.id === current.id && pin.revision === 1181);
+assert(prior && current.revision <= revision, 'Expected the 325i revision 1181 exterior');
 
 const previousManifest = await fs.readFile('public' + prior.manifestUrl);
 assert.equal(sha(previousManifest), prior.sha256);
@@ -52,7 +52,7 @@ const lowerFace = [-.60, 0, .60].map(z => {
 });
 const oldLamp = panelMeshes('tail-light-right');
 const oldProjection = rearHit(oldLamp, .644, .383).point.x;
-const panels = new Set(['tail-panel', 'rear-quarter-left', 'rear-quarter-right', 'tail-light-left', 'tail-light-right', 'rear-bumper']);
+const panels = new Set(['tail-panel', 'rear-bumper']);
 buildE30Exterior((parent, key, _name, _position, _direction, draw) => {
   if (parent !== 'e30body:assembly' || !panels.delete(key)) return;
   const node = nodes.get('e30body:' + key);
@@ -83,12 +83,21 @@ for (const { x, y, z } of lowerFace) {
 const downRay = new Raycaster(new Vector3(), new Vector3(0, -1, 0), 0, .4);
 const tail = paintedMeshes('tail-panel');
 const bumper = paintedMeshes('rear-bumper');
+for (const z of [0, -.25, .25, -.50, .50, -.69, .69, -.75, .75]) {
+  const rail = rearHit(tail, .553, z);
+  const lip = rearHit(bumper, .547, z);
+  assert(rail && lip, 'Missing painted rear seam at ' + z);
+  const reveal = rail.point.x - lip.point.x;
+  assert(reveal > .010 && reveal < .041, 'Bumper ledge at ' + z + ': ' + (reveal * 1000).toFixed(1) + ' mm');
+  downRay.ray.origin.set(rail.point.x + .004, .61, z);
+  const coverSeat = downRay.intersectObjects(bumper)[0];
+  assert(coverSeat && coverSeat.point.y > .543, 'Bumper top does not extend under the rear panel at ' + z);
+}
 for (const [name, side] of [['left', -1], ['right', 1]]) {
   const quarter = paintedMeshes('rear-quarter-' + name);
   const lamp = panelMeshes('tail-light-' + name);
   const newProjection = rearHit(lamp, .644, side * .383).point.x;
-  assert(newProjection - oldProjection > .010 && newProjection - oldProjection < .023,
-    name + ' lens should sit closer to the plate panel');
+  assert.equal(newProjection, oldProjection, name + ' lamp position changed');
   for (const x of [-1.62, -1.82, -1.98, -2.051]) {
     const edges = [[], []];
     for (let i = 0; i <= 68; i++) {

@@ -85,7 +85,7 @@ const e34Doors = ([-1,1] as const).flatMap(side => ([false,true] as const).map((
 export const wiringReferences: Record<Series, RoutingReference> = {
   e30: {
     id: 'e30-325i-coupe-manual',
-    revisions: [1181, 1180, 1179],
+    revisions: [1182, 1181, 1180, 1179],
     name: '1991 325i coupe',
     coverage: 'Main loom follows BMW’s routing drawing. Branch bends, clips and sleeve sizes are approximate.',
     routes: [

@@ -461,11 +461,13 @@ export class ReferenceRenderer {
                 const glazing = !!(view.cabin && n.cabinGlazing && source.transparent);
                 mat.opacity = glazing ? .08 : ghost && !active ? Math.min(highlightGhost ? .09 : .16, source.opacity) : source.opacity;
                 const side = glazing ? T.DoubleSide : source.side;
-                if (mat.side !== side) {
+                const transparent = source.transparent || ghost || glazing;
+                if (mat.side !== side || mat.transparent !== transparent) {
                     mat.side = side;
+                    mat.transparent = transparent;
+                    // Switching between opaque and transparent changes Three's shader program.
                     mat.needsUpdate = true;
                 }
-                mat.transparent = source.transparent || ghost || glazing;
                 mat.depthWrite = !(ghost || glazing) && source.depthWrite;
                 if (mat instanceof T.MeshStandardMaterial) {
                     mat.emissive.set(active ? '#bd4d28' : '#000000');

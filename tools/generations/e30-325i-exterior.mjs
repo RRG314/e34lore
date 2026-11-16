@@ -59,6 +59,7 @@ const rearQuarterEnd=-2.051;
 const hoodBack=.861, hoodNose=frontBumperX-.070, hoodHalfWidth=.716;
 const rearDeckEnd=-2.119, trunkHalfWidth=.729;
 const trunkHemHeight=.090, trunkRollRadius=.027, trunkFaceRake=.060;
+const rearPanelBottom=.551, rearPanelHalfWidth=.783;
 
 function hoodEdge(u) {
   return [interpolate(hoodBack,hoodNose-.045,u),
@@ -378,8 +379,8 @@ function rearQuarterReturn(group,side) {
 function rearPanelPoint(u,v) {
   const t=2*u-1, a=Math.abs(t);
   const hem=trunkHem(u,1);
-  const z=t*interpolate(.783,trunkHalfWidth*.995,smooth((v-.66)/.34));
-  const y=interpolate(.544,hem[1]-.004,v);
+  const z=t*interpolate(rearPanelHalfWidth,trunkHalfWidth*.995,smooth((v-.66)/.34));
+  const y=interpolate(rearPanelBottom,hem[1]-.004,v);
   const plate=interpolate(-2.125+.047*a**4,hem[0]+.004,smooth(v));
   const lampV=Math.max(0,Math.min(1,(y-.566)/.162));
   const [,,inboard]=rearLensPoint(1,0,lampV), [,,outboard]=rearLensPoint(1,1,lampV);
@@ -409,7 +410,7 @@ function coverFootprint(u) {
       (-2*t**3+3*t*t)*q[i]+(t**3-t*t)*step*dq;
   });
 }
-function coverContour(t,v,layer=0) {
+function coverSurface(t,v,layer=0) {
   const a=Math.abs(t),side=t<0?-1:1;
   const [x,z]=coverFootprint(a);
   const upper=.548-.002*smooth((a-.73)/.27);
@@ -422,6 +423,46 @@ function coverContour(t,v,layer=0) {
   return [x-(crown+layer)*dz/length+.004*tip*Math.abs(2*v-1)**3,
     height,side*(z+(crown+layer)*dx/length-.004*tip)];
 }
+
+function rearBumperSeat({side, a, top}) {
+  const corner=.65;
+  const [cornerX,cornerZ]=coverFootprint(corner);
+  const [frontX]=coverFootprint(1);
+  const y=top[1]-.002;
+  const tailU=(1+side*Math.min(1,top[2]*side/cornerZ))/2;
+  const [panelX,,panelZ]=rearPanelPoint(tailU,0);
+  const tail=[panelX+.010,y,panelZ];
+  if(a<=corner)return tail;
+  const x=interpolate(rearQuarterEnd+.005,frontX,(top[0]-cornerX)/(frontX-cornerX));
+  const [,,quarterZ]=sideSkinPoint(x,rearPanelBottom,side,rearOpening);
+  return mix(tail,[x,y,quarterZ-side*.008],smooth((a-corner)/.095));
+}
+
+function coverEdges(t) {
+  const a=Math.abs(t),side=t<0?-1:1;
+  const top=coverSurface(t,1);
+  const seat=rearBumperSeat({a,side,top});
+  const dx=seat[0]-top[0], dz=seat[2]-top[2];
+  const distance=Math.hypot(dx,dz);
+  const ledge=interpolate(.041,.023,smooth((a-.32)/.30));
+  const inset=Math.max(0,1-ledge/Math.max(distance,.001));
+  return { seat, shiftX: dx*inset, shiftZ: dz*inset };
+}
+
+function coverContour(t,v,layer=0) {
+  const [x,y,z]=coverSurface(t,v,layer);
+  if(v<=.76)return [x,y,z];
+  const {shiftX,shiftZ}=coverEdges(t);
+  const blend=smooth((v-.76)/.24);
+  return [x+shiftX*blend,y,z+shiftZ*blend];
+}
+
+function rearBumperSkin(u,v) {
+  const t=2*u-1;
+  if(v<=.80)return coverContour(t,v/.80);
+  return mix(coverContour(t,1),coverEdges(t).seat,(v-.80)/.20);
+}
+
 function bumperMouldingPoint(t,v,extra=0) {
   // Align the upper and lower edges on the same cover all the way into the
   // side return. The moulding face has rounded lips and a shallow inset seam.
@@ -982,13 +1023,7 @@ export function buildE30Exterior(add) {
     }
   },{page:'front_panel',paintSurface:true});
   add('e30body:assembly','rear-bumper','Rear bumper and rub strip',[0,0,0],[-1.03,-.01,0],g=>{
-    patch(g,paint,(u,v)=>coverContour(2*u-1,v),164,24);
-    // The upper edge of the cover turns under the painted rear panel.
-    patch(g,paint,(u,v)=>{
-      const t=2*u-1, reach=interpolate(.058,.031,smooth((Math.abs(t)-.64)/.25));
-      const [x,y,z]=coverContour(t,1,-reach*v);
-      return [x,y-.005*v,z];
-    },164,8);
+    patch(g,paint,rearBumperSkin,164,50);
     // OEM center moulding and two side strips are cut from the same profile.
     for(const [start,end] of [[-.994,-.682],[-.679,.679],[.682,.994]]){
       patch(g,rubber,(u,v)=>bumperMouldingPoint(interpolate(start,end,u),v),
@@ -1022,6 +1057,7 @@ export function buildE30Exterior(add) {
   },{page:'bumper_rear',paintSurface:true});
   add('e30body:assembly','tail-panel','Rear panel and license plate recess',[0,0,0],[-.93,.39,0],g=>{
     patch(g,paint,rearPanelPoint,84,30);
+    panelReturn(g,paint,u=>rearPanelPoint(u,0),.008,.017);
     rounded(g,[.010,.139,.330],grille,[-2.109,.644,0],.007);
     rounded(g,[.008,.121,.306],steel,[-2.117,.644,0],.006);
     rounded(g,[.015,.009,.142],grille,[-2.133,.728,0],.004);
