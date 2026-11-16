@@ -1,8 +1,0 @@
-{
-  "packageId": "com.e34lore.app",
-  "sha256": "A9:39:D8:19:50:E7:72:8A:F9:77:8A:4A:C8:39:37:3F:2E:50:E8:3C:E6:6D:82:66:67:3F:39:E5:38:05:70:F2",
-  "verifiedFrom": "Google Play Console / E34 Lore / App signing / Digital Asset Links JSON",
-  "appId": "4975993992850603055",
-  "verifiedOn": "2026-11-05",
-  "purpose": "App-signing certificate used on distributed Play builds; distinct from the upload certificate."
-}
