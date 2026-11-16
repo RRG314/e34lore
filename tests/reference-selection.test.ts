@@ -1,0 +1,25 @@
+import {describe,it,expect} from 'vitest';
+import {emptyVehicle} from '../src/data/catalog';
+import {vehicleReferences} from '../src/digital-twin/public/load-reference';
+import {engineMatches,resolveVehicleReference,switchReferenceHref,referenceVehicle} from '../src/vehicle/reference-context';
+import {preferredCatalogContext,type CatalogContext} from '../src/domain/catalog';
+import {starterReferences} from '../src/references/context';
+import {externalReferenceUrl} from '../supabase/functions/_shared/external-reference.mjs';
+
+describe('vehicle-specific reference navigation',()=>{
+ it('defaults to the 525i automatic only when no vehicle was selected',()=>{expect(resolveVehicleReference(vehicleReferences,emptyVehicle).selected?.id).toBe('e34-525i-sedan-automatic');expect(resolveVehicleReference(vehicleReferences,{...emptyVehicle,model:'M5',engine:'S38'}).selected).toBeUndefined();});
+ it('orders model, body and transmission consistently',()=>{
+  expect(vehicleReferences.map(r=>r.label)).toEqual(['525i Sedan · Automatic','525i Sedan · Manual','530i Sedan · Automatic','530i Sedan · Manual','530i Touring · Automatic','530i Touring · Manual','535i Sedan · Automatic','535i Sedan · Manual','540i Sedan · Automatic','540i Sedan · Manual']);
+  expect(resolveVehicleReference(vehicleReferences,{...emptyVehicle,model:'525i',body:'Sedan',transmission:'Automatic'}).selected?.id).toBe('e34-525i-sedan-automatic');
+ });
+ it('requires transmission/body information when references are ambiguous',()=>{const v={...emptyVehicle,model:'530i',engine:'M60'};expect(resolveVehicleReference(vehicleReferences,v).status).toBe('ambiguous');const result=resolveVehicleReference(vehicleReferences,{...v,year:'1994',body:'Touring',transmission:'Automatic'});expect(result.selected?.id).toBe('e34-530i-touring-automatic');});
+ it('does not substitute a different engine or a left-hand-drive illustration for an unspecified exact match',()=>{expect(engineMatches('M60B40','M60B30')).toBe(false);expect(engineMatches('M50TU','M50')).toBe(false);expect(resolveVehicleReference(vehicleReferences,{...emptyVehicle,model:'540i',steering:'RHD'}).status).toBe('missing');});
+ it('retains an explicit comparison without changing the selected car',()=>{const v={...emptyVehicle,model:'540i',body:'Sedan',transmission:'Automatic'};expect(resolveVehicleReference(vehicleReferences,v,'e34-530i-touring-manual').selected?.model).toBe('530i');expect(v.model).toBe('540i');expect(resolveVehicleReference(vehicleReferences,v,'missing').selected).toBeUndefined();});
+ it('removes old private and source-position links when changing reference',()=>{const next=vehicleReferences.find(r=>r.id==='e34-540i-sedan-automatic')!;const href=switchReferenceHref('/workshop?tab=diagrams&part=bmw-11517527799&system=cooling&node=old&catalog_position=old&configuration_revision=private&scan=private&vehicle=private',next);const u=new URL(href,'https://e34lore.com');expect(u.searchParams.get('reference')).toBe(next.id);expect(u.searchParams.get('tab')).toBe('diagrams');expect(u.searchParams.get('part')).toBe('bmw-11517527799');for(const key of ['node','catalog_position','configuration_revision','scan','vehicle'])expect(u.searchParams.has(key)).toBe(false);expect(referenceVehicle(next).market).toBe('');});
+ it('requires an explicit catalog when known details produce equal matches',()=>{const a={id:'one',model_id:'540i',model_year:1994,engine:'M60',body:'Sedan',market:'USA'} as CatalogContext;const b={...a,id:'two',market:'EUR'};const v={...emptyVehicle,model:'540i',year:'1994',engine:'M60',body:'Sedan'};expect(preferredCatalogContext([a,b],v)).toBeUndefined();expect(preferredCatalogContext([a,b],v,'two')?.id).toBe('two');expect(preferredCatalogContext([a,b],{...v,market:'USA'})?.id).toBe('one');});
+});
+describe('authored external discussion references',()=>{
+ it('keeps M60 water-pump advice away from an explicitly different engine',async()=>{const target={kind:'component' as const,id:'cooling'};const m50=await starterReferences(target,{model:'525i',engine:'M50TU'});expect(m50.some(s=>s.title.includes('M60'))).toBe(false);const m60=await starterReferences(target,{model:'540i',engine:'M60B40'});expect(m60.some(s=>s.title.includes('M60'))).toBe(true);});
+ it('connects a canonical part to a relevant guide source without copying third-party bodies',async()=>{const rows=await starterReferences({kind:'part',id:'coolant-pump'},{engine:'M50'});expect(rows.some(s=>s.platform==='E30 Zone')).toBe(true);expect(rows.every(s=>externalReferenceUrl(s.url)&&!('body' in s))).toBe(true);});
+ it('deduplicates tracking variants and rejects redirect or credential URLs',()=>{const a=externalReferenceUrl('https://old.reddit.com/r/E34/comments/1crajtx/thrust_arm/?utm_source=test');expect(a?.canonical).toBe('https://www.reddit.com/comments/1crajtx/');for(const u of ['https://reddit.com@evil.example/r/E34/comments/1crajtx/','https://www.reddit.com/redirect?url=https://evil.example','http://www.reddit.com/r/E34/comments/1crajtx/'])expect(externalReferenceUrl(u)).toBeNull();});
+});

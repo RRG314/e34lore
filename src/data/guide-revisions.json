@@ -1,0 +1,519 @@
+[
+  {
+    "guide": "identify-your-engine",
+    "revision": "bffabae78e2e7427069e0d7e",
+    "title": "Identify the engine before choosing a procedure",
+    "steps": [
+      "Record the actual vehicle",
+      "Choose a source-supported starting point",
+      "Check the car against its history",
+      "Carry the identity forward"
+    ]
+  },
+  {
+    "guide": "cooling-system-visual-check",
+    "revision": "355ab87150fd6bf2a1f95a8b",
+    "title": "Start an overheating investigation with a cold inspection",
+    "steps": [
+      "Make the work area safe",
+      "Record level and visible leakage",
+      "Look over hoses and the drive belt",
+      "Inspect the radiator air path",
+      "Choose the next test from the evidence"
+    ]
+  },
+  {
+    "guide": "cooling-fan-airflow-check",
+    "revision": "ec0626f718e48c7bed2d7c3e",
+    "title": "Separate an airflow concern from a fan diagnosis",
+    "steps": [
+      "Describe when the symptom happens",
+      "Identify the two fan arrangements",
+      "Inspect visible condition",
+      "Escalate to the appropriate controlled test"
+    ]
+  },
+  {
+    "guide": "m50-water-pump-job-planning",
+    "revision": "5c458d5b100cc7b4c5c2b469",
+    "title": "Plan an M50 coolant-pump job",
+    "steps": [
+      "Confirm the M50 application",
+      "Plan access before draining",
+      "Extract the old pump squarely",
+      "Fit the new seal and tighten evenly",
+      "Restore the cooling system and verify"
+    ]
+  },
+  {
+    "guide": "battery-connections-first-check",
+    "revision": "3b60d5c1f6145f24b09ade71",
+    "title": "Inspect battery cables and grounds before blaming the alternator",
+    "steps": [
+      "Find the battery for this configuration",
+      "Inspect without disturbing the connections",
+      "Follow the ground path visually",
+      "Check the alternator belt visually",
+      "Request the next measurement"
+    ]
+  },
+  {
+    "guide": "front-strut-component-identification",
+    "revision": "d42647ea4f23a5c5480bb16f",
+    "title": "Identify a front strut assembly and its production differences",
+    "steps": [
+      "Distinguish the nearby components",
+      "Read the strut as an assembly",
+      "Check the production split",
+      "Verify fitment before ordering"
+    ]
+  },
+  {
+    "guide": "engine-air-filter-replacement",
+    "revision": "bbb9302557d978655c0dcffb",
+    "title": "Replace the engine air filter",
+    "steps": [
+      "Locate the airbox and check the replacement",
+      "Release the perimeter clips",
+      "Clean the housing and seat the element",
+      "Close and inspect the intake"
+    ]
+  },
+  {
+    "guide": "windshield-wiper-blade-replacement",
+    "revision": "0cc2dc31c5521182bcd39451",
+    "title": "Replace the front windshield wiper blades",
+    "steps": [
+      "Match the attachment on each arm",
+      "Release the blade without dropping the arm",
+      "Fit and test the new blade lock",
+      "Verify sweep and park"
+    ]
+  },
+  {
+    "guide": "accessory-drive-belt-inspection",
+    "revision": "230f468829a63d158784fce3",
+    "title": "Inspect accessory drive belts for wear",
+    "steps": [
+      "Separate the accessory belts from the timing drive",
+      "Inspect each accessible span",
+      "Check rib wear on a modern replacement belt",
+      "Check belt seating and nearby traces",
+      "Decide what needs further work"
+    ]
+  },
+  {
+    "guide": "brake-fluid-level-inspection",
+    "revision": "661e62165dc6018de55b9660",
+    "title": "Check the brake and clutch fluid reservoir",
+    "steps": [
+      "Identify the correct reservoir",
+      "Read the level against both marks",
+      "Capture any symptoms and change over time",
+      "Route a low reading to diagnosis"
+    ]
+  },
+  {
+    "guide": "power-steering-fluid-level-inspection",
+    "revision": "5a990239c85ab6caf4f9165e",
+    "title": "Identify and check the power-steering fluid",
+    "steps": [
+      "Confirm the reservoir identity",
+      "Read the dipstick marks",
+      "Look for a source of loss"
+    ]
+  },
+  {
+    "guide": "cold-tire-pressure-check",
+    "revision": "5aa249bd5ab14aabffe6f3b5",
+    "title": "Check and set cold tire pressures",
+    "steps": [
+      "Read the correct placard row",
+      "Measure before adding air",
+      "Set each tire and recheck it",
+      "Follow up on repeat loss"
+    ]
+  },
+  {
+    "guide": "m50-engine-oil-and-filter",
+    "revision": "82ff9afad8ff10385bc7b214",
+    "title": "Change the oil and cartridge filter on an M50 525i",
+    "steps": [
+      "Confirm the filter, seals and tightening values",
+      "Drain the sump and refit the plug",
+      "Replace the cartridge and seals",
+      "Refill by the dipstick",
+      "Check pressure, leaks and final level"
+    ]
+  },
+  {
+    "guide": "factory-halogen-headlight-bulb",
+    "revision": "f965f2e354ac0411f4f45edf",
+    "title": "Replace a factory twist-lock halogen headlight bulb",
+    "steps": [
+      "Identify the lamp and verify the bulb",
+      "Open rear access",
+      "Release the old bulb and seat the new one",
+      "Restore the covers and verify the beam"
+    ]
+  },
+  {
+    "guide": "sedan-tail-lamp-bulb",
+    "revision": "edadc792261b6603630149f0",
+    "title": "Replace a body-mounted tail lamp bulb on an E34 Sedan",
+    "steps": [
+      "Identify the failed function",
+      "Reach and remove the holder",
+      "Install the bulb and lock the holder",
+      "Verify the lighting"
+    ]
+  },
+  {
+    "guide": "front-door-window-dropped-inspection",
+    "revision": "03a5a93dfb405f2cf0b84967",
+    "title": "Check a front door window that dropped or sits crooked",
+    "steps": [
+      "Record where the glass stopped",
+      "Separate the glass support from the drive",
+      "Choose the next source and protect the car"
+    ]
+  },
+  {
+    "guide": "m50-spark-plug-replacement",
+    "revision": "fe74da78e64e651cbd52fdfb",
+    "title": "Replace the M50 or M50TU spark plugs",
+    "steps": [
+      "Confirm plug fit and reach",
+      "Expose the coils and record their wiring",
+      "Inspect each well before removing the plug",
+      "Start threads by hand and seat the plugs",
+      "Reconnect and check idle"
+    ]
+  },
+  {
+    "guide": "m50-valve-cover-gasket",
+    "revision": "15896564ee7a2026775f9995",
+    "title": "Replace the M50 valve-cover gasket",
+    "steps": [
+      "Verify the leak and gather matching seals",
+      "Disconnect cover attachments",
+      "Lift the cover and prepare the mating surfaces",
+      "Install seals and seat the cover",
+      "Tighten and confirm the repair"
+    ]
+  },
+  {
+    "guide": "m50tu-vanos-diagnosis",
+    "revision": "0431eb16ffbf8efa5453bf0c",
+    "title": "Diagnose M50TU single VANOS travel",
+    "steps": [
+      "Identify the symptom before taking the engine apart",
+      "Expose the timing reference and lock crank TDC",
+      "Connect the air adapter and measure baseline position",
+      "Command the solenoid and compare travel",
+      "Interpret and restore"
+    ]
+  },
+  {
+    "guide": "m50tu-single-vanos-service",
+    "revision": "75f682f09bf084394b9f9020",
+    "title": "Remove and reinstall M50TU single VANOS",
+    "steps": [
+      "Expose the actuator and set cylinder 1 compression TDC",
+      "Release the secondary sprocket and remove the unit",
+      "Set the installation preload arrangement",
+      "Engage the first available spline",
+      "Set chain preload and secure the timing",
+      "Prove timing by hand before reassembly",
+      "Restore the cover and check oil feed and operation"
+    ]
+  },
+  {
+    "guide": "m20-timing-belt",
+    "revision": "654e9a93bfa07f8ef70c3a30",
+    "title": "Replace the M20 timing belt and tensioner",
+    "steps": [
+      "Prepare access and retain the belt routing record",
+      "Set and photograph the original timing marks",
+      "Unload the old belt and inspect the drive",
+      "Fit the new belt and release the tensioner",
+      "Hand-turn twice and confirm the marks",
+      "Reassemble, refill and check for leaks"
+    ]
+  },
+  {
+    "guide": "e34-cabin-filter-replacement",
+    "revision": "6ecc4a024e44fbd1ba41d5ff",
+    "title": "Replace the HVAC cabin microfilter",
+    "steps": [
+      "Confirm the filter housing",
+      "Make space at the glovebox and center console",
+      "Remove the duct and open the housing",
+      "Seat the replacement and verify air delivery"
+    ]
+  },
+  {
+    "guide": "hood-support-struts",
+    "revision": "00a704a627350615b71b6596",
+    "title": "Replace the hood support struts",
+    "steps": [
+      "Secure the hood fully open",
+      "Release one strut at both studs",
+      "Seat and test the replacement ends",
+      "Verify support through the hood travel"
+    ]
+  },
+  {
+    "guide": "windshield-washer-pump",
+    "revision": "6299fa2b7198ff6996b07426",
+    "title": "Replace the windshield washer pump",
+    "steps": [
+      "Isolate a pump fault",
+      "Disconnect and drain the front reservoir",
+      "Renew the pump seal and reconnect",
+      "Verify both spray and sealing"
+    ]
+  },
+  {
+    "guide": "brake-pad-and-rotor-inspection",
+    "revision": "a29387f52d32233c1aeb07a1",
+    "title": "Measure brake pad and rotor wear",
+    "steps": [
+      "Record symptoms and identify the brakes",
+      "Measure lining separately from the backing plate",
+      "Measure the disc at multiple points",
+      "Act on the weakest measurement"
+    ]
+  },
+  {
+    "guide": "identify-transmission-tag",
+    "revision": "e3cb5dab87bd95cac366a976",
+    "title": "Identify an E34 gearbox from its tag",
+    "steps": [
+      "Record the vehicle and current transmission",
+      "Read and photograph the tag",
+      "Select the matching procedure"
+    ]
+  },
+  {
+    "guide": "manual-transmission-fluid",
+    "revision": "8019b5b24c3f6d4e62005aba",
+    "title": "Drain and refill a factory manual gearbox",
+    "steps": [
+      "Match the fluid and plug hardware",
+      "Check fill access first",
+      "Drain and inspect",
+      "Set the level and check the seals"
+    ]
+  },
+  {
+    "guide": "differential-fluid-service",
+    "revision": "106ab4b878c53b6e1037020d",
+    "title": "Service the rear differential oil",
+    "steps": [
+      "Identify the installed differential",
+      "Confirm fill access and drain the oil",
+      "Fill on a level plane",
+      "Inspect the housing and record the service"
+    ]
+  },
+  {
+    "guide": "diagnose-blown-fuse",
+    "revision": "9a040fad7c8921f0ebe0f2f4",
+    "title": "Find and test a blown fuse",
+    "steps": [
+      "Identify the failed functions",
+      "Check both sides of the fuse",
+      "Confirm continuity with the fuse removed",
+      "Replace once and verify the circuit"
+    ]
+  },
+  {
+    "guide": "e34-blower-speed-diagnosis",
+    "revision": "5fe83252a85b98ac4d1800aa",
+    "title": "Diagnose a blower that only works on high",
+    "steps": [
+      "Test and record each speed",
+      "Identify the installed control system",
+      "Check the path before ordering a module",
+      "Restore the circuit and retest all speeds"
+    ]
+  },
+  {
+    "guide": "m50tu-vanos-piston-seals",
+    "revision": "b02041e7ff12ed1b4f65d274",
+    "title": "Renew the M50TU VANOS piston seals on the bench",
+    "steps": [
+      "Drain and open the actuator",
+      "Remove both parts of the old seal",
+      "Fit the energizer and outer ring",
+      "Size the outer ring and confirm smooth movement",
+      "Close, reinstall and measure travel"
+    ]
+  },
+  {
+    "guide": "factory-sliding-caliper-brake-pads",
+    "revision": "bda2a26028b48f60bf5acc8f",
+    "title": "Replace brake pads on factory sliding calipers",
+    "steps": [
+      "Verify the caliper, rotor and parts",
+      "Lift, unplug the sensor and release the caliper",
+      "Inspect and retract the piston",
+      "Fit the pads and route the sensor",
+      "Secure the caliper and prove the pedal"
+    ]
+  },
+  {
+    "guide": "factory-manual-clutch-installation",
+    "revision": "5e8a2bc7786ceb192618bfec",
+    "title": "Replace the clutch with the manual gearbox removed",
+    "steps": [
+      "Match the clutch stack and lock the flywheel",
+      "Inspect the flywheel, pilot and release parts",
+      "Center the disc and torque the pressure plate",
+      "Refit release hardware and gearbox",
+      "Verify disengagement before road testing"
+    ]
+  },
+  {
+    "guide": "e34-525i-five-speed-swap",
+    "revision": "b8e09c892c7ffd76b982946e",
+    "title": "Plan an E34 525i five-speed manual swap",
+    "steps": [
+      "Choose a complete, documented donor set",
+      "Lay out the mechanical parts before taking the car apart",
+      "Plan pedals and clutch hydraulic routing",
+      "Plan removal and fit the manual driveline",
+      "Resolve start, reverse and control-unit behavior",
+      "Commission from static checks to a short drive"
+    ]
+  },
+  {
+    "guide": "e34-540i-six-speed-conversion",
+    "revision": "72afcd41a0f8fc8f95d0d82d",
+    "title": "Plan an E34 540i six-speed conversion",
+    "steps": [
+      "Inventory the V8 transmission set",
+      "Match shaft, crossmember and rear gearing",
+      "Lay out hydraulics and controls",
+      "Sequence installation and verification"
+    ]
+  },
+  {
+    "guide": "e34-525i-s52-engine-swap",
+    "revision": "42ed42e844486491c52e179f",
+    "title": "Plan an S52 swap into an M50 E34 525i",
+    "steps": [
+      "Record both cars and the inspection path",
+      "Prove the oil system and mounting geometry",
+      "Close the transmission, exhaust and cooling interfaces",
+      "Build and verify a wiring schedule",
+      "Write the first-start and fault-response plan"
+    ]
+  },
+  {
+    "guide": "e34-m60b30-to-b40-swap",
+    "revision": "dbbfa7d4e2732d6296b7db29",
+    "title": "Plan an M60B30 to M60B40 engine swap",
+    "steps": [
+      "Identify the actual V8 donor",
+      "Compare complete 530i and 540i packages",
+      "Resolve electronics and gearbox before installation",
+      "Set acceptance checks"
+    ]
+  },
+  {
+    "guide": "m50tu-vanos-delete-planning",
+    "revision": "f97d29721a386e2aec660a81",
+    "title": "Evaluate a fixed-timing M50TU VANOS delete",
+    "steps": [
+      "Define the reason for changing the system",
+      "Confirm the kit and cam stack",
+      "Degree the cams and measure clearance",
+      "Verify control behavior and record the result"
+    ]
+  },
+  {
+    "guide": "e34-self-leveling-suspension-conversion",
+    "revision": "4c7ace13d1fc82816b83f81d",
+    "title": "Plan a self-leveling suspension delete or repair",
+    "steps": [
+      "Identify the source of the height or ride fault",
+      "Map the hydraulic supply and return",
+      "Choose springs, dampers and stops as a set",
+      "Measure the completed installation"
+    ]
+  },
+  {
+    "guide": "e34-electric-fan-conversion",
+    "revision": "84bc4b94ee4e18740895588c",
+    "title": "Plan a mechanical fan delete with electric cooling",
+    "steps": [
+      "Establish the cooling baseline",
+      "Verify the fan and shroud package",
+      "Design protected power and control",
+      "Prove both operation and recovery"
+    ]
+  },
+  {
+    "guide": "e30-identify-your-configuration",
+    "revision": "153fb137c7eb9c1129995fd0",
+    "title": "Identify an E30 configuration before ordering parts",
+    "steps": [
+      "Record the car and source of each detail",
+      "Check the installed engine and drivetrain",
+      "Open the correct source and compare the actual item"
+    ]
+  },
+  {
+    "guide": "e30-cold-cooling-inspection",
+    "revision": "6dcd1a85dae08fa92423ea38",
+    "title": "E30 cold cooling-system visual inspection",
+    "steps": [
+      "Make the inspection safe",
+      "Record the installed layout and visible evidence",
+      "Choose the next verified procedure"
+    ]
+  },
+  {
+    "guide": "e30-driveshaft-center-support",
+    "revision": "25abf9d0b220837a6dc386e4",
+    "title": "Inspect the driveshaft center support",
+    "steps": [
+      "Locate the complete center mount",
+      "Inspect the rubber and bracket",
+      "Match the source before removing the shaft"
+    ]
+  },
+  {
+    "guide": "e30-rear-lamp-bulb",
+    "revision": "d16a7e54d3c9409c938c8afa",
+    "title": "Replace a rear lamp bulb",
+    "steps": [
+      "Identify the circuit that failed",
+      "Release the trunk-side cover",
+      "Match and replace the bulb",
+      "Test every function on that side"
+    ]
+  },
+  {
+    "guide": "e30-oil-service",
+    "revision": "fc28b7133b2a61cbdfd5b139",
+    "title": "M20 oil and filter change preparation",
+    "steps": [
+      "Identify the service parts",
+      "Check the handbook fill amount",
+      "Plan the final checks"
+    ]
+  },
+  {
+    "guide": "e30-air-filter",
+    "revision": "ef3d3cadba0f4edecf9af847",
+    "title": "Replace the M20 engine air filter",
+    "steps": [
+      "Open the clips",
+      "Replace the element",
+      "Close and check the airbox"
+    ]
+  }
+]

@@ -1,0 +1,10 @@
+import {z} from 'zod';
+export const supportTicketSchema=z.object({id:z.string().uuid(),reference:z.string(),contact_name:z.string(),email:z.string(),subject:z.string(),category:z.string(),status:z.enum(['open','closed','spam']),created_at:z.string(),updated_at:z.string(),last_customer_at:z.string(),last_customer_message_id:z.string().uuid().nullable().optional(),closed_at:z.string().nullable(),deleted_at:z.string().nullable(),source_reference:z.string().nullable().optional(),is_test:z.boolean().optional(),unread:z.boolean().optional(),delivery_problems:z.number().optional()});
+export type SupportTicket=z.infer<typeof supportTicketSchema>;
+export const supportListSchema=z.object({tickets:z.array(supportTicketSchema).max(31)});
+export const supportMessageSchema=z.object({id:z.string().uuid(),ticket_id:z.string().uuid(),direction:z.enum(['inbound','outbound']),kind:z.enum(['customer','confirmation','reply','update','closure']),body:z.string().max(256000),body_truncated:z.boolean(),sender_email:z.string().nullable(),sender_verification:z.enum(['aligned','unknown','suspicious']),delivery_status:z.string(),delivery_error:z.string().nullable(),created_at:z.string()});
+export const supportAttachmentSchema=z.object({id:z.string().uuid(),message_id:z.string().uuid(),filename:z.string(),bytes:z.number().nonnegative(),content_type:z.string(),state:z.enum(['pending','stored','blocked','error']),reason:z.string().nullable()});
+export const supportThreadSchema=z.object({ticket:supportTicketSchema,messages:z.array(supportMessageSchema).max(50),older:z.boolean(),notes:z.array(z.object({id:z.string().uuid(),body:z.string(),created_at:z.string(),created_by:z.string().nullable()})),attachments:z.array(supportAttachmentSchema)});
+export type SupportThread=z.infer<typeof supportThreadSchema>;
+export const supportHealthSchema=z.object({configured:z.boolean(),enabled:z.boolean(),open:z.number(),queued:z.number(),deliveryProblems:z.number(),outboundVerified:z.boolean(),inboundVerified:z.boolean()});
+export type SupportHealth=z.infer<typeof supportHealthSchema>;

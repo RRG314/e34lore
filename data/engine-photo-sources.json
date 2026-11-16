@@ -1,0 +1,74 @@
+[
+  {
+    "family": "M20",
+    "title": "M20 engine in a 1989 BMW 525i",
+    "localPath": "/assets/engines/m20-e34-525i.jpg",
+    "filePageUrl": "https://commons.wikimedia.org/wiki/File:BMW_M20B25-motor.JPG",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a7/BMW_M20B25-motor.JPG",
+    "creator": "C.Bakker at Dutch Wikipedia",
+    "license": "Public domain (released by the author; PD-user)",
+    "licenseUrl": "https://commons.wikimedia.org/wiki/File:BMW_M20B25-motor.JPG#Licensing",
+    "width": 640,
+    "height": 480,
+    "attribution": "M20 engine in a 1989 BMW 525i — C.Bakker at Dutch Wikipedia, public domain, via Wikimedia Commons.",
+    "limitations": [
+      "The original is only 640 × 480 pixels; present at native size or smaller and do not imply a high-detail zoom.",
+      "A single oblique engine-bay reference; it does not establish every production variant, modification or fitted component.",
+      "The source identifies an M20 engine in a 1989 525i; visual resemblance alone is not proof of an individual car’s installed engine."
+    ],
+    "filesystemPath": "/local/owner/Developer/e34-collective/public/assets/engines/m20-e34-525i.jpg",
+    "byteLength": 160191,
+    "sha256": "44e4f28646aa0b1feb3291b55cdc8a435d334ecce6ed62535a69800ed56b1902",
+    "changes": "None. Original JPEG retained without crop, annotation, upscaling or recompression.",
+    "verifiedOn": "2026-11-05",
+    "visualReview": "Viewed locally; image matches the engine-bay subject described by the primary file page."
+  },
+  {
+    "family": "M30",
+    "title": "M30B35 engine in a 1988 BMW E34 535",
+    "localPath": "/assets/engines/m30-e34-535i.jpg",
+    "filePageUrl": "https://commons.wikimedia.org/wiki/File:Bmw-m30b35-left.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Bmw-m30b35-left.jpg",
+    "creator": "AlexanderM",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "width": 1062,
+    "height": 559,
+    "attribution": "M30B35 engine in a 1988 BMW E34 535 — AlexanderM, CC BY-SA 4.0, via Wikimedia Commons.",
+    "limitations": [
+      "The source identifies a 1988 E34 535; it is an engine-family example rather than evidence for the U.S. manual’s 1989–1993 applicability.",
+      "The oblique view partly hides the engine behind the intake and air-filter housing; it is not an exploded view or complete component-identification map.",
+      "Retain creator credit, source and license links; any adaptation must identify changes and use the same or a compatible license."
+    ],
+    "filesystemPath": "/local/owner/Developer/e34-collective/public/assets/engines/m30-e34-535i.jpg",
+    "byteLength": 152581,
+    "sha256": "c79945ec998d08d175c488c28a4984689193f8555e6a870c585d1589d50ab166",
+    "changes": "None. Original JPEG retained without crop, annotation, upscaling or recompression.",
+    "verifiedOn": "2026-11-05",
+    "visualReview": "Viewed locally; image matches the engine-bay subject described by the primary file page."
+  },
+  {
+    "family": "M50",
+    "title": "M50-family engine in a 1993 BMW 525i E34 Touring",
+    "localPath": "/assets/engines/m50-e34-525i-touring.jpg",
+    "filePageUrl": "https://commons.wikimedia.org/wiki/File:BMW_E34_Touring_Lazurblau_1993_4.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/53/BMW_E34_Touring_Lazurblau_1993_4.jpg",
+    "creator": "Pierre Scheidegger",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+    "width": 3456,
+    "height": 2304,
+    "attribution": "M50-family engine in a 1993 BMW 525i E34 Touring — Pierre Scheidegger, CC BY 3.0, via Wikimedia Commons.",
+    "limitations": [
+      "The file caption names the M50 family and the description identifies a 1993 525i Touring; this asset record does not certify the precise M50 versus M50TU variant.",
+      "A single oblique engine-bay reference, with covers and intake obscuring internal components; it does not prove fitment or an individual car’s installed configuration.",
+      "Retain creator credit, source and license links and indicate any later crop, annotation or other adaptation."
+    ],
+    "filesystemPath": "/local/owner/Developer/e34-collective/public/assets/engines/m50-e34-525i-touring.jpg",
+    "byteLength": 2908682,
+    "sha256": "876b25fcc42597132f1c56942278685ffbd5b735fc7794d4cc75941e02755b8c",
+    "changes": "None. Original JPEG retained without crop, annotation, upscaling or recompression.",
+    "verifiedOn": "2026-11-05",
+    "visualReview": "Viewed locally; image matches the engine-bay subject described by the primary file page."
+  }
+]

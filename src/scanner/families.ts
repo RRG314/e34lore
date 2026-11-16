@@ -1,0 +1,46 @@
+/** Component families only: no OEM identity, dimensions or vehicle prior enters vision. */
+export type ComponentFamily = { id: string; name: string; prompts: string[]; negative?: boolean; search?: string; node?: string; system?: string; guide?: string };
+/** Photo-only rejection examples. These never become catalog suggestions. */
+export const photoNegativeFamilies=[
+ {id:'thrust-bearing',name:'Thrust bearing'},
+ {id:'vacuum-motor',name:'Household electric motor'},
+ {id:'bicycle-brake',name:'Bicycle rim brake'},
+] as const;
+export function photoFamilyName(id:string){return componentFamilies.find(f=>f.id===id)?.name||photoNegativeFamilies.find(f=>f.id===id)?.name||'Unsupported object';}
+export const componentFamilies: ComponentFamily[] = [
+  { id:'center-support-bearing', name:'Driveshaft center support bearing', prompts:['a driveshaft center support bearing with a rubber cushion and two bolt mounting bracket','a propeller shaft centre bearing support assembly','a carrier bearing in a rubber mount with metal mounting ears'], search:'centre mount', system:'driveshaft', guide:'260' },
+  { id:'flex-disc', name:'Driveshaft flex disc (guibo)', prompts:['a rubber driveshaft flex disc guibo with six bolt holes','an automotive rubber propeller shaft coupling','a round rubber driveshaft coupling disc'], search:'universal joint', system:'driveshaft', guide:'260' },
+  { id:'ball-bearing', name:'Loose ball bearing', prompts:['a loose sealed ball bearing metal ring','an automotive grooved ball bearing without a mounting bracket','a circular steel bearing with an inner race'], search:'grooved ball bearing', system:'driveshaft', guide:'260' },
+  { id:'cv-joint', name:'Constant velocity joint', prompts:['a car driveshaft constant velocity CV joint','a loose automotive CV joint with ball bearings','a propeller shaft CV joint flange'], search:'constant velocity joint', system:'driveshaft', guide:'260' },
+  { id:'engine-mount', name:'Engine or transmission mount', prompts:['an automotive rubber engine mount','a car gearbox rubber mounting block with studs','a loose hydraulic engine mounting rubber'], search:'rubber mounting' },
+  { id:'control-arm-bushing', name:'Suspension bushing', prompts:['an automotive suspension control arm rubber bushing','a car rubber suspension bushing in a metal sleeve','a round rubber subframe bushing'], search:'rubber mounting' },
+  { id:'wheel-hub', name:'Wheel hub or wheel bearing', prompts:['an automotive wheel hub bearing assembly with studs','a car wheel hub with bolt holes','a wheel bearing hub flange'], search:'wheel hub' },
+  { id:'belt-pulley', name:'Belt pulley or tensioner', prompts:['a car belt tensioner pulley','an automotive idler pulley with bearing','a ribbed accessory belt pulley'], search:'pulley' },
+  { id:'water-pump', name:'Coolant pump', prompts:['a car engine water pump with impeller','an automotive coolant pump removed from the engine','a mechanical engine cooling water pump'], search:'water pump', node:'m50:water-pump' },
+  { id:'alternator', name:'Alternator', prompts:['a car alternator','an automotive alternator with pulley and vents','a loose engine alternator'], search:'alternator' },
+  { id:'starter', name:'Starter motor', prompts:['an automotive starter motor with solenoid','a car engine starter motor','a loose starter motor'], search:'starter' },
+  { id:'brake-caliper', name:'Brake caliper', prompts:['an automotive disc brake caliper','a car brake caliper removed from the wheel','a disc brake caliper with piston'], search:'brake caliper' },
+  { id:'brake-disc', name:'Brake disc', prompts:['a car brake disc rotor','an automotive brake rotor','a loose ventilated brake disc'], search:'brake disc' },
+  { id:'thermostat', name:'Thermostat or thermostat housing', prompts:['an automotive coolant thermostat housing','a car thermostat valve with spring','an engine thermostat and housing'], search:'thermostat' },
+  { id:'oil-filter', name:'Oil filter', prompts:['a car engine oil filter cartridge','an automotive oil filter','a pleated engine oil filter element'], search:'oil filter' },
+  { id:'air-filter', name:'Air filter or intake housing', prompts:['an automotive engine air filter','a car air filter box housing','a pleated car air filter'], search:'air filter' },
+  { id:'radiator', name:'Radiator', prompts:['an automotive engine cooling radiator','a car radiator removed from the vehicle','an aluminum car radiator with cooling fins'], search:'radiator' },
+  { id:'hose', name:'Hose or rubber boot', prompts:['an automotive coolant hose','a car rubber intake hose','an automotive flexible rubber boot'], search:'hose' },
+  { id:'shock', name:'Shock absorber or strut', prompts:['a car suspension shock absorber','an automotive suspension strut','a loose car damper with spring seat'], search:'shock absorber' },
+  { id:'control-arm', name:'Control arm or suspension link', prompts:['a car suspension control arm','an automotive wishbone with ball joint','a loose suspension link arm'], search:'control arm' },
+  { id:'spark-plug', name:'Spark plug', prompts:['an automotive spark plug','a car engine spark plug','a loose ceramic spark plug'], search:'spark plug' },
+  { id:'injector', name:'Fuel injector', prompts:['a car fuel injector','an automotive gasoline fuel injector','a loose engine fuel injection valve'], search:'injector' },
+  { id:'sensor', name:'Electrical sensor', prompts:['an automotive engine sensor with connector','a car crankshaft position sensor','a car temperature sensor with electrical plug'], search:'sensor' },
+  { id:'headlight', name:'Headlight or rear lamp', prompts:['a car headlight assembly','an automotive rear tail lamp','a loose round car headlamp'], search:'headlight' },
+  { id:'battery', name:'Battery', prompts:['a car battery','an automotive lead acid battery','a twelve volt car starter battery'], search:'battery' },
+  { id:'fastener', name:'Fastener or retaining clip', prompts:['automotive nuts bolts and washers','a car plastic retaining clip','a loose metal circlip retaining ring'], search:'clip' },
+  { id:'gearbox', name:'Transmission', prompts:['an automotive automatic transmission','a car manual gearbox','a loose car transmission with bell housing'], search:'transmission' },
+  { id:'engine', name:'Engine assembly', prompts:['a car engine assembly','an automotive engine removed from a car','a complete vehicle engine'], search:'engine' },
+  { id:'wheel', name:'Wheel and tire', prompts:['a car wheel and tire','an automotive alloy wheel','a loose car tire on a rim'], search:'wheel' },
+  { id:'packaging', name:'Packaging or printed label', negative:true, prompts:['a cardboard parts box with a label','a printed product label or instruction leaflet','an empty shipping box or product packaging'] },
+  { id:'tools', name:'Workshop tool', negative:true, prompts:['a workshop hand tool wrench or socket','an electric power drill','a hammer pliers or screwdriver'] },
+  { id:'household', name:'Household object', negative:true, prompts:['a household object mug or kitchen utensil','a shoe or clothing','a bottle or food container'] },
+  { id:'scene', name:'Background or whole vehicle', negative:true, prompts:['a complete car parked on a street','a garage floor without a distinct component','a wide view of an engine bay with many components'] },
+  { id:'person', name:'Person or hand without a clear part', negative:true, prompts:['a person standing in a room','a close photo of an empty hand','a selfie of a person'] },
+  { id:'unusable', name:'Unclear image', negative:true, prompts:['a completely dark blurry photograph','an out of focus photograph with no clear object','a blank white image'] },
+];

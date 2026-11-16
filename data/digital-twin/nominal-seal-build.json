@@ -1,0 +1,1254 @@
+{
+  "pipelineVersion": 1,
+  "geometryClaims": "Nominal circular dimension interpretation only; no manufacturer verification",
+  "assets": [
+    {
+      "partId": "bmw-07119900149",
+      "files": [
+        {
+          "level": "high",
+          "path": "outputs/digital-twin/nominal-seals/07119900149-high.glb",
+          "bytes": 115436,
+          "sha256": "d42c5eeaec10abdbba4a248b2080a5bc93bee8a8b1e1da0e14264bfc56f04f61",
+          "triangles": 6144
+        },
+        {
+          "level": "medium",
+          "path": "public/models/nominal-seals/07119900149-medium.glb",
+          "bytes": 39980,
+          "sha256": "2ef0292bcabe074e16079d3df7be3afb8ab18905970cd180ef315d8e1c03d372",
+          "triangles": 2048
+        },
+        {
+          "level": "low",
+          "path": "public/models/nominal-seals/07119900149-low.glb",
+          "bytes": 11364,
+          "sha256": "34d95b7f162d3d89f34250dead40e59d931bbd3935144e033a71bb95bdb11b58",
+          "triangles": 512
+        }
+      ]
+    },
+    {
+      "partId": "bmw-07119906328",
+      "files": [
+        {
+          "level": "high",
+          "path": "outputs/digital-twin/nominal-seals/07119906328-high.glb",
+          "bytes": 115372,
+          "sha256": "6f30fd8d806df12cd74a8809bbb1944e204d7cc4fc89074f3bf66ef3aaa5c04d",
+          "triangles": 6144
+        },
+        {
+          "level": "medium",
+          "path": "public/models/nominal-seals/07119906328-medium.glb",
+          "bytes": 39916,
+          "sha256": "5c23b04b9abfc024127cdb2651a628d258a2a45e1845a18a192f9584950ab4db",
+          "triangles": 2048
+        },
+        {
+          "level": "low",
+          "path": "public/models/nominal-seals/07119906328-low.glb",
+          "bytes": 11300,
+          "sha256": "a5662d1a54bc0e604780ea1772fde911df91657e351ecb94f4c56da03ec059f1",
+          "triangles": 512
+        }
+      ]
+    },
+    {
+      "partId": "bmw-07119906350",
+      "files": [
+        {
+          "level": "high",
+          "path": "outputs/digital-twin/nominal-seals/07119906350-high.glb",
+          "bytes": 115468,
+          "sha256": "92d581436fa672cfc5e25097c89f0b7e931111a2012f56f140b5da76cbdccdee",
+          "triangles": 6144
+        },
+        {
+          "level": "medium",
+          "path": "public/models/nominal-seals/07119906350-medium.glb",
+          "bytes": 40008,
+          "sha256": "6f401383f33c7fd2b0730faafa752d5bed7214a57f01b831e7e7bace715f84bb",
+          "triangles": 2048
+        },
+        {
+          "level": "low",
+          "path": "public/models/nominal-seals/07119906350-low.glb",
+          "bytes": 11396,
+          "sha256": "b49ca24ca435df5327118ed6a0f7bb56c9791d20c1bb5fa9712fd847c4e236af",
+          "triangles": 512
+        }
+      ]
+    },
+    {
+      "partId": "bmw-07119906360",
+      "files": [
+        {
+          "level": "high",
+          "path": "outputs/digital-twin/nominal-seals/07119906360-high.glb",
+          "bytes": 115440,
+          "sha256": "f317a1d8a6b0d7734907122b42666f9295a023195560dac76c99c8abff4f266e",
+          "triangles": 6144
+        },
+        {
+          "level": "medium",
+          "path": "public/models/nominal-seals/07119906360-medium.glb",
+          "bytes": 39984,
+          "sha256": "3fadb48385d0900a5ee1f0299e3dbf72dd42174aa3c62ce09e848541990bd10e",
+          "triangles": 2048
+        },
+        {
+          "level": "low",
+          "path": "public/models/nominal-seals/07119906360-low.glb",
+          "bytes": 11368,
+          "sha256": "8333943867f5d875252ff6cd41e7afb4ac81e68ac56eea2055db791e570ab793",
+          "triangles": 512
+        }
+      ]
+    },
+    {
+      "partId": "bmw-07119906361",
+      "files": [
+        {
+          "level": "high",
+          "path": "outputs/digital-twin/nominal-seals/07119906361-high.glb",
+          "bytes": 115384,
+          "sha256": "4ed4307c305ebc5b162fc42b78441eb1eb6f3dfb90a06118a79a70efee85b7b9",
+          "triangles": 6144
+        },
+        {
+          "level": "medium",
+          "path": "public/models/nominal-seals/07119906361-medium.glb",
+          "bytes": 39928,
+          "sha256": "0a020092a312003184a556afec3467f5eab74456289458386c38798b5f6d9e1b",
+          "triangles": 2048
+        },
+        {
+          "level": "low",
+          "path": "public/models/nominal-seals/07119906361-low.glb",
+          "bytes": 11312,
+          "sha256": "af7112d75f592c9695effa1046b3fec55a2796bc026c61704ebdcc2371ec4031",
+          "triangles": 512
+        }
+      ]
+    },
+    {
+      "partId": "bmw-07119906363",
+      "files": [
+        {
+          "level": "high",
+          "path": "outputs/digital-twin/nominal-seals/07119906363-high.glb",
+          "bytes": 115444,
+          "sha256": "6d027929b4ff47ca503a6c55cf3e60b6dd7cb4c5fbca8a680474f4aa06afa149",
+          "triangles": 6144
+        },
+        {
+          "level": "medium",
+          "path": "public/models/nominal-seals/07119906363-medium.glb",
+          "bytes": 39984,
+          "sha256": "76d6a0d0e6b303ff800d81263d1e7f417afea2d62af84d3910d54bfbb714954e",
+          "triangles": 2048
+        },
+        {
+          "level": "low",
+          "path": "public/models/nominal-seals/07119906363-low.glb",
+          "bytes": 11368,
+          "sha256": "a9c59b54648c41d62b949b2de4efb4d03039acefbf19cd0026040ee214ec6490",
+          "triangles": 512
+        }
+      ]
+    },
+    {
+      "partId": "bmw-11121265087",
+      "files": [
+        {
+          "level": "high",
+          "path": "outputs/digital-twin/nominal-seals/11121265087-high.glb",
+          "bytes": 115376,
+          "sha256": "88a73cb0c907c382fa384277dd448e8770377911d1bd9db1f2cbb8cf604708a8",
+          "triangles": 6144
+        },
+        {
+          "level": "medium",
+          "path": "public/models/nominal-seals/11121265087-medium.glb",
+          "bytes": 39920,
+          "sha256": "2928a949f65914c0a13254221cc1b7b9fc6244cf83eccaf32124e58103e5fd99",
+          "triangles": 2048
+        },
+        {
+          "level": "low",
+          "path": "public/models/nominal-seals/11121265087-low.glb",
+          "bytes": 11304,
+          "sha256": "e1b66d46492866f39f8a15d34f9354a7139bfe3f0f821d12757984445cfe0859",
+          "triangles": 512
+        }
+      ]
+    },
+    {
+      "partId": "bmw-11121304173",
+      "files": [
+        {
+          "level": "high",
+          "path": "outputs/digital-twin/nominal-seals/11121304173-high.glb",
+          "bytes": 115384,
+          "sha256": "57fd1e017cccd5e7ced5ce4fc7379db670795345809e508732602ff79d54b054",
+          "triangles": 6144
+        },
+        {
+          "level": "medium",
+          "path": "public/models/nominal-seals/11121304173-medium.glb",
+          "bytes": 39924,
+          "sha256": "d22d304c5fcc0d15bc7306d6b717b397073db755563f5fa2b47f3fb0e7a6bb17",
+          "triangles": 2048
+        },
+        {
+          "level": "low",
+          "path": "public/models/nominal-seals/11121304173-low.glb",
+          "bytes": 11308,
+          "sha256": "b250b8c67a8188ca65fc656207b0982000dc6c1448592790abb3101d5d2414f6",
+          "triangles": 512
+        }
+      ]
+    },
+    {
+      "partId": "bmw-11121304174",
+      "files": [
+        {
+          "level": "high",
+          "path": "outputs/digital-twin/nominal-seals/11121304174-high.glb",
+          "bytes": 115372,
+          "sha256": "9962ac86ac55d4cc87fb49962d1cb3970820aba086a01d737f1a8f0412925b09",
+          "triangles": 6144
+        },
+        {
+          "level": "medium",
+          "path": "public/models/nominal-seals/11121304174-medium.glb",
+          "bytes": 39916,
+          "sha256": "ecef4cdd24a10e62d097239e6f91845e8e474321550bf9c2181d05d0c915e34d",
+          "triangles": 2048
+        },
+        {
+          "level": "low",
+          "path": "public/models/nominal-seals/11121304174-low.glb",
+          "bytes": 11300,
+          "sha256": "94d72c522693aafbdd3ea7ea0ff42eb83fa53de929d7cea5c6619a876bb3e8b2",
+          "triangles": 512
+        }
+      ]
+    },
+    {
+      "partId": "bmw-11151730724",
+      "files": [
+        {
+          "level": "high",
+          "path": "outputs/digital-twin/nominal-seals/11151730724-high.glb",
+          "bytes": 115388,
+          "sha256": "952f1ee1daec31f05088a55729ad7952c753d79051c7ee3167f1a963a5464a26",
+          "triangles": 6144
+        },
+        {
+          "level": "medium",
+          "path": "public/models/nominal-seals/11151730724-medium.glb",
+          "bytes": 39932,
+          "sha256": "5ab8a30f888cf77ef879132f35f9d5242e3d41b3b6e04b7d0c783235ae8adaa3",
+          "triangles": 2048
+        },
+        {
+          "level": "low",
+          "path": "public/models/nominal-seals/11151730724-low.glb",
+          "bytes": 11316,
+          "sha256": "e3ee43f8a8b5516ad34bfad1c13fb1f348df2a6f3a60a6758d32540edd633add",
+          "triangles": 512
+        }
+      ]
+    },
+    {
+      "partId": "bmw-11151736140",
+      "files": [
+        {
+          "level": "high",
+          "path": "outputs/digital-twin/nominal-seals/11151736140-high.glb",
+          "bytes": 115468,
+          "sha256": "92c494822478ed1607f083f8dd76693c46a0a6fe7db1b52daa942cda341d0d5e",
+          "triangles": 6144
+        },
+        {
+          "level": "medium",
+          "path": "public/models/nominal-seals/11151736140-medium.glb",
+          "bytes": 40008,
+          "sha256": "66a250444579f1cef5a2d39d6f792aca5cfbfd7aeacb71351081284724614be8",
+          "triangles": 2048
+        },
+        {
+          "level": "low",
+          "path": "public/models/nominal-seals/11151736140-low.glb",
+          "bytes": 11396,
+          "sha256": "00e567f0c95bc03e3921d7bfa0a3b2b195de8e61d4ae75199c5aaec66ec05582",
+          "triangles": 512
+        }
+      ]
+    },
+    {
+      "partId": "bmw-11151747978",
+      "files": [
+        {
+          "level": "high",
+          "path": "outputs/digital-twin/nominal-seals/11151747978-high.glb",
+          "bytes": 115468,
+          "sha256": "e8c1d05fc6e5bfa058b37e832d4145ec6b055fff742bd642866880ab736290c6",
+          "triangles": 6144
+        },
+        {
+          "level": "medium",
+          "path": "public/models/nominal-seals/11151747978-medium.glb",
+          "bytes": 40008,
+          "sha256": "adf1f13eca3db21cfbf935eb2a835be7cc64fd109daa8d3a2889488e68e62e20",
+          "triangles": 2048
+        },
+        {
+          "level": "low",
+          "path": "public/models/nominal-seals/11151747978-low.glb",
+          "bytes": 11396,
+          "sha256": "cfff3e17b78a241f8c71befb5a3750ebaa82e52287121dde0fce4f25860ebcc3",
+          "triangles": 512
+        }
+      ]
+    },
+    {
+      "partId": "bmw-11311304257",
+      "files": [
+        {
+          "level": "high",
+          "path": "outputs/digital-twin/nominal-seals/11311304257-high.glb",
+          "bytes": 115432,
+          "sha256": "b9588af9d664f96db65422536796bc6c30bb2465dc6ff7780d38d0a9cabb73db",
+          "triangles": 6144
+        },
+        {
+          "level": "medium",
+          "path": "public/models/nominal-seals/11311304257-medium.glb",
+          "bytes": 39976,
+          "sha256": "0d9aa0bc8704a1b6eb9358a330979e36456a376e7f2a725d1d11cf6c30ae0090",
+          "triangles": 2048
+        },
+        {
+          "level": "low",
+          "path": "public/models/nominal-seals/11311304257-low.glb",
+          "bytes": 11360,
+          "sha256": "373cabb89235928c1ec04ee591420515c884caa9c91eba388b6050cf849db306",
+          "triangles": 512
+        }
+      ]
+    },
+    {
+      "partId": "bmw-11311307408",
+      "files": [
+        {
+          "level": "high",
+          "path": "outputs/digital-twin/nominal-seals/11311307408-high.glb",
+          "bytes": 115384,
+          "sha256": "332554b3c2cb26fd5794823550fe71d6ed99a5f8018b34ea8b0fd6b1bd0e4968",
+          "triangles": 6144
+        },
+        {
+          "level": "medium",
+          "path": "public/models/nominal-seals/11311307408-medium.glb",
+          "bytes": 39924,
+          "sha256": "cc7e22e8d2bfa4103ef461cc6add34b7be3b4fe8f4507c6b69bbb9359505212c",
+          "triangles": 2048
+        },
+        {
+          "level": "low",
+          "path": "public/models/nominal-seals/11311307408-low.glb",
+          "bytes": 11308,
+          "sha256": "a0b5d33be5de9367ae26259bce063174154549e95e3b2b09b014f7438f062299",
+          "triangles": 512
+        }
+      ]
+    },
+    {
+      "partId": "bmw-11361703713",
+      "files": [
+        {
+          "level": "high",
+          "path": "outputs/digital-twin/nominal-seals/11361703713-high.glb",
+          "bytes": 115380,
+          "sha256": "7961aa669e6efc496caf21888ff7815ab77ea07c36420d2ab6fef2273b7616e3",
+          "triangles": 6144
+        },
+        {
+          "level": "medium",
+          "path": "public/models/nominal-seals/11361703713-medium.glb",
+          "bytes": 39920,
+          "sha256": "9bc86c3a0d2f2a635cadaede688f8484229f905ca41c7f567299075e35aad043",
+          "triangles": 2048
+        },
+        {
+          "level": "low",
+          "path": "public/models/nominal-seals/11361703713-low.glb",
+          "bytes": 11304,
+          "sha256": "ddba84c4d8daed55904b85001e37463cebe4ae44b891ddf41a3511ad8032d481",
+          "triangles": 512
+        }
+      ]
+    },
+    {
+      "partId": "bmw-11411304178",
+      "files": [
+        {
+          "level": "high",
+          "path": "outputs/digital-twin/nominal-seals/11411304178-high.glb",
+          "bytes": 115432,
+          "sha256": "a6cf28c826eb3dac7a2bde65a3130ca929ab3c853e8520e581bead93010adf55",
+          "triangles": 6144
+        },
+        {
+          "level": "medium",
+          "path": "public/models/nominal-seals/11411304178-medium.glb",
+          "bytes": 39976,
+          "sha256": "5b5bc070d1a05901f973ce649bc30a426e2417bf8ab9182d3fc534a5a602df1f",
+          "triangles": 2048
+        },
+        {
+          "level": "low",
+          "path": "public/models/nominal-seals/11411304178-low.glb",
+          "bytes": 11360,
+          "sha256": "c73bb7022cc2ab715d137eba8c7451ae8e041e051d72d3b20c9be55bd76d9d62",
+          "triangles": 512
+        }
+      ]
+    },
+    {
+      "partId": "bmw-11421702905",
+      "files": [
+        {
+          "level": "high",
+          "path": "outputs/digital-twin/nominal-seals/11421702905-high.glb",
+          "bytes": 115432,
+          "sha256": "ef5028c8253d3719c09f0ed86c0a474dfc176630108214d44fc0f07d2fc909f9",
+          "triangles": 6144
+        },
+        {
+          "level": "medium",
+          "path": "public/models/nominal-seals/11421702905-medium.glb",
+          "bytes": 39976,
+          "sha256": "9431c0ce70a6c363d2fa6a4897de62e75acb2cff7f93f86a58a3eefc7ea7d716",
+          "triangles": 2048
+        },
+        {
+          "level": "low",
+          "path": "public/models/nominal-seals/11421702905-low.glb",
+          "bytes": 11360,
+          "sha256": "401131db66fe92877581dd995ed3d6e89c061dd97377de53e18e6f01cde602a7",
+          "triangles": 512
+        }
+      ]
+    },
+    {
+      "partId": "bmw-11421711076",
+      "files": [
+        {
+          "level": "high",
+          "path": "outputs/digital-twin/nominal-seals/11421711076-high.glb",
+          "bytes": 115388,
+          "sha256": "12a37a961961b84c6633cde336e35e7c0b3155ba4a5807fff11de0883e474d9e",
+          "triangles": 6144
+        },
+        {
+          "level": "medium",
+          "path": "public/models/nominal-seals/11421711076-medium.glb",
+          "bytes": 39928,
+          "sha256": "443b315cc2cedff1917c69e6a1aa98937fd8731f1251e0d5e3d485b84911789e",
+          "triangles": 2048
+        },
+        {
+          "level": "low",
+          "path": "public/models/nominal-seals/11421711076-low.glb",
+          "bytes": 11316,
+          "sha256": "7b61435810d3a766c713ef838df82033e1f230954a2056269146c7d716156614",
+          "triangles": 512
+        }
+      ]
+    },
+    {
+      "partId": "bmw-11421713597",
+      "files": [
+        {
+          "level": "high",
+          "path": "outputs/digital-twin/nominal-seals/11421713597-high.glb",
+          "bytes": 115440,
+          "sha256": "8a560ee86da008e194a9f5fc2437601eb47f76b1ca72c3df4643a0540cc829ee",
+          "triangles": 6144
+        },
+        {
+          "level": "medium",
+          "path": "public/models/nominal-seals/11421713597-medium.glb",
+          "bytes": 39984,
+          "sha256": "f3780746128739111a1ebc123cedc9c3b2d763bbaaee035297695134c6885e05",
+          "triangles": 2048
+        },
+        {
+          "level": "low",
+          "path": "public/models/nominal-seals/11421713597-low.glb",
+          "bytes": 11368,
+          "sha256": "e524b2872c0f405d461f450553595932fdffb39b84be6284194ecc86f553aa8c",
+          "triangles": 512
+        }
+      ]
+    },
+    {
+      "partId": "bmw-11421741000",
+      "files": [
+        {
+          "level": "high",
+          "path": "outputs/digital-twin/nominal-seals/11421741000-high.glb",
+          "bytes": 115376,
+          "sha256": "728d22c1649fa1202e5b4a1c813858bfca1ab5e265d03196bdea42557216f283",
+          "triangles": 6144
+        },
+        {
+          "level": "medium",
+          "path": "public/models/nominal-seals/11421741000-medium.glb",
+          "bytes": 39920,
+          "sha256": "381fde99afcfc31d6e68e394b53d84c18e34e47cda329cd6960cf8261369f44c",
+          "triangles": 2048
+        },
+        {
+          "level": "low",
+          "path": "public/models/nominal-seals/11421741000-low.glb",
+          "bytes": 11304,
+          "sha256": "ac87e39728425e2e4e17c248297505cb6b1696b5b5f8bd717d44b3aa5a1d8c0f",
+          "triangles": 512
+        }
+      ]
+    },
+    {
+      "partId": "bmw-11431287541",
+      "files": [
+        {
+          "level": "high",
+          "path": "outputs/digital-twin/nominal-seals/11431287541-high.glb",
+          "bytes": 115384,
+          "sha256": "64b79261a7a06f10b6da6259a65ffdcff1b4e29265e1aa3662e195e8371115cf",
+          "triangles": 6144
+        },
+        {
+          "level": "medium",
+          "path": "public/models/nominal-seals/11431287541-medium.glb",
+          "bytes": 39928,
+          "sha256": "ac9ccd60be735897596458486b650e8a3e11c01fed2c9268780164158276ae40",
+          "triangles": 2048
+        },
+        {
+          "level": "low",
+          "path": "public/models/nominal-seals/11431287541-low.glb",
+          "bytes": 11312,
+          "sha256": "4470759dc33bb8eb439dc00beb693747afbfe69c7ba3f9c8eb55d04685044da1",
+          "triangles": 512
+        }
+      ]
+    },
+    {
+      "partId": "bmw-11431707164",
+      "files": [
+        {
+          "level": "high",
+          "path": "outputs/digital-twin/nominal-seals/11431707164-high.glb",
+          "bytes": 115380,
+          "sha256": "d38f42e57b36fe492a2ab38903a1aef47e9cd07955ef61f31e6595a1d1f3f729",
+          "triangles": 6144
+        },
+        {
+          "level": "medium",
+          "path": "public/models/nominal-seals/11431707164-medium.glb",
+          "bytes": 39920,
+          "sha256": "847a49c61d153f68205d84968d159f6793c236dec5e419bc595c9310206c0dea",
+          "triangles": 2048
+        },
+        {
+          "level": "low",
+          "path": "public/models/nominal-seals/11431707164-low.glb",
+          "bytes": 11304,
+          "sha256": "4cce9e2d56d5662135be2b3081099ef704dd0ee1830cf93c822e182603d6ebfb",
+          "triangles": 512
+        }
+      ]
+    },
+    {
+      "partId": "bmw-11431717666",
+      "files": [
+        {
+          "level": "high",
+          "path": "outputs/digital-twin/nominal-seals/11431717666-high.glb",
+          "bytes": 115380,
+          "sha256": "f84be9763cf9ada154a74224737ae97ed053ab54f4f2d6a898ce1b35dba7eb20",
+          "triangles": 6144
+        },
+        {
+          "level": "medium",
+          "path": "public/models/nominal-seals/11431717666-medium.glb",
+          "bytes": 39920,
+          "sha256": "3f1cea34ebb11d297f9eec340aa97381cd98d57b0a02397760f2466d16ccce19",
+          "triangles": 2048
+        },
+        {
+          "level": "low",
+          "path": "public/models/nominal-seals/11431717666-low.glb",
+          "bytes": 11308,
+          "sha256": "5b7a08d131b82adb75a5c63cfe9b5cd748c2d3c7e9db30b07ea83162b6b4bfdf",
+          "triangles": 512
+        }
+      ]
+    },
+    {
+      "partId": "pump-seal",
+      "files": [
+        {
+          "level": "high",
+          "path": "outputs/digital-twin/nominal-seals/11511711484-high.glb",
+          "bytes": 115364,
+          "sha256": "a0bc8d13a6d11c19809cf77d552812d487f2ef21e17486336b1054fe245099eb",
+          "triangles": 6144
+        },
+        {
+          "level": "medium",
+          "path": "public/models/nominal-seals/11511711484-medium.glb",
+          "bytes": 39904,
+          "sha256": "cf4cc7a17597351360b26563148a4a83540849d98b2c6c0ffff3c22fcbcb3aa8",
+          "triangles": 2048
+        },
+        {
+          "level": "low",
+          "path": "public/models/nominal-seals/11511711484-low.glb",
+          "bytes": 11288,
+          "sha256": "ae0534aa83301e985e885372b3b8d5b8b073ac6cda2db466a876947a6dafb367",
+          "triangles": 512
+        }
+      ]
+    },
+    {
+      "partId": "thermostat-seal",
+      "files": [
+        {
+          "level": "high",
+          "path": "outputs/digital-twin/nominal-seals/11531265084-high.glb",
+          "bytes": 115384,
+          "sha256": "7dcf8ecc639bbbd21abe998b3aa8c6aaaddf221b0f795963237587173fd7bb32",
+          "triangles": 6144
+        },
+        {
+          "level": "medium",
+          "path": "public/models/nominal-seals/11531265084-medium.glb",
+          "bytes": 39924,
+          "sha256": "6bfabe18361ea5569e40c0747baf27c0b8ee85a0cd5dcd38a99a4266cfd02316",
+          "triangles": 2048
+        },
+        {
+          "level": "low",
+          "path": "public/models/nominal-seals/11531265084-low.glb",
+          "bytes": 11308,
+          "sha256": "a2cd982830e3cd2f58c0d4ed6dfd30875ca80fa42258f53b83339506e81f92d1",
+          "triangles": 512
+        }
+      ]
+    },
+    {
+      "partId": "bmw-11531304176",
+      "files": [
+        {
+          "level": "high",
+          "path": "outputs/digital-twin/nominal-seals/11531304176-high.glb",
+          "bytes": 115436,
+          "sha256": "90c8c6544563f7e25939788df92b0ca518f13868702c25123b11cb56eac0a650",
+          "triangles": 6144
+        },
+        {
+          "level": "medium",
+          "path": "public/models/nominal-seals/11531304176-medium.glb",
+          "bytes": 39980,
+          "sha256": "80b35bbb4346b9457badca78e5087a44656b9297b8ca1b2e3cb70e3eb56edd0d",
+          "triangles": 2048
+        },
+        {
+          "level": "low",
+          "path": "public/models/nominal-seals/11531304176-low.glb",
+          "bytes": 11364,
+          "sha256": "ba40b2544980a258b9d1f7ccf9e298ff84055e0c751d5c627e42549642745b2b",
+          "triangles": 512
+        }
+      ]
+    },
+    {
+      "partId": "bmw-11611730725",
+      "files": [
+        {
+          "level": "high",
+          "path": "outputs/digital-twin/nominal-seals/11611730725-high.glb",
+          "bytes": 115384,
+          "sha256": "e684d65fda142db2ba7027ec82fed8d3425ca49d45d295102ce85e2575624510",
+          "triangles": 6144
+        },
+        {
+          "level": "medium",
+          "path": "public/models/nominal-seals/11611730725-medium.glb",
+          "bytes": 39924,
+          "sha256": "e695ec7000ef5b5bdb09112c9c902fb451bcfd9a3c1c869c6ff9db6c10f946a0",
+          "triangles": 2048
+        },
+        {
+          "level": "low",
+          "path": "public/models/nominal-seals/11611730725-low.glb",
+          "bytes": 11308,
+          "sha256": "7ffe054e0aa927e7c707c9e4e008e9e6d4bde5240392e67f2e1aa0fc60da64a4",
+          "triangles": 512
+        }
+      ]
+    },
+    {
+      "partId": "bmw-11611735479",
+      "files": [
+        {
+          "level": "high",
+          "path": "outputs/digital-twin/nominal-seals/11611735479-high.glb",
+          "bytes": 115380,
+          "sha256": "62585412a99472c3c176ef08d16b380662d9c77fd57de16adfae3bfaedfb5ea1",
+          "triangles": 6144
+        },
+        {
+          "level": "medium",
+          "path": "public/models/nominal-seals/11611735479-medium.glb",
+          "bytes": 39924,
+          "sha256": "34d8afa926558f562d70401eab660580fcab9a5f6e3fc5298f4b84c18688f659",
+          "triangles": 2048
+        },
+        {
+          "level": "low",
+          "path": "public/models/nominal-seals/11611735479-low.glb",
+          "bytes": 11308,
+          "sha256": "c215c2111d115e89e923991aedfd71656e7c4dd570d103a21af87a8c473c6e5f",
+          "triangles": 512
+        }
+      ]
+    },
+    {
+      "partId": "bmw-11611735859",
+      "files": [
+        {
+          "level": "high",
+          "path": "outputs/digital-twin/nominal-seals/11611735859-high.glb",
+          "bytes": 115468,
+          "sha256": "782ba547a983d9c01d140c2aed3de26a936f077cf8ee3aac1920c74ad3f4ce5f",
+          "triangles": 6144
+        },
+        {
+          "level": "medium",
+          "path": "public/models/nominal-seals/11611735859-medium.glb",
+          "bytes": 40012,
+          "sha256": "a9f7cfc857f628cfe77c97cd530d4ece444f2f5793d42701fd5083b98fd03564",
+          "triangles": 2048
+        },
+        {
+          "level": "low",
+          "path": "public/models/nominal-seals/11611735859-low.glb",
+          "bytes": 11396,
+          "sha256": "422aa20110bde11281854290d3a3237d915cda310ca5cea2c05c3ffae2510f19",
+          "triangles": 512
+        }
+      ]
+    },
+    {
+      "partId": "bmw-11617502761",
+      "files": [
+        {
+          "level": "high",
+          "path": "outputs/digital-twin/nominal-seals/11617502761-high.glb",
+          "bytes": 115432,
+          "sha256": "f80bed96a3664d0170723b02c521f1eb75e1fed0045be2558e2975729f48d89d",
+          "triangles": 6144
+        },
+        {
+          "level": "medium",
+          "path": "public/models/nominal-seals/11617502761-medium.glb",
+          "bytes": 39976,
+          "sha256": "9e88414ad73649e5636395b7fa59a39bd1189f2da8d4f7e0314ecc66cf48a133",
+          "triangles": 2048
+        },
+        {
+          "level": "low",
+          "path": "public/models/nominal-seals/11617502761-low.glb",
+          "bytes": 11360,
+          "sha256": "fac54ed220bda0d784f3e6bf81d6085afaaa2e2afc324cecff31369a6e0c69d1",
+          "triangles": 512
+        }
+      ]
+    },
+    {
+      "partId": "bmw-12111252257",
+      "files": [
+        {
+          "level": "high",
+          "path": "outputs/digital-twin/nominal-seals/12111252257-high.glb",
+          "bytes": 115376,
+          "sha256": "146abb583c0ace25d66214169a07d43f9bfc37f42fe2248370064bccab2be5c5",
+          "triangles": 6144
+        },
+        {
+          "level": "medium",
+          "path": "public/models/nominal-seals/12111252257-medium.glb",
+          "bytes": 39916,
+          "sha256": "6bcda039d48856efe82797656fc6de47a221fd3a318a2e11835c2688a988888f",
+          "triangles": 2048
+        },
+        {
+          "level": "low",
+          "path": "public/models/nominal-seals/12111252257-low.glb",
+          "bytes": 11300,
+          "sha256": "e731c7c607a7b2ed93adb51c9b1130dace28dbe73231af6d6abdb6b27d3c4610",
+          "triangles": 512
+        }
+      ]
+    },
+    {
+      "partId": "bmw-12141727220",
+      "files": [
+        {
+          "level": "high",
+          "path": "outputs/digital-twin/nominal-seals/12141727220-high.glb",
+          "bytes": 115372,
+          "sha256": "d57bd17c76d3650feeece676c24372bbfb5fb0b8612577d033e1f8dc55719174",
+          "triangles": 6144
+        },
+        {
+          "level": "medium",
+          "path": "public/models/nominal-seals/12141727220-medium.glb",
+          "bytes": 39916,
+          "sha256": "5765ddd99c9d36b364d9b98668c3b781154f99d7e8a3d7bae7792ca4f4015a62",
+          "triangles": 2048
+        },
+        {
+          "level": "low",
+          "path": "public/models/nominal-seals/12141727220-low.glb",
+          "bytes": 11300,
+          "sha256": "1d73ca11e2027ff9c870c675d9e598744e2c2050469d0dd9313a72af47f71607",
+          "triangles": 512
+        }
+      ]
+    },
+    {
+      "partId": "bmw-12141748398",
+      "files": [
+        {
+          "level": "high",
+          "path": "outputs/digital-twin/nominal-seals/12141748398-high.glb",
+          "bytes": 115380,
+          "sha256": "ed12213e33c156fafc713675130316330fbd52ed5803d7c76483d782ae674449",
+          "triangles": 6144
+        },
+        {
+          "level": "medium",
+          "path": "public/models/nominal-seals/12141748398-medium.glb",
+          "bytes": 39920,
+          "sha256": "6943a1f10da30089b5172a3f815aa571d82296f279add9c23449e52a5317e7ef",
+          "triangles": 2048
+        },
+        {
+          "level": "low",
+          "path": "public/models/nominal-seals/12141748398-low.glb",
+          "bytes": 11304,
+          "sha256": "c7e67812401f617cf174fafb48b3874b0005eb2ac07dd4f0c3035471fc112ab5",
+          "triangles": 512
+        }
+      ]
+    },
+    {
+      "partId": "bmw-12311718712",
+      "files": [
+        {
+          "level": "high",
+          "path": "outputs/digital-twin/nominal-seals/12311718712-high.glb",
+          "bytes": 115372,
+          "sha256": "ba8e7ca841bb9e9b3bda79bc7080db776b184caf01140a2f198e90be56fa792d",
+          "triangles": 6144
+        },
+        {
+          "level": "medium",
+          "path": "public/models/nominal-seals/12311718712-medium.glb",
+          "bytes": 39916,
+          "sha256": "9eff7a6e9689795a0f5997e7fd7fecb643681bbec7bba19ad5c33d2c9d38365c",
+          "triangles": 2048
+        },
+        {
+          "level": "low",
+          "path": "public/models/nominal-seals/12311718712-low.glb",
+          "bytes": 11300,
+          "sha256": "4b725e85ea60758cec3a1f3b91bcc41156a7b026f76ae628aeb9472af84a936e",
+          "triangles": 512
+        }
+      ]
+    },
+    {
+      "partId": "bmw-13531720251",
+      "files": [
+        {
+          "level": "high",
+          "path": "outputs/digital-twin/nominal-seals/13531720251-high.glb",
+          "bytes": 115440,
+          "sha256": "1206f3804786dc983a4e9dee85671e4b5cb2d8cfa2584c8766675ce0f414e957",
+          "triangles": 6144
+        },
+        {
+          "level": "medium",
+          "path": "public/models/nominal-seals/13531720251-medium.glb",
+          "bytes": 39980,
+          "sha256": "446d1312cc88be6ddaf0cf9be085720bdb5d0fd7de94a74e9bf1b907c3bdbccc",
+          "triangles": 2048
+        },
+        {
+          "level": "low",
+          "path": "public/models/nominal-seals/13531720251-low.glb",
+          "bytes": 11364,
+          "sha256": "fa9430ab89dd4114f6a41eac11fb68c6e09733d93f05af9c58b2107f530a610b",
+          "triangles": 512
+        }
+      ]
+    },
+    {
+      "partId": "bmw-13531720252",
+      "files": [
+        {
+          "level": "high",
+          "path": "outputs/digital-twin/nominal-seals/13531720252-high.glb",
+          "bytes": 115376,
+          "sha256": "575dd55230fbf2113d8d711f6ee7181657bdbc4e912eabfe7299eae690ec9245",
+          "triangles": 6144
+        },
+        {
+          "level": "medium",
+          "path": "public/models/nominal-seals/13531720252-medium.glb",
+          "bytes": 39920,
+          "sha256": "b892a39e2f4fefc73b2f3086b0ca4a7744435591abb7e7605486f7d20a946524",
+          "triangles": 2048
+        },
+        {
+          "level": "low",
+          "path": "public/models/nominal-seals/13531720252-low.glb",
+          "bytes": 11304,
+          "sha256": "4f7e780bc77191b28a93fcf5ad11a66e73e9247757a07ebf8016ce75f35bed62",
+          "triangles": 512
+        }
+      ]
+    },
+    {
+      "partId": "bmw-13641730767",
+      "files": [
+        {
+          "level": "high",
+          "path": "outputs/digital-twin/nominal-seals/13641730767-high.glb",
+          "bytes": 115416,
+          "sha256": "304c2f5acb21e626d6e6a76e4695dbac662bdc094f64efcfa681389188340bee",
+          "triangles": 6144
+        },
+        {
+          "level": "medium",
+          "path": "public/models/nominal-seals/13641730767-medium.glb",
+          "bytes": 39960,
+          "sha256": "485816a7e46da382f077851b9faae010a9f257287c1d17fe5d98357083a99618",
+          "triangles": 2048
+        },
+        {
+          "level": "low",
+          "path": "public/models/nominal-seals/13641730767-low.glb",
+          "bytes": 11344,
+          "sha256": "70aa1370f97855386f01def3a73e2b66823ec82faabee74f492a468a57de69c3",
+          "triangles": 512
+        }
+      ]
+    },
+    {
+      "partId": "bmw-16141179153",
+      "files": [
+        {
+          "level": "high",
+          "path": "outputs/digital-twin/nominal-seals/16141179153-high.glb",
+          "bytes": 115376,
+          "sha256": "4d916f2b9479b97bfd35fa438e7f3e6423ffaf68ed5cc7228757d12a624a1eed",
+          "triangles": 6144
+        },
+        {
+          "level": "medium",
+          "path": "public/models/nominal-seals/16141179153-medium.glb",
+          "bytes": 39920,
+          "sha256": "d1841bb8b22710a8f01328a938f0e1686b2d78762d153844d7b50a1fda7ae930",
+          "triangles": 2048
+        },
+        {
+          "level": "low",
+          "path": "public/models/nominal-seals/16141179153-low.glb",
+          "bytes": 11304,
+          "sha256": "d68f1d9f663271a4dabf2628bb783de15e2a315da52b22e33a664a976c35adb0",
+          "triangles": 512
+        }
+      ]
+    },
+    {
+      "partId": "bmw-17211723942",
+      "files": [
+        {
+          "level": "high",
+          "path": "outputs/digital-twin/nominal-seals/17211723942-high.glb",
+          "bytes": 115440,
+          "sha256": "2c94d8a0390e58315ee944dc3d7fc40f22eccdfbb305fc91a20bf092ebcf8ecd",
+          "triangles": 6144
+        },
+        {
+          "level": "medium",
+          "path": "public/models/nominal-seals/17211723942-medium.glb",
+          "bytes": 39980,
+          "sha256": "7bc1d745c08dd8100b43fdb612caa8f436384e8328ac52e71a829551632de78f",
+          "triangles": 2048
+        },
+        {
+          "level": "low",
+          "path": "public/models/nominal-seals/17211723942-low.glb",
+          "bytes": 11364,
+          "sha256": "1bf106b9ce8c88116ef4f5d3207e94bd5f7de0f56069cd80091a92669f7a3c09",
+          "triangles": 512
+        }
+      ]
+    },
+    {
+      "partId": "bmw-17211723943",
+      "files": [
+        {
+          "level": "high",
+          "path": "outputs/digital-twin/nominal-seals/17211723943-high.glb",
+          "bytes": 115416,
+          "sha256": "f21913258702614be3d6cbec3c998e2492abe5c8b73baab9a9f52e44fb7ab0a2",
+          "triangles": 6144
+        },
+        {
+          "level": "medium",
+          "path": "public/models/nominal-seals/17211723943-medium.glb",
+          "bytes": 39960,
+          "sha256": "04c2a0add8aa9ae0a72bb2e6268415c2507d539005ba9a6fceb87114363c20c4",
+          "triangles": 2048
+        },
+        {
+          "level": "low",
+          "path": "public/models/nominal-seals/17211723943-low.glb",
+          "bytes": 11344,
+          "sha256": "8f1cac0d29f2b6c1639a6067484114cb95be10dd872cd3ff146a945f25c9e3ea",
+          "triangles": 512
+        }
+      ]
+    },
+    {
+      "partId": "bmw-17222245358",
+      "files": [
+        {
+          "level": "high",
+          "path": "outputs/digital-twin/nominal-seals/17222245358-high.glb",
+          "bytes": 115416,
+          "sha256": "143c412d1b58e91a482d066ecb34b23919d54da7ed387ea1b6c9af04c3c8d308",
+          "triangles": 6144
+        },
+        {
+          "level": "medium",
+          "path": "public/models/nominal-seals/17222245358-medium.glb",
+          "bytes": 39960,
+          "sha256": "8cb2a680e40abcdec54eedd5441bd688bc6fbbc6ce7cdd635564a08e07eb69d4",
+          "triangles": 2048
+        },
+        {
+          "level": "low",
+          "path": "public/models/nominal-seals/17222245358-low.glb",
+          "bytes": 11344,
+          "sha256": "d7db0e336625a6b3b9d828acd71ccfc0883a1660e0a34b07b5d3f3b152e5703e",
+          "triangles": 512
+        }
+      ]
+    },
+    {
+      "partId": "bmw-23211228152",
+      "files": [
+        {
+          "level": "high",
+          "path": "outputs/digital-twin/nominal-seals/23211228152-high.glb",
+          "bytes": 115384,
+          "sha256": "d3abdc6a379bdaaeb64f858656f25b165808eb05eb2ec626ab50896ccfc771c5",
+          "triangles": 6144
+        },
+        {
+          "level": "medium",
+          "path": "public/models/nominal-seals/23211228152-medium.glb",
+          "bytes": 39924,
+          "sha256": "11b8c4b886818f4fed8765086b0cd2eabb19c296cd8e4a5d6222eb1e276321ca",
+          "triangles": 2048
+        },
+        {
+          "level": "low",
+          "path": "public/models/nominal-seals/23211228152-low.glb",
+          "bytes": 11308,
+          "sha256": "943d89dd1a4fe3ce54c8f86f1482b69534d2ca7079516a8d669f0ab21708fd4d",
+          "triangles": 512
+        }
+      ]
+    },
+    {
+      "partId": "bmw-24201217321",
+      "files": [
+        {
+          "level": "high",
+          "path": "outputs/digital-twin/nominal-seals/24201217321-high.glb",
+          "bytes": 115376,
+          "sha256": "7224ee2ce7502c1de8beb1608fb307e9563a31aea88682844689b46e857ea4e1",
+          "triangles": 6144
+        },
+        {
+          "level": "medium",
+          "path": "public/models/nominal-seals/24201217321-medium.glb",
+          "bytes": 39916,
+          "sha256": "1f73ab521fbb19217b3d0aa57e5e3812695adc1f54855c3384f6f7c07be4e435",
+          "triangles": 2048
+        },
+        {
+          "level": "low",
+          "path": "public/models/nominal-seals/24201217321-low.glb",
+          "bytes": 11304,
+          "sha256": "ea42660ee06d5d044063e36dac5dbe5ac3b32c4b992a1d4d84618967f288a294",
+          "triangles": 512
+        }
+      ]
+    },
+    {
+      "partId": "bmw-24211217132",
+      "files": [
+        {
+          "level": "high",
+          "path": "outputs/digital-twin/nominal-seals/24211217132-high.glb",
+          "bytes": 115472,
+          "sha256": "9140029762628a65cb3de393c41a17a61496cd19379d86fbbdcc92d13d72e27f",
+          "triangles": 6144
+        },
+        {
+          "level": "medium",
+          "path": "public/models/nominal-seals/24211217132-medium.glb",
+          "bytes": 40012,
+          "sha256": "3f45458e7e2026b657a21902b30a938bf543876b17725069b9fc23d25c6b6263",
+          "triangles": 2048
+        },
+        {
+          "level": "low",
+          "path": "public/models/nominal-seals/24211217132-low.glb",
+          "bytes": 11396,
+          "sha256": "9bf4421f722f0f621dd40c2e5e4ca71ea10fcc2a106c09a65e996c0fd1e685ae",
+          "triangles": 512
+        }
+      ]
+    },
+    {
+      "partId": "bmw-24311217133",
+      "files": [
+        {
+          "level": "high",
+          "path": "outputs/digital-twin/nominal-seals/24311217133-high.glb",
+          "bytes": 115384,
+          "sha256": "f4a541cd79dee1cbc024dc0224de6a520e37206992a32831b2987382f3e727fe",
+          "triangles": 6144
+        },
+        {
+          "level": "medium",
+          "path": "public/models/nominal-seals/24311217133-medium.glb",
+          "bytes": 39928,
+          "sha256": "c93ba7049a37ada661eedac40961d6ae063ccabebcad4d38d277a5f9ae432716",
+          "triangles": 2048
+        },
+        {
+          "level": "low",
+          "path": "public/models/nominal-seals/24311217133-low.glb",
+          "bytes": 11312,
+          "sha256": "2fb13cfa7b2b565a11d67e6e7d0ae8ec90c93bb81fe1ca0453d0f615baa4a325",
+          "triangles": 512
+        }
+      ]
+    },
+    {
+      "partId": "bmw-24311219166",
+      "files": [
+        {
+          "level": "high",
+          "path": "outputs/digital-twin/nominal-seals/24311219166-high.glb",
+          "bytes": 115376,
+          "sha256": "f4f3970f69593cf6567d1a6541025bc66770602a225efd6f131f1b4f7bd33f41",
+          "triangles": 6144
+        },
+        {
+          "level": "medium",
+          "path": "public/models/nominal-seals/24311219166-medium.glb",
+          "bytes": 39916,
+          "sha256": "919732c180d4434923902c927a4e12e5ca3f2def71f705463cf2cfd228047099",
+          "triangles": 2048
+        },
+        {
+          "level": "low",
+          "path": "public/models/nominal-seals/24311219166-low.glb",
+          "bytes": 11304,
+          "sha256": "5d3f67101bdcf452c2a9b0a1305cf8b21e33f74a846f762a17a9ff0dd44578ae",
+          "triangles": 512
+        }
+      ]
+    },
+    {
+      "partId": "bmw-24311421583",
+      "files": [
+        {
+          "level": "high",
+          "path": "outputs/digital-twin/nominal-seals/24311421583-high.glb",
+          "bytes": 115380,
+          "sha256": "d84f40edbb9a6087f7042f586870e91ca6591522f8f8a19ef176791d4e28b684",
+          "triangles": 6144
+        },
+        {
+          "level": "medium",
+          "path": "public/models/nominal-seals/24311421583-medium.glb",
+          "bytes": 39920,
+          "sha256": "480d41aa43f526252f5d626e83a75966530abd2edc853e9f403db2a011761469",
+          "triangles": 2048
+        },
+        {
+          "level": "low",
+          "path": "public/models/nominal-seals/24311421583-low.glb",
+          "bytes": 11308,
+          "sha256": "332f543366e4ebe76ae8155dcac4d65f126491bfdd94740b79be7c12747f326a",
+          "triangles": 512
+        }
+      ]
+    },
+    {
+      "partId": "bmw-34511159421",
+      "files": [
+        {
+          "level": "high",
+          "path": "outputs/digital-twin/nominal-seals/34511159421-high.glb",
+          "bytes": 115376,
+          "sha256": "cc7df85df88979928ae802628147b5167554c8fda6fcd266ab614f90be70cd09",
+          "triangles": 6144
+        },
+        {
+          "level": "medium",
+          "path": "public/models/nominal-seals/34511159421-medium.glb",
+          "bytes": 39916,
+          "sha256": "ea2fe18ebbea609588ebcc45e06a6ee75cccc1f2c8f3c66e10fedfa8185940d2",
+          "triangles": 2048
+        },
+        {
+          "level": "low",
+          "path": "public/models/nominal-seals/34511159421-low.glb",
+          "bytes": 11300,
+          "sha256": "d2f501535d7dcbd7b732a3527b688ae857211a0c3451a89233cb359bd15a3175",
+          "triangles": 512
+        }
+      ]
+    }
+  ]
+}

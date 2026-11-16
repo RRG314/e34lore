@@ -1,0 +1,175 @@
+{
+  "schema": 1,
+  "families": {
+    "first-party-code": {
+      "creator": "E34 Lore project contributors; substantial Codex assistance",
+      "source": "Private repository Git history; imported scaffolding/dependencies excluded by their notices",
+      "license": "Apache-2.0 for original application code; scope in LICENSE and NOTICE",
+      "attribution": "Retain individual and dependency notices; do not treat Git committer as author of all content",
+      "permittedUses": "Use, modify and redistribute original code under Apache-2.0",
+      "ownership": "Project-origin candidate; human authorship and assignments require owner verification",
+      "aiStatus": "AI-assisted or generated; human creative contribution not established per file",
+      "review": "Copyright eligibility/chain of title pending"
+    },
+    "source-informed-reference": {
+      "creator": "E34 Lore project with AI assistance; upstream authors for cited expression",
+      "source": "File citations, manual/catalog/source manifests and Git history",
+      "license": "No exclusive claim over facts, procedures, measurements or OEM identifiers",
+      "attribution": "Preserve source citations, dates, model applicability and source/verification distinctions",
+      "permittedUses": "Original explanatory presentation subject to source-expression review; facts remain facts",
+      "ownership": "Mixed source-informed content; original expression and arrangement candidates only",
+      "aiStatus": "AI-assisted writing/data extraction; no blanket copyright claim",
+      "review": "Check close paraphrases, copied tables and diagrams before a publication or registration claim"
+    },
+    "licensed-photo": {
+      "creator": "Per-file source record",
+      "source": "Wikimedia Commons creator and license records",
+      "license": "Per-file Creative Commons or public-domain declaration",
+      "attribution": "Creator, source, license, changes; share-alike where applicable",
+      "permittedUses": "Per-file declared license, including its attribution and share-alike conditions",
+      "ownership": "Third-party photograph, not E34 Lore property",
+      "aiStatus": "Not project-generated",
+      "review": "Preserve receipts and verify attribution when replacing/editing"
+    },
+    "model-derivative": {
+      "creator": "Uralvagonzavod / UVZZZ (current display Silbergrau); project reconstruction changes",
+      "source": "https://sketchfab.com/3d-models/bmw-525i-e34-project-zomboid-c65aa3b7687d4f5dbbabdfad0b7816bb",
+      "license": "CC BY 4.0 for licensed source and its derivatives; separately generated material eligibility unresolved",
+      "attribution": "Creator, source, CC BY 4.0 link and full adaptation history; r13/r14 mixed-source credits retained",
+      "permittedUses": "Sharing/adaptation under CC BY 4.0 for licensed material; no additional restrictions on those rights; no BMW trademark/manufacturing license",
+      "ownership": "Third-party source with project changes; not exclusively owned by E34 Lore",
+      "aiStatus": "Source artist model plus AI-assisted segmentation, assembly and generation",
+      "review": "Model render receipt for e34-525i-reference.jpg should be consolidated; body-fitted systems retain licensed derivation"
+    },
+    "generated-geometry": {
+      "creator": "E34 Lore procedural reconstruction with Codex assistance",
+      "source": "Generator code, build manifests and companion studio; nominal dimensions/source references",
+      "license": "Project-origin; human copyright eligibility and release license not established",
+      "attribution": "Retain source credit where licensed textures or fitted profiles are present; nominal dimensions are factual",
+      "permittedUses": "Existing reference viewer; further licensing requires review of human authorship and any included licensed elements",
+      "ownership": "Original-generation candidate, not manufacturer CAD or exclusive ownership of mechanical design",
+      "aiStatus": "AI-generated/assisted geometry code and shapes",
+      "review": "No factory accuracy or blanket copyright claim"
+    },
+    "oem-artwork": {
+      "creator": "BMW catalog illustration via BMWPartsDeal; rights holder not independently established",
+      "source": "src/data/diagrams.ts and linked catalog pages",
+      "license": "MISSING—public visibility is not permission",
+      "attribution": "Existing BMW/catalog source credits retained; attribution alone does not supply permission",
+      "permittedUses": "Unresolved; seek permission or replace with independently created licensed diagrams; no new reuse/export approval",
+      "ownership": "Third-party OEM artwork; no E34 Lore claim",
+      "aiStatus": "Source illustration, not project-generated",
+      "review": "HIGH: five existing functional illustrations need license/legal review; preserved during audit"
+    },
+    "manual-reference": {
+      "creator": "Bentley Publishers / cited manual authors",
+      "source": "Owner-supplied E34 5 Series Service Manual (1).pdf; SHA-256 23032c541d08d764921449cb13751e77847abaeb720abb21e30401e22797322a",
+      "license": "No redistribution permission established",
+      "attribution": "Bentley BMW 5 Series E34 Service Manual, printed/PDF locators; ownership of scan is not copyright assignment",
+      "permittedUses": "Private editorial reference only; permissions/legal analysis required before public scan or substantial expressive reproduction",
+      "ownership": "Third-party manual expression and artwork",
+      "aiStatus": "Source scan/excerpts, OCR may be AI-assisted",
+      "review": "Keep raw scan, extracts and images out of public/deployment"
+    },
+    "catalog-facts": {
+      "creator": "BMW/OEM and provider factual records; project normalization",
+      "source": "Catalog source URLs/snapshot receipts; CraigFf/bmweb-etk pinned archive manifest",
+      "license": "Facts are not claimed; provider compilation/contract/database rights unresolved",
+      "attribution": "Retain source, snapshot date and applicability limitations; do not imply BMW endorsement",
+      "permittedUses": "Existing factual reference; bulk redistribution and source contractual scope require review",
+      "ownership": "OEM numbers/specifications/measurements are not E34 Lore exclusive property",
+      "aiStatus": "Source extraction and AI-assisted normalization",
+      "review": "HIGH: archive and provider acquisition/compilation permissions need review; artwork is separately classified"
+    },
+    "brand-art": {
+      "creator": "E34 Lore project/Codex under owner direction",
+      "source": "public/brand/e34-grille.svg and derived app marks",
+      "license": "Proposed original-work notice not approved; no trademark clearance",
+      "attribution": "Do not claim BMW kidney-grille design, vehicle marks or endorsement",
+      "permittedUses": "Current project identity subject to clearance; no merch or registration clearance inferred",
+      "ownership": "Project SVG expression candidate; BMW design/brand-confusion risks remain",
+      "aiStatus": "AI-assisted SVG and icon production",
+      "review": "HIGH: recognizable twin-kidney/headlamp motif requires trademark/design review"
+    },
+    "generated-art": {
+      "creator": "E34 Lore project/Codex",
+      "source": "Original diagram/QR generators and Git history",
+      "license": "Project-origin candidate; notice held pending authorship review",
+      "attribution": "Preserve source evidence and explanatory accuracy limits",
+      "permittedUses": "Current service reference; copyright eligibility not established for AI-only expression or functional QR encoding",
+      "ownership": "Potential original illustration expression only, not repair methods or factual encoding",
+      "aiStatus": "AI-assisted generation",
+      "review": "Human authorship review before claim/registration"
+    },
+    "font": {
+      "creator": "DM Sans and Barlow Condensed authors in bundled notices",
+      "source": "public/fonts/dmsans-OFL.txt; public/fonts/barlowcondensed-OFL.txt",
+      "license": "SIL Open Font License 1.1",
+      "attribution": "Keep font copyright and OFL text with redistribution; respect reserved names if modifying",
+      "permittedUses": "Embed/use/redistribute subject to OFL; no project-exclusive ownership",
+      "ownership": "Third-party fonts",
+      "aiStatus": "Not project-generated",
+      "review": "Notices retained; no blanket site restriction on licensed font rights"
+    },
+    "runtime-oss": {
+      "creator": "ONNX Runtime, Tesseract.js, tesseract.js-core and upstream contributors",
+      "source": "Pinned package-lock.json, scanner runtime preparation script and accompanying LICENSE files; @tesseract.js-data/eng 1.0.0 registry declares MIT, data digest pinned in preparation script",
+      "license": "MIT / Apache-2.0 as identified in package and per-file notices",
+      "attribution": "Preserve upstream copyright/license and applicable NOTICE text",
+      "permittedUses": "Runtime redistribution under upstream terms; public JS/WASM remain accessible",
+      "ownership": "Third-party runtime code; not E34 Lore-exclusive",
+      "aiStatus": "Upstream software",
+      "review": "Use dependency inventory for exact versions/licenses; model weights require their own license"
+    },
+    "standards-oss": {
+      "creator": "cq_warehouse contributors",
+      "source": "data/digital-twin/standards/PROVENANCE.md and LICENSE",
+      "license": "Apache-2.0",
+      "attribution": "Retain license, provenance, applicable notices and changes",
+      "permittedUses": "Apache-2.0 subject to conditions; dimensional facts not exclusive",
+      "ownership": "Third-party standards table source",
+      "aiStatus": "Not project-generated",
+      "review": "License retained"
+    },
+    "vendor-oss": {
+      "creator": "Original template/tooling and upstream authors",
+      "source": "Adjacent LICENSE files and pinned dependencies",
+      "license": "Per-file license; no blanket project ownership",
+      "attribution": "Preserve existing MIT/other license notices",
+      "permittedUses": "As licensed in adjacent notices; inspect mixed adapted files",
+      "ownership": "Third-party tooling/scaffold plus modifications",
+      "aiStatus": "Upstream plus project AI-assisted adaptations",
+      "review": "No root MIT license inferred from vendor MIT notices"
+    },
+    "scanner-index": {
+      "creator": "Source photographers/model creators and project indexing code",
+      "source": "public/scanner/reference-index.json, REFERENCE-CREDITS.md; pinned Xenova/clip-vit-base-patch32",
+      "license": "Per-record CC licenses; CLIP model source declares MIT, verified separately from photos",
+      "attribution": "All per-record creator/source/license/change metadata and model provenance",
+      "permittedUses": "Experimental category reference; no exact OEM/fitment proof; per-source rights remain",
+      "ownership": "Mixed licensed reference/embeddings, no exclusive claim over source images",
+      "aiStatus": "Model-generated embeddings and synthetic thumbnails",
+      "review": "No member images exported; scanner launch remains gated on real evaluation"
+    },
+    "unresolved-image": {
+      "creator": "Unknown; legacy project asset",
+      "source": "Git history; no reliable acquisition/creation receipt found",
+      "license": "MISSING",
+      "attribution": "Unresolved—do not invent artist or project authorship",
+      "permittedUses": "Private preservation pending provenance verification",
+      "ownership": "Unknown",
+      "aiStatus": "Unknown, potentially AI-generated; not assumed original photography",
+      "review": "Quarantined outside public; no current code references found"
+    },
+    "unclassified": {
+      "creator": "Unknown",
+      "source": "Unresolved",
+      "license": "MISSING",
+      "attribution": "Unresolved",
+      "permittedUses": "No new publication authorized",
+      "ownership": "Unknown",
+      "aiStatus": "Unknown",
+      "review": "Resolve before publishing"
+    }
+  }
+}

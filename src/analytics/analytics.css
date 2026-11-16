@@ -1,0 +1,219 @@
+.analytics-page {
+  max-width: 1460px;
+}
+.analytics-actions,
+.analytics-controls {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 24px 0;
+}
+.analytics-controls {
+  padding: 20px;
+  background: var(--paper, #f2f1eb);
+  border: 1px solid #d8dacf;
+}
+.analytics-controls label {
+  display: grid;
+  gap: 7px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.analytics-controls input,
+.analytics-controls select,
+.analytics-table-filter input {
+  font: inherit;
+  padding: 9px 12px;
+  border: 1px solid #bcc3b5;
+  border-radius: 3px;
+  background: #fff;
+  color: #252b26;
+}
+.analytics-status {
+  display: flex;
+  gap: 10px;
+  padding: 15px;
+  background: #f2e9d9;
+  border-left: 3px solid #a47839;
+}
+.analytics-status.active {
+  background: #e9eee6;
+  border-color: #254c3f;
+}
+.analytics-caption {
+  font-size: 12px;
+  color: #626b60;
+  line-height: 1.6;
+}
+.analytics-tabs {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  border-bottom: 1px solid #cdd3c5;
+  margin: 28px 0;
+}
+.analytics-tabs button {
+  white-space: nowrap;
+  padding: 14px 12px;
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+.analytics-tabs button[aria-current] {
+  border-color: #254c3f;
+  color: #254c3f;
+  font-weight: 700;
+}
+.analytics-cards {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+.analytics-cards article {
+  border: 1px solid #d3d8cb;
+  padding: 22px;
+}
+.analytics-cards h2 {
+  font-size: 14px;
+  margin: 0 0 20px;
+}
+.analytics-cards strong {
+  font-size: 30px;
+  line-height: 1.2;
+  display: block;
+}
+.analytics-cards p {
+  font-size: 12px;
+}
+.analytics-cards small {
+  font-size: 11px;
+  line-height: 1.7;
+  display: block;
+  color: #66725e;
+}
+.analytics-page h2 {
+  margin-top: 30px;
+}
+.analytics-chart {
+  height: 310px;
+  min-width: 0;
+  margin: 25px 0;
+}
+.analytics-table-scroll {
+  overflow-x: auto;
+  max-width: 100%;
+  margin: 12px 0 20px;
+}
+.analytics-page table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 13px;
+  text-align: left;
+}
+.analytics-page th,
+.analytics-page td {
+  padding: 13px 15px;
+  border-bottom: 1px solid #d6dacf;
+  vertical-align: top;
+}
+.analytics-page th {
+  background: #eceee5;
+}
+.analytics-page th button {
+  font: inherit;
+  font-weight: 600;
+  white-space: nowrap;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+.analytics-table-filter {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 12px;
+  margin-top: 18px;
+}
+.analytics-empty {
+  padding: 20px;
+  border: 1px dashed #c7cebe;
+  color: #636d5e;
+}
+.analytics-opportunity,
+.analytics-funnel {
+  padding: 22px;
+  border: 1px solid #d4dacb;
+  margin: 18px 0;
+}
+.analytics-funnel ol {
+  display: flex;
+  gap: 18px;
+  list-style: none;
+  padding: 0;
+  flex-wrap: wrap;
+}
+.analytics-funnel li {
+  display: grid;
+  gap: 8px;
+  flex: 1;
+  min-width: 130px;
+  padding: 15px;
+  background: #ebeee5;
+}
+.analytics-funnel strong {
+  font-size: 24px;
+}
+.analytics-funnel small,
+.analytics-opportunity small {
+  color: #65715c;
+  line-height: 1.7;
+}
+.analytics-approval {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin: 24px 0;
+}
+.analytics-approval input {
+  margin-top: 4px;
+}
+.analytics-preferences {
+  margin-top: 28px;
+}
+.analytics-preferences h3 {
+  margin-bottom: 10px;
+}
+@media (max-width: 900px) {
+  .analytics-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 520px) {
+  .analytics-cards {
+    grid-template-columns: 1fr;
+  }
+  .analytics-controls {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 12px;
+  }
+  .analytics-controls input,
+  .analytics-controls select {
+    width: 100%;
+    min-width: 0;
+  }
+  .analytics-page .analytics-actions .button {
+    font-size: 11px;
+    padding: 10px;
+  }
+  .analytics-table-filter {
+    display: grid;
+  }
+  .analytics-chart {
+    height: 300px;
+  }
+}

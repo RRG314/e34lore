@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Report a security issue privately
+    url: https://e34lore.com/support?category=other
+    about: Start the subject with Security and leave sensitive details out of GitHub.

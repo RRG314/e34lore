@@ -1,0 +1,32 @@
+[
+  {
+    "id": "e34-original-ten-spoke-v1",
+    "label": "Original ten-spoke study",
+    "url": "/models/e34-build-studio/r1/dd90038f493f0cfdf33c18cd6c5f86e07114f1b681484e19c0d93df7a53e1ee5.glb",
+    "bytes": 109128,
+    "sha256": "dd90038f493f0cfdf33c18cd6c5f86e07114f1b681484e19c0d93df7a53e1ee5",
+    "normalization": 1,
+    "lodLow": {
+      "url": "/models/e34-build-studio/r1/a5043fc42024dcfcab5769f78ca6e27d534c6412cfe7137c26cb71189e8b338d.glb",
+      "bytes": 48944,
+      "sha256": "a5043fc42024dcfcab5769f78ca6e27d534c6412cfe7137c26cb71189e8b338d"
+    },
+    "license": "CC0-1.0",
+    "creator": "E34 Lore",
+    "revision": 1,
+    "fitment": "Unmeasured appearance study; no manufacturer identity or fitment claim."
+  },
+  {
+    "id": "e34-artist-wheel-v1",
+    "label": "Licensed artist wheel",
+    "url": "/models/e34-525i/e34-wheel.glb",
+    "bytes": 71772,
+    "sha256": "9fa22896feab63d5d8f5ca665d1bb1a54a05d659c3e6582791c2cd3f8f5638da",
+    "normalization": 0.9236988675912118,
+    "lodLow": null,
+    "license": "CC-BY-4.0",
+    "creator": "Uralvagonzavod / UVZZZ",
+    "revision": 1,
+    "fitment": "Artist reference; no manufacturer identity or fitment claim."
+  }
+]

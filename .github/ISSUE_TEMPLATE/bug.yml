@@ -1,0 +1,16 @@
+name: Website bug
+description: Report a problem with E34 Lore or E30 Lore.
+body:
+  - type: input
+    id: page
+    attributes:
+      label: Page or feature
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: What happened?
+      description: Include the steps, what you expected, your browser, and the selected vehicle if relevant. Keep VINs, account details, and private photos out of the issue.
+    validations:
+      required: true

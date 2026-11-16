@@ -1,0 +1,1104 @@
+{
+  "schemaVersion": 1,
+  "auditedOn": "2026-11-09",
+  "scope": "E34 native public references from released website v48; additive appearance targeting only",
+  "selectionRule": "Match immutable asset SHA AND node ID AND source material index; material name is an additional assertion when nonempty. Never recolor globally by shared material name. Source GLBs/manifests remain immutable.",
+  "manifestPins": [
+    {
+      "id": "e34-525i-sedan-automatic",
+      "revision": 23,
+      "manifestUrl": "/models/e34-lore/r23/manifest.07d858ddc5abb25b43a823e5082cf9d17b55e018df6317cf8f4c1c343569bd2d.json",
+      "sha256": "07d858ddc5abb25b43a823e5082cf9d17b55e018df6317cf8f4c1c343569bd2d"
+    },
+    {
+      "id": "e34-reconstruction-reference",
+      "revision": 14,
+      "manifestUrl": "/models/e34-lore/r14/manifest.b038c2887269437d9c685cee958681da1f28d5fa8609acfc4f182c71881f7d1d.json",
+      "sha256": "b038c2887269437d9c685cee958681da1f28d5fa8609acfc4f182c71881f7d1d"
+    },
+    {
+      "id": "e34-530i-sedan-manual",
+      "revision": 15,
+      "manifestUrl": "/models/e34-lore/r15/manifest.c7617e45f04750e005c9c99718fb5bd63325747b7309de21b3e7e40f568d8a37.json",
+      "sha256": "c7617e45f04750e005c9c99718fb5bd63325747b7309de21b3e7e40f568d8a37"
+    },
+    {
+      "id": "e34-530i-sedan-automatic",
+      "revision": 16,
+      "manifestUrl": "/models/e34-lore/r16/manifest.2918569729ce4801e20eb4c027c270242f9ba7195123c0a94309b563b6ab4bac.json",
+      "sha256": "2918569729ce4801e20eb4c027c270242f9ba7195123c0a94309b563b6ab4bac"
+    },
+    {
+      "id": "e34-535i-sedan-manual",
+      "revision": 17,
+      "manifestUrl": "/models/e34-lore/r17/manifest.5fb1d0b112dcac6233149c93327f28dd5a4d6921019d429b8b00cba1fea428e8.json",
+      "sha256": "5fb1d0b112dcac6233149c93327f28dd5a4d6921019d429b8b00cba1fea428e8"
+    },
+    {
+      "id": "e34-535i-sedan-automatic",
+      "revision": 18,
+      "manifestUrl": "/models/e34-lore/r18/manifest.eff931ab79c1fa6b47008b0dbca1af599525b05092191ebcb0f9fc7dcdc555fe.json",
+      "sha256": "eff931ab79c1fa6b47008b0dbca1af599525b05092191ebcb0f9fc7dcdc555fe"
+    },
+    {
+      "id": "e34-540i-sedan-manual",
+      "revision": 19,
+      "manifestUrl": "/models/e34-lore/r19/manifest.e0e549a62618c9ec4d545eb92969070644220384da21f8109d0bd050168f68ab.json",
+      "sha256": "e0e549a62618c9ec4d545eb92969070644220384da21f8109d0bd050168f68ab"
+    },
+    {
+      "id": "e34-540i-sedan-automatic",
+      "revision": 20,
+      "manifestUrl": "/models/e34-lore/r20/manifest.8e1e137a4896bafb8903d9be52478d81f861d37e2e5d75a64e97b894566bf6f6.json",
+      "sha256": "8e1e137a4896bafb8903d9be52478d81f861d37e2e5d75a64e97b894566bf6f6"
+    },
+    {
+      "id": "e34-530i-touring-manual",
+      "revision": 21,
+      "manifestUrl": "/models/e34-lore/r21/manifest.c44bc4e0cc677ad0c9f9c814b58a7e01a9db10a5413173e8656ed08d196b5fb6.json",
+      "sha256": "c44bc4e0cc677ad0c9f9c814b58a7e01a9db10a5413173e8656ed08d196b5fb6"
+    },
+    {
+      "id": "e34-530i-touring-automatic",
+      "revision": 22,
+      "manifestUrl": "/models/e34-lore/r22/manifest.cbad244729286f4d560defa551e911ae159814034b6cbf36c5285b0c70697594.json",
+      "sha256": "cbad244729286f4d560defa551e911ae159814034b6cbf36c5285b0c70697594"
+    }
+  ],
+  "assetPins": [
+    {
+      "id": "assembled:m50-v3",
+      "url": "/models/e34-lore/r14/32334cd0a373f0e424a00b996a71353b0556f9371f440ecf323dac4e03d9d99c.glb",
+      "bytes": 1177272,
+      "sha256": "32334cd0a373f0e424a00b996a71353b0556f9371f440ecf323dac4e03d9d99c"
+    },
+    {
+      "id": "assembled:wheel-v4",
+      "url": "/models/e34-lore/r14/aba6fa5cec6c1b31ca52d1e3ae1f95a08fda22d6a2eccc1a5bf21190513cc0e1.glb",
+      "bytes": 82176,
+      "sha256": "aba6fa5cec6c1b31ca52d1e3ae1f95a08fda22d6a2eccc1a5bf21190513cc0e1"
+    },
+    {
+      "id": "assembled:body-v7",
+      "url": "/models/e34-lore/r14/60efa3688dbd35ee6315d0da6846df6ed44ee12e3531bd6ba6cccc01e2897fab.glb",
+      "bytes": 1558568,
+      "sha256": "60efa3688dbd35ee6315d0da6846df6ed44ee12e3531bd6ba6cccc01e2897fab"
+    },
+    {
+      "id": "vehicle-variant:engine:M60B30:r1",
+      "url": "/models/e34-lore/r15/5345f4fc9810ef8d6694649aea81669d9913762e6a8e7f9cef9fb6ce4af0a814.glb",
+      "bytes": 3093780,
+      "sha256": "5345f4fc9810ef8d6694649aea81669d9913762e6a8e7f9cef9fb6ce4af0a814"
+    },
+    {
+      "id": "vehicle-variant:engine:M30B35:r1",
+      "url": "/models/e34-lore/r17/f7c368d703b9589651d9f21812c3cfc508d728d4463b5c0f06139f3480193bf3.glb",
+      "bytes": 711396,
+      "sha256": "f7c368d703b9589651d9f21812c3cfc508d728d4463b5c0f06139f3480193bf3"
+    },
+    {
+      "id": "vehicle-variant:engine:M60B40:r1",
+      "url": "/models/e34-lore/r19/ced203cae5b4ac559e525d5dae86b85bb0cc4878864772099b34c830ed8015c0.glb",
+      "bytes": 3107008,
+      "sha256": "ced203cae5b4ac559e525d5dae86b85bb0cc4878864772099b34c830ed8015c0"
+    },
+    {
+      "id": "assembled:body-touring-c89006a5",
+      "url": "/models/e34-lore/r21/c89006a5069457c76794b0a72b54ebcd7be8580d83b5006c7b8d0d4c419e495b.glb",
+      "bytes": 524820,
+      "sha256": "c89006a5069457c76794b0a72b54ebcd7be8580d83b5006c7b8d0d4c419e495b"
+    },
+    {
+      "id": "assembled:body-touring-c89006a5",
+      "url": "/models/e34-lore/r46/cb106a3cba9a60455b32660e4efe7905f8220ba39401d558ac55b13476184f2b.glb",
+      "sha256": "cb106a3cba9a60455b32660e4efe7905f8220ba39401d558ac55b13476184f2b",
+      "bytes": 1217092
+    }
+  ],
+  "targets": {
+    "paint": [
+      {
+        "assetId": "assembled:body-v7",
+        "assetSha256": "60efa3688dbd35ee6315d0da6846df6ed44ee12e3531bd6ba6cccc01e2897fab",
+        "nodeIds": [
+          "e34body:rear-quarter-right",
+          "e34body:rear-quarter-left",
+          "e34body:front-fender-right",
+          "e34body:front-fender-left",
+          "e34body:shell",
+          "e34body:roof",
+          "e34body:rocker-right",
+          "e34body:rocker-left",
+          "e34body:hood",
+          "e34body:trunk",
+          "e34body:rear-door-right",
+          "e34body:rear-door-left",
+          "e34body:front-door-right",
+          "e34body:front-door-left",
+          "e34body:front-bumper",
+          "e34body:rear-bumper",
+          "e34body:front-valance",
+          "e34body:mirror-left",
+          "e34body:mirror-right"
+        ],
+        "materialIndices": [
+          1
+        ],
+        "materialNames": [
+          "body-white"
+        ],
+        "notes": "Painted panels plus explicitly reviewed UV islands on mixed bumper and mirror meshes. Glass, lamps, badges, plates and black trim retain their source materials."
+      },
+      {
+        "assetId": "assembled:body-touring-c89006a5",
+        "assetSha256": "c89006a5069457c76794b0a72b54ebcd7be8580d83b5006c7b8d0d4c419e495b",
+        "nodeIds": [
+          "touring:body-shell",
+          "touring:roof",
+          "touring:rear-quarter-right",
+          "touring:hood",
+          "touring:front-fender-left",
+          "touring:front-fender-right",
+          "touring:rear-door-left",
+          "touring:rear-door-right",
+          "touring:front-door-left",
+          "touring:front-door-right",
+          "touring:tailgate",
+          "touring:front-bumper",
+          "touring:rear-bumper",
+          "touring:front-door-left-trim",
+          "touring:front-door-right-trim"
+        ],
+        "materialIndices": [
+          0
+        ],
+        "materialNames": [
+          "carpaint.044"
+        ],
+        "notes": "Paint material 0 only, including painted bumper inserts and mirror/door surround pieces. Other primitives keep their original black, chrome and glass materials."
+      },
+      {
+        "assetId": "e30:artist-exterior",
+        "assetSha256": "be795612646e82f88d28c9084c7d89a38a02fc73fc00fce0fa72424eebff3eea",
+        "nodeIds": [
+          "e30body:body-surface"
+        ],
+        "materialIndices": [
+          0
+        ],
+        "materialNames": [
+          "Body"
+        ]
+      },
+      {
+        "assetId": "assembled:body-v7",
+        "assetSha256": "1a64ac5a376bd2d348071e0ae926d25958483ad3bb9f23af988b19ac4d902f95",
+        "nodeIds": [
+          "e34body:rear-quarter-right",
+          "e34body:rear-quarter-left",
+          "e34body:front-fender-right",
+          "e34body:front-fender-left",
+          "e34body:shell",
+          "e34body:roof",
+          "e34body:rocker-right",
+          "e34body:rocker-left",
+          "e34body:hood",
+          "e34body:trunk",
+          "e34body:rear-door-right",
+          "e34body:rear-door-left",
+          "e34body:front-door-right",
+          "e34body:front-door-left",
+          "e34body:front-bumper",
+          "e34body:rear-bumper",
+          "e34body:front-valance",
+          "e34body:mirror-left",
+          "e34body:mirror-right",
+          "e34body:sunroof"
+        ],
+        "materialIndices": [
+          1
+        ],
+        "materialNames": [
+          "body-white"
+        ],
+        "notes": "Painted panels plus explicitly reviewed UV islands on mixed bumper and mirror meshes. Glass, lamps, badges, plates and black trim retain their source materials."
+      },
+      {
+        "assetId": "assembled:body-touring-c89006a5",
+        "assetSha256": "cb106a3cba9a60455b32660e4efe7905f8220ba39401d558ac55b13476184f2b",
+        "nodeIds": [
+          "touring:body-shell",
+          "touring:roof",
+          "touring:rear-quarter-right",
+          "touring:hood",
+          "touring:front-fender-left",
+          "touring:front-fender-right",
+          "touring:rear-door-left",
+          "touring:rear-door-right",
+          "touring:front-door-left",
+          "touring:front-door-right",
+          "touring:tailgate",
+          "touring:front-bumper",
+          "touring:rear-bumper",
+          "touring:front-door-left-trim",
+          "touring:front-door-right-trim",
+          "touring:sunroof-front",
+          "touring:sunroof-rear",
+          "touring:fuel-door"
+        ],
+        "materialIndices": [
+          0
+        ],
+        "materialNames": [
+          "carpaint.044"
+        ],
+        "notes": "Paint material 0 only, including painted bumper inserts and mirror/door surround pieces. Other primitives keep their original black, chrome and glass materials."
+      }
+    ],
+    "seatUpholstery": [
+      {
+        "assetId": "assembled:body-v7",
+        "assetSha256": "60efa3688dbd35ee6315d0da6846df6ed44ee12e3531bd6ba6cccc01e2897fab",
+        "nodeIds": [
+          "e34sys:front-seat--1",
+          "e34sys:front-seat-1",
+          "e34sys:rear-seat-cushion"
+        ],
+        "materialIndices": [
+          0
+        ],
+        "materialNames": [
+          "body-interior"
+        ],
+        "notes": "Seat appearance tint/roughness only. Retain the source texture, seams and shading; do not claim an authentic factory upholstery or cloth/leather geometry change."
+      },
+      {
+        "assetId": "assembled:body-touring-c89006a5",
+        "assetSha256": "c89006a5069457c76794b0a72b54ebcd7be8580d83b5006c7b8d0d4c419e495b",
+        "nodeIds": [
+          "touring:rear-seat"
+        ],
+        "materialIndices": [
+          10
+        ],
+        "materialNames": [
+          "interior.043"
+        ],
+        "notes": "Touring rear seat appearance only; source material interior.043 is also used elsewhere, hence node scoping is mandatory."
+      },
+      {
+        "assetId": "assembled:body-touring-c89006a5",
+        "assetSha256": "086b0c810304a9a08891a98fb440456022aed39dbfd2d7244861234e26010bf2",
+        "nodeIds": [
+          "touring:rear-seat"
+        ],
+        "materialIndices": [
+          10
+        ],
+        "materialNames": [
+          "interior.043"
+        ],
+        "notes": "Touring rear seat appearance only; source material interior.043 is also used elsewhere, hence node scoping is mandatory."
+      }
+    ],
+    "interiorTrim": [
+      {
+        "assetId": "assembled:body-v7",
+        "assetSha256": "60efa3688dbd35ee6315d0da6846df6ed44ee12e3531bd6ba6cccc01e2897fab",
+        "nodeIds": [
+          "e34sys:door-card-front--1",
+          "e34sys:door-card-rear--1",
+          "e34sys:door-card-rear-1"
+        ],
+        "materialIndices": [
+          0
+        ],
+        "materialNames": [
+          "body-interior"
+        ],
+        "notes": "Door card appearance only. The source graph lacks a separate left-front card; do not invent one or tint the whole dashboard."
+      },
+      {
+        "assetId": "assembled:body-touring-c89006a5",
+        "assetSha256": "c89006a5069457c76794b0a72b54ebcd7be8580d83b5006c7b8d0d4c419e495b",
+        "nodeIds": [
+          "touring:interior-trim",
+          "touring:cargo-trim"
+        ],
+        "materialIndices": [
+          10
+        ],
+        "materialNames": [
+          "interior.043"
+        ],
+        "notes": "Touring interior/cargo surfaces only; no gauges, glass or switches selected."
+      },
+      {
+        "assetId": "assembled:body-touring-c89006a5",
+        "assetSha256": "086b0c810304a9a08891a98fb440456022aed39dbfd2d7244861234e26010bf2",
+        "nodeIds": [
+          "touring:interior-trim",
+          "touring:cargo-trim"
+        ],
+        "materialIndices": [
+          10
+        ],
+        "materialNames": [
+          "interior.043"
+        ],
+        "notes": "Touring interior/cargo surfaces only; no gauges, glass or switches selected."
+      }
+    ],
+    "headliner": [
+      {
+        "assetId": "assembled:body-v7",
+        "assetSha256": "60efa3688dbd35ee6315d0da6846df6ed44ee12e3531bd6ba6cccc01e2897fab",
+        "nodeIds": [
+          "e34sys:headliner"
+        ],
+        "materialIndices": [
+          0
+        ],
+        "materialNames": [
+          "body-interior"
+        ],
+        "notes": "Cabin headliner appearance only; no removal or product fitment claim."
+      }
+    ],
+    "carpet": [
+      {
+        "assetId": "assembled:body-v7",
+        "assetSha256": "60efa3688dbd35ee6315d0da6846df6ed44ee12e3531bd6ba6cccc01e2897fab",
+        "nodeIds": [
+          "e34sys:cabin-carpet"
+        ],
+        "materialIndices": [
+          0
+        ],
+        "materialNames": [
+          "body-interior"
+        ],
+        "notes": "Combined cabin floor/pillars/inner lining surface; label as cabin lining appearance rather than an exact carpet product."
+      },
+      {
+        "assetId": "assembled:body-v7",
+        "assetSha256": "1a64ac5a376bd2d348071e0ae926d25958483ad3bb9f23af988b19ac4d902f95",
+        "nodeIds": [
+          "e34sys:cabin-carpet"
+        ],
+        "materialIndices": [
+          0
+        ],
+        "materialNames": [
+          "body-interior"
+        ],
+        "notes": "Combined cabin floor/pillars/inner lining surface; label as cabin lining appearance rather than an exact carpet product."
+      }
+    ],
+    "engineBayAccent": [
+      {
+        "assetId": "assembled:m50-v3",
+        "assetSha256": "32334cd0a373f0e424a00b996a71353b0556f9371f440ecf323dac4e03d9d99c",
+        "nodeIds": [
+          "m50:valve-cover",
+          "m50:coil-cover"
+        ],
+        "materialIndices": [
+          3
+        ],
+        "materialNames": [
+          ""
+        ],
+        "notes": "Accent the metal cover material only; preserve dark seals/details at material 4."
+      },
+      {
+        "assetId": "vehicle-variant:engine:M30B35:r1",
+        "assetSha256": "f7c368d703b9589651d9f21812c3cfc508d728d4463b5c0f06139f3480193bf3",
+        "nodeIds": [
+          "m30b35:valve-cover"
+        ],
+        "materialIndices": [
+          2
+        ],
+        "materialNames": [
+          ""
+        ],
+        "notes": "Main cover surface; preserve silver raised details at material 1."
+      },
+      {
+        "assetId": "vehicle-variant:engine:M60B30:r1",
+        "assetSha256": "5345f4fc9810ef8d6694649aea81669d9913762e6a8e7f9cef9fb6ce4af0a814",
+        "nodeIds": [
+          "m60b30:valve-cover:1",
+          "m60b30:valve-cover:2",
+          "m60b30:coil-cover:1",
+          "m60b30:coil-cover:2",
+          "m60b30:intake-cover"
+        ],
+        "materialIndices": [
+          3
+        ],
+        "materialNames": [
+          "Material_5"
+        ],
+        "notes": "Cover finish only; preserve silver details/fasteners (material 4) and structural material 1."
+      },
+      {
+        "assetId": "vehicle-variant:engine:M60B40:r1",
+        "assetSha256": "ced203cae5b4ac559e525d5dae86b85bb0cc4878864772099b34c830ed8015c0",
+        "nodeIds": [
+          "m60b40:valve-cover:1",
+          "m60b40:valve-cover:2",
+          "m60b40:coil-cover:1",
+          "m60b40:coil-cover:2",
+          "m60b40:intake-cover"
+        ],
+        "materialIndices": [
+          3
+        ],
+        "materialNames": [
+          "Material_5"
+        ],
+        "notes": "Cover finish only; preserve silver details/fasteners (material 4) and structural material 1."
+      }
+    ],
+    "wheelFinish": [
+      {
+        "assetId": "assembled:wheel-v4",
+        "assetSha256": "aba6fa5cec6c1b31ca52d1e3ae1f95a08fda22d6a2eccc1a5bf21190513cc0e1",
+        "nodeIds": [
+          "wheel:front-left",
+          "wheel:front-right",
+          "wheel:rear-left",
+          "wheel:rear-right"
+        ],
+        "materialIndices": [
+          1,
+          2
+        ],
+        "materialNames": [
+          "",
+          ""
+        ],
+        "notes": "Metal barrel/hub/backing and rim/spokes only; preserve rubber and decorative center quadrants."
+      }
+    ],
+    "tireAppearance": [
+      {
+        "assetId": "assembled:wheel-v4",
+        "assetSha256": "aba6fa5cec6c1b31ca52d1e3ae1f95a08fda22d6a2eccc1a5bf21190513cc0e1",
+        "nodeIds": [
+          "wheel:front-left",
+          "wheel:front-right",
+          "wheel:rear-left",
+          "wheel:rear-right"
+        ],
+        "materialIndices": [
+          0,
+          3
+        ],
+        "materialNames": [
+          "",
+          ""
+        ],
+        "notes": "Rubber casing and existing sidewall/tread detail. Finish/roughness can change; changing actual tread design requires new geometry. No brand, wear, grip or tire condition inference."
+      }
+    ]
+  },
+  "exclusions": {
+    "paint": {
+      "nodeIds": [
+        "e34body:front-license-plate",
+        "e34body:rear-license-plate",
+        "e34body:headlamp-right-inner",
+        "e34body:headlamp-right-outer",
+        "e34body:headlamp-left-inner",
+        "e34body:headlamp-left-outer",
+        "e34body:tail-light-right",
+        "e34body:tail-light-left",
+        "e34body:trunk-lamp-left",
+        "e34body:trunk-lamp-right",
+        "e34body:roundel-front",
+        "e34body:roundel-rear",
+        "e34body:side-moulding-e34-body-14-right",
+        "e34body:side-moulding-e34-body-14-left",
+        "e34body:side-moulding-e34-body-15-right",
+        "e34body:side-moulding-e34-body-15-left",
+        "e34body:side-moulding-e34-body-16-right",
+        "e34body:side-moulding-e34-body-16-left",
+        "touring:body-trim",
+        "touring:grilles",
+        "touring:rear-door-left-trim",
+        "touring:rear-door-right-trim",
+        "touring:roof-rails",
+        "touring:mirror-left",
+        "touring:mirror-right"
+      ],
+      "reason": "Keep lamps, plates, badges, glass and dark trim unchanged. Mixed paint nodes use the separately pinned paintSurfaceRegions; never recolor the entire shared atlas."
+    },
+    "interior": {
+      "nodeIds": [
+        "e34sys:dashboard",
+        "e34sys:instrument-cluster",
+        "e34sys:gear-lever",
+        "e34sys:handbrake-lever",
+        "e34sys:steering-wheel",
+        "e34sys:steering-column",
+        "e34sys:seatbelt-left",
+        "e34sys:seatbelt-right",
+        "e34sys:pedal-box"
+      ],
+      "reason": "Shared textured material also contains instrument markings, switches, black controls, belts and pedals. No global body-interior change."
+    },
+    "glazing": {
+      "materialIndicesByAsset": {
+        "60efa3688dbd35ee6315d0da6846df6ed44ee12e3531bd6ba6cccc01e2897fab": [
+          2
+        ],
+        "c89006a5069457c76794b0a72b54ebcd7be8580d83b5006c7b8d0d4c419e495b": [
+          11,
+          12,
+          13,
+          14,
+          15,
+          16
+        ]
+      },
+      "reason": "Do not apply paint/upholstery settings to glazing, mirrors or lens materials."
+    }
+  },
+  "wheelGeometry": {
+    "activeAssetId": "assembled:wheel-v4",
+    "activeAssetSha256": "aba6fa5cec6c1b31ca52d1e3ae1f95a08fda22d6a2eccc1a5bf21190513cc0e1",
+    "groupName": "wheel-reference-geometry_aa1f838e",
+    "sourceAxis": "Z axle axis; XY radial plane",
+    "nativeNodeIds": [
+      "wheel:front-left",
+      "wheel:front-right",
+      "wheel:rear-left",
+      "wheel:rear-right"
+    ],
+    "sourceMaterials": [
+      {
+        "index": 0,
+        "runtimeMeshNames": [
+          "mesh_0"
+        ],
+        "role": "tire casing",
+        "baselineHex": "#242627",
+        "metalness": 0,
+        "roughness": 0.94
+      },
+      {
+        "index": 1,
+        "runtimeMeshNames": [
+          "mesh_1"
+        ],
+        "role": "barrel, hub and dark backing",
+        "baselineHex": "#353d42",
+        "metalness": 0.65,
+        "roughness": 0.5
+      },
+      {
+        "index": 2,
+        "runtimeMeshNames": [
+          "mesh_2"
+        ],
+        "role": "alloy rings, spokes and rim",
+        "baselineHex": "#bdc2c6",
+        "metalness": 0.82,
+        "roughness": 0.3
+      },
+      {
+        "index": 3,
+        "runtimeMeshNames": [
+          "mesh_3"
+        ],
+        "role": "sidewall/tread detail geometry",
+        "baselineHex": "#171b1c",
+        "metalness": 0,
+        "roughness": 0.86
+      },
+      {
+        "index": 4,
+        "runtimeMeshNames": [
+          "mesh_4",
+          "mesh_6"
+        ],
+        "role": "light decorative center quadrants",
+        "baselineHex": "#d7e1e6",
+        "metalness": 0.3,
+        "roughness": 0.35
+      },
+      {
+        "index": 5,
+        "runtimeMeshNames": [
+          "mesh_5",
+          "mesh_7"
+        ],
+        "role": "blue decorative center quadrants",
+        "baselineHex": "#3f718e",
+        "metalness": 0.3,
+        "roughness": 0.35
+      }
+    ],
+    "materialNames": "All six source material names are empty. Retain GLTFParser.associations source material indices before cloning; do not guess roles from random UUID or color alone.",
+    "nominalReference": {
+      "tireLabel": "205/65 R15",
+      "rimDiameterM": 0.381,
+      "tireOuterDiameterM": 0.6475,
+      "tireWidthM": 0.205,
+      "wheelbaseM": 2.761,
+      "frontTrackM": 1.47,
+      "rearTrackM": 1.495,
+      "meaning": "Procedural nominal assumptions in vendor/e34-wheel-geometry.ts, not measured tires, wheel fitment, factory equipment or certified dimensions. No verified width, offset, bolt pattern, center bore or clearance."
+    },
+    "instances": [
+      {
+        "id": "wheel:front-left",
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1.3805,
+          0.32375,
+          -0.735,
+          1
+        ],
+        "bounds": {
+          "min": [
+            -0.32374998927116394,
+            -0.32374998927116394,
+            -0.10899999737739563
+          ],
+          "max": [
+            0.32374998927116394,
+            0.32374998927116394,
+            0.10454999655485153
+          ]
+        }
+      },
+      {
+        "id": "wheel:front-right",
+        "matrix": [
+          -1,
+          0,
+          1.2246467991473532e-16,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -1.2246467991473532e-16,
+          0,
+          -1,
+          0,
+          1.3805,
+          0.32375,
+          0.735,
+          1
+        ],
+        "bounds": {
+          "min": [
+            -0.32374998927116394,
+            -0.32374998927116394,
+            -0.10899999737739563
+          ],
+          "max": [
+            0.32374998927116394,
+            0.32374998927116394,
+            0.10454999655485153
+          ]
+        }
+      },
+      {
+        "id": "wheel:rear-left",
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -1.3805,
+          0.32375,
+          -0.7475,
+          1
+        ],
+        "bounds": {
+          "min": [
+            -0.32374998927116394,
+            -0.32374998927116394,
+            -0.10899999737739563
+          ],
+          "max": [
+            0.32374998927116394,
+            0.32374998927116394,
+            0.10454999655485153
+          ]
+        }
+      },
+      {
+        "id": "wheel:rear-right",
+        "matrix": [
+          -1,
+          0,
+          1.2246467991473532e-16,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -1.2246467991473532e-16,
+          0,
+          -1,
+          0,
+          -1.3805,
+          0.32375,
+          0.7475,
+          1
+        ],
+        "bounds": {
+          "min": [
+            -0.32374998927116394,
+            -0.32374998927116394,
+            -0.10899999737739563
+          ],
+          "max": [
+            0.32374998927116394,
+            0.32374998927116394,
+            0.10454999655485153
+          ]
+        }
+      }
+    ],
+    "visualSizing": "Changing full-wheel radial scale changes both tire and rim together. Realistic independent rim/tire sizing needs parameterized geometry with matching inner/outer tire profiles; scaling only metal creates gaps/intersections. Preserve axle centers and account for changed visual tire radius to keep ground contact.",
+    "licensedArtistAlternate": {
+      "url": "/models/e34-525i/e34-wheel.glb",
+      "bytes": 71772,
+      "sha256": "9fa22896feab63d5d8f5ca665d1bb1a54a05d659c3e6582791c2cd3f8f5638da",
+      "nodeName": "e34-wheel",
+      "meshName": "e34-wheel-Mesh",
+      "materialName": "wheel",
+      "sourceBounds": {
+        "min": [
+          -0.35049301385879517,
+          -0.35049301385879517,
+          -0.1075650006532669
+        ],
+        "max": [
+          0.35049301385879517,
+          0.35049301385879517,
+          0.1075650006532669
+        ]
+      },
+      "sourceUnits": "unknown; already adapted artist coordinates, not verified inches/mm",
+      "license": "CC BY 4.0",
+      "source": "https://sketchfab.com/3d-models/bmw-525i-e34-project-zomboid-c65aa3b7687d4f5dbbabdfad0b7816bb",
+      "author": "Uralvagonzavod / UVZZZ (current display Silbergrau)",
+      "notice": "/models/e34-525i/LICENSE.md",
+      "limitations": [
+        "Single textured whole-wheel mesh; tire/rim/material roles are not independently editable",
+        "Distinct licensed source wheel, not verified product/OEM wheel geometry",
+        "Not a BBS product or authenticated wheel option",
+        "Requires explicit visual normalization/centering and immutable loader registration; current native URL allowlist does not accept this legacy URL"
+      ],
+      "available": true
+    },
+    "otherActiveWheelPackages": 0,
+    "brandedWheelIdentityVerified": false
+  },
+  "rideHeight": {
+    "mechanicalSimulation": false,
+    "coordinateAxis": "Y up; current nominal tire centers y=0.32375 display meters",
+    "bodyAppearanceNodeIds": [
+      "e34body:front-bumper",
+      "e34body:front-door-glass-left",
+      "e34body:front-door-glass-right",
+      "e34body:front-door-left",
+      "e34body:front-door-right",
+      "e34body:front-fender-left",
+      "e34body:front-fender-right",
+      "e34body:front-license-plate",
+      "e34body:front-valance",
+      "e34body:headlamp-left-inner",
+      "e34body:headlamp-left-outer",
+      "e34body:headlamp-right-inner",
+      "e34body:headlamp-right-outer",
+      "e34body:hood",
+      "e34body:mirror-left",
+      "e34body:mirror-right",
+      "e34body:rear-bumper",
+      "e34body:rear-door-glass-left",
+      "e34body:rear-door-glass-right",
+      "e34body:rear-door-left",
+      "e34body:rear-door-right",
+      "e34body:rear-quarter-left",
+      "e34body:rear-quarter-right",
+      "e34body:rear-window",
+      "e34body:rocker-left",
+      "e34body:rocker-right",
+      "e34body:roof",
+      "e34body:roundel-front",
+      "e34body:roundel-rear",
+      "e34body:shell",
+      "e34body:side-moulding-e34-body-14-left",
+      "e34body:side-moulding-e34-body-14-right",
+      "e34body:side-moulding-e34-body-15-left",
+      "e34body:side-moulding-e34-body-15-right",
+      "e34body:side-moulding-e34-body-16-left",
+      "e34body:side-moulding-e34-body-16-right",
+      "e34body:tail-light-left",
+      "e34body:tail-light-right",
+      "e34body:trunk",
+      "e34body:trunk-lamp-left",
+      "e34body:trunk-lamp-right",
+      "e34body:windshield",
+      "e34sys:cabin-carpet",
+      "e34sys:dashboard",
+      "e34sys:door-card-front--1",
+      "e34sys:door-card-rear--1",
+      "e34sys:door-card-rear-1",
+      "e34sys:front-seat--1",
+      "e34sys:front-seat-1",
+      "e34sys:gear-lever",
+      "e34sys:handbrake-lever",
+      "e34sys:headliner",
+      "e34sys:instrument-cluster",
+      "e34sys:pedal-box",
+      "e34sys:rear-seat-cushion",
+      "e34sys:seatbelt-left",
+      "e34sys:seatbelt-right",
+      "e34sys:steering-column",
+      "e34sys:steering-wheel",
+      "touring:body-shell",
+      "touring:body-trim",
+      "touring:cabin-lining",
+      "touring:cargo-trim",
+      "touring:front-bumper",
+      "touring:front-door-left",
+      "touring:front-door-left-trim",
+      "touring:front-door-right",
+      "touring:front-door-right-trim",
+      "touring:front-fender-left",
+      "touring:front-fender-right",
+      "touring:front-lamps-left",
+      "touring:front-lamps-right",
+      "touring:front-left-glass",
+      "touring:front-right-glass",
+      "touring:grilles",
+      "touring:hood",
+      "touring:interior-trim",
+      "touring:mirror-left",
+      "touring:mirror-right",
+      "touring:quarter-left-glass",
+      "touring:quarter-right-glass",
+      "touring:rear-bumper",
+      "touring:rear-door-left",
+      "touring:rear-door-left-trim",
+      "touring:rear-door-right",
+      "touring:rear-door-right-trim",
+      "touring:rear-lamps-left",
+      "touring:rear-lamps-right",
+      "touring:rear-left-glass",
+      "touring:rear-quarter-right",
+      "touring:rear-right-glass",
+      "touring:rear-seat",
+      "touring:roof",
+      "touring:roof-rails",
+      "touring:tailgate",
+      "touring:tailgate-glass",
+      "touring:tailgate-lamps-left",
+      "touring:tailgate-lamps-right",
+      "touring:windscreen"
+    ],
+    "wheelCentersMustRemainIndependent": [
+      "wheel:front-left",
+      "wheel:front-right",
+      "wheel:rear-left",
+      "wheel:rear-right"
+    ],
+    "safePresentation": "Exterior stance illustration only. Translating body/cabin against fixed wheels genuinely changes rendered stance, but does not articulate suspension or solve hub/brake/control-arm geometry. Use a stance-specific exterior view or explicitly label the limitation; never expose it as suspension travel/clearance approval.",
+    "rangePolicy": "Any UI range is a presentation bound, not a mechanically validated adjustment range.",
+    "noFitmentClaims": [
+      "No tire-to-fender clearance certification",
+      "No suspension travel, alignment, geometry, rubbing or roadworthiness calculation"
+    ]
+  },
+  "implementationLimits": [
+    "Clone materials/geometries per build; do not mutate shared loaded GLBs, immutable manifests, or unrelated workshop instances",
+    "Color tint/roughness affects rendered materials; a dropdown that only changes labels is insufficient",
+    "Factory paint/upholstery codes and commercial wheel identity are not established by these appearance assets",
+    "Preserve texture detail and prevent color changes on excluded lamps, plates, gauges and controls",
+    "MeshStandardMaterial supports color/metalness/roughness; real clearcoat needs a MeshPhysicalMaterial or equivalent shader, not an ignored property"
+  ],
+  "paintSurfaceRegions": [
+    {
+      "assetId": "assembled:body-v7",
+      "assetSha256": "60efa3688dbd35ee6315d0da6846df6ed44ee12e3531bd6ba6cccc01e2897fab",
+      "nodeIds": [
+        "e34body:mirror-left",
+        "e34body:mirror-right"
+      ],
+      "materialIndex": 1,
+      "uvRects": [
+        [
+          0.771484375,
+          0.654296875,
+          0.87890625,
+          0.74609375
+        ]
+      ],
+      "notes": "Outer mirror cap only; the separate lower glass/bezel island remains unchanged."
+    },
+    {
+      "assetId": "assembled:body-v7",
+      "assetSha256": "60efa3688dbd35ee6315d0da6846df6ed44ee12e3531bd6ba6cccc01e2897fab",
+      "nodeIds": [
+        "e34body:front-bumper"
+      ],
+      "materialIndex": 1,
+      "uvRects": [
+        [
+          0.3515625,
+          0.06103515625,
+          0.654296875,
+          0.1484375
+        ],
+        [
+          0.23193359375,
+          0.13427734375,
+          0.2783203125,
+          0.2001953125
+        ],
+        [
+          0.71533203125,
+          0.13427734375,
+          0.7763671875,
+          0.2001953125
+        ]
+      ],
+      "notes": "White lower bumper and corner islands only. Grille, lamps and upper dark impact trim remain unchanged."
+    },
+    {
+      "assetId": "assembled:body-v7",
+      "assetSha256": "60efa3688dbd35ee6315d0da6846df6ed44ee12e3531bd6ba6cccc01e2897fab",
+      "nodeIds": [
+        "e34body:rear-bumper"
+      ],
+      "materialIndex": 1,
+      "uvRects": [
+        [
+          0.2490234375,
+          0.8544921875,
+          0.751953125,
+          0.9169921875
+        ],
+        [
+          0.22216796875,
+          0.771484375,
+          0.2587890625,
+          0.83251953125
+        ],
+        [
+          0.7373046875,
+          0.771484375,
+          0.77392578125,
+          0.83251953125
+        ]
+      ],
+      "notes": "Rear painted bumper and corner islands. Dark impact strip retains the dark pixels in its source atlas; lower black valance and exhaust are excluded."
+    },
+    {
+      "assetId": "assembled:body-v7",
+      "assetSha256": "1a64ac5a376bd2d348071e0ae926d25958483ad3bb9f23af988b19ac4d902f95",
+      "nodeIds": [
+        "e34body:mirror-left",
+        "e34body:mirror-right"
+      ],
+      "materialIndex": 1,
+      "uvRects": [
+        [
+          0.771484375,
+          0.654296875,
+          0.87890625,
+          0.74609375
+        ]
+      ],
+      "notes": "Outer mirror cap only; the separate lower glass/bezel island remains unchanged."
+    },
+    {
+      "assetId": "assembled:body-v7",
+      "assetSha256": "1a64ac5a376bd2d348071e0ae926d25958483ad3bb9f23af988b19ac4d902f95",
+      "nodeIds": [
+        "e34body:front-bumper"
+      ],
+      "materialIndex": 1,
+      "uvRects": [
+        [
+          0.3515625,
+          0.06103515625,
+          0.654296875,
+          0.1484375
+        ],
+        [
+          0.23193359375,
+          0.13427734375,
+          0.2783203125,
+          0.2001953125
+        ],
+        [
+          0.71533203125,
+          0.13427734375,
+          0.7763671875,
+          0.2001953125
+        ]
+      ],
+      "notes": "White lower bumper and corner islands only. Grille, lamps and upper dark impact trim remain unchanged."
+    },
+    {
+      "assetId": "assembled:body-v7",
+      "assetSha256": "1a64ac5a376bd2d348071e0ae926d25958483ad3bb9f23af988b19ac4d902f95",
+      "nodeIds": [
+        "e34body:rear-bumper"
+      ],
+      "materialIndex": 1,
+      "uvRects": [
+        [
+          0.2490234375,
+          0.8544921875,
+          0.751953125,
+          0.9169921875
+        ],
+        [
+          0.22216796875,
+          0.771484375,
+          0.2587890625,
+          0.83251953125
+        ],
+        [
+          0.7373046875,
+          0.771484375,
+          0.77392578125,
+          0.83251953125
+        ]
+      ],
+      "notes": "Rear painted bumper and corner islands. Dark impact strip retains the dark pixels in its source atlas; lower black valance and exhaust are excluded."
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "schema": 1,
+  "records": [
+    {
+      "formerPublicPath": "/assets/diagrams/strut-upper.png",
+      "sha256": "5ed472dbe53dcfbf852cd902da2595d55482fba6879270a7fec65fe5efd32fee",
+      "status": "source-link-only; retained privately outside release",
+      "reason": "Redistribution permission not recorded"
+    },
+    {
+      "formerPublicPath": "/assets/diagrams/water-pump.png",
+      "sha256": "a42450c332975e47baee345a2f63949014b1d8f1fd47d7b0b4624bd975533201",
+      "status": "source-link-only; retained privately outside release",
+      "reason": "Redistribution permission not recorded"
+    },
+    {
+      "formerPublicPath": "/assets/diagrams/strut-damper.jpg",
+      "sha256": "0968800831666927285ce7e66f355eb9cb8d2facc25edd2eb6581cbd34db6591",
+      "status": "source-link-only; retained privately outside release",
+      "reason": "Redistribution permission not recorded"
+    },
+    {
+      "formerPublicPath": "/assets/diagrams/brake-disc.png",
+      "sha256": "a7447e967c60dc4f4121bf869e5607516635162d64d2e72e6f1b6266f0529cdb",
+      "status": "source-link-only; retained privately outside release",
+      "reason": "Redistribution permission not recorded"
+    },
+    {
+      "formerPublicPath": "/assets/diagrams/front-caliper.png",
+      "sha256": "f8300a16b33ace6bd63aaeb8c53f451e24cce78c7d139571917f407dd88a23bb",
+      "status": "source-link-only; retained privately outside release",
+      "reason": "Redistribution permission not recorded"
+    }
+  ]
+}

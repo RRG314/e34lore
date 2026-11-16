@@ -1,0 +1,631 @@
+{
+  "schema": 1,
+  "records": [
+    {
+      "id": "photo:m50-engine-museum-reference",
+      "family": "engine",
+      "scope": "family",
+      "kind": "photograph",
+      "numbers": [],
+      "source": "https://commons.wikimedia.org/wiki/File:BMW_M50_engine_in_BMW-Museum_in_Munich,_Bayern.JPG",
+      "image": "/scanner/references/m50-engine-museum-reference.jpg",
+      "sha256": "4f0a82b6f44bd08dd1131ec5b467ede0b8d8ca78f84b55fced7098f3c74451a8",
+      "rights": {
+        "status": "licensed",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "attribution": "Ji\u0159\u00ed Sedl\u00e1\u010dek \u2014 File:BMW M50 engine in BMW-Museum in Munich, Bayern.JPG \u2014 CC BY-SA 4.0",
+        "changes": "Resized to 320px maximum dimension, JPEG re-encoded, metadata omitted"
+      },
+      "view": "unspecified",
+      "condition": "unknown",
+      "identityEvidence": "Coarse source-described component family only; not an exact BMW part.",
+      "reviewedAt": "2026-11-09"
+    },
+    {
+      "id": "photo:alternator-reference",
+      "family": "alternator",
+      "scope": "family",
+      "kind": "photograph",
+      "numbers": [],
+      "source": "https://commons.wikimedia.org/wiki/File:Alternador_003.jpg",
+      "image": "/scanner/references/alternator-reference.jpg",
+      "sha256": "16cfd3a67a0b48d5fd40257e3feb5c44e0fc6dcbc79b4be263df29795b78c21e",
+      "rights": {
+        "status": "licensed",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "attribution": "EL Guarito \u2014 File:Alternador 003.jpg \u2014 CC BY-SA 3.0",
+        "changes": "Resized to 320px maximum dimension, JPEG re-encoded, metadata omitted"
+      },
+      "view": "unspecified",
+      "condition": "unknown",
+      "identityEvidence": "Coarse source-described component family only; not an exact BMW part.",
+      "reviewedAt": "2026-11-09"
+    },
+    {
+      "id": "photo:oil-filter-reference",
+      "family": "oil-filter",
+      "scope": "family",
+      "kind": "photograph",
+      "numbers": [],
+      "source": "https://commons.wikimedia.org/wiki/File:Engine_oil_filter.JPG",
+      "image": "/scanner/references/oil-filter-reference.jpg",
+      "sha256": "ef9dcedee6a0f7562a45f9e231f942e6d70e3e623301d7e3fdb1b854dbc9777f",
+      "rights": {
+        "status": "licensed",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "attribution": "Dvortygirl \u2014 File:Engine oil filter.JPG \u2014 CC BY-SA 3.0",
+        "changes": "Resized to 320px maximum dimension, JPEG re-encoded, metadata omitted"
+      },
+      "view": "unspecified",
+      "condition": "unknown",
+      "identityEvidence": "Coarse source-described component family only; not an exact BMW part.",
+      "reviewedAt": "2026-11-09"
+    },
+    {
+      "id": "photo:spark-plug-reference",
+      "family": "spark-plug",
+      "scope": "family",
+      "kind": "photograph",
+      "numbers": [],
+      "source": "https://commons.wikimedia.org/wiki/File:Spark-plug01.jpeg",
+      "image": "/scanner/references/spark-plug-reference.jpg",
+      "sha256": "9442cf9cfc085c3c41e367b4273cdb6d820a554bd33c29cde1b85e917fc835d5",
+      "rights": {
+        "status": "licensed",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "attribution": "Ralf Schumacher, Dresden SchumacherDresden \u2014 File:Spark-plug01.jpeg \u2014 CC BY-SA 3.0",
+        "changes": "Resized to 320px maximum dimension, JPEG re-encoded, metadata omitted"
+      },
+      "view": "unspecified",
+      "condition": "unknown",
+      "identityEvidence": "Coarse source-described component family only; not an exact BMW part.",
+      "reviewedAt": "2026-11-09"
+    },
+    {
+      "id": "photo:thermostat-reference",
+      "family": "thermostat",
+      "scope": "family",
+      "kind": "photograph",
+      "numbers": [],
+      "source": "https://commons.wikimedia.org/wiki/File:Thermostat_housing_-_before_(4096036434).jpg",
+      "image": "/scanner/references/thermostat-reference.jpg",
+      "sha256": "fdcc6be9cedcdabcb8ec33c690b663b05a8cd6c387f219b2511be326bff0ca18",
+      "rights": {
+        "status": "licensed",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+        "attribution": "dave_7 from Lethbridge, Canada \u2014 File:Thermostat housing - before (4096036434).jpg \u2014 CC BY 2.0",
+        "changes": "Resized to 320px maximum dimension, JPEG re-encoded, metadata omitted"
+      },
+      "view": "unspecified",
+      "condition": "unknown",
+      "identityEvidence": "Coarse source-described component family only; not an exact BMW part.",
+      "reviewedAt": "2026-11-09"
+    },
+    {
+      "id": "photo:water-pump-reference",
+      "family": "water-pump",
+      "scope": "family",
+      "kind": "photograph",
+      "numbers": [],
+      "source": "https://commons.wikimedia.org/wiki/File:Pompa_wody2.jpg",
+      "image": "/scanner/references/water-pump-reference.jpg",
+      "sha256": "861fa3e66d0839d61d8970f02903eee2613297d193d3be0136ce3d466e349344",
+      "rights": {
+        "status": "licensed",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "attribution": "Maly LOLek \u2014 File:Pompa wody2.jpg \u2014 CC BY-SA 3.0",
+        "changes": "Resized to 320px maximum dimension, JPEG re-encoded, metadata omitted"
+      },
+      "view": "unspecified",
+      "condition": "unknown",
+      "identityEvidence": "Coarse source-described component family only; not an exact BMW part.",
+      "reviewedAt": "2026-11-09"
+    },
+    {
+      "id": "photo:bolt-caliper-reference",
+      "family": "brake-caliper",
+      "scope": "family",
+      "kind": "photograph",
+      "numbers": [],
+      "source": "https://commons.wikimedia.org/wiki/File:2020_Chevrolet_Bolt_EV_front_disc_brake_1.jpg",
+      "image": "/scanner/references/bolt-caliper-reference.jpg",
+      "sha256": "aac43765d5fcfe242b81275c76be1097cda6459f51c365a425d1e013949421f3",
+      "rights": {
+        "status": "licensed",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "attribution": "4300streetcar \u2014 File:2020 Chevrolet Bolt EV front disc brake 1.jpg \u2014 CC BY 4.0",
+        "changes": "Cropped visible right-side brake caliper (x720 y390 w130 h200 in1280px source thumbnail); resized320px maximum; JPEG re-encoded, metadata omitted"
+      },
+      "view": "unspecified",
+      "condition": "unknown",
+      "identityEvidence": "Coarse source-described component family only; not an exact BMW part.",
+      "reviewedAt": "2026-11-09"
+    },
+    {
+      "id": "source:bearing-genuine-bw",
+      "family": "center-support-bearing",
+      "scope": "number",
+      "kind": "source-page",
+      "numbers": [
+        "26121226657"
+      ],
+      "source": "https://www.bimmerworld.com/Driveline-Shifter/Driveshafts-Accessories/Genuine-BMW-Center-Mount-26121226657-E34.html",
+      "rights": {
+        "status": "link-only"
+      },
+      "view": "unspecified",
+      "condition": "new",
+      "identityEvidence": "The source page explicitly associates its product with this full BMW number. This is not a physical fitment or genuine-manufacturer assertion for aftermarket products.",
+      "label": "Genuine BMW center mount",
+      "reviewedAt": "2026-11-09"
+    },
+    {
+      "id": "source:bearing-e30-bw",
+      "family": "center-support-bearing",
+      "scope": "number",
+      "kind": "source-page",
+      "numbers": [
+        "26121226723"
+      ],
+      "source": "https://www.bimmerworld.com/Driveline-Shifter/Driveshafts-Accessories/Center-Support-Bearing-Meyle-E30-E34-E32-26121226723.html",
+      "rights": {
+        "status": "link-only"
+      },
+      "view": "unspecified",
+      "condition": "new",
+      "identityEvidence": "The source page explicitly associates its product with this full BMW number. This is not a physical fitment or genuine-manufacturer assertion for aftermarket products.",
+      "label": "Meyle center mount",
+      "reviewedAt": "2026-11-09"
+    },
+    {
+      "id": "source:flex-disc-ecs",
+      "family": "flex-disc",
+      "scope": "number",
+      "kind": "source-page",
+      "numbers": [
+        "26111229065"
+      ],
+      "source": "https://www.ecstuning.com/b-febi-parts/universal-flex-disc/26111229065~feb/",
+      "rights": {
+        "status": "link-only"
+      },
+      "view": "unspecified",
+      "condition": "new",
+      "identityEvidence": "The source page explicitly associates its product with this full BMW number. This is not a physical fitment or genuine-manufacturer assertion for aftermarket products.",
+      "label": "Febi flex disc",
+      "reviewedAt": "2026-11-09"
+    },
+    {
+      "id": "source:wheel-hub-bw",
+      "family": "wheel-hub",
+      "scope": "number",
+      "kind": "source-page",
+      "numbers": [
+        "31212226640"
+      ],
+      "source": "https://www.bimmerworld.com/Driveline-Shifter/Wheel-Bearings-Hub-Assemblies/Genuine-BMW-Wheel-Hub-With-Bearing-Front-D97mm-31212226640-E34.html",
+      "rights": {
+        "status": "link-only"
+      },
+      "view": "unspecified",
+      "condition": "new",
+      "identityEvidence": "The source page explicitly associates its product with this full BMW number. This is not a physical fitment or genuine-manufacturer assertion for aftermarket products.",
+      "label": "Genuine BMW front hub",
+      "reviewedAt": "2026-11-09"
+    },
+    {
+      "id": "source:ball-bearing-bw",
+      "family": "ball-bearing",
+      "scope": "number",
+      "kind": "source-page",
+      "numbers": [
+        "26121225071"
+      ],
+      "source": "https://www.bimmerworld.com/Driveline-Shifter/Driveshafts-Accessories/Driveshaft-Center-Support-Bearing-BMW-26121225071.html",
+      "rights": {
+        "status": "link-only"
+      },
+      "view": "unspecified",
+      "condition": "new",
+      "identityEvidence": "The source page explicitly associates its product with this full BMW number. This is not a physical fitment or genuine-manufacturer assertion for aftermarket products.",
+      "label": "Genuine BMW loose support bearing",
+      "reviewedAt": "2026-11-09"
+    },
+    {
+      "id": "source:engine-mount-bw",
+      "family": "engine-mount",
+      "scope": "number",
+      "kind": "source-page",
+      "numbers": [
+        "11811094149"
+      ],
+      "source": "https://www.bimmerworld.com/Engine/Engine-Mounts/OEM-Rein-Engine-Mount-Left-11811094149.html",
+      "rights": {
+        "status": "link-only"
+      },
+      "view": "unspecified",
+      "condition": "new",
+      "identityEvidence": "The source page explicitly associates its product with this full BMW number. This is not a physical fitment or genuine-manufacturer assertion for aftermarket products.",
+      "label": "Rein left engine mount",
+      "reviewedAt": "2026-11-09"
+    },
+    {
+      "id": "photo:vemo-housing-front",
+      "family": "thermostat",
+      "source": "https://commons.wikimedia.org/wiki/File:VEMO_V22-99-0018_Thermostat_Housing-3996.jpg",
+      "sourceGroup": "photographer:raimond-spekking",
+      "objectGroup": "vemo-v22-99-0018-spekking-20250925",
+      "scope": "family",
+      "kind": "photograph",
+      "numbers": [],
+      "image": "/scanner/references/vemo-housing-front.jpg",
+      "sha256": "1d7f31b1d41d26eb320df8e8218831ebd58ca4626c84ac81184645f168989ed4",
+      "rights": {
+        "status": "licensed",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "attribution": "\u00a9 Raimond Spekking / CC BY-SA 4.0 (via Wikimedia Commons)",
+        "changes": "960px Wikimedia thumbnail; no additional crop or pixel changes"
+      },
+      "view": "front",
+      "condition": "used",
+      "identityEvidence": "Source-described VEMO housing for Citro\u00ebn/Peugeot; visible used loose housing with connectors. Component family only; no BMW identity or E34 fitment. Both photographs show the same physical object.",
+      "reviewedAt": "2026-11-09"
+    },
+    {
+      "id": "photo:vemo-housing-rear",
+      "family": "thermostat",
+      "source": "https://commons.wikimedia.org/wiki/File:VEMO_V22-99-0018_Thermostat_Housing-3998.jpg",
+      "sourceGroup": "photographer:raimond-spekking",
+      "objectGroup": "vemo-v22-99-0018-spekking-20250925",
+      "scope": "family",
+      "kind": "photograph",
+      "numbers": [],
+      "image": "/scanner/references/vemo-housing-rear.jpg",
+      "sha256": "8715ea3b5699493304eca325a5dc7f937f4e85d7aeb66bb6c901d145be458c94",
+      "rights": {
+        "status": "licensed",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "attribution": "\u00a9 Raimond Spekking / CC BY-SA 4.0 (via Wikimedia Commons)",
+        "changes": "960px Wikimedia thumbnail; no additional crop or pixel changes"
+      },
+      "view": "back",
+      "condition": "used",
+      "identityEvidence": "Source-described VEMO housing for Citro\u00ebn/Peugeot; visible used loose housing with connectors. Component family only; no BMW identity or E34 fitment. Both photographs show the same physical object.",
+      "reviewedAt": "2026-11-09"
+    },
+    {
+      "id": "provider-photo:bearing-genuine-bw",
+      "family": "center-support-bearing",
+      "scope": "number",
+      "kind": "provider-image",
+      "numbers": [
+        "26121226657"
+      ],
+      "source": "https://www.bimmerworld.com/Driveline-Shifter/Driveshafts-Accessories/Genuine-BMW-Center-Mount-26121226657-E34.html",
+      "rights": {
+        "status": "externally-hosted",
+        "attribution": "Product photograph hosted by BimmerWorld; original rights retained"
+      },
+      "view": "unspecified",
+      "condition": "new",
+      "identityEvidence": "The source page explicitly associates its product with this full BMW number. This is not a physical fitment or genuine-manufacturer assertion for aftermarket products.",
+      "label": "Genuine BMW center mount",
+      "reviewedAt": "2026-11-09",
+      "image": "https://www.bimmerworld.com/core/media/media.nl?c=3750282&h=pIFqvSUxebhrKri72Qc9mblgRW4Wa_M1wAodJhTG9Nf9BeRT&id=114857"
+    },
+    {
+      "id": "provider-photo:bearing-e30-bw",
+      "family": "center-support-bearing",
+      "scope": "number",
+      "kind": "provider-image",
+      "numbers": [
+        "26121226723"
+      ],
+      "source": "https://www.bimmerworld.com/Driveline-Shifter/Driveshafts-Accessories/Center-Support-Bearing-Meyle-E30-E34-E32-26121226723.html",
+      "rights": {
+        "status": "externally-hosted",
+        "attribution": "Product photograph hosted by BimmerWorld; original rights retained"
+      },
+      "view": "unspecified",
+      "condition": "new",
+      "identityEvidence": "The source page explicitly associates its product with this full BMW number. This is not a physical fitment or genuine-manufacturer assertion for aftermarket products.",
+      "label": "Meyle center mount",
+      "reviewedAt": "2026-11-09",
+      "image": "https://www.bimmerworld.com/core/media/media.nl?c=3750282&h=yimeXsi-9wY7oeljv8Or92gsyQBDkcFnLbuS28RPtkSGy5k5&id=2660646"
+    },
+    {
+      "id": "provider-photo:flex-disc-ecs",
+      "family": "flex-disc",
+      "scope": "number",
+      "kind": "provider-image",
+      "numbers": [
+        "26111229065"
+      ],
+      "source": "https://www.ecstuning.com/b-febi-parts/universal-flex-disc/26111229065~feb/",
+      "rights": {
+        "status": "externally-hosted",
+        "attribution": "Product photograph hosted by ECS Tuning; original rights retained"
+      },
+      "view": "unspecified",
+      "condition": "new",
+      "identityEvidence": "The source page explicitly associates its product with this full BMW number. This is not a physical fitment or genuine-manufacturer assertion for aftermarket products.",
+      "label": "Febi flex disc",
+      "reviewedAt": "2026-11-09",
+      "image": "https://assets.ecstuning.com/product_library/805559_x200.jpg"
+    },
+    {
+      "id": "provider-photo:wheel-hub-bw",
+      "family": "wheel-hub",
+      "scope": "number",
+      "kind": "provider-image",
+      "numbers": [
+        "31212226640"
+      ],
+      "source": "https://www.bimmerworld.com/Driveline-Shifter/Wheel-Bearings-Hub-Assemblies/Genuine-BMW-Wheel-Hub-With-Bearing-Front-D97mm-31212226640-E34.html",
+      "rights": {
+        "status": "externally-hosted",
+        "attribution": "Product photograph hosted by BimmerWorld; original rights retained"
+      },
+      "view": "unspecified",
+      "condition": "new",
+      "identityEvidence": "The source page explicitly associates its product with this full BMW number. This is not a physical fitment or genuine-manufacturer assertion for aftermarket products.",
+      "label": "Genuine BMW front hub",
+      "reviewedAt": "2026-11-09",
+      "image": "https://www.bimmerworld.com/core/media/media.nl?c=3750282&h=QwxKcmtuI1KrMV7rpmfJWwIVq85GGhxJ8rDur5QLbSXUjfL2&id=114412"
+    },
+    {
+      "id": "provider-photo:ball-bearing-bw",
+      "family": "ball-bearing",
+      "scope": "number",
+      "kind": "provider-image",
+      "numbers": [
+        "26121225071"
+      ],
+      "source": "https://www.bimmerworld.com/Driveline-Shifter/Driveshafts-Accessories/Driveshaft-Center-Support-Bearing-BMW-26121225071.html",
+      "rights": {
+        "status": "externally-hosted",
+        "attribution": "Product photograph hosted by BimmerWorld; original rights retained"
+      },
+      "view": "unspecified",
+      "condition": "new",
+      "identityEvidence": "The source page explicitly associates its product with this full BMW number. This is not a physical fitment or genuine-manufacturer assertion for aftermarket products.",
+      "label": "Genuine BMW loose support bearing",
+      "reviewedAt": "2026-11-09",
+      "image": "https://www.bimmerworld.com/core/media/media.nl?c=3750282&h=DbJeGxnrA4XLtwN7lizN1Gw_2odWqBpJ59EFevnkXmhMPTtV&id=2728751"
+    },
+    {
+      "id": "provider-photo:engine-mount-bw",
+      "family": "engine-mount",
+      "scope": "number",
+      "kind": "provider-image",
+      "numbers": [
+        "11811094149"
+      ],
+      "source": "https://www.bimmerworld.com/Engine/Engine-Mounts/OEM-Rein-Engine-Mount-Left-11811094149.html",
+      "rights": {
+        "status": "externally-hosted",
+        "attribution": "Product photograph hosted by BimmerWorld; original rights retained"
+      },
+      "view": "unspecified",
+      "condition": "new",
+      "identityEvidence": "The source page explicitly associates its product with this full BMW number. This is not a physical fitment or genuine-manufacturer assertion for aftermarket products.",
+      "label": "Rein left engine mount",
+      "reviewedAt": "2026-11-09",
+      "image": "https://www.bimmerworld.com/core/media/media.nl?c=3750282&h=FdYESbek6TSpMEGjdhTUyOUZ0_4IXVl6QXVbYeChXtq-1zTx&id=1589610"
+    },
+    {
+      "id": "provider-photo:loose-bearing-26121225002",
+      "family": "ball-bearing",
+      "scope": "number",
+      "kind": "provider-image",
+      "numbers": [
+        "26121225002"
+      ],
+      "source": "https://www.bmwpartsdeal.com/parts/bmw-grooved_ball_bearing-26121225002.html",
+      "image": "https://www.bmwpartsdeal.com/resources/encry/actual-picture/bpd/large/3aa88e34172891e91383793822151ace/f88571476184e2a55a705ca15753407e.jpg",
+      "label": "Grooved ball bearing",
+      "rights": {
+        "status": "externally-hosted",
+        "attribution": "Product photograph hosted by BMWPartsDeal; original rights retained"
+      },
+      "view": "front",
+      "condition": "new",
+      "identityEvidence": "The original provider page labels this photograph with full BMW number 26121225002. The separate bearing is not a complete rubber center mount.",
+      "reviewedAt": "2026-11-09"
+    },
+    {
+      "id": "photo:starter-willdre",
+      "family": "starter",
+      "scope": "family",
+      "numbers": [],
+      "source": "https://commons.wikimedia.org/wiki/File:Automobile_starter.JPG",
+      "sourceGroup": "commons-creator:Willdre 00:20, 8 February 2007 (UTC)",
+      "objectGroup": "commons-object:starter-willdre",
+      "view": "unspecified",
+      "condition": "unknown",
+      "identityEvidence": "A complete loose starter motor with an upper solenoid, lower cylindrical motor, cast nose and exposed pinion. No BMW identity or E34 applicability established.",
+      "reviewedAt": "2026-11-10",
+      "kind": "photograph",
+      "rights": {
+        "status": "licensed",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "attribution": "Willdre 00:20, 8 February 2007 (UTC)",
+        "changes": "Orientation normalized; resized without cropping to at most 1280 pixels; JPEG re-encoded with metadata removed. Original SHA-256: 420e0674b6e0821a1b140067d747e28b1f46d54607cfb9d8d2ed7c3bddc6275c"
+      },
+      "image": "/scanner/references/starter-willdre-licensed.jpg",
+      "sha256": "4c38ca199c07570e4b9a0869163109d1366bd5e0c85632f9197ee7448c2ee30d"
+    },
+    {
+      "id": "photo:ball-bearing-hgrobe",
+      "family": "thrust-bearing",
+      "scope": "family",
+      "numbers": [],
+      "source": "https://commons.wikimedia.org/wiki/File:Kugellager1_hg.jpg",
+      "sourceGroup": "commons-creator:Hannes Grobe",
+      "objectGroup": "commons-object:ball-bearing-hgrobe",
+      "view": "unspecified",
+      "condition": "unknown",
+      "identityEvidence": "SKF thrust ball bearing, separated races and visible rolling elements. Visually distinct from a complete centre-support mount; not a grooved driveshaft bearing or BMW SKU claim.",
+      "reviewedAt": "2026-11-10",
+      "kind": "photograph",
+      "rights": {
+        "status": "licensed",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "attribution": "Hannes Grobe",
+        "changes": "Orientation normalized; resized without cropping to at most 1280 pixels; JPEG re-encoded with metadata removed. Original SHA-256: 1639e8fd46e4d0c584b63407c448a33d8c8627713893a5b7542b52e3239fbd5f"
+      },
+      "image": "/scanner/references/ball-bearing-hgrobe-licensed.jpg",
+      "sha256": "085929ac819e7307c29054881adb5c9be5160d5bde5135d6bb260bcd582f1728"
+    },
+    {
+      "id": "photo:installed-m50-beemwej",
+      "family": "engine",
+      "scope": "family",
+      "numbers": [],
+      "source": "https://commons.wikimedia.org/wiki/File:BMW_525i_M50_PL.JPG",
+      "sourceGroup": "commons-creator:Beemwej",
+      "objectGroup": "commons-object:installed-m50-beemwej",
+      "view": "installed",
+      "condition": "used",
+      "identityEvidence": "Installed BMW inline-six engine bay; striped coil cover, intake runners and radiator are visible. Source describes E34 M50B25; individual hidden component identities and dimensions are not established.",
+      "reviewedAt": "2026-11-10",
+      "kind": "photograph",
+      "rights": {
+        "status": "licensed",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "attribution": "Beemwej",
+        "changes": "Orientation normalized; resized without cropping to at most 1280 pixels; JPEG re-encoded with metadata removed. Original SHA-256: 08b6a2396b5cf1ff5aaaa46dbcdbe60a05f66210eb8d36d32a5da8f71185d95e"
+      },
+      "image": "/scanner/references/installed-m50-beemwej-licensed.jpg",
+      "sha256": "47379b7459f96f211f63748e392013cc4641dcda9dad1b67741fce4bd04192ab"
+    },
+    {
+      "id": "photo:dirty-filter-ahanix",
+      "family": "air-filter",
+      "scope": "family",
+      "kind": "photograph",
+      "numbers": [],
+      "source": "https://commons.wikimedia.org/wiki/File:Dirty-air-filter.jpg",
+      "sourceGroup": "commons-creator:Ahanix1989 at English Wikipedia",
+      "objectGroup": "commons-source-file:Dirty-air-filter.jpg",
+      "view": "side",
+      "condition": "used",
+      "identityEvidence": "A removed oval pleated automotive air-filter element with a soiled outer mesh. It is not the E34 rectangular filter and is only a category example.",
+      "reviewedAt": "2026-11-10",
+      "image": "/scanner/references/dirty-filter-ahanix-licensed.jpg",
+      "sha256": "8f61428a0c030af5f5ce626f00d1eeb878a0338fdeed49286be305386ac140ee",
+      "rights": {
+        "status": "licensed",
+        "license": "Public domain",
+        "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "attribution": "Ahanix1989 at English Wikipedia \u2014 Dirty-air-filter.jpg",
+        "changes": "Full frame resized to at most 1280px, JPEG re-encoded with metadata removed. Source SHA-256: c6bdcfaf7973c7ca3b8c112bb10d0588d965d2a332466a747795f36e40e16081"
+      }
+    },
+    {
+      "id": "photo:vacuum-motor-dvorty",
+      "family": "vacuum-motor",
+      "scope": "family",
+      "kind": "photograph",
+      "numbers": [],
+      "source": "https://commons.wikimedia.org/wiki/File:Vacuum_cleaner_electric_motor.jpg",
+      "sourceGroup": "commons-creator:Dvortygirl",
+      "objectGroup": "commons-source-file:Vacuum cleaner electric motor.jpg",
+      "view": "detail",
+      "condition": "used",
+      "identityEvidence": "Household vacuum motor with visible brushes and commutator. Rejection example: not an automotive alternator or starter.",
+      "reviewedAt": "2026-11-10",
+      "image": "/scanner/references/vacuum-motor-dvorty-licensed.jpg",
+      "sha256": "7a4b203e11325828649f0289e88ebed1d8592f5a6971c7e446964076127c1e87",
+      "rights": {
+        "status": "licensed",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "attribution": "Dvortygirl \u2014 Vacuum cleaner electric motor.jpg",
+        "changes": "Full frame resized to at most 1280px, JPEG re-encoded with metadata removed. Source SHA-256: 85f6b59b5a49a47297235d5513bd4ae480987e0be520c8e99a299b9ac40fcd20"
+      }
+    },
+    {
+      "id": "photo:bicycle-brake-ldhan",
+      "family": "bicycle-brake",
+      "scope": "family",
+      "kind": "photograph",
+      "numbers": [],
+      "source": "https://commons.wikimedia.org/wiki/File:Campagnolo_Record_brake_caliper.jpg",
+      "sourceGroup": "commons-creator:LDHan at English Wikipedia",
+      "objectGroup": "commons-source-file:Campagnolo Record brake caliper.jpg",
+      "view": "front",
+      "condition": "used",
+      "identityEvidence": "Campagnolo bicycle rim brake with two pads and arms. Rejection example: not an automotive hydraulic disc caliper.",
+      "reviewedAt": "2026-11-10",
+      "image": "/scanner/references/bicycle-brake-ldhan-licensed.jpg",
+      "sha256": "e31c9b52970e58b09b0422a21e2ea12e72cbd85bd584a0c47c1c5cd053931c85",
+      "rights": {
+        "status": "licensed",
+        "license": "Public domain",
+        "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "attribution": "LDHan at English Wikipedia \u2014 Campagnolo Record brake caliper.jpg",
+        "changes": "Full frame resized to at most 1280px, JPEG re-encoded with metadata removed. Source SHA-256: c84b5cb414d2b4dac1cfd02d5b3268b974a72f2e9a19aed9c8e6c6828b935d74"
+      }
+    },
+    {
+      "id": "photo:alternator-bmw-ton1",
+      "family": "alternator",
+      "scope": "family",
+      "kind": "photograph",
+      "numbers": [],
+      "source": "https://commons.wikimedia.org/wiki/File:AlternoBMWV6.JPG",
+      "sourceGroup": "commons-creator:Ton1~commonswiki",
+      "objectGroup": "commons-source-file:AlternoBMWV6.JPG",
+      "view": "installed",
+      "condition": "new",
+      "identityEvidence": "Dominant close view of an installed automotive alternator, with vented housing, windings and pulley. General category only; not a verified E34/OEM reference.",
+      "reviewedAt": "2026-11-10",
+      "image": "/scanner/references/alternator-bmw-ton1-licensed.jpg",
+      "sha256": "e5349d353f9b371861aebe96af57d381f70d546844caccc828e07dd11170440d",
+      "rights": {
+        "status": "licensed",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "attribution": "Ton1~commonswiki \u2014 AlternoBMWV6.JPG",
+        "changes": "Full frame resized to at most 1280px, JPEG re-encoded with metadata removed. Source SHA-256: 12b5a18fc2a14d8951bf14ede9a609af5884f4d26d726c5eeed582c67a18afd4"
+      }
+    },
+    {
+      "id": "photo:flex-disc-virtualern",
+      "family": "flex-disc",
+      "scope": "family",
+      "kind": "photograph",
+      "recognition": "comparison-only",
+      "numbers": [],
+      "source": "https://commons.wikimedia.org/wiki/File:Giubo_BMW_E30_new.jpg",
+      "sourceGroup": "commons-creator:VirtualErn",
+      "objectGroup": "commons-object:giubo-virtualern",
+      "view": "unspecified",
+      "condition": "new",
+      "reviewedAt": "2026-11-10",
+      "identityEvidence": "Source identifies a new BMW E30 flex disc. Category comparison across the same part type only.",
+      "rights": {
+        "status": "licensed",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+        "attribution": "VirtualErn — Giubo BMW E30 new.jpg — CC BY 2.0",
+        "changes": "Orientation normalized, resized without cropping to 1280 px, JPEG re-encoded without metadata. Original SHA-256: eae810701c5b3fba47e1e3c9bb267e8c38c51e8948d4324b6a4564a3c16fed27"
+      },
+      "image": "/scanner/references/giubo-virtualern-licensed.jpg",
+      "sha256": "c443525134764880efea7736029e082c62faf77b6a7d2732b2194d21451c9fe8"
+    }
+  ]
+}

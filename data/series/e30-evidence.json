@@ -1,0 +1,1449 @@
+{
+  "schemaVersion": 1,
+  "generation": "e30",
+  "checkedAt": "2026-11-09T20:48:33.516355+00:00",
+  "status": "bounded-source-evidence; technical coverage incomplete",
+  "scope": {
+    "purpose": "Evidence input to the shared model/catalog system; not another canonical-parts database",
+    "notACompatibilityDatabase": true,
+    "hostedImportsApplied": false,
+    "imagesRedistributed": false,
+    "typeCodeDates": "Dates are manufacturer-storefront source configuration metadata, not blanket part applicability. Parts can have narrower conditions.",
+    "unknowns": "Unverified steering, transmission and drivetrain fields remain null. No full VINs or owner data are stored.",
+    "hashes": "sha256 is the original HTTP response byte hash when the bounded fetch succeeded. Null records were verified in the web source reader but lack a raw-byte receipt. normalizedFactsSha256 hashes our selected factual projection, not the original page."
+  },
+  "sources": [
+    {
+      "id": "bmw-316",
+      "url": "https://www.bmwgroup-classic.com/en/models/bmw-classics/product-description-page.ad-78-1.bmw-316-e30.html",
+      "checkedAt": "2026-11-09T20:43:48.113316+00:00",
+      "fetchError": "The read operation timed out",
+      "sha256": null,
+      "browserEvidence": "Verified through web source reader on 2026-11-09",
+      "redistribution": "facts-and-links-only",
+      "artworkPermission": "not-granted",
+      "qualityCaution": "BMW Classic currently labels its descriptive prose as AI-assisted; source conflicts are retained. Not a source for unchecked repair specifications.",
+      "normalizedFactsSha256": "ffaa05afb1e0b121262daec0fee5801ecc0b868209aac52645de20039437827e"
+    },
+    {
+      "id": "bmw-316i",
+      "url": "https://www.bmwgroup-classic.com/en/models/bmw-classics/product-description-page.ad-75-1.bmw-316i-e30.html",
+      "checkedAt": "2026-11-09T20:43:48.113316+00:00",
+      "fetchError": "The read operation timed out",
+      "sha256": null,
+      "browserEvidence": "Verified through web source reader on 2026-11-09",
+      "redistribution": "facts-and-links-only",
+      "artworkPermission": "not-granted",
+      "qualityCaution": "BMW Classic currently labels its descriptive prose as AI-assisted; source conflicts are retained. Not a source for unchecked repair specifications.",
+      "normalizedFactsSha256": "2f052d3c2e9b546da3abe8b46204cc762d18ba32c08fa6d4b255536e4d8ffbac"
+    },
+    {
+      "id": "bmw-318i",
+      "url": "https://www.bmwgroup-classic.com/en/models/bmw-classics/product-description-page.ad-80-1.bmw-318i-e30.html",
+      "checkedAt": "2026-11-09T20:43:48.113316+00:00",
+      "fetchError": "The read operation timed out",
+      "sha256": null,
+      "browserEvidence": "Verified through web source reader on 2026-11-09",
+      "redistribution": "facts-and-links-only",
+      "artworkPermission": "not-granted",
+      "qualityCaution": "BMW Classic currently labels its descriptive prose as AI-assisted; source conflicts are retained. Not a source for unchecked repair specifications.",
+      "normalizedFactsSha256": "1ddad9523d452e63a4ca4ca2811eddac5460818c683a93c9bb997413862c1a9b"
+    },
+    {
+      "id": "bmw-318is",
+      "url": "https://www.bmwgroup-classic.com/en/models/bmw-classics/product-description-page.ad-83-1.bmw-318is-e30.html",
+      "checkedAt": "2026-11-09T20:43:48.113316+00:00",
+      "fetchError": "The read operation timed out",
+      "sha256": null,
+      "browserEvidence": "Verified through web source reader on 2026-11-09",
+      "redistribution": "facts-and-links-only",
+      "artworkPermission": "not-granted",
+      "qualityCaution": "BMW Classic currently labels its descriptive prose as AI-assisted; source conflicts are retained. Not a source for unchecked repair specifications.",
+      "normalizedFactsSha256": "ba903b5990263427a077f20145fc17474f603699cb283b9b7a98b8b2d6b51826"
+    },
+    {
+      "id": "bmw-320i",
+      "url": "https://www.bmwgroup-classic.com/en/models/bmw-classics/product-description-page.ad-92-1.bmw-320i-e30.html",
+      "checkedAt": "2026-11-09T20:43:48.113316+00:00",
+      "fetchError": "The read operation timed out",
+      "sha256": null,
+      "browserEvidence": "Verified through web source reader on 2026-11-09",
+      "redistribution": "facts-and-links-only",
+      "artworkPermission": "not-granted",
+      "qualityCaution": "BMW Classic currently labels its descriptive prose as AI-assisted; source conflicts are retained. Not a source for unchecked repair specifications.",
+      "normalizedFactsSha256": "718c268c9e13924671aa7816dded822be8ccf328f1f063d97aef1cbc34dbb82a"
+    },
+    {
+      "id": "bmw-320is",
+      "url": "https://www.bmwgroup-classic.com/en/models/bmw-classics/product-description-page.ad-95-1.-bmw-320is-e30-italy-model.html",
+      "checkedAt": "2026-11-09T20:43:48.113316+00:00",
+      "fetchError": "The read operation timed out",
+      "sha256": null,
+      "browserEvidence": "Verified through web source reader on 2026-11-09",
+      "redistribution": "facts-and-links-only",
+      "artworkPermission": "not-granted",
+      "qualityCaution": "BMW Classic currently labels its descriptive prose as AI-assisted; source conflicts are retained. Not a source for unchecked repair specifications.",
+      "normalizedFactsSha256": "09e3cacc411a9fa7fda1ed1db254cccbd3605b276a5922fdd4c0926439619405"
+    },
+    {
+      "id": "bmw-323i",
+      "url": "https://www.bmwgroup-classic.com/en/models/bmw-classics/product-description-page.ad-103-1.bmw-323i-e30.html",
+      "checkedAt": "2026-11-09T20:43:48.113316+00:00",
+      "fetchError": "The read operation timed out",
+      "sha256": null,
+      "browserEvidence": "Verified through web source reader on 2026-11-09",
+      "redistribution": "facts-and-links-only",
+      "artworkPermission": "not-granted",
+      "qualityCaution": "BMW Classic currently labels its descriptive prose as AI-assisted; source conflicts are retained. Not a source for unchecked repair specifications.",
+      "normalizedFactsSha256": "efb357f3d820fd9c339376d2de8e4dd50a8e8f7c1d5131a7a0a6a3b9bad08964"
+    },
+    {
+      "id": "bmw-324d",
+      "url": "https://www.bmwgroup-classic.com/en/models/bmw-classics/product-description-page.ad-107-1.bmw-324d-e30.html",
+      "checkedAt": "2026-11-09T20:43:48.113316+00:00",
+      "fetchError": "The read operation timed out",
+      "sha256": null,
+      "browserEvidence": "Verified through web source reader on 2026-11-09",
+      "redistribution": "facts-and-links-only",
+      "artworkPermission": "not-granted",
+      "qualityCaution": "BMW Classic currently labels its descriptive prose as AI-assisted; source conflicts are retained. Not a source for unchecked repair specifications.",
+      "normalizedFactsSha256": "dadf9ffe83c2238846ba9965526618acd306c9259c151a06f0320dd27c7706b5"
+    },
+    {
+      "id": "bmw-324td",
+      "url": "https://www.bmwgroup-classic.com/en/models/bmw-classics/product-description-page.ad-108-1.bmw-324td-e30.html",
+      "checkedAt": "2026-11-09T20:43:48.113316+00:00",
+      "fetchError": "The read operation timed out",
+      "sha256": null,
+      "browserEvidence": "Verified through web source reader on 2026-11-09",
+      "redistribution": "facts-and-links-only",
+      "artworkPermission": "not-granted",
+      "qualityCaution": "BMW Classic currently labels its descriptive prose as AI-assisted; source conflicts are retained. Not a source for unchecked repair specifications.",
+      "normalizedFactsSha256": "6020fdb58d01c24a169ab123d81ea5c9dd7dcc888d68bb0fd8774c20171338df"
+    },
+    {
+      "id": "bmw-325e",
+      "url": "https://www.bmwgroup-classic.com/en/models/bmw-classics/product-description-page.ad-109-1.bmw-325e-e30.html",
+      "checkedAt": "2026-11-09T20:43:48.113316+00:00",
+      "fetchError": "The read operation timed out",
+      "sha256": null,
+      "browserEvidence": "Verified through web source reader on 2026-11-09",
+      "redistribution": "facts-and-links-only",
+      "artworkPermission": "not-granted",
+      "qualityCaution": "BMW Classic currently labels its descriptive prose as AI-assisted; source conflicts are retained. Not a source for unchecked repair specifications.",
+      "normalizedFactsSha256": "9059087619083c56dfe632ed1cf2b493926484a7668e8165d97a435e7503fdaa"
+    },
+    {
+      "id": "bmw-325i",
+      "url": "https://www.bmwgroup-classic.com/en/models/bmw-classics/product-description-page.ad-110-1.bmw-325i-e30.html",
+      "checkedAt": "2026-11-09T20:43:48.113316+00:00",
+      "fetchError": "The read operation timed out",
+      "sha256": null,
+      "browserEvidence": "Verified through web source reader on 2026-11-09",
+      "redistribution": "facts-and-links-only",
+      "artworkPermission": "not-granted",
+      "qualityCaution": "BMW Classic currently labels its descriptive prose as AI-assisted; source conflicts are retained. Not a source for unchecked repair specifications.",
+      "normalizedFactsSha256": "0d4b11cfd2a2b7059495e95be2786f006806eb21d2d0894206449daee9d9ce56"
+    },
+    {
+      "id": "bmw-325ix",
+      "url": "https://www.bmwgroup-classic.com/en/models/bmw-classics/product-description-page.ad-112-1.bmw-325ix-e30.html",
+      "checkedAt": "2026-11-09T20:43:48.113316+00:00",
+      "fetchError": "The read operation timed out",
+      "sha256": null,
+      "browserEvidence": "Verified through web source reader on 2026-11-09",
+      "redistribution": "facts-and-links-only",
+      "artworkPermission": "not-granted",
+      "qualityCaution": "BMW Classic currently labels its descriptive prose as AI-assisted; source conflicts are retained. Not a source for unchecked repair specifications.",
+      "normalizedFactsSha256": "8e80c4ab59964f23d8852aabf07793a03c7712f660195789d9764e783c885d91"
+    },
+    {
+      "id": "bmw-m3",
+      "url": "https://www.bmwgroup-classic.com/en/models/bmw-classics/product-description-page.ad-1558-1.bmw-m3-e30.html",
+      "checkedAt": "2026-11-09T20:43:48.113316+00:00",
+      "fetchError": "The read operation timed out",
+      "sha256": null,
+      "browserEvidence": "Verified through web source reader on 2026-11-09",
+      "redistribution": "facts-and-links-only",
+      "artworkPermission": "not-granted",
+      "qualityCaution": "BMW Classic currently labels its descriptive prose as AI-assisted; source conflicts are retained. Not a source for unchecked repair specifications.",
+      "normalizedFactsSha256": "7ab485ea6b6c8e520341374315492ab95c3e480eba708eb34254ebf23624d4f7"
+    },
+    {
+      "id": "bmw-sedan",
+      "url": "https://www.bmwgroup-classic.com/en/models/bmw-classics/product-description-page.ad-872-1.bmw-3-series-sedan-e30.html",
+      "checkedAt": "2026-11-09T20:43:48.113316+00:00",
+      "fetchError": "The read operation timed out",
+      "sha256": null,
+      "browserEvidence": "Verified through web source reader on 2026-11-09",
+      "redistribution": "facts-and-links-only",
+      "artworkPermission": "not-granted",
+      "qualityCaution": "BMW Classic currently labels its descriptive prose as AI-assisted; source conflicts are retained. Not a source for unchecked repair specifications.",
+      "normalizedFactsSha256": "4db3ab8de73759b8845b26ee566e17ca7b9f97f617942fe7c13aa40e2214bb1b"
+    },
+    {
+      "id": "bmw-325i-touring",
+      "url": "https://www.bmwgroup-classic.com/en/models/bmw-classics/product-description-page.ad-878-1.bmw-325i-touring-e30.html",
+      "checkedAt": "2026-11-09T20:43:48.113316+00:00",
+      "fetchError": "The read operation timed out",
+      "sha256": null,
+      "browserEvidence": "Verified through web source reader on 2026-11-09",
+      "redistribution": "facts-and-links-only",
+      "artworkPermission": "not-granted",
+      "qualityCaution": "BMW Classic currently labels its descriptive prose as AI-assisted; source conflicts are retained. Not a source for unchecked repair specifications.",
+      "normalizedFactsSha256": "5ce4fcdcb9bd81786c9161da5ba5b9eb0b5409b4fcdf83f68e30badf0af628b4"
+    },
+    {
+      "id": "bmw-classic-parts",
+      "url": "https://www.bmwgroup-classic.com/en/services/spare-parts/bmw.html",
+      "checkedAt": "2026-11-09T20:43:48.113316+00:00",
+      "fetchError": "The read operation timed out",
+      "sha256": null,
+      "browserEvidence": "Verified through web source reader on 2026-11-09",
+      "redistribution": "facts-and-links-only",
+      "artworkPermission": "not-granted",
+      "normalizedFactsSha256": "7476f037ded8989a673588dcc179b5192fda624c96d290f7eb6816a6b85877cd"
+    },
+    {
+      "id": "bmw-classic-rights",
+      "url": "https://www.bmwgroup-classic.com/en/general/legal-disclaimer.html",
+      "checkedAt": "2026-11-09T20:43:48.113316+00:00",
+      "fetchError": "The read operation timed out",
+      "sha256": null,
+      "browserEvidence": "Verified through web source reader on 2026-11-09",
+      "redistribution": "facts-and-links-only",
+      "artworkPermission": "not-granted",
+      "normalizedFactsSha256": "0ab1b583769a8651b65cdcdf200c6f2a6756e3425f77ec212ae857c3f33fd77e"
+    },
+    {
+      "id": "bmw-awd",
+      "url": "https://newsroom.bmwgroup.com/americas/30-years-of-bmw-all-wheel-drive-from-the-bmw-325i-allrad-to-the-bmw-x5-xdrive40e",
+      "finalUrl": "https://newsroom.bmwgroup.com/americas/30-years-of-bmw-all-wheel-drive-from-the-bmw-325i-allrad-to-the-bmw-x5-xdrive40e",
+      "checkedAt": "2026-11-09T20:43:48.113316+00:00",
+      "status": 200,
+      "sha256": "ad33a5e6570369d2742785dfbd559e24a1c0ce0df9075955c4392d2a7a8ed32e",
+      "bytes": 54849,
+      "kind": "manufacturer-reference",
+      "redistribution": "facts-and-links-only",
+      "artworkPermission": "not-granted",
+      "snapshot": "private research receipt; excluded from public assets",
+      "normalizedFactsSha256": "05fa1c65537ccb0ccda7cd14ecefd0ba7343829afb256b282a106c4f18226fdb"
+    },
+    {
+      "id": "bmw-uk-history",
+      "url": "https://www.press.bmwgroup.com/united-kingdom/article/detail/T0232443EN_GB/the-new-bmw-3-series-2015?showMedia=photo",
+      "finalUrl": "https://newsroom.bmwgroup.com/emea/",
+      "checkedAt": "2026-11-09T20:43:48.113316+00:00",
+      "status": 200,
+      "sha256": "bb0aaad444129af70859053fa5433eac332ee44603c85853b40613ef99788004",
+      "bytes": 75353,
+      "kind": "manufacturer-reference",
+      "redistribution": "facts-and-links-only",
+      "artworkPermission": "not-granted",
+      "snapshot": "private research receipt; excluded from public assets",
+      "normalizedFactsSha256": "5b66c52ffc9bc8d2f1e8ea0669cc91ede58ededb713a7d0898192a196507730b"
+    },
+    {
+      "id": "bmw-m42-plug",
+      "url": "https://shop.bmw.co.uk/product/genuine-spark-plug-12-12-9-064-619",
+      "finalUrl": "https://shop.bmw.co.uk/product/genuine-spark-plug-12-12-9-064-619",
+      "checkedAt": "2026-11-09T20:43:48.113316+00:00",
+      "status": 200,
+      "sha256": "16ba82ad92ed5107ab5891adf5d84b3001acb0f8afbc31b5fc279fe1510f3978",
+      "bytes": 166446,
+      "kind": "manufacturer-product-data",
+      "redistribution": "facts-and-links-only",
+      "artworkPermission": "not-granted",
+      "snapshot": "private research receipt; excluded from public assets",
+      "normalizedFactsSha256": "b6ba03505df1048e0f5b2979ef9be2da32b52db97bf2d9bf7b76ff939259b65b"
+    },
+    {
+      "id": "bmw-oil-filter-cover",
+      "url": "https://shop.bmw.co.uk/product/genuine-oil-filter-cover",
+      "finalUrl": "https://shop.bmw.co.uk/product/genuine-oil-filter-cover",
+      "checkedAt": "2026-11-09T20:43:48.113316+00:00",
+      "status": 200,
+      "sha256": "3b4bbd708145480d7744ec14c8d77d191183a6b386989edcbf7b665287b3edca",
+      "bytes": 168551,
+      "kind": "manufacturer-product-data",
+      "redistribution": "facts-and-links-only",
+      "artworkPermission": "not-granted",
+      "snapshot": "private research receipt; excluded from public assets",
+      "normalizedFactsSha256": "fcde840e4b15047a13aa95b621290637c577e4f290942cb29efd160c09fdb528"
+    },
+    {
+      "id": "bmw-wheel-bolt",
+      "url": "https://shop.bmw.co.uk/product/genuine-wheel-bolt-with-code-key-18-replacement-spare-part-36-13-1-181-268",
+      "finalUrl": "https://shop.bmw.co.uk/product/genuine-wheel-bolt-with-code-key-18-replacement-spare-part-36-13-1-181-268",
+      "checkedAt": "2026-11-09T20:43:48.113316+00:00",
+      "status": 200,
+      "sha256": "e1f3dd77a81922be2b26c5823cd32177ee74efe73f09ef67475ba7a531a25b9f",
+      "bytes": 168608,
+      "kind": "manufacturer-product-data",
+      "redistribution": "facts-and-links-only",
+      "artworkPermission": "not-granted",
+      "snapshot": "private research receipt; excluded from public assets",
+      "normalizedFactsSha256": "5bb92ad54929af45801118fabf39ba05da33dd7744c9983d0bb389f2bedfe227"
+    },
+    {
+      "id": "bmw-glow-plug",
+      "url": "https://shop.bmw.co.uk/product/genuine-glow-plug-12-23-2-241-389",
+      "finalUrl": "https://shop.bmw.co.uk/product/genuine-glow-plug-12-23-2-241-389",
+      "checkedAt": "2026-11-09T20:43:48.113316+00:00",
+      "status": 200,
+      "sha256": "6700bff1d01757844d5631a8216d31674711b2260e63f864bb613a39bcabe9b9",
+      "bytes": 85999,
+      "kind": "manufacturer-product-data",
+      "redistribution": "facts-and-links-only",
+      "artworkPermission": "not-granted",
+      "snapshot": "private research receipt; excluded from public assets",
+      "normalizedFactsSha256": "99fa9da5975c10e8f9f51e73b5d5b442aab21e7ec9856a401dafb7f9e91a67d0"
+    },
+    {
+      "id": "bmw-manual-shift-sleeve",
+      "url": "https://shop.bmw.co.uk/product/genuine-gearshift-manual-transmission-round-bearing-sleeve-26mm-25-11-7-519-669",
+      "finalUrl": "https://shop.bmw.co.uk/product/genuine-gearshift-manual-transmission-round-bearing-sleeve-26mm-25-11-7-519-669",
+      "checkedAt": "2026-11-09T20:43:48.113316+00:00",
+      "status": 200,
+      "sha256": "a6332b93594591c53fb99d74ba4ef23539581d63e8413955283be9e3c8f4dd71",
+      "bytes": 170241,
+      "kind": "manufacturer-product-data",
+      "redistribution": "facts-and-links-only",
+      "artworkPermission": "not-granted",
+      "snapshot": "private research receipt; excluded from public assets",
+      "normalizedFactsSha256": "df863137b0f1e62b4a7db4694dcdbcdf8eb7fd39a176bda3ec410b2ca57dd45f"
+    },
+    {
+      "id": "bmw-fuel-filter-early",
+      "url": "https://shop.bmw.co.uk/product/genuine-fuel-filter-element",
+      "finalUrl": "https://shop.bmw.co.uk/product/genuine-fuel-filter-element",
+      "checkedAt": "2026-11-09T20:43:48.113316+00:00",
+      "status": 200,
+      "sha256": "073d47f6d58ef38174145a7607d5f8a5d5e8862f02942f94102db6aca00a6f98",
+      "bytes": 168533,
+      "kind": "manufacturer-product-data",
+      "redistribution": "facts-and-links-only",
+      "artworkPermission": "not-granted",
+      "snapshot": "private research receipt; excluded from public assets",
+      "normalizedFactsSha256": "903080ddd643a2690d8615536d1b97bb20e1e42aac4ccc5ed2173a5048aaf9fb"
+    },
+    {
+      "id": "bmw-fuel-filter-later",
+      "url": "https://shop.bmw.co.uk/product/genuine-fuel-filter-13-32-1-720-101",
+      "finalUrl": "https://shop.bmw.co.uk/product/genuine-fuel-filter-13-32-1-720-101",
+      "checkedAt": "2026-11-09T20:43:48.113316+00:00",
+      "status": 200,
+      "sha256": "1f137c85f26aee42d678fae8fcf27e018ac1d959f2d2503b1a98a35f7023059d",
+      "bytes": 158768,
+      "kind": "manufacturer-product-data",
+      "redistribution": "facts-and-links-only",
+      "artworkPermission": "not-granted",
+      "snapshot": "private research receipt; excluded from public assets",
+      "normalizedFactsSha256": "241d48d78e6e26b44ab4f794e700acf732b924743ebc7302f25bcea83765024c"
+    },
+    {
+      "id": "bmw-expansion-tank",
+      "url": "https://shop.bmw.co.uk/product/genuine-radiator-expansion-tank-17-11-1-712-641",
+      "finalUrl": "https://shop.bmw.co.uk/product/genuine-radiator-expansion-tank-17-11-1-712-641",
+      "checkedAt": "2026-11-09T20:43:48.113316+00:00",
+      "status": 200,
+      "sha256": "e1acbd20b750a8635331c4d584d783af5ed500fd0f63a0435d5f9701db31941a",
+      "bytes": 123752,
+      "kind": "manufacturer-product-data",
+      "redistribution": "facts-and-links-only",
+      "artworkPermission": "not-granted",
+      "snapshot": "private research receipt; excluded from public assets",
+      "normalizedFactsSha256": "9321023d549ab2068053878aa1dc8fa4ec9affe4929b79b078045894f8fabe53"
+    },
+    {
+      "id": "bmw-m3-screw",
+      "url": "https://shop.bmw.co.uk/product/genuine-2x-isa-fillister-head-screws-m6x30-8-8-znniv",
+      "finalUrl": "https://shop.bmw.co.uk/product/genuine-2x-isa-fillister-head-screws-m6x30-8-8-znniv",
+      "checkedAt": "2026-11-09T20:43:48.113316+00:00",
+      "status": 200,
+      "sha256": "7ea125198a3c237fb94e210015958bbf0e02eeafb43936a58819cabd2dae29f8",
+      "bytes": 167157,
+      "kind": "manufacturer-product-data",
+      "redistribution": "facts-and-links-only",
+      "artworkPermission": "not-granted",
+      "snapshot": "private research receipt; excluded from public assets",
+      "normalizedFactsSha256": "dc3dbe9b766d9b1583753f8c5652c5bcacf48a78628ea1ab536932c15b3190fa"
+    },
+    {
+      "id": "bentley-b390",
+      "url": "https://bentleypubs.com/product/b390/",
+      "finalUrl": "https://bentleypubs.com/product/b390/",
+      "checkedAt": "2026-11-09T20:43:48.113316+00:00",
+      "status": 200,
+      "sha256": "73c2f79a169305c62c031879cb66913089b39007df82b48dbb83893bda878e31",
+      "bytes": 53556,
+      "kind": "publisher-reference",
+      "redistribution": "facts-and-links-only",
+      "artworkPermission": "not-granted",
+      "snapshot": "private research receipt; excluded from public assets",
+      "normalizedFactsSha256": "ffc95f6120f553dc3cd7247a454ca36b855063f08802e5bd0a182fde99fc7d5f"
+    },
+    {
+      "id": "bpd-1989-325i-index",
+      "url": "https://www.bmwpartsdeal.com/1989-bmw-325i-sedan_e30-parts.html",
+      "finalUrl": "https://www.bmwpartsdeal.com/1989-bmw-325i-sedan_e30-parts.html",
+      "checkedAt": "2026-11-09T20:43:48.113316+00:00",
+      "status": 200,
+      "sha256": "f9cee3ef89791063fe3adab523f6e8412d753a92b145c582ec46b32de1ca680c",
+      "bytes": 222553,
+      "kind": "retailer-catalog",
+      "redistribution": "facts-and-links-only",
+      "artworkPermission": "not-granted",
+      "snapshot": "private research receipt; excluded from public assets",
+      "normalizedFactsSha256": "0ab1b583769a8651b65cdcdf200c6f2a6756e3425f77ec212ae857c3f33fd77e"
+    },
+    {
+      "id": "bpd-325i-clutch",
+      "url": "https://www.bmwpartsdeal.com/parts-list/1989-bmw-325i-sedan_e30/gearshift_clutch/gearshift_clutch.html",
+      "finalUrl": "https://www.bmwpartsdeal.com/parts-list/1989-bmw-325i-sedan_e30/gearshift_clutch/gearshift_clutch.html",
+      "checkedAt": "2026-11-09T20:43:48.113316+00:00",
+      "status": 200,
+      "sha256": "182aaa0abe31bf831a128ed56befea2fd6c8961005c1f15a3c4c18f4bbad10a1",
+      "bytes": 243077,
+      "kind": "retailer-catalog",
+      "redistribution": "facts-and-links-only",
+      "artworkPermission": "not-granted",
+      "snapshot": "private research receipt; excluded from public assets",
+      "normalizedFactsSha256": "f6dd4d03486cb1021e32eb00750678c3f50db09a42f8aad3e45077bef1207694"
+    },
+    {
+      "id": "bpd-325i-engine",
+      "url": "https://www.bmwpartsdeal.com/parts-list/1989-bmw-325i-sedan_e30/engine/engine_block_mounting_parts.html",
+      "finalUrl": "https://www.bmwpartsdeal.com/parts-list/1989-bmw-325i-sedan_e30/engine/engine_block_mounting_parts.html",
+      "checkedAt": "2026-11-09T20:43:48.113316+00:00",
+      "status": 200,
+      "sha256": "e8d4ced4fff6b44fed97f0ccd98c0e5f43600729bb7c1ea04575c4987dce02d7",
+      "bytes": 438539,
+      "kind": "retailer-catalog",
+      "redistribution": "facts-and-links-only",
+      "artworkPermission": "not-granted",
+      "snapshot": "private research receipt; excluded from public assets",
+      "normalizedFactsSha256": "0ab1b583769a8651b65cdcdf200c6f2a6756e3425f77ec212ae857c3f33fd77e"
+    },
+    {
+      "id": "bpd-m42-pump",
+      "url": "https://www.bmwpartsdeal.com/parts-list/1991-bmw-318is-coupe_e30/engine/water_pump_thermostat.html",
+      "finalUrl": "https://www.bmwpartsdeal.com/parts-list/1991-bmw-318is-coupe_e30/engine/water_pump_thermostat.html",
+      "checkedAt": "2026-11-09T20:43:48.113316+00:00",
+      "status": 200,
+      "sha256": "4e51d4527902bd8b50196871f24d716024ff9d6e0a9e71583c60d849660a3dc6",
+      "bytes": 271647,
+      "kind": "retailer-catalog",
+      "redistribution": "facts-and-links-only",
+      "artworkPermission": "not-granted",
+      "snapshot": "private research receipt; excluded from public assets",
+      "normalizedFactsSha256": "859f7693980f2dbea3fbc65e2d6c50387d0f13ea2358e49a1e0d4a72d28f79ec"
+    },
+    {
+      "id": "bmw-us-spark-chart",
+      "url": "https://bmwtechinfo.bmwgroup.com/sib_attachments/B120199SparkPlugChart.pdf",
+      "checkedAt": "2026-11-09T20:46:32.144752+00:00",
+      "redistribution": "facts-and-links-only",
+      "artworkPermission": "not-granted",
+      "fetchError": "HTTP Error 404: Not Found",
+      "sha256": null,
+      "browserEvidence": "Verified through web source reader on 2026-11-09",
+      "normalizedFactsSha256": "2903027dcf238b8ee853dd3571f6a16a3b5f30876cb6cb09fa332c03c50cf057"
+    },
+    {
+      "id": "bmw-m40-plug",
+      "url": "https://shop.bmw.co.uk/product/genuine-high-power-spark-plug-12-12-0-037-607",
+      "checkedAt": "2026-11-09T20:46:32.145253+00:00",
+      "redistribution": "facts-and-links-only",
+      "artworkPermission": "not-granted",
+      "finalUrl": "https://shop.bmw.co.uk/product/genuine-high-power-spark-plug-12-12-0-037-607",
+      "status": 200,
+      "sha256": "35a24212c0bbf7643a41a79a36745e9b356df331aa6246110e0e8c5ccc582c30",
+      "bytes": 167391,
+      "kind": "manufacturer-product-data",
+      "snapshot": "private research receipt; excluded from public assets",
+      "normalizedFactsSha256": "4d774f2115e213116df9683d6c37e74310c834578902b5aca2a0cb84dc577550"
+    },
+    {
+      "id": "bmw-us-history",
+      "url": "https://www.press.bmwgroup.com/usa/article/detail/T0216443EN_US/the-new-bmw-3-series-sedan-and-sports-wagon",
+      "checkedAt": "2026-11-09T20:46:32.145347+00:00",
+      "redistribution": "facts-and-links-only",
+      "artworkPermission": "not-granted",
+      "finalUrl": "https://newsroom.bmwgroup.com/americas/",
+      "status": 200,
+      "sha256": "6d53288420e2c93f3d0d0b8ccdebd13c650a6e03a8f2fc76381b706661210b1a",
+      "bytes": 64396,
+      "kind": "manufacturer-reference",
+      "snapshot": "private research receipt; excluded from public assets",
+      "normalizedFactsSha256": "af8237980e8acc5cf5505670aa7d05cc78e966e9bc85e9a0cc4634c9e52024fd"
+    },
+    {
+      "id": "hubauer-m20-belt",
+      "url": "https://www.hubauer-shop.de/en/tooth-belt-semicircular-profile-11311711081.html",
+      "checkedAt": "2026-11-09T20:46:32.145404+00:00",
+      "redistribution": "facts-and-links-only",
+      "artworkPermission": "not-granted",
+      "fetchError": "HTTP Error 403: Forbidden",
+      "sha256": null,
+      "browserEvidence": "Verified through web source reader on 2026-11-09",
+      "normalizedFactsSha256": "f1b9a6334113306a2b7f71588231eb183dd04d63712b896a700f991cb17dcfff"
+    },
+    {
+      "id": "hubauer-m3-convertible-handbook",
+      "url": "https://www.hubauer-shop.de/en/carparts/classic/3-classic/bb01-e30-s14/m3-convertible-technical-literature-bb01/bb01-010127-betrieb/",
+      "checkedAt": "2026-11-09T20:46:32.145452+00:00",
+      "redistribution": "facts-and-links-only",
+      "artworkPermission": "not-granted",
+      "fetchError": "HTTP Error 403: Forbidden",
+      "sha256": null,
+      "browserEvidence": "Verified through web source reader on 2026-11-09",
+      "normalizedFactsSha256": "0ab1b583769a8651b65cdcdf200c6f2a6756e3425f77ec212ae857c3f33fd77e"
+    },
+    {
+      "id": "bpd-325i-front-body",
+      "url": "https://www.bmwpartsdeal.com/parts-list/1989-bmw-325i-sedan_e30/bodywork/front_body_parts.html",
+      "checkedAt": "2026-11-09T20:46:32.145501+00:00",
+      "redistribution": "facts-and-links-only",
+      "artworkPermission": "not-granted",
+      "finalUrl": "https://www.bmwpartsdeal.com/parts-list/1989-bmw-325i-sedan_e30/bodywork/front_body_parts.html",
+      "status": 200,
+      "sha256": "0cd38a2d8f653d6d7e0bc060d6a0397111286cb6212aa98025b5e273ba276209",
+      "bytes": 254510,
+      "kind": "retailer-catalog",
+      "snapshot": "private research receipt; excluded from public assets",
+      "normalizedFactsSha256": "4db3ab8de73759b8845b26ee566e17ca7b9f97f617942fe7c13aa40e2214bb1b"
+    }
+  ],
+  "models": [
+    {
+      "id": "e30-316",
+      "model": "316",
+      "engineFamilies": [
+        "M10"
+      ],
+      "sourceIds": [
+        "bmw-316",
+        "bmw-wheel-bolt"
+      ],
+      "documentedProduction": {
+        "from": "1982-10",
+        "to": "1988-06",
+        "sourceId": "bmw-316",
+        "scope": "Named BMW Classic archive entry; not every body, market or type-code configuration"
+      },
+      "restrictions": [
+        "Carburetted entry model. Keep 316 separate from injected 316i.",
+        "Archive production range differs from individual storefront type-code date ranges."
+      ]
+    },
+    {
+      "id": "e30-316i",
+      "model": "316i",
+      "engineFamilies": [
+        "M10",
+        "M40"
+      ],
+      "sourceIds": [
+        "bmw-316i",
+        "bmw-wheel-bolt",
+        "bmw-m40-plug",
+        "bmw-oil-filter-cover"
+      ],
+      "documentedProduction": {
+        "from": "1987",
+        "to": "1991",
+        "sourceId": "bmw-316i",
+        "scope": "Named BMW Classic archive entry; not every body, market or type-code configuration"
+      },
+      "restrictions": [
+        "Early M10 and later M40 configurations are distinct.",
+        "BMW Classic prose says 1.8 litres while its specification says 1596 cc; use exact source configuration rather than that prose for engine assignment.",
+        "Touring configurations continue later than the sedan entry."
+      ]
+    },
+    {
+      "id": "e30-318i",
+      "model": "318i",
+      "engineFamilies": [
+        "M10",
+        "M40",
+        "M42"
+      ],
+      "sourceIds": [
+        "bmw-318i",
+        "bmw-fuel-filter-early",
+        "bmw-m40-plug",
+        "bmw-us-spark-chart"
+      ],
+      "documentedProduction": {
+        "from": "1982-09",
+        "to": "1991-05",
+        "sourceId": "bmw-318i",
+        "scope": "Named BMW Classic archive entry; not every body, market or type-code configuration"
+      },
+      "restrictions": [
+        "M10/M40 European changeover and US M42 branch must remain separate.",
+        "US M42 existence is established by the BMW technical bulletin; this source does not supply its complete type-code/year/body matrix."
+      ]
+    },
+    {
+      "id": "e30-318is",
+      "model": "318is",
+      "engineFamilies": [
+        "M42"
+      ],
+      "sourceIds": [
+        "bmw-318is",
+        "bmw-m42-plug"
+      ],
+      "documentedProduction": {
+        "from": "1989",
+        "to": "1991",
+        "sourceId": "bmw-318is",
+        "scope": "Named BMW Classic archive entry; not every body, market or type-code configuration"
+      },
+      "restrictions": [
+        "Do not relabel M10/M40 318i procedures as M42 procedures."
+      ]
+    },
+    {
+      "id": "e30-320i",
+      "model": "320i",
+      "engineFamilies": [
+        "M20"
+      ],
+      "sourceIds": [
+        "bmw-320i",
+        "bmw-fuel-filter-early"
+      ],
+      "documentedProduction": {
+        "from": "1982-10",
+        "to": "1991-04",
+        "sourceId": "bmw-320i",
+        "scope": "Named BMW Classic archive entry; not every body, market or type-code configuration"
+      },
+      "restrictions": [
+        "M20B20 in the archive entry; source-specific catalyst/management/date branches remain distinct."
+      ]
+    },
+    {
+      "id": "e30-320is",
+      "model": "320is",
+      "engineFamilies": [
+        "S14"
+      ],
+      "sourceIds": [
+        "bmw-320is",
+        "bmw-m3-screw"
+      ],
+      "documentedProduction": {
+        "from": "1988",
+        "to": "1990",
+        "sourceId": "bmw-320is",
+        "scope": "Named BMW Classic archive entry; not every body, market or type-code configuration"
+      },
+      "restrictions": [
+        "Italian-market S14 1990 cc model, with both two- and four-door forms.",
+        "It is not the M20 320i or an M3 body. This archive does not establish every Portuguese-market configuration."
+      ]
+    },
+    {
+      "id": "e30-323i",
+      "model": "323i",
+      "engineFamilies": [
+        "M20"
+      ],
+      "sourceIds": [
+        "bmw-323i",
+        "bmw-fuel-filter-early"
+      ],
+      "documentedProduction": {
+        "from": "1982-09",
+        "to": "1986-12",
+        "sourceId": "bmw-323i",
+        "scope": "Named BMW Classic archive entry; not every body, market or type-code configuration"
+      },
+      "restrictions": [
+        "M20B23 archive entry; model introduction/replacement dates do not override individual source restrictions."
+      ]
+    },
+    {
+      "id": "e30-324d",
+      "model": "324d",
+      "engineFamilies": [
+        "M21"
+      ],
+      "sourceIds": [
+        "bmw-324d",
+        "bmw-glow-plug"
+      ],
+      "documentedProduction": {
+        "from": "1985-09",
+        "to": "1990-12",
+        "sourceId": "bmw-324d",
+        "scope": "Named BMW Classic archive entry; not every body, market or type-code configuration"
+      },
+      "restrictions": [
+        "Naturally aspirated M21D24 diesel. Do not apply turbo or petrol procedures."
+      ]
+    },
+    {
+      "id": "e30-324td",
+      "model": "324td",
+      "engineFamilies": [
+        "M21"
+      ],
+      "sourceIds": [
+        "bmw-324td",
+        "bmw-glow-plug"
+      ],
+      "documentedProduction": {
+        "from": "1987",
+        "to": "1991",
+        "sourceId": "bmw-324td",
+        "scope": "Named BMW Classic archive entry; not every body, market or type-code configuration"
+      },
+      "restrictions": [
+        "Turbocharged M21D24 with DDE differs from 324d.",
+        "Touring source types extend later than this sedan archive entry."
+      ]
+    },
+    {
+      "id": "e30-325e",
+      "model": "325e",
+      "engineFamilies": [
+        "M20"
+      ],
+      "sourceIds": [
+        "bmw-325e",
+        "bmw-manual-shift-sleeve",
+        "bmw-us-spark-chart"
+      ],
+      "documentedProduction": {
+        "from": "1983-10",
+        "to": "1988-06",
+        "sourceId": "bmw-325e",
+        "scope": "Named BMW Classic archive entry; not every body, market or type-code configuration"
+      },
+      "restrictions": [
+        "2693 cc eta engine. Do not treat its cylinder-head/management/rotating components as 325i equivalents."
+      ]
+    },
+    {
+      "id": "e30-325i",
+      "model": "325i",
+      "engineFamilies": [
+        "M20"
+      ],
+      "sourceIds": [
+        "bmw-325i",
+        "bmw-expansion-tank",
+        "bmw-us-spark-chart",
+        "bmw-325i-touring"
+      ],
+      "documentedProduction": {
+        "from": "1985-09",
+        "to": "1991-05",
+        "sourceId": "bmw-325i",
+        "scope": "Named BMW Classic archive entry; not every body, market or type-code configuration"
+      },
+      "restrictions": [
+        "2494 cc M20B25 entry. Touring and convertible date ranges differ.",
+        "Catalog diagrams can retain unselected transmission/options and multiple build-date branches."
+      ]
+    },
+    {
+      "id": "e30-325ix",
+      "model": "325iX",
+      "engineFamilies": [
+        "M20"
+      ],
+      "sourceIds": [
+        "bmw-325ix",
+        "bmw-awd",
+        "bmw-uk-history",
+        "bmw-fuel-filter-later",
+        "bmw-us-spark-chart"
+      ],
+      "documentedProduction": {
+        "from": "1985-10",
+        "to": "1991-11",
+        "sourceId": "bmw-325ix",
+        "scope": "Named BMW Classic archive entry; not every body, market or type-code configuration"
+      },
+      "restrictions": [
+        "Permanent AWD with transfer case/front driveline. Touring offered from 1988.",
+        "E30 viscous-lock AWD differs from E34 electronically controlled AWD.",
+        "UK original-market range was RWD; do not create a factory UK 325iX configuration."
+      ]
+    },
+    {
+      "id": "e30-m3",
+      "model": "M3",
+      "engineFamilies": [
+        "S14"
+      ],
+      "sourceIds": [
+        "bmw-m3",
+        "bmw-m3-screw",
+        "bmw-us-spark-chart"
+      ],
+      "documentedProduction": {
+        "from": "1986",
+        "to": "1991",
+        "sourceId": "bmw-m3",
+        "scope": "Named BMW Classic archive entry; not every body, market or type-code configuration"
+      },
+      "restrictions": [
+        "M3 body/mechanical parts are not blanket standard-E30 equivalents.",
+        "Special evolutions and the convertible require their own applicability."
+      ]
+    }
+  ],
+  "typeCodeEvidence": [
+    {
+      "model": "316",
+      "engine": "M10",
+      "body": "two-door",
+      "sourceBodyLabel": "2 doors",
+      "market": "ECE",
+      "code": "1051",
+      "sourceFrom": "1982-03",
+      "sourceTo": "1988-07",
+      "steering": null,
+      "transmission": null,
+      "drivetrain": null,
+      "sourceId": "bmw-wheel-bolt",
+      "scope": "Manufacturer storefront type-code/application metadata. Dates are source-specific; exact VIN/build/options and individual part conditions remain necessary.",
+      "notes": []
+    },
+    {
+      "model": "316i",
+      "engine": "M10",
+      "body": "two-door",
+      "sourceBodyLabel": "2 doors",
+      "market": "ECE",
+      "code": "1015",
+      "sourceFrom": "1987-09",
+      "sourceTo": "1988-07",
+      "steering": null,
+      "transmission": null,
+      "drivetrain": null,
+      "sourceId": "bmw-wheel-bolt",
+      "scope": "Manufacturer storefront type-code/application metadata. Dates are source-specific; exact VIN/build/options and individual part conditions remain necessary.",
+      "notes": []
+    },
+    {
+      "model": "316i",
+      "engine": "M40",
+      "body": "two-door",
+      "sourceBodyLabel": "2 doors",
+      "market": "ECE",
+      "code": "AB11",
+      "sourceFrom": "1988-05",
+      "sourceTo": "1991-04",
+      "steering": null,
+      "transmission": null,
+      "drivetrain": null,
+      "sourceId": "bmw-m40-plug",
+      "scope": "Manufacturer storefront type-code/application metadata. Dates are source-specific; exact VIN/build/options and individual part conditions remain necessary.",
+      "notes": []
+    },
+    {
+      "model": "316i",
+      "engine": "M40",
+      "body": "touring",
+      "sourceBodyLabel": "Estate",
+      "market": "ECE",
+      "code": "AJ11",
+      "sourceFrom": "1991-06",
+      "sourceTo": "1994-02",
+      "steering": null,
+      "transmission": null,
+      "drivetrain": null,
+      "sourceId": "bmw-oil-filter-cover",
+      "scope": "Manufacturer storefront type-code/application metadata. Dates are source-specific; exact VIN/build/options and individual part conditions remain necessary.",
+      "notes": []
+    },
+    {
+      "model": "318i",
+      "engine": "M10",
+      "body": "sedan",
+      "sourceBodyLabel": "4 doors",
+      "market": "ECE",
+      "code": "1382",
+      "sourceFrom": "1983-11",
+      "sourceTo": "1987-07",
+      "steering": null,
+      "transmission": null,
+      "drivetrain": null,
+      "sourceId": "bmw-fuel-filter-early",
+      "scope": "Manufacturer storefront type-code/application metadata. Dates are source-specific; exact VIN/build/options and individual part conditions remain necessary.",
+      "notes": []
+    },
+    {
+      "model": "318i",
+      "engine": "M40",
+      "body": "two-door",
+      "sourceBodyLabel": "2 doors",
+      "market": "ECE",
+      "code": "AF51",
+      "sourceFrom": "1987-04",
+      "sourceTo": "1991-04",
+      "steering": null,
+      "transmission": null,
+      "drivetrain": null,
+      "sourceId": "bmw-m40-plug",
+      "scope": "Manufacturer storefront type-code/application metadata. Dates are source-specific; exact VIN/build/options and individual part conditions remain necessary.",
+      "notes": []
+    },
+    {
+      "model": "318i",
+      "engine": "M40",
+      "body": "touring",
+      "sourceBodyLabel": "Estate",
+      "market": "ECE",
+      "code": "AG71",
+      "sourceFrom": "1989-02",
+      "sourceTo": "1994-02",
+      "steering": null,
+      "transmission": null,
+      "drivetrain": null,
+      "sourceId": "bmw-fuel-filter-later",
+      "scope": "Manufacturer storefront type-code/application metadata. Dates are source-specific; exact VIN/build/options and individual part conditions remain necessary.",
+      "notes": []
+    },
+    {
+      "model": "318is",
+      "engine": "M42",
+      "body": "two-door",
+      "sourceBodyLabel": "2 doors",
+      "market": "ECE",
+      "code": "AF91",
+      "sourceFrom": "1989-02",
+      "sourceTo": "1991-04",
+      "steering": null,
+      "transmission": null,
+      "drivetrain": null,
+      "sourceId": "bmw-m42-plug",
+      "scope": "Manufacturer storefront type-code/application metadata. Dates are source-specific; exact VIN/build/options and individual part conditions remain necessary.",
+      "notes": []
+    },
+    {
+      "model": "318is",
+      "engine": "M42",
+      "body": "two-door",
+      "sourceBodyLabel": "2 doors",
+      "market": "ECE",
+      "code": "AF92",
+      "sourceFrom": "1989-11",
+      "sourceTo": "1991-05",
+      "steering": null,
+      "transmission": null,
+      "drivetrain": null,
+      "sourceId": "bmw-m42-plug",
+      "scope": "Manufacturer storefront type-code/application metadata. Dates are source-specific; exact VIN/build/options and individual part conditions remain necessary.",
+      "notes": []
+    },
+    {
+      "model": "320i",
+      "engine": "M20",
+      "body": "sedan",
+      "sourceBodyLabel": "4 doors",
+      "market": "ECE",
+      "code": "1431",
+      "sourceFrom": "1983-01",
+      "sourceTo": "1990-11",
+      "steering": null,
+      "transmission": null,
+      "drivetrain": null,
+      "sourceId": "bmw-fuel-filter-early",
+      "scope": "Manufacturer storefront type-code/application metadata. Dates are source-specific; exact VIN/build/options and individual part conditions remain necessary.",
+      "notes": []
+    },
+    {
+      "model": "320i",
+      "engine": "M20",
+      "body": "two-door",
+      "sourceBodyLabel": "2 doors",
+      "market": "ECE",
+      "code": "AA31",
+      "sourceFrom": null,
+      "sourceTo": null,
+      "steering": null,
+      "transmission": null,
+      "drivetrain": null,
+      "sourceId": "bmw-fuel-filter-later",
+      "scope": "Manufacturer storefront type-code/application metadata. Dates are source-specific; exact VIN/build/options and individual part conditions remain necessary.",
+      "notes": []
+    },
+    {
+      "model": "320is",
+      "engine": "S14",
+      "body": "two-door",
+      "sourceBodyLabel": "2 doors",
+      "market": "ECE",
+      "code": "AK95",
+      "sourceFrom": "1987-11",
+      "sourceTo": "1990-11",
+      "steering": null,
+      "transmission": null,
+      "drivetrain": null,
+      "sourceId": "bmw-m3-screw",
+      "scope": "Manufacturer storefront type-code/application metadata. Dates are source-specific; exact VIN/build/options and individual part conditions remain necessary.",
+      "notes": []
+    },
+    {
+      "model": "320is",
+      "engine": "S14",
+      "body": "sedan",
+      "sourceBodyLabel": "4 doors",
+      "market": "ECE",
+      "code": "AC95",
+      "sourceFrom": "1987-09",
+      "sourceTo": "1990-07",
+      "steering": null,
+      "transmission": null,
+      "drivetrain": null,
+      "sourceId": "bmw-m3-screw",
+      "scope": "Manufacturer storefront type-code/application metadata. Dates are source-specific; exact VIN/build/options and individual part conditions remain necessary.",
+      "notes": []
+    },
+    {
+      "model": "323i",
+      "engine": "M20",
+      "body": "sedan",
+      "sourceBodyLabel": "4 doors",
+      "market": "ECE",
+      "code": "1481",
+      "sourceFrom": "1983-03",
+      "sourceTo": "1986-07",
+      "steering": null,
+      "transmission": null,
+      "drivetrain": null,
+      "sourceId": "bmw-fuel-filter-early",
+      "scope": "Manufacturer storefront type-code/application metadata. Dates are source-specific; exact VIN/build/options and individual part conditions remain necessary.",
+      "notes": []
+    },
+    {
+      "model": "324d",
+      "engine": "M21",
+      "body": "sedan",
+      "sourceBodyLabel": "4 doors",
+      "market": "ECE",
+      "code": "1511",
+      "sourceFrom": "1985-04",
+      "sourceTo": "1990-12",
+      "steering": null,
+      "transmission": null,
+      "drivetrain": null,
+      "sourceId": "bmw-glow-plug",
+      "scope": "Manufacturer storefront type-code/application metadata. Dates are source-specific; exact VIN/build/options and individual part conditions remain necessary.",
+      "notes": []
+    },
+    {
+      "model": "324td",
+      "engine": "M21",
+      "body": "sedan",
+      "sourceBodyLabel": "4 doors",
+      "market": "ECE",
+      "code": "AD01",
+      "sourceFrom": "1987-05",
+      "sourceTo": "1990-11",
+      "steering": null,
+      "transmission": null,
+      "drivetrain": null,
+      "sourceId": "bmw-glow-plug",
+      "scope": "Manufacturer storefront type-code/application metadata. Dates are source-specific; exact VIN/build/options and individual part conditions remain necessary.",
+      "notes": []
+    },
+    {
+      "model": "324td",
+      "engine": "M21",
+      "body": "touring",
+      "sourceBodyLabel": "Estate",
+      "market": "ECE",
+      "code": "AH91",
+      "sourceFrom": "1988-01",
+      "sourceTo": "1993-05",
+      "steering": null,
+      "transmission": null,
+      "drivetrain": null,
+      "sourceId": "bmw-glow-plug",
+      "scope": "Manufacturer storefront type-code/application metadata. Dates are source-specific; exact VIN/build/options and individual part conditions remain necessary.",
+      "notes": []
+    },
+    {
+      "model": "325e",
+      "engine": "M20",
+      "body": "sedan",
+      "sourceBodyLabel": "4 doors",
+      "market": "ECE",
+      "code": "1551",
+      "sourceFrom": "1985-01",
+      "sourceTo": "1987-08",
+      "steering": null,
+      "transmission": null,
+      "drivetrain": null,
+      "sourceId": "bmw-manual-shift-sleeve",
+      "scope": "Manufacturer storefront type-code/application metadata. Dates are source-specific; exact VIN/build/options and individual part conditions remain necessary.",
+      "notes": []
+    },
+    {
+      "model": "325i",
+      "engine": "M20",
+      "body": "sedan",
+      "sourceBodyLabel": "4 doors",
+      "market": "ECE",
+      "code": "1411",
+      "sourceFrom": "1986-11",
+      "sourceTo": "1990-11",
+      "steering": null,
+      "transmission": null,
+      "drivetrain": null,
+      "sourceId": "bmw-expansion-tank",
+      "scope": "Manufacturer storefront type-code/application metadata. Dates are source-specific; exact VIN/build/options and individual part conditions remain necessary.",
+      "notes": []
+    },
+    {
+      "model": "325iX",
+      "engine": "M20",
+      "body": "sedan",
+      "sourceBodyLabel": "4 doors",
+      "market": "ECE",
+      "code": "1501",
+      "sourceFrom": "1986-10",
+      "sourceTo": "1990-12",
+      "steering": null,
+      "transmission": null,
+      "drivetrain": "AWD",
+      "sourceId": "bmw-fuel-filter-later",
+      "scope": "Manufacturer storefront type-code/application metadata. Dates are source-specific; exact VIN/build/options and individual part conditions remain necessary.",
+      "notes": [
+        "AWD established separately by bmw-awd; the product table does not state transmission or steering."
+      ]
+    },
+    {
+      "model": "M3",
+      "engine": "S14",
+      "body": "two-door",
+      "sourceBodyLabel": "2 doors",
+      "market": "ECE",
+      "code": "1001",
+      "sourceFrom": "1985-07",
+      "sourceTo": "1989-07",
+      "steering": null,
+      "transmission": null,
+      "drivetrain": null,
+      "sourceId": "bmw-m3-screw",
+      "scope": "Manufacturer storefront type-code/application metadata. Dates are source-specific; exact VIN/build/options and individual part conditions remain necessary.",
+      "notes": []
+    }
+  ],
+  "partLeads": [
+    {
+      "number": "51261373183",
+      "name": "Front-door central-locking actuator",
+      "sourceId": "bmw-classic-parts",
+      "sourceScope": "BMW Classic E30 reproduction list",
+      "restriction": "E30-category lead; verify exact door/model/build/options in the source catalog.",
+      "callout": null,
+      "requiredQuantity": null,
+      "identityStatus": "source-listed exact number",
+      "compatibilityStatus": "source scope only; not confirmed for an owner vehicle",
+      "redistribution": "factual identity and source link; no artwork copied"
+    },
+    {
+      "number": "34212225507",
+      "name": "Rear brake disc",
+      "sourceId": "bmw-classic-parts",
+      "sourceScope": "BMW Classic E30 reproduction list",
+      "restriction": "The section does not establish fitment for every E30 brake/axle or M3 variant.",
+      "callout": null,
+      "requiredQuantity": null,
+      "identityStatus": "source-listed exact number",
+      "compatibilityStatus": "source scope only; not confirmed for an owner vehicle",
+      "redistribution": "factual identity and source link; no artwork copied"
+    },
+    {
+      "number": "54121848635",
+      "name": "Sunroof headliner clamp",
+      "sourceId": "bmw-classic-parts",
+      "sourceScope": "BMW Classic E30 reproduction list",
+      "restriction": "Only relevant to the installed sunroof assembly; no convertible fitment inferred.",
+      "callout": null,
+      "requiredQuantity": null,
+      "identityStatus": "source-listed exact number",
+      "compatibilityStatus": "source scope only; not confirmed for an owner vehicle",
+      "redistribution": "factual identity and source link; no artwork copied"
+    },
+    {
+      "number": "11131308358",
+      "name": "M3 upper oil pan",
+      "sourceId": "bmw-classic-parts",
+      "sourceScope": "BMW Classic E30 M3",
+      "restriction": "Upper part of the M3 two-piece oil pan; not a standard M20 oil pan.",
+      "callout": null,
+      "requiredQuantity": null,
+      "identityStatus": "source-listed exact number",
+      "compatibilityStatus": "source scope only; not confirmed for an owner vehicle",
+      "redistribution": "factual identity and source link; no artwork copied"
+    },
+    {
+      "number": "12121316688",
+      "name": "Ignition wiring harness",
+      "sourceId": "bmw-classic-parts",
+      "sourceScope": "BMW Classic E30 M3 EVO3",
+      "restriction": "Source explicitly limits this red-plug harness to M3 EVO3.",
+      "callout": null,
+      "requiredQuantity": null,
+      "identityStatus": "source-listed exact number",
+      "compatibilityStatus": "source scope only; not confirmed for an owner vehicle",
+      "redistribution": "factual identity and source link; no artwork copied"
+    },
+    {
+      "number": "12129064619",
+      "name": "Spark plug",
+      "sourceId": "bmw-m42-plug",
+      "sourceScope": "E30 318is M42 AF91/AF92 ECE",
+      "restriction": "Follow the exact engine/build/source restrictions; no blanket M10/M20/S14 substitution.",
+      "callout": "1",
+      "requiredQuantity": null,
+      "identityStatus": "source-listed exact number",
+      "compatibilityStatus": "source scope only; not confirmed for an owner vehicle",
+      "redistribution": "factual identity and source link; no artwork copied"
+    },
+    {
+      "number": "12232241389",
+      "name": "Glow plug",
+      "sourceId": "bmw-glow-plug",
+      "sourceScope": "E30 M21 diesel application rows",
+      "restriction": "Source says vehicles from 1988-12-01; this part condition narrows the broader type-code production ranges.",
+      "callout": "18",
+      "requiredQuantity": null,
+      "identityStatus": "source-listed exact number",
+      "compatibilityStatus": "source scope only; not confirmed for an owner vehicle",
+      "redistribution": "factual identity and source link; no artwork copied"
+    },
+    {
+      "number": "17111712641",
+      "name": "Radiator expansion tank",
+      "sourceId": "bmw-expansion-tank",
+      "sourceScope": "Source-listed E30 M20/M21 configurations",
+      "restriction": "Use the complete row/build/equipment restrictions; not every E30 cooling circuit.",
+      "callout": null,
+      "requiredQuantity": null,
+      "identityStatus": "source-listed exact number",
+      "compatibilityStatus": "source scope only; not confirmed for an owner vehicle",
+      "redistribution": "factual identity and source link; no artwork copied"
+    },
+    {
+      "number": "11510393338",
+      "name": "Mechanical coolant pump",
+      "sourceId": "bpd-m42-pump",
+      "sourceScope": "1991 318is Coupe(E30) source selection",
+      "restriction": "Listed replacement for 11511734602; use in conjunction with 07119904527. No E34 M50/M60 fitment inferred.",
+      "callout": "01",
+      "requiredQuantity": null,
+      "identityStatus": "source-listed exact number",
+      "compatibilityStatus": "source scope only; not confirmed for an owner vehicle",
+      "redistribution": "factual identity and source link; no artwork copied"
+    },
+    {
+      "number": "07119904527",
+      "name": "Hex bolt with washer M6x20",
+      "sourceId": "bpd-m42-pump",
+      "sourceScope": "M42 pump source listed above",
+      "restriction": "Three required bolts in this assembly. Source package quantity is ten and must not replace required quantity.",
+      "callout": "03",
+      "requiredQuantity": 3,
+      "identityStatus": "source-listed exact number",
+      "compatibilityStatus": "source scope only; not confirmed for an owner vehicle",
+      "redistribution": "factual identity and source link; no artwork copied"
+    },
+    {
+      "number": "11531721966",
+      "name": "Thermostat connection flange",
+      "sourceId": "bpd-m42-pump",
+      "sourceScope": "1991 318is Coupe(E30) source selection",
+      "restriction": "Retain source pump/thermostat assembly identity; do not borrow E34 housing fitment.",
+      "callout": "05",
+      "requiredQuantity": null,
+      "identityStatus": "source-listed exact number",
+      "compatibilityStatus": "source scope only; not confirmed for an owner vehicle",
+      "redistribution": "factual identity and source link; no artwork copied"
+    },
+    {
+      "number": "21211223097",
+      "name": "228 mm clutch disc",
+      "sourceId": "bpd-325i-clutch",
+      "sourceScope": "1989 325i Sedan(E30) source selection",
+      "restriction": "Manual-clutch reference with D=228 mm. A source year/body selection is not proof of the owner\u2019s installed gearbox.",
+      "callout": "02",
+      "requiredQuantity": null,
+      "identityStatus": "source-listed exact number",
+      "compatibilityStatus": "source scope only; not confirmed for an owner vehicle",
+      "redistribution": "factual identity and source link; no artwork copied"
+    },
+    {
+      "number": "21517521471",
+      "name": "Clutch release bearing",
+      "sourceId": "bpd-325i-clutch",
+      "sourceScope": "1989 325i Sedan(E30) source selection",
+      "restriction": "Check actual clutch/gearbox/source conditions before ordering.",
+      "callout": "04",
+      "requiredQuantity": null,
+      "identityStatus": "source-listed exact number",
+      "compatibilityStatus": "source scope only; not confirmed for an owner vehicle",
+      "redistribution": "factual identity and source link; no artwork copied"
+    },
+    {
+      "number": "11311711081",
+      "name": "127-tooth semicircular-profile timing belt",
+      "sourceId": "hubauer-m20-belt",
+      "sourceScope": "Dealer EPC lists M20 E30 and M20 E34 applications",
+      "restriction": "Example shared canonical number only for documented engine/hardware branches. Do not infer E34 M50/M60 interchange; source also lists distinct 128-tooth/rectangular alternatives.",
+      "callout": "09",
+      "requiredQuantity": null,
+      "identityStatus": "source-listed exact number",
+      "compatibilityStatus": "source scope only; not confirmed for an owner vehicle",
+      "redistribution": "factual identity and source link; no artwork copied"
+    }
+  ],
+  "manualSources": [
+    {
+      "id": "b390",
+      "title": "BMW 3 Series (E30) Service Manual: 1984\u20131990",
+      "publisher": "Bentley Publishers",
+      "sourceId": "bentley-b390",
+      "isbn13": "9780837616476",
+      "models": [
+        "318i M10",
+        "325/e/es M20 2.7",
+        "325i/is/Convertible M20 2.5"
+      ],
+      "transmissions": [
+        "Getrag 240 (four-cylinder scope)",
+        "Getrag 260 (six-cylinder scope)"
+      ],
+      "systems": [
+        "preventive maintenance",
+        "L-Jetronic 318i",
+        "Motronic 325/e/es",
+        "Motronic 1.1 325i/is/Convertible",
+        "major-circuit wiring",
+        "engine and manual transmission rebuilding"
+      ],
+      "scopeLimits": [
+        "Publisher scope is 1984\u20131990 and the listed engines/models; it does not establish full coverage for M42, M40, diesel, M3 or 325iX.",
+        "No full manual or process pictures redistributed. Exact page locators require access to the correct edition."
+      ],
+      "license": "All rights reserved; outbound publisher reference only."
+    },
+    {
+      "id": "bmw-b120199-plugs",
+      "title": "BMW U.S. spark-plug application chart",
+      "publisher": "BMW technical service information",
+      "sourceId": "bmw-us-spark-chart",
+      "models": [
+        "318i E30 M10",
+        "318i E30 M42",
+        "325e E30 M20",
+        "325i E30 M20",
+        "325iX E30 M20",
+        "M3 E30 S14"
+      ],
+      "scopeLimits": [
+        "Engine/market branch evidence only. Not a complete wiring manual, model matrix, service interval or full repair procedure."
+      ],
+      "license": "Manufacturer technical reference; source link, no reproduced PDF."
+    }
+  ],
+  "mechanicalDifferences": [
+    {
+      "id": "engine-branch",
+      "title": "A model badge does not identify the engine",
+      "summary": "318i includes M10/M40 and a U.S. M42 branch; 316 and 316i also have different fuel/engine branches.",
+      "sourceIds": [
+        "bmw-318i",
+        "bmw-wheel-bolt",
+        "bmw-m40-plug",
+        "bmw-us-spark-chart"
+      ],
+      "implementation": "Match engine, build month, market and installed hardware before sharing a procedure or catalog position."
+    },
+    {
+      "id": "awd",
+      "title": "The two generations use different AWD systems",
+      "summary": "E30 325iX has permanent 37:63 AWD with viscous locking. The E34 525iX system uses electronically controlled locking and a 36:64 base split.",
+      "sourceIds": [
+        "bmw-awd"
+      ],
+      "implementation": "Distinct transfer-case, front-axle, driveline and diagnostic applicability; no automatic E30/E34 iX interchange."
+    },
+    {
+      "id": "diesel",
+      "title": "324d and 324td are separate diesel branches",
+      "summary": "324d is naturally aspirated M21D24; 324td adds turbocharging and DDE. Petrol procedures are not substitutes.",
+      "sourceIds": [
+        "bmw-324d",
+        "bmw-324td"
+      ],
+      "implementation": "Diesel injection/glow systems and turbo-specific components need their own sources and procedures."
+    },
+    {
+      "id": "m3-320is",
+      "title": "S14 does not imply M3 body fitment",
+      "summary": "320is is an Italian-market 1990 cc S14 model with standard-width two-/four-door forms; M3 and its evolutions require separate references.",
+      "sourceIds": [
+        "bmw-320is",
+        "bmw-m3",
+        "bmw-m3-screw"
+      ],
+      "implementation": "Do not transfer M3 panels, brake packages or special-edition engine parts to every S14 or E30."
+    },
+    {
+      "id": "body-date",
+      "title": "Body and build date change the part source",
+      "summary": "Two-/four-door saloons, Touring and convertibles have separate contexts; the front-body source includes a September 1987 changeover.",
+      "sourceIds": [
+        "bmw-sedan",
+        "bmw-325i-touring",
+        "bpd-325i-front-body"
+      ],
+      "implementation": "Preserve body and original production restrictions instead of copying a whole-year fitment label."
+    },
+    {
+      "id": "belt",
+      "title": "M20 timing hardware remains explicit",
+      "summary": "The manufacturer-listed manual includes M20 timing-belt work; dealer catalog data distinguishes belt tooth/profile variants.",
+      "sourceIds": [
+        "bentley-b390",
+        "hubauer-m20-belt"
+      ],
+      "implementation": "Never substitute another engine\u2019s timing service, belt profile, tensioner or tightening figures."
+    },
+    {
+      "id": "market",
+      "title": "Market support is a configuration fact",
+      "summary": "BMW\u2019s UK history says its original E30 range was RWD; its U.S. history dates U.S. 325iX availability to 1988.",
+      "sourceIds": [
+        "bmw-uk-history",
+        "bmw-us-history"
+      ],
+      "implementation": "Do not generate the Cartesian product of every model/body/steering/market/gearbox as factory configurations."
+    }
+  ],
+  "gaps": [
+    "Full factory type-code/market/steering/transmission matrix is not verified. The bounded rows mostly cover ECE contexts.",
+    "Source-specific preproduction/configuration date ranges must not be merged into global model production ranges.",
+    "No full E30 catalog or complete diagram set has been imported by this research task.",
+    "No redistribution license for source manual/catalog imagery has been acquired.",
+    "No exact torque, fluid capacity, timing tension or labor-time specification has been authored from these index references.",
+    "No E30 geometry, dimension certification or OEM-to-mesh identity mapping is established by this evidence.",
+    "No actual E30 scanner evaluation photographs or accuracy claim exists here.",
+    "M3 evolutions, Baur/coachbuilt cars, South-African 333i/325iS, Portugal and other market specialties need dedicated verified configurations.",
+    "Separate real E30 part photographs and E30/E34 evaluation partitions are still needed."
+  ]
+}

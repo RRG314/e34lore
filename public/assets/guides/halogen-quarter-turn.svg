@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 284" role="img" aria-labelledby="title desc">
+  <title id="title">Headlight bulb quarter turn, viewed from behind the housing</title>
+  <desc id="desc">Turn counterclockwise to release. Align the tabs and turn clockwise to lock.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M0 0 10 5 0 10Z" fill="#943f2a"/>
+    </marker>
+  </defs>
+  <rect width="640" height="284" rx="12" fill="#f0eee6"/>
+  <path d="M320 55V237" stroke="#bcbcae"/>
+  <g fill="#29332e" font-family="system-ui,sans-serif" text-anchor="middle">
+    <text x="320" y="31" font-size="13" letter-spacing="3">REAR OF HEADLIGHT HOUSING</text>
+    <text x="160" y="221" font-size="21" font-weight="700">Release</text>
+    <text x="480" y="221" font-size="21" font-weight="700">Lock</text>
+    <text x="160" y="244" font-size="15">90° counterclockwise</text>
+    <text x="480" y="244" font-size="15">90° clockwise</text>
+  </g>
+  <g fill="#e2e3d8" stroke="#29332e" stroke-width="2">
+    <circle cx="160" cy="132" r="40"/>
+    <circle cx="480" cy="132" r="40"/>
+    <path d="M170 120h20v24h-20zM468 102h24v20h-24z" fill="#29332e"/>
+  </g>
+  <g fill="none" stroke="#943f2a" stroke-width="4" marker-end="url(#arrow)">
+    <path d="M222 132a62 62 0 0 0-62-62"/>
+    <path d="M480 70a62 62 0 0 1 62 62"/>
+  </g>
+</svg>

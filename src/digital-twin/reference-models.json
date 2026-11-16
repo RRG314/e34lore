@@ -1,0 +1,152 @@
+{
+  "schemaVersion": 1,
+  "models": [
+    {
+      "id": "reference:water-pump",
+      "assembly": "water-pump",
+      "partIds": [
+        "coolant-pump",
+        "pump-seal",
+        "pump-nut",
+        "thermostat-housing",
+        "thermostat",
+        "thermostat-seal",
+        "profile-gasket",
+        "early-gasket",
+        "housing-bolt-m6",
+        "housing-bolt-m8"
+      ],
+      "accuracy": {
+        "visual": "illustrative",
+        "dimensions": "missing",
+        "alignment": "missing",
+        "mechanical": "missing",
+        "removal": "missing"
+      },
+      "scope": "Original relationship geometry; not dimensionally verified BMW CAD."
+    },
+    {
+      "id": "reference:front-strut",
+      "assembly": "front-strut",
+      "partIds": [
+        "strut-housing",
+        "strut-insert",
+        "strut-retaining-collar",
+        "coil-spring",
+        "bump-stop",
+        "strut-dust-tube",
+        "spring-pad",
+        "upper-seat",
+        "strut-mount",
+        "strut-washer",
+        "strut-top-nut",
+        "strut-cap"
+      ],
+      "accuracy": {
+        "visual": "illustrative",
+        "dimensions": "missing",
+        "alignment": "missing",
+        "mechanical": "missing",
+        "removal": "missing"
+      },
+      "scope": "Original relationship geometry; not dimensionally verified BMW CAD."
+    },
+    {
+      "id": "reference:front-strut-damper",
+      "assembly": "front-strut-damper",
+      "partIds": [
+        "strut-housing-left",
+        "strut-housing-right",
+        "strut-left-hub",
+        "strut-right-hub",
+        "damper-catalog",
+        "damper-threaded-ring",
+        "damper-spacer",
+        "abs-sensor-catalog",
+        "abs-sensor-early"
+      ],
+      "accuracy": {
+        "visual": "illustrative",
+        "dimensions": "missing",
+        "alignment": "missing",
+        "mechanical": "missing",
+        "removal": "missing"
+      },
+      "scope": "Original relationship geometry; not dimensionally verified BMW CAD."
+    },
+    {
+      "id": "reference:front-brake",
+      "assembly": "front-brake",
+      "partIds": [
+        "front-disc-previous",
+        "brake-carrier",
+        "brake-pads",
+        "brake-caliper",
+        "caliper-housing-right",
+        "caliper-assembly-left",
+        "caliper-assembly-right",
+        "caliper-guide-bolt",
+        "wear-sensor"
+      ],
+      "accuracy": {
+        "visual": "illustrative",
+        "dimensions": "missing",
+        "alignment": "missing",
+        "mechanical": "missing",
+        "removal": "missing"
+      },
+      "scope": "Original relationship geometry; not dimensionally verified BMW CAD."
+    },
+    {
+      "id": "reference:front-brake-disc",
+      "assembly": "front-brake-disc",
+      "partIds": [
+        "brake-disc",
+        "front-disc-previous",
+        "disc-shield-left",
+        "disc-shield-right",
+        "disc-locating-screw",
+        "disc-locating-screw-early",
+        "disc-shield-bolt",
+        "disc-shield-bolt-old"
+      ],
+      "accuracy": {
+        "visual": "illustrative",
+        "dimensions": "missing",
+        "alignment": "missing",
+        "mechanical": "missing",
+        "removal": "missing"
+      },
+      "scope": "Original relationship geometry; not dimensionally verified BMW CAD."
+    },
+    {
+      "id": "reference:front-strut-upper",
+      "assembly": "front-strut-upper",
+      "partIds": [
+        "upper-mount-standard",
+        "upper-mount-camber",
+        "upper-mount-nut",
+        "upper-mount-nut-alternate",
+        "upper-mount-washer",
+        "upper-strut-rod-nut",
+        "upper-strut-cap",
+        "upper-dust-collar",
+        "upper-flat-washer",
+        "upper-spring-plate-oem",
+        "upper-spring-pad-oem",
+        "strut-bump-stop-oem",
+        "strut-protection-tube-oem",
+        "lower-spring-pad-oem",
+        "upper-mount-pin"
+      ],
+      "accuracy": {
+        "visual": "illustrative",
+        "dimensions": "missing",
+        "alignment": "missing",
+        "mechanical": "missing",
+        "removal": "missing"
+      },
+      "scope": "Illustrative upper mount and spring-seat hardware. Shared shapes do not establish camber-mount or hardware interchange."
+    }
+  ]
+}

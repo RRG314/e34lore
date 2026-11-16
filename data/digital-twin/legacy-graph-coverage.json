@@ -1,0 +1,440 @@
+{
+  "schemaVersion": 1,
+  "configurationId": "e34-525i-1995-m50-reference",
+  "graphRevision": "reference-3",
+  "primaryAreas": 19,
+  "structuralAndComponentRecords": 106,
+  "recordsLinkedToVisualReferences": 54,
+  "originalRelationshipAssemblies": 5,
+  "referenceComponentIdentities": 47,
+  "nominalCircularSealIdentities": 48,
+  "uniqueCanonicalIdentitiesWithReferenceOrNominalModels": 93,
+  "dimensionallyVerifiedComponents": 0,
+  "documentedAccessDependencies": 6,
+  "verifiedPhysicalRemovalPaths": 0,
+  "sourceLinkedPlanningSteps": 4,
+  "missingGeometry": [
+    {
+      "id": "vehicle",
+      "name": "1995 E34 525i reference",
+      "requiredEvidence": [
+        "Segmented source geometry",
+        "Configuration-specific dimensional and mounting evidence"
+      ]
+    },
+    {
+      "id": "exterior",
+      "name": "Exterior panels",
+      "requiredEvidence": [
+        "Segmented source geometry",
+        "Configuration-specific dimensional and mounting evidence"
+      ]
+    },
+    {
+      "id": "interior",
+      "name": "Interior",
+      "requiredEvidence": [
+        "Segmented source geometry",
+        "Configuration-specific dimensional and mounting evidence"
+      ]
+    },
+    {
+      "id": "engine",
+      "name": "Engine",
+      "requiredEvidence": [
+        "Segmented source geometry",
+        "Configuration-specific dimensional and mounting evidence"
+      ]
+    },
+    {
+      "id": "engine-accessories",
+      "name": "Engine accessories",
+      "requiredEvidence": [
+        "Segmented source geometry",
+        "Configuration-specific dimensional and mounting evidence"
+      ]
+    },
+    {
+      "id": "cooling",
+      "name": "Cooling system",
+      "requiredEvidence": [
+        "Segmented source geometry",
+        "Configuration-specific dimensional and mounting evidence"
+      ]
+    },
+    {
+      "id": "intake-exhaust",
+      "name": "Intake and exhaust",
+      "requiredEvidence": [
+        "Segmented source geometry",
+        "Configuration-specific dimensional and mounting evidence"
+      ]
+    },
+    {
+      "id": "transmission",
+      "name": "Transmission",
+      "requiredEvidence": [
+        "Segmented source geometry",
+        "Configuration-specific dimensional and mounting evidence"
+      ]
+    },
+    {
+      "id": "driveshaft",
+      "name": "Driveshaft",
+      "requiredEvidence": [
+        "Segmented source geometry",
+        "Configuration-specific dimensional and mounting evidence"
+      ]
+    },
+    {
+      "id": "differential",
+      "name": "Differential",
+      "requiredEvidence": [
+        "Segmented source geometry",
+        "Configuration-specific dimensional and mounting evidence"
+      ]
+    },
+    {
+      "id": "front-suspension",
+      "name": "Front suspension",
+      "requiredEvidence": [
+        "Segmented source geometry",
+        "Configuration-specific dimensional and mounting evidence"
+      ]
+    },
+    {
+      "id": "rear-suspension",
+      "name": "Rear suspension",
+      "requiredEvidence": [
+        "Segmented source geometry",
+        "Configuration-specific dimensional and mounting evidence"
+      ]
+    },
+    {
+      "id": "steering",
+      "name": "Steering",
+      "requiredEvidence": [
+        "Segmented source geometry",
+        "Configuration-specific dimensional and mounting evidence"
+      ]
+    },
+    {
+      "id": "brakes",
+      "name": "Brakes",
+      "requiredEvidence": [
+        "Segmented source geometry",
+        "Configuration-specific dimensional and mounting evidence"
+      ]
+    },
+    {
+      "id": "wheels",
+      "name": "Wheels",
+      "requiredEvidence": [
+        "Segmented source geometry",
+        "Configuration-specific dimensional and mounting evidence"
+      ]
+    },
+    {
+      "id": "fuel",
+      "name": "Fuel system",
+      "requiredEvidence": [
+        "Segmented source geometry",
+        "Configuration-specific dimensional and mounting evidence"
+      ]
+    },
+    {
+      "id": "electrical",
+      "name": "Electrical systems",
+      "requiredEvidence": [
+        "Segmented source geometry",
+        "Configuration-specific dimensional and mounting evidence"
+      ]
+    },
+    {
+      "id": "hvac",
+      "name": "Heating and air conditioning",
+      "requiredEvidence": [
+        "Segmented source geometry",
+        "Configuration-specific dimensional and mounting evidence"
+      ]
+    },
+    {
+      "id": "lighting",
+      "name": "Lighting",
+      "requiredEvidence": [
+        "Segmented source geometry",
+        "Configuration-specific dimensional and mounting evidence"
+      ]
+    },
+    {
+      "id": "fan-clutch",
+      "name": "Mechanical fan and clutch",
+      "requiredEvidence": [
+        "Segmented source geometry",
+        "Configuration-specific dimensional and mounting evidence"
+      ]
+    },
+    {
+      "id": "fan-shroud",
+      "name": "Fan shroud",
+      "requiredEvidence": [
+        "Segmented source geometry",
+        "Configuration-specific dimensional and mounting evidence"
+      ]
+    },
+    {
+      "id": "drive-belt",
+      "name": "Accessory drive belt",
+      "requiredEvidence": [
+        "Segmented source geometry",
+        "Configuration-specific dimensional and mounting evidence"
+      ]
+    },
+    {
+      "id": "pump-pulley",
+      "name": "Coolant-pump pulley",
+      "requiredEvidence": [
+        "Segmented source geometry",
+        "Configuration-specific dimensional and mounting evidence"
+      ]
+    },
+    {
+      "id": "engine-block",
+      "name": "Cylinder block and crankcase",
+      "requiredEvidence": [
+        "Segmented source geometry",
+        "Configuration-specific dimensional and mounting evidence"
+      ]
+    },
+    {
+      "id": "cylinder-head",
+      "name": "Cylinder head and cover",
+      "requiredEvidence": [
+        "Segmented source geometry",
+        "Configuration-specific dimensional and mounting evidence"
+      ]
+    },
+    {
+      "id": "crankshaft",
+      "name": "Crankshaft, bearings and flywheel",
+      "requiredEvidence": [
+        "Segmented source geometry",
+        "Configuration-specific dimensional and mounting evidence"
+      ]
+    },
+    {
+      "id": "pistons",
+      "name": "Pistons, pins and connecting rods",
+      "requiredEvidence": [
+        "Segmented source geometry",
+        "Configuration-specific dimensional and mounting evidence"
+      ]
+    },
+    {
+      "id": "valvetrain",
+      "name": "Camshafts, valves and valve springs",
+      "requiredEvidence": [
+        "Segmented source geometry",
+        "Configuration-specific dimensional and mounting evidence"
+      ]
+    },
+    {
+      "id": "timing",
+      "name": "Timing chains, guides and tensioners",
+      "requiredEvidence": [
+        "Segmented source geometry",
+        "Configuration-specific dimensional and mounting evidence"
+      ]
+    },
+    {
+      "id": "vanos",
+      "name": "VANOS (variant confirmation required)",
+      "requiredEvidence": [
+        "Segmented source geometry",
+        "Configuration-specific dimensional and mounting evidence"
+      ]
+    },
+    {
+      "id": "lubrication",
+      "name": "Oil pump, pickup, sump and filter housing",
+      "requiredEvidence": [
+        "Segmented source geometry",
+        "Configuration-specific dimensional and mounting evidence"
+      ]
+    },
+    {
+      "id": "alternator",
+      "name": "Alternator and mounts",
+      "requiredEvidence": [
+        "Segmented source geometry",
+        "Configuration-specific dimensional and mounting evidence"
+      ]
+    },
+    {
+      "id": "starter",
+      "name": "Starter and power connections",
+      "requiredEvidence": [
+        "Segmented source geometry",
+        "Configuration-specific dimensional and mounting evidence"
+      ]
+    },
+    {
+      "id": "belt-drive",
+      "name": "Belt drive and tensioners",
+      "requiredEvidence": [
+        "Segmented source geometry",
+        "Configuration-specific dimensional and mounting evidence"
+      ]
+    },
+    {
+      "id": "radiator",
+      "name": "Radiator, expansion tank and hoses",
+      "requiredEvidence": [
+        "Segmented source geometry",
+        "Configuration-specific dimensional and mounting evidence"
+      ]
+    },
+    {
+      "id": "intake",
+      "name": "Air filter, meter, throttle and manifold",
+      "requiredEvidence": [
+        "Segmented source geometry",
+        "Configuration-specific dimensional and mounting evidence"
+      ]
+    },
+    {
+      "id": "exhaust",
+      "name": "Manifolds, catalysts, silencers and hangers",
+      "requiredEvidence": [
+        "Segmented source geometry",
+        "Configuration-specific dimensional and mounting evidence"
+      ]
+    },
+    {
+      "id": "clutch",
+      "name": "Clutch or torque converter (configuration dependent)",
+      "requiredEvidence": [
+        "Segmented source geometry",
+        "Configuration-specific dimensional and mounting evidence"
+      ]
+    },
+    {
+      "id": "shift-linkage",
+      "name": "Shift mechanism and mounts",
+      "requiredEvidence": [
+        "Segmented source geometry",
+        "Configuration-specific dimensional and mounting evidence"
+      ]
+    },
+    {
+      "id": "front-arms",
+      "name": "Front control arms and joints",
+      "requiredEvidence": [
+        "Segmented source geometry",
+        "Configuration-specific dimensional and mounting evidence"
+      ]
+    },
+    {
+      "id": "rear-arms",
+      "name": "Rear arms, bushings and subframe",
+      "requiredEvidence": [
+        "Segmented source geometry",
+        "Configuration-specific dimensional and mounting evidence"
+      ]
+    },
+    {
+      "id": "rear-dampers",
+      "name": "Rear dampers and springs",
+      "requiredEvidence": [
+        "Segmented source geometry",
+        "Configuration-specific dimensional and mounting evidence"
+      ]
+    },
+    {
+      "id": "steering-box",
+      "name": "Steering box, linkage and column",
+      "requiredEvidence": [
+        "Segmented source geometry",
+        "Configuration-specific dimensional and mounting evidence"
+      ]
+    },
+    {
+      "id": "brake-hydraulics",
+      "name": "Master cylinder, booster, pipes and ABS",
+      "requiredEvidence": [
+        "Segmented source geometry",
+        "Configuration-specific dimensional and mounting evidence"
+      ]
+    },
+    {
+      "id": "rear-brakes",
+      "name": "Rear service and parking brakes",
+      "requiredEvidence": [
+        "Segmented source geometry",
+        "Configuration-specific dimensional and mounting evidence"
+      ]
+    },
+    {
+      "id": "fuel-delivery",
+      "name": "Tank, pumps, lines, rail and injectors",
+      "requiredEvidence": [
+        "Segmented source geometry",
+        "Configuration-specific dimensional and mounting evidence"
+      ]
+    },
+    {
+      "id": "engine-management",
+      "name": "Engine harness, sensors and DME",
+      "requiredEvidence": [
+        "Segmented source geometry",
+        "Configuration-specific dimensional and mounting evidence"
+      ]
+    },
+    {
+      "id": "power-distribution",
+      "name": "Battery, grounds, fuses and relays",
+      "requiredEvidence": [
+        "Segmented source geometry",
+        "Configuration-specific dimensional and mounting evidence"
+      ]
+    },
+    {
+      "id": "heater",
+      "name": "Heater core, valves and blower",
+      "requiredEvidence": [
+        "Segmented source geometry",
+        "Configuration-specific dimensional and mounting evidence"
+      ]
+    },
+    {
+      "id": "air-conditioning",
+      "name": "Compressor, condenser and refrigerant circuit",
+      "requiredEvidence": [
+        "Segmented source geometry",
+        "Configuration-specific dimensional and mounting evidence"
+      ]
+    },
+    {
+      "id": "seats-trim",
+      "name": "Seats, belts and interior trim",
+      "requiredEvidence": [
+        "Segmented source geometry",
+        "Configuration-specific dimensional and mounting evidence"
+      ]
+    },
+    {
+      "id": "glazing",
+      "name": "Glass, seals, doors and regulators",
+      "requiredEvidence": [
+        "Segmented source geometry",
+        "Configuration-specific dimensional and mounting evidence"
+      ]
+    }
+  ],
+  "limits": [
+    "Structural records are not a complete bill of materials.",
+    "Shared reference geometry does not prove variant equivalence.",
+    "Nominal seals are catalog-dimension interpretations, not manufacturer-verified parts.",
+    "No verified internal M50 engine or installed engine-bay geometry is present."
+  ]
+}

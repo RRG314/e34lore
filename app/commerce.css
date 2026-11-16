@@ -1,0 +1,62 @@
+.where-to-buy { margin: 2rem 0; padding: 1.5rem 0; border-top: 2px solid var(--line); }
+.commercial-heading { display:flex; align-items:baseline; justify-content:space-between; flex-wrap:wrap; gap:1rem; }
+.commercial-heading h3 { margin:0; font-size:1.8rem; }
+.affiliate-disclosure { border-left:3px solid #ab5b3b; padding:.7rem 1rem; background:#f1ede4; font-size:.9rem; }
+.retailer-offers { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr)); gap:1rem; }
+.retailer-offers article { border:1px solid var(--line);padding:1.2rem; }
+.retailer-offers h4 { font-size:1.15rem; margin:.5rem 0; }
+.offer-price { font-size:1.4rem; font-weight:600; }
+.offer-price small { display:block; font-size:.75rem; font-weight:400; }
+.offer-product-image { width:100%;height:150px;object-fit:contain; }
+.guide-retailer-references { margin:2rem 0;padding-top:1.5rem;border-top:1px solid var(--line); }
+.public-ad-slot { max-width:1240px; padding:1rem 4.4%; margin:0 auto; }
+.sponsor-card { border:1px solid var(--line);background:#efeee7;padding:1.2rem;display:flex;align-items:center;justify-content:space-between;gap:1.5rem; }
+.sponsor-card h3 { font-size:1.3rem; margin:.3rem 0; }
+.sponsor-card p { font-size:.9rem;max-width:65ch; }
+.sponsor-card img { max-width:240px;max-height:120px;object-fit:contain; }
+.sponsor-card a { display:inline-flex;align-items:center;gap:.4rem;text-decoration:underline; }
+.commercial-toolbar { display:flex;align-items:end;gap:1rem;flex-wrap:wrap;margin:1.5rem 0; }
+.commercial-toolbar label { flex:1 1 230px;margin:0; }
+.commercial-record { display:grid;grid-template-columns:minmax(0,1fr) auto;gap:1rem;padding:1.5rem 0;border-bottom:1px solid var(--line); }
+.commercial-record .form-actions { align-content:start;max-width:240px; }
+.commercial-record p { max-width:90ch; }
+.commercial-record h3 { margin:.3rem 0 .8rem; }
+.commercial-record code,.commercial-details dd { overflow-wrap:anywhere; }
+.commercial-details { display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:1rem;margin-top:1rem; }
+.commercial-details dt { font-size:.75rem;color:#4c554c;text-transform:capitalize; }
+.commercial-details dd { margin:.3rem 0;font-size:.9rem;white-space:pre-wrap; }
+.commercial-record-form .form-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+.commercial-record-form textarea,.commercial-record-form input,.commercial-record-form select { max-width:100%; }
+.commercial-record-form label { min-width:0; }
+.commercial-record-form input[type="checkbox"] { align-self:start; }
+.commercial-part-choice { grid-column:1/-1; }
+.commercial-tool { margin:1.5rem 0;padding:1rem;border:1px solid var(--line); }
+.commercial-tool form { max-width:800px;margin-top:1rem; }
+.affiliate-dashboard pre { white-space:pre-wrap;overflow-wrap:anywhere;max-height:300px;overflow:auto; }
+.commercial-research { margin-top:3rem; }
+.commercial-research table { min-width:650px; }
+.commercial-research td { vertical-align:top;padding:1rem; }
+.commercial-research td p { font-size:.85rem;max-width:50ch; }
+.partnership-policy section { max-width:900px;margin:2rem 0; }
+.commercial-consent a { text-decoration:underline; }
+.affiliate-readiness { margin:2rem 0; padding:1.5rem 0; border-block:1px solid var(--line); }
+.affiliate-readiness-grid { display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:1rem; }
+.affiliate-readiness-grid article { min-width:0;border:1px solid var(--line);padding:1.25rem; }
+.affiliate-readiness-grid h3 { font-size:1.25rem;margin:0 0 .7rem; }
+.affiliate-readiness-grid .text-link { display:block;margin-top:.75rem; }
+.affiliate-readiness .text-link, .where-to-buy > .text-link { min-height:44px;padding:.6rem 0; }
+.affiliate-readiness summary { min-height:44px;padding:.7rem 0;cursor:pointer; }
+.affiliate-readiness-counts { display:grid;grid-template-columns:1fr 1fr;gap:.75rem; }
+.affiliate-readiness-counts dt { font-size:.75rem; }
+.affiliate-readiness-counts dd { margin:0;font-size:1.3rem; }
+@media(max-width:700px) {
+ .commercial-record { grid-template-columns:1fr; }
+ .commercial-record .form-actions { max-width:none; }
+ .commercial-record-form .form-grid { grid-template-columns:1fr; }
+ .sponsor-card { flex-direction:column;align-items:start; }
+ .sponsor-card img { max-width:100%; }
+ .commercial-toolbar { align-items:stretch; }
+ .commercial-toolbar .button { width:100%;justify-content:center; }
+}
+
+.part-discovery{border-top:1px solid var(--line,#d3d5ca);border-bottom:1px solid var(--line,#d3d5ca);margin:18px 0}.part-discovery>summary{padding:13px 0;cursor:pointer;font-weight:600;font-size:13px}.part-discovery-body{padding-bottom:12px}.part-discovery-body>.where-to-buy{margin-top:0}

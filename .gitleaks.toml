@@ -1,0 +1,32 @@
+title = "E34 Lore credential scanning"
+[extend]
+useDefault = true
+
+[[allowlists]]
+description = "Intentionally public Supabase publishable keys and the literal consent preference key; no secret or service-role key exemption"
+regexTarget = "secret"
+regexes = ['''^sb_publishable_[A-Za-z0-9_-]+$''', '''^e34[.]commercial[.]counts[.]v1$''']
+
+[[rules]]
+id = "supabase-privileged-key"
+description = "Supabase secret key"
+regex = '''(sb_secret_[A-Za-z0-9_-]{16,})'''
+secretGroup = 1
+keywords = ["sb_secret_"]
+
+[[rules]]
+id = "generic-api-key"
+
+[[rules.allowlists]]
+description = "Catalog source SHA-256 fields in generated position exclusions"
+condition = "AND"
+paths = ['''^supabase/migrations/20261110020155_catalog_position_quarantine\.sql$''']
+regexTarget = "line"
+regexes = ['''(?:^|\n)\('catalog-assembly-[a-f0-9]{24}-[a-f0-9]{24}','e34-context-[a-f0-9]{24}','https://www\.bmwpartsdeal\.com/[A-Za-z0-9_./~-]+\.html','[a-f0-9]{64}','[a-f0-9]{64}'\),?(?:\r?\n|$)''']
+
+[[rules.allowlists]]
+description = "Public Cloudflare Web Analytics site token delivered in public HTML"
+condition = "AND"
+paths = ['''^worker/security\.ts$''']
+regexTarget = "secret"
+regexes = ['''^84d22f9b794c4c66bc73866bdf077b4e$''']

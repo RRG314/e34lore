@@ -1,0 +1,620 @@
+[
+  {
+    "url": "https://www.reddit.com/r/E34/comments/1crajtx/thrust_arm/",
+    "title": "Thrust arm?",
+    "platform": "Reddit",
+    "reason": "An owner’s front-end vibration investigation, including a later update. Useful context for inspection; the replies do not establish which part is faulty.",
+    "scope": {},
+    "availability": "available",
+    "reviewed_at": "2026-11-08",
+    "targets": [
+      {
+        "kind": "component",
+        "id": "suspension"
+      },
+      {
+        "kind": "guide",
+        "id": "front-strut-component-identification"
+      },
+      {
+        "kind": "diagnostic",
+        "id": "vibration"
+      }
+    ]
+  },
+  {
+    "url": "https://www.reddit.com/r/E34/comments/1s4gpto/aux_pump_options/",
+    "title": "Aux Pump Options?",
+    "platform": "Reddit",
+    "reason": "Owner experiences with auxiliary heater pumps and heater valves. Adaptations and bypass suggestions require independent technical checks; this is not replacement or interchange approval.",
+    "scope": {},
+    "availability": "available",
+    "reviewed_at": "2026-11-08",
+    "targets": [
+      {
+        "kind": "component",
+        "id": "climate"
+      }
+    ]
+  },
+  {
+    "url": "https://www.bimmerforums.com/forum/archive/index.php/t-1325220.html",
+    "title": "DIY M60 Water Pump Replacement",
+    "platform": "Bimmerforums",
+    "reason": "An M60-specific owner walkthrough. Compare its access and installation details with the manual and your installed engine. Photographs remain on the original forum.",
+    "scope": {
+      "engine": "M60"
+    },
+    "availability": "unknown",
+    "reviewed_at": "2026-11-08",
+    "targets": [
+      {
+        "kind": "component",
+        "id": "cooling"
+      },
+      {
+        "kind": "diagnostic",
+        "id": "overheating"
+      },
+      {
+        "kind": "repair",
+        "id": "170-job-m60-water-pump-replacement"
+      }
+    ]
+  },
+  {
+    "url": "https://www.e30zone.net/forum/viewtopic.php?p=1189708",
+    "title": "E34 525i Water pump change?",
+    "platform": "E30 Zone",
+    "reason": "A discussion that distinguishes M20 and M50 pump jobs. Identify the engine before using any reply; the thread contains different procedures for different engines.",
+    "scope": {},
+    "availability": "unknown",
+    "reviewed_at": "2026-11-08",
+    "targets": [
+      {
+        "kind": "guide",
+        "id": "m50-water-pump-job-planning"
+      },
+      {
+        "kind": "part",
+        "id": "coolant-pump"
+      },
+      {
+        "kind": "part",
+        "id": "pump-seal"
+      }
+    ]
+  },
+  {
+    "url": "https://www.bimmerforums.com/forum/showthread.php?2503384",
+    "title": "Cooling System Acting Up — Need Opinion",
+    "platform": "Bimmerforums",
+    "reason": "A 540i owner’s coolant-loss investigation and follow-up. A useful example of recording symptoms and checking the result, rather than treating an initial diagnosis as confirmed.",
+    "scope": {
+      "model": "540i",
+      "engine": "M60"
+    },
+    "availability": "unknown",
+    "reviewed_at": "2026-11-08",
+    "targets": [
+      {
+        "kind": "component",
+        "id": "cooling"
+      }
+    ]
+  },
+  {
+    "url": "https://www.fcpeuro.com/blog/bmw-5-series-control-arm-thrust-arm-replacement-e34",
+    "title": "E34 control arm and thrust arm replacement",
+    "platform": "FCP Euro",
+    "credit": "William Yelder / FCP Euro",
+    "format": "Photo walkthrough",
+    "reason": "Illustrated replacement guide with a tool list and bushing-loading notes.",
+    "applicability": "E34; lower arms differ by model. Match the installed suspension and manual torque procedure.",
+    "scope": {},
+    "availability": "available",
+    "reviewed_at": "2026-11-09",
+    "verification": "Source page opened",
+    "targets": [
+      {
+        "kind": "repair",
+        "id": "310-job-front-ride-height-and-control-arms"
+      },
+      {
+        "kind": "repair",
+        "id": "310-job-thrust-arm-replacement"
+      },
+      {
+        "kind": "repair",
+        "id": "310-job-thrust-arm-bushings"
+      }
+    ],
+    "tools": [
+      "Sockets and spanners",
+      "Ball-joint separator",
+      "Torque wrench",
+      "Vehicle lifting and support equipment"
+    ]
+  },
+  {
+    "url": "https://www.exx.se/maintenance/brake_pad_disc/index.shtml",
+    "title": "Brake pads and discs: illustrated replacement",
+    "platform": "Exx.se",
+    "credit": "Exx.se",
+    "format": "Photo walkthrough",
+    "reason": "Photographed pad, carrier and disc work, with tools and measurements.",
+    "applicability": "The example parts are for a 1989 535i. Confirm caliper type and disc limits for your car.",
+    "scope": {},
+    "availability": "available",
+    "reviewed_at": "2026-11-09",
+    "verification": "Source page opened",
+    "targets": [
+      {
+        "kind": "repair",
+        "id": "340-job-brake-pad-replacement"
+      },
+      {
+        "kind": "repair",
+        "id": "340-job-rotor-removal-and-runout-checks"
+      }
+    ]
+  },
+  {
+    "url": "https://www.exx.se/maintenance/engine_oil_change_e34/index.shtml",
+    "title": "535i engine oil and filter change",
+    "platform": "Exx.se",
+    "credit": "Exx.se",
+    "format": "Photo walkthrough",
+    "reason": "A photographed oil service with tools and consumables.",
+    "applicability": "1989 535i / M30 example; quantities and filter details are not universal.",
+    "scope": {
+      "engine": "M30"
+    },
+    "availability": "unknown",
+    "reviewed_at": "2026-11-09",
+    "verification": "Search index checked; live access may vary",
+    "targets": [
+      {
+        "kind": "repair",
+        "id": "020-job-oil-and-filter-change"
+      }
+    ],
+    "tools": [
+      "Sockets and ratchet",
+      "Drain container",
+      "Torque wrench",
+      "Gloves"
+    ]
+  },
+  {
+    "url": "https://www.exx.se/maintenance/instrument_cluster_e34/index.shtml",
+    "title": "E34 instrument cluster variants and repairs",
+    "platform": "Exx.se",
+    "credit": "Exx.se",
+    "format": "Photo walkthrough",
+    "reason": "Photos and background on cluster generations, coding and capacitor faults.",
+    "applicability": "Distinguishes early and later clusters; a donor cluster or coding plug is not automatically compatible.",
+    "scope": {},
+    "availability": "unknown",
+    "reviewed_at": "2026-11-09",
+    "verification": "Search index checked; live access may vary",
+    "targets": [
+      {
+        "kind": "repair",
+        "id": "620-job-cluster-removal-and-later-cluster-housings"
+      },
+      {
+        "kind": "repair",
+        "id": "620-job-early-cluster-and-bulb-replacement"
+      }
+    ]
+  },
+  {
+    "url": "https://www.shiftbmw.com/model/e34/replacing-a-window-regulator-gear-2/",
+    "title": "Repairing a window regulator gear",
+    "platform": "ShiftBMW",
+    "credit": "Shayne McGuire / ShiftBMW",
+    "format": "Photo walkthrough",
+    "reason": "A photo account of a jammed or ratcheting window and regulator gear repair.",
+    "applicability": "E32 / E34; confirm the installed regulator and source of the fault.",
+    "scope": {},
+    "availability": "unknown",
+    "reviewed_at": "2026-11-09",
+    "verification": "Search index checked; live access may vary",
+    "targets": [
+      {
+        "kind": "repair",
+        "id": "512-job-window-regulator-and-motor"
+      },
+      {
+        "kind": "repair",
+        "id": "512-job-front-door-glass"
+      }
+    ],
+    "tools": [
+      "Small flat screwdriver",
+      "T20 driver",
+      "Phillips screwdriver"
+    ]
+  },
+  {
+    "url": "https://www.shiftbmw.com/model/e34/dashboard-removal-2/",
+    "title": "Dashboard removal",
+    "platform": "ShiftBMW",
+    "credit": "Johan / ShiftBMW",
+    "format": "Photo walkthrough",
+    "reason": "Photographed access through lower trim, center console and dashboard.",
+    "applicability": "E32 / E34 example; airbag, wiring and heating-system differences need the matching manual procedure.",
+    "scope": {},
+    "availability": "unknown",
+    "reviewed_at": "2026-11-09",
+    "verification": "Search index checked; live access may vary",
+    "targets": [
+      {
+        "kind": "repair",
+        "id": "513-job-dashboard-removal"
+      },
+      {
+        "kind": "repair",
+        "id": "513-job-center-console-removal"
+      },
+      {
+        "kind": "repair",
+        "id": "513-job-glovebox-and-interior-trim-removal"
+      }
+    ]
+  },
+  {
+    "url": "https://www.shiftbmw.com/model/e34/door-lock-actuator-removal-2/",
+    "title": "Door lock actuator removal",
+    "platform": "ShiftBMW",
+    "credit": "Shayne McGuire / ShiftBMW",
+    "format": "Photo walkthrough",
+    "reason": "An illustrated right-rear-door actuator removal and fault account.",
+    "applicability": "E32 / E34; right rear door shown.",
+    "scope": {},
+    "availability": "unknown",
+    "reviewed_at": "2026-11-09",
+    "verification": "Search index checked; live access may vary",
+    "targets": [
+      {
+        "kind": "repair",
+        "id": "515-job-rear-door-actuator"
+      },
+      {
+        "kind": "repair",
+        "id": "515-job-emergency-unlocking-synchronization-and-front-actuator"
+      }
+    ],
+    "tools": [
+      "T30 driver",
+      "Phillips screwdriver",
+      "Pliers",
+      "Side cutters"
+    ]
+  },
+  {
+    "url": "https://www.shiftbmw.com/model/e34/door-handle-trim-and-gasket-replacement/",
+    "title": "Door handle trim and gasket replacement",
+    "platform": "ShiftBMW",
+    "credit": "Scott / ShiftBMW",
+    "format": "Photo walkthrough",
+    "reason": "An owner documents deteriorated handle seals and trim access.",
+    "applicability": "1992 525i example; author also names E32 / E36.",
+    "scope": {},
+    "availability": "unknown",
+    "reviewed_at": "2026-11-09",
+    "verification": "Search index checked; live access may vary",
+    "targets": [
+      {
+        "kind": "repair",
+        "id": "411-job-door-handle-access"
+      }
+    ]
+  },
+  {
+    "url": "https://www.shiftbmw.com/model/e34/doorlock-bracket-2/",
+    "title": "Broken door lock bracket repair",
+    "platform": "ShiftBMW",
+    "credit": "Johan / ShiftBMW",
+    "format": "Photo walkthrough",
+    "reason": "A photographed owner repair and later follow-up for a cracked lock bracket.",
+    "applicability": "E32 / E34; an owner repair approach, not a factory replacement procedure.",
+    "scope": {},
+    "availability": "unknown",
+    "reviewed_at": "2026-11-09",
+    "verification": "Search index checked; live access may vary",
+    "targets": [
+      {
+        "kind": "repair",
+        "id": "411-job-front-door-lock"
+      },
+      {
+        "kind": "repair",
+        "id": "411-job-rear-lock-check-strap-and-striker"
+      },
+      {
+        "kind": "repair",
+        "id": "515-job-central-locking-diagnosis"
+      }
+    ]
+  },
+  {
+    "url": "https://www.shiftbmw.com/model/e34/seat-switch-repair-2/",
+    "title": "Seat switch repair",
+    "platform": "ShiftBMW",
+    "credit": "Bill Rickard / ShiftBMW",
+    "format": "Photo walkthrough",
+    "reason": "Photos of seat switch removal and internal contact work.",
+    "applicability": "E24 / E32 / E34; match the installed seat and switch.",
+    "scope": {},
+    "availability": "unknown",
+    "reviewed_at": "2026-11-09",
+    "verification": "Search index checked; live access may vary",
+    "targets": [
+      {
+        "kind": "repair",
+        "id": "520-job-front-seat-armrest-and-disassembly"
+      }
+    ]
+  },
+  {
+    "url": "https://www.shiftbmw.com/model/e34/wiper-mechanism-replacement-2/",
+    "title": "Wiper mechanism replacement",
+    "platform": "ShiftBMW",
+    "credit": "Johan / ShiftBMW",
+    "format": "Photo walkthrough",
+    "reason": "A photographed linkage replacement for excessive wiper play.",
+    "applicability": "E32 / E34; author notes access differs with the heating system.",
+    "scope": {},
+    "availability": "unknown",
+    "reviewed_at": "2026-11-09",
+    "verification": "Search index checked; live access may vary",
+    "targets": [
+      {
+        "kind": "repair",
+        "id": "611-job-front-wiper-linkage-and-console"
+      }
+    ]
+  },
+  {
+    "url": "https://www.shiftbmw.com/model/e34/e34-rear-strut-replacement/",
+    "title": "E34 rear strut replacement",
+    "platform": "ShiftBMW",
+    "credit": "Winston Fong / ShiftBMW",
+    "format": "Photo walkthrough",
+    "reason": "An illustrated rear strut removal and spring/damper account.",
+    "applicability": "Confirm body style, spring tools and conventional versus self-leveling suspension.",
+    "scope": {},
+    "availability": "unknown",
+    "reviewed_at": "2026-11-09",
+    "verification": "Search index checked; live access may vary",
+    "targets": [
+      {
+        "kind": "repair",
+        "id": "330-job-rear-spring-and-shock-assembly"
+      }
+    ]
+  },
+  {
+    "url": "https://www.shiftbmw.com/model/e34/e34-front-rotor-replacement/",
+    "title": "Front brake rotor replacement",
+    "platform": "ShiftBMW",
+    "credit": "Sean / ShiftBMW",
+    "format": "Photo walkthrough",
+    "reason": "Photographed disc and carrier removal with notes on seized fasteners.",
+    "applicability": "E32 / E34 example; rotor dimensions and fasteners must come from your applicable specification.",
+    "scope": {},
+    "availability": "unknown",
+    "reviewed_at": "2026-11-09",
+    "verification": "Search index checked; live access may vary",
+    "targets": [
+      {
+        "kind": "repair",
+        "id": "340-job-rotor-removal-and-runout-checks"
+      }
+    ]
+  },
+  {
+    "url": "https://www.shiftbmw.com/model/e32/brake-pads/",
+    "title": "Brake pad replacement",
+    "platform": "ShiftBMW",
+    "credit": "Sean / ShiftBMW",
+    "format": "Photo walkthrough",
+    "reason": "Illustrated sliding-caliper pad service and wear-sensor context.",
+    "applicability": "E32 / E34; identifies caliper differences. Verify your installed calipers.",
+    "scope": {},
+    "availability": "unknown",
+    "reviewed_at": "2026-11-09",
+    "verification": "Search index checked; live access may vary",
+    "targets": [
+      {
+        "kind": "repair",
+        "id": "340-job-brake-pad-replacement"
+      }
+    ]
+  },
+  {
+    "url": "https://www.shiftbmw.com/model/e32/brake-caliper-rebuild/",
+    "title": "Single-piston brake caliper rebuild",
+    "platform": "ShiftBMW",
+    "credit": "Sean / ShiftBMW",
+    "format": "Photo walkthrough",
+    "reason": "An owner photo account of single-piston caliper service.",
+    "applicability": "Single-piston example; excludes the later twin-piston front calipers described by the author. Brake hydraulics need the full applicable procedure.",
+    "scope": {},
+    "availability": "unknown",
+    "reviewed_at": "2026-11-09",
+    "verification": "Search index checked; live access may vary",
+    "targets": [
+      {
+        "kind": "repair",
+        "id": "340-job-caliper-removal"
+      }
+    ]
+  },
+  {
+    "url": "https://www.shiftbmw.com/model/e34/e34-parking-brake-adjustment/",
+    "title": "Parking brake adjustment",
+    "platform": "ShiftBMW",
+    "credit": "Sean; edited by Mike Oswald / ShiftBMW",
+    "format": "Photo walkthrough",
+    "reason": "Photos of parking shoes, adjusters and cables with a second owner account.",
+    "applicability": "E32 / E34; use the matching manual adjustment specification.",
+    "scope": {},
+    "availability": "unknown",
+    "reviewed_at": "2026-11-09",
+    "verification": "Search index checked; live access may vary",
+    "targets": [
+      {
+        "kind": "repair",
+        "id": "340-job-brake-pedal-and-parking-brake-adjustment"
+      },
+      {
+        "kind": "repair",
+        "id": "340-job-parking-brake-shoes"
+      }
+    ]
+  },
+  {
+    "url": "https://www.shiftbmw.com/model/e32/rear-wheel-bearing/",
+    "title": "Rear wheel bearing replacement",
+    "platform": "ShiftBMW",
+    "credit": "Greg / ShiftBMW",
+    "format": "Photo walkthrough",
+    "reason": "A photographed M5 rear bearing replacement with specialist tools listed.",
+    "applicability": "M5 example; verify bearing, axle and tool requirements for your E34.",
+    "scope": {},
+    "availability": "unknown",
+    "reviewed_at": "2026-11-09",
+    "verification": "Search index checked; live access may vary",
+    "targets": [
+      {
+        "kind": "repair",
+        "id": "330-job-rear-wheel-bearing-replacement"
+      }
+    ],
+    "tools": [
+      "Hub puller and slide hammer",
+      "Bearing removal/installation tool",
+      "Snap-ring pliers",
+      "Torque wrenches"
+    ]
+  },
+  {
+    "url": "https://www.shiftbmw.com/model/e12/driveshaft-center-bearing-5/",
+    "title": "Driveshaft center support bearing",
+    "platform": "ShiftBMW",
+    "credit": "Sean / ShiftBMW",
+    "format": "Photo walkthrough",
+    "reason": "An owner account with photos, installation context and an unresolved vibration follow-up.",
+    "applicability": "E32 automatic example. Front joints, flanges and preload specifications differ; identify your driveshaft.",
+    "scope": {},
+    "availability": "unknown",
+    "reviewed_at": "2026-11-09",
+    "verification": "Search index checked; live access may vary",
+    "targets": [
+      {
+        "kind": "repair",
+        "id": "260-job-flex-disc-and-center-support-bearing"
+      },
+      {
+        "kind": "repair",
+        "id": "260-job-driveshaft-alignment-removal-and-installation"
+      }
+    ]
+  },
+  {
+    "url": "https://www.shiftbmw.com/model/e32/microfilter-replacement-e32-e34/",
+    "title": "Cabin microfilter replacement",
+    "platform": "ShiftBMW",
+    "credit": "Toni Kosec / ShiftBMW",
+    "format": "Photo walkthrough",
+    "reason": "A detailed photo sequence through the passenger-side HVAC access.",
+    "applicability": "LHD 1991 520i with Behr IHKR/3-F shown. Only cars fitted with a filter; RHD access differs.",
+    "scope": {},
+    "availability": "unknown",
+    "reviewed_at": "2026-11-09",
+    "verification": "Search index checked; live access may vary",
+    "targets": [
+      {
+        "kind": "repair",
+        "id": "640-job-cabin-microfilter"
+      },
+      {
+        "kind": "repair",
+        "id": "020-job-hvac-microfilter"
+      }
+    ],
+    "tools": [
+      "Screwdrivers",
+      "Torx drivers"
+    ],
+    "time": "Author reports an afternoon; access and experience vary."
+  },
+  {
+    "url": "https://www.shiftbmw.com/model/e24/m30-radiator-and-water-pump-replacement-2/",
+    "title": "M30 radiator and water pump replacement",
+    "platform": "ShiftBMW",
+    "credit": "Winston Fong / ShiftBMW",
+    "format": "Photo walkthrough",
+    "reason": "Photos of M30 cooling-system access and replacement work.",
+    "applicability": "M30 only; do not transfer engine-specific steps to M50 or M60.",
+    "scope": {
+      "engine": "M30"
+    },
+    "availability": "unknown",
+    "reviewed_at": "2026-11-09",
+    "verification": "Search index checked; live access may vary",
+    "targets": [
+      {
+        "kind": "repair",
+        "id": "170-job-m30-water-pump-replacement"
+      },
+      {
+        "kind": "repair",
+        "id": "170-job-radiator-removal-and-installation"
+      }
+    ]
+  },
+  {
+    "url": "https://www.shiftbmw.com/model/e23/zf-4hp22-automatic-transmission-service-3/",
+    "title": "ZF 4HP22 automatic transmission service",
+    "platform": "ShiftBMW",
+    "credit": "Paul Axford / ShiftBMW",
+    "format": "Photo walkthrough",
+    "reason": "A photographed drain, sump and filter account.",
+    "applicability": "M30 730i with ZF 4HP22 shown. This is not an A4S 310R or five-speed automatic procedure. Identify the transmission tag first.",
+    "scope": {},
+    "availability": "unknown",
+    "reviewed_at": "2026-11-09",
+    "verification": "Search index checked; live access may vary",
+    "targets": [
+      {
+        "kind": "repair",
+        "id": "240-job-4hp22-eh-atf-service"
+      }
+    ]
+  },
+  {
+    "url": "https://www.shiftbmw.com/model/e24/belt-replacement-m30-i6-4/",
+    "title": "M30 accessory belt replacement",
+    "platform": "ShiftBMW",
+    "credit": "ShiftBMW contributor",
+    "format": "Photo walkthrough",
+    "reason": "A belt replacement account that discusses fit and adjustment differences.",
+    "applicability": "M30 example; installed accessories and belt routing must match.",
+    "scope": {
+      "engine": "M30"
+    },
+    "availability": "unknown",
+    "reviewed_at": "2026-11-09",
+    "verification": "Search index checked; live access may vary",
+    "targets": [
+      {
+        "kind": "repair",
+        "id": "020-job-battery-throttle-linkage-and-v-belts"
+      }
+    ]
+  }
+]
