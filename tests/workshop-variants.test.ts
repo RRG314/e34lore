@@ -1,3 +1,4 @@
+import {availableAssemblyServices} from '../src/digital-twin/public/assembly-service';
 import { releasePublic } from './release-content';
 import {createElement} from 'react';
 import {renderToStaticMarkup} from 'react-dom/server';
@@ -227,11 +228,14 @@ describe('opening panel coverage', () => {
   else expect(labels).toContain('Sunroof');
   const previousPin = panelArchives.filter(archive => archive.id===pin.id).sort((a,b) => b.revision-a.revision)[0];
   expect(previousPin).toBeDefined();
-  const previous = parseReference(JSON.parse(fs.readFileSync(releasePublic +previousPin!.manifestUrl,'utf8')));
-  for (const [id,binding] of Object.entries(previous.catalog?.bindings??{})) {
-   expect(model.catalog?.bindings[id]?.assemblyIds).toEqual(binding.assemblyIds);
-   expect(model.catalog?.bindings[id]?.positions).toEqual(binding.positions);
-   expect(model.catalog?.bindings[id]?.manual).toEqual(binding.manual);
+  const previousBytes = fs.readFileSync(releasePublic + previousPin!.manifestUrl);
+  expect(digest(previousBytes)).toBe(previousPin!.sha256);
+  const previous = parseReference(JSON.parse(previousBytes.toString()));
+  expect(referenceRelease(previous.revision, previous.id)).toMatchObject({sha256:previousPin!.sha256});
+  for (const {id} of previous.openingPanels ?? []) {
+   expect(model.openingPanels?.some(panel => panel.id===id)).toBe(true);
+   const binding = previous.catalog?.bindings[id];
+   if (binding) expect(model.catalog?.bindings[id]).toEqual(binding);
   }
  });
 });
@@ -270,4 +274,14 @@ describe('center console references', () => {
   const oppositeGrip=pin.transmission==='Automatic'?'e30trim:manual-shift-knob':'e30trim:automatic-lever';
   expect(cabin).not.toContain(oppositeGrip);
  });
+});
+
+it.each([service525i,e30])('publishes guided repairs with all their modeled parts for $id', pin => {
+ const model=parseReference(JSON.parse(fs.readFileSync(releasePublic+pin.manifestUrl,'utf8')));
+ const ids=availableAssemblyServices(model).map(service=>service.id);
+ expect(ids).toHaveLength(10);
+ const series=pin.id.startsWith('e30')?'e30':'e34';
+ expect(ids).toEqual(expect.arrayContaining([
+  series+'-water-pump',series+'-thermostat',series+'-rear-brakes',series+'-cooling-fan',
+ ]));
 });

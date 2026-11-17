@@ -5,6 +5,7 @@ import {seriesHref, type Series} from '../../series/registry';
 import {e30Guides} from '../../series/e30-repairs';
 import {useEffect,useState} from "react";
 import {loadReference} from "./load-reference";
+import {availableAssemblyServices,type AssemblyProcedure} from "./assembly-service";
 import {componentGuideHref, componentWorkshopHref, requestedComponent, type ComponentContext} from "../../servicing/context";
 import { ServiceOverview } from "../../servicing/ServiceOverview";
 import { previewFeatures } from "../../release/features";
@@ -43,7 +44,7 @@ export function CatalogProcedureLinks({ partId, positionId, assemblyId, catalogC
  const app=useApp(), series=seriesOverride||app.series;
  const context=useNavigation(navigation);
  const [reference,setReference]=useState<{key:string;id?:string;revision?:string;nodeId?:string;initialized:boolean}>({key:'',initialized:false});
- const [loaded,setLoaded]=useState<{key:string;catalog:CatalogIndex|null;nodes:ReadonlySet<string>;error:boolean}|null>(null),[retry,setRetry]=useState(0);
+ const [loaded,setLoaded]=useState<{key:string;catalog:CatalogIndex|null;nodes:ReadonlySet<string>;services:AssemblyProcedure[];error:boolean}|null>(null),[retry,setRetry]=useState(0);
  useEffect(()=>{
   const requested = requestedComponent(Object.fromEntries(new URLSearchParams(location.search)));
   const id = referenceId || requested.referenceId;
@@ -53,7 +54,7 @@ export function CatalogProcedureLinks({ partId, positionId, assemblyId, catalogC
   setReference({key:[id||'',revision||''].join(':'),id,revision,nodeId:requested.nodeId,initialized:true});
  },[referenceId,modelRevision]);
  useEffect(()=>{if(!reference.id&&!reference.revision)return;let active=true;const controller=new AbortController();
-  loadReference(controller.signal,reference.revision,reference.id).then(model=>{if(active)setLoaded({key:reference.key,catalog:model.catalog||null,nodes:new Set(model.nodes.map(node=>node.id)),error:false});}).catch(()=>{if(active&&!controller.signal.aborted)setLoaded({key:reference.key,catalog:null,nodes:new Set(),error:true});});
+  loadReference(controller.signal,reference.revision,reference.id).then(model=>{if(active)setLoaded({key:reference.key,catalog:model.catalog||null,nodes:new Set(model.nodes.map(node=>node.id)),services:availableAssemblyServices(model),error:false});}).catch(()=>{if(active&&!controller.signal.aborted)setLoaded({key:reference.key,catalog:null,nodes:new Set(),services:[],error:true});});
   return()=>{active=false;controller.abort();};
  },[reference, retry]);
  const hasReference=!!(reference.id||reference.revision),current=loaded?.key===reference.key?loaded:null;
@@ -62,6 +63,10 @@ export function CatalogProcedureLinks({ partId, positionId, assemblyId, catalogC
 
  const index=hasReference ? current?.catalog : series==='e34' ? componentCatalog : null;
  const links = index ? catalogProcedures(partId,positionId,assemblyId,partNumber,index) : { nodes:[], manual:[], guides:[] };
+ const guided = current?.services.find(service=>service.catalogParts?.some(node=>links.nodes.includes(node)));
+ const guidedHref = guided && index ? journeyHref('/workshop?' + new URLSearchParams({
+   mode:'repair',service:guided.id,reference:index.modelId,model_revision:String(index.modelRevision),
+ }),context) : undefined;
  const number = partNumber || partId;
  const specs = specsForPart(series,number);
  const sharedGuide = e30GuidesByNumber[number.replace(/^bmw-/, '')];
@@ -80,6 +85,7 @@ export function CatalogProcedureLinks({ partId, positionId, assemblyId, catalogC
  };
  return <>
   {current?.error && <p role="status">The selected model’s links could not load. <button type="button" className="text-link" onClick={()=>setRetry(n=>n+1)}>Retry model links</button></p>}
+  {guidedHref && <DocumentLink className="button outline" series={series} href={guidedHref}>Open guided 3D repair <ArrowUpRight size={15}/></DocumentLink>}
   {specs.map(job=><RepairSpecCard key={job.id} job={job} compact entry="catalog" component={component} navigation={context}/>)}
   {(guideIds.length>0||manual.length>0)&&<ServiceLinks guideIds={guideIds} manual={manual.slice(0,4)} navigation={context} vehicleOverride={vehicleOverride} seriesOverride={series} component={component}/>} {nodeId&&!specs.length&&<DocumentLink className="button outline full" series={series} href={componentWorkshopHref(component,context)}>View related model reference <ArrowUpRight size={15}/></DocumentLink>}</>;
 }

@@ -40,9 +40,9 @@ const steps: Procedure[] = [
     cautions:[raisedCar,brakes,pedal,'Check the caliper design first. This sequence covers the bolt-to-guide-pin design with the 35 Nm fastener.'],
     steps:[
       ['Check the caliper and disc','Remove the front wheels. Compare the caliper and guide fasteners to BMW’s illustration. Check the disc with a micrometer and confirm the minimum thickness for that disc.', 'The guide-pin bolt design, pad set and disc match the installed hardware.',643],
-      ['Remove the pads','Disconnect the wear sensor if fitted. Counterhold the guide pin while removing the retaining bolt. Hang the caliper and remove the pads.', 'No tension or twist is on the hose.',643],
-      ['Remove or check the disc','For replacement, remove the carrier and disc screw. Clean the hub mating face and check that the new disc sits flat. Tighten the retaining screw to 16 Nm and the carrier bolts to 123 Nm on this RWD application with the factory thread preparation.', 'The disc sits flat and turns without interference.',644],
-      ['Install pads and check pedal','Press the piston back with a spreader while watching reservoir level. Fit the pads and sensor, renew the illustrated guide-pin bolts and tighten them to 35 Nm. Refit the wheels, pump the pedal and check braking at low speed.', 'The pedal is firm and both front brakes operate normally.',643],
+      ['Remove the pads','Unplug the left front wear sensor. Counterhold the lower guide pin and remove its self-locking bolt. Pivot the caliper up on the upper guide and support it while removing the pads.', 'No tension or twist is on the hose.',643],
+      ['Remove or check the disc','For disc replacement, unbolt the carrier and hang the carrier and caliper together with the hose connected. Remove the disc screw and disc. Clean the hub face, seat the disc and tighten its screw to 16 Nm. Refit the carrier and tighten its lightly oiled bolts to 123 Nm for this rear-wheel-drive application.', 'The disc sits flat and turns without interference.',644],
+      ['Install pads and check pedal','Press the piston back with a spreader while watching reservoir level. Fit the pads and sensor, lower the caliper and tighten a new self-locking lower guide-pin bolt to 35 Nm while counterholding the pin. Refit the stock wheels to 110 Nm per the 325i / 325is handbook. Pump the pedal and confirm pedal pressure before a low-speed check.', 'The pedal is firm and both front brakes operate normally.',643],
     ],
   },
   {

@@ -44,7 +44,7 @@ export const frontAxleSpecs: readonly RepairSpecs[]=[
     parts:[{name:'Left steel wishbone',number:'31121127725'},{name:'Right steel wishbone',number:'31121127726'},
       {name:'M14 × 1.5 self-locking nut',number:'31106774714',condition:'Match to the inner joint and check the repair manual’s hardware note.'},
       {name:'M12 × 1.5 self-locking nut',number:'32216769539',condition:'Match to the outer joint.'}],
-    note:alignment,catalog:arms30,nodes:/^e30assembly:front-(?:left|right):control-arm$/,modelNode:'e30assembly:front-left:control-arm',
+    note:alignment,catalog:arms30,nodes:/^e30assembly:front-(?:left|right):(?:control-arm|control-nut|control-inner-nut|control-bolt-[12])$/,modelNode:'e30assembly:front-left:control-arm',
     rightModelNode:'e30assembly:front-right:control-arm',rightPartNumbers:['31121127726'],
   },
   {
@@ -54,7 +54,7 @@ export const frontAxleSpecs: readonly RepairSpecs[]=[
     tools:['BMW 31 2 130 press fixture for the bushing and bracket; feeler gauge for the factory wear check.'],
     specs:[{item:'Bushing bracket to carrier',value:'42 Nm',source:e30Torque('31-4 · PDF 105')},
       {item:'Installed bushing check, clearance A',value:'0.7–1.7 mm',condition:'Check the gap at the point in the BMW drawing, with the car at the specified normal load.'}],
-    parts:[bush30],catalog:arms30,nodes:/^e30assembly:front-(?:left|right):control-arm$/,modelNode:'e30assembly:front-left:control-arm',
+    parts:[bush30],catalog:arms30,nodes:/^e30assembly:front-(?:left|right):control-(?:arm|bush)$/,modelNode:'e30assembly:front-left:control-arm',
   },
   {
     id:'e30-tie-rod',series:'e30',guide:'e30-tie-rod',title:'Steering tie rod and outer end',topic:'e30-tie-rod',
@@ -66,7 +66,7 @@ export const frontAxleSpecs: readonly RepairSpecs[]=[
       {item:'Tie rod adjuster clamp bolt',value:'14 Nm',condition:'For the clamp bolt shown, at normal load after setting toe.',source:torque30Rods}],
     parts:[{name:'Complete tie rod (either side)',number:'32111126360',condition:'Replacement for catalog number 32 11 1 125 186.'},
       {name:'Outer ball joint',number:'32111126757'},{name:'Inner joint securing plate',number:'32111124540'},{name:'Rack boot',number:'32111127104',condition:'Inspect for cracks and renew if damaged.'}],
-    catalog:rods30,note:alignment,nodes:/^e30assembly:front-axle:steering-rack$/,modelNode:'e30assembly:front-axle:steering-rack',
+    catalog:rods30,note:alignment,nodes:/^e30assembly:front-(?:axle:steering-rack|(?:left|right):(?:tie-(?:rod|outer|outer-nut|clamp-1)|rack-(?:boot(?:-clip)?|outer-clip|lock)))$/,modelNode:'e30assembly:front-axle:steering-rack',
     numbers:['32111125186'],
   },
   {
@@ -97,7 +97,7 @@ export const frontAxleSpecs: readonly RepairSpecs[]=[
       {item:'Original damper retaining collar',value:'130 Nm',condition:'Check replacement damper instructions if the supplied ring differs.',source:e30Torque('31-8 · PDF 108')}],
     parts:[{name:'Standard guide support',number:'31331139452',condition:'Check upper mount and alignment before choosing standard or correction mount.'},
       {name:'Camber correction guide support',number:'31331139484',condition:'Only when the specified correction is needed.'}],
-    catalog:struts30,note:springSafety,nodes:/^e30assembly:front-(?:left|right):(?:strut|spring|top-mount)$/,
+    catalog:struts30,note:springSafety,nodes:/^e30assembly:front-(?:left|right):(?:strut(?:-spindle)?|spring|top-(?:mount|cap)|tower-nut-[1-3]|damper|gland-nut|(?:lower|upper)-pad|upper-seat|shaft-(?:nut|washer)|mount-(?:insulator|washer)|dust-boot|bump-stop)$/,
     modelNode:'e30assembly:front-left:strut',rightModelNode:'e30assembly:front-right:strut',rightPartNumbers:['31311127316'],
     numbers:['31311127315','31311127316','31321135892','31301133438','31321130065'],
   },
@@ -124,7 +124,8 @@ export const frontAxleSpecs: readonly RepairSpecs[]=[
       {item:'Link pivot bracket to control arm',value:'42 Nm',source:e30Torque('31-10 · PDF 110')},
       {item:'M8 bar clamp to axle carrier',value:'22 Nm',source:e30Torque('31-9 · PDF 109')}],
     parts:[{name:'Stabilizer link',number:'31351091764'},{name:'20 mm stabilizer rubber mount',number:'31351129139',condition:'Only for the 20 mm bar; confirm diameter.'}],
-    catalog:factory('e30','front stabilizer diagram','front_rear_axle/stabilizer_front'),numbers:['31351130850'],
+    catalog:factory('e30','front stabilizer diagram','front_rear_axle/stabilizer_front'),
+    nodes:/^e30assembly:front-(?:axle:antiroll-bar|(?:left|right):drop-link(?:-fastener)?)$/,numbers:['31351130850'],
   },
   {
     id:'e34-outer-tie-rod',series:'e34',title:'Outer steering tie rods and ends',topic:'320-job-outer-tie-rods-and-ends',
@@ -135,7 +136,7 @@ export const frontAxleSpecs: readonly RepairSpecs[]=[
       {item:'Tie rod adjuster clamp bolt',value:'14 Nm',source:center34}],
     parts:[{name:'Complete outer tie rod (either side)',number:'32211135668',condition:'Catalog replacement for 32 21 1 135 666.'},
       {name:'Left-hand-thread ball joint',number:'32211135822'},{name:'Right-hand-thread ball joint',number:'32211135824',condition:'Catalog replacement for 32 21 1 135 820. Thread direction refers to the adjuster, not the side of the car.'}],
-    catalog:rods34,note:alignment,nodes:/^e34sys:tie-rod--?1$/,modelNode:'e34sys:tie-rod-1',numbers:['32211135666','32211135819','32211135820'],
+    catalog:rods34,note:alignment,nodes:/^(?:e34sys:tie-rod--?1|e34axle:(?:left|right)-tie-(?:outer(?:-nut)?|inner(?:-nut)?|clamp-[12]))$/,modelNode:'e34sys:tie-rod-1',numbers:['32211135666','32211135819','32211135820'],
   },
   {
     id:'e34-center-steering-link',series:'e34',title:'Center steering link',topic:'320-job-center-link-camber-and-caster',
@@ -145,7 +146,7 @@ export const frontAxleSpecs: readonly RepairSpecs[]=[
     specs:[{item:'Center link to pitman arm',value:'59 Nm',condition:'Use a new self-locking nut.'},{item:'Center link to idler arm',value:'37 Nm',condition:'Use a new self-locking nut.'},
       {item:'Outer tie rod ends to center link',value:'37 Nm',condition:'Use new self-locking nuts.'}],
     parts:[{name:'Center tie rod',number:'32211138864',condition:'Catalog replacement for 32 21 1 138 854.'}],
-    catalog:rods34,note:alignment,nodes:/^e34sys:(?:center-drag-link|pitman-arm)$/,modelNode:'e34sys:center-drag-link',numbers:['32211138854'],
+    catalog:rods34,note:alignment,nodes:/^(?:e34sys:(?:center-drag-link|pitman-arm)|e34steer:center-(?:left|right)-nut)$/,modelNode:'e34sys:center-drag-link',numbers:['32211138854'],
   },
   {
     id:'e34-steering-idler',series:'e34',title:'Steering idler arm and bushing',topic:'320-job-idler-arm',
@@ -182,7 +183,7 @@ export const frontAxleSpecs: readonly RepairSpecs[]=[
       {item:'Control arm to crossmember',value:'78 Nm',condition:'Tighten the new self-locking nut at the normal loaded position.',source:page('310',282,'Bentley · 310-6, bushing through-bolt torque')}],
     parts:[{name:'Left aluminum wishbone',number:'31121139987'},{name:'Right aluminum wishbone',number:'31121139988'},
       {name:'Left steel wishbone',number:'31121139991'},{name:'Right steel wishbone',number:'31121139992'},steelBush34],
-    catalog:arms34,note:alignment,nodes:/^e34sys:front-control-arm--?1$/,modelNode:'e34sys:front-control-arm-1',
+    catalog:arms34,note:alignment,nodes:/^(?:e34sys:front-control-arm--?1|e34axle:(?:left|right)-control-(?:nut|inner-nut|bolt))$/,modelNode:'e34sys:front-control-arm-1',
     rightModelNode:'e34sys:front-control-arm--1',rightPartNumbers:['31121139988','31121139992'],
   },
   {
@@ -194,7 +195,7 @@ export const frontAxleSpecs: readonly RepairSpecs[]=[
     specs:[{item:'Thrust arm ball joint to steering arm',value:'93 Nm',source:page('310',286,'Bentley · 310-10, ball joint torque')},
       {item:'Thrust arm to crossmember',value:'127 Nm',condition:'Tighten with the car normally loaded. Install new locking nuts and the washers shown.',source:page('310',286,'Bentley · 310-10, thrust arm torque')}],
     parts:[{name:'Left thrust arm without bushing',number:'31121141097'},{name:'Right thrust arm without bushing',number:'31121141098'},thrustBush],
-    catalog:arms34,note:alignment,nodes:/^e34sys:front-thrust-(?:arm|bracket)--?1$/,modelNode:'e34sys:front-thrust-arm-1',
+    catalog:arms34,note:alignment,nodes:/^(?:e34sys:front-thrust-(?:arm|bracket)--?1|e34axle:(?:left|right)-thrust-(?:nut|inner-nut|bolt))$/,modelNode:'e34sys:front-thrust-arm-1',
     rightModelNode:'e34sys:front-thrust-arm--1',rightPartNumbers:['31121141098'],
   },
   {
@@ -209,7 +210,7 @@ export const frontAxleSpecs: readonly RepairSpecs[]=[
       {item:'Upper mount to original damper shaft',value:'65 Nm external hex / 45 Nm internal hex',condition:'Use the row for the installed shaft design and a new self-locking nut. Check instructions for replacement dampers.',source:strutTorque34}],
     parts:[{name:'Standard upper guide support',number:'31331139452',condition:'From 09/1992. Check for a marked camber correction mount.'},
       {name:'Standard Boge/Sachs damper insert',number:'31321092283',condition:'From 09/1992, non-EDC standard strut.'}],
-    catalog:struts34,note:springSafety,nodes:/^e34sys:front-(?:strut|damper|spring|spring-seat|top-mount|dust-boot)--?1$/,
+    catalog:struts34,note:springSafety,nodes:/^(?:e34sys:front-(?:strut|damper|spring|spring-seat|top-mount|dust-boot)--?1|e34axle:(?:left|right)-(?:strut-spindle|top-cap|tower-nut-[1-3]|gland-nut|(?:lower|upper)-pad|shaft-(?:nut|washer)|mount-insulator|bump-stop|steering-arm|lever-bolt-[1-3]))$/,
     modelNode:'e34sys:front-strut-1',rightModelNode:'e34sys:front-strut--1',rightPartNumbers:['31311138488','31319065429'],
     numbers:['31311138487','31311138488','31319065428','31319065429','31331139484','31331139437'],
   },
@@ -238,7 +239,7 @@ export const frontAxleSpecs: readonly RepairSpecs[]=[
       {item:'Stabilizer brackets to subframe',value:'22 Nm',source:page('310',285,'Bentley · 310-9, bracket torque')}],
     parts:[{name:'Front stabilizer link',number:'31351134582'},{name:'23 mm standard bar rubber mount',number:'31351135805'},
       {name:'25 mm low-slung sport bar rubber mount',number:'31351140193',condition:'From 09/1991, with the matching 25 mm bar.'}],
-    catalog:factory('e34','front stabilizer diagram','front_rear_axle/stabilizer_front'),nodes:/^(?:e34sys:front-(?:antiroll-bar|drop-link--?1)|e34chassis:front-bar-clamp--?1)$/,
+    catalog:factory('e34','front stabilizer diagram','front_rear_axle/stabilizer_front'),nodes:/^(?:e34sys:front-(?:antiroll-bar|drop-link--?1)|e34chassis:front-bar-clamp--?1|e34axle:(?:left|right)-drop-link-fastener)$/,
     modelNode:'e34sys:front-antiroll-bar',numbers:['31351130075','31351139017','31351140192','31352226334'],
   },
 ];

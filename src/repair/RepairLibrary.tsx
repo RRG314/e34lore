@@ -51,7 +51,8 @@ export function RepairLibrary({ initialQuery = '', initialSystem = '', track }: 
   return <div className="page repair-library">
     <PageIntro eyebrow={"KEEP YOUR " + series.toUpperCase() + " ON THE ROAD"} title="Repair walkthroughs."
       description="Find the job you need. Compare illustrated DIY guides, the service manual and fixes shared by other owners.">
-      <DocumentLink className="button primary" href="/repairs#repair-jobs">Find a repair <Search size={17}/></DocumentLink>
+      <DocumentLink className="button primary" href="/workshop?mode=repair">Guided 3D repairs <ArrowUpRight size={17}/></DocumentLink>
+      <DocumentLink className="button outline" href="/repairs#repair-jobs">Find a repair guide <Search size={17}/></DocumentLink>
       <DocumentLink className="button outline" href="/diagnostics">Diagnose a symptom <ArrowUpRight size={17}/></DocumentLink>
     </PageIntro>
     <p className="repair-library-summary">{browseRepairTopics({series}).length} repair & service topics · {sourced} topics with linked photo guides · {(series==='e30'?e30ManualGroups:manualChapters).length} manual chapters</p>
