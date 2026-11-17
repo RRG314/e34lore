@@ -1,4 +1,4 @@
-import backend from "../src/lib/backend";
+import backend, { demoBackend } from "../src/lib/backend";
 
 const backendUrl = new URL(backend.url);
 const backendSocket = new URL(backendUrl);
@@ -27,7 +27,7 @@ export function secureResponse(request: Request, response: Response): Response {
   const url = new URL(request.url);
   const pathname = url.pathname.replace(/^\/e[0-9]{2}(?=\/|$)/, "") || "/";
   const publicPath = url.pathname.replace(/^\/e30(?=\/|$)/, "").replace(/\/$/, "") || "/";
-  const measureTraffic = typeof HTMLRewriter !== "undefined" &&
+  const measureTraffic = !demoBackend && typeof HTMLRewriter !== "undefined" &&
     url.origin === "https://e34lore.com" && request.method === "GET" &&
     (url.search === "" || (publicPath === "/" && url.search === "?source=app") ||
       (publicPath === "/parts/catalog" && /^\?part=bmw-\d{11}$/.test(url.search))) &&

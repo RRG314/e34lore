@@ -2,6 +2,7 @@
 import { lazy, Suspense, useState } from "react";
 import { Search, ArrowUpRight, Menu, X, UserRound, ChevronRight, ScanLine } from "lucide-react";
 import { previewFeatures } from "../release/features";
+import { demoAssets, demoBackend } from "../lib/backend";
 import { defaultSeries, seriesDefinitions, seriesHref, seriesIds, type Series } from "../series/registry";
 import { vehicleSeriesEnabled } from "../series/availability";
 import { OemNavigation } from "./OemNavigation";
@@ -155,6 +156,9 @@ function Site({
           </button>
         </div>
       </header>
+      {demoAssets && <p className="context-bar demo-notice">
+        Demo · Sample models and parts. {demoBackend && "Sign-in and saving require a local database."}
+      </p>}
       {!sharedSection&&<div className="context-bar">
         <VehiclePicker />
         <DocumentLink href="/resources">

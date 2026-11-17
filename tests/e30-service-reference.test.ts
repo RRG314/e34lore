@@ -4,9 +4,11 @@ import { e30FusePositions, e30FuseReference } from "../src/series/e30-quick-refe
 import { e30FuseDrawing, e34FuseDrawings, e34FuseReference } from "../src/data/fuse-panel-layouts";
 import { filterFusePositions } from "../src/data/fuse-reference";
 import { e30FactoryGuides } from "../src/series/e30-factory-guides";
+import { repairTopic } from "../src/repair/library";
 import { guideSourcePages } from "../src/domain/guide-support";
 import { workshopPartService } from "../src/servicing/workshop-service";
 import { serviceGuide } from "../src/servicing/service";
+import { specsForNode, specsForPart } from "../src/servicing/repair-specs";
 
 const coupe = { Make:"BMW", Series:"3-Series", Trim:"E30", Model:"325iS", ModelYear:"1991",
   BodyClass:"Sedan/Saloon", Doors:"2", TransmissionStyle:"Automatic", EngineModel:"4-Value" };
@@ -52,6 +54,28 @@ describe("E30 VIN and service references", () => {
     expect(guideSourcePages(oil)).toEqual([
       expect.objectContaining({pdf:22,href:"/manual/00?pdf=22"}),
     ]);
+  });
+
+  it("connects the automatic pan, catalog number and registered walkthrough", () => {
+    const [job] = specsForNode("e30","e30assembly:automatic:pan");
+    expect(job.modelReferenceId).toBe("e30-325i-coupe-automatic");
+    expect(specsForPart("e30","24 11 1 215 935")).toContain(job);
+    const service = serviceGuide(job.guide!)!;
+    expect(service.revision).toMatch(/^[a-f0-9]{24}$/);
+    expect(guideSourcePages(service.guide)).toEqual([
+      expect.objectContaining({pdf:388,href:"/manual/24?pdf=388"}),
+    ]);
+  });
+
+  it("keeps newly authored repair links on their exact E30 part and procedure", () => {
+    const [tank] = specsForPart("e30", "17 11 1 712 641");
+    expect(tank.guide).toBe("e30-expansion-tank");
+    expect(tank.specs).toContainEqual(expect.objectContaining({value:"3 Nm",item:expect.stringContaining("30 mm")}));
+    expect(repairTopic(tank.topic,"e30")?.guide).toBe(tank.guide);
+    expect(guideSourcePages(serviceGuide(tank.guide!)!.guide)).toEqual([
+      expect.objectContaining({pdf:337,href:"/manual/17?pdf=337"}),
+    ]);
+    expect(serviceGuide("e30-wiper-blades")?.guide.evidence?.[0]?.href).toMatch(/#page=60$/);
   });
 
   it("keeps the E30 tool sizes and guide pages linked from their modeled parts", () => {

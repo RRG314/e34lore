@@ -15,7 +15,7 @@ import {PartCompatibility} from '../components/PartCompatibility';
 import {CatalogProcedureLinks} from '../digital-twin/public/CatalogProcedures';
 import {referenceRelease,referencesForSeries} from '../digital-twin/public/load-reference';
 import {resolveVehicleReference,referenceCandidates} from '../vehicle/reference-context';
-import {sourceDrawingAdapter,preferredCatalogContext,orderingNotes,formatCatalogCondition,type CatalogPosition,type SourceDrawing,type CatalogAssembly} from '../domain/catalog';
+import {sourceDrawingAdapter,preferredCatalogContext,orderingNotes,formatCatalogCondition,catalogContextMatch,catalogProductionDateStatus,type CatalogPosition,type SourceDrawing,type CatalogAssembly} from '../domain/catalog';
 import {catalogOrderingRows,catalogPositionAllowed} from '../lib/catalog-integrity';
 import {useVehicleCatalog} from '../lib/use-vehicle-catalog';
 import {fetchAllRows} from '../lib/data-export';
@@ -72,6 +72,17 @@ export function ComponentWorkspace({anchor,selected,vehicle,navigation,onSelect,
  },[source,retry]);
  const records=useMemo(()=>source&&loaded?.key===source.assembly.id?loaded.positions:[],[source,loaded]);
  const position=records.find(p=>p.id===selected.positionId)||records.find(p=>p.part_id===selected.id)||source?.position;
+ const positionContext=inventory.rows.find(row=>row.id===position?.context_id);
+ const dateStatus=position&&positionContext&&['matching','partial'].includes(catalogContextMatch(positionContext,vehicle))
+   ? catalogProductionDateStatus(position.conditions,vehicle) : 'unstated';
+ const dateNote={
+   'outside':'Your production month is outside this source position’s date range.',
+   'boundary':'Your production month falls on the source’s changeover. Check the exact build date and installed part.',
+   'need-date':'Add your production month to check this source’s date range.',
+   'check':'Check the production-date restrictions in the original source.',
+   'within':'Your production month is within this source’s date range. Check the remaining restrictions.',
+   'unstated':'',
+ }[dateStatus];
  const drawing=source&&loaded?.key===source.assembly.id?loaded.drawings.find(d=>d.id===drawingId):undefined;
  const adapted=useMemo(()=>drawing?sourceDrawingAdapter(drawing,records):undefined,[drawing,records]);
  const automatic=resolveVehicleReference(vehicleReferences,vehicle).selected;
@@ -90,7 +101,7 @@ export function ComponentWorkspace({anchor,selected,vehicle,navigation,onSelect,
   {position&&<section className="selected-source-conditions" aria-label="Selected catalog restrictions"><dl><dt>Source position</dt><dd>{position.reference} · {position.source_name}</dd><dt>Required quantity</dt><dd>{position.required_quantity??'Not stated'}</dd><dt>Recorded restrictions</dt><dd>{orderingNotes(position).map(note=>note.name+': '+formatCatalogCondition(note.name,note.value)).join(' · ')||'No equipment or production restriction is recorded for this position. Check the installed hardware.'}</dd></dl></section>}
   <PartMedia number={selected.number_normalized} showApproved={false}/>
   <nav className="scan-review-nav" aria-label="Selected part sections"><a href="#scan-comparison">Compare images</a><a href="#scan-fitment">Fitment</a><a href="#scan-location">In your car</a><a href="#scan-service">Repair & tools</a></nav>
-  <div id="scan-fitment"><PartCompatibility partId={selected.id} vehicleOverride={vehicle}/></div>
+  <div id="scan-fitment">{dateNote&&<p>{dateNote}</p>}<PartCompatibility partId={selected.id} vehicleOverride={vehicle}/></div>
   <section id="scan-location"><h3>Location in your car</h3><label>Reference model<select value={reference?.id||''} onChange={e=>setReference(e.target.value)}><option value="">Choose a reference model</option>{allowedReferences.map(r=><option key={r.id} value={r.id}>{r.label}</option>)}</select></label>
   {reference?<Suspense fallback={<p role="status">Loading the interactive car…</p>}><Car key={reference.id+':'+selected.id} embedded initialVehicle={navigation.vehicle} initialScan={navigation.scan} initialPart={selected.id} initialCatalogPosition={('contextId' in reference&&reference.contextId===position?.context_id)?position?.id:undefined} initialSystem="vehicle" initialReference={reference.id} initialModelRevision={context.modelRevision?String(context.modelRevision):undefined}/></Suspense>:<p>Choose the model and transmission to show the matching interactive car.</p>}
   </section>

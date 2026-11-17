@@ -58,6 +58,8 @@ const frontFenderEnd=1.962;
 const rearQuarterEnd=-2.051;
 const hoodBack=.861, hoodNose=frontBumperX-.070, hoodHalfWidth=.716;
 const rearDeckEnd=-2.119, trunkHalfWidth=.729;
+const trunkHemHeight=.090, trunkRollRadius=.027, trunkFaceRake=.060;
+const rearPanelBottom=.551, rearPanelHalfWidth=.783;
 
 function hoodEdge(u) {
   return [interpolate(hoodBack,hoodNose-.045,u),
@@ -66,7 +68,8 @@ function hoodEdge(u) {
 }
 
 function trunkEdge(u) {
-  return [interpolate(-1.522,rearDeckEnd+.039,u),
+  const edgeRoll=.023*smooth((u-.80)/.20);
+  return [interpolate(-1.522,rearDeckEnd+.039,u)+edgeRoll,
     interpolate(.849,.819,u)+.009*Math.sin(Math.PI*u),
     interpolate(.748,trunkHalfWidth,smooth(u))];
 }
@@ -274,11 +277,25 @@ function trunkPoint(u,v) {
   return [x-.039*(1-.74*lateral*lateral-.26*lateral**6)*u**3,y+.012*(1-lateral*lateral),lateral*z];
 }
 
-const trunkHemHeight=.090;
 function trunkHem(u,v) {
   const [x,y,z]=trunkPoint(1,u);
-  const a=v*Math.PI/2;
-  return [x-.013*Math.sin(a)+.015*v**3,y-trunkHemHeight*(1-Math.cos(a)),z*(1-.005*v)];
+  const [deckX,deckY]=trunkPoint(.999,u);
+  const start=Math.atan2(deckY-y,deckX-x);
+  const end=Math.PI/2+Math.atan(trunkFaceRake);
+  const angle=interpolate(start,end,Math.min(1,2*v));
+  const rollDrop=trunkRollRadius*(Math.cos(start)-Math.cos(angle));
+  const faceDrop=Math.max(0,2*v-1)*(trunkHemHeight-rollDrop);
+  return [
+    x-trunkRollRadius*(Math.sin(angle)-Math.sin(start))+trunkFaceRake*faceDrop,
+    y-rollDrop-faceDrop,
+    z*(1-.005*v),
+  ];
+}
+
+// The 1991 coupe turns through a short radius above the near-flat badge face.
+// https://carsandbids.com/auctions/3vVZ1qQd/1991-bmw-325i-coupe
+function trunkSkin(u,v) {
+  return u<=.80?trunkPoint(u/.80,v):trunkHem(v,(u-.80)/.20);
 }
 
 // Use the same start curve as the side skin and the same end curve as the
@@ -343,21 +360,13 @@ function rearQuarterReturn(group,side) {
     return sideSkinPoint(rearQuarterEnd,y,side,rearOpening);
   };
   patch(group,paint,(u,v)=>betweenEdges(inner,outer,lower,upper,u,v),24,22);
-  // Seat the bottom edge of the quarter against the lens gasket. Once it
-  // clears the lens, the return turns forward into the side of the quarter.
+  // Bring the quarter up to the outer gasket along the lamp's curved edge.
+  const [,bottom]=rearLensPoint(side,1,0), [,top]=rearLensPoint(side,1,1);
   const endY=lower(0)[1];
   patch(group,paint,(u,v)=>{
-    const y=interpolate(.550,endY,v);
-    let edge=rearLensPoint(side,1,v);
-    for(let i=0;i<12;i++){
-      const mid=(y-edge[1])/.18;
-      v=Math.max(0,Math.min(1,v+mid));
-      edge=rearLensPoint(side,1,v);
-    }
-    const end=sideSkinPoint(rearQuarterEnd,y,side,rearOpening);
-    const outside=Math.abs(edge[2])+.0028;
-    const x=interpolate(edge[0]+.006,Math.max(end[0],edge[0]+.007),u);
-    return [x,y,side*interpolate(outside,Math.max(outside,Math.abs(end[2])),u)];
+    const y=interpolate(.548,endY,v);
+    const [x,,z]=rearLensPoint(side,1,Math.max(.003,Math.min(.997,(y-bottom)/(top-bottom))));
+    return mix([x+.0035,y,z+side*.003],sideSkinPoint(rearQuarterEnd,y,side,rearOpening),u);
   },18,29);
   // Close the narrow underside of the corner above the lens; seat it
   // behind the top gasket rather than continuing any metal into the lens.
@@ -370,21 +379,17 @@ function rearQuarterReturn(group,side) {
 function rearPanelPoint(u,v) {
   const t=2*u-1, a=Math.abs(t);
   const hem=trunkHem(u,1);
-  const z=t*interpolate(.789,trunkHalfWidth*.995,smooth((v-.66)/.34));
-  const y=interpolate(.544,hem[1]-.004,v);
-  let x=interpolate(-2.125+.047*a**4,hem[0]+.004,smooth(v));
-  if(Math.abs(z)>.315) {
-    let lo=0,hi=1;
-    for(let i=0;i<13;i++){
-      const m=(lo+hi)/2,l=rearLensPoint(1,m,v);
-      if(l[2]<Math.abs(z))lo=m;else hi=m;
-    }
-    const lensX=rearLensPoint(1,(hi+lo)/2,v)[0];
-    // The tail panel forms the recessed lamp pocket, not a skin over its
-    // amber outer section. Keep the narrow painted rail under the lens.
-    if(y>.550)x=Math.max(x,lensX+.015);
-  }
-  return [x,y,z];
+  const z=t*interpolate(rearPanelHalfWidth,trunkHalfWidth*.995,smooth((v-.66)/.34));
+  const y=interpolate(rearPanelBottom,hem[1]-.004,v);
+  const plate=interpolate(-2.125+.047*a**4,hem[0]+.004,smooth(v));
+  const lampV=Math.max(0,Math.min(1,(y-.566)/.162));
+  const [,,inboard]=rearLensPoint(1,0,lampV), [,,outboard]=rearLensPoint(1,1,lampV);
+  const lensU=Math.max(0,Math.min(1,(Math.abs(z)-inboard)/(outboard-inboard)));
+  const [lensX]=rearLensPoint(1,lensU,lampV);
+  // The painted rail is close to the lens base; inside the aperture the
+  // stamping steps forward so the lens and its gasket can seat over it.
+  const seat=lensX+.003+.007*smooth((y-.563)/.022);
+  return [interpolate(plate,seat,smooth((Math.abs(z)-.295)/.036)),y,z];
 }
 
 // On the late bumper the three black mouldings follow one swept cover.
@@ -405,7 +410,7 @@ function coverFootprint(u) {
       (-2*t**3+3*t*t)*q[i]+(t**3-t*t)*step*dq;
   });
 }
-function coverContour(t,v,layer=0) {
+function coverSurface(t,v,layer=0) {
   const a=Math.abs(t),side=t<0?-1:1;
   const [x,z]=coverFootprint(a);
   const upper=.548-.002*smooth((a-.73)/.27);
@@ -418,6 +423,46 @@ function coverContour(t,v,layer=0) {
   return [x-(crown+layer)*dz/length+.004*tip*Math.abs(2*v-1)**3,
     height,side*(z+(crown+layer)*dx/length-.004*tip)];
 }
+
+function rearBumperSeat({side, a, top}) {
+  const corner=.65;
+  const [cornerX,cornerZ]=coverFootprint(corner);
+  const [frontX]=coverFootprint(1);
+  const y=top[1]-.002;
+  const tailU=(1+side*Math.min(1,top[2]*side/cornerZ))/2;
+  const [panelX,,panelZ]=rearPanelPoint(tailU,0);
+  const tail=[panelX+.010,y,panelZ];
+  if(a<=corner)return tail;
+  const x=interpolate(rearQuarterEnd+.005,frontX,(top[0]-cornerX)/(frontX-cornerX));
+  const [,,quarterZ]=sideSkinPoint(x,rearPanelBottom,side,rearOpening);
+  return mix(tail,[x,y,quarterZ-side*.008],smooth((a-corner)/.095));
+}
+
+function coverEdges(t) {
+  const a=Math.abs(t),side=t<0?-1:1;
+  const top=coverSurface(t,1);
+  const seat=rearBumperSeat({a,side,top});
+  const dx=seat[0]-top[0], dz=seat[2]-top[2];
+  const distance=Math.hypot(dx,dz);
+  const ledge=interpolate(.041,.023,smooth((a-.32)/.30));
+  const inset=Math.max(0,1-ledge/Math.max(distance,.001));
+  return { seat, shiftX: dx*inset, shiftZ: dz*inset };
+}
+
+function coverContour(t,v,layer=0) {
+  const [x,y,z]=coverSurface(t,v,layer);
+  if(v<=.76)return [x,y,z];
+  const {shiftX,shiftZ}=coverEdges(t);
+  const blend=smooth((v-.76)/.24);
+  return [x+shiftX*blend,y,z+shiftZ*blend];
+}
+
+function rearBumperSkin(u,v) {
+  const t=2*u-1;
+  if(v<=.80)return coverContour(t,v/.80);
+  return mix(coverContour(t,1),coverEdges(t).seat,(v-.80)/.20);
+}
+
 function bumperMouldingPoint(t,v,extra=0) {
   // Align the upper and lower edges on the same cover all the way into the
   // side return. The moulding face has rounded lips and a shallow inset seam.
@@ -749,15 +794,15 @@ function frontLamp(group,z,radius) {
   }
 }
 
-function roundel(group,position,vertical) {
+function roundel(group,position,vertical,tilt=0) {
   const radius=vertical?.039:.041;
   const badge = addMesh(group,new CylinderGeometry(radius,radius,.004,48),steel,position);
   const inner = addMesh(group,new CylinderGeometry(radius*.91,radius*.91,.005,48),grille,position);
-  if(vertical) badge.rotation.z=inner.rotation.z=Math.PI/2;
+  if(vertical) badge.rotation.z=inner.rotation.z=Math.PI/2+tilt;
   const bmwBlue = color('Badge blue',0x2a75ad,.45);
   for(const i of [0,1,2,3]){
     const disc = addMesh(group,new CylinderGeometry(radius*.66,radius*.66,.006,16,1,false,i*Math.PI/2,Math.PI/2),i%2?reverse:bmwBlue,position);
-    if(vertical) disc.rotation.z=Math.PI/2;
+    if(vertical) disc.rotation.z=Math.PI/2+tilt;
   }
 }
 
@@ -849,20 +894,22 @@ export function buildE30Exterior(add) {
     roundel(g,[x,y+.002,0],false);
   },{page:'hood',paintSurface:true,cabinVisible:true});
   add('e30body:assembly','trunk','Trunk lid',[0,0,0],[-.59,1.18,0],g=>{
-    patch(g,paint,trunkPoint,52,44);
-    patch(g,paint,trunkHem,56,12);
+    patch(g,paint,trunkSkin,120,56);
     // The underside of the hem stays behind the gap and moves with the lid.
     patch(g,lining,(u,v)=>{
       const [x,y,z]=trunkHem(u,1);
       return [x+.003+.009*v,y-.001-.004*v,z*(1-.004*v)];
     },62,5);
     function trunkBadge(z,y) {
-      const u=(1+z/trunkHalfWidth)/2;
-      const depth=Math.max(0,Math.min(1,(trunkHem(u,0)[1]-y)/trunkHemHeight));
-      const v=Math.acos(1-depth)/(Math.PI/2);
-      return [trunkHem(u,v)[0]-.002,y,z];
+      const face=v=>trunkHem((1+z/(trunkHalfWidth*(1-.005*v)))/2,v);
+      let lo=0,hi=1;
+      for(let i=0;i<16;i++){
+        const mid=(lo+hi)/2;
+        if(face(mid)[1]>y)lo=mid;else hi=mid;
+      }
+      return [face((lo+hi)/2)[0]-.002,y,z];
     }
-    roundel(g,trunkBadge(0,.785),true);
+    roundel(g,trunkBadge(0,.781),true,Math.atan(trunkFaceRake));
     modelLettering(g,trunkBadge);
   },{page:'trunk_lid_closing_system',paintSurface:true,cabinVisible:true});
   add('e30body:assembly','roof','Roof skin',[0,0,0],[-.08,1.53,0],g=>{
@@ -976,7 +1023,7 @@ export function buildE30Exterior(add) {
     }
   },{page:'front_panel',paintSurface:true});
   add('e30body:assembly','rear-bumper','Rear bumper and rub strip',[0,0,0],[-1.03,-.01,0],g=>{
-    patch(g,paint,(u,v)=>coverContour(2*u-1,v),164,24);
+    patch(g,paint,rearBumperSkin,164,50);
     // OEM center moulding and two side strips are cut from the same profile.
     for(const [start,end] of [[-.994,-.682],[-.679,.679],[.682,.994]]){
       patch(g,rubber,(u,v)=>bumperMouldingPoint(interpolate(start,end,u),v),
@@ -1010,6 +1057,7 @@ export function buildE30Exterior(add) {
   },{page:'bumper_rear',paintSurface:true});
   add('e30body:assembly','tail-panel','Rear panel and license plate recess',[0,0,0],[-.93,.39,0],g=>{
     patch(g,paint,rearPanelPoint,84,30);
+    panelReturn(g,paint,u=>rearPanelPoint(u,0),.008,.017);
     rounded(g,[.010,.139,.330],grille,[-2.109,.644,0],.007);
     rounded(g,[.008,.121,.306],steel,[-2.117,.644,0],.006);
     rounded(g,[.015,.009,.142],grille,[-2.133,.728,0],.004);

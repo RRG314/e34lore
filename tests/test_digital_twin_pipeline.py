@@ -1,10 +1,14 @@
-import importlib.util,json,struct,tempfile,unittest
+import importlib.util,json,os,struct,tempfile,unittest
 from pathlib import Path
 spec=importlib.util.spec_from_file_location('twin_pipeline',Path(__file__).parents[1]/'tools/digital-twin/asset_pipeline.py')
 pipeline=importlib.util.module_from_spec(spec);spec.loader.exec_module(pipeline)
+pack = os.environ.get("E34_ASSET_PACK")
+public = Path(pack) / "public" if pack else Path("public")
+
 class PipelineTests(unittest.TestCase):
+ @unittest.skipUnless(pack, "Requires release assets")
  def test_actual_models(self):
-  root=Path(__file__).parents[1]/'public/models/e34-525i'
+  root=public/'models/e34-525i'
   for name in ['e34-body.glb','e34-wheel.glb']:
    report=pipeline.inspect_glb(root/name);self.assertGreater(report['triangles'],0);self.assertEqual(len(report['sha256']),64)
  def test_corrupt_header(self):
@@ -17,6 +21,7 @@ class PipelineTests(unittest.TestCase):
  def test_registration_missing_license(self):
   with self.assertRaisesRegex(ValueError,'Missing registration'):pipeline.validate_registration({'id':'test'})
 
+@unittest.skipUnless(pack, "Requires release assets")
 class NominalSealTests(unittest.TestCase):
  def test_all_published_seal_lods_match_registered_hashes(self):
   import hashlib
@@ -26,15 +31,15 @@ class NominalSealTests(unittest.TestCase):
    reports=[]
    for f in asset['files']:
     if f['level']=='high':continue
-    p=root/f['path'];self.assertEqual(hashlib.sha256(p.read_bytes()).hexdigest(),f['sha256']);r=pipeline.inspect_glb(p);self.assertEqual(r['triangles'],f['triangles']);self.assertIn('part:'+asset['partId'],r['namedNodes']);reports.append(r)
+    p=public/Path(f['path']).relative_to('public');self.assertEqual(hashlib.sha256(p.read_bytes()).hexdigest(),f['sha256']);r=pipeline.inspect_glb(p);self.assertEqual(r['triangles'],f['triangles']);self.assertIn('part:'+asset['partId'],r['namedNodes']);reports.append(r)
    self.assertEqual(len(reports),2);self.assertGreater(reports[0]['triangles'],reports[1]['triangles'])
  def test_nominal_bounds_are_in_meters_and_do_not_claim_factory_verification(self):
   root=Path(__file__).parents[1];manifest=json.loads((root/'data/digital-twin/nominal-seals.json').read_text())
-  seal=next(x for x in manifest['seals'] if x['partId']=='pump-seal');data=(root/'public/models/nominal-seals'/f"{seal['number']}-medium.glb").read_bytes();length=struct.unpack_from('<I',data,12)[0];doc=json.loads(data[20:20+length]);bounds=doc['accessors'][0];self.assertAlmostEqual(bounds['max'][0]*2000,78);self.assertAlmostEqual(bounds['max'][1]*2000,5);self.assertFalse(doc['nodes'][0]['extras']['installedGeometryVerified']);self.assertNotEqual(seal['accuracy']['dimensions'],'verified')
+  seal=next(x for x in manifest['seals'] if x['partId']=='pump-seal');data=(public/'models/nominal-seals'/f"{seal['number']}-medium.glb").read_bytes();length=struct.unpack_from('<I',data,12)[0];doc=json.loads(data[20:20+length]);bounds=doc['accessors'][0];self.assertAlmostEqual(bounds['max'][0]*2000,78);self.assertAlmostEqual(bounds['max'][1]*2000,5);self.assertFalse(doc['nodes'][0]['extras']['installedGeometryVerified']);self.assertNotEqual(seal['accuracy']['dimensions'],'verified')
 
  def test_both_runtime_pump_seal_meshes_match_nominal_dimensions(self):
   import math
-  root = Path(__file__).parents[1] / "public/models/nominal-seals"
+  root = public / "models/nominal-seals"
   for level in ("medium", "low"):
    with self.subTest(level=level):
     data = (root / f"11511711484-{level}.glb").read_bytes()

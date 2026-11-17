@@ -116,7 +116,8 @@ export function PartCompatibility({
     return <p role="status">Application evidence could not be loaded. <button className="text-link" onClick={() => setRetry(n => n + 1)}>Retry</button></p>;
 
   const fitments = result.fitments.filter(row => row.model_id ? seriesForModel(row.model_id) === series : series === "e34");
-  const summary = summarizeFitmentEvidence(fitments, { ...vehicle, model: vehicle.model ? modelKey(series, vehicle.model) : "" });
+  const selectedVehicle = { ...vehicle, model: vehicle.model ? modelKey(series, vehicle.model) : "" };
+  const summary = summarizeFitmentEvidence(fitments, selectedVehicle);
   const direct = result.interchanges.filter(
     (record) =>
       !record.position ||
@@ -146,7 +147,7 @@ export function PartCompatibility({
       <div className="fitment-evidence-summary">
         {summary.rows.length ? summary.rows.filter(row => row.scope !== "outside").slice(0, 3).map(row => {
           const source = result.fitments.find(item => item.id === row.id)?.source;
-          const questions = fitmentEvidenceQuestions(row, vehicle);
+          const questions = fitmentEvidenceQuestions(row, selectedVehicle);
           return <article key={row.id}>
             <dl>
               <dt>Source</dt><dd>{source?.url ? <DocumentLink href={source.url} target="_blank" rel="noopener noreferrer">{source.title} ↗</DocumentLink> : source?.title || "No source recorded"}</dd>

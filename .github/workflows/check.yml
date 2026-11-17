@@ -38,7 +38,7 @@ jobs:
       - run: npm run check
         env:
           E34_E30_BUILD: "1"
-          E34_LOCAL_BUILD: "1"
+          E34_SITE_MODE: "demo"
       - name: Verify isolated PostgreSQL policies
         shell: bash
         run: |

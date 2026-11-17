@@ -1,4 +1,4 @@
-import config from "./backend";
+import config, { demoBackend } from "./backend";
 
 let cached: Promise<Record<string, boolean>> | null = null;
 let expiresAt = 0;
@@ -6,6 +6,7 @@ let expiresAt = 0;
 // Sign-in options share one bounded lookup per tab instead of issuing the same
 // request separately for social and guest access. A failed lookup can be retried.
 export function loadAuthProviders(): Promise<Record<string, boolean>> {
+  if (demoBackend) return Promise.resolve({});
   if (!cached || Date.now() >= expiresAt) {
     expiresAt = Date.now() + 60_000;
     const controller = new AbortController();

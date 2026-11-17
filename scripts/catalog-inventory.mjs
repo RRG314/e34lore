@@ -1,9 +1,13 @@
 // Read-only inventory of the owned catalog. Uses the published browser credential.
 import fs from "node:fs";
 import { createClient } from "@supabase/supabase-js";
-const config = JSON.parse(
-  fs.readFileSync(new URL("../src/data/backend.json", import.meta.url), "utf8"),
-);
+const config = {
+  url: process.env.NEXT_PUBLIC_SUPABASE_URL,
+  publishableKey: process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY,
+};
+if (!config.url || !config.publishableKey) {
+  throw new Error("Set NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY.");
+}
 const db = createClient(config.url, config.publishableKey, {
   auth: { persistSession: false },
 });

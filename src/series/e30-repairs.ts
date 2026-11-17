@@ -1,6 +1,9 @@
 import type{ManualGuide}from'../data/manual';
 import {e30FactoryGuides} from './e30-factory-guides.ts';
+import { e30ServiceGuides } from './e30-service-guides';
 export const e30RepairJobs=[
+ {id:'e30-m20-alternator-terminals',title:'M20 alternator terminals',systems:['electrical'],engines:['M20']},
+ {id:'e30-m20-starter-terminals',title:'M20 starter terminals',systems:['electrical'],engines:['M20']},
  {id:'e30-manual-gearbox-fluid',title:'Getrag 260 manual gearbox oil',systems:['drivetrain'],engines:['M20']},
  {id:'e30-m20-spark-plugs',title:'M20 spark plug service',systems:['engine'],engines:['M20']},
  {id:'e30-m20-timing-belt',title:'M20 timing belt replacement',systems:['engine'],engines:['M20']},
@@ -53,4 +56,4 @@ export const e30CenterSupportGuide: ManualGuide = {
     { title: "Match the source before removing the shaft", body: "Check the build date and hardware, then consult the linked BMW removal and replacement pages. Plan to support the shaft and retain the relative alignment of both halves. Use the specified puller and fitting tools, the applicable preload and all tightening values from the procedure.", check: "You have the procedure, tools and applicable specifications for the installed shaft." },
   ],
 };
-e30Guides.push(e30CenterSupportGuide,...e30FactoryGuides);
+e30Guides.push(e30CenterSupportGuide,...e30FactoryGuides,...e30ServiceGuides);

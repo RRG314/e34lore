@@ -1,3 +1,5 @@
+import { siteContent } from "../scripts/site-content.mjs";
+const { publicDir } = siteContent();
 import fs from 'node:fs/promises';
 import {createHash} from 'node:crypto';
 import {basename,resolve} from 'node:path';
@@ -57,7 +59,7 @@ const catalog=model.catalog;
 const originalFiles=[{url:base.base.manifestUrl,sha256:base.base.sha256},...base.base.assets];
 if(brakeSystems){
   const published=await read('data/digital-twin/525i-service-release.json');
-  const accepted=JSON.parse(await checked('public'+published.manifestUrl,published.sha256));
+  const accepted=JSON.parse(await checked(publicDir +published.manifestUrl,published.sha256));
   originalFiles.push({url:published.manifestUrl,sha256:published.sha256},...accepted.assets);
   for(const asset of model.assets) {
     const publishedAsset=accepted.assets.find(entry=>entry.id===asset.id);
@@ -66,7 +68,7 @@ if(brakeSystems){
     await checked(sourceRoot+'/'+basename(asset.url),asset.sha256);
   }
 }
-for(const asset of originalFiles)await checked('public'+asset.url,asset.sha256);
+for(const asset of originalFiles)await checked(publicDir +asset.url,asset.sha256);
 const exclusions=new Set((await read('data/catalog-position-exclusions.json')).excludedPositions);
 
 await fs.mkdir(root,{recursive:true});
@@ -240,7 +242,7 @@ for(const {node,previous,previousBinding,options} of definitions) {
     const [assemblyId,...numbers]=options.catalog;
     const assembly=catalog.assemblies[assemblyId];
     if(!assembly)throw Error('Missing source assembly '+assemblyId);
-    if(!catalogPages.has(assemblyId))catalogPages.set(assemblyId,JSON.parse(await checked('public'+assembly.url,assembly.sha256)));
+    if(!catalogPages.has(assemblyId))catalogPages.set(assemblyId,JSON.parse(await checked(publicDir +assembly.url,assembly.sha256)));
     const rows=catalogPages.get(assemblyId).items.filter(row=>numbers.includes(row.number)&&!exclusions.has(row.id));
     for(const number of numbers)if(!rows.some(row=>row.number===number))throw Error('No ordering position for '+number);
     binding.assemblyIds=[assemblyId];

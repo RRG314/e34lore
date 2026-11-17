@@ -1,5 +1,5 @@
 import type{Vehicle}from'../data/catalog';
-export type VehicleReference={id:string;model:string;year:number;body:string;engine:string;transmission:string;contextId?:string;exteriorOnly?:boolean};
+export type VehicleReference={id:string;model:string;year:number;body:string;engine:string;transmission:string;contextId?:string;exteriorOnly?:boolean;equipment?:string};
 export function engineMatches(reference:string,selected:string){
  if(!selected)return true;const r=reference.toUpperCase(),s=selected.toUpperCase();
  if(r===s)return true;
@@ -14,7 +14,7 @@ export function referenceCandidates<T extends VehicleReference>(rows:readonly T[
 export function resolveVehicleReference<T extends VehicleReference>(rows:readonly T[],vehicle:Vehicle,explicit?:string){
  if(explicit){const selected=rows.find(r=>r.id===explicit);return {selected,candidates:selected?[selected]:[],status:selected?'explicit' as const:'missing' as const};}
  if(!vehicle.model)return{selected:rows[0],candidates:rows.slice(0,1),status:'default' as const};
- const candidates=referenceCandidates(rows,vehicle);
+ const candidates=referenceCandidates(rows,vehicle).filter(row=>!row.equipment);
  const exact=vehicle.year?candidates.filter(r=>String(r.year)===vehicle.year):[];
  const best=exact.length?exact:candidates;
  return{selected:best.length===1?best[0]:undefined,candidates:best,status:best.length===1?'matching' as const:best.length?'ambiguous' as const:'missing' as const};

@@ -1,3 +1,5 @@
+import { siteContent } from "../scripts/site-content.mjs";
+const { publicDir } = siteContent();
 /** Local component study. Accepted manifests/GLBs remain immutable. */
 import fs from 'node:fs/promises';
 import {createHash} from 'node:crypto';
@@ -16,10 +18,10 @@ try{archives=JSON.parse(await fs.readFile(root+'/releases.json','utf8'));}catch(
 const sha=bytes=>createHash('sha256').update(bytes).digest('hex');
 const read=async p=>JSON.parse(await fs.readFile(p,'utf8'));
 const accepted=await read('data/digital-twin/525i-automatic-reference.json');
-const original=await fs.readFile('public'+accepted.manifestUrl);
+const original=await fs.readFile(publicDir +accepted.manifestUrl);
 if(sha(original)!==accepted.sha256)throw Error('Accepted manifest changed');
 const model=JSON.parse(original),originalAssets=[];
-for(const asset of model.assets){const bytes=await fs.readFile('public'+asset.url);if(sha(bytes)!==asset.sha256)throw Error('Accepted asset changed');originalAssets.push({url:asset.url,sha256:asset.sha256});}
+for(const asset of model.assets){const bytes=await fs.readFile(publicDir +asset.url);if(sha(bytes)!==asset.sha256)throw Error('Accepted asset changed');originalAssets.push({url:asset.url,sha256:asset.sha256});}
 await build({stdin:{contents:"export {parseReference} from './src/digital-twin/public/model.ts'",resolveDir:process.cwd()},bundle:true,platform:'node',format:'esm',packages:'external',outfile:root+'/validation.mjs',logLevel:'silent'});
 const {parseReference}=await import(pathToFileURL(root+'/validation.mjs'));
 parseReference(model);
@@ -84,6 +86,6 @@ for(const entry of [priorReview,review].filter(Boolean)){
 const atomicJSON=async(name,value)=>{await fs.writeFile(root+'/'+name+'.tmp',JSON.stringify(value,null,2)+'\n');await fs.rename(root+'/'+name+'.tmp',root+'/'+name);};
 await atomicJSON('geometry-checks.json',checks);await atomicJSON('releases.json',archives);await atomicJSON('review.json',review);
 await fs.writeFile(root+'/release.json.tmp',JSON.stringify(release,null,2)+'\n');await fs.rename(root+'/release.json.tmp',root+'/release.json');
-if(sha(await fs.readFile('public'+accepted.manifestUrl))!==accepted.sha256)throw Error('Accepted reference mutated');
-for(const a of originalAssets)if(sha(await fs.readFile('public'+a.url))!==a.sha256)throw Error('Accepted asset mutated');
+if(sha(await fs.readFile(publicDir +accepted.manifestUrl))!==accepted.sha256)throw Error('Accepted reference mutated');
+for(const a of originalAssets)if(sha(await fs.readFile(publicDir +a.url))!==a.sha256)throw Error('Accepted asset mutated');
 console.log(JSON.stringify({revision,renderables:release.renderableCount,checkedElementMm:size,acceptedBytesUnchanged:true,assetBytes:glb.length}));

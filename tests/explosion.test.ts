@@ -1,3 +1,4 @@
+import { releasePublic } from './release-content';
 import { describe, it, expect } from 'vitest';
 import fs from 'node:fs';
 import {Vector3} from 'three';
@@ -5,7 +6,7 @@ import release from '../data/digital-twin/public-reference.json';
 import { parseReference, defaultView, members, visibleNodes } from '../src/digital-twin/public/model';
 import { offsets,installedBounds,viewBounds,referenceFrame } from '../src/digital-twin/public/layout';
 import { separationOffset } from '../src/digital-twin/public/explosion';
-const m = parseReference(JSON.parse(fs.readFileSync('public' + release.manifestUrl, 'utf8'))), n = (id: string) => m.nodes.find(n => n.id === id)!, spread = (scope: string, explosion = 4) => offsets(m, { ...defaultView(), scope, explosion });
+const m = parseReference(JSON.parse(fs.readFileSync(releasePublic + release.manifestUrl, 'utf8'))), n = (id: string) => m.nodes.find(n => n.id === id)!, spread = (scope: string, explosion = 4) => offsets(m, { ...defaultView(), scope, explosion });
 const box=(id:string,scope='vehicle')=>installedBounds(n(id)).translate(new Vector3(...spread(scope).get(id)!));
 describe('complete modeled-component separation',()=>{
  it('separates engine components individually while preserving the continuous body shell',()=>{

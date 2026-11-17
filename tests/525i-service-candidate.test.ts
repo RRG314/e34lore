@@ -1,3 +1,4 @@
+import { releasePublic } from './release-content';
 import {beforeAll,describe,expect,it} from 'vitest';
 import {execFileSync} from 'node:child_process';
 import {readFileSync} from 'node:fs';
@@ -11,13 +12,13 @@ import {findCatalogNode,catalogProcedures} from '../src/digital-twin/public/cata
 import {referenceRelease} from '../src/digital-twin/public/load-reference';
 
 const root='work/scanner-model-tests/525i-service-candidate',digest=(bytes:Uint8Array)=>createHash('sha256').update(bytes).digest('hex');
-const acceptedBefore=readFileSync('public'+accepted.manifestUrl);
+const acceptedBefore=readFileSync(releasePublic +accepted.manifestUrl);
 beforeAll(()=>{execFileSync(process.execPath,['tools/build-525i-service-candidate.mjs',root],{stdio:'pipe'});});
 describe('local 525i service-detail candidate',()=>{
  it('preserves the accepted model and every accepted GLB while binding the exact element occurrences',()=>{
-  expect(digest(readFileSync('public'+accepted.manifestUrl))).toBe(digest(acceptedBefore));
+  expect(digest(readFileSync(releasePublic +accepted.manifestUrl))).toBe(digest(acceptedBefore));
   const review=JSON.parse(readFileSync(root+'/review.json','utf8'));
-  for(const asset of review.base.assets)expect(digest(readFileSync('public'+asset.url))).toBe(asset.sha256);
+  for(const asset of review.base.assets)expect(digest(readFileSync(releasePublic +asset.url))).toBe(asset.sha256);
   const model=parseReference(JSON.parse(readFileSync(root+'/'+review.files.find((f:{type:string})=>f.type==='application/json').file,'utf8')));
   for(const number of ['13721726916','13721730918'])expect(findCatalogNode(model,'bmw-'+number)?.id).toBe('e34sys:air-filter-element');
   const binding=model.catalog!.bindings['e34sys:air-filter-element'];

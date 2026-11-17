@@ -10,6 +10,7 @@ import { configureToolEnvironment } from "./scripts/tool-environment.mjs";
 import { sites } from "./scripts/vite/sites-vite-plugin";
 import { connectorPreview } from "./scripts/vite/connector-preview-plugin.mjs";
 import { immutableAssetAliases } from "./scripts/ip/immutable-asset-aliases.mjs";
+import { siteBackend, siteContent } from "./scripts/site-content.mjs";
 
 const SITE_CREATOR_PLACEHOLDER_DATABASE_ID =
   "00000000-0000-4000-8000-000000000000";
@@ -47,43 +48,22 @@ const localBindingConfig = {
 export default defineConfig(async ({ command, mode }) => {
   configureToolEnvironment(process.cwd());
 
-  const env = loadEnv(mode, process.cwd(), ["NEXT_PUBLIC_SUPABASE_", "E34_LOCAL_BUILD"]);
-  const localBackend = process.env.E34_BUILD_REVIEW !== "1"
-    && (command === "serve" || env.E34_LOCAL_BUILD === "1");
-  const browserBackend = localBackend ? {
-    url: env.NEXT_PUBLIC_SUPABASE_URL || "http://127.0.0.1:54321",
-    publishableKey: env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY || "development-without-backend",
-  } : null;
-  if (browserBackend) {
-    const url = new URL(browserBackend.url);
-    if (!["127.0.0.1", "localhost", "[::1]"].includes(url.hostname)
-      || !["http:", "https:"].includes(url.protocol)
-      || url.username || url.password || url.pathname !== "/" || url.search || url.hash) {
-      throw new Error("The local Supabase URL must be a loopback HTTP(S) origin.");
-    }
-    const key = browserBackend.publishableKey;
-    let legacyAnon = false;
-    if (/^[\w-]+\.[\w-]+\.[\w-]+$/.test(key)) {
-      try {
-        legacyAnon = JSON.parse(Buffer.from(key.split(".")[1], "base64url").toString()).role === "anon";
-      } catch {
-        // Invalid JWTs are rejected below without logging their contents.
-      }
-    }
-    if (!legacyAnon && !/^sb_publishable_[\w-]+$/.test(key) && key !== "development-without-backend") {
-      throw new Error("Use the local Supabase publishable key or legacy anon key.");
-    }
-    browserBackend.url = url.origin;
-  }
+  const env = loadEnv(mode, process.cwd(), ["NEXT_PUBLIC_SUPABASE_", "E34_SITE_MODE"]);
+  const content = siteContent();
+  const browserBackend = siteBackend(env, content, command);
 
   // Wrangler snapshots its log path while the Cloudflare plugin is imported.
   const { cloudflare } = await import("@cloudflare/vite-plugin");
 
   return {
+    publicDir: content.publicDir,
+    cacheDir: "work/vite-cache",
     define: {
       __E34_BROWSER_BACKEND__: JSON.stringify(browserBackend),
-      __IMMUTABLE_ASSET_ALIASES__: JSON.stringify(command === "build" && process.env.E34_E30_BUILD === "1"
-        ? immutableAssetAliases("public") : {}),
+      __E34_DEMO_ASSETS__: JSON.stringify(!content.release),
+      ...(!content.release ? {"import.meta.env.E34_E30_BUILD": "true"} : {}),
+      __IMMUTABLE_ASSET_ALIASES__: JSON.stringify(command === "build" && content.release && process.env.E34_E30_BUILD === "1"
+        ? immutableAssetAliases(content.publicDir) : {}),
     },
     server: {
       fs: {
@@ -139,17 +119,17 @@ export default defineConfig(async ({ command, mode }) => {
         },
       ],
     },
-    plugins: [buildReview(command), local525iFit(command), e30ReleasePlugin(command),
-      scannerRuntimeDev(),
+    plugins: [buildReview(command), content.release && local525iFit(command), content.release && e30ReleasePlugin(command, content.publicDir),
+      scannerRuntimeDev(content.publicDir, content.release),
       vinext(),
-      sites({ mockAuth: !managedLinux }),
-      connectorPreview(),
+      sites({ mockAuth: !managedLinux && browserBackend.mode !== "demo" }),
+      browserBackend.mode !== "demo" && connectorPreview(),
       cloudflare({
         viteEnvironment: { name: "rsc", childEnvironments: ["ssr"] },
         inspectorPort: false,
         config: {
           ...localBindingConfig,
-          ...(command === "serve"
+          ...(command === "serve" && browserBackend.mode !== "demo"
             ? {
                 services: [
                   {
@@ -161,7 +141,7 @@ export default defineConfig(async ({ command, mode }) => {
               }
             : {}),
         },
-        ...(command === "serve"
+        ...(command === "serve" && browserBackend.mode !== "demo"
           ? {
               auxiliaryWorkers: [
                 {

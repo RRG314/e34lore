@@ -1,3 +1,4 @@
+import { releasePublic, catalogSnapshot } from './release-content';
 import { describe, it, expect, vi, afterEach } from 'vitest';
 import fs from 'node:fs';
 import { createHash } from 'node:crypto';
@@ -8,11 +9,11 @@ import { publicShareUrl } from '../src/domain/identity';
 import release from '../data/digital-twin/public-reference.json';
 import rules from '../data/digital-twin/component-catalog-rules.json';
 import exclusions from '../data/catalog-position-exclusions.json';
-import snapshot from '../data/catalog-snapshots/e34-context-b69b1a9062bd8352b127fef1.manifest.json';
-const m = parseReference(JSON.parse(fs.readFileSync('public' + release.manifestUrl, 'utf8'))), sha = (b: Uint8Array | string) => createHash('sha256').update(b).digest('hex');
+const snapshot: {file: string} = JSON.parse(fs.readFileSync(catalogSnapshot('e34-context-b69b1a9062bd8352b127fef1.manifest.json'), 'utf8'));
+const m = parseReference(JSON.parse(fs.readFileSync(releasePublic + release.manifestUrl, 'utf8'))), sha = (b: Uint8Array | string) => createHash('sha256').update(b).digest('hex');
 type SourcePage={source_url:string;source_sha256:string;parts:{number:string;record_hash:string;conditions:{name:string;value:string}[];quantity:number|null;package_quantity:number|null;replaced_by:string[]}[]};
-const facts: SourcePage[] = gunzipSync(fs.readFileSync('data/catalog-snapshots/' + snapshot.file)).toString().trim().split('\n').map(s => JSON.parse(s));
-const pages = new Map(Object.entries(c.assemblies).map(([id, a]) => [id, catalogPageSchema.parse(JSON.parse(fs.readFileSync('public' + a.url, 'utf8')))]));
+const facts: SourcePage[] = gunzipSync(fs.readFileSync(catalogSnapshot(snapshot.file))).toString().trim().split('\n').map(s => JSON.parse(s));
+const pages = new Map(Object.entries(c.assemblies).map(([id, a]) => [id, catalogPageSchema.parse(JSON.parse(fs.readFileSync(releasePublic + a.url, 'utf8')))]));
 const choices = (id: string) => bindingFor(id).positions.map(p => ({ ...pages.get(p.assemblyId)!.items.find(i => i.id === p.id)!, assemblyId: p.assemblyId, contextId: c.context.id }));
 afterEach(() => vi.unstubAllGlobals());
 describe('source-bound whole-car catalog', () => {
@@ -34,7 +35,7 @@ describe('source-bound whole-car catalog', () => {
             expect(c.guides[id]).toBeTruthy();
     } });
     it('ships exactly the pinned public facts, including restrictions, quantities and replacements', () => { expect(c.context.id + '.jsonl.gz').toBe(snapshot.file); expect(facts).toHaveLength(397); const source = new Map(facts.map(p => [p.source_url, p])); let count = 0; for (const [id, a] of Object.entries(c.assemblies)) {
-        const bytes = fs.readFileSync('public' + a.url), p = pages.get(id)!, f = source.get(p.sourceUrl)!;
+        const bytes = fs.readFileSync(releasePublic + a.url), p = pages.get(id)!, f = source.get(p.sourceUrl)!;
         expect(bytes.length).toBe(a.bytes);
         expect(sha(bytes)).toBe(a.sha256);
         expect(p.contextId).toBe(c.context.id);
@@ -51,7 +52,7 @@ describe('source-bound whole-car catalog', () => {
             expect(item.replacedBy).toEqual(r.replaced_by);
         }
         count += p.items.length;
-    } expect(count).toBe(10183); expect(fs.readdirSync('public/catalog/workshop/525i-sedan-1995/r2')).toHaveLength(398); });
+    } expect(count).toBe(10183); expect(fs.readdirSync((releasePublic + '/catalog/workshop/525i-sedan-1995/r2'))).toHaveLength(398); });
     it('includes radiators and exhausts in their actual functional systems, with all source pages accessible',()=>{const radiator=Object.values(c.assemblies).find(a=>a.key.endsWith('/radiator'))!;expect(c.systems['system:cooling']).toContain(radiator.id);const exhaust=Object.values(c.assemblies).find(a=>a.key.endsWith('/exhaust_system'))!;expect(c.systems['system:exhaust']).toContain(exhaust.id);expect(Object.keys(c.assemblies)).toHaveLength(397);});
     it('preserves curated identities and keeps left/right alternatives on their source side', () => { expect(choices('m50:water-pump').some(r => r.partId === 'coolant-pump')).toBe(true); expect(choices('m50:thermostat-housing').some(r => r.partId === 'thermostat-housing')).toBe(true); for (const side of ['left', 'right']) {
         const b = bindingFor('e34body:front-fender-' + side);
@@ -73,5 +74,5 @@ describe('source-bound whole-car catalog', () => {
     });
     it('requires a choice when different part numbers are listed, and refuses unrelated supplied positions', () => { const b = bindingFor('m50:thermostat'), rows = choices(b.nodeId); expect(new Set(rows.map(r => r.number)).size).toBeGreaterThan(1); expect(initialCatalogChoice(b, rows)).toBe(''); expect(initialCatalogChoice(b, rows, 'unrelated-position')).toBe(''); expect(initialCatalogChoice(b, rows, rows[1].id)).toBe(rows[1].id); expect(initialCatalogChoice(b, rows, undefined, rows[0].number)).toBe(rows[0].id); });
     it('round-trips exact catalog positions, model links, manual references and safe public sharing', () => { const b = bindingFor('m50:water-pump'), p = b.positions[0], u = new URL(catalogHref(p.assemblyId, p.id), 'https://e34lore.com'); expect(u.searchParams.get('context')).toBe(c.context.id); expect(u.searchParams.get('position')).toBe(p.id); expect(findCatalogNode(m, p.partId, p.id)?.id).toBe(b.nodeId); const related = catalogProcedures(p.partId, p.id, p.assemblyId); expect(related.nodes).toContain(b.nodeId); expect(related.manual.length).toBeGreaterThan(0); expect(related.guides).toContain('m50-water-pump-job-planning'); const shared = publicShareUrl('/workshop?node=m50%3Awater-pump&catalog_position=' + p.id + '&access_token=private'); expect(shared).toContain('catalog_position=' + p.id); expect(shared).not.toContain('access_token'); });
-    it('verifies fetched bytes and refuses altered, incomplete or cross-context catalog data', async () => { const a = Object.values(c.assemblies)[0], valid = fs.readFileSync('public' + a.url); vi.stubGlobal('fetch', vi.fn(async () => new Response(valid))); expect((await loadCatalogPage(a.id)).assemblyId).toBe(a.id); const other = Object.values(c.assemblies)[1]; vi.stubGlobal('fetch', vi.fn(async () => new Response('{}'))); await expect(loadCatalogPage(other.id)).rejects.toThrow('Incomplete'); vi.stubGlobal('fetch', vi.fn(async () => new Response(fs.readFileSync('public' + c.search.url)))); expect((await loadCatalogSearch()).length).toBeGreaterThan(8233); });
+    it('verifies fetched bytes and refuses altered, incomplete or cross-context catalog data', async () => { const a = Object.values(c.assemblies)[0], valid = fs.readFileSync(releasePublic + a.url); vi.stubGlobal('fetch', vi.fn(async () => new Response(valid))); expect((await loadCatalogPage(a.id)).assemblyId).toBe(a.id); const other = Object.values(c.assemblies)[1]; vi.stubGlobal('fetch', vi.fn(async () => new Response('{}'))); await expect(loadCatalogPage(other.id)).rejects.toThrow('Incomplete'); vi.stubGlobal('fetch', vi.fn(async () => new Response(fs.readFileSync(releasePublic + c.search.url)))); expect((await loadCatalogSearch()).length).toBeGreaterThan(8233); });
 });

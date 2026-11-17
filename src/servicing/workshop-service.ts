@@ -50,16 +50,16 @@ const e30Jobs: [RegExp,ServiceJob][] = [
   [/^e30assembly:(?:engine:oil-filter|engine:sump)/, {title:'Engine oil and filter service',guide:'e30-oil-service',manual:e30Manual('00','BMW factory manual · oil service, 00-15',22)}],
   [/^e30assembly:(?:engine-bay:airbox|engine-bay:air-filter)/, {title:'Replace the air filter',guide:'e30-air-filter',manual:e30Manual('13','BMW factory manual · air filter, 13-39',272)}],
   [/^e30assembly:engine:(?:spark-plug|ignition)/, {title:'Spark plug service',tools:['20.8 mm (13/16 in) spark-plug socket for NGK ZGR5A','Extension and torque wrench'],manual:{label:'NGK · ZGR5A wrench size and plug specifications',href:'https://www.ngkntk.com/part-finder/quad-atv/spark-plugs/bush-hog/trail-hunter-zgr5a-1/'}}],
-  [/^e30assembly:engine:timing$/, {title:'M20 timing belt replacement',manual:e30Manual('11','BMW factory manual · M20 timing belt, 11-66a',110)}],
+  [/^e30assembly:engine:timing$/, {title:'M20 timing belt replacement',guide:'e30-m20-timing-belt',manual:e30Manual('11','BMW factory manual · M20 timing belt, 11-66a',110)}],
   [/^e30assembly:engine-bay:(?:expansion-tank|radiator-hose)/, {title:'Cold cooling-system inspection',guide:'e30-cold-cooling-inspection',manual:e30Repair('e30-coolant-bleeding','BMW factory manual · filling and bleeding')}],
   [/^e30assembly:engine-bay:brake-master/, {title:'Check brake fluid level',tools:['Flashlight'],manual:e30Repair('e30-roadworthiness-check','BMW factory manual · safety checks, 00-16')}],
   [/^e30assembly:front-(?:left|right):(?:rotor|caliper|pad)/, {title:'Inspect front pads and discs',tools:brakeInspection,manual:e30Manual('34','BMW factory manual · front pads and discs, 34-4',643)}],
   [/^e30assembly:rear-(?:left|right):(?:rotor|caliper|pad)/, {title:'Inspect rear pads and discs',tools:brakeInspection,manual:e30Manual('34','BMW factory manual · rear pads and discs, 34-8',647)}],
-  [/^e30assembly:rear-(?:left|right):damper$/, {title:'Replace a rear shock absorber',tools:['Rated stands','Support jack for the trailing arm','Match sockets to the upper and lower mounts before lifting'],manual:e30Manual('33','BMW factory manual · rear shocks, 33-16',636)}],
+  [/^e30assembly:rear-(?:left|right):damper$/, {title:'Replace a rear shock absorber',tools:['Rated stands','Support jack for the trailing arm','Match sockets to the upper and lower mounts before lifting'],guide:'e30-rear-shock-absorbers',manual:e30Manual('33','BMW factory manual · rear shocks, 33-16',636)}],
   [/^e30assembly:rear-(?:left|right):spring$/, {title:'Service a rear coil spring',manual:e30Manual('33','BMW factory manual · rear springs, 33-17',637)}],
   [/^e30assembly:rear-final-drive:(?:case|rear-cover)$/, {title:'Remove or install the final drive',tools:['Rated stands','Jack to support the final drive','Sockets and torque wrench'],manual:e30Repair('e30-rear-final-drive','BMW factory manual · final drive, 33-1')}],
   [/^e30body:tail-light-/, {title:'Replace the rear bulb',guide:'e30-rear-lamp-bulb',manual:e30Manual('63','BMW factory manual · rear lamps, 63-7',1192)}],
-  [/^e30body:(?:headlamps?|headlight)-/, {title:'Service the headlight',tools:['Clean cloth','Screwdriver that fits the fitted retainer'],manual:e30HandbookPage(61,'BMW handbook · headlight replacement, p. 60')}],
+  [/^e30body:(?:headlamps?|headlight)-/, {title:'Service the sealed-beam headlight',guide:'e30-sealed-beam-headlight',tools:['Screwdriver that fits the installed retainer'],manual:e30HandbookPage(61,'BMW handbook · headlight replacement, p. 60')}],
   [/^e30assembly:engine-bay:washer-reservoir$/, {title:'Check washer level',tools:['Washer fluid','Clean funnel'],manual:e30HandbookPage(55,'BMW handbook · washer fluid tank, p. 54')}],
   [/^e30assembly:engine-bay:power-steering/, {title:'Check the steering reservoir',tools:['Flashlight','Clean lint-free cloth'],manual:e30Repair('e30-roadworthiness-check','BMW factory manual · steering inspection')}],
   [/^e30assembly:(?:engine-bay:positive-junction|luggage:battery)/, {title:'Inspect battery connections',tools:['Flashlight','Eye protection'],manual:e30HandbookPage(56,'BMW handbook · battery access, p. 55')}],
@@ -71,7 +71,7 @@ export function workshopGuide(series:Series, slug:string) {
 
 export function workshopPartService(series:Series,node:NodeIdentity,referenceId?:string):PartService | undefined {
   const {id}=node, e30=series==='e30';
-  const stockReference=e30 ? referenceId==='e30-325i-coupe-manual'
+  const stockReference=e30 ? /^e30-325i-coupe-(?:manual|automatic|rear-spoiler)$/.test(referenceId ?? '')
     : referenceId==='e34-525i-sedan-automatic'||referenceId==='e34-reconstruction-reference';
   if (/^(?:wheel:(?:front|rear)-(?:left|right)|e30assembly:(?:front|rear)-(?:left|right):wheel)$/.test(id)) {
     return {
@@ -90,7 +90,7 @@ export function workshopPartService(series:Series,node:NodeIdentity,referenceId?
       ...(stockReference ? {facts:[{label:e30?'Front blade size':'Bosch front set',
         value:e30?'500 mm each (nominal 20 in)':'3397118302 · 600 mm pair',source:boschBlades}]} : {}),
       check:'Compare both lengths and the attachment on each installed arm.',
-      jobs:[{title:'Replace the front blade',tools:bladeTools,guide:e30?undefined:'windshield-wiper-blade-replacement',
+      jobs:[{title:'Replace the front blade',tools:bladeTools,guide:e30?'e30-wiper-blades':'windshield-wiper-blade-replacement',
         manual:e30?e30HandbookPage(60,'BMW handbook · wiper blades, p. 59'):e34Manual('611','Bentley · wiper blades, 611-1',387)}],
     };
   }
