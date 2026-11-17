@@ -40,9 +40,10 @@ export function modelAssetPackage(aliases) {
       const directory = path.posix.dirname(url);
       const revision = /^\/models\/(e30|e34)-lore\/r(\d+)$/.exec(directory);
       const guidedRepairAsset = revision && Number(revision[2]) >= firstGuidedRepairGeometry[revision[1]];
-      // Compress newly packaged geometry. Already-published geometry stays
-      // readable by earlier app sessions that still have the old reader open.
-      if (guidedRepairAsset || previewDirectories.has(directory) || (pin.id.startsWith('e30-') && pin.revision >= 1177 && directory === path.posix.dirname(pin.manifestUrl))) {
+      // Keep the archived reference available within the Site package limit.
+      // The Workshop loader accepts both raw and gzip geometry at these URLs.
+      const archivedServiceAsset = /^\/models\/e34-lore\/r1021$/.test(directory);
+      if (guidedRepairAsset || archivedServiceAsset || previewDirectories.has(directory) || (pin.id.startsWith('e30-') && pin.revision >= 1177 && directory === path.posix.dirname(pin.manifestUrl))) {
         compressed.add(url);
       }
     }
