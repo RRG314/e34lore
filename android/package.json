@@ -1,7 +1,0 @@
-{
-  "name":"e34-lore-android-tooling",
-  "private":true,
-  "type":"module",
-  "scripts":{"generate":"node ../scripts/generate-android.mjs"},
-  "devDependencies":{"@bubblewrap/core":"1.27.0"}
-}

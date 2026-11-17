@@ -1,6 +1,0 @@
-{
-  "packageId": "com.e34lore.app",
-  "alias": "e34-upload",
-  "sha256": "EE:98:91:7A:76:ED:63:7E:C9:B6:B2:83:EE:56:AC:06:BD:41:D0:AD:2E:2C:01:4F:04:4E:F4:66:26:25:C4:67",
-  "purpose": "Upload certificate only. Use the Google Play app-signing certificate for Digital Asset Links."
-}

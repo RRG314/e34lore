@@ -555,7 +555,10 @@ export function GuidePage({
                 <span className="guide-step-number" aria-hidden="true">{String(i + 1).padStart(2, "0")}</span>
                 <div>
                   <h3>{s.title}</h3>
-                  {g.jobSupport?.steps[i]&&<div className="guide-step-preparation"><p><strong>Tools:</strong> {g.jobSupport.steps[i].tools.join(" · ")}</p><DocumentLink href={g.jobSupport.steps[i].source.href}>Manual {g.jobSupport.steps[i].source.printed} ↗</DocumentLink></div>}
+                  {g.jobSupport?.steps[i] && <div className="guide-step-preparation">
+                    {g.jobSupport.steps[i].tools.length > 0 && <p><strong>Tools:</strong> {g.jobSupport.steps[i].tools.join(" · ")}</p>}
+                    <DocumentLink href={g.jobSupport.steps[i].source.href}>Manual {g.jobSupport.steps[i].source.printed} ↗</DocumentLink>
+                  </div>}
                   <p>{s.body}</p>
                   <div className="completion-check">
                     <span><strong>Check:</strong> {s.check}</span>
@@ -646,7 +649,7 @@ export function GuidePage({
           {g.relatedGuides && (
             <section className="related-links" aria-label="Related walkthroughs">
               {g.relatedGuides.flatMap((id) => {
-                const related = manualGuides.find((guide) => guide.slug === id);
+                const related = (series === "e30" ? e30Guides : manualGuides).find((guide) => guide.slug === id);
                 return related ? [<DocumentLink key={id} href={"/guides/" + id}>{related.title} <ArrowRight size={17} /></DocumentLink>] : [];
               })}
             </section>

@@ -1,11 +1,12 @@
+import { releasePublic, hasReleasePack } from './release-content';
 import {describe,it,expect} from 'vitest';
 import {readFileSync} from 'node:fs';
 import variants from '../data/digital-twin/vehicle-references.json';
 import {parseReference} from '../src/digital-twin/public/model';
 import {supplementalPartLocation} from '../src/servicing/part-location';
-describe('source-backed center support assembly location',()=>{
+describe.skipIf(!hasReleasePack)('source-backed center support assembly location',()=>{
  for(const id of ['e34-540i-sedan-automatic','e34-540i-sedan-manual'])it('locates the existing mounted assembly in '+id+' without claiming exact part geometry',()=>{
-  const reference=variants.find(v=>v.id===id)!;const model=parseReference(JSON.parse(readFileSync('public'+reference.manifestUrl,'utf8')));
+  const reference=variants.find(v=>v.id===id)!;const model=parseReference(JSON.parse(readFileSync(releasePublic +reference.manifestUrl,'utf8')));
   for(const number of ['26121226657','26121225002']){
    const result=supplementalPartLocation(model,'bmw-'+number)!;
    expect(result.node.id).toMatch(/:center-bearing$/);expect(result.node.assetId).toBeTruthy();expect(result.note).toContain('Exact geometry');expect(result.source).toContain('260-7');

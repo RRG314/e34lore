@@ -2,6 +2,7 @@ import { Vector3 } from 'three';
 import { componentPlan } from './component-separation';
 import { isCabinTrimInspection, isHvacServiceScope, type ReferenceModel, type ReferenceNode, type Vec } from './model';
 import { referenceVariantOffsets } from './variant-layout';
+import { isWiringScope, wiringAsset, wiringScope } from '../../data/wiring-routes';
 export type Separation = {
     group: string;
     path: Vec[];
@@ -132,6 +133,15 @@ function e30Plan(scope: string, node: ReferenceNode) {
         : separation(node.id,offset,0,1);
 }
 export function planFor(m: ReferenceModel, scope: string, n: ReferenceNode): Separation {
+    if (n.assetId === wiringAsset && n.displayDirection) {
+        if (n.kind === 'assembly') {
+            return scope === wiringScope ? separation(n.id, n.displayDirection, .5) : stationary();
+        }
+        const branch = scope === wiringScope && n.parentId ? nodeIndex(m).get(n.parentId)?.displayDirection : undefined;
+        const sleeve = n.displayDirection;
+        return separation(n.id, branch ? [sleeve, sleeve.map((value, axis) => value + branch[axis]) as Vec] : sleeve, 0, branch ? 1 : .5);
+    }
+    if (isWiringScope(scope)) return stationary();
     if (isCabinTrimInspection(scope) && (scope!=='system:hvac' || m.nodes.some(node=>isHvacServiceScope(node.id))))
         return separation(n.id, referenceVariantOffsets(m, scope).get(n.id) ?? [0, 0, 0]);
     if (m.mechanicalExplosion) return e30Plan(scope,n);

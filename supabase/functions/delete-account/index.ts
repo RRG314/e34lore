@@ -1,7 +1,6 @@
 import { createClient } from "npm:@supabase/supabase-js@2.119.0";
 import { accountResponse, deleteAccount } from "./core.mjs";
 const allowedOrigins = [
-  "https://e34-collective.sreid1118.chatgpt.site",
   "https://e34lore.com",
   "https://www.e34lore.com",
   "http://127.0.0.1:3002",

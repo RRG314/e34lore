@@ -19,8 +19,10 @@ export function RepairSpecCard({job, compact=false, entry, component={}, navigat
   const href = (path:string) => path.startsWith('/') ? journeyHref(path,navigation) : path;
   const linkTo = (source:RepairSource) => <DocumentLink series={job.series} href={href(source.href)}>{source.label}</DocumentLink>;
   const nodeId = repairModelNode(job,component);
-  const selectedComponent = nodeId === component.nodeId ? component : {
-    ...component, nodeId, referenceId:nodeId ? seriesDefinitions[job.series].reference : undefined, modelRevision:undefined,
+  const referenceId = nodeId ? job.modelReferenceId ?? component.referenceId ?? seriesDefinitions[job.series].reference : undefined;
+  const selectedComponent = {
+    ...component, nodeId, referenceId,
+    modelRevision:referenceId === component.referenceId ? component.modelRevision : undefined,
   };
   const guide = job.guide && entry !== 'guide' && componentGuideHref(job.guide,selectedComponent,navigation);
   const interactive = previewFeatures.interactiveRepairs && entry !== 'guide' && job.id === 'm50-water-pump-job-planning';
@@ -37,7 +39,7 @@ export function RepairSpecCard({job, compact=false, entry, component={}, navigat
     {job.parts?.length ? <><h4>BMW catalog parts</h4><ul>{job.parts.map(part=>
       <li key={part.number}><DocumentLink series={job.series} href={componentHref({
         partId:'bmw-'+part.number,catalogContextId:component.catalogContextId,
-        referenceId:component.referenceId,modelRevision:component.modelRevision,
+        referenceId:selectedComponent.referenceId,modelRevision:selectedComponent.modelRevision,
         ...(component.partId==='bmw-'+part.number ? component :
           (component.nodeId && job.nodes?.test(component.nodeId) && repairModelNode(job,{partId:'bmw-'+part.number})===component.nodeId ? {nodeId:component.nodeId} : {})),
       },navigation)}>{part.name} · {formatPartNumber(part.number)}</DocumentLink>

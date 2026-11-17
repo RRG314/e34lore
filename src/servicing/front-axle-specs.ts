@@ -32,7 +32,7 @@ const thrustBush={name:'Thrust arm rubber mount',number:'31121136605',condition:
 
 export const frontAxleSpecs: readonly RepairSpecs[]=[
   {
-    id:'e30-control-arm',series:'e30',title:'Front control arm replacement',topic:'e30-front-control-arm',
+    id:'e30-control-arm',series:'e30',guide:'e30-front-control-arm',title:'Front control arm replacement',topic:'e30-front-control-arm',
     scope:scope30+' Factory steel wishbones; use the separate procedure for the 325iX or M3.',
     manual:page('31',507,'BMW · 31-6, front control arm replacement'),
     tools:['BMW 31 1 110 ball joint separator for the standard strut.','Torque wrench covering 42–85 Nm. Use the socket that fully fits each replacement nut.'],
@@ -48,7 +48,7 @@ export const frontAxleSpecs: readonly RepairSpecs[]=[
     rightModelNode:'e30assembly:front-right:control-arm',rightPartNumbers:['31121127726'],
   },
   {
-    id:'e30-control-arm-bush',series:'e30',title:'Front wishbone bushings',topic:'e30-front-control-arm-bush',
+    id:'e30-control-arm-bush',series:'e30',guide:'e30-front-control-arm-bush',title:'Front wishbone bushings',topic:'e30-front-control-arm-bush',
     scope:scope30+' Use matching left and right bushings and keep their installation marks aligned.',
     manual:page('31',510,'BMW · 31-8, wishbone bushing installation'),
     tools:['BMW 31 2 130 press fixture for the bushing and bracket; feeler gauge for the factory wear check.'],
@@ -57,7 +57,7 @@ export const frontAxleSpecs: readonly RepairSpecs[]=[
     parts:[bush30],catalog:arms30,nodes:/^e30assembly:front-(?:left|right):control-arm$/,modelNode:'e30assembly:front-left:control-arm',
   },
   {
-    id:'e30-tie-rod',series:'e30',title:'Steering tie rod and outer end',topic:'e30-tie-rod',
+    id:'e30-tie-rod',series:'e30',guide:'e30-tie-rod',title:'Steering tie rod and outer end',topic:'e30-tie-rod',
     scope:scope30+' Rack-and-pinion steering. Match the fitted lock plate and the steering damper arrangement.',
     manual:page('32',583,'BMW · 32-8, tie rod replacement'),
     tools:['BMW 32 2 070 separator for the outer joint.','BMW 32 2 100 for the standard inner joint, or 32 2 110 for the steering-damper version shown. Use pliers on the lock plate.'],
@@ -84,7 +84,7 @@ export const frontAxleSpecs: readonly RepairSpecs[]=[
     numbers:['32131132816','32131132817','32131132818','32131132819','32131132820'],
   },
   {
-    id:'e30-front-strut',series:'e30',title:'Front strut, upper mount and damper',topic:'e30-front-strut',relatedTopics:['e30-front-strut-layout'],
+    id:'e30-front-strut',series:'e30',guide:'e30-front-strut',title:'Front strut, upper mount and damper',topic:'e30-front-strut',relatedTopics:['e30-front-strut-layout'],
     scope:scope30+' Check the damper and upper mount type before applying shaft torque.',
     manual:page('31',516,'BMW · 31-11, front strut removal'),
     compare:[page('31',520,'BMW · 31-13, spring compressor and shaft counterhold'),
@@ -102,7 +102,7 @@ export const frontAxleSpecs: readonly RepairSpecs[]=[
     numbers:['31311127315','31311127316','31321135892','31301133438','31321130065'],
   },
   {
-    id:'e30-front-hub',series:'e30',title:'Front hub and wheel bearing',topic:'e30-front-wheel-bearing',
+    id:'e30-front-hub',series:'e30',guide:'e30-front-wheel-bearing',title:'Front hub and wheel bearing',topic:'e30-front-wheel-bearing',
     scope:scope30+' RWD stub axle with a hub and integral bearing. The 325iX bearing is pressed into a different assembly.',
     manual:page('31',514,'BMW · 31-10, RWD front hub removal'),
     compare:[page('31',515,'BMW · 31-10.1, installing the new hub'),toolsCatalog],
@@ -116,7 +116,7 @@ export const frontAxleSpecs: readonly RepairSpecs[]=[
     nodes:/^e30assembly:front-(?:left|right):hub$/,modelNode:'e30assembly:front-left:hub',numbers:['31211131297'],
   },
   {
-    id:'e30-front-anti-roll',series:'e30',title:'Front anti-roll bar, links and mounts',topic:'e30-front-stabilizer',
+    id:'e30-front-anti-roll',series:'e30',guide:'e30-front-stabilizer',title:'Front anti-roll bar, links and mounts',topic:'e30-front-stabilizer',
     scope:scope30+' Link mounts to the control arm; use different specs for an iX or M3 strut-mounted design.',
     manual:page('31',530,'BMW · 31-17, front anti-roll bar'),
     tools:['Counterhold wrench for the flats on the link. Measure the actual bar diameter before buying bushes.'],

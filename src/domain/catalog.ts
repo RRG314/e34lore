@@ -114,6 +114,26 @@ export function formatCatalogCondition(name: string, value: string) {
     ? value.replace(/\b((?:19|20)\d{2})(0[1-9]|1[0-2])\b/g, "$2/$1")
     : value;
 }
+
+export function catalogProductionDateStatus(conditions: CatalogPosition["conditions"], vehicle: Pick<CatalogVehicle, "year"> & { month: string }) {
+  const values = conditions.filter(row => /^production date$/i.test(row.name.trim())).map(row => row.value);
+  if (!values.length) return "unstated";
+  const month = Number(vehicle.month);
+  if (!/^\d{4}$/.test(vehicle.year) || !/^\d{1,2}$/.test(vehicle.month) || month < 1 || month > 12) return "need-date";
+  const actual = vehicle.year + String(month).padStart(2, "0");
+  const statuses = values.flatMap(value => value.split(",")).map(value => {
+    const range = value.trim().match(/^((?:19|20)\d{2}(?:0[1-9]|1[0-2]))\s*[-–]\s*((?:19|20)\d{2}(?:0[1-9]|1[0-2]))$/);
+    const boundary = value.trim().match(/^(from|till|until)\s+((?:19|20)\d{2}(?:0[1-9]|1[0-2]))$/i);
+    const from = range?.[1] || (boundary?.[1].toLowerCase() === "from" ? boundary[2] : undefined);
+    const to = range?.[2] || (boundary && boundary[1].toLowerCase() !== "from" ? boundary[2] : undefined);
+    if ((!from && !to) || (from && to && from > to)) return "check";
+    if (actual === from || actual === to) return "boundary";
+    return (from && actual < from) || (to && actual > to) ? "outside" : "within";
+  });
+  if (statuses.includes("check")) return "check";
+  if (statuses.includes("boundary")) return "boundary";
+  return statuses.every(status => status === "outside") ? "outside" : "within";
+}
 export function catalogPositionHref(position: {
   context_id: string;
   assembly_id: string;

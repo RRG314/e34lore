@@ -38,19 +38,23 @@ import {
 import { readPhotoText, LocalInference } from "./inference";
 import { prepareImage } from "./camera";
 import { seriesForModel } from "../series/registry";
+import { findSeriesCatalogParts } from "../series/catalog";
+import { catalogPositionAllowed } from "../lib/catalog-integrity";
 import { useOwnedCars } from "../vehicle/use-owned-cars";
 import { sanitizeVehicle } from "../data/catalog";
 import { ScanHistory } from "./History";
 import { journeyHref } from "../domain/repair-journey";
 import { useRepairJourney } from "../repair/use-journey";
-export type ScanMatch = { id: string; name: string; number_normalized: string; positionId?:string; assemblyId?:string; contextId?:string };
+export type ScanMatch = { id: string; name: string; number_normalized: string; positionId?:string; assemblyId?:string; contextId?:string; contextName?:string };
 type Match = ScanMatch;
 export function Scanner() {
-  const { user, vehicle, setVehicle, toast, series } = useApp(),
+  const { user, vehicle, setVehicle, toast, series, seriesEnabled } = useApp(),
     owned = useOwnedCars();
   const catalog = useVehicleCatalog();
-  const car = owned.activeId, setCar = owned.selectCar, journey = useRepairJourney();
+  const setCar = owned.selectCar, journey = useRepairJourney();
   const eligibleCars = owned.cars.filter(row => seriesForModel(row.model_id) === series);
+  const selectedCar = eligibleCars.find(row => row.id === owned.activeId);
+  const car = selectedCar?.id || "";
   const [capturePending,setCapturePending]=useState(false),[savePhotos,setSavePhotos]=useState(true),[photoConsent,setPhotoConsent]=useState<{key:string;enabled:boolean}|null>(null),[photoError,setPhotoError]=useState("");
   const [mode, setMode] = useState<ScanMode>("loose"),
 
@@ -79,8 +83,7 @@ export function Scanner() {
   const inference = useRef(new LocalInference()),
     generation = useRef(0),
     abort = useRef<AbortController | null>(null);
-  const selectedCar = owned.cars.find((c) => c.id === car),
-    effectiveVehicle = selectedCar
+  const effectiveVehicle = selectedCar
       ? sanitizeVehicle(selectedCar.configuration)
       : vehicle;
 
@@ -230,22 +233,38 @@ export function Scanner() {
     abort.current?.abort();
     const controller=new AbortController(); abort.current=controller;
     const timeout=setTimeout(()=>controller.abort(),12000);
-    let r;
-    const query=db.from("parts").select("id,name,number_normalized");
+    let matches: Match[];
     try {
-      const filtered='ending' in search?query.like("number_normalized","%"+search.ending):query.in("number_normalized",search.numbers);
-      r=await filtered.order("number_normalized").limit(24).abortSignal(controller.signal);
+      const query=db.from("parts").select("id,name,number_normalized");
+      if (seriesEnabled) {
+        // A short stamping is only a list of possible complete numbers. Use
+        // the same series lookup for each as for a fully readable marking.
+        let numbers: string[];
+        if ('ending' in search) {
+          const suffixes = await query.like("number_normalized","%"+search.ending)
+            .order("number_normalized").limit(24).abortSignal(controller.signal);
+          if (suffixes.error) throw suffixes.error;
+          numbers = (suffixes.data || []).map(row => row.number_normalized);
+        } else numbers = search.numbers;
+        matches = (await Promise.all(numbers.map(number =>
+          findSeriesCatalogParts(series, number, sourceContextId, 1, controller.signal)))).flat();
+      } else {
+        const filtered='ending' in search?query.like("number_normalized","%"+search.ending):query.in("number_normalized",search.numbers);
+        const lookup=await filtered.order("number_normalized").limit(24).abortSignal(controller.signal);
+        if (lookup.error) throw lookup.error;
+        matches=lookup.data || [];
+      }
+    }
+    catch {
+      if (expectedGeneration !== generation.current) return;
+      throw Error("Catalog lookup failed. Retry when connected; markings have not been lost.");
     }
     finally {clearTimeout(timeout);}
 
     if (expectedGeneration !== generation.current) return;
-    if (r.error)
-      throw Error(
-        "Catalog lookup failed. Retry when connected; markings have not been lost.",
-      );
-    setMatches(r.data || []);
-    track("scanner_result", "/scanner", { results: r.data?.length || 0 });
-    return (r.data||[]) as Match[];
+    setMatches(matches);
+    track("scanner_result", "/scanner", { results: matches.length });
+    return matches;
   }
   async function checkCatalogEnding(ending:string){
     const draft=photos.draft;
@@ -426,8 +445,20 @@ export function Scanner() {
       return;
     }
     const positionId=selected&&!nodeId&&!familyId?(photos.draft?.sourcePositionId||selected.positionId||''):'';
+    if (seriesEnabled && selected && !nodeId && !familyId && !positionId) {
+      const records = await findSeriesCatalogParts(series, selected.number_normalized, sourceContextId, 1, signal());
+      if (g!==generation.current) return;
+      if (!records.some(record => record.id === selected.id)) {
+        setError('This part has no catalog record in the selected series. Check the number again before saving.');
+        return;
+      }
+    }
     if(positionId){
-      const source=await db.from('part_assembly_positions').select('id').eq('id',positionId).eq('part_id',selected!.id).abortSignal(signal()).maybeSingle();
+      if (!catalogPositionAllowed(positionId)) {
+        setError('Choose an active catalog record before saving.');
+        return;
+      }
+      const source=await db.from('part_assembly_positions').select('id').eq('id',positionId).eq('part_id',selected!.id).eq('active',true).abortSignal(signal()).maybeSingle();
       if(g!==generation.current)return;
       if(source.error||!source.data){setError('That source record no longer matches this part. Select its catalog record again before saving.');return;}
     }
@@ -510,7 +541,7 @@ export function Scanner() {
             onChange={(e) => {
               const id = e.target.value;
               setCar(id);
-              const c = owned.cars.find((c) => c.id === id);
+              const c = eligibleCars.find((c) => c.id === id);
               if (c) setVehicle(sanitizeVehicle(c.configuration));
               setLastScan("");
             }}
@@ -518,7 +549,7 @@ export function Scanner() {
             <option value="">
               Selected reference vehicle · {vehicle.model || "Choose your vehicle"}
             </option>
-            {owned.cars.map((c) => (
+            {eligibleCars.map((c) => (
               <option key={c.id} value={c.id}>
                 {c.nickname}
               </option>
@@ -562,7 +593,7 @@ export function Scanner() {
           <div className="scan-actions"><button className="text-link" disabled={busy||photos.saving||!photos.ready} onClick={startNewScan}>Start new scan</button><button className="text-link" disabled={!image||capturePending||busy||!photos.ready} onClick={()=>void read()}>Read markings</button></div>
           {status&&<p className="scan-status" role="status" aria-live="polite">{status}</p>}{error&&<p className="scan-error" role="alert">{error}</p>}
           {photos.draft?.photoText&&<ScanTextResults result={photos.draft.photoText} revision={photos.draft.revision} disabled={busy||capturePending} onCheck={number=>{setText(number);void checkCatalog(number)}} onCheckEnding={ending=>void checkCatalogEnding(ending)}/>}
-          {matches.length>0&&<section className="scan-catalog-results"><h3>Choose the OEM record to review</h3>{matches.map(m=><button className="scan-match" key={m.id} disabled={busy} onClick={()=>chooseCatalogPart(m,matchesMethod)}><PartChoiceImage number={m.number_normalized}/><span className="scan-match-copy"><strong>{m.number_normalized}</strong><span>{m.name}</span></span></button>)}</section>}
+          {matches.length>0&&<section className="scan-catalog-results"><h3>Choose the OEM record to review</h3>{matches.map(m=><button className="scan-match" key={m.id} disabled={busy} onClick={()=>chooseCatalogPart(m,matchesMethod)}><PartChoiceImage number={m.number_normalized}/><span className="scan-match-copy"><strong>{m.number_normalized}</strong><span>{m.name}</span>{m.contextName&&<small>{m.contextName}</small>}</span></button>)}</section>}
           <div ref={resultsHost} className="scan-results-anchor">
 
           {(comparison||reviewedFamily||(image&&!busy)) && <FamilyResults disabled={busy||capturePending} onAddView={()=>photosHost.current?.scrollIntoView({block:'start',behavior:'smooth'})} key={photos.draft?.comparison?.ms} chosen={reviewedFamily} onFamilyChange={id=>{photos.patch({reviewedFamily:id});setPartQuery(componentFamilies.find(f=>f.id===id)?.search||'');setSelected(null);setCatalogAnchor(null);setLastScan('');}} comparison={comparison} series={series} vehicle={effectiveVehicle} navigation={{vehicle:car,scan:savedId}} onCatalogNumber={number=>{
@@ -702,9 +733,7 @@ export function Scanner() {
           </button>
           {!busy && !error && numbers.length > 0 && matches.length === 0 && (
             <p>
-              No canonical record matched {numbers.join(", ")}. Check the
-              marking; casting numbers and partial numbers may not be ordering
-              numbers.
+              No {series.toUpperCase()} catalog record matched {numbers.join(", ")}. Check the marking or search by part name.
             </p>
           )}
           {matches.map((m) => (
@@ -743,10 +772,10 @@ export function Scanner() {
           </div>
         </details></aside>
       </div>
-      <div ref={reviewHost}>{catalogAnchor&&selected&&<ScanPartReview anchor={catalogAnchor} selected={selected} vehicle={effectiveVehicle} navigation={{vehicle:car,scan:savedId}} onSelect={part=>{photos.patch({selectedPart:part,identityMethod:"catalog-comparison",confirmedSelection:null,savedScan:null});setLastScan('')}} context={{referenceId:photos.draft?.referenceId||'',sourcePositionId:photos.draft?.sourcePositionId||'',modelRevision:photos.draft?.modelRevision}} onContextChange={changeReferenceContext}/>}</div>
+      <div ref={reviewHost}>{catalogAnchor&&selected&&<ScanPartReview anchor={catalogAnchor} selected={selected} vehicle={effectiveVehicle} navigation={{vehicle:car,scan:savedId}} onSelect={part=>chooseCatalogPart(part)} context={{referenceId:photos.draft?.referenceId||'',sourcePositionId:photos.draft?.sourcePositionId||'',modelRevision:photos.draft?.modelRevision}} onContextChange={changeReferenceContext}/>}</div>
           {(comparison||selected||reviewedFamily)&&<section ref={saveHost} className="scan-garage-save"><h3>Save this part</h3><p>{selected?selected.name:reviewedFamily?componentFamilies.find(f=>f.id===reviewedFamily)?.name:'Choose a possible component above, or select its OEM record.'}</p>{(!user||user.is_anonymous)?<DocumentLink href={"/account?next="+encodeURIComponent(series === "e34" ? "/scanner" : "/"+series+"/scanner")} onClick={()=>{if(photos.draft)try{keepScanForSignIn(photos.draft,guestScope)}catch{}}}>Sign in and keep this scan ↗</DocumentLink>:<><label>Save for<select value={car} disabled={busy||owned.loading} onChange={e=>setCar(e.target.value)}><option value="">General part reference</option>{eligibleCars.map(c=><option key={c.id} value={c.id}>{c.nickname}</option>)}</select></label>{!owned.loading&&!eligibleCars.length&&<DocumentLink href="/garage">Add your car to My garage ↗</DocumentLink>}{selected&&<><label className="scan-confirm-part"><input type="checkbox" checked={confirmed} disabled={busy||capturePending} onChange={e=>photos.patch({confirmedSelection:e.target.checked?{draftId:photos.draft!.id,revision:photos.draft!.revision,partId:selected.id}:null})}/>I checked the number and this is my part.</label>{photos.photos.length>0&&<><label className="scan-photo-choice"><input type="checkbox" checked={savePhotos} disabled={busy||!!savedId} onChange={e=>setSavePhotos(e.target.checked)}/>Save my photos with this result.</label>{savePhotos&&<><label className="scan-photo-choice"><input type="checkbox" checked={sharePhotos} disabled={busy||!!savedId} onChange={e=>setPhotoConsent({key:consentKey,enabled:e.target.checked})}/>I took these photos and agree E34 Lore can use them in the parts catalog and to improve scanning.</label><p className="small muted">Optional. Shared photos are reviewed first. Keep faces, plates, VINs and addresses out.</p></>}</>}</>}
           {selected&&savePhotos&&photos.photos.length>0&&!savedId&&<ScanPhotoLabels photos={photos.photos} disabled={busy||capturePending} onLabel={photos.label}/>}
-          <label>Private notes<textarea value={notes} disabled={busy} maxLength={3000} onChange={e=>{setNotes(e.target.value);setLastScan('')}}/></label><button className="button" disabled={busy||capturePending||(!!selected&&!confirmed)||(!selected&&!reviewedFamily)||!!savedId} onClick={()=>save(undefined,selected?undefined:reviewedFamily)}>{savedId?'Saved':selected&&savePhotos?'Save result & photos':'Save result'}</button><p className="small muted">Your result and notes are private. A possible component is saved as a candidate until you identify the exact part.</p>{(photoError||(savedForCurrent&&persistedSave?.photoSave==='pending'&&photos.photos.length>0))&&<p role="status">{photoError||'Your result is saved. Finish saving its photos.'} {savedForCurrent&&<button type="button" className="text-link" disabled={busy} onClick={retrySavedPhotos}>{photoError?'Retry saving photos':'Save photos'}</button>}</p>}{savedId&&<><SavedScanPhotos observation={savedId} refresh={refresh}/><button className="button outline" type="button" disabled={busy} onClick={startNewScan}>Scan another part</button></>}{savedId&&<DocumentLink href={journeyHref('/garage?tab=scans',{vehicle:car,scan:savedId})}>Open this saved part in My garage ↗</DocumentLink>}</>}</section>}
+          <label>Private notes<textarea value={notes} disabled={busy} maxLength={3000} onChange={e=>{setNotes(e.target.value);setLastScan('')}}/></label><button className="button" disabled={busy||capturePending||(!!selected&&!confirmed)||(!selected&&!reviewedFamily)||!!savedId} onClick={()=>save(undefined,selected?undefined:reviewedFamily)}>{savedId?'Saved':selected&&savePhotos?'Save result & photos':'Save result'}</button><p className="small muted">Your result and notes are private. You can save photos after confirming the BMW part number.</p>{(photoError||(savedForCurrent&&persistedSave?.photoSave==='pending'&&photos.photos.length>0))&&<p role="status">{photoError||'Your result is saved. Finish saving its photos.'} {savedForCurrent&&<button type="button" className="text-link" disabled={busy} onClick={retrySavedPhotos}>{photoError?'Retry saving photos':'Save photos'}</button>}</p>}{savedId&&<><SavedScanPhotos observation={savedId} refresh={refresh}/><button className="button outline" type="button" disabled={busy} onClick={startNewScan}>Scan another part</button></>}{savedId&&<DocumentLink href={journeyHref('/garage?tab=scans',{vehicle:car,scan:savedId})}>Open this saved part in My garage ↗</DocumentLink>}</>}</section>}
       <ScanHistory key={userId} refreshKey={refresh} onDeleted={id => { if (id === lastScan) { setLastScan(''); history.replaceState(null, '', journeyHref(location.pathname + location.search, { vehicle: car })); } }}/>
 
     </div>

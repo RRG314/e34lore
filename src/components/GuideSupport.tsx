@@ -22,7 +22,9 @@ export function GuideSupport({guide,series,archived=false,component,navigation,s
   </div>
   <div><h3>Listed tools & supplies</h3>{guide.tools.length?<ul>{guide.tools.map(tool=><li key={tool}>{tool}</li>)}</ul>:<p>Tools are not indexed. Check the cited procedure before starting.</p>}
    <p className="small muted">Check sizes and special fixtures for the installed hardware.</p>
-   {guide.jobSupport&&<><h3>Required parts</h3><ul>{guide.jobSupport.requiredParts.map(part=><li key={part}>{part}</li>)}</ul><details><summary>Parts to inspect or match separately</summary><ul>{guide.jobSupport.conditionalParts.map(part=><li key={part}>{part}</li>)}</ul></details><h3>Stop the job if</h3><ul>{guide.jobSupport.stopConditions.map(condition=><li key={condition}>{condition}</li>)}</ul></>}
+   {!!guide.jobSupport?.requiredParts.length && <><h3>Required parts</h3><ul>{guide.jobSupport.requiredParts.map(part=><li key={part}>{part}</li>)}</ul></>}
+   {!!guide.jobSupport?.conditionalParts.length && <details><summary>Parts to inspect or match separately</summary><ul>{guide.jobSupport.conditionalParts.map(part=><li key={part}>{part}</li>)}</ul></details>}
+   {!!guide.jobSupport?.stopConditions.length && <><h3>Stop the job if</h3><ul>{guide.jobSupport.stopConditions.map(condition=><li key={condition}>{condition}</li>)}</ul></>}
    <h3>Manual references</h3><p>{guide.source.section}</p><div className="guide-page-links">{pages.map(page=>page.href?<DocumentLink key={page.pdf} href={page.href}>{page.printed}<small>PDF {page.pdf}</small></DocumentLink>:<span key={page.pdf}>PDF {page.pdf} · locator unavailable</span>)}</div>
    {!!pages.length&&<p className="small muted">Use these page numbers in your copy of the manual.</p>}
    {guide.jobSupport?.additionalSources?.map(source=><p key={source.url}><DocumentLink href={source.url} target="_blank" rel="noopener noreferrer">{source.title} ↗</DocumentLink></p>)}

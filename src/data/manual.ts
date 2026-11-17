@@ -41,7 +41,7 @@ export type ManualGuide = {
     reviewedOn: string; sourceSha256: string;
     requiredParts: string[]; conditionalParts: string[]; stopConditions: string[];
     additionalSources?: { title: string; url: string }[];
-    steps: { number: number; tools: string[]; source: { printed: string; pdf: number; href: string } }[];
+    steps: { number: number; tools: string[]; source: { printed: string; pdf?: number; href: string } }[];
   };
   steps: { title: string; body: string; check: string }[];
 };

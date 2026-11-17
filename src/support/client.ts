@@ -1,11 +1,15 @@
 "use client";
 import {db} from '../lib/supabase';
 import {withTimeout} from '../lib/account-actions';
-import backend from '../lib/backend';
+import backend, { demoBackend } from '../lib/backend';
 export class SupportRequestError extends Error { constructor(message:string,public status=0,public field=''){super(message);} }
 const actions=new Set(['ready','challenge','contact','health','reply','status','retry','attachment','purge','delivery-check','activate']);
 export async function supportRequest(action:string,payload?:unknown,options:{staff?:boolean;member?:boolean;signal?:AbortSignal;file?:boolean}={}){
  if(!actions.has(action))throw Error('Unknown support action');
+ if(demoBackend){
+  if(action==='ready')return {available:false};
+  throw new SupportRequestError('Support needs a configured backend.',503);
+ }
  let token='';if(options.staff||options.member){try{const result=await withTimeout(db.auth.getSession(),4000,'Sign-in is taking too long. Please try again.');token=result.data.session?.access_token||'';}catch(error){if(options.staff)throw error;}}
  if(options.staff&&!token)throw new SupportRequestError('Sign in with your administrator account.',401);
  const signal=options.signal?AbortSignal.any([options.signal,AbortSignal.timeout(20000)]):AbortSignal.timeout(20000);

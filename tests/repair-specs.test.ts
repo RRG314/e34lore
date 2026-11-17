@@ -8,6 +8,23 @@ import {repairModelNode,repairSpecs,specsForGuide,specsForNode,specsForPart,spec
 import {seriesHref} from '../src/series/registry';
 
 describe('linked repair specifications', () => {
+  it('keeps M20 and M50 alternator values separate and exposes the conflicting E34 source',()=>{
+    const [e30] = specsForNode('e30','e30assembly:engine:alternator');
+    const [e34] = specsForNode('e34','wiring:alternator');
+    expect(e30.specs?.map(spec=>spec.value)).toEqual(['5 Nm','13 Nm']);
+    expect(specsForNode('e30','wiring:alternator')).toContain(e30);
+    expect(e34).toEqual(specsForNode('e34','m50:alternator')[0]);
+    expect(e34.specs?.map(spec=>spec.condition)).toEqual([expect.stringContaining('Bentley lists 6 Nm'),expect.stringContaining('Bentley lists 14 Nm')]);
+  });
+  it('links the starter and E34 distribution routes to their own fasteners and sources',()=>{
+    const [starter] = specsForNode('e34','wiring:starter:sleeve');
+    const [distribution] = specsForNode('e34','wiring:battery');
+    expect(starter).toEqual(specsForNode('e34','m50:starter')[0]);
+    expect(starter.manual.href).toBe('/manual/121?pdf=168');
+    expect(starter.specs?.find(spec=>spec.value==='12 Nm')?.condition).toContain('8 Nm');
+    expect(distribution.specs?.map(spec=>spec.value)).toEqual(['20 Nm']);
+    expect(specsForPart('e30','12411726504')).toEqual(specsForNode('e30','wiring:starter'));
+  });
   it('keeps every walk-through, repair topic and indexed manual link in its own series', () => {
     for (const job of repairSpecs) {
       if (job.guide) expect((job.series==='e30' ? e30Guides : manualGuides).some(g=>g.slug===job.guide),job.id).toBe(true);

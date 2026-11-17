@@ -1,3 +1,4 @@
+import { hasReleasePack, catalogSnapshot } from './release-content';
 import { describe, it, expect } from 'vitest';
 import { readFileSync } from 'node:fs';
 import { gunzipSync } from 'node:zlib';
@@ -47,7 +48,7 @@ describe('transmission diagram browsing is separate from fitment', () => {
   });
 });
 
-describe('actual retained manual transmission source diagrams', () => {
+describe.skipIf(!hasReleasePack)('actual retained manual transmission source diagrams', () => {
   type Page = { category: string; title: string; source_url: string; parts: { number: string }[]; drawings: unknown[] };
   for (const [model, id, title] of [
     ['530i', 'e34-context-6d5a38bb69a703fc6ba90c73', 'Manual Gearbox S5D'],
@@ -55,7 +56,7 @@ describe('actual retained manual transmission source diagrams', () => {
     ['540i', 'e34-context-27e34e4ee0bc455bc6555af7', 'Manual Gearbox S6S 420G'],
   ]) {
     it(`${model} has its own source gearbox and internal diagrams with canonical numbers`, () => {
-      const pages = gunzipSync(readFileSync(new URL(`../data/catalog-snapshots/${id}.jsonl.gz`, import.meta.url))).toString().trim().split('\n').map(s => JSON.parse(s) as Page);
+      const pages = gunzipSync(readFileSync(catalogSnapshot(`${id}.jsonl.gz`))).toString().trim().split('\n').map(s => JSON.parse(s) as Page);
       const manual = pages.filter(p => p.category === 'Manual Transmission');
       expect(manual.length).toBeGreaterThanOrEqual(6);
       expect(manual.some(p => p.title === title && p.drawings.length > 0)).toBe(true);

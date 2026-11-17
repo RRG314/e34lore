@@ -1,3 +1,5 @@
+import { siteContent } from "../scripts/site-content.mjs";
+const { publicDir } = siteContent();
 /** Continue the archived service candidate without changing accepted or saved bytes. */
 import fs from 'node:fs/promises';
 import {createHash} from 'node:crypto';
@@ -21,7 +23,7 @@ const baseBytes=await fs.readFile(sourceRoot+'/'+base.release.manifestUrl.split(
 if(sha(baseBytes)!==base.release.sha256)throw Error('Service candidate changed');
 const model=JSON.parse(baseBytes),accepted=await read('data/digital-twin/525i-automatic-reference.json');
 const originals=[{url:accepted.manifestUrl,sha256:accepted.sha256},...base.base.assets];
-for(const a of originals)if(sha(await fs.readFile('public'+a.url))!==a.sha256)throw Error('Accepted source changed');
+for(const a of originals)if(sha(await fs.readFile(publicDir +a.url))!==a.sha256)throw Error('Accepted source changed');
 await build({stdin:{contents:"export {parseReference} from './src/digital-twin/public/model.ts'",resolveDir:process.cwd()},bundle:true,platform:'node',format:'esm',packages:'external',outfile:root+'/visual-validation.mjs',logLevel:'silent'});
 const {parseReference}=await import(pathToFileURL(root+'/visual-validation.mjs'));
 parseReference(model);
@@ -38,7 +40,7 @@ for(const entry of detail.entries){
  if(old)model.nodes[model.nodes.indexOf(old)]=node;else model.nodes.push(node);
  if(entry.sourceAssembly){
   const a=model.catalog.assemblies[entry.sourceAssembly];if(!a)throw Error('Unknown source assembly');
-  const data=await fs.readFile('public'+a.url);if(sha(data)!==a.sha256)throw Error('Catalog receipt changed');
+  const data=await fs.readFile(publicDir +a.url);if(sha(data)!==a.sha256)throw Error('Catalog receipt changed');
   const records=JSON.parse(data).items;
   const positions=records.filter(p=>(entry.sourceNumbers||[]).includes(p.number)).map(p=>({id:p.id,assemblyId:entry.sourceAssembly,partId:p.partId,number:p.number}));
   if((entry.sourceNumbers||[]).some(number=>!positions.some(p=>p.number===number))){
@@ -85,5 +87,5 @@ const review={schema:1,localOnly:true,base:base.base,release,files,checks,change
 const archived=archives.filter(r=>r.release.revision!==revision);archived.push(review);
 const atomic=async(name,value)=>{await fs.writeFile(root+'/'+name+'.tmp',JSON.stringify(value,null,2)+'\n');await fs.rename(root+'/'+name+'.tmp',root+'/'+name);};
 await atomic('releases.json',archived);await atomic('geometry-checks.json',checks);await atomic('review.json',review);await atomic('release.json',release);
-for(const a of originals)if(sha(await fs.readFile('public'+a.url))!==a.sha256)throw Error('Accepted source mutated');
+for(const a of originals)if(sha(await fs.readFile(publicDir +a.url))!==a.sha256)throw Error('Accepted source mutated');
 console.log(JSON.stringify({revision,replacements:changed.filter(c=>c.replacement).length,newComponents:changed.filter(c=>!c.replacement).length,renderables:release.renderableCount,additionalAssetBytes:glb.length,triangles:changed.reduce((n,c)=>n+c.triangles,0),acceptedBytesUnchanged:true}));

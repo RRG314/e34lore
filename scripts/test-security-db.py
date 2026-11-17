@@ -61,6 +61,7 @@ try:
  sql(repo/'tests/analytics-pipeline.sql')
  sql(repo/'tests/security-policies.sql')
  sql(repo/'tests/specialist-community.sql')
+ sql(repo/'tests/moderation-submissions.sql')
  sql(repo/'tests/repair-community.sql')
  sql(repo/'tests/scanner-photo-contributions.sql')
  sql(repo/'tests/vehicle-vins.sql')
