@@ -1,3 +1,4 @@
+import { assemblyProcedures, assemblyScene } from './assembly-service';
 import { boundedModelBytes } from "../../graphics/bounded-model-bytes";
 import type {BuildAppearance}from'../../build-studio/schema';
 import{appearanceRole,applyBuildMaterial}from'../../build-studio/appearance';
@@ -79,6 +80,8 @@ export class ReferenceRenderer {
     private controls: OrbitControls;
     private objects = new Map<string, T.Group>();
     private partTargets = new Map<string, T.Vector3>();
+    private serviceScaleY = new Map<string, number>();
+    private serviceRotations = new Map<string, T.Quaternion>();
     private openingMembers=new Map<string,string[]>();
     private openingParents=new Map<string,string[]>();
     private panelNodes=new Map<string,ReferenceModel['nodes'][number]>();
@@ -98,6 +101,7 @@ export class ReferenceRenderer {
     private observer: ResizeObserver;
     private environment: T.WebGLRenderTarget | null = null;
     private floor: T.Mesh;
+    private partWaypoints = new Map<string, T.Vector3>();
     private destination: {
         position: T.Vector3;
         target: T.Vector3;
@@ -417,17 +421,41 @@ export class ReferenceRenderer {
     }
     update(view: ReaderView) {
         const previous = this.view, reducedMotion=matchMedia('(prefers-reduced-motion: reduce)').matches;
-        const animate = this.loaded && previous.scope === view.scope && !view.cabin && !previous.cabin && !reducedMotion && (this.partsMoving || previous.explosion !== view.explosion);
+        const service = view.assemblyService;
+        const serviceChanged = previous.assemblyService?.id !== service?.id
+            || previous.assemblyService?.completed !== service?.completed;
+        const animate = this.loaded && previous.scope === view.scope && !view.cabin && !previous.cabin && !reducedMotion && (this.partsMoving || previous.explosion !== view.explosion || (serviceChanged && !!service));
+        if (serviceChanged || !animate) this.partWaypoints.clear();
         this.view = view;
         if (isWiringScope(view.scope)) this.loadWiring();
         const containers=view.internals?enclosingParts(this.model,view.selected):new Set<string>();
         const highlights=new Set(view.highlights);
         const highlightGhost = highlights.size>0 && view.shell==='ghost';
+        const inspectServicePart = !!service && !!view.selected;
         const cutaway = gearboxCutaway(view), engineSection=engineCutaway(view);
         this.renderer.localClippingEnabled = cutaway||engineSection;
         const visible = new Set(visibleNodes(this.model, animate && view.explosion === 0 ? {...view,explosion:previous.explosion} : view).map(n => n.id)), spread = offsets(this.model, view);
+        const assembly = service ? assemblyScene(service) : null;
+        const axisZ = new T.Vector3(0,0,1);
         for (const [id, object] of this.objects) {
             object.visible = visible.has(id);
+            const scaleY = assembly?.scaleY.get(id);
+            if (scaleY !== undefined || this.serviceScaleY.has(id)) {
+                const targetScale = scaleY ?? 1;
+                if (!animate) object.scale.y = targetScale;
+                if (scaleY !== undefined || animate) this.serviceScaleY.set(id, targetScale);
+                else this.serviceScaleY.delete(id);
+            }
+            const angle = assembly?.rotations.get(id);
+            if (angle !== undefined || this.serviceRotations.has(id)) {
+                const installed = this.closedRotations.get(id)!;
+                const orientation = angle
+                    ? new T.Quaternion().setFromAxisAngle(axisZ, T.MathUtils.degToRad(angle)).multiply(installed)
+                    : installed;
+                if (!animate) object.quaternion.copy(orientation);
+                if (angle !== undefined || animate) this.serviceRotations.set(id, orientation);
+                else this.serviceRotations.delete(id);
+            }
             const n = this.model.nodes.find(n => n.id === id)!, base = new T.Vector3(n.matrix[12], n.matrix[13], n.matrix[14]);
             const target = base.add(new T.Vector3(...spread.get(id)||[0,0,0]));
             const appearance=this.buildAppearance;
@@ -442,15 +470,40 @@ export class ReferenceRenderer {
                 if(!installedScale&&/^(?:e34body|e34sys|e34trim|e34bay|e34brake|e34chassis|e34hvac|touring|e30body|e30trim|e30hvac):|^e30assembly:(?:cabin(?:-floor)?|cockpit|front-seats|rear-seats|headlining|luggage):/.test(id))
                     target.y+=appearance.rideHeight*.045;
             }
+            if (animate && serviceChanged && service) {
+                const start = object.position;
+                const {clearanceAxis:axis,clearancePitch=0} = assemblyProcedures[service.id];
+                const axialDistance = target[axis] - start[axis];
+                const travel = target.clone().sub(start);
+                travel[axis] = 0;
+                if (Math.abs(axialDistance) > .004 && travel.lengthSq() > .004 ** 2) {
+                    if (axis === 'y') {
+                        this.partWaypoints.set(id, start.y > target.y
+                            ? new T.Vector3(start.x, target.y, start.z)
+                            : new T.Vector3(target.x, start.y, target.z));
+                    } else if (axis === 'z') {
+                        const withdrawing = Math.abs(target.z - n.matrix[14]) > Math.abs(start.z - n.matrix[14]);
+                        this.partWaypoints.set(id, withdrawing
+                            ? new T.Vector3(start.x, start.y, target.z) : new T.Vector3(target.x, target.y, start.z));
+                    } else {
+                        // Withdraw along the component axis before moving aside.
+                        const pitch = Math.tan(clearancePitch);
+                        const withdrawing = Math.abs(target.x - n.matrix[12]) > Math.abs(start.x - n.matrix[12]);
+                        this.partWaypoints.set(id, withdrawing
+                            ? new T.Vector3(target.x, start.y + axialDistance * pitch, start.z)
+                            : new T.Vector3(start.x, target.y - axialDistance * pitch, target.z));
+                    }
+                }
+            }
             this.partTargets.set(id, target);
             if (!animate) object.position.copy(target);
             object.traverse(o => { if (!(o instanceof T.Mesh))
                 return; const mats = (Array.isArray(o.material) ? o.material : [o.material]) as T.Material[]; for (const mat of mats) {
                 const source = mat.userData.source as T.Material;
-                const active = view.selected === id || highlights.has(id);
+                const active = view.selected === id || !inspectServicePart && highlights.has(id);
                 const section = cutaway&&n.gearbox?.section ? this.gearboxSectionPlanes
                     : engineSection&&n.engine==='section' ? this.engineSectionPlanes : null;
-                const ghost = !section && (highlightGhost ? !active : (
+                const ghost = !section && (inspectServicePart || highlightGhost ? !active : (
                     containers.has(id) || (this.procedureFocus&&!!view.selected&&id!==view.selected) || (view.shell === 'ghost' && isExteriorNode(n))
                     || (view.internals && /^(?:m50|m60b30|m60b40|m30b35):(?:block|cylinder-head(?::[12])?|valve-cover(?::[12])?|coil-cover(?::[12])?|oil-pan|upper-oil-pan|lower-oil-pan|lower-timing-cover|timing-cover|upper-timing-cover:[12]|intake-cover)$/.test(id))
                     || (view.internals && !isGearboxInspection(view.scope) && /^e34auto:(?:case|bellhousing|adapter-case|extension|pan-main|pan-secondary|converter)$/.test(id))
@@ -459,7 +512,7 @@ export class ReferenceRenderer {
                 mat.clippingPlanes = section;
                 mat.clipShadows = !!section;
                 const glazing = !!(view.cabin && n.cabinGlazing && source.transparent);
-                mat.opacity = glazing ? .08 : ghost && !active ? Math.min(highlightGhost ? .09 : .16, source.opacity) : source.opacity;
+                mat.opacity = glazing ? .08 : ghost && !active ? Math.min(inspectServicePart || highlightGhost ? .09 : .16, source.opacity) : source.opacity;
                 const side = glazing ? T.DoubleSide : source.side;
                 const transparent = source.transparent || ghost || glazing;
                 if (mat.side !== side || mat.transparent !== transparent) {
@@ -471,7 +524,7 @@ export class ReferenceRenderer {
                 mat.depthWrite = !(ghost || glazing) && source.depthWrite;
                 if (mat instanceof T.MeshStandardMaterial) {
                     mat.emissive.set(active ? '#bd4d28' : '#000000');
-                    mat.emissiveIntensity = highlights.has(id) ? .65 : active ? .25 : 0;
+                    mat.emissiveIntensity = active ? highlights.has(id) ? .65 : .25 : 0;
                     mat.envMapIntensity = this.coupeFinish && source.name === 'Clear auto glass' ? 1.1 : .7;
                 }
             }
@@ -483,12 +536,12 @@ export class ReferenceRenderer {
         });
         }
         this.partsMoving = animate;
-        this.openingsMoving=this.updateOpenings(0,reducedMotion||!canOpenPanels(view),!animate);
+        this.openingsMoving=this.updateOpenings(0,reducedMotion||(!canOpenPanels(view)&&!view.assemblyService),!animate);
         this.updateContactShadows();
         const selected=this.model.nodes.find(n=>n.id===view.selected),delta=selected&&spread.get(selected.id);
         this.originLine.visible=!!selected&&visible.has(selected.id)&&!!delta&&delta.some(c=>Math.abs(c)>.00001);
         if(this.originLine.visible&&selected&&delta){const origin=installedBounds(selected).getCenter(new T.Vector3());this.originLine.geometry.dispose();this.originLine.geometry=new T.BufferGeometry().setFromPoints([origin,origin.clone().add(new T.Vector3(...delta))]);this.originLine.computeLineDistances();}
-        this.floor.visible = view.explosion === 0 && !view.cabin && !this.partsMoving;
+        this.floor.visible = !view.assemblyService && view.explosion === 0 && !view.cabin && !this.partsMoving;
         this.controls.enableRotate = !view.cabin;
         this.controls.enablePan = !view.cabin;
         this.controls.enableZoom = !view.cabin;
@@ -510,7 +563,14 @@ export class ReferenceRenderer {
     fit(focus?: string|readonly string[], preset?: Viewpoint) {
         if (this.view.cabin) return;
         const directions: Partial<Record<Viewpoint,Vec>> = {overview:[1.2,.7,1.3],front:[1.8,.35,0],rear:[-1.8,.35,0],left:[0,.3,-1.8],right:[0,.3,1.8],top:[0,2,.001],underbody:[.2,-1.4,.2]};
-        const direction = preset ? new T.Vector3(...directions[preset]||[1.2,.7,1.3]).normalize() : this.camera.position.clone().sub(this.controls.target).normalize();
+        const direction = preset
+            ? new T.Vector3(...directions[preset] || [1.2,.7,1.3]).normalize()
+            : (this.destination
+                ? this.destination.position.clone().sub(this.destination.target)
+                : this.camera.position.clone().sub(this.controls.target)).normalize();
+        if (preset === 'underbody' && this.view.assemblyService) {
+            direction.fromArray(assemblyProcedures[this.view.assemblyService.id].entryView).normalize();
+        }
         if(preset==='overview'&&this.view.scope==='vehicle'&&!focus)direction.set(1,.38,1.8).normalize();
         if(preset==='overview'&&!focus){
             if(isWiringScope(this.view.scope))direction.set(.55,1.85,-1.2).normalize();
@@ -533,7 +593,9 @@ export class ReferenceRenderer {
             const cabinFloorAngle=cabinFloorAngles[this.view.scope];
             if(cabinFloorAngle)direction.set(...cabinFloorAngle).normalize();
         }
-        const fitting = focus ?? (isWiringNode(this.view.scope) ? this.view.scope : undefined);
+        const service = this.view.assemblyService;
+        const fitting = focus ?? (service ? assemblyScene(service).frame
+            : isWiringNode(this.view.scope) ? this.view.scope : undefined);
         const frame=referenceFrame(this.model,this.view,direction.toArray() as Vec,this.camera.aspect,this.camera.fov,fitting);
         if(!frame)return;
         this.destination={position:new T.Vector3(...frame.position),target:new T.Vector3(...frame.target)};this.invalidate();
@@ -546,8 +608,11 @@ export class ReferenceRenderer {
         if (!width || !height) return;
         this.renderer.setSize(width, height, false);
         this.controls.rotateSpeed = T.MathUtils.clamp(height / width, .25, .85);
-        this.camera.aspect = width / height;
+        const aspect = width / height;
+        const needsServiceFit = this.view.assemblyService && this.loaded && this.camera.aspect !== aspect;
+        this.camera.aspect = aspect;
         this.camera.updateProjectionMatrix();
+        if (needsServiceFit) this.fit(this.view.selected ?? undefined);
         this.invalidate();
     }
     private bindInput() {
@@ -595,7 +660,7 @@ export class ReferenceRenderer {
         }
     }
     private updateOpenings(dt:number,immediate=false,applyPositions=true) {
-        const active=canOpenPanels(this.view), open=this.view.openPanels??[];
+        const active=canOpenPanels(this.view)||!!this.view.assemblyService, open=this.view.openPanels??[];
         let moving=false;
         const axis = new T.Vector3(), pivot = new T.Vector3(), shift = new T.Vector3();
         const rotations = new Map<string, T.Quaternion>();
@@ -656,15 +721,35 @@ export class ReferenceRenderer {
             let unsettled = false;
             const fraction = 1 - Math.exp(-dt / .055);
             for (const [id, object] of this.objects) {
-                const target = this.partTargets.get(id); if (!target) continue;
+                const waypoint = this.partWaypoints.get(id);
+                const target = waypoint ?? this.partTargets.get(id);
+                if (!target) continue;
+                const scaleY = this.serviceScaleY.get(id);
+                if (scaleY !== undefined) {
+                    object.scale.y = T.MathUtils.lerp(object.scale.y, scaleY, fraction);
+                    if (Math.abs(object.scale.y - scaleY) > .0001) unsettled = true;
+                    else object.scale.y = scaleY;
+                }
+                const rotation = this.serviceRotations.get(id);
+                if (rotation) {
+                    object.quaternion.slerp(rotation, fraction);
+                    if (object.quaternion.angleTo(rotation) > .001) unsettled = true;
+                    else object.quaternion.copy(rotation);
+                }
                 object.position.lerp(target, fraction);
                 if (object.position.distanceToSquared(target) > 1e-8) unsettled = true;
-                else object.position.copy(target);
+                else {
+                    object.position.copy(target);
+                    if (waypoint) {
+                        this.partWaypoints.delete(id);
+                        unsettled = true;
+                    }
+                }
             }
             if (!unsettled) { const visible = new Set(visibleNodes(this.model,this.view).map(n=>n.id)); for (const [id,object] of this.objects) object.visible = visible.has(id); }
             this.partsMoving = unsettled;
             if (!unsettled) this.updateContactShadows();
-            this.floor.visible = !unsettled && this.view.explosion === 0 && !this.view.cabin;
+            this.floor.visible = !this.view.assemblyService && !unsettled && this.view.explosion === 0 && !this.view.cabin;
             moving ||= unsettled;
         }
         if(this.openingsMoving&&!this.partsMoving) {
@@ -729,7 +814,12 @@ export class ReferenceRenderer {
         d.renderedParts = String([...this.objects.values()].filter(o => o.visible).length);
         d.renderFrames = String(Number(d.renderFrames || 0) + 1);
         const samples = new Set(['wheel:front-left','wheel:rear-right','e34body:front-door-left','e34body:front-door-right','e34body:rear-door-left','e34body:rear-door-right','e30body:door-left','e30body:door-right','e30body:hood','e30body:trunk','e30body:front-fender-left','e30body:front-fender-right','e30body:rear-quarter-left','e30body:rear-quarter-right','e30body:roof','e30body:front-bumper','e30body:rear-bumper','m50:block','m50:cylinder-head','m50:piston:1','m50:water-pump']);
-        d.sampledPartPositions = JSON.stringify([...this.objects.entries()].filter(([id, o]) => o.visible && samples.has(id)).map(([id, o]) => ({ id, position: o.position.toArray().map(n => +n.toFixed(6)) })));
+        if (this.view.assemblyService) {
+            for (const id of assemblyScene(this.view.assemblyService).parts) samples.add(id);
+        }
+        d.sampledPartPositions = JSON.stringify([...this.objects.entries()].filter(([id, o]) => o.visible && samples.has(id)).map(([id, o]) => ({ id, position: o.position.toArray().map(n => +n.toFixed(6)),
+            ...(this.serviceRotations.has(id) && {rotation:o.quaternion.toArray().map(n => +n.toFixed(6))}),
+            ...(this.serviceScaleY.has(id) && {scaleY:+o.scale.y.toFixed(4)}) })));
         if (moving)
             this.invalidate();
     };

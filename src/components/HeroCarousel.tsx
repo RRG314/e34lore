@@ -28,7 +28,7 @@ export function HeroCarousel() {
     const photoReference = photo && (series === 'e34'
         ? vehicleReferences.find(reference => reference.model === photo.model && reference.body === photo.bodyStyle)?.id
         : photo.id === 'e30-325i-coupe' ? seriesDefinitions.e30.reference : null);
-    const photoLink = photoReference ? '/workshop?reference=' + encodeURIComponent(photoReference)
+    const photoLink = photoReference ? '/workshop?mode=explore&reference=' + encodeURIComponent(photoReference)
         : photo ? '/models/' + encodeURIComponent(photo.model) : '/workshop';
 
     useEffect(() => {
@@ -115,8 +115,8 @@ export function HeroCarousel() {
                 ) : (
                     <>
                         <p><strong>{label} · Interactive reference</strong><br/>Rotate, zoom and explore the assembled car.</p>
-                        <DocumentLink className="hero-workshop-link" href="/workshop">
-                            Open the full workshop <ArrowUpRight size={15}/>
+                        <DocumentLink className="hero-workshop-link" href="/workshop?mode=explore">
+                            Explore the full car <ArrowUpRight size={15}/>
                         </DocumentLink>
                     </>
                 )}

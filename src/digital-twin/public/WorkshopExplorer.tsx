@@ -6,7 +6,8 @@ import {useApp}from'../../components/context';
 import {resolveVehicleReference}from'../../vehicle/reference-context';
 import {referencesForSeries,referenceRelease} from './load-reference';
 import { VehicleReferenceSelector } from './VehicleReferenceSelector';
-import { Box, BookOpen } from 'lucide-react';
+import { BookOpen } from 'lucide-react';
+import { journeyHref } from '../../domain/repair-journey';
 const Build=lazy(()=>import('../../build-studio/BuildStudio').then(m=>({default:m.BuildStudio})));
 const Catalog = lazy(() => import('../../components/CatalogBrowser').then(m => ({ default: m.CatalogBrowser })));
 const Model = lazy(() => import('./ReferenceWorkshop').then(m => ({ default: m.ReferenceWorkshop })));
@@ -27,19 +28,31 @@ export function WorkshopExplorer({ diagrams,buildMode,buildProject,workshopMode,
       <Suspense fallback={<p role="status">Loading the 3D view…</p>}><Model {...modelProps} embedded/></Suspense> :
       <p>Choose an available 3D reference from the car model list.</p>}
   </section>;
-  const diagramQuery=new URLSearchParams({tab:'diagrams',...(modelProps.initialReference?{reference:modelProps.initialReference}:{}),...(reference&&'contextId' in reference&&reference.contextId?{context:reference.contextId,transmission:reference.transmission.toLowerCase()}:{} )});
-  if (modelProps.repairMode) return <Model {...modelProps}/>;
-  const controls=<nav className="reference-mode-controls" aria-label="Workshop reference view">
-    {!buildProject&&<VehicleReferenceSelector reference={modelProps.initialReference} revision={modelProps.initialModelRevision} unselected={!chosen}/> }
-    <DocumentLink href={'/workshop?'+new URLSearchParams({...(effectiveReference?{reference:effectiveReference}:{} )}).toString()} aria-current={!buildMode&&workshopMode!=='repair'?'page':undefined}>Explore</DocumentLink>
-    <DocumentLink href={'/workshop?'+new URLSearchParams({mode:'repair',...(effectiveReference?{reference:effectiveReference}:{})}).toString()} aria-current={workshopMode==='repair'?'page':undefined}>Repair</DocumentLink>
-    <DocumentLink href={'/workshop?'+new URLSearchParams({mode:'build',...(effectiveReference?{reference:effectiveReference}:{})}).toString()} aria-current={buildMode?'page':undefined}>Build</DocumentLink>
-    <DocumentLink href={modelProps.initialReference?"/workshop?reference="+encodeURIComponent(modelProps.initialReference):"/workshop"} aria-current={!diagrams?'page':undefined}><Box size={15}/><span>Interactive car</span></DocumentLink>
-    <DocumentLink href={"/workshop?"+diagramQuery.toString()} aria-current={diagrams?'page':undefined}><BookOpen size={15}/><span>Catalog diagrams</span></DocumentLink>
+  const repair = !diagrams && !buildMode && !modelProps.repairMode && !modelProps.repairTask &&
+    (workshopMode === 'repair' || !workshopMode && !modelProps.initialPart && !modelProps.initialNode &&
+      !modelProps.initialSystem && !modelProps.initialCatalogPosition && !modelProps.initialModelRevision);
+  const mode=diagrams?'diagrams':buildMode?'build':repair||modelProps.repairMode||modelProps.repairTask?'repair':'explore';
+  const navigation={vehicle:modelProps.initialVehicle,scan:modelProps.initialScan};
+  const base={...(effectiveReference?{reference:effectiveReference}:{}),
+    ...(modelProps.initialModelRevision?{model_revision:modelProps.initialModelRevision}:{})};
+  const link=(params:Record<string,string>)=>journeyHref('/workshop?'+new URLSearchParams({...base,...params}).toString(),navigation);
+  const diagramQuery={tab:'diagrams',...(reference&&'contextId' in reference&&reference.contextId
+    ?{context:reference.contextId,transmission:reference.transmission.toLowerCase()}:{} )};
+  const controls=<nav className="reference-mode-controls" aria-label="Workshop">
+    {!buildProject&&<VehicleReferenceSelector reference={modelProps.initialReference} revision={modelProps.initialModelRevision} unselected={!chosen} mode={mode}/> }
+    <DocumentLink href={link({mode:'repair'})} aria-current={mode==='repair'?'page':undefined}>Repair</DocumentLink>
+    <DocumentLink href={link({mode:'explore'})} aria-current={mode==='explore'?'page':undefined}>Explore</DocumentLink>
+    <DocumentLink href={link(diagramQuery)} aria-current={mode==='diagrams'?'page':undefined}><BookOpen size={15}/>Catalog diagrams</DocumentLink>
+    <DocumentLink href={link({mode:'build'})} aria-current={mode==='build'?'page':undefined}>Build</DocumentLink>
   </nav>;
   if(buildMode)return <Suspense fallback={<p className="page" role="status">Loading Build Studio…</p>}><Build project={buildProject} reference={effectiveReference} controls={controls}/></Suspense>;
-  if((!vehicleReady||!chosen)&&!diagrams)return <section className="page reference-choice"><h1>Explore your {series.toUpperCase()}</h1>{controls}<p>{!vehicleReady?'Loading your vehicle selection…':resolution.status==='ambiguous'?'Choose a body and transmission reference. More than one illustrated model matches your selection.':'An assembled 3D reference for this configuration is not available yet. Browse its catalog diagrams, or explicitly choose another reference above.'}</p></section>;
+  if(!modelProps.repairMode&&(!vehicleReady||!chosen)&&!diagrams)return <section className="page reference-choice">
+    <h1>{repair?'Repair':'Explore'} your {series.toUpperCase()}</h1>{controls}
+    <p>{!vehicleReady?'Loading your vehicle selection…':resolution.status==='ambiguous'?'Choose a body and transmission reference. More than one illustrated model matches your selection.':'Choose an available 3D reference or open the repair guides for this car.'}</p>
+    {vehicleReady&&repair&&<DocumentLink href="/repairs">Browse repair guides</DocumentLink>}
+  </section>;
   return <Suspense fallback={<p className="page" role="status">Loading workshop references…</p>}>
-    {workshopMode==='repair'?<section className="page workshop-repair-mode"><h1>Repair references</h1><p>Inspect the same car reference, then use a procedure matched to your installed hardware.</p><Model {...modelProps} embedded referenceControls={controls}/><DocumentLink className="button primary" href="/repairs">Find repair walkthroughs ↗</DocumentLink><DocumentLink className="button outline" href="/manual">Open service manual ↗</DocumentLink></section>:diagrams ? <Catalog presentation="workshop" initialPart={modelProps.initialPart} workshopControls={controls}/> : <Model {...modelProps} referenceControls={controls}/>}
+    {diagrams ? <Catalog presentation="workshop" initialPart={modelProps.initialPart} workshopControls={controls}/>
+      : <Model {...modelProps} guidedRepair={repair} referenceControls={controls}/>}
   </Suspense>;
 }
