@@ -4,6 +4,8 @@ import {createHash} from 'node:crypto';
 
 const pinFile = 'data/digital-twin/e30-candidate.json';
 const variantsFile = 'data/digital-twin/e30-vehicle-references.json';
+const previewRoot = 'work/e30/getrag-service';
+const previewFile = previewRoot + '/review.json';
 const referenceModule = '\0e30-release-reference';
 
 export function e30ReleaseEnabled() {
@@ -48,22 +50,51 @@ export function e30ReleasePlugin(command, assetRoot) {
     readChecked(assetRoot, asset,/^\/models\/e30-lore\/r\d+\/[a-f0-9]{64}\.glb$/);
     checked.add(key);
   }
+  const receipt = localDevelopment && fs.existsSync(previewFile)
+    ? JSON.parse(fs.readFileSync(previewFile,'utf8')) : null;
+  const {archives = [], ...candidate} = receipt ?? {};
+  const review = receipt && candidate.revision > release.revision ? candidate : null;
+  const reviewFiles = new Map();
+  for (const pin of review ? [review,...archives.filter(pin=>pin.revision>release.revision)] : []) {
+    if (pin.id !== release.id || pin.revision <= release.revision) throw Error('Invalid local E30 reference');
+    const model = releaseManifest(previewRoot, pin);
+    reviewFiles.set(pin.manifestUrl,{url:pin.manifestUrl,sha256:pin.sha256});
+    for (const asset of model.assets) {
+      const key = JSON.stringify([asset.url,asset.sha256,asset.bytes]);
+      if (checked.has(key)) continue;
+      readChecked(previewRoot, asset,/^\/models\/e30-lore\/r\d+\/[a-f0-9]{64}\.glb$/);
+      checked.add(key);
+      reviewFiles.set(asset.url,asset);
+    }
+  }
   return {
     name:'e34-e30-release',
     enforce:'pre',
     config:()=>({define:{'import.meta.env.E34_E30_BUILD':'true'}}),
     configureServer(server) {
-      const inputs = [pinFile,variantsFile].map(file=>path.resolve(file));
+      const inputs = [pinFile,variantsFile,previewFile].map(file=>path.resolve(file));
       server.watcher.add(inputs);
       server.watcher.on('change', file => {
         if (inputs.includes(path.resolve(file))) void server.restart();
+      });
+      server.middlewares.use((req,res,next)=>{
+        const asset = reviewFiles.get(new URL(req.url || '/', 'http://localhost').pathname);
+        if (!asset) return next();
+        if (!['GET','HEAD'].includes(req.method)) { res.writeHead(405).end(); return; }
+        try {
+          const bytes = readChecked(previewRoot,asset,
+            /^\/models\/e30-lore\/r\d+\/(?:manifest\.)?[a-f0-9]{64}\.(?:json|glb)$/);
+          res.writeHead(200,{'Content-Type':asset.url.endsWith('.json')?'application/json':'model/gltf-binary',
+            'Cache-Control':'no-store','X-Content-Type-Options':'nosniff'});
+          res.end(req.method === 'HEAD' ? undefined : bytes);
+        } catch { res.writeHead(404).end(); }
       });
     },
     resolveId(id,importer) {
       if (importer && id.endsWith('/local-e30-reference')) return referenceModule;
     },
     load(id) {
-      if (id === referenceModule) return 'export default '+JSON.stringify(release)+'; export const localE30Variants = '+JSON.stringify(variants)+'; export const localE30Archives = [];';
+      if (id === referenceModule) return 'export default '+JSON.stringify(review || release)+'; export const localE30Variants = '+JSON.stringify(variants)+'; export const localE30Archives = '+JSON.stringify(review ? [release,...archives.filter(pin=>pin.revision>release.revision)] : [])+';';
     },
   };
 }
