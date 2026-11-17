@@ -6,6 +6,9 @@ import { gunzipSync, gzipSync } from 'node:zlib';
 const registry = 'data/digital-twin/';
 const current = ['public-reference', 'vehicle-references', '525i-service-release', 'e30-candidate','e30-vehicle-references'];
 const previous = ['workshop-panel-archives', 'reference-archives', '525i-automatic-reference'];
+// Earlier readers may still be using an older manifest. Compress only new
+// service meshes and previously compressed paths.
+const firstGuidedRepairGeometry = {e30:1191,e34:1047};
 const manifestPath = /^\/models\/(?:e34|e30)-lore\/r\d+\/manifest\.[a-f0-9]{64}\.json$/;
 
 function modelPins() {
@@ -35,9 +38,12 @@ export function modelAssetPackage(aliases) {
       const url = aliases[asset.url] ?? asset.url;
       kept.add(url);
       const directory = path.posix.dirname(url);
-      // Compress newly packaged geometry. Already-published geometry stays
-      // readable by earlier app sessions that still have the old reader open.
-      if (previewDirectories.has(directory) || (pin.id.startsWith('e30-') && pin.revision >= 1177 && directory === path.posix.dirname(pin.manifestUrl))) {
+      const revision = /^\/models\/(e30|e34)-lore\/r(\d+)$/.exec(directory);
+      const guidedRepairAsset = revision && Number(revision[2]) >= firstGuidedRepairGeometry[revision[1]];
+      // Keep the archived reference available within the Site package limit.
+      // The Workshop loader accepts both raw and gzip geometry at these URLs.
+      const archivedServiceAsset = /^\/models\/e34-lore\/r1021$/.test(directory);
+      if (guidedRepairAsset || archivedServiceAsset || previewDirectories.has(directory) || (pin.id.startsWith('e30-') && pin.revision >= 1177 && directory === path.posix.dirname(pin.manifestUrl))) {
         compressed.add(url);
       }
     }

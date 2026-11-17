@@ -48,7 +48,7 @@ export const repairPlan = {
       title: "Remove fan and shroud",
       step: 1,
       requires: ["cold-drain"],
-      nodes: ["e34sys:engine-cooling-fan", "e34sys:fan-shroud"],
+      nodes: ["e34sys:engine-cooling-fan", "e34sys:fan-coupling", "e34sys:fan-shroud"],
       action: "remove",
       instruction:
         "Use the source-specific holding method and fan/shroud procedure. The fan-clutch attachment has a left-hand thread. Do not treat this visual separation as a clearance-verified removal path.",
@@ -210,7 +210,7 @@ export const repairPlan = {
       title: "Restore hoses, fan and shroud",
       step: 4,
       requires: ["restore-belt"],
-      nodes: ["e34sys:engine-cooling-fan", "e34sys:fan-shroud"],
+      nodes: ["e34sys:engine-cooling-fan", "e34sys:fan-coupling", "e34sys:fan-shroud"],
       action: "install",
       instruction:
         "Restore the documented hoses, fan and shroud. Check connections, routing and clearance.",

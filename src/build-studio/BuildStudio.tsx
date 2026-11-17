@@ -194,7 +194,7 @@ function ProjectEditor({ user, id }: { user: string; id: string }) {
     <>
       <nav className="reference-mode-controls" aria-label="Workshop modes">
         <DocumentLink
-          href={"/workshop?reference=" + encodeURIComponent(state.reference.id)}
+          href={"/workshop?mode=explore&reference=" + encodeURIComponent(state.reference.id)}
         >
           Explore
         </DocumentLink>

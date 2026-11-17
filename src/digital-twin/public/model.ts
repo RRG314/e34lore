@@ -1,3 +1,4 @@
+import { assemblyScene, type AssemblyProgress } from './assembly-service';
 import {companionIds} from './explosion';
 import { z } from 'zod';
 import {catalogIndexSchema} from './catalog';
@@ -46,6 +47,7 @@ export type ReaderView = {
     internals: boolean;
     cabin: 'driver' | 'rear' | null;
     openPanels?: string[];
+    assemblyService?: AssemblyProgress;
     highlights?: readonly string[];
     highlightViewpoint?: Viewpoint;
 };
@@ -62,7 +64,7 @@ export function toggleOpening(model:ReferenceModel,view:ReaderView,id:string):Re
         : [...new Set([...open,...(panel.requires?[panel.requires]:[]),id])]};
 }
 export function gearboxCutaway(view: ReaderView) {
-    return isGearboxInspection(view.scope) && view.internals && view.explosion === 0;
+    return !view.assemblyService && isGearboxInspection(view.scope) && view.internals && view.explosion === 0;
 }
 export function engineCutaway(view:ReaderView) {
     return isEngineInspection(view.scope) && view.internals && view.explosion === 0;
@@ -96,6 +98,10 @@ function visibleInCabin(model:ReferenceModel,node:ReferenceNode) {
 }
 export function visibleNodes(m: ReferenceModel, v: ReaderView) { const scope = members(m, v.scope), hidden = new Set(v.hidden.flatMap(id => [...members(m, id)])), focusedComponent=!!m.nodes.find(s=>s.id===v.scope)?.assetId,
     section=engineCutaway(v), sectionGearbox=gearboxCutaway(v), exposedTrim=v.scope===bodyTrimScope&&v.internals&&!v.explosion;
+    if (v.assemblyService) {
+        const { parts } = assemblyScene(v.assemblyService);
+        return m.nodes.filter(node => node.assetId && parts.has(node.id));
+    }
     if(isWiringScope(v.scope)) {
         return m.nodes.filter(n=>n.assetId && !hidden.has(n.id) &&
             (n.assetId===wiringAsset ? scope.has(n.id) : v.shell==='ghost' && isExteriorNode(n)));

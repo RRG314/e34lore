@@ -1,10 +1,10 @@
 import {ExtrudeGeometry, Mesh, MeshStandardMaterial, Path, Shape} from 'three';
 import {black, brass, rubber, steel, xAxis, yAxis, zAxis, block, cylinder, ring, rod, curvedTube} from './e30-325i-geometry.mjs';
 import {bead, lerp, patch} from './e30-exterior-surfaces.mjs';
+import {addGetragServiceParts, frictionDisc, pressurePlate, releaseBearing, releaseFork} from './e30-getrag-service-parts.mjs';
 
 const cast = new MeshStandardMaterial({color:0x777e7b, metalness:.44, roughness:.71});
 const machined = new MeshStandardMaterial({color:0xa5a9a8, metalness:.66, roughness:.36});
-const friction = new MeshStandardMaterial({color:0x5f5144, metalness:.09, roughness:.86});
 const TAU = Math.PI * 2;
 const pitch = .128;
 const layY = -.088;
@@ -133,8 +133,11 @@ export function buildE30Getrag(add, scope) {
     },{page,row,internal,gearbox:{section,spread,...(hideInCutaway ? {hideInCutaway:true} : {})},getrag:true});
   };
 
+  const joint = Array.from({length:9},(_,i)=>outline(tailProfile.at(-1),i*TAU/9,.004));
   put('main-case','Main casting with integral clutch bell',[0,0,0],[0,.47,-.05],group => {
     casting(group,mainProfile,.009);
+    for (const [,y,z] of joint) ring(group,.012,.0035,.020,xAxis,cast,[.171,y,z]);
+
     for (const section of [
       mainProfile[0], mainProfile[2], [.288,-.035,.105,.131,.70],
       mainProfile[3], [.411,-.030,.110,.135,.70], mainProfile[4], mainProfile[8],
@@ -161,11 +164,10 @@ export function buildE30Getrag(add, scope) {
   put('tail-case','Rear cover and output-bearing carrier',[0,0,0],[-.35,.34,-.07],group => {
     casting(group,tailProfile,.008);
     castBand(group,tailProfile.at(-1),.019,.010);
-    for (const angle of [-2.61,-1.89,-1.15,-.42,.43,1.15,1.89,2.61]) {
-      const [,y,z] = outline(tailProfile.at(-1),angle,0);
+    for (const [i,[,y,z]] of joint.entries()) {
+      const angle = i*TAU/joint.length;
       curvedTube(group,tailProfile.slice(0,-1).map(section => outline(section,angle,.004)),.0055,cast,22);
-      cylinder(group,.014,.029,xAxis,cast,[.152,y,z],.012,16);
-      fastener(group,.140,y,z,.007);
+      ring(group,.012,.0047,.026,xAxis,cast,[.151,y,z],24);
     }
     bearingWeb(group,tailProfile[2],[[0,.036],[layY,.026]]);
     ring(group,.048,.029,.019,xAxis,machined,[.010,0,0]);
@@ -198,53 +200,33 @@ export function buildE30Getrag(add, scope) {
     ring(group,.110,.052,.007,xAxis,steel,[-.018,0,0]);
     for(let i=0;i<8;i++) fastener(group,.020,.039*Math.cos(i*TAU/8),.039*Math.sin(i*TAU/8),.006);
   },{page:'flywheel_twin_mass_flywheel'});
-  put('clutch-disc','Clutch friction disc and sprung hub',[.704,0,0],[.37,.16,-.29],group => {
-    ring(group,.114,.072,.011,xAxis,friction);
-    ring(group,.079,.017,.015,xAxis,steel);
-    ring(group,.039,.014,.028,xAxis,machined);
-    for(let i=0;i<8;i++) {
-      const a=i*TAU/8;
-      cylinder(group,.0028,.016,xAxis,brass,point(0,0,0,a,.094),.0028,10);
-    }
-    for(let i=0;i<4;i++) {
-      const a=i*TAU/4;
-      const [x,y,z] = point(0,0,0,a,.053);
-      const helix = Array.from({length:41},(_,step)=>{
-        const t=step/40, turn=TAU*5*t;
-        const radial=.006*Math.sin(turn), tangential=.027*(t-.5);
-        return [x+.006*Math.cos(turn),y+radial*Math.cos(a)-tangential*Math.sin(a),
-          z+radial*Math.sin(a)+tangential*Math.cos(a)];
-      });
-      curvedTube(group,helix,.0015,machined,42);
-    }
-  },{page:'gearshift_clutch',row:'21211223097'});
-  put('pressure-plate','Clutch pressure plate and diaphragm fingers',[.680,0,0],[.31,.12,.30],group => {
-    ring(group,.130,.086,.035,xAxis,cast);
-    ring(group,.113,.077,.011,xAxis,machined,[.017,0,0]);
-    for(let i=0;i<18;i++) {
-      const a=i*TAU/18;
-      const finger = block(group,[.009,.072,.013],steel,point(-.015,0,0,a,.056),.002);
-      finger.rotation.x=a;
-    }
-    for(let i=0;i<6;i++) fastener(group,-.019,.122*Math.cos(i*TAU/6),.122*Math.sin(i*TAU/6),.006);
-  },{page:'gearshift_clutch',row:'21211223026'});
+  put('clutch-disc','228 mm clutch disc and sprung hub',[.7105,0,0],[.37,.16,-.29],frictionDisc,
+    {page:'gearshift_clutch',row:'21211223097'});
+  put('pressure-plate','Clutch pressure plate and diaphragm spring',[.680,0,0],[.31,.12,.30],pressurePlate,
+    {page:'gearshift_clutch',row:'21211223026'});
   put('guide-sleeve','Input shaft seal cover and release bearing guide',[.520,0,0],[.21,.06,-.35],group => {
     ring(group,.025,.017,.121,xAxis,machined,[.047,0,0]);
-    ring(group,.049,.020,.012,xAxis,cast,[-.007,0,0]);
-    ring(group,.026,.017,.007,xAxis,rubber,[-.014,0,0]);
-    for (let i=0;i<6;i++) {
-      const [,y,z]=point(0,0,0,i*TAU/6,.041);
-      fastener(group,.001,y,z,.005);
+    const flange = new Shape();
+    flange.absarc(0,0,.049,0,TAU,false);
+    for(const [y,z,radius] of [[0,0,.020], ...Array.from({length:6},(_,i)=>{
+      const [,y,z] = point(0,0,0,i*TAU/6,.041);
+      return [y,z,.0035];
+    })]) {
+      const hole = new Path();
+      hole.absarc(-z,y,radius,0,TAU,true);
+      flange.holes.push(hole);
     }
+    const face = new ExtrudeGeometry(flange,{depth:.012,bevelEnabled:false,curveSegments:16});
+    face.rotateY(Math.PI/2);
+    face.translate(-.013,0,0);
+    group.add(new Mesh(face,cast));
+    ring(group,.026,.017,.007,xAxis,rubber,[-.014,0,0]);
+
   },{row:'23111228228',internal:true});
-  put('release-bearing','Clutch release bearing',[.600,0,0],[.25,.18,-.40],group => {
-    bearing(group,.042,.025,.025);
-    for (const z of [-.037,.037]) block(group,[.022,.019,.021],black,[.002,0,z],.004);
-  },{page:'gearshift_clutch',row:'21517521471',internal:true});
-  put('release-fork','Clutch release fork',[.603,-.004,0],[.26,-.22,-.42],group => {
-    for(const sign of [-1,1]) curvedTube(group,[[0,-.025,-.102],[0,sign*.030,-.054],[0,sign*.044,0],[0,sign*.031,.060],[0,-.013,.120]],.0075,steel,24);
-    block(group,[.018,.030,.042],steel,[0,-.018,.107],.005);
-  },{page:'gearshift_clutch',row:'21511204229',internal:true});
+  put('release-bearing','Clutch release bearing',[.600,0,0],[.25,.18,-.40],releaseBearing,
+    {page:'gearshift_clutch',row:'21517521471',internal:true});
+  put('release-fork','Stamped clutch release fork',[.603,-.004,0],[.26,-.22,-.42],releaseFork,
+    {page:'gearshift_clutch',row:'21511204229',internal:true});
   put('slave-cylinder','Clutch slave cylinder and bleeder',[.545,-.044,-.124],[.26,-.17,-.41],group => {
     cylinder(group,.023,.077,xAxis,cast,[0,0,0],.022,24);
     block(group,[.014,.058,.043],cast,[.021,0,0],.009);
@@ -254,7 +236,7 @@ export function buildE30Getrag(add, scope) {
   },{page:'clutch_control',row:'21521157212'});
 
   put('input-shaft','Input shaft and fourth-gear drive',[.462,0,0],[.38,.13,.18],group => {
-    shaft(group,[[-.006,.041,.024],[.041,.124,.017],[.124,.237,.013],[.237,.276,.008,machined]]);
+    shaft(group,[[-.006,.041,.024],[.041,.124,.017],[.124,.237,.013],[.237,.285,.006,machined]]);
     for(let i=0;i<20;i++) rod(group,point(.114,0,0,i*TAU/20,.013),point(.212,0,0,i*TAU/20,.013),.0015,machined);
     toothedWheel(group,.045,.023,.029,28,.081);
   },{page:gearset,row:'23211228286',internal:true});
@@ -353,4 +335,5 @@ export function buildE30Getrag(add, scope) {
     ring(group,.014,.006,.020,zAxis,machined,[-.049,.031,.010]);
     ring(group,.014,.007,.029,xAxis,steel,[.109,-.016,0]);
   },{page:linkage});
+  addGetragServiceParts(put,joint);
 }

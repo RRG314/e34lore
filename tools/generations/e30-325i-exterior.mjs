@@ -95,7 +95,7 @@ function swageInset(x,y) {
   const below=shoulderHeight(x)-y;
   // Turn the sheet inward below the swage. Blend into the lower panel over a
   // wider span so the upper face retains its original broad curvature.
-  return .0046*smooth((below+.004)/.015)*(1-smooth((below-.018)/.095));
+  return .0062*smooth((below+.002)/.009)*(1-smooth((below-.014)/.107));
 }
 
 function sideHeight(x,bottom,top,t) {

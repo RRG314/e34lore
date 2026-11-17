@@ -10,20 +10,25 @@ export function local525iFit(command) {
   if(!fs.existsSync(filename))return null;
   const receipt=JSON.parse(fs.readFileSync(filename,'utf8'));
   const release=JSON.parse(fs.readFileSync('data/digital-twin/525i-service-release.json','utf8'));
-  if(receipt.release.id===release.id&&receipt.release.revision<release.revision)return null;
-  const prefix='/models/e34-lore/r'+receipt.release.revision+'/';
+  if(receipt.release.id===release.id&&receipt.release.revision<=release.revision)return null;
+  const archives=receipt.archives ?? [];
+  const files=new Map();
   const valid=/^(?:manifest\.)?[a-f0-9]{64}\.(?:json|glb)$/;
-  const files=new Map(receipt.files.map(file=>{
-    if(!valid.test(file.file)||file.url!==prefix+file.file||!file.file.includes(file.sha256))throw Error('Invalid local 525i asset');
-    return [file.url,file];
-  }));
-  if(!files.has(receipt.release.manifestUrl))throw Error('Missing local 525i manifest');
+  for(const entry of [receipt,...archives]) {
+    if(entry.release.id!==release.id || !Number.isSafeInteger(entry.release.revision))throw Error('Invalid local 525i reference');
+    const prefix='/models/e34-lore/r'+entry.release.revision+'/';
+    for(const file of entry.files) {
+      if(!valid.test(file.file)||file.url!==prefix+file.file||!file.file.includes(file.sha256))throw Error('Invalid local 525i asset');
+      files.set(file.url,file);
+    }
+    if(!files.has(entry.release.manifestUrl))throw Error('Missing local 525i manifest');
+  }
   const id='\0local-525i-fit-preview';
   return {
     name:'e34-525i-fit-preview',
     enforce:'pre',
     resolveId(source,importer){if(importer&&source.endsWith('/local-reference-candidate'))return id;},
-    load(source){if(source===id)return 'export default '+JSON.stringify(receipt.release)+';export const localGeometryChecks=[];export const localReferenceArchives=[];';},
+    load(source){if(source===id)return 'export default '+JSON.stringify(receipt.release)+';export const localGeometryChecks=[];export const localReferenceArchives='+JSON.stringify(archives.map(entry=>entry.release))+';';},
     configureServer(server){
       server.watcher.add(filename);
       server.watcher.on('change',changed=>{if(path.resolve(changed)===filename)void server.restart();});
