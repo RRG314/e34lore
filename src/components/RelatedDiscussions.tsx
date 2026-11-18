@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { ArrowUpRight } from "lucide-react";
 import { db } from "./context";
+import { DocumentLink } from './DocumentLink';
 import {ExternalSourceLinks} from '../references/ExternalSourceLinks';
 import type {ReferenceTarget} from '../references/context';
 export function RelatedDiscussions({
@@ -76,18 +77,18 @@ export function RelatedDiscussions({
         <p className="small">Discussions could not load. Open the community to browse or try again later.</p>
       ) : rows.length ? (
         rows.map((r) => (
-          <a key={r.id} href={"/community/" + r.id}>
+          <DocumentLink key={r.id} href={"/community/" + r.id}>
             {r.title}
             {r.accepted_answers?.length ? (
               <span className="small"> · Owner accepted a solution</span>
             ) : null}
             <ArrowUpRight size={14} />
-          </a>
+          </DocumentLink>
         ))
       ) : (
         <p className="small muted">No discussions linked to this {kind} yet.</p>
       )}
-      <a
+      <DocumentLink
         href={
           "/community/new?" +
           new URLSearchParams({
@@ -98,7 +99,7 @@ export function RelatedDiscussions({
       >
         Start a linked discussion
         <ArrowUpRight size={14} />
-      </a>
+      </DocumentLink>
     </section>{!['node','garage','journal','build'].includes(kind)&&<ExternalSourceLinks target={{kind:kind as ReferenceTarget['kind'],id}} related={related} referenceId={referenceId}/>}</>
   );
 }

@@ -23,7 +23,8 @@ export async function replaceJson(path, value) {
 export async function localReferenceTools() {
   const bundle = await build({
     stdin: { contents: `export {parseReference,members,visibleNodes,defaultView,resolveInitial} from './src/digital-twin/public/model.ts';
-      export {planFor,separationOffset} from './src/digital-twin/public/explosion.ts';`, resolveDir: process.cwd() },
+      export {planFor,separationOffset} from './src/digital-twin/public/explosion.ts';
+      export {availableAssemblyServices} from './src/digital-twin/public/assembly-service.ts';`, resolveDir: process.cwd() },
     bundle: true, platform: 'node', format: 'esm', write: false, logLevel: 'silent',
   });
   return import('data:text/javascript;base64,' + Buffer.from(bundle.outputFiles[0].contents).toString('base64'));

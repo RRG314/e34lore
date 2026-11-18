@@ -3,10 +3,13 @@ import {manualGuides} from '../src/data/manual';
 import {emptyVehicle} from '../src/data/catalog';
 import {repairPlan} from '../src/repair/plan';
 import {serviceGuide,serviceApplicability,toolList,prerequisites,servicingNotes} from '../src/servicing/service';
-import {componentGuideHref,componentHref,componentWorkshopHref,requestedComponent} from '../src/servicing/context';
+import {componentGuideHref,componentHref,componentScannerHref,componentWorkshopHref,requestedComponent} from '../src/servicing/context';
 import {moneyInput,sumBudget,laborBudget,budgetJournal} from '../src/servicing/budget';
 import {publicShareUrl} from '../src/domain/identity';
 import {catalogProcedures} from '../src/digital-twin/public/catalog';
+import {guidedRepairHref} from '../src/digital-twin/public/assembly-links';
+import {assemblyProcedures} from '../src/digital-twin/public/assembly-service';
+import {garageIdentificationHref,requestedJourney} from '../src/domain/repair-journey';
 import {seriesHref} from '../src/series/registry';
 const guide=manualGuides.find(g=>g.slug===repairPlan.guide)!;
 describe('one existing component context',()=>{
@@ -49,6 +52,22 @@ describe('one existing component context',()=>{
    const e30 = seriesHref(url, 'e30');
    expect(e30).toBe('/garage?vehicle=' + journey.vehicle + '&tab=scans&series=e30#results');
    expect(seriesHref(e30, 'e30')).toBe(e30);
+ });
+ it.each(['e34-air-cleaner','e30-air-cleaner'] as const)('keeps the source position, model and saved record in %s',id=>{
+   const job=assemblyProcedures[id],series=id.startsWith('e30')?'e30':'e34';
+   const part={partId:series==='e30'?'bmw-13721720861':'bmw-13721730918',positionId:'source-position',assemblyId:'source-assembly',catalogContextId:'source-context',referenceId:job.modelId,modelRevision:job.minimumRevision!};
+   const repair=new URL(seriesHref(guidedRepairHref(job,part.modelRevision,journey,part),series),'https://e34lore.com');
+   expect(repair.searchParams.get('service')).toBe(id);
+   expect(requestedComponent(Object.fromEntries(repair.searchParams))).toEqual(part);
+   expect(requestedJourney(repair.search)).toEqual(journey);
+   const save=new URL(seriesHref(componentScannerHref(part,{vehicle:journey.vehicle}),series),'https://e34lore.com');
+   expect(save.hash).toBe('#scan-save');
+   expect(requestedComponent(Object.fromEntries(save.searchParams))).toEqual(part);
+   const garage=new URL(seriesHref(garageIdentificationHref(journey),series),'https://e34lore.com');
+   expect(garage.pathname).toBe('/garage');
+   expect(garage.hash).toBe('#saved-identification');
+   expect(requestedJourney(garage.search)).toEqual(journey);
+   expect(publicShareUrl(repair.href)).not.toContain(journey.scan);
  });
  it('does not infer service instructions from an unrelated source position',()=>{expect(catalogProcedures(context.partId,'unrelated')).toEqual({nodes:[],guides:[],manual:[]});});
 });

@@ -15,7 +15,7 @@ const componentKeys = [
 export function requestedComponent(query: Record<string, string | undefined>) {
   const component: Partial<ComponentContext> = {};
   for (const [key, field] of componentKeys) {
-    const value = query[key];
+    const value = query[key] || (key === 'position' ? query.catalog_position : undefined);
     if (value && /^[a-z0-9:_.-]{1,240}$/i.test(value)) component[field] = value;
   }
   const revision = query.model_revision;
@@ -41,14 +41,21 @@ export function componentHref(component: ComponentContext, journey: Journey = {}
   return journeyHref('/parts/catalog?' + params, journey);
 }
 
-export function componentWorkshopHref(component: Partial<ComponentContext>, journey: Journey = {}) {
-  const params = new URLSearchParams();
-  if (component.partId) params.set('part', component.partId);
-  if (component.nodeId) params.set('node', component.nodeId);
-  if (component.positionId) params.set('catalog_position', component.positionId);
-  if (component.referenceId) params.set('reference', component.referenceId);
-  if (component.modelRevision) params.set('model_revision', String(component.modelRevision));
+export function componentWorkshopHref(component: Partial<ComponentContext>, journey: Journey = {}, service?: string) {
+  const params = componentParams(component);
+  if (component.positionId) {
+    params.delete('position');
+    params.set('catalog_position', component.positionId);
+  }
+  if (service) {
+    params.set('mode', 'repair');
+    params.set('service', service);
+  }
   return journeyHref('/workshop?' + params, journey);
+}
+
+export function componentScannerHref(component: ComponentContext, journey: Journey = {}) {
+  return journeyHref('/scanner?' + componentParams(component) + '#scan-save', journey);
 }
 
 export function componentGuideHref(

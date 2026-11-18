@@ -14,7 +14,7 @@ import { PrivateJournal } from "./Journals";
 import { previewFeatures } from "../release/features";
 import { ScanHistory } from "../scanner/History";
 import { useOwnedCars } from "../vehicle/use-owned-cars";
-import { journeyHref } from "../domain/repair-journey";
+import { journeyHref, requestedJourney, type Journey } from "../domain/repair-journey";
 import { GarageWalkthroughs } from "./WalkthroughProgress";
 import { VehicleDetails } from "./VehicleDetails";
 import { GaragePublicationPanel } from "./Garages";
@@ -28,7 +28,7 @@ import { withTimeout } from "../lib/account-actions";
 import { DeleteAccount } from "./DeleteAccount";
 import { CatalogPartField, type PartIdentity } from "./CatalogPartField";
 import { db, useApp } from "./context";
-import { models, emptyVehicle } from "../data/catalog";
+import { emptyVehicle } from "../data/catalog";
 import { PageIntro, Tag, Notice, Empty, Modal } from "./common";
 function localDate() {
   const d = new Date();
@@ -393,6 +393,7 @@ function AccountGarage() {
     [activeFallback, setActive] = useState(""),
     [tab, setTab] = useState("service"),
     [allScans, setAllScans] = useState(true),
+    [scanLink, setScanLink] = useState<Journey>({}),
     [modal, setModal] = useState(""),
     [revision, setRevision] = useState(0),
     [loading, setLoading] = useState(true),
@@ -406,6 +407,7 @@ function AccountGarage() {
     const params = new URLSearchParams(location.search);
     const requestedTab = params.get("tab");
     setAllScans(!params.get("vehicle"));
+    setScanLink(requestedJourney(location.search));
     if (requestedTab && ["journal", "photos", "progress", "service", "mods", "saved", ...(previewFeatures.scanner ? ["scans"] : [])].includes(requestedTab)) setTab(requestedTab);
     if (new URLSearchParams(location.search).get("journal_guide"))
       setTab("journal");
@@ -872,7 +874,9 @@ function AccountGarage() {
             </button>
           </nav>
           {previewFeatures.scanner && tab === "scans" ? (
-            <>
+            scanLink.scan && scanLink.vehicle && owned.activeId === scanLink.vehicle && !allScans ? (
+              <ScanHistory vehicleId={owned.activeId} focusId={scanLink.scan}/>
+            ) : <>
               {v && <label className="garage-scan-scope">Show identifications
                 <select value={allScans ? "all" : "car"} onChange={event => setAllScans(event.target.value === "all")}>
                   <option value="all">All cars and unassigned scans</option>

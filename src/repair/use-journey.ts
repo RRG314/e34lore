@@ -23,5 +23,5 @@ export function useRepairJourney(initialScan?: string) {
   }, [key, requested, owned.ready, owned.selected, owned.activeId, user]);
   const scan = current?.scan || null;
   const error = current?.error || (requested && owned.ready && !owned.selected ? 'Choose the garage car this identification belongs to before continuing.' : '');
-  return { ...owned, scan, scanId: scan?.id || '', requestedScan: requested, error: owned.error || error, scanLoading: !!requested && !!owned.selected && !current, href: (path: string) => seriesHref(journeyHref(path, { vehicle: owned.activeId, scan: scan?.id }), series) };
+  return { ...owned, scan, scanId: scan?.id || '', requestedScan: requested, error: owned.error || error, scanLoading: !!requested && !current && (!owned.ready || !!owned.selected), href: (path: string) => seriesHref(journeyHref(path, { vehicle: owned.activeId, scan: scan?.id }), series) };
 }

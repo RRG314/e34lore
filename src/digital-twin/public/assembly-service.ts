@@ -1,6 +1,12 @@
 import { coolantServices } from './coolant-service';
+import { driveshaftServices } from './driveshaft-service';
+import { rearFinalDriveServices } from './rear-final-drive-service';
+import { rearWheelBearingServices, type RearWheelBearingServiceId } from './rear-wheel-bearing-service';
+import { rearSuspensionServices, type RearSuspensionServiceId } from './rear-suspension-service';
 import { e30CoolingFanService, e34CoolingFanService } from './fan-service';
 import { frontAxleServices } from './front-axle-service';
+import { frontHubServices, type FrontHubServiceId } from './front-hub-service';
+import { airCleanerServices, type AirCleanerServiceId } from './air-cleaner-service';
 import { e30RearBrakeService, e34RearBrakeService } from './rear-brake-service';
 import { e30FrontBrakeService } from './e30-front-brake-service';
 import { frontBrakeService } from './front-brake-service';
@@ -15,11 +21,15 @@ const sumpManual = {
 
 export type ManualLink = { title: string; href: string };
 
+export type AssemblyPivot = { between: [string, string]; degrees: number };
+
 export type AssemblyStep = {
   action: string;
   description: string;
   focus: string[];
   move?: [string, Vec][];
+  pivot?: AssemblyPivot & { parts: string[] };
+  rotateX?: [string, number][];
   rotateZ?: [string, number][];
   scaleY?: [string, number][];
   frame?: string[];
@@ -33,20 +43,30 @@ export type AssemblyServiceId = 'e34-sump' | 'e30-clutch' | 'e30-getrag' | 'e34-
   | 'e30-front-strut' | 'e34-front-strut' | 'e30-front-arms' | 'e34-front-arms'
   | 'e30-front-tie-rods' | 'e34-front-tie-rods' | 'e34-center-link'
   | 'e30-cooling-fan' | 'e34-cooling-fan'
-  | 'e30-water-pump' | 'e34-water-pump' | 'e30-thermostat' | 'e34-thermostat';
+  | 'e30-water-pump' | 'e34-water-pump' | 'e30-thermostat' | 'e34-thermostat'
+  | 'e30-center-bearing' | 'e34-center-bearing' | 'e30-flex-disc' | 'e34-flex-disc'
+  | 'e30-rear-differential' | 'e34-rear-differential'
+  | 'e30-left-halfshaft' | 'e30-right-halfshaft' | 'e34-left-halfshaft' | 'e34-right-halfshaft'
+  | RearSuspensionServiceId | RearWheelBearingServiceId | FrontHubServiceId | AirCleanerServiceId;
 export type AssemblyProgress = { id: AssemblyServiceId; completed: number };
 
 export type AssemblyProcedure = {
   id: AssemblyServiceId;
   modelId: string;
   scope: string;
+  side?: 'left' | 'right';
+  topic?: string;
+  relatedTopics?: readonly string[];
+  minimumRevision?: number;
   relatedScopes?: string[];
   prefix: string;
   title: string;
   entryView: Vec;
   clearanceAxis: 'x' | 'y' | 'z';
+  verticalRemoval?: 'up';
   clearancePitch?: number;
   parts: string[];
+  attachedParts?: Record<string, string[]>;
   steps: readonly AssemblyStep[];
   manuals: ManualLink[];
   completed: string;
@@ -92,15 +112,20 @@ const sump: AssemblyProcedure = {
 
 export const assemblyProcedures = { 'e34-sump': sump, 'e30-clutch': clutchService, 'e30-getrag': getragService, 'e34-front-brakes': frontBrakeService, 'e30-front-brakes': e30FrontBrakeService,
   'e30-rear-brakes': e30RearBrakeService, 'e34-rear-brakes': e34RearBrakeService, ...frontAxleServices,
-  'e30-cooling-fan':e30CoolingFanService, 'e34-cooling-fan':e34CoolingFanService, ...coolantServices };
+  'e30-cooling-fan':e30CoolingFanService, 'e34-cooling-fan':e34CoolingFanService, ...coolantServices, ...driveshaftServices, ...rearFinalDriveServices,
+  ...rearSuspensionServices, ...rearWheelBearingServices, ...frontHubServices, ...airCleanerServices };
 function nodeId(procedure: AssemblyProcedure, part: string) {
   return part.includes(':') ? part : procedure.prefix + part;
+}
+
+export function assemblyCatalogParts(procedure: AssemblyProcedure) {
+  return (procedure.catalogParts ?? []).map(part => nodeId(procedure, part));
 }
 
 const procedureParts = new Map<AssemblyServiceId, ReadonlySet<string>>(Object.values(assemblyProcedures).map(procedure=>[
   procedure.id,
   new Set([...procedure.parts, ...procedure.steps.flatMap(step=>[
-    ...step.focus, ...(step.frame ?? []), ...(step.access ?? []), ...(step.panels ?? []).map(([id])=>id), ...(step.move ?? []).map(([id])=>id), ...(step.rotateZ ?? []).map(([id])=>id), ...(step.scaleY ?? []).map(([id])=>id),
+    ...step.focus, ...(step.pivot?.parts ?? []), ...(step.pivot?.between ?? []), ...(step.frame ?? []), ...(step.access ?? []), ...(step.panels ?? []).map(([id])=>id), ...(step.move ?? []).map(([id])=>id), ...(step.rotateX ?? []).map(([id])=>id), ...(step.rotateZ ?? []).map(([id])=>id), ...(step.scaleY ?? []).map(([id])=>id),
   ])].map(part=>nodeId(procedure,part))),
 ]));
 
@@ -119,13 +144,24 @@ export function assemblyAccess(procedure: AssemblyProcedure) {
 }
 
 export function assemblyScene(progress: AssemblyProgress) {
-  const procedure = assemblyProcedures[progress.id];
+  const procedure: AssemblyProcedure = assemblyProcedures[progress.id];
   const offsets = new Map<string, Vec>();
+  const pivots = new Map<string, AssemblyPivot>();
+  const rotationsX = new Map<string, number>();
   const rotations = new Map<string, number>();
   const scaleY = new Map<string, number>();
   const panels = new Set<string>();
   for (const step of procedure.steps.slice(0, progress.completed)) {
     for (const [part, offset] of step.move ?? []) offsets.set(nodeId(procedure,part), offset);
+    if(step.pivot) {
+      const { between, degrees, parts } = step.pivot;
+      const pivot: AssemblyPivot = { between: [nodeId(procedure, between[0]), nodeId(procedure, between[1])], degrees };
+      for (const part of parts) {
+        if(degrees) pivots.set(nodeId(procedure, part), pivot);
+        else pivots.delete(nodeId(procedure, part));
+      }
+    }
+    for (const [part, angle] of step.rotateX ?? []) rotationsX.set(nodeId(procedure,part), angle);
     for (const [part, angle] of step.rotateZ ?? []) rotations.set(nodeId(procedure,part), angle);
     for (const [part, scale] of step.scaleY ?? []) scaleY.set(nodeId(procedure,part), scale);
     for (const [part, open] of step.panels ?? []) {
@@ -133,7 +169,19 @@ export function assemblyScene(progress: AssemblyProgress) {
       else panels.delete(nodeId(procedure,part));
     }
   }
-  return { parts: procedureParts.get(progress.id)!, offsets, rotations, scaleY, openPanels:[...panels],
+  let parts = procedureParts.get(progress.id)!;
+  if (procedure.attachedParts) {
+    const included = new Set(parts);
+    for (const [parent, children] of Object.entries(procedure.attachedParts)) {
+      const offset = offsets.get(nodeId(procedure,parent));
+      for (const child of children.map(id=>nodeId(procedure,id))) {
+        included.add(child);
+        if (offset) offsets.set(child,offset);
+      }
+    }
+    parts = included;
+  }
+  return { parts, offsets, pivots, rotations, rotationsX, scaleY, openPanels:[...panels],
     focus: procedure.steps[progress.completed]?.focus.map(part=>nodeId(procedure,part)) ?? [],
     frame: procedure.steps[progress.completed]?.frame?.map(part=>nodeId(procedure,part)),
   };

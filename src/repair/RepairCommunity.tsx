@@ -4,6 +4,7 @@ import { ArrowUpRight, MessageSquare, PenLine } from 'lucide-react';
 import { db, useApp } from '../components/context';
 import { useCommunityPreferences } from '../components/CommunityGovernance';
 import { LinkedText } from '../components/LinkedText';
+import { DocumentLink } from '../components/DocumentLink';
 import { repairContributionHref, repairObservationFilter } from './community';
 import type { RepairTopic } from './library';
 
@@ -51,17 +52,16 @@ export function RepairCommunity({ topic }: { topic: RepairTopic }) {
   function contribution(row: Contribution) {
     return <article className="repair-member-post" key={row.id}>
       <div className="small muted">{current?.names[row.author_id] || 'Member'} · {new Date(row.created_at).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}{[row.model_id, row.engine].filter(Boolean).length > 0 && ' · ' + [row.model_id, row.engine].filter(Boolean).join(' / ')}</div>
-      <h4><a href={'/community/' + row.id}>{row.title}</a></h4>
+      <h4><DocumentLink href={'/community/' + row.id}>{row.title}</DocumentLink></h4>
       <div className="repair-post-excerpt"><LinkedText text={row.body.slice(0, 1200) + (row.body.length > 1200 ? '\n…' : '')}/></div>
-      <a className="text-link" href={'/community/' + row.id}>Read full post & replies · Reply <ArrowUpRight size={14}/></a>
+      <DocumentLink className="text-link" href={'/community/' + row.id}>Read and reply <ArrowUpRight size={14}/></DocumentLink>
     </article>;
   }
   return <section className="repair-community" id="owner-experience" aria-label="Owner walkthroughs and comments">
     <div className="section-heading"><h2>Owner walkthroughs & comments</h2></div>
-    <p>Share how the repair went on your car, add a missing detail, or ask a question. Replies stay with the post so the next owner can follow the whole fix.</p>
     <div className="inline-tags">
-      <a className="button primary" href={repairContributionHref(topic, 'repair-writeup')}><PenLine size={16}/>Add my walkthrough</a>
-      <a className="button outline" href={repairContributionHref(topic, 'repair-comment')}><MessageSquare size={16}/>Add a comment or question</a>
+      <DocumentLink className="button primary" href={repairContributionHref(topic, 'repair-writeup')}><PenLine size={16}/>Add my walkthrough</DocumentLink>
+      <DocumentLink className="button outline" href={repairContributionHref(topic, 'repair-comment')}><MessageSquare size={16}/>Post a question, tip or correction</DocumentLink>
     </div>
     {current?.error && <div role="status"><p>Owner posts couldn’t load. Try again, or use the buttons above to start a draft.</p><button className="button outline" onClick={() => { setPageCursor(null); setRefresh(n => n + 1); }}>Retry owner posts</button></div>}
     {!current ? <p role="status">Loading owner posts…</p> : !current.error || current.rows.length > 0 ? <>
@@ -71,6 +71,6 @@ export function RepairCommunity({ topic }: { topic: RepairTopic }) {
       {comments.length ? comments.map(contribution) : <p className="muted">{current.more ? 'No comments in the posts loaded so far. Load more posts below.' : 'No comments linked to this job yet.'}</p>}
       {current.more && !current.error && <button className="button outline" disabled={current.cursorKey !== cursorKey} onClick={() => { const last = current.rows.at(-1); if (last) setPageCursor({ key, cursor: { created_at: last.created_at, id: last.id } }); }}>{current.cursorKey !== cursorKey ? 'Loading more…' : 'Load more owner posts'}</button>}
     </> : null}
-    <p className="small muted">Owner experience is community advice. Check the vehicle, source and outcome. Sign in to publish, or submit as a guest for review. Photo and video links open on their original sites.</p>
+    <p className="small muted">Check the vehicle and source before following a member’s repair.</p>
   </section>;
 }

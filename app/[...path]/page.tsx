@@ -198,7 +198,7 @@ export default async function Route({
   if (path[0] === "quick-reference" &&
     (path.length > 2 || (path[1] && !referenceSections.some((item) => item.id === path[1]))))
     notFound();
-  const acceptsSeries = (path.length === 1 && path[0] === "garage") || (path[0] === "community" && path[1] === "new");
+  const acceptsSeries = (path.length === 1 && path[0] === "garage") || path[0] === "community";
   const pageSeries = vehicleSeriesEnabled && acceptsSeries && isSeries(query.series) ? query.series : series;
   return <Shell series={pageSeries} path={path} query={query} />;
 }

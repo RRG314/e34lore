@@ -1,4 +1,4 @@
-import {availableAssemblyServices} from '../src/digital-twin/public/assembly-service';
+import {assemblyProcedures,availableAssemblyServices} from '../src/digital-twin/public/assembly-service';
 import { releasePublic } from './release-content';
 import {createElement} from 'react';
 import {renderToStaticMarkup} from 'react-dom/server';
@@ -77,6 +77,8 @@ describe('native workshop model switching',()=>{
  it('links the current E30 wiring view and retains the previous revision',()=>{
    const params=new URL(wiringWorkshopHref('e30'),'https://e34lore.com').searchParams;
    expect(params.get('model_revision')).toBe(String(e30.revision));
+   expect(wiringFor({id:e30.id,revision:1197})).toBe(wiringReferences.e30);
+   expect(wiringFor({id:service525i.id,revision:1052})).toBe(wiringReferences.e34);
    expect(wiringFor({id:e30.id,revision:1179})).toBe(wiringReferences.e30);
    expect(wiringFor({id:e30.id,revision:1178})).toBeUndefined();
  });
@@ -279,7 +281,10 @@ describe('center console references', () => {
 it.each([service525i,e30])('publishes guided repairs with all their modeled parts for $id', pin => {
  const model=parseReference(JSON.parse(fs.readFileSync(releasePublic+pin.manifestUrl,'utf8')));
  const ids=availableAssemblyServices(model).map(service=>service.id);
- expect(ids).toHaveLength(10);
+ const published=Object.values(assemblyProcedures)
+  .filter(job=>job.modelId===pin.id && pin.revision>=(job.minimumRevision??0))
+  .map(job=>job.id);
+ expect(ids.sort()).toEqual(published.sort());
  const series=pin.id.startsWith('e30')?'e30':'e34';
  expect(ids).toEqual(expect.arrayContaining([
   series+'-water-pump',series+'-thermostat',series+'-rear-brakes',series+'-cooling-fan',

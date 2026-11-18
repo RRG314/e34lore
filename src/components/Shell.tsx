@@ -172,7 +172,7 @@ function Site({
         <AdvertisingSlot ads={advertisements} placement="public_top" path={publicPath}/>
         {section === "" ? (
           <Home />
-        ) : section === "scanner" && previewFeatures.scanner ? (<Suspense fallback={<p className="page">Loading component identification…</p>}>{path[1]==="credits"?<ScannerCredits/>:<Scanner key={accountKey}/>}</Suspense>
+        ) : section === "scanner" && previewFeatures.scanner ? (<Suspense fallback={<p className="page">Loading component identification…</p>}>{path[1]==="credits"?<ScannerCredits/>:<Scanner key={accountKey} initialComponent={requestedComponent(query)}/>}</Suspense>
         ) : section === "garage" && path[1]==="vins" ? (<Suspense fallback={<p className="page">Loading your VIN registry…</p>}><VinRegistry key={accountKey} initialCar={query.vehicle}/></Suspense>
         ) : section === "garage" && path[1]==="configuration" && previewFeatures.vehicleConfiguration ? (<Suspense fallback={<p className="page">Loading your vehicle configuration…</p>}><VehicleConfiguration key={accountKey + ":" + owned.activeId}/></Suspense>
         ) : section === "manual" ? (
@@ -188,7 +188,7 @@ function Site({
         ) : section === "articles" ? (
           <ArticlePage slug={path[1]} />
         ) : section === "repairs" ? (
-          path[1] ? <RepairJobPage key={path[1]} id={path[1]} component={requestedComponent(query)}/> : <RepairPage
+          path[1] ? <RepairJobPage key={path[1]} id={path[1]} component={requestedComponent(query)} initialScan={query.scan}/> : <RepairPage
             initialQuery={query.q}
             initialSystem={query.system}
             track={query.track}
@@ -211,7 +211,7 @@ function Site({
           )
         ) : section === "workshop" ? (
           <Suspense fallback={<p className="page">Loading the workshop…</p>}>
-            {path[1]==="assets"||path[1]==="inspections"||!!query.configuration_revision?<PrivateWorkshop key={staffSessionKey} archive={!!query.configuration_revision&&path[1]!=="assets"&&path[1]!=="inspections"} assets={path[1]==="assets"} initialPart={query.part} initialNode={query.node} initialRevisionId={query.configuration_revision}/>:<ReferenceWorkshop buildMode={query.mode==='build'} buildProject={query.project} workshopMode={query.mode} initialService={query.service} key={accountKey} diagrams={query.tab==="diagrams"} repairMode={series === "e34" && previewFeatures.interactiveRepairs && path[1]==="repair" && query.task!=="center-support-bearing"} repairTask={series === "e34" && path[1]==="repair"?query.task:undefined} initialVehicle={query.vehicle} initialScan={query.scan} initialPart={query.part} initialNode={query.node} initialSystem={query.system} initialCatalogPosition={query.catalog_position} initialModelRevision={query.model_revision} initialReference={query.reference}/>}
+            {path[1]==="assets"||path[1]==="inspections"||!!query.configuration_revision?<PrivateWorkshop key={staffSessionKey} archive={!!query.configuration_revision&&path[1]!=="assets"&&path[1]!=="inspections"} assets={path[1]==="assets"} initialPart={query.part} initialNode={query.node} initialRevisionId={query.configuration_revision}/>:<ReferenceWorkshop buildMode={query.mode==='build'} buildProject={query.project} workshopMode={query.mode} initialService={query.service} repairComponent={query.mode==='repair'?requestedComponent(query):undefined} key={accountKey} diagrams={query.tab==="diagrams"} repairMode={series === "e34" && previewFeatures.interactiveRepairs && path[1]==="repair" && query.task!=="center-support-bearing"} repairTask={series === "e34" && path[1]==="repair"?query.task:undefined} initialVehicle={query.vehicle} initialScan={query.scan} initialPart={query.part} initialNode={query.node} initialSystem={query.system} initialCatalogPosition={query.catalog_position} initialModelRevision={query.model_revision} initialReference={query.reference}/>}
           </Suspense>
         ) : section === "diagnostics" ? (
           <DiagnosticPage initialSymptom={query.symptom} />
@@ -239,9 +239,9 @@ function Site({
           ) : path[1] === "admin" ? (
             <CommunityAdministration key={staffSessionKey} />
           ) : path[1] ? (
-            <ThreadPage id={path[1]} />
+            <ThreadPage id={path[1]} boardQuery={query} />
           ) : (
-            <CommunityPage initialQuery={query.q}/>
+            <CommunityPage boardQuery={query}/>
           )
         ) : section === "app" ? (
           <InstallApp />

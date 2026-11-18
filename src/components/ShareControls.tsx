@@ -6,17 +6,20 @@ import { publicShareUrl } from "../domain/identity";
 export function ShareControls({
   title,
   href,
+  copyLabel,
 }: {
   title: string;
   href?: string;
+  copyLabel?: string;
 }) {
-  return <Controls key={JSON.stringify([title,href])} title={title} href={href}/>;
+  return <Controls key={JSON.stringify([title,href])} title={title} href={href} copyLabel={copyLabel}/>;
 }
-function Controls({title,href}:{title:string;href?:string}){
+function Controls({title,href,copyLabel}:{title:string;href?:string;copyLabel?:string}){
   const [url, setUrl] = useState<string | null>(null);
   const [copied, setCopied] = useState(false);
   const [manual, setManual] = useState(false);
   const [message, setMessage] = useState("");
+  const link = () => publicShareUrl(href||location.href,import.meta.env.DEV?location.origin:undefined);
   useEffect(() => {
     if (!copied) return;
     const timer = setTimeout(() => setCopied(false), 3000);
@@ -35,12 +38,12 @@ function Controls({title,href}:{title:string;href?:string}){
   return (
     <div className="share-controls" aria-label="Share public content">
       <div className="share-actions">
-        <button
+        {!copyLabel&&<button
           type="button"
           className="button outline compact"
           onClick={async () => {
             // Resolve at click time so drawing/step navigation is reflected.
-            const current = publicShareUrl(href || location.href);
+            const current = link();
             if (!current) return;
             setUrl(current);
             if (!navigator.share) {
@@ -59,12 +62,12 @@ function Controls({title,href}:{title:string;href?:string}){
         >
           <Share2 size={15} />
           Share
-        </button>
+        </button>}
         <button
           type="button"
           className="button outline compact"
           onClick={async () => {
-            const current = publicShareUrl(href || location.href);
+            const current = link();
             if (!current) return;
             try {
               await navigator.clipboard.writeText(current);
@@ -78,7 +81,7 @@ function Controls({title,href}:{title:string;href?:string}){
           }}
         >
           {copied ? <Check size={15} /> : <Copy size={15} />}{" "}
-          {copied ? "Copied" : "Copy link"}
+          {copied ? "Copied" : copyLabel||"Copy link"}
         </button>
       </div>
       {manual && (

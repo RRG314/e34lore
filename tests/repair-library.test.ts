@@ -2,7 +2,9 @@ import { describe, expect, it } from 'vitest';
 import { manualChapters, manualGuides } from '../src/data/manual';
 import { manualJobs } from '../src/data/manual-jobs';
 import { browseRepairTopics, manualTopicHref, repairTopic, repairTopics, topicForGuide, topicGuide } from '../src/repair/library';
-import { attachRepairContext, repairComposeContext, repairComposeDefaults, repairContributionHref, repairDraftKey, repairFromObservations, repairMarker, repairObservationFilter } from '../src/repair/community';
+import { attachRepairContext, repairComposeContext, repairComposeDefaults, repairContributionHref, repairDraftKey, repairFromObservations, repairMarker, repairObservationFilter, repairOwnerPostsHref } from '../src/repair/community';
+import { communityBoardHref, communityBoardLabel, communityBoardSelection } from '../src/community/boards';
+import { seriesHref } from '../src/series/registry';
 import { createClient } from '@supabase/supabase-js';
 import { repairSources, illustratedRepairSources } from '../src/repair/sources';
 import sources from '../src/references/starter-sources.json';
@@ -62,6 +64,20 @@ describe('job-based repair library', () => {
 });
 
 describe('repair comments and owner walkthroughs', () => {
+  it('returns a linked discussion to the correct generation and repair section', () => {
+    expect(repairOwnerPostsHref(repairTopic('e30-air-filter','e30')!)).toBe('/e30/repairs/e30-air-filter#owner-experience');
+    expect(repairOwnerPostsHref(repairTopic('020-job-air-filter-replacement','e34')!)).toBe('/repairs/020-job-air-filter-replacement#owner-experience');
+  });
+  it('keeps a shared board and its filters when linking to an E30 draft or thread', () => {
+    const filter = communityBoardSelection({board:'maintenance',tag:'unknown',q:' air filter & seal '});
+    expect(filter).toEqual({board:'maintenance',tag:'',q:'air filter & seal'});
+    const href = seriesHref(communityBoardHref(filter,'/community/new'),'e30');
+    const url = new URL(href,'https://example.test');
+    expect(url.pathname).toBe('/community/new');
+    expect(url.searchParams.get('series')).toBe('e30');
+    expect(communityBoardSelection(Object.fromEntries(url.searchParams))).toEqual(filter);
+    expect(communityBoardLabel('General E34 Community')).toBe('General discussion');
+  });
   const topic = repairTopics.find(t => t.title === 'Window regulator and motor')!;
   it('serializes the actual Supabase JSONB containment request rather than a PostgreSQL array', async () => {
     let requested = '';

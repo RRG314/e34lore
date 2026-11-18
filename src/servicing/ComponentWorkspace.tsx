@@ -6,7 +6,7 @@ import {BearingInspection} from '../repair/BearingInspection';
 import {BearingServiceReference} from '../repair/BearingServiceReference';
 import {seriesForModel} from '../series/registry';
 import {isCenterSupportServicePart} from '../servicing/part-location';
-import {lazy,Suspense,useEffect,useMemo,useRef,useState} from 'react';
+import {lazy,Suspense,useEffect,useMemo,useRef,useState,type ReactNode} from 'react';
 import {db,useApp} from '../components/context';
 import {DocumentLink} from '../components/DocumentLink';
 import {Diagram} from '../components/Diagram';
@@ -25,12 +25,12 @@ import type {Journey} from '../domain/repair-journey';
 import type {ComponentPartIdentity} from './context';
 const Car=lazy(()=>import('../digital-twin/public/ReferenceWorkshop').then(m=>({default:m.ReferenceWorkshop})));
 type SourceChoice={position:CatalogPosition;assembly:CatalogAssembly};
-export function ComponentWorkspace({anchor,selected,vehicle,navigation,onSelect,context,onContextChange}:{anchor:ComponentPartIdentity;selected:ComponentPartIdentity;vehicle:Vehicle;navigation:Journey;onSelect:(part:ComponentPartIdentity)=>void;context:{referenceId:string;sourcePositionId:string;sourceContextId?:string;sourceAssemblyId?:string;modelRevision?:number|null};onContextChange:(value:Partial<{referenceId:string;sourcePositionId:string;sourceContextId:string;sourceAssemblyId:string;modelRevision:number|null}>)=>void}){
+export function ComponentWorkspace({anchor,selected,vehicle,navigation,onSelect,context,onContextChange,scannerAction}:{scannerAction?:ReactNode;anchor:ComponentPartIdentity;selected:ComponentPartIdentity;vehicle:Vehicle;navigation:Journey;onSelect:(part:ComponentPartIdentity)=>void;context:{referenceId:string;sourcePositionId:string;sourceContextId?:string;sourceAssemblyId?:string;modelRevision?:number|null};onContextChange:(value:Partial<{referenceId:string;sourcePositionId:string;sourceContextId:string;sourceAssemblyId:string;modelRevision:number|null}>)=>void}){
  const { series }=useApp(), vehicleReferences=referencesForSeries(series);
  const inventory=useVehicleCatalog(),vehicleKey=JSON.stringify(vehicle);
  const sourceVehicle=useMemo(()=>JSON.parse(vehicleKey) as Vehicle,[vehicleKey]);
  const [choices,setChoices]=useState<SourceChoice[]>([]),[loaded,setLoaded]=useState<{key:string;positions:CatalogPosition[];drawings:SourceDrawing[]}|null>(null),[error,setError]=useState(''),[loading,setLoading]=useState(true),[retry,setRetry]=useState(0);
- const [drawingId,setDrawingId]=useState(''),[imageFailed,setImageFailed]=useState(false);
+ const [drawingId,setDrawingId]=useState(''),[imageFailed,setImageFailed]=useState(false),[showLocation,setShowLocation]=useState(false);
  const bootstrap=useRef(''),contextCallback=useRef(onContextChange);
  useEffect(()=>{contextCallback.current=onContextChange},[onContextChange]);
  const choice=context.sourcePositionId,explicitReference=context.referenceId;
@@ -71,7 +71,9 @@ export function ComponentWorkspace({anchor,selected,vehicle,navigation,onSelect,
   return()=>{live=false;controller.abort();clearTimeout(timer)};
  },[source,retry]);
  const records=useMemo(()=>source&&loaded?.key===source.assembly.id?loaded.positions:[],[source,loaded]);
- const position=records.find(p=>p.id===selected.positionId)||records.find(p=>p.part_id===selected.id)||source?.position;
+ const position=records.find(p=>p.part_id===selected.id&&p.id===selected.positionId)
+  || records.find(p=>p.part_id===selected.id)
+  || (source?.position.part_id===selected.id?source.position:undefined);
  const positionContext=inventory.rows.find(row=>row.id===position?.context_id);
  const dateStatus=position&&positionContext&&['matching','partial'].includes(catalogContextMatch(positionContext,vehicle))
    ? catalogProductionDateStatus(position.conditions,vehicle) : 'unstated';
@@ -91,19 +93,27 @@ export function ComponentWorkspace({anchor,selected,vehicle,navigation,onSelect,
  const explicit=pinned&&"label" in pinned&&seriesForModel(pinned.id)===series?pinned:undefined;
  const allowedReferences=explicit&&!matchingReferences.some(r=>r.id===explicit.id)?[explicit,...matchingReferences]:matchingReferences;
  const reference=explicit||automatic;
+ const catalogHref=componentHref({partId:selected.id,positionId:position?.id||selected.positionId,assemblyId:position?.assembly_id||selected.assemblyId,catalogContextId:position?.context_id||selected.contextId,referenceId:reference?.id,modelRevision:context.modelRevision||undefined},navigation);
  const pick=(id:string)=>{const p=records.find(p=>p.id===id);if(p)onSelect({id:p.part_id,name:p.parts.name,number_normalized:p.parts.number_normalized,positionId:p.id,assemblyId:p.assembly_id,contextId:p.context_id})};
  return <section className="scan-part-review" aria-label="Selected part reference">
   <span className="eyebrow">SELECTED COMPONENT</span><h2>{selected.name}</h2><p className="mono">BMW {selected.number_normalized}</p>
+  <nav className="scan-review-nav" aria-label={scannerAction ? 'Selected part actions' : 'Selected part sections'}>
+    {scannerAction && <DocumentLink href={catalogHref}>Open OEM catalog record</DocumentLink>}
+    <a href="#scan-comparison">Compare images</a>
+    <a href="#scan-fitment">Fitment</a>
+    <a href="#scan-location">In your car</a>
+    <a href="#scan-service">Repair &amp; tools</a>
+    {scannerAction}
+  </nav>
   {choices.length>1&&<label>Catalog illustration source<select value={choice} onChange={e=>setChoice(e.target.value)}>{choices.map(c=><option key={c.position.id} value={c.position.id}>{inventory.rows.find(x=>x.id===c.position.context_id)?.name} · {c.assembly.title}</option>)}</select></label>}
   <div id="scan-comparison"><PartComparison series={series} key={selected.number_normalized} number={selected.number_normalized} name={selected.name} drawing={adapted} positionId={position?.id} sourceLabel={inventory.rows.find(c=>c.id===source?.position.context_id)?.name} loading={loading || (!!source && loaded?.key!==source.assembly.id)} error={error} onRetry={()=>setRetry(n=>n+1)}/></div>
   {source&&source.position.context_id!==preferredCatalogContext(inventory.rows,vehicle)?.id&&vehicle.model&&<p className="small">This illustration comes from {inventory.rows.find(c=>c.id===source.position.context_id)?.name||'a different source vehicle'}. Check the application evidence for your car below.</p>}
   {source&&!source.position.active&&<p className="small">This is a historical source position. Confirm the current part and replacement record before ordering.</p>}
   {position&&<section className="selected-source-conditions" aria-label="Selected catalog restrictions"><dl><dt>Source position</dt><dd>{position.reference} · {position.source_name}</dd><dt>Required quantity</dt><dd>{position.required_quantity??'Not stated'}</dd><dt>Recorded restrictions</dt><dd>{orderingNotes(position).map(note=>note.name+': '+formatCatalogCondition(note.name,note.value)).join(' · ')||'No equipment or production restriction is recorded for this position. Check the installed hardware.'}</dd></dl></section>}
   <PartMedia number={selected.number_normalized} showApproved={false}/>
-  <nav className="scan-review-nav" aria-label="Selected part sections"><a href="#scan-comparison">Compare images</a><a href="#scan-fitment">Fitment</a><a href="#scan-location">In your car</a><a href="#scan-service">Repair & tools</a></nav>
   <div id="scan-fitment">{dateNote&&<p>{dateNote}</p>}<PartCompatibility partId={selected.id} vehicleOverride={vehicle}/></div>
   <section id="scan-location"><h3>Location in your car</h3><label>Reference model<select value={reference?.id||''} onChange={e=>setReference(e.target.value)}><option value="">Choose a reference model</option>{allowedReferences.map(r=><option key={r.id} value={r.id}>{r.label}</option>)}</select></label>
-  {reference?<Suspense fallback={<p role="status">Loading the interactive car…</p>}><Car key={reference.id+':'+selected.id} embedded initialVehicle={navigation.vehicle} initialScan={navigation.scan} initialPart={selected.id} initialCatalogPosition={('contextId' in reference&&reference.contextId===position?.context_id)?position?.id:undefined} initialSystem="vehicle" initialReference={reference.id} initialModelRevision={context.modelRevision?String(context.modelRevision):undefined}/></Suspense>:<p>Choose the model and transmission to show the matching interactive car.</p>}
+  {reference?<><button type="button" className="button outline" aria-expanded={showLocation} aria-controls="scan-location-preview" onClick={()=>setShowLocation(show=>!show)}>{showLocation?'Hide 3D part location':'Show 3D part location'}</button><div id="scan-location-preview" hidden={!showLocation}>{showLocation&&<Suspense fallback={<p role="status">Loading the interactive car…</p>}><Car key={reference.id+':'+selected.id} embedded initialVehicle={navigation.vehicle} initialScan={navigation.scan} initialPart={selected.id} initialCatalogPosition={('contextId' in reference&&reference.contextId===position?.context_id)?position?.id:undefined} initialSystem="vehicle" initialReference={reference.id} initialModelRevision={context.modelRevision?String(context.modelRevision):undefined}/></Suspense>}</div></>:<p>Choose the model and transmission to show the matching interactive car.</p>}
   </section>
   <details className="scan-source-details"><summary>Full assembly diagram & part list</summary><h3>OEM assembly diagram</h3><p>The complete assembly stays visible. Select a numbered position to inspect its part.</p>
   {(loading||inventory.loading)&&<p role="status">Loading source diagrams…</p>}
@@ -118,7 +128,6 @@ export function ComponentWorkspace({anchor,selected,vehicle,navigation,onSelect,
   {!loading&&!error&&!choices.length&&<p>No source assembly is linked to this part in the selected catalog. Its canonical number remains available; no diagram is invented.</p>}
   </details>
   {position?.active!==false&&<WhereToBuy partId={selected.id} positionId={position?.id}/>}
-  <DocumentLink target="_blank" rel="noopener" href={componentHref({partId:selected.id,positionId:position?.id,assemblyId:position?.assembly_id,catalogContextId:position?.context_id,referenceId:reference?.id,modelRevision:context.modelRevision||undefined},navigation)}>Open the full OEM record, interchange and purchase links ↗</DocumentLink>
-<section id="scan-service" className="scan-repair-reference"><h3>Repair steps, tools and manual references</h3><CatalogProcedureLinks partId={selected.id} partNumber={selected.number_normalized} positionId={position?.id} assemblyId={position?.assembly_id} catalogContextId={position?.context_id} referenceId={reference?.id} modelRevision={context.modelRevision||undefined} navigation={navigation} vehicleOverride={vehicle}/>{series==='e34'&&isCenterSupportServicePart(selected.id)&&<><details><summary>Center bearing replacement · steps, tools & manual pages</summary><BearingServiceReference/></details><details><summary>Guided inspection and repair preparation</summary><BearingInspection showService={false} initialScan={navigation.scan||undefined} onLocate={()=>document.querySelector('.scan-part-review .reference-frame')?.scrollIntoView({block:'center',behavior:'smooth'})}/></details></>}<p className="small muted">Use the procedure for the installed hardware. Where a full walkthrough is not yet linked, consult the original manual reference; missing coverage remains on the roadmap.</p></section>
+<section id="scan-service" className="scan-repair-reference"><h3>Repair steps, tools and manual references</h3><CatalogProcedureLinks partId={selected.id} partNumber={selected.number_normalized} positionId={position?.id} assemblyId={position?.assembly_id} catalogContextId={position?.context_id} referenceId={reference?.id} modelRevision={context.modelRevision||undefined} navigation={navigation} vehicleOverride={vehicle}/>{series==='e34'&&isCenterSupportServicePart(selected.id)&&<><details><summary>Center bearing replacement · steps, tools & manual pages</summary><BearingServiceReference/></details><details><summary>Guided inspection and repair preparation</summary><BearingInspection showService={false} initialScan={navigation.scan||undefined} onLocate={()=>document.querySelector('.scan-part-review .reference-frame')?.scrollIntoView({block:'center',behavior:'smooth'})}/></details></>}</section>
  </section>;
 }
