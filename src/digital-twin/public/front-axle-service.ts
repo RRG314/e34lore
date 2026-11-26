@@ -1,5 +1,6 @@
 import type { AssemblyProcedure, AssemblyServiceId, AssemblyStep, ManualLink } from './assembly-service';
 import type { Vec } from './model';
+import { frontHubHardware } from './front-hub-service';
 import { e30FactoryManualArchive, e30Handbook } from '../../series/e30-manual';
 
 const front = 'system:front-suspension';
@@ -63,6 +64,7 @@ function frontStrut(e30: boolean): AssemblyProcedure {
   const wheel = e30 ? right30+'wheel' : wheel34;
   const hubParts = e30 ? parts('hub','rotor','shield','disc-screw')
     : ['hub','brake-disc','brake-shield'].map(key=>'e34sys:'+key+'-front--1').concat('e34brake:front-right-disc-screw');
+  const hubHardware = frontHubHardware(e30?'e30':'e34','right');
   const brake = e30 ? parts('carrier','caliper','pad-inner','pad-outer','guide-bolt-upper','guide-bolt-lower',
     'guide-pin-upper','guide-pin-lower','guide-boot-upper','guide-boot-lower','carrier-bolt-upper','carrier-bolt-lower')
     : ['e34sys:brake-caliper-front--1','e34sys:brake-pad-front--1',...['carrier','inner-pad','spring-clip','guide-lower',
@@ -100,6 +102,7 @@ function frontStrut(e30: boolean): AssemblyProcedure {
     scope:front,relatedScopes:['system:suspension'],prefix:e30?right30:prefix34,
     title:'Strut & spring service',entryView:[.30,.34,1.38],clearanceAxis:'y',
     parts:[wheel,...brake,...strut,part('drop-link'),...(e30?[axle30+'antiroll-bar']:[])],
+    attachedParts:{[hubParts[0]]:Object.values(hubHardware)},
     manuals:[service.strut,service.stack,service.cartridge],
     completed:'Right front strut reinstalled. Replace springs or cartridges in axle pairs. Verify brake pedal pressure, clear hose and wire routing, and alignment before normal use.',
     steps:[

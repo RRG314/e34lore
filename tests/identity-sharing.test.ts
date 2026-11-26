@@ -35,6 +35,21 @@ describe("public sharing boundary", () => {
       "https://e34lore.com/garages/owner/car#journal-abc",
     );
   });
+  it('shares E30 repair and manual links with their exact locations',()=>{
+    expect(publicShareUrl('/e30/workshop?mode=repair&service=e30-air-cleaner&model_revision=1203&vehicle=private&scan=private'))
+      .toBe('https://e34lore.com/e30/workshop?model_revision=1203&mode=repair&service=e30-air-cleaner');
+    expect(publicShareUrl('/e30/manual/13?pdf=272')).toBe('https://e34lore.com/e30/manual/13?pdf=272');
+    expect(publicShareUrl('/e30/repairs/e30-air-filter#owner-experience'))
+      .toBe('https://e34lore.com/e30/repairs/e30-air-filter#owner-experience');
+    expect(publicShareUrl('/e30/workshop/assets')).toBeNull();
+  });
+  it('shares public board context without including the visitor’s search text',()=>{
+    const thread = '/community/12345678-1234-1234-1234-123456789abc';
+    const redacted = '?reply=abc&series=e30&board=maintenance#post-abc';
+    const input = thread+'?reply=abc&series=e30&board=maintenance&q=private%20search#post-abc';
+    expect(publicShareUrl(input)).toBe('https://e34lore.com'+thread+redacted);
+    expect(publicShareUrl(input,'http://127.0.0.1:3094')).toBe('http://127.0.0.1:3094'+thread+redacted);
+  });
   it("preserves guide revisions and precise step anchors", () => {
     expect(
       publicShareUrl("/guides/cooling-inspection?revision=abc123#guide-step-4"),

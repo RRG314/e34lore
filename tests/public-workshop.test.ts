@@ -5,7 +5,7 @@ import path from 'node:path';
 import { createHash } from 'node:crypto';
 import { type ReferenceModel, parseReference, defaultView, visibleNodes, members, matches, findNode, resolveInitial, partHref, savedView, toggleOpening } from '../src/digital-twin/public/model';
 import { installedBounds, offsets, viewBounds } from '../src/digital-twin/public/layout';
-import { assemblyAccess, assemblyProcedures, assemblyScene, availableAssemblyServices, sumpSteps, type AssemblyServiceId } from '../src/digital-twin/public/assembly-service';
+import { assemblyAccess, assemblyCatalogParts, assemblyProcedures, assemblyScene, availableAssemblyServices, sumpSteps, type AssemblyServiceId } from '../src/digital-twin/public/assembly-service';
 import { reconstructionAccess } from '../src/digital-twin/public/access';
 import{usageArea}from'../src/domain/usage';
 import { publicShareUrl } from '../src/domain/identity';
@@ -389,4 +389,188 @@ it.each(['e30-rear-brakes','e34-rear-brakes'] as const)('resolves the prerequisi
     const access=assemblyAccess(procedure);
     expect(access[0].parts).toEqual([wheel]);
     expect(access.every(step=>step.parts.every(part=>procedure.parts.includes(part)))).toBe(true);
+});
+
+it.each([
+    ['e30-center-bearing','e30shaft:bearing','e30assembly:propeller:center-mount','Pull the support and bearing off the shaft',.005],
+    ['e34-center-bearing','e34sys:center-bearing-insert','e34sys:center-bearing','Pull the support and bearing off the shaft',.003],
+    ['e30-flex-disc','e30assembly:propeller:flex-disc','e30assembly:propeller:center-mount','Remove the flex disc from the shaft',.005],
+    ['e34-flex-disc','e34sys:flexible-drive-coupling','e34sys:center-bearing','Remove the flex disc from the shaft',.003],
+] as const)('clears the tunnel and refits the driveline in %s', (id,part,mount,removedAction,preload) => {
+    const {steps} = assemblyProcedures[id];
+    const cleared = assemblyAccess(assemblyProcedures[id]);
+    const removedAt = steps.findIndex(step=>step.action===removedAction);
+    expect(cleared.slice(0,2).map(step=>step.action)).toEqual(['Lower the exhaust','Remove the tunnel heat shield']);
+    expect(cleared.at(-1)!.index).toBeLessThan(removedAt);
+    const removed = assemblyScene({id,completed:removedAt+1});
+    expect(removed.offsets.get(part)).not.toEqual([0,0,0]);
+    if (id==='e30-flex-disc') {
+        expect(removed.offsets.has('e30shaft:rear-nut-1')).toBe(false);
+        expect(removed.offsets.has('e30assembly:propeller:rear-section')).toBe(false);
+        expect(removed.rotations.get('e30assembly:propeller:rear-section')).toBe(-7);
+    }
+    if (id==='e34-center-bearing') {
+        expect(removed.offsets.has('e34shaft:sleeve')).toBe(false);
+        expect(removed.offsets.has('e34shaft:pivot-bolt')).toBe(true);
+    }
+    const fitted = assemblyScene({id,completed:steps.length});
+    expect(fitted.offsets.get(part)).toEqual([0,0,0]);
+    expect(fitted.offsets.get(mount)).toEqual([preload,0,0]);
+    expect([...fitted.offsets].filter(([node])=>node!==mount).every(([,offset])=>offset.every(n=>n===0))).toBe(true);
+    expect([...fitted.rotations.values()].every(value=>value===0)).toBe(true);
+});
+
+it.each(['e30', 'e34'] as const)('supports the %s final drive separately and puts the shafts back in place', series => {
+    const id = `${series}-rear-differential` as const;
+    const job = assemblyProcedures[id];
+    const after = (action: string) => {
+        const index = job.steps.findIndex(step => step.action === action);
+        expect(index).toBeGreaterThanOrEqual(0);
+        return assemblyScene({id, completed: index + 1});
+    };
+    const [caseId, coverId] = job.parts.map(part => part.includes(':') ? part : job.prefix + part);
+    const lowered = after('Release the rear mount and lower the differential');
+    expect(lowered.offsets.get(caseId)?.[1]).toBeLessThan(-.15);
+    expect(lowered.offsets.get(caseId)).toEqual(lowered.offsets.get(coverId));
+    expect([...lowered.rotationsX.values()]).toEqual([-6, 6]);
+    expect(lowered.offsets.get(job.prefix + 'sender-plug')).not.toEqual(lowered.offsets.get(caseId));
+    const finish = assemblyScene({id, completed: job.steps.length});
+    expect([...finish.offsets.values()].every(point => point.every(value => value === 0))).toBe(true);
+    expect([...finish.rotationsX.values()]).toEqual([0, 0]);
+});
+
+it.each([
+    ['e30-left-halfshaft', 'left', true], ['e30-right-halfshaft', 'right', true],
+    ['e34-left-halfshaft', 'left', false], ['e34-right-halfshaft', 'right', false],
+] as const)('uses the correct wheel-side axle attachment for %s', (id, side, e30) => {
+    const job = assemblyProcedures[id];
+    const open = assemblyScene({id, completed: 0});
+    const prefix = job.prefix + side;
+    expect(assemblyCatalogParts(job)).toContain(prefix + '-output');
+    expect(open.parts.has(prefix + '-collar')).toBe(e30);
+    expect(open.parts.has(prefix + '-outer-bolt-6')).toBe(!e30);
+    expect(open.parts.has(prefix + '-inner-plate-3')).toBe(true);
+    const finish = assemblyScene({id, completed: job.steps.length});
+    expect([...finish.offsets.values()].every(point => point.every(value => value === 0))).toBe(true);
+    expect(finish.offsets.has(prefix + (e30 ? '-lock' : '-outer-bolt-6'))).toBe(true);
+});
+
+it.each(['left', 'right'] as const)('lowers the E30 %s spring on the arm pivots and leaves the upper pad at the body', side => {
+    const id = `e30-${side}-rear-spring` as const;
+    const job = assemblyProcedures[id];
+    const arm = 'e30assembly:rear-' + side + ':trailing-arm';
+    const lower = job.steps.findIndex(step=>step.action==='Release the lower shock bolt and lower the arm');
+    expect(lower).toBeGreaterThan(0);
+    const tilted = assemblyScene({id, completed:lower+1});
+    expect(tilted.pivots.get(arm)?.between).toEqual([job.prefix+'inner-bolt',job.prefix+'outer-bolt']);
+    expect(tilted.pivots.has(job.prefix+'upper-pad')).toBe(false);
+    expect(tilted.pivots.has(job.prefix+'lower-pad')).toBe(true);
+    expect(tilted.pivots.get(arm)?.degrees).toBe(side==='left'?-30:30);
+    const final = assemblyScene({id, completed:job.steps.length});
+    expect(final.pivots.size).toBe(0);
+    expect([...final.offsets.values()].every(point=>point.every(value=>value===0))).toBe(true);
+});
+
+it.each(['left', 'right'] as const)('contains the E34 %s strut spring before removing its rod locknut', side => {
+    const id = `e34-${side}-rear-strut` as const;
+    const job = assemblyProcedures[id];
+    const spring = 'e34sys:rear-coil-spring-' + (side==='left'?'1':'-1');
+    const removeNut = job.steps.findIndex(step=>step.action==='Remove the piston-rod nut and top mount');
+    expect(removeNut).toBeGreaterThan(0);
+    const held = assemblyScene({id, completed:removeNut});
+    expect(held.scaleY.get(spring)).toBeLessThan(1);
+    const final = assemblyScene({id, completed:job.steps.length});
+    expect(final.scaleY.get(spring)).toBe(1);
+    expect([...final.offsets.values()].every(point=>point.every(value=>value===0))).toBe(true);
+});
+
+it.each([
+    'e30-left-rear-arm', 'e30-right-rear-arm', 'e34-left-rear-arm', 'e34-right-rear-arm',
+] as const)('returns both bushings and the pivot hardware to the installed positions in %s', id => {
+    const job=assemblyProcedures[id];
+    const pressedOut=job.steps.findIndex(step=>step.action==='Press both bushings out');
+    expect(pressedOut).toBeGreaterThan(0);
+    const removed=assemblyScene({id,completed:pressedOut+1});
+    expect(removed.offsets.get(job.prefix+'inner-bushing')).not.toEqual(removed.offsets.get(job.prefix+'outer-bushing'));
+    const final=assemblyScene({id,completed:job.steps.length});
+    expect(final.pivots.size).toBe(0);
+    expect([...final.offsets.values()].every(point=>point.every(value=>value===0))).toBe(true);
+    expect(assemblyCatalogParts(job)).toContain(job.prefix+'inner-bushing');
+});
+
+it.each([
+    'e30-left-rear-wheel-bearing', 'e30-right-rear-wheel-bearing',
+    'e34-left-rear-wheel-bearing', 'e34-right-rear-wheel-bearing',
+] as const)('preserves the bearing press order and restores all parts in %s', id => {
+    const job = assemblyProcedures[id];
+    const index = (action:string) => job.steps.findIndex(step=>step.action===action);
+    const bearing = job.prefix + 'bearing', clip = job.prefix + 'circlip';
+    const clipOff=index('Remove the bearing retaining ring');
+    const bearingOff=index('Pull the old bearing out of the arm');
+    const bearingOn=index('Press the new bearing into the shoulder');
+    const clipOn=index('Seat the new circlip');
+    const hubOn=index('Draw in the hub with the inner race supported');
+    expect([clipOff,bearingOff,bearingOn,clipOn,hubOn].every(step=>step>=0)).toBe(true);
+    expect(clipOff).toBeLessThan(bearingOff);
+    expect(bearingOff).toBeLessThan(bearingOn);
+    expect(bearingOn).toBeLessThan(clipOn);
+    expect(clipOn).toBeLessThan(hubOn);
+    const open=assemblyScene({id,completed:bearingOff+1});
+    expect(open.offsets.get(bearing)?.[2]).toBeCloseTo(job.side==='left'?-.112:.112);
+    expect(open.offsets.get(clip)).not.toEqual([0,0,0]);
+    const finished=assemblyScene({id,completed:job.steps.length});
+    expect([...finished.offsets.values()].every(point=>point.every(value=>value===0))).toBe(true);
+    expect(assemblyCatalogParts(job)).toContain(bearing);
+    const serviceText=job.steps[index('Torque the collar nut and fit its new lockplate')].description;
+    expect(serviceText).toContain(id.startsWith('e30')?'200 N·m':'250 N·m');
+});
+
+it.each([
+    'e30-left-front-hub', 'e30-right-front-hub', 'e34-left-front-hub', 'e34-right-front-hub',
+] as const)('removes the collar before pulling the hub and restores the wheel end in %s', id => {
+    const job = assemblyProcedures[id];
+    const [hub] = assemblyCatalogParts(job);
+    const cap = job.prefix+'cap', nut = job.prefix+'nut';
+    const pullStep = job.steps.findIndex(step=>step.action==='Pull the hub and bearing off the spindle');
+    expect(pullStep).toBeGreaterThan(0);
+    const startPull = assemblyScene({id,completed:pullStep});
+    expect(startPull.offsets.has(hub)).toBe(false);
+    expect(startPull.offsets.get(nut)).not.toEqual([0,0,0]);
+    expect(startPull.offsets.get(cap)).not.toEqual([0,0,0]);
+    const pulled = assemblyScene({id,completed:pullStep+1});
+    expect(pulled.offsets.get(hub)).toEqual([0,0,job.side==='left'?-.18:.18]);
+    const staking = job.steps.find(step=>step.description.includes('290 N·m'));
+    expect(staking?.tools).toContain(id.startsWith('e30')?'36 mm':'46 mm');
+    const refitted = assemblyScene({id,completed:job.steps.length});
+    expect([...refitted.offsets.values()].every(point=>point.every(value=>value===0))).toBe(true);
+});
+
+it.each(['e30-front-strut','e34-front-strut'] as const)('carries the installed hub hardware with %s', id => {
+    const job = assemblyProcedures[id];
+    const moved = job.steps.findIndex(step=>step.action==='Remove the complete strut');
+    const scene = assemblyScene({id,completed:moved+1});
+    const hub = id.startsWith('e30')?'e30assembly:front-right:hub':'e34sys:hub-front--1';
+    const prefix = id.slice(0,3)+'front-hub:right:';
+    expect(scene.offsets.get(hub)).not.toEqual([0,0,0]);
+    for (const hardware of ['cap','nut','shield']) {
+        expect(scene.parts.has(prefix+hardware)).toBe(true);
+        expect(scene.offsets.get(prefix+hardware)).toEqual(scene.offsets.get(hub));
+    }
+});
+
+it.each(['e30-air-cleaner','e34-air-cleaner'] as const)('releases the airbox and reseats its clips in %s', id => {
+    const job = assemblyProcedures[id];
+    const lift = job.steps.findIndex(step=>step.action==='Lift the lid and meter');
+    const clips = job.steps[lift-1].access!;
+    expect(clips).toHaveLength(id.startsWith('e30')?4:5);
+    const released = assemblyScene({id,completed:lift});
+    expect(released.openPanels).toHaveLength(1);
+    expect(clips.every(clip=>Math.abs(released.rotationsX.get(clip)??0)===53)).toBe(true);
+    expect(released.offsets.has(job.prefix+'airbox-lid')).toBe(false);
+    const raised = assemblyScene({id,completed:lift+1});
+    expect(raised.offsets.get(job.prefix+'airbox-lid')?.[1]).toBeGreaterThan(0);
+    const final = assemblyScene({id,completed:job.steps.length});
+    expect(final.openPanels).toEqual([]);
+    expect([...final.offsets.values()].every(point=>point.every(value=>value===0))).toBe(true);
+    expect([...final.rotationsX.values()].every(angle=>angle===0)).toBe(true);
 });

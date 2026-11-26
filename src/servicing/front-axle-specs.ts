@@ -1,5 +1,6 @@
 import type { RepairSpecs, RepairSource } from './repair-specs';
 import { e30FactoryManualArchive } from '../series/e30-manual';
+import hubs from '../../data/digital-twin/front-hub-references.json';
 
 const page=(chapter:string,pdf:number,label:string):RepairSource=>({label,href:`/manual/${chapter}?pdf=${pdf}`});
 const e30Torque=(label:string):RepairSource=>({label:'BMW E30 torque manual · '+label,href:e30FactoryManualArchive.download});
@@ -110,10 +111,12 @@ export const frontAxleSpecs: readonly RepairSpecs[]=[
       'BMW 31 2 101 / 102 / 104 hub puller set and 31 2 120 installer, or the correct equivalents.',
       'Torque wrench rated for 290 Nm; staking tool for the new nut.'],
     specs:[{item:'New front collar nut to stub axle',value:'290 Nm',condition:'Stake the new collar nut after tightening. Replace the grease cap.',source:e30Torque('31-6 · PDF 106')}],
-    parts:[{name:'Front hub with ABS provision',number:'31211129576',condition:'Catalog replacement for 31 21 1 131 297; verify the fitted hub.'},
-      {name:'New M24 × 1.5 collar nut',number:'31211125826'},{name:'New grease cap',number:'31211130125'}],
+    parts:[{name:'Front hub with ABS provision',number:hubs.e30.replacement,condition:'Catalog replacement for 31 21 1 131 297; verify the fitted hub.'},
+      {name:'New M24 × 1.5 collar nut',number:hubs.e30.nut},{name:'New grease cap',number:hubs.e30.cap},
+      {name:'Inboard dust collar',number:hubs.e30.shield,condition:'Replace if damaged or disturbed during race removal.'}],
     catalog:factory('e30','front hub and wheel bearing diagram','front_rear_axle/wheel_bearings'),
-    nodes:/^e30assembly:front-(?:left|right):hub$/,modelNode:'e30assembly:front-left:hub',numbers:['31211131297'],
+    nodes:/^(?:e30assembly:front-(?:left|right):hub|e30front-hub:(?:left|right):(?:nut|cap|shield))$/,
+    modelNode:'e30assembly:front-left:hub',numbers:[hubs.e30.hub],
   },
   {
     id:'e30-front-anti-roll',series:'e30',guide:'e30-front-stabilizer',title:'Front anti-roll bar, links and mounts',topic:'e30-front-stabilizer',
@@ -224,10 +227,12 @@ export const frontAxleSpecs: readonly RepairSpecs[]=[
       'Torque wrench rated for 290 Nm and a tool to stake the new collar nut.'],
     specs:[{item:'New collar nut to stub axle',value:'290 Nm',condition:'Stake the nut after tightening.',source:page('310',284,'Bentley · 310-8, front hub torque')},
       {item:'Brake rotor retaining screw',value:'16 Nm',source:page('310',284,'Bentley · 310-8, rotor retention')}],
-    parts:[{name:'Symmetric front hub, 83 mm',number:'31221139345',condition:'From 03/1991, where the catalog lists the symmetric hub.'},
-      {name:'New front collar nut',number:'31211128336'},{name:'Dust protection collar, 69 mm',number:'31206777788',condition:'From 03/1991.'}],
+    parts:[{name:'Symmetric front hub, 83 mm',number:hubs.e34.hub,condition:'Match the symmetric hole pattern. The catalog lists 31 22 1 139 348 as the replacement.'},
+      {name:'New front collar nut',number:hubs.e34.nut},{name:'New grease cap',number:hubs.e34.cap},
+      {name:'Inboard dust collar, 69 mm',number:hubs.e34.shield,condition:'From 03/1991. Replace if damaged or disturbed during race removal.'}],
     catalog:factory('e34','front wheel bearing diagram','front_rear_axle/wheel_bearings'),
-    nodes:/^e34sys:hub-front--?1$/,modelNode:'e34sys:hub-front-1',numbers:['31211129386','31221139348'],
+    nodes:/^(?:e34sys:hub-front--?1|e34front-hub:(?:left|right):(?:nut|cap|shield))$/,
+    modelNode:'e34sys:hub-front-1',numbers:['31211129386',hubs.e34.replacement],
   },
   {
     id:'e34-front-anti-roll',series:'e34',title:'Front anti-roll bar and drop links',topic:'310-job-front-anti-roll-bar',

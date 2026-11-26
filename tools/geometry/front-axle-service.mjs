@@ -44,7 +44,7 @@ function ribbedBoot(g, start, end, outer, inner) {
   });
 }
 
-export function buildFrontCorner(series,side,part) {
+export function buildFrontCorner(series,side,part,drawSpindle) {
   const e30=series==='e30', s=side==='right'?1:-1;
   const p=([x,y,z])=>[x,y,s*z];
   const spindle=p(e30?[1.39,.300,.648]:[1.3805,.32375,.638]);
@@ -85,9 +85,12 @@ export function buildFrontCorner(series,side,part) {
     loft(g,[[[0,.045,0],.027,.023],[[0,.004,0],.046,.027],[[0,-.040,0],.037,.017]],M.dark,{sides:16,up:[0,0,1]});
     loft(g,[[[0,0,0],.035,.024],[q(brakeEar),.035,.023]],M.dark,{sides:16});
     for(const height of [-.043,.045])ring(g,.019,.006,.016,raise(q(brakeEar),height),M.steel,'z',24);
-    const machined=lathe(g,[[.029,0],[.030,.007],[.029,.019],[.024,.029],
-      [.024,.077],[.018,.084],[.018,.100],[0,.100]],M.machined,'z',36);
-    machined.scale.z=s;
+    if(drawSpindle) drawSpindle(g);
+    else {
+      const machined=lathe(g,[[.029,0],[.030,.007],[.029,.019],[.024,.029],
+        [.024,.077],[.018,.084],[.018,.100],[0,.100]],M.machined,'z',36);
+      machined.scale.z=s;
+    }
     if(e30){
       for(const point of [armOuter,tieOuter]){
         const hole=raise(q(point),socketHeight-.009);

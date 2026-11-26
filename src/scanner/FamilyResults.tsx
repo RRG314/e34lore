@@ -23,7 +23,6 @@ export function FamilyResults({comparison,disabled=false,chosen,onFamilyChange,v
  const bearing=centerSupportReference(vehicle.model,series);
  const references=referencesForSeries(series);
  const reference=resolveVehicleReference(references,vehicle).selected;
- const centerGuide=series==='e30'?'/guides/e30-driveshaft-center-support':'/workshop/repair?task=center-support-bearing&system=system%3Adriveshaft';
  const workshop=(path:string)=>journeyHref(path+(reference?'&reference='+encodeURIComponent(reference.id):''),navigation);
  const driveshaftChoice=driveshaftChoices.find(choice=>choice.id===chosen);
  const e30DriveshaftNodes: Record<string,string> = {'center-support-bearing':'e30assembly:propeller:center-mount','flex-disc':'e30assembly:propeller:flex-disc'};
@@ -48,12 +47,14 @@ export function FamilyResults({comparison,disabled=false,chosen,onFamilyChange,v
    <h3>{family.name}</h3>
    {family.id==='center-support-bearing'?<>
     <p>The <strong>{bearing.label}</strong> catalog lists the complete mount and the bearing insert separately. Check the bracket, rubber cushion and bearing size against the diagram.</p>
-    <DocumentLink target="_blank" rel="noopener" href={series==='e30'?journeyHref(centerGuide,navigation):workshop(centerGuide)}>Open guided bearing inspection and service preparation ↗</DocumentLink>
+    {series==='e30'
+      ? <DocumentLink href={journeyHref('/guides/e30-driveshaft-center-support',navigation)}>Center support repair guide</DocumentLink>
+      : <DocumentLink href={workshop('/workshop/repair?task=center-support-bearing&system=system%3Adriveshaft')}>Center support inspection checklist</DocumentLink>}
     <DocumentLink target="_blank" rel="noopener" href={bearing.source}>Open the {bearing.label} catalog drawing ↗</DocumentLink>
    </>:family.id==='ball-bearing'?<p>Compare the bore and outside diameter. Bearings of the same size can have different seals and uses.</p>:family.id==='flex-disc'?<p>Compare the bolt-hole spacing, thickness and flange shape with the catalog.</p>:<p>Compare mounting points, connectors and any measurable dimensions with the catalog.</p>}
    <FamilyPartComparison family={family.id} series={series} vehicle={vehicle} disabled={disabled} onCatalogNumber={onCatalogNumber}/>
    <div className="scan-next">
-    {family.search&&<DocumentLink target="_blank" rel="noopener" href={journeyHref('/parts/catalog?q='+encodeURIComponent(family.search),navigation)}>Compare OEM records ↗</DocumentLink>}
+    {family.search&&<DocumentLink href={journeyHref('/parts/catalog?q='+encodeURIComponent(family.search),navigation)}>Search the OEM catalog</DocumentLink>}
     {family.system&&<DocumentLink target="_blank" rel="noopener" href={workshop(systemLink)}>{family.id==='center-support-bearing'?'See the center support in the car ↗':driveshaftChoice?'See this part in the car ↗':'Explore this system in the car ↗'}</DocumentLink>}
     {series==='e34'&&family.guide&&<DocumentLink target="_blank" rel="noopener" href={journeyHref('/manual/'+family.guide+'?pdf=267',navigation)}>Driveshaft service manual · 260-7–260-8 ↗</DocumentLink>}
     <DocumentLink target="_blank" rel="noopener" href={journeyHref('/community/new?title='+encodeURIComponent('Help identifying '+family.name.toLowerCase())+(series==='e30'?'&series=e30':''),navigation)}>Ask the community to help identify it ↗</DocumentLink>

@@ -1,0 +1,33 @@
+{
+  "e30": {
+    "modelId": "e30-325i-coupe-manual",
+    "revision": 1202,
+    "catalogAssembly": "catalog-assembly-3b302a7a90a2cae66fad6e06",
+    "hub": "31211131297",
+    "replacement": "31211129576",
+    "nut": "31211125826",
+    "cap": "31211130125",
+    "shield": "31211126790",
+    "bore": 31,
+    "flange": 120,
+    "boltCircle": 100,
+    "bolts": 4,
+    "absTeeth": 48
+  },
+  "e34": {
+    "modelId": "e34-525i-sedan-automatic",
+    "revision": 1057,
+    "catalogAssembly": "catalog-assembly-bd9ced657e84f2d21b2d8093",
+    "hub": "31221139345",
+    "replacement": "31221139348",
+    "nut": "31211128336",
+    "cap": "31206777789",
+    "shield": "31206777788",
+    "bore": 37,
+    "flange": 139,
+    "boltCircle": 120,
+    "bolts": 5,
+    "absTeeth": 48,
+    "absDiameter": 83
+  }
+}

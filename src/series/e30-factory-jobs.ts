@@ -26,6 +26,8 @@ export const e30FactoryJobs = [
   job("ix-front-final-drive", "325iX front final drive setup", "drivetrain", "Group 31 · front final drive adjustment", [552], ["M20"]),
   job("rear-axle-layout", "Rear axle and suspension layout drawing", "suspension", "33-0 · 15° rear axle", [618]),
   job("rear-final-drive", "Rear final drive removal and installation", "drivetrain", "33-1 · 33 10 010", [621]),
+  job("rear-output-shaft", "Rear output shaft removal and installation", "drivetrain", "33-4 · 33 21 000", [625,626]),
+  job("rear-trailing-arm", "Rear trailing arms and bushings", "suspension", "33-7 to 33-8 · 33 32 000 and 33 32 561", [628,629]),
   job("rear-shock-absorbers", "Rear shock absorber removal and installation", "suspension", "33-16 · 33 52 000", [636]),
   job("rear-coil-springs", "Rear coil spring removal and installation", "suspension", "33-17 · 33 53 000", [637]),
   job("brake-test", "Brake test on a test stand", "brakes", "34 00 009", [640]),

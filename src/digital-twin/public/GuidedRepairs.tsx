@@ -6,7 +6,11 @@ import type { ReferenceModel } from './model';
 import { assemblyAccess, type AssemblyProcedure } from './assembly-service';
 
 const areas: Record<string, string> = {
+  'system:engine-bay': 'Engine',
   'system:cooling': 'Cooling',
+  'system:driveshaft': 'Driveshaft',
+  'system:differential': 'Rear axle',
+  'system:rear-suspension': 'Rear suspension',
   'system:front-brakes': 'Brakes',
   'system:rear-brakes': 'Brakes',
   'system:front-suspension': 'Suspension & steering',
@@ -39,11 +43,16 @@ export function GuidedRepairs({ choices, loading, onStart, workLog }: {
     {choices.length ? <div className="workshop-guided-groups">{[...groups].sort(([a],[b])=>a.localeCompare(b)).map(([label, jobs]) =>
       <section key={label} aria-label={label}>
         <h3>{label}</h3>
-        <ul>{jobs.map(job => <li key={job.id}>
-          <button type="button" onClick={() => onStart(job)} disabled={loading}>
+        <ul>{jobs.filter(job=>job.side!=='right'||!jobs.some(other=>other.title===job.title&&other.side==='left')).map(job=>{
+          const other=job.side==='left'?jobs.find(choice=>choice.title===job.title&&choice.side==='right'):undefined;
+          return <li key={job.id}>{other ? <div className="guided-repair-sides">
+            <span>{job.title}</span>
+            {[job,other].map(side=><button key={side.id} type="button" disabled={loading}
+              aria-label={job.title+' · '+side.side+' side'} onClick={()=>onStart(side)}>{side.side==='left'?'Left':'Right'}</button>)}
+          </div> : <button type="button" onClick={() => onStart(job)} disabled={loading}>
             <span>{job.title}</span><ChevronRight size={16} aria-hidden="true"/>
-          </button>
-        </li>)}</ul>
+          </button>}</li>;
+        })}</ul>
       </section>,
     )}</div> : <p>{loading ? 'Loading guided repairs…' : 'No guided 3D repairs are available for this reference. The repair guides and service manual are available above.'}</p>}
     {workLog && <DocumentLink className="text-link" href={workLog}>Open the M50 water pump work log <ArrowUpRight size={14}/></DocumentLink>}

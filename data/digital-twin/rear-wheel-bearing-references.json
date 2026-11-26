@@ -1,0 +1,26 @@
+{
+  "e30": {
+    "modelId": "e30-325i-coupe-manual",
+    "revision": 1201,
+    "catalogAssembly": "catalog-assembly-c22a5af99a239fe8412ea005",
+    "part": "33416762317",
+    "diameter": 75,
+    "bore": 42,
+    "width": 37,
+    "hub": "33411131121",
+    "collar": "33411125664",
+    "lock": "33411124945"
+  },
+  "e34": {
+    "modelId": "e34-525i-sedan-automatic",
+    "revision": 1056,
+    "catalogAssembly": "catalog-assembly-f5d0fb38ec840a3f676e6b63",
+    "part": "33411123415",
+    "diameter": 74,
+    "bore": 37,
+    "width": 45,
+    "hub": "33411132849",
+    "collar": "33411123428",
+    "lock": "33411123973"
+  }
+}

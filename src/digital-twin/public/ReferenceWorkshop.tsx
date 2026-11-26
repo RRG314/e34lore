@@ -7,7 +7,9 @@ import { track } from "../../analytics/client";
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { ArrowUpRight, ChevronLeft, EyeOff, Focus, Layers, Maximize2, Minimize2, RotateCcw, Search, SlidersHorizontal, X, Save, Trash2 } from 'lucide-react';
 import { loadReference, referenceRelease } from './load-reference';
-import { journeyHref } from '../../domain/repair-journey';
+import { garageIdentificationHref, journeyHref } from '../../domain/repair-journey';
+import { componentHref, componentRepairHref, componentScannerHref, type ComponentContext } from '../../servicing/context';
+import { guidedRepairHref } from './assembly-links';
 import { GuidedRepairs, RepairAccess } from './GuidedRepairs';
 import { assemblyProcedures, assemblyScene, availableAssemblyServices, type AssemblyProcedure } from './assembly-service';
 import currentRelease from '../../../data/digital-twin/public-reference.json';
@@ -35,7 +37,7 @@ type Saved = {
     camera: ModelCamera | null;
     revision: number;
 };
-export function ReferenceWorkshop({embedded=false,referenceControls,buildAppearance,guidedRepair=false,initialService,repairMode,repairTask,initialVehicle,initialScan, initialPart, initialNode, initialSystem, initialCatalogPosition, initialModelRevision,initialReference, referenceFocus }: {
+export function ReferenceWorkshop({embedded=false,referenceControls,buildAppearance,guidedRepair=false,initialService,repairComponent,repairMode,repairTask,initialVehicle,initialScan, initialPart, initialNode, initialSystem, initialCatalogPosition, initialModelRevision,initialReference, referenceFocus }: {
     embedded?:boolean;
     buildAppearance?:import("../../build-studio/schema").BuildAppearance;
     referenceControls?:import("react").ReactNode;
@@ -45,6 +47,7 @@ export function ReferenceWorkshop({embedded=false,referenceControls,buildAppeara
     initialNode?: string;
     initialSystem?: string;
     initialCatalogPosition?: string;
+    repairComponent?: Partial<ComponentContext>;
     referenceFocus?: string;
 }) {
     const { user, toast,vehicle,series } = useApp(); const owned = useOwnedCars(),journey=useRepairJourney(initialScan);
@@ -164,6 +167,8 @@ export function ReferenceWorkshop({embedded=false,referenceControls,buildAppeara
         ? availableAssemblyServices(model) : [], [embedded, repairMode, buildAppearance, model]);
     const progress = view.assemblyService;
     const procedure = progress ? assemblyProcedures[progress.id] : undefined;
+    const serviceSide = procedure?.side && serviceChoices.find(choice=>
+        choice.side && choice.side!==procedure.side && choice.title===procedure.title);
     const serviceStep = progress ? procedure?.steps[progress.completed] : undefined;
     const serviceFocus = progress ? assemblyScene(progress).focus[0] : undefined;
     function startAssemblyService(choice: AssemblyProcedure) {
@@ -294,6 +299,12 @@ export function ReferenceWorkshop({embedded=false,referenceControls,buildAppeara
     const systemServiceChoices = serviceChoices.filter(choice => !isGearboxInspection(choice.scope)
         && (choice.scope === view.scope || choice.relatedScopes?.includes(view.scope)
             || selected?.systemIds.includes(choice.scope) && assemblyScene({id:choice.id,completed:0}).parts.has(selected.id)));
+    const repairPart = repairComponent?.partId ? { ...repairComponent, partId: repairComponent.partId } : undefined;
+    const repairNavigation = { vehicle: journey.activeId, scan: journey.scanId };
+    const savedPartMatches = !!journey.scan && (!repairPart || (
+        journey.scan.part_id === repairPart.partId &&
+        (!repairPart.positionId || journey.scan.catalog_position_id === repairPart.positionId)
+    ));
     const repairLink=(service:string)=>journeyHref('/workshop?'+new URLSearchParams({
         mode:'repair',reference:release.id,model_revision:String(release.revision),service,
     }).toString(),{vehicle:journey.activeId,scan:journey.scanId});
@@ -327,8 +338,16 @@ export function ReferenceWorkshop({embedded=false,referenceControls,buildAppeara
  <div ref={frame} tabIndex={-1} className={'reference-frame' + (fullscreen.expanded ? ' reference-expanded' : '') + (progress ? ' reference-service-active' : '')}>
  {procedure && progress && model && <div className="repair-service-header">
    <div className="reference-assembly-heading">
-     <h2>{procedure.title}</h2>
-     <button type="button" className="button outline" onClick={exitAssemblyService}>All guided repairs</button>
+     <h2>{procedure.title}{procedure.side && <small> · {procedure.side==='left'?'Left side':'Right side'}</small>}</h2>
+     <nav aria-label="3D walkthrough navigation">
+       {repairPart && !journey.scanLoading && <DocumentLink className="button outline" href={componentHref(repairPart,repairNavigation)}>Back to part in catalog</DocumentLink>}
+       {procedure.topic && !journey.scanLoading && <DocumentLink className="button outline" href={componentRepairHref(procedure.topic,repairPart,repairNavigation)}>Repair guide & discussion</DocumentLink>}
+       {savedPartMatches
+         ? <DocumentLink className="button primary" href={garageIdentificationHref(repairNavigation)}>View saved part in My Garage</DocumentLink>
+         : repairPart && !journey.scanLoading && <DocumentLink className="button outline" href={componentScannerHref(repairPart,{vehicle:journey.activeId})}>Save this part to My Garage</DocumentLink>}
+       {serviceSide && !journey.scanLoading && <DocumentLink className="button outline" href={guidedRepairHref(serviceSide,release.revision,repairNavigation,repairPart)}>Switch to {serviceSide.side} side</DocumentLink>}
+       <button type="button" className="button outline" onClick={exitAssemblyService}>All guided repairs</button>
+     </nav>
    </div>
    <RepairAccess key={procedure.id} model={model} procedure={procedure} completed={progress.completed} onInspect={inspectServicePart}/>
  </div>}
@@ -397,6 +416,7 @@ export function ReferenceWorkshop({embedded=false,referenceControls,buildAppeara
  </div>
  {procedure && progress && model && <section className="reference-assembly-service" aria-label={procedure.title}>
    <div aria-live="polite">
+     <p className="repair-step-status">{serviceStep ? 'Step '+(progress.completed+1)+' of '+procedure.steps.length : 'Reassembled'}</p>
      <p>{serviceStep?.description ?? procedure.completed}</p>
      {serviceStep?.tools && <p><strong>Tools</strong> · {serviceStep.tools}</p>}
    </div>

@@ -16,6 +16,10 @@ export function journeyHref(path: string, journey: Journey): string {
   if (car && scan) u.searchParams.set('scan', scan);
   return u.pathname + u.search + u.hash;
 }
+export function garageIdentificationHref(journey: Journey): string {
+  const focus = ownedId(journey.vehicle) && ownedId(journey.scan);
+  return journeyHref('/garage?tab=scans' + (focus ? '#saved-identification' : ''), journey);
+}
 export function ownedSelection(ids: string[], requested: string | null, saved: string | null) {
   if (requested !== null) return ownedId(requested) && ids.includes(requested) ? requested : '';
   return saved && ids.includes(saved) ? saved : '';

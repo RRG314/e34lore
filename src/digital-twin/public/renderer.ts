@@ -12,7 +12,7 @@ import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { MeshoptDecoder } from 'three/addons/libs/meshopt_decoder.module.js';
 import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
 import { isGearboxInspection, bodyTrimScope, brakeHydraulicsScope, engineCutaway, isEngineInspection, engineBayScope, frontSuspensionScope, rearSuspensionScope, gearboxCutaway, visibleNodes, isExteriorNode,enclosingParts, canOpenPanels, type ReferenceModel, type ReaderView, type Viewpoint, type Vec } from './model';
-import { installedBounds, offsets, referenceFrame } from './layout';
+import { installedBounds, offsets, referenceFrame, servicePivotTransforms } from './layout';
 import { isWiringNode, isWiringScope, wiringAsset } from '../../data/wiring-routes';
 import { wiringGeometry } from './wiring-model';
 const isE30RoadWheel=(id:string)=>/^e30assembly:(front|rear)-(left|right):wheel$/.test(id);
@@ -83,6 +83,7 @@ export class ReferenceRenderer {
     private serviceScaleY = new Map<string, number>();
     private serviceRotations = new Map<string, T.Quaternion>();
     private openingMembers=new Map<string,string[]>();
+    private memberPanels=new Map<string,string[]>();
     private openingParents=new Map<string,string[]>();
     private panelNodes=new Map<string,ReferenceModel['nodes'][number]>();
     private closedRotations=new Map<string,T.Quaternion>();
@@ -145,7 +146,10 @@ export class ReferenceRenderer {
                 part = part.parentId ? nodes.get(part.parentId) : undefined;
             }
             const [panel, ...parents] = ancestors;
-            if (panel) this.openingMembers.get(panel)!.push(node.id);
+            if (panel) {
+                this.openingMembers.get(panel)!.push(node.id);
+                this.memberPanels.set(node.id,ancestors);
+            }
             if (panel === node.id) this.openingParents.set(panel, parents);
         }
         this.renderer = new T.WebGLRenderer({ antialias: true, powerPreference: 'low-power' });
@@ -436,6 +440,8 @@ export class ReferenceRenderer {
         this.renderer.localClippingEnabled = cutaway||engineSection;
         const visible = new Set(visibleNodes(this.model, animate && view.explosion === 0 ? {...view,explosion:previous.explosion} : view).map(n => n.id)), spread = offsets(this.model, view);
         const assembly = service ? assemblyScene(service) : null;
+        const pivotTransforms = assembly && servicePivotTransforms(this.model, assembly.pivots);
+        const axisX = new T.Vector3(1,0,0);
         const axisZ = new T.Vector3(0,0,1);
         for (const [id, object] of this.objects) {
             object.visible = visible.has(id);
@@ -446,14 +452,18 @@ export class ReferenceRenderer {
                 if (scaleY !== undefined || animate) this.serviceScaleY.set(id, targetScale);
                 else this.serviceScaleY.delete(id);
             }
-            const angle = assembly?.rotations.get(id);
-            if (angle !== undefined || this.serviceRotations.has(id)) {
+            const angleX = assembly?.rotationsX.get(id);
+            const angleZ = assembly?.rotations.get(id);
+            const pivot = pivotTransforms?.get(id);
+            const hasRotation = angleX !== undefined || angleZ !== undefined || !!pivot;
+            if (hasRotation || this.serviceRotations.has(id)) {
                 const installed = this.closedRotations.get(id)!;
-                const orientation = angle
-                    ? new T.Quaternion().setFromAxisAngle(axisZ, T.MathUtils.degToRad(angle)).multiply(installed)
-                    : installed;
+                const orientation = installed.clone();
+                if (angleX) orientation.premultiply(new T.Quaternion().setFromAxisAngle(axisX, T.MathUtils.degToRad(angleX)));
+                if (angleZ) orientation.premultiply(new T.Quaternion().setFromAxisAngle(axisZ, T.MathUtils.degToRad(angleZ)));
+                if (pivot) orientation.premultiply(pivot.rotation);
                 if (!animate) object.quaternion.copy(orientation);
-                if (angle !== undefined || animate) this.serviceRotations.set(id, orientation);
+                if (hasRotation || animate) this.serviceRotations.set(id, orientation);
                 else this.serviceRotations.delete(id);
             }
             const n = this.model.nodes.find(n => n.id === id)!, base = new T.Vector3(n.matrix[12], n.matrix[13], n.matrix[14]);
@@ -470,15 +480,16 @@ export class ReferenceRenderer {
                 if(!installedScale&&/^(?:e34body|e34sys|e34trim|e34bay|e34brake|e34chassis|e34hvac|touring|e30body|e30trim|e30hvac):|^e30assembly:(?:cabin(?:-floor)?|cockpit|front-seats|rear-seats|headlining|luggage):/.test(id))
                     target.y+=appearance.rideHeight*.045;
             }
-            if (animate && serviceChanged && service) {
+            if (animate && serviceChanged && service && !pivot && !this.memberPanels.has(id)) {
                 const start = object.position;
-                const {clearanceAxis:axis,clearancePitch=0} = assemblyProcedures[service.id];
+                const {clearanceAxis:axis,clearancePitch=0,verticalRemoval} = assemblyProcedures[service.id];
                 const axialDistance = target[axis] - start[axis];
                 const travel = target.clone().sub(start);
                 travel[axis] = 0;
                 if (Math.abs(axialDistance) > .004 && travel.lengthSq() > .004 ** 2) {
                     if (axis === 'y') {
-                        this.partWaypoints.set(id, start.y > target.y
+                        const withdrawing = verticalRemoval==='up' ? axialDistance>0 : axialDistance<0;
+                        this.partWaypoints.set(id, withdrawing
                             ? new T.Vector3(start.x, target.y, start.z)
                             : new T.Vector3(target.x, start.y, target.z));
                     } else if (axis === 'z') {
@@ -717,10 +728,15 @@ export class ReferenceRenderer {
         const dt = Math.min(.05, this.last ? (now - this.last) / 1000 : .016);
         this.last = now;
         let moving = false;
-        if (this.partsMoving) {
+        // A panel requested for access has to reach its open pose before the parts move.
+        const openingForAccess = !!this.view.assemblyService && this.openingsMoving &&
+            (this.view.openPanels??[]).some(id=>(this.openingProgress.get(id)??0)<1);
+        if (this.partsMoving && !openingForAccess) {
             let unsettled = false;
             const fraction = 1 - Math.exp(-dt / .055);
             for (const [id, object] of this.objects) {
+                // The panel transform owns these poses while the panel is off its seat.
+                if (this.view.assemblyService && this.memberPanels.get(id)?.some(panel=>(this.openingProgress.get(panel)??0)>0)) continue;
                 const waypoint = this.partWaypoints.get(id);
                 const target = waypoint ?? this.partTargets.get(id);
                 if (!target) continue;
@@ -752,10 +768,11 @@ export class ReferenceRenderer {
             this.floor.visible = !this.view.assemblyService && !unsettled && this.view.explosion === 0 && !this.view.cabin;
             moving ||= unsettled;
         }
-        if(this.openingsMoving&&!this.partsMoving) {
+        if(this.openingsMoving&&(!this.partsMoving||openingForAccess)) {
             this.openingsMoving=this.updateOpenings(dt);
             moving||=this.openingsMoving;
         }
+        moving||=this.partsMoving;
         if (this.destination) {
             this.camera.position.lerp(this.destination.position, Math.min(1, dt * 8));
             this.controls.target.lerp(this.destination.target, Math.min(1, dt * 8));

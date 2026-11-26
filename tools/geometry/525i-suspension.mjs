@@ -158,27 +158,8 @@ export function addSuspension(collect) {
       tube(g,[[1.369,.260,side*.491],[1.35,.237,side*.39],[1.323,.214,side*.26],[1.351,.189,0]],.003,M.seam,24);
     }
   },{matrix:origin,systems:systems(frontScope,bayScope),keepBinding:true,...refs('frontCarrier','31111139660')});
-  collect('e34sys:rear-subframe','Rear axle carrier',g=>{
-    loft(g,[
-      [[-1.19,.29,-.604],.052,.039],[[-1.16,.283,-.505],.063,.037],
-      [[-1.119,.267,-.362],.064,.032],[[-1.111,.27,-.203],.058,.034],
-      [[-1.181,.359,-.120],.073,.040],[[-1.198,.393,0],.079,.035],
-      [[-1.181,.359,.120],.073,.040],[[-1.111,.27,.203],.058,.034],
-      [[-1.119,.267,.362],.064,.032],[[-1.16,.283,.505],.063,.037],
-      [[-1.19,.29,.604],.052,.039],
-    ],M.dark,{sides:20,wall:.003});
-    for(const z of [-1,1]){
-      loft(g,[[[-1.125,.295,z*.332],.045,.022],[[-1.278,.334,z*.299],.048,.028],
-        [[-1.465,.395,z*.220],.039,.024],[[-1.490,.408,z*.113],.036,.020]],M.dark,{sides:16,wall:.003});
-      for(const pivot of rearPivots(z))pivotFrame(g,pivot,z,f=>{
-        for(const offset of [-.027,.027])box(f,[.076,.009,.059],[0,offset,0],M.steel,.004);
-        box(f,[.013,.064,.056],[-.029,0,0],M.dark,.004);
-      });
-      box(g,[.081,.021,.071],[-1.105,.287,z*.352],M.dark,.006);
-    }
-    loft(g,[[[-1.49,.408,-.21],.035,.020],[[-1.519,.403,0],.044,.022],[[-1.49,.408,.21],.035,.020]],M.dark);
-    ring(g,.029,.013,.037,[-1.51,.399,0],M.steel,'x',32);
-  },{matrix:origin,systems:rear,keepBinding:true,...refs('rearCarrier','33311090566')});
+  collect('e34sys:rear-subframe','Rear axle carrier',buildE34RearCarrier,
+    {matrix:origin,systems:rear,keepBinding:true,...refs('rearCarrier','33311090566')});
   for(const [side,suffix,label] of [[-1,'1','Left'],[1,'-1','Right']]){
     addFrontCorner(collect,side,suffix,label);
     addRearCorner(collect,side,suffix,label);
@@ -252,6 +233,28 @@ function addFrontCorner(collect,side,suffix,label) {
     box(g,[.132,.012,.112],p([.946,.332,.455]),M.steel,.005);
     for(const x of [.903,.987])cylinder(g,.008,.014,p([x,.335,.465]),M.machined,'y',6);
   },{...scope,parentId:'e34sys:front-subframe',...refs('arms',side<0?'31121131639':'31121131640')});
+}
+
+export function buildE34RearCarrier(g, includePivotBrackets = true) {
+    loft(g,[
+      [[-1.19,.29,-.604],.052,.039],[[-1.16,.283,-.505],.063,.037],
+      [[-1.119,.267,-.362],.064,.032],[[-1.111,.27,-.203],.058,.034],
+      [[-1.181,.359,-.120],.073,.040],[[-1.198,.393,0],.079,.035],
+      [[-1.181,.359,.120],.073,.040],[[-1.111,.27,.203],.058,.034],
+      [[-1.119,.267,.362],.064,.032],[[-1.16,.283,.505],.063,.037],
+      [[-1.19,.29,.604],.052,.039],
+    ],M.dark,{sides:20,wall:.003});
+    for(const z of [-1,1]){
+      loft(g,[[[-1.125,.295,z*.332],.045,.022],[[-1.278,.334,z*.299],.048,.028],
+        [[-1.465,.395,z*.220],.039,.024],[[-1.490,.408,z*.113],.036,.020]],M.dark,{sides:16,wall:.003});
+      if (includePivotBrackets) for(const pivot of rearPivots(z))pivotFrame(g,pivot,z,f=>{
+        for(const offset of [-.027,.027])box(f,[.076,.009,.059],[0,offset,0],M.steel,.004);
+        box(f,[.013,.064,.056],[-.029,0,0],M.dark,.004);
+      });
+      box(g,[.081,.021,.071],[-1.105,.287,z*.352],M.dark,.006);
+    }
+    loft(g,[[[-1.49,.408,-.21],.035,.020],[[-1.519,.403,0],.044,.022],[[-1.49,.408,.21],.035,.020]],M.dark);
+    ring(g,.029,.013,.037,[-1.51,.399,0],M.steel,'x',32);
 }
 
 function addRearCorner(collect,side,suffix,label) {

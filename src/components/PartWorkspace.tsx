@@ -2,11 +2,9 @@
 import { useState } from "react";
 import { ComponentWorkspace } from "../servicing/ComponentWorkspace";
 import { componentHref, type ComponentPartIdentity } from "../servicing/context";
-import {journeyHref} from "../domain/repair-journey";
 import type { Journey } from "../domain/repair-journey";
 import type { Vehicle } from "../data/catalog";
-import { SaveButton } from "./common";
-import { DocumentLink, navigateDocument } from "./DocumentLink";
+import { navigateDocument } from "./DocumentLink";
 
 /** The canonical number, source scope and actual garage journey travel together. */
 export function PartWorkspace({ part, vehicle, navigation, initialReference,initialModelRevision }: { part: ComponentPartIdentity; vehicle: Vehicle; navigation: Journey; initialReference?: string;initialModelRevision?:number }) {
@@ -25,11 +23,7 @@ export function PartWorkspace({ part, vehicle, navigation, initialReference,init
       history.replaceState(null,'',url.pathname+url.search+url.hash);
     }} onSelect={next => {
       if (next.id === part.id) { setSelected(next); return; }
-      navigateDocument(componentHref({ partId: next.id, positionId: next.positionId, assemblyId: next.assemblyId, catalogContextId: next.contextId, referenceId: context.referenceId,modelRevision:context.modelRevision||undefined }, navigation));
+      navigateDocument(componentHref({ partId: next.id, positionId: next.positionId, assemblyId: next.assemblyId, catalogContextId: next.contextId, referenceId: context.referenceId,modelRevision:context.modelRevision||undefined }, {vehicle:navigation.vehicle}));
     }}/>
-    <section id="component-save" className="component-save-actions"><h3>Keep this part with your car</h3>
-      <SaveButton kind="part" id={selected.id} title={selected.name}/>
-      <DocumentLink className="button outline" href={journeyHref('/garage?install_part='+encodeURIComponent(selected.id),navigation)}>Record an installed part ↗</DocumentLink>
-    </section>
   </div>;
 }

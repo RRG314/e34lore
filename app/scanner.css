@@ -121,11 +121,7 @@
 .scanner-results {
   min-width: 0;
 }
-.scanner-results h2 {
-  font-size: 28px;
-  margin-top: 0;
-}
-.scanner-results > label {
+.scanner-results form > label {
   margin: 24px 0 10px;
   display: block;
 }

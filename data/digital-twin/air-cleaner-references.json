@@ -1,0 +1,26 @@
+{
+  "e30": {
+    "model": "e30-325i-coupe-manual",
+    "revision": 1203,
+    "assembly": "catalog-assembly-32f7a59625eaab5a538507a3",
+    "filter": "13721720861",
+    "clip": "13711707044",
+    "case": "13711726965",
+    "clips": 4,
+    "length": 256,
+    "width": 150,
+    "height": 57
+  },
+  "e34": {
+    "model": "e34-525i-sedan-automatic",
+    "revision": 1058,
+    "assembly": "catalog-assembly-c973ce2562754c1cfb37eada",
+    "filter": "13721730918",
+    "clip": "13711716113",
+    "case": "13711735344",
+    "clips": 5,
+    "length": 325,
+    "width": 150,
+    "height": 57
+  }
+}

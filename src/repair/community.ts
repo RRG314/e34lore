@@ -1,5 +1,6 @@
 import { repairTopic, type RepairTopic } from './library';
 import { templateBody } from '../community/content';
+import { seriesHref } from '../series/registry';
 
 const markerQuestion = 'E34 Lore repair topic';
 export type RepairIntent = 'repair-comment' | 'repair-writeup';
@@ -18,6 +19,9 @@ export function repairComposeContext(params: URLSearchParams) {
 export function repairDraftKey(topic: RepairTopic, intent: RepairIntent) { return `e34.repair.draft.v1.${topic.id}.${intent}`; }
 export function repairContributionHref(topic: RepairTopic, intent: RepairIntent) {
   return '/community/new?' + new URLSearchParams({ repair: topic.id, intent, ...(topic.series ? {series: topic.series} : {}) });
+}
+export function repairOwnerPostsHref(topic: RepairTopic) {
+  return seriesHref('/repairs/'+topic.id+'#owner-experience',topic.series??'e34');
 }
 export function repairComposeDefaults(topic: RepairTopic, intent: RepairIntent) {
   const writeup = intent === 'repair-writeup';

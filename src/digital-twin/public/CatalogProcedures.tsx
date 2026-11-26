@@ -5,7 +5,8 @@ import {seriesHref, type Series} from '../../series/registry';
 import {e30Guides} from '../../series/e30-repairs';
 import {useEffect,useState} from "react";
 import {loadReference} from "./load-reference";
-import {availableAssemblyServices,type AssemblyProcedure} from "./assembly-service";
+import {assemblyCatalogParts,availableAssemblyServices,type AssemblyProcedure} from "./assembly-service";
+import {guidedRepairHref} from "./assembly-links";
 import {componentGuideHref, componentWorkshopHref, requestedComponent, type ComponentContext} from "../../servicing/context";
 import { ServiceOverview } from "../../servicing/ServiceOverview";
 import { previewFeatures } from "../../release/features";
@@ -63,10 +64,10 @@ export function CatalogProcedureLinks({ partId, positionId, assemblyId, catalogC
 
  const index=hasReference ? current?.catalog : series==='e34' ? componentCatalog : null;
  const links = index ? catalogProcedures(partId,positionId,assemblyId,partNumber,index) : { nodes:[], manual:[], guides:[] };
- const guided = current?.services.find(service=>service.catalogParts?.some(node=>links.nodes.includes(node)));
- const guidedHref = guided && index ? journeyHref('/workshop?' + new URLSearchParams({
-   mode:'repair',service:guided.id,reference:index.modelId,model_revision:String(index.modelRevision),
- }),context) : undefined;
+ const matchedNodes = reference.nodeId && links.nodes.includes(reference.nodeId) ? [reference.nodeId] : links.nodes;
+ const matchingRepairs = current?.services.filter(service=>assemblyCatalogParts(service).some(node=>matchedNodes.includes(node))) ?? [];
+ const guided = matchingRepairs.filter(service=>service.side!=='right' ||
+    !matchingRepairs.some(other=>other.side==='left'&&other.scope===service.scope&&other.topic===service.topic));
  const number = partNumber || partId;
  const specs = specsForPart(series,number);
  const sharedGuide = e30GuidesByNumber[number.replace(/^bmw-/, '')];
@@ -85,7 +86,7 @@ export function CatalogProcedureLinks({ partId, positionId, assemblyId, catalogC
  };
  return <>
   {current?.error && <p role="status">The selected model’s links could not load. <button type="button" className="text-link" onClick={()=>setRetry(n=>n+1)}>Retry model links</button></p>}
-  {guidedHref && <DocumentLink className="button outline" series={series} href={guidedHref}>Open guided 3D repair <ArrowUpRight size={15}/></DocumentLink>}
+  {index && guided.map(job=><DocumentLink key={job.id} className="button primary" series={series} href={guidedRepairHref(job,index.modelRevision,context,component)}>{guided.length===1?'Open guided 3D repair':job.title+' in 3D'} <ArrowUpRight size={15}/></DocumentLink>)}
   {specs.map(job=><RepairSpecCard key={job.id} job={job} compact entry="catalog" component={component} navigation={context}/>)}
   {(guideIds.length>0||manual.length>0)&&<ServiceLinks guideIds={guideIds} manual={manual.slice(0,4)} navigation={context} vehicleOverride={vehicleOverride} seriesOverride={series} component={component}/>} {nodeId&&!specs.length&&<DocumentLink className="button outline full" series={series} href={componentWorkshopHref(component,context)}>View related model reference <ArrowUpRight size={15}/></DocumentLink>}</>;
 }

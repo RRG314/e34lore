@@ -65,26 +65,21 @@
   font-size: 11px;
   color: var(--muted);
 }
-.community-layout .filter-sidebar {
-  min-width: 0;
+.community-board-filters {
+  display: grid;
+  grid-template-columns: minmax(165px, 1fr) minmax(130px, .8fr) minmax(200px, 1.4fr);
+  gap: 14px;
+  align-items: end;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 18px;
+  margin-bottom: 22px;
 }
-.community-layout .filter-sidebar > button {
-  white-space: normal;
-  text-align: left;
-  line-height: 1.4;
-  padding: 12px 0;
-}
-.community-layout .filter-sidebar > button.selected {
-  padding-left: 12px;
-}
-.community-tag-filter {
-  font-size: 12px;
-  margin-top: 20px;
-}
-.community-tag-filter select {
-  font-size: 12px;
-  max-width: 100%;
-  width: 100%;
+.community-board-filters > label { min-width: 0; margin: 0; }
+.community-board-filters select, .community-board-filters input { width: 100%; min-width: 0; }
+.community-board-filters .input-icon { width: 100%; }
+@media (max-width: 650px) {
+  .community-board-filters { grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 10px; }
+  .community-board-search { grid-column: 1 / -1; }
 }
 .community-library-controls {
   display: grid;
@@ -469,9 +464,6 @@
   }
   .policy-section h2 {
     font-size: 28px;
-  }
-  .community-layout .filter-sidebar > button {
-    font-size: 12px;
   }
   .editorial-topic .discussion-layout {
     gap: 30px;

@@ -49,7 +49,7 @@ export function PageIntro({
 }: {
   eyebrow: string;
   title: string;
-  description: string;
+  description?: string;
   children?: ReactNode;
   share?: boolean;
 }) {
@@ -58,7 +58,7 @@ export function PageIntro({
       <div>
         <div className="eyebrow">{eyebrow}</div>
         <h1>{title}</h1>
-        <p>{description}</p>
+        {description && <p>{description}</p>}
       </div>
       {(children||share)&&<div className="page-intro-actions">
         {children}

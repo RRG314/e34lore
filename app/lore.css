@@ -1364,6 +1364,7 @@
 
 .reference-assembly-service {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: 12px;
   padding: 16px;
   border-top: 1px solid var(--line);
@@ -1376,6 +1377,13 @@
   flex-wrap: wrap;
 }
 .reference-assembly-heading { justify-content: space-between; }
+.reference-assembly-actions .button {
+  max-width: 100%;
+  min-height: 44px;
+  justify-content: center;
+  text-align: center;
+  white-space: normal;
+}
 .reference-assembly-service h3,
 .reference-assembly-service p { margin: 0; }
 .reference-assembly-service p + p { margin-top: 5px; }
@@ -1386,6 +1394,7 @@
   text-decoration: underline;
   text-underline-offset: 3px;
 }
+.reference-assembly-sources a svg { flex: none; }
 @media (max-width: 700px) {
   .reference-frame.reference-service-active:not(.reference-expanded) {
     --model-height: clamp(185px, 39svh, 300px);
@@ -1420,3 +1429,10 @@
 .repair-service-header { padding: .8rem 1rem 0; background: var(--white); }
 .repair-service-header h2 { margin: .25rem 0; font-size: clamp(1.2rem, 3vw, 1.55rem); }
 .repair-service-header .repair-access { margin-top: .55rem; border-bottom: 0; }
+
+.guided-repair-sides { display: grid; grid-template-columns: minmax(0, 1fr) auto auto; align-items: center; gap: .3rem; border-bottom: 1px solid var(--line); }
+.guided-repair-sides button { justify-content: center; min-width: 44px; padding-inline: .32rem; border-bottom: 0; }
+.guided-repair-sides button:focus-visible { outline-offset: -3px; }
+.reference-assembly-heading nav { display: flex; flex-wrap: wrap; gap: .4rem; }
+.reference-assembly-heading h2 small { font: inherit; font-size: .8em; }
+.repair-step-status { font-size: .86rem; font-weight: 650; }

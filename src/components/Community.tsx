@@ -8,11 +8,11 @@ import { ContributionNotice } from './SitePolicies';
 import { GuestAccess } from "./GuestAccess";
 import { ReportButton } from "./ReportButton";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { attachRepairContext, repairComposeContext, repairComposeDefaults, repairDraftKey, repairFromObservations } from '../repair/community';
+import { attachRepairContext, repairComposeContext, repairComposeDefaults, repairDraftKey, repairFromObservations, repairOwnerPostsHref } from '../repair/community';
 import { specialistThreadPrefix } from "../community/specialists";
 import { ArrowUpRight, ArrowLeft, MessageSquare, Search, CheckCircle2, Send, Trash2, Pencil, Check, Link as LinkIcon, History } from "lucide-react";
 import { db, useApp } from "./context";
-import { displayModel, modelKey, seriesDefinitions, seriesForModel, seriesIds, type Series } from "../series/registry";
+import { displayModel, modelKey, seriesDefinitions, seriesForModel, seriesHref, seriesIds, type Series } from "../series/registry";
 import { articles, quickSymptoms, systems, parts, emptyVehicle, sanitizeVehicle } from "../data/catalog";
 import { GarageAvatar,useGarageAvatars } from "./GarageProfile";
 import { restoreCommunityDraft, type CommunityDraft } from "../community/drafts";
@@ -25,6 +25,7 @@ import { MemberControls, useCommunityPreferences } from "./CommunityGovernance";
 import { formatPartNumber } from "../domain/fitment";
 import { communityCategories, communityTags, discussionTemplates, editorials, editorialHref, templateBody, type TemplateId } from "../community/content";
 import { AdviceFeedback, CommunityTagPicker, ProposeReview, type AdviceSummary } from "./CommunityFeatures";
+import { boardForCategory, communityBoardHref, communityBoardLabel, communityBoards, communityBoardSelection, communityReplyHref, type CommunityBoardSelection } from '../community/boards';
 type DiscussionSummary={body:string;engine:string|null;id:string;author_id:string;title:string;category:string;model_id:string|null;created_at:string;posts:{count:number}[];accepted_answers:{post_id:string}[]};
 type Reply=ContributionSnapshot&{id:string;thread_id:string;author_id:string;created_at:string;content_version:number;in_reply_to_post_id:string|null;hidden:boolean};
 type DiscussionRecord=ContributionSnapshot&{starter_topic_id:string|null;tag_ids:string[];id:string;author_id:string;title:string;category:string;created_at:string;content_version:number;locked:boolean;article_slug:string|null;diagnostic_slug:string|null;node_id:string|null;configuration_revision_id:string|null;catalog_position_id:string|null;guide_revision:string|null;guide_step:number|null;build_id:string|null;journal_update_id:string|null;manual_chapter_id:string|null;garage:{id:string;user_id:string;title:string}|null;tags:string[]};
@@ -35,22 +36,33 @@ const date = (value: string) =>
     day: "numeric",
     year: "numeric",
   });
-export function CommunityPage({initialQuery=''}:{initialQuery?:string}) {
-  const { user } = useApp();
+export function CommunityPage({boardQuery}:{boardQuery?:Record<string,string|undefined>}) {
+  const { user, series } = useApp();
   const { preferences, error: preferenceError } = useCommunityPreferences();
+  const initial = communityBoardSelection(boardQuery);
   const [list, setList] = useState<DiscussionSummary[]>([]),
     [names, setNames] = useState<Record<string, string>>({}),
-    [category, setCategory] = useState(""),
-    [tag, setTag] = useState(""),
-    [q, setQ] = useState(initialQuery.slice(0,160)),
-    [searchQuery, setSearchQuery] = useState(initialQuery.slice(0,160)),
+    [boardId,setBoardId] = useState(initial.board),
+    [tag, setTag] = useState(initial.tag),
+    [q, setQ] = useState(initial.q),
+    [searchQuery, setSearchQuery] = useState(initial.q),
     [cursor, setCursor] = useState<{ created_at: string; id: string } | null>(
       null,
     ),
     [hasMore, setHasMore] = useState(false),
     [loading, setLoading] = useState(true),
-    [error, setError] = useState("");
-  const avatars=useGarageAvatars(list.map(thread=>thread.author_id));
+    [error, setError] = useState(false),
+    [refresh,setRefresh] = useState(0);
+  const board = communityBoards.find(item=>item.id===boardId);
+  const category = board?.name ?? '';
+  const selection = {board:boardId,tag,q:q.trim()};
+  const visible = list.filter(thread=>!preferences.some(p=>p.target_user_id===thread.author_id));
+  const avatars=useGarageAvatars(visible.map(thread=>thread.author_id));
+  const composeHref = communityBoardHref(selection,'/community/new');
+  useEffect(() => {
+    const url = seriesHref(communityBoardHref({board:boardId,tag,q:searchQuery}),series);
+    window.history.replaceState(window.history.state,'',url);
+  }, [boardId,tag,searchQuery,series]);
   useEffect(() => {
     const timer = setTimeout(() => {
       setCursor(null);
@@ -62,7 +74,7 @@ export function CommunityPage({initialQuery=''}:{initialQuery?:string}) {
     let active = true;
     async function get() {
       setLoading(true);
-      setError("");
+      setError(false);
       const { data, error } = await db
         .rpc("browse_community", {
           search_query: searchQuery,
@@ -74,7 +86,7 @@ export function CommunityPage({initialQuery=''}:{initialQuery?:string}) {
         })
         .select("*,posts(count),accepted_answers(post_id)");
       if (!active) return;
-      if (error) setError(error.message);
+      if (error) setError(true);
       else {
         const page: DiscussionSummary[] = (data || []).slice(0, 20);
         setList((previous) =>
@@ -109,7 +121,7 @@ export function CommunityPage({initialQuery=''}:{initialQuery?:string}) {
     return () => {
       active = false;
     };
-  }, [category, tag, searchQuery, cursor, user?.id, preferences]);
+  }, [category, tag, searchQuery, cursor, user?.id, refresh]);
   return (
     <div className="page">
       <PageIntro
@@ -118,106 +130,82 @@ export function CommunityPage({initialQuery=''}:{initialQuery?:string}) {
         description="Ask a repair question, compare parts or share what worked on your car."
         share={false}
       >
-        <DocumentLink href="/community/new" className="button primary">
-          Start a conversation
+        <DocumentLink href={composeHref} className="button primary">
+          Start a discussion
           <ArrowUpRight size={17} />
         </DocumentLink>
       </PageIntro>
-      <div className="community-layout">
-        <aside className="filter-sidebar">
-          <span className="eyebrow">THE CONVERSATION</span>
-          <button
-            className={!category ? "selected" : ""}
-            onClick={() => {
+      <div className="community-board-filters">
+          <label>
+            Board
+            <select value={boardId} onChange={event=>{
               setCursor(null);
-              setCategory("");
-            }}
-          >
-            All discussions
-          </button>
-          {categories.map((c) => (
-            <button
-              key={c}
-              className={category === c ? "selected" : ""}
-              onClick={() => {
-                setCursor(null);
-                setCategory(c);
-              }}
-            >
-              {c}
-            </button>
-          ))}
-          <label className="community-tag-filter">
-            Filter by tag
+              setBoardId(communityBoardSelection({board:event.target.value}).board);
+            }}>
+              <option value="">All boards</option>
+              {communityBoards.map(item=><option key={item.id} value={item.id}>{item.label}</option>)}
+            </select>
+          </label>
+          <label>
+            Tag
             <select
               value={tag}
               onChange={(e) => {
                 setCursor(null);
-                setTag(e.target.value);
+                setTag(communityBoardSelection({tag:e.target.value}).tag);
               }}
             >
               <option value="">All tags</option>
               {communityTags.map((t) => (
                 <option key={t.id} value={t.id}>
-                  {t.family}: {t.label}
+                  {t.label}
                 </option>
               ))}
             </select>
           </label>
-          <DocumentLink className="text-link" href="/community/settings">
-            Community settings
-          </DocumentLink>
-          <div className="community-principles">
-            <h3>Posting technical questions</h3>
-            <p>
-              Give the configuration. Describe the observation. Share the test.
-              Come back with the outcome.
-            </p>
-            <DocumentLink href="/articles/fitment-evidence">
-              How we handle evidence
-              <ArrowUpRight size={14} />
-            </DocumentLink>
-          </div>
-        </aside>
-        <section>
-          <div className="section-heading">
-            <h2>{category || "Recent discussions"}</h2>
-            <div className="input-icon">
-              <Search size={17} />
+          <label className="community-board-search">
+            Search
+            <span className="input-icon">
+              <Search size={17} aria-hidden="true" />
               <input
+                type="search"
                 value={q}
-                maxLength={300}
+                maxLength={160}
                 onChange={(e) => setQ(e.target.value)}
                 aria-label="Search discussions"
                 placeholder="Search discussions"
               />
-            </div>
+            </span>
+          </label>
+      </div>
+      <section aria-labelledby="community-discussion-heading">
+          <div className="section-heading">
+            <h2 id="community-discussion-heading">{board?.label || "Recent discussions"}</h2>
+            <DocumentLink className="text-link" href="/community/settings">Community settings</DocumentLink>
           </div>
           {preferenceError && (
             <Notice tone="warning">
-              Member preferences could not load: {preferenceError}
+              Member preferences couldn’t load.
             </Notice>
           )}
           {error && (
             <Notice tone="warning">
-              Discussions could not be loaded: {error}
+              Discussions couldn’t load. <button type="button" className="text-link" onClick={()=>{
+                setCursor(null);
+                setRefresh(value=>value+1);
+              }}>Try again</button>
             </Notice>
           )}
           {loading && cursor === null ? (
             <p className="loading-state">Loading discussions…</p>
-          ) : list.length ? (
+          ) : !error && visible.length ? (
             <div className="thread-list">
-              {list
-                .filter(
-                  (t) =>
-                    !preferences.some((p) => p.target_user_id === t.author_id),
-                )
-                .map((t) => (
-                  <a key={t.id} href={"/community/" + t.id}>
+              {visible.map((t) => (
+                  <DocumentLink key={t.id} href={communityBoardHref(selection,"/community/" + t.id)}>
                     <GarageAvatar className="thread-avatar" name={names[t.author_id]||'Member'} path={avatars[t.author_id]}/>
                     <div className="thread-summary">
                       <div className="inline-tags">
-                        <Tag>{t.category}</Tag>
+                        <Tag>{communityBoardLabel(t.category)}</Tag>
                         {t.accepted_answers?.length > 0 && (
                           <Tag tone="green">AUTHOR ACCEPTED</Tag>
                         )}
@@ -241,28 +229,25 @@ export function CommunityPage({initialQuery=''}:{initialQuery?:string}) {
                       {t.posts?.[0]?.count || 0}
                     </span>
                     <ArrowUpRight size={18} />
-                  </a>
+                  </DocumentLink>
                 ))}
             </div>
-          ) : (
+          ) : !error ? (
             <Empty
               title={
-                q || category ? "No matching discussions" : "No discussions yet"
+                q || board || tag ? "No matching discussions" : "No discussions yet"
               }
             >
-              {q || category
-                ? "Try fewer words or another category."
-                : "This is a new community. Start with a question, an inspection finding, or the story of your E34."}
-              <DocumentLink href="/community/new" className="button primary">
-                Write a post
-                <ArrowUpRight size={16} />
-              </DocumentLink>
+              {q || board || tag ? 'Try a different search or change the filters.' : 'Start with a question or share what worked on your car.'}
+              {(q || board || tag) && <button type="button" className="text-link" onClick={()=>{
+                setQ(''); setSearchQuery(''); setBoardId(''); setTag(''); setCursor(null);
+              }}>Clear filters</button>}
             </Empty>
-          )}
-          {hasMore && list.length > 0 && (
+          ) : null}
+          {!error && hasMore && list.length > 0 && (
             <div className="form-actions">
               <span className="small muted" role="status">
-                {list.length} discussions shown
+                {visible.length} discussions shown
               </span>
               <button
                 className="button outline"
@@ -276,17 +261,17 @@ export function CommunityPage({initialQuery=''}:{initialQuery?:string}) {
               </button>
             </div>
           )}
-        </section>
-      </div>
+      </section>
     </div>
   );
 }
-function QuestionForm() {
+function QuestionForm({boardSelection}:{boardSelection:CommunityBoardSelection}) {
   const { vehicle, user, authReady, requireAuth, toast, series, seriesEnabled } = useApp();
+  const startBoard = communityBoards.find(item=>item.id===boardSelection.board);
   const [composeSeries, setComposeSeries] = useState<Series>(series);
   const [specialistDraft,setSpecialistDraft]=useState(false);
   const specialistTemplate = useRef("");
-  const defaultDraftKey = series + ".question.draft.v1";
+  const defaultDraftKey = series + ".question.draft.v1" + (startBoard?'.'+startBoard.id:'');
   const draftStorageKey = useRef(defaultDraftKey);
   const [repairContext, setRepairContext] = useState<ReturnType<typeof repairComposeContext>>(null);
   const [busy, setBusy] = useState(false),
@@ -294,8 +279,8 @@ function QuestionForm() {
       chapter: "",
       title: "",
       body: "",
-      category: communityCategories[0].name as string,
-      template: "troubleshooting" as TemplateId,
+      category: startBoard?.name ?? communityCategories[0].name as string,
+      template: (startBoard?.template ?? "troubleshooting") as TemplateId,
       starter: "",
       tags: [] as string[],
       model: "",
@@ -341,6 +326,7 @@ function QuestionForm() {
     const repair = repairComposeContext(p);
     // eslint-disable-next-line react-hooks/set-state-in-effect -- Hydrate the URL and existing browser question/repair draft once.
     setRepairContext(repair);
+    if (repair) setComposeSeries(repair.topic.series??'e34');
     const specialist=p.get('intent')==='specialist';
     draftStorageKey.current = repair ? repairDraftKey(repair.topic, repair.intent) : specialist ? 'e34.question.specialist.draft.v1' : defaultDraftKey;
     setSpecialistDraft(specialist);
@@ -612,16 +598,19 @@ function QuestionForm() {
       sessionStorage.setItem(draftStorageKey.current, JSON.stringify(draft));
   }, [draft, context, specialistDraft]);
   const update = (k: string, v: string) => setDraft((d) => ({ ...d, [k]: v }));
+  const backHref = repairContext ? repairOwnerPostsHref(repairContext.topic) :
+    specialistDraft ? '/community/specialists' : communityBoardHref(boardSelection);
+  const backSeries = repairContext ? repairContext.topic.series??'e34' : series;
   return (
     <div className="page question-page">
-      <a href={repairContext ? '/repairs/' + repairContext.topic.id : specialistDraft?'/community/specialists':'/community'} className="back-link">
+      <DocumentLink href={backHref} series={backSeries} className="back-link">
         <ArrowLeft size={16} />
-        {repairContext ? 'Back to ' + repairContext.topic.title : specialistDraft?'BMW specialists':'Community'}
-      </a>
+        {repairContext ? 'Back to repair discussion' : specialistDraft ? 'BMW specialists' : 'Back to '+(startBoard?.label||'discussions')}
+      </DocumentLink>
       <PageIntro
-        eyebrow={repairContext ? "E34 OWNER EXPERIENCE" : "START A CONVERSATION"}
+        eyebrow={repairContext ? backSeries.toUpperCase()+" REPAIR DISCUSSION" : startBoard?.label ?? "COMMUNITY"}
         title={repairContext ? repairContext.intent === 'repair-writeup' ? 'Share your repair walkthrough.' : 'Add a comment or question.' : specialistDraft?'Share a BMW specialist.':'New discussion.'}
-        description={repairContext ? 'Linked to: ' + repairContext.topic.title + '. Include your car, what you did and what happened.' : specialistDraft?'Recommend a business you have used, or provide a sourced correction to a listing.':'Include the vehicle configuration, symptoms, recent work and tests already performed.'}
+        description={repairContext ? repairContext.topic.title : specialistDraft?'Recommend a business you have used, or provide a sourced correction to a listing.':undefined}
       />
       <div className="question-layout">
         <form
@@ -693,7 +682,8 @@ function QuestionForm() {
             if (error) toast(error.message);
             else {
               sessionStorage.removeItem(draftStorageKey.current);
-              location.href = user?.is_anonymous ? "/account?guest=submitted" : "/community/" + data.id;
+              location.href = user?.is_anonymous ? "/account?guest=submitted" :
+                seriesHref(communityBoardHref(boardSelection,"/community/" + data.id),composeSeries);
             }
           }}
         >
@@ -850,11 +840,11 @@ function QuestionForm() {
                     }
                   >
                     {categories.map((c) => (
-                      <option key={c}>{c}</option>
+                      <option key={c} value={c}>{communityBoardLabel(c)}</option>
                     ))}
                   </select>
                 </label>
-                {seriesEnabled && <label>BMW series<select value={draft.garage ? seriesForModel(draft.model) : composeSeries} disabled={!!draft.garage || !!repairContext?.topic.series} onChange={e => {
+                {seriesEnabled && <label>BMW series<select value={draft.garage ? seriesForModel(draft.model) : composeSeries} disabled={!!draft.garage || !!repairContext} onChange={e => {
                   setComposeSeries(e.target.value as Series);
                   setDraft(d => ({ ...d, model: "", engine: "" }));
                 }}>{seriesIds.map(id => <option key={id} value={id}>{id.toUpperCase()}</option>)}</select></label>}
@@ -946,15 +936,14 @@ function QuestionForm() {
           </div>
           {authReady && !user && (
             <Notice>
-              Sign in or use Continue as guest before submitting. Your draft is
-              saved in this tab.
+              Sign in to publish. Your draft is saved in this tab.
             </Notice>
           )}
           <ContributionNotice/>
           <div className="form-actions">
-            <a href={repairContext ? '/repairs/' + repairContext.topic.id : specialistDraft?'/community/specialists':'/community'} className="button quiet">
+            <DocumentLink href={backHref} series={backSeries} className="button quiet">
               Cancel
-            </a>
+            </DocumentLink>
             <button
               className="button primary"
               disabled={busy || !linkReady || !!linkError}
@@ -999,12 +988,13 @@ function QuestionForm() {
     </div>
   );
 }
-export function ThreadPage({ id }: { id: string }) {
-  if (id === "new") return <QuestionForm />;
-  return <Discussion key={id} id={id} />;
+export function ThreadPage({id,boardQuery}:{id:string;boardQuery?:Record<string,string|undefined>}) {
+  const boardSelection = communityBoardSelection(boardQuery);
+  if (id === "new") return <QuestionForm boardSelection={boardSelection}/>;
+  return <Discussion key={id} id={id} boardSelection={boardSelection}/>;
 }
-function Discussion({ id }: { id: string }) {
-  const { user, requireAuth, toast } = useApp();
+function Discussion({id,boardSelection}:{id:string;boardSelection:CommunityBoardSelection}) {
+  const { user, requireAuth, toast, series } = useApp();
   const { preferences, error: preferenceError } = useCommunityPreferences();
   const [thread, setThread] = useState<DiscussionRecord|null>(null),
     [posts, setPosts] = useState<Reply[]>([]),
@@ -1020,6 +1010,7 @@ function Discussion({ id }: { id: string }) {
     >([]),
     [replyMore, setReplyMore] = useState(false),
     [focusPost, setFocusPost] = useState<string | null>(()=>typeof location!=="undefined"?new URLSearchParams(location.search).get("reply"):null),
+    [replyError, setReplyError] = useState(false),
     [accepted, setAccepted] = useState(""),
     [loading, setLoading] = useState(true),
     [error, setError] = useState(""),
@@ -1039,17 +1030,27 @@ function Discussion({ id }: { id: string }) {
       latest?: { body: string; title?: string; content_version: number };
     } | null>(null);
   const avatars=useGarageAvatars([...(thread?[thread.author_id]:[]),...posts.map(post=>post.author_id)]);
+  const postedReply = useRef<string|null>(null);
+  useEffect(()=>{
+    const id = postedReply.current;
+    if (!id || !posts.some(post=>post.id===id)) return;
+    document.getElementById('post-'+id)?.scrollIntoView({block:'nearest'});
+    postedReply.current = null;
+  },[posts]);
   useEffect(() => {
     let active = true;
+    const controller = new AbortController();
+    const signal = AbortSignal.any([controller.signal,AbortSignal.timeout(12000)]);
     async function get() {
+      setError('');
       const t = await db
         .from("threads")
         .select("*,garage:garage_showcases(id,user_id,title)")
         .eq("id", id)
-        .maybeSingle();
+        .abortSignal(signal).maybeSingle();
       if (!active) return;
       if (t.error) {
-        setError(t.error.message);
+        setError('The discussion couldn’t load. Try again in a moment.');
         setLoading(false);
         return;
       }
@@ -1066,16 +1067,16 @@ function Discussion({ id }: { id: string }) {
           cursor_created_at: replyCursor?.created_at || null,
           cursor_id: replyCursor?.id || null,
           focus_post: replyCursor ? null : focusPost,
-        }),
+        }).abortSignal(signal),
         db
           .from("accepted_answers")
           .select("post_id")
           .eq("thread_id", id)
-          .maybeSingle(),
+          .abortSignal(signal).maybeSingle(),
       ]);
       if (!active) return;
+      setReplyError(!!p.error);
       if (p.error) {
-        setError(p.error.message);
         setLoading(false);
         return;
       }
@@ -1087,7 +1088,7 @@ function Discussion({ id }: { id: string }) {
       if (replyRows.length) {
         const feedback = await db.rpc("community_feedback_summary", {
           post_ids: replyRows.map((r) => r.id),
-        });
+        }).abortSignal(signal);
         if (!active) return;
         if (feedback.error) setFeedbackError(feedback.error.message);
         else
@@ -1107,7 +1108,7 @@ function Discussion({ id }: { id: string }) {
       const profiles = await db
         .from("profiles")
         .select("id,display_name")
-        .in("id", ids);
+        .in("id", ids).abortSignal(signal);
       if (active) {
         setNames(
           Object.fromEntries(
@@ -1120,8 +1121,9 @@ function Discussion({ id }: { id: string }) {
     get();
     return () => {
       active = false;
+      controller.abort();
     };
-  }, [id, revision, user?.id, replyCursor, focusPost, preferences]);
+  }, [id, revision, user?.id, replyCursor, focusPost]);
   if (loading)
     return (
       <div className="page">
@@ -1133,8 +1135,8 @@ function Discussion({ id }: { id: string }) {
       <div className="page">
         <Empty title="Conversation unavailable">
           {error}
-          <DocumentLink className="button outline" href="/community">
-            Back to community
+          <DocumentLink className="button outline" href={communityBoardHref(boardSelection)}>
+            Back to discussions
           </DocumentLink>
         </Empty>
       </div>
@@ -1150,26 +1152,29 @@ function Discussion({ id }: { id: string }) {
       return;
     const { error } = await db.from(table).delete().eq("id", rid);
     if (error) toast(error.message);
-    else if (table === "threads") navigateDocument("/community");
+    else if (table === "threads") navigateDocument(seriesHref(communityBoardHref(boardSelection),series));
     else setRevision((r) => r + 1);
   }
   const own = thread.author_id === user?.id;
   const repair = repairFromObservations(thread.observations);
+  const threadBoard = boardForCategory(thread.category);
+  const backToBoard = communityBoardHref(boardSelection.board || boardSelection.tag || boardSelection.q
+    ? boardSelection : {...boardSelection,board:threadBoard?.id??''});
   return (
     <div className="page discussion-page">
-      <DocumentLink className="back-link" href="/community">
+      <DocumentLink className="back-link" href={backToBoard}>
         <ArrowLeft size={16} />
-        Community
+        Back to discussions
       </DocumentLink>
-      {repair && <p className="linked-context">Repair job: <a href={"/repairs/" + repair.id}>{repair.title} · procedures, owner fixes & comments ↗</a></p>}
+      {repair && <p className="linked-context"><DocumentLink href={repairOwnerPostsHref(repair)} series={repair.series??'e34'}>Back to repair: {repair.title} <ArrowUpRight size={14}/></DocumentLink></p>}
       <div className="inline-tags">
-        <Tag>{thread.category}</Tag>
+        <Tag>{communityBoardLabel(thread.category)}</Tag>
         {accepted && <Tag tone="green">ANSWER ACCEPTED BY AUTHOR</Tag>}
       </div>
       <PageIntro
         eyebrow={
           [thread.model_id && displayModel(thread.model_id), thread.engine].filter(Boolean).join(" / ") ||
-          "E34 COMMUNITY"
+          "COMMUNITY"
         }
         title={thread.title}
         description={
@@ -1179,6 +1184,7 @@ function Discussion({ id }: { id: string }) {
           date(thread.created_at)
         }
       >
+        {!thread.locked&&<DocumentLink className="button primary" href="#write-reply"><MessageSquare size={16}/>Reply</DocumentLink>}
         <SaveButton kind="thread" id={id} title={thread.title} />
       </PageIntro>
       {thread.locked && (
@@ -1256,10 +1262,9 @@ function Discussion({ id }: { id: string }) {
           </div>
           <div className="section-heading reply-heading">
             <h2>Replies</h2>
-            <span className="small muted">
-              Accepted answers remain owner-reported.
-            </span>
           </div>
+          {replyError&&<Notice tone="warning">Replies couldn’t load. <button
+            className="text-link" type="button" onClick={()=>setRevision(value=>value+1)}>Try again</button></Notice>}
           {preferenceError && (
             <Notice tone="warning">
               Member preferences could not load: {preferenceError}
@@ -1304,19 +1309,12 @@ function Discussion({ id }: { id: string }) {
                     )}
                   </div>
                   {p.in_reply_to_post_id && (
-                    <a
+                    <DocumentLink
                       className="reply-parent small"
-                      href={
-                        "/community/" +
-                        id +
-                        "?reply=" +
-                        p.in_reply_to_post_id +
-                        "#post-" +
-                        p.in_reply_to_post_id
-                      }
+                      href={communityReplyHref(id,p.in_reply_to_post_id,boardSelection)}
                     >
-                      In reply to a comment in this discussion ↗
-                    </a>
+                      View the reply this answers <ArrowUpRight size={14}/>
+                    </DocumentLink>
                   )}
                   <p className="post-body"><LinkedText text={p.body}/></p>
                   <AdviceFeedback
@@ -1335,9 +1333,8 @@ function Discussion({ id }: { id: string }) {
                     <ReportButton type="post" id={p.id} />
                     <ShareControls
                       title={thread.title}
-                      href={
-                        "/community/" + id + "?reply=" + p.id + "#post-" + p.id
-                      }
+                      copyLabel="Copy reply link"
+                      href={seriesHref(communityReplyHref(id,p.id,boardSelection),series)}
                     />
                     <ProposeReview post={p} />
                     <MemberControls
@@ -1434,6 +1431,7 @@ function Discussion({ id }: { id: string }) {
           </div>
           {!thread.locked && (
             <form
+              id="write-reply"
               className="reply-form"
               onSubmit={async (e) => {
                 e.preventDefault();
@@ -1446,17 +1444,23 @@ function Discussion({ id }: { id: string }) {
                 if (error) toast(error.message);
                 else {
                   setBody("");
-                  setReplyCursor(null);
-                  setReplyPrevious([]);
                   if (user?.is_anonymous) toast("Reply submitted for moderator review. Track it in Your guest submissions.");
-                  else setFocusPost(data.id);
+                  else {
+                    if (replyMore || posts.length>=50) {
+                      setReplyCursor(null);
+                      setReplyPrevious([]);
+                      setFocusPost(data.id);
+                    }
+                    postedReply.current = data.id;
+                    toast('Reply posted.');
+                  }
                   setRevision((r) => r + 1);
                 }
               }}
             >
               <GuestAccess />
               <label>
-                Add to the conversation
+                Your reply
                 <textarea
                   rows={6}
                   required
@@ -1475,7 +1479,7 @@ function Discussion({ id }: { id: string }) {
           )}
         </article>
         <aside className="thread-context">
-          <span className="eyebrow">CONNECTED CONTEXT</span>
+          <span className="eyebrow">VEHICLE & REFERENCES</span>
           <h3>{thread.model_id ? displayModel(thread.model_id) : "Model unknown"}</h3>
           <dl>
             <dt>Engine</dt>

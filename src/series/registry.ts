@@ -54,6 +54,11 @@ export function seriesHref(href: string, series: Series) {
     garage.searchParams.set("series", series);
     return garage.pathname + garage.search + garage.hash;
   }
+  if (/^\/community(?:[/?#]|$)/.test(href)) {
+    const community = new URL(href, 'https://e34lore.com');
+    if (!isSeries(community.searchParams.get('series'))) community.searchParams.set('series',series);
+    return community.pathname+community.search+community.hash;
+  }
   const segment = href.split(/[/?#]/)[1];
   if (segment && !isTechnicalSection(segment)) return href;
   return "/" + series + (href === "/" ? "" : href);

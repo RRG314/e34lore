@@ -1,6 +1,6 @@
 "use client";
 import { useState } from 'react';
-import { ArrowLeft, ArrowUpRight, BookOpen, Camera, Search } from 'lucide-react';
+import { ArrowLeft, ArrowUpRight, BookOpen, Box, Camera, Search } from 'lucide-react';
 import { DocumentLink } from '../components/DocumentLink';
 import { useApp } from '../components/context';
 import { PageIntro, Tag, Notice, Empty } from '../components/common';
@@ -10,7 +10,6 @@ import { manualChapters, manualSource } from '../data/manual';
 import { searchRepairReferences } from '../domain/repair-search';
 import { browseRepairTopics, manualTopicHref, repairTopic, repairTopicsFor, topicGuide, type RepairTopic } from './library';
 import { repairSources, illustratedRepairSources } from './sources';
-import { repairContributionHref } from './community';
 import { seriesDefinitions } from '../series/registry';
 import { e30FactoryManualArchive } from '../series/e30-manual';
 import { e30ManualGroupForPage,e30ManualGroups } from '../series/e30-factory-index';
@@ -19,6 +18,7 @@ import { useRepairJourney } from './use-journey';
 import { componentGuideHref, componentHref, componentWorkshopHref, type ComponentContext } from '../servicing/context';
 import { specsForGuide, specsForTopic, specsForSelection } from '../servicing/repair-specs';
 import { RepairSpecCard } from '../servicing/RepairSpecCard';
+import { guidedRepairHref, guidedRepairsForTopic } from '../digital-twin/public/assembly-links';
 
 function Coverage({ topic }: { topic: RepairTopic }) {
   const sources = repairSources(topic);
@@ -28,6 +28,7 @@ function Coverage({ topic }: { topic: RepairTopic }) {
   return <div className="inline-tags repair-coverage">
     {illustrated.length > 0 && <Tag><Camera size={12}/>{illustrated.length} linked {illustrated.length === 1 ? 'photo guide' : 'photo guides'}</Tag>}
     {discussions > 0 && <Tag>{discussions} linked {discussions === 1 ? 'discussion' : 'discussions'}</Tag>}
+    {guidedRepairsForTopic(topic.id,topic.series??'e34').length>0 && <Tag><Box size={12}/>3D walkthrough</Tag>}
     {guide && <Tag>{guide.kind === 'replacement' ? 'Written steps' : guide.kind === 'inspection' ? 'Inspection notes' : 'Preparation notes'}</Tag>}
     {topic.factory && <span><BookOpen size={12}/>BMW manual {topic.factory.section}</span>}
     {topic.manual && <span><BookOpen size={12}/>Manual {topic.manual.chapter}-{topic.manual.page}</span>}
@@ -43,7 +44,8 @@ export function RepairLibrary({ initialQuery = '', initialSystem = '', track }: 
   const [planTrack, setPlanTrack] = useState(track === 'swap' || track === 'mod' ? track : '');
   const [page, setPage] = useState(1);
   const matches = browseRepairTopics({ query, system, engine, planning: view === 'planning', track: planTrack, series }).filter(topic =>
-    !coverage || (coverage === 'photos' ? illustratedRepairSources(topic).length > 0 : topicGuide(topic)?.kind === 'replacement'),
+    !coverage || (coverage === '3d' ? guidedRepairsForTopic(topic.id,series).length > 0 :
+      coverage === 'photos' ? illustratedRepairSources(topic).length > 0 : topicGuide(topic)?.kind === 'replacement'),
   ).sort((a, b) => query.trim() ? 0 : Number(illustratedRepairSources(b).length > 0) - Number(illustratedRepairSources(a).length > 0));
   const shown = matches.slice(0, page * 24);
   const diagnostic = series === 'e34' && query.trim() ? searchRepairReferences(query, engine, system).find(r => r.kind === 'Diagnostic') : null;
@@ -67,7 +69,7 @@ export function RepairLibrary({ initialQuery = '', initialSystem = '', track }: 
         <div className="input-icon"><Search size={17}/><input aria-label="Search repair jobs" placeholder="Water pump, brake pads, window regulator…" value={query} onChange={event => { setQuery(event.target.value); setPage(1); }}/></div>
         <select aria-label="Filter repairs by system" value={system} onChange={event => { setSystem(event.target.value); setPage(1); }}><option value="">All systems</option>{systems.map(s => <option value={s.id} key={s.id}>{s.name}</option>)}</select>
         <select aria-label="Filter repairs by engine" value={engine} onChange={event => { setEngine(event.target.value); setPage(1); }}><option value="">All engines</option>{[...new Set(seriesDefinitions[series].models.flatMap(model => [...model.engines]))].sort().map(code => <option key={code}>{code}</option>)}</select>
-        <select aria-label="Filter repairs by available material" value={coverage} onChange={event => { setCoverage(event.target.value); setPage(1); }}><option value="">All available material</option><option value="photos">Linked DIY guides & photos</option><option value="steps">Written replacement steps</option></select>
+        <select aria-label="Filter repairs by available material" value={coverage} onChange={event => { setCoverage(event.target.value); setPage(1); }}><option value="">All available material</option><option value="photos">Linked DIY guides & photos</option><option value="steps">Written replacement steps</option><option value="3d">3D walkthroughs</option></select>
         {view === 'planning' && <select aria-label="Filter preparation topics" value={planTrack} onChange={event => { setPlanTrack(event.target.value); setPage(1); }}><option value="">All preparation topics</option><option value="swap">Engine & gearbox swaps</option><option value="mod">Modifications</option></select>}
       </form>
       <div className="section-heading"><h2>{view === 'planning' ? 'Conversions & preparation' : system ? systems.find(s => s.id === system)?.name + ' jobs' : 'Browse repair jobs'}</h2><span role="status">{matches.length} topics</span></div>
@@ -88,13 +90,14 @@ export function RepairLibrary({ initialQuery = '', initialSystem = '', track }: 
   </div>;
 }
 
-export function RepairJobPage({ id, component={} }: { id: string; component?:Partial<ComponentContext> }) {
+export function RepairJobPage({ id, component={}, initialScan }: { id: string; component?:Partial<ComponentContext>; initialScan?:string }) {
   const { vehicle, series } = useApp();
-  const journey=useRepairJourney();
+  const journey=useRepairJourney(initialScan);
   const navigation={vehicle:journey.activeId,scan:journey.scanId};
   const topic = repairTopic(id, series);
   if (!topic) return <div className="page"><Empty title="Repair job not found"><DocumentLink href="/repairs">Browse repair jobs ↗</DocumentLink></Empty></div>;
   const guide = topicGuide(topic), sources = repairSources(topic, vehicle);
+  const guided = guidedRepairsForTopic(topic.id,series);
   const relatedSpecs = [...new Map([...specsForTopic(series,id),...(guide ? specsForGuide(series,guide.slug) : [])].map(job=>[job.id,job])).values()];
   const specs = specsForSelection(relatedSpecs,series,component);
   const chapter = manualChapters.find(c => c.id === topic.manual?.chapter);
@@ -104,11 +107,14 @@ export function RepairJobPage({ id, component={} }: { id: string; component?:Par
     : topic.manual&&t.manual?.chapter===topic.manual.chapter)).slice(0, 8);
   return <div className="page repair-job-page">
     <DocumentLink className="back-link" href="/repairs"><ArrowLeft size={16}/>All repair jobs</DocumentLink>
-    <PageIntro eyebrow={series.toUpperCase() + " REPAIR LIBRARY"} title={topic.title} description="Manual procedure references, original DIY guides and owner experience for this job.">
-      <DocumentLink className="button primary" href="#job-procedures">Procedures & sources <ArrowUpRight size={16}/></DocumentLink>
-      <DocumentLink className="button outline" href="#owner-experience">Owner fixes & comments</DocumentLink>
+    <PageIntro eyebrow={series.toUpperCase() + " REPAIR LIBRARY"} title={topic.title}>
+      {!journey.scanLoading && guided.map(({job,revision})=><DocumentLink key={job.id} className="button primary"
+        href={guidedRepairHref(job,revision,navigation,component)}><Box size={16}/>{guided.length===1?'Open 3D walkthrough':job.title+' in 3D'}</DocumentLink>)}
+      <DocumentLink className={'button '+(guided.length?'outline':'primary')} href="#job-procedures">Procedures & sources <ArrowUpRight size={16}/></DocumentLink>
+      <DocumentLink className="button outline" href="#owner-experience">Repair discussion</DocumentLink>
     </PageIntro>
-    {(component.nodeId || component.partId) && <nav className="inline-tags" aria-label="Selected component">
+    {journey.scanLoading && <p role="status">Loading your saved identification…</p>}
+    {!journey.scanLoading && (component.nodeId || component.partId) && <nav className="inline-tags" aria-label="Selected component">
       {component.nodeId && <DocumentLink className="button outline" href={componentWorkshopHref(component,navigation)}>Back to part in Workshop</DocumentLink>}
       {component.partId && <DocumentLink className="button outline" href={componentHref({...component,partId:component.partId},navigation)}>{component.positionId ? 'Back to catalog position' : 'Back to part in catalog'}</DocumentLink>}
     </nav>}
@@ -139,13 +145,12 @@ export function RepairJobPage({ id, component={} }: { id: string; component?:Par
         <p className="small muted">Time: {source.time || 'No reliable estimate indexed; check the original guide.'}</p>
         <DocumentLink className="button outline" href={source.url} target="_blank" rel="noopener noreferrer">{source.format === 'Photo walkthrough' ? 'Open original guide & pictures' : 'Open original discussion'} <ArrowUpRight size={15}/></DocumentLink>
         <p className="small muted">{source.verification || 'Link recorded'} · {source.reviewed_at}{source.availability === 'unknown' ? ' · Host access or older images may be unavailable.' : ''}</p>
-      </article>)}</div> : <p className="repair-material-gap">An illustrated DIY guide hasn’t been linked to this job yet. Use the manual reference{guide ? ' and the written notes' : ''}, or share an original walkthrough below.</p>}
+      </article>)}</div> : !guided.length && <p className="repair-material-gap">An illustrated DIY guide hasn’t been linked to this job yet. Use the manual reference{guide ? ' and the written notes' : ''}, or share an original walkthrough below.</p>}
       {sources.length > 0 && <p className="small muted">Original text and photographs stay with their creators. Older guides can contain model-specific details or shortcuts; use the applicable manual for safety, tightening specifications and final checks.</p>}
-      {!guide && !specs.length && <p className="small muted">Tools, job time and process pictures are supplied by the full sources above where available. They have not been independently indexed for this manual topic.</p>}
+      {!guide && !specs.length && !guided.length && <p className="small muted">Tools, job time and process pictures are supplied by the full sources above where available. They have not been independently indexed for this manual topic.</p>}
     </section>
     {guide && <GuideSupport guide={guide} series={series} specsShown={!!specs.length}/>}
     <RepairCommunity topic={topic}/>
     {related.length > 0 && <section className="repair-related"><h2>Related jobs in this chapter</h2><div className="related-links">{related.map(t => <DocumentLink key={t.id} href={'/repairs/' + t.id}>{t.title}<ArrowUpRight size={15}/></DocumentLink>)}</div></section>}
-    <DocumentLink className="text-link" href={repairContributionHref(topic, 'repair-comment')}>Suggest a source or add a correction ↗</DocumentLink>
   </div>;
 }

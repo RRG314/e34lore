@@ -16,6 +16,7 @@ const M={
  dark:material('coated-steel','#323c40',.52,.63),
  rotor:material('brake-friction-surface','#939fa2',.78,.43),
  fin:material('radiator-fins','#596568',.68,.59),
+ filter:material('pleated filter paper','#c9ae77',0,.93),
  reservoir:material('reservoir-polymer','#cdd2c1',0,.5),
  seam:material('welded-seams','#89918e',.75,.55),
 };

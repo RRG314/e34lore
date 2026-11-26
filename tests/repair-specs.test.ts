@@ -47,7 +47,9 @@ describe('linked repair specifications', () => {
     const [modelJob]=specsForNode('e30','e30assembly:propeller:center-mount');
     expect(specsForPart('e30','26 12 1 226 723')).toEqual([modelJob]);
     expect(modelJob.manual.href).toBe('/manual/26?pdf=466');
-    expect(specsForPart('e34','26121226723')[0].manual.href).toBe('/manual/260?pdf=267');
+    const [e34Job]=specsForPart('e34','26121226723');
+    expect(e34Job.manual.href).toContain('version_without_slide.pdf');
+    expect(e34Job.specs?.map(spec=>spec.value)).toEqual(['2–4 mm toward the front','21 Nm','97 Nm']);
     expect(specsForPart('e30','26121225071')).toEqual([]);
   });
 

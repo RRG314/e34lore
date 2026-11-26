@@ -687,5 +687,35 @@
     "engine": "M20",
     "transmission": "Manual",
     "contextId": "e30-context-9c7c592b83bfc01c6aa651cc"
+  },
+  {
+    "id": "e34-525i-sedan-automatic",
+    "revision": 1052,
+    "manifestUrl": "/models/e34-lore/r1052/manifest.e471c0abe76696caf98912e155ad2c06a10c55d7c7a99f304c8d2213374bf30d.json",
+    "sha256": "e471c0abe76696caf98912e155ad2c06a10c55d7c7a99f304c8d2213374bf30d",
+    "renderableCount": 1122,
+    "assetBytes": 20118652,
+    "label": "525i Sedan · Automatic",
+    "year": 1995,
+    "engine": "M50TU",
+    "body": "Sedan",
+    "model": "525i",
+    "transmission": "Automatic",
+    "contextId": "e34-context-b69b1a9062bd8352b127fef1"
+  },
+  {
+    "id": "e30-325i-coupe-manual",
+    "revision": 1197,
+    "manifestUrl": "/models/e30-lore/r1197/manifest.9f2b6716b6dde86c6f2b632e7922af426201b160a7241c849943063b4c23e55b.json",
+    "sha256": "9f2b6716b6dde86c6f2b632e7922af426201b160a7241c849943063b4c23e55b",
+    "renderableCount": 763,
+    "assetBytes": 25162284,
+    "label": "325i Coupe · Manual",
+    "year": 1991,
+    "model": "325i",
+    "body": "Coupe",
+    "engine": "M20",
+    "transmission": "Manual",
+    "contextId": "e30-context-9c7c592b83bfc01c6aa651cc"
   }
 ]
