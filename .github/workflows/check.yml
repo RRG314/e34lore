@@ -26,7 +26,7 @@ jobs:
           echo "79a3ab579b53f71efd634f3aaf7e04a0fa0cf206b7ed434638d1547a2470a66e  $scan_dir/gitleaks.tar.gz" | sha256sum --check
           tar -xzf "$scan_dir/gitleaks.tar.gz" -C "$scan_dir" gitleaks
           "$scan_dir/gitleaks" git --redact=100 --no-banner --timeout 120 .
-      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
           node-version: 22
           cache: npm
